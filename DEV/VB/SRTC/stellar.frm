@@ -92,7 +92,7 @@ Private Sub cmdCalculate_Click()
     If IsNumeric(txtTurn.Text) Then
         lngTotalTurns = CLng(txtTurn.Text) 'turns we have to add
 
-        If lngTotalTurns > 0 Then
+        'If lngTotalTurns > 0 Then
             intTurnMinutes = 20 '20 minutes
             tmpTime = Now 'get the current time
             
@@ -113,9 +113,9 @@ Private Sub cmdCalculate_Click()
             'Now we have the correct time
             lngTotalMinutes = lngTotalTurns * intTurnMinutes
             lblCompletionTime = Format(DateAdd("n", lngTotalMinutes, tmpTime), "dd-mmm-yyyy hh:mm")
-        Else
-            lblCompletionTime = ""
-        End If
+        'Else
+        '    lblCompletionTime = ""
+        'End If
         
         lblCurrentTime.Caption = Format(Now, "dd-mmm-yyyy hh:mm")
     Else
