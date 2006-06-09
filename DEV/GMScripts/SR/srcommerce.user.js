@@ -20,5 +20,5 @@ for (var intI=4; intI<tablelength; intI = intI + 2)
  	price = table.childNodes[intI].childNodes[7].firstChild.nodeValue;
  
  	//Calculate the average price and append the Price table element with the average price 
- 	table.childNodes[intI].childNodes[7].firstChild.nodeValue = price + ' (' + price/quantity +')';	
+ 	table.childNodes[intI].childNodes[7].firstChild.nodeValue = price + ' (' + Math.round((price/quantity)*100)/100 +')';	
 }
