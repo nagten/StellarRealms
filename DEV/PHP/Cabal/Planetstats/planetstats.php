@@ -109,7 +109,7 @@ function generatehtmltable()
       {
         $sortOrder =  $_GET['sortOrder'] == 'ASC' ? 'DESC' : 'ASC';
         //table header
-        echo "<table width=\"1030\" border=\"1\" >\n";
+        echo "<table width=\"1030\" border=\"0\" >\n";
         echo "<tr bgcolor=\"#999999\">\n";
         echo "<td width=\"77\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fplanetname&sortOrder=$sortOrder\">Name</a></span></td>\n";
         echo "<td width=\"57\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fuser&sortOrder=$sortOrder\">User</a></span></td>\n";
