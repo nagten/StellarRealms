@@ -1,0 +1,58 @@
+Popup Calendar Styles
+
+.head {
+    FONT-FAMILY: arial;
+    FONT-SIZE: 12px;
+    FONT-WEIGHT: normal
+}
+
+.time-HeadCell {
+    BACKGROUND-COLOR: #99CCCC;
+    FONT-FAMILY: Arial, Verdana, sans-serif;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bold
+}
+
+.time-cboTime {
+    BACKGROUND-COLOR: #99ffff;
+    FONT-FAMILY: Verdana, Tahoma, Arial, 'MS Sans Serif', System;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: right;
+    TEXT-TRANSFORM: lowercase
+}
+
+.time-Table {
+    BACKGROUND-COLOR: black;
+    BORDER-BOTTOM-COLOR: #99cccc;
+    BORDER-LEFT-COLOR: #99cccc;
+    BORDER-RIGHT-COLOR: #99cccc;
+    BORDER-TOP-COLOR: #99cccc;
+}
+
+#popup_layer {
+    BACKGROUND-COLOR: #A9A9A9;
+    /*HEIGHT: 100px;*/
+	HEIGHT: 2px;
+    LEFT: 0px;
+    POSITION: absolute;
+    TOP: 0px;
+    VISIBILITY: hidden;
+    WIDTH: 2px;
+}
+
+.text {
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 12px;
+    FONT-WEIGHT: normal;
+    PADDING-BOTTOM: 2px;
+    PADDING-LEFT: 2px;
+    PADDING-RIGHT: 2px;
+    PADDING-TOP: 2px;
+}
+
+.select	{
+		font-family: Arial, Verdana, sans-serif;
+		font-size:12px;
+}
+

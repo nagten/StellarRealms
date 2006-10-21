@@ -1,0 +1,59 @@
+	body		{font-family:arial; background-color:#A9A9A9; margin-top:4px; margin-bottom:2px;}
+	.srxx		{font-size:18px; color:#FFFFFF;}
+	.srx		{font-size:12px; color:#FFFFFF;}
+	.sh			{font-size:14pt; color:#000000; font-weight:normal;}
+	.xxc		{font-size:12pt; text-align:center;}
+	.xxl		{font-size:12pt; text-align:left;}
+	.hh			{font-size:8pt; background-color:#DCDCDC;}
+	.hc			{font-size:8pt; background-color:#DCDCDC; text-align:center;}
+	.hr			{font-size:8pt; background-color:#DCDCDC; text-align:right;}
+	.hml		{font-size:10pt; background-color:#DCDCDC; font-weight:normal; text-align:left;}
+	.hmc		{font-size:10pt; background-color:#DCDCDC; font-weight:normal; text-align:center;}
+	.hmr		{font-size:10pt; background-color:#DCDCDC; font-weight:normal; text-align:right;}
+	.hxl		{font-size:12pt; background-color:#DCDCDC; font-weight:normal; text-align:left;}
+	.hxc		{font-size:12pt; background-color:#DCDCDC; font-weight:normal; text-align:center;}
+	.hxr		{font-size:12pt; background-color:#DCDCDC; font-weight:normal; text-align:right;}
+	.hxcb		{font-size:12pt; background-color:#DCDCDC; font-weight:bold; text-align:center;}
+	.xx			{font-size:8pt;}
+	.xc			{font-size:8pt; text-align:center; cursor:pointer;}
+	.xr			{font-size:8pt; text-align:right; cursor:pointer;}
+	.xrdb		{font-size:8pt; text-align:right; color:#8B0000;}
+
+	.shh			{font-size:8pt; background-color:#D8BFD8; cursor:pointer;}
+	.shc			{font-size:8pt; background-color:#D8BFD8; cursor:pointer; text-align:center;}
+
+	.uhh			{font-size:8pt; background-color:#DCDCDC; cursor:pointer;}
+	.uhc			{font-size:8pt; background-color:#DCDCDC; cursor:pointer; text-align:center;}
+
+	.l10		{font-size:10pt; text-align:left;}
+	.c10		{font-size:10pt; text-align:center;}
+	.r10		{font-size:10pt; text-align:right;}
+	.menu		{font-size:10pt; text-align:center; font-weight:bold; background-color:#DCDCDC; border: 1px solid #F5F5F5;}
+	.mtable		{margin-top:5; margin-bottom:5;}
+	.hidden		{display:none;}
+
+	.divSummary		{overflow: auto; width: 100%;  height: 144px; padding:0px; margin: 0px;}
+	.divDetail		{overflow: auto; width: 100%;  height: 128px; padding:0px; margin: 0px;}
+	
+	.planet		{font-size:24px; font-weight:normal; text-align:center;}
+	.spacer		{font-size:4px;}
+
+	.hlink		{font-size:10pt; color:#0000FF; text-decoration:underline;}
+	.button		{font-size:7pt; width:72px; padding-top:0; padding-bottom:0; margin-top:0; margin-bottom:0;}
+	.relSelec	{font-size:10pt; font-weight:bold;   color:#000000; cursor:default;}
+	.relUnsel	{font-size:8pt; font-weight:normal; color:#0000FF; cursor:pointer; text-decoration:underline;}
+
+	.error		{font-size:10ptl font_weight:bold; color:#FF0000; text-align:center}
+	.textarea	{font-size:9pt; font-family:arial;}
+
+	.positive	{font-size:8pt; text-align:center; color:#228B22;}
+	.even		{font-size:8pt; text-align:center; color:#000000;}
+	.negative	{font-size:8pt; text-align:center; color:#FF0000;}
+
+	.ull		{font-size:8pt; font-weight:normal; color:#0000FF; cursor:pointer; text-decoration:underline;}
+	.ulc		{font-size:8pt; font-weight:normal; color:#0000FF; cursor:pointer; text-decoration:underline; text-align:center}
+
+	.rptl		{font-size:8pt; padding-top:0px; padding-bottom:0px;}
+	.rptc		{font-size:8pt; padding-top:0px; padding-bottom:0px; text-align:center}
+	.rptr		{font-size:8pt; padding-top:0px; padding-bottom:0px; text-align:right}
+	.rrow		{font-size:8pt; margin-top:0px; margin-bottom:0px;}
