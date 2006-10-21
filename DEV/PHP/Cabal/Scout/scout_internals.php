@@ -1,6 +1,6 @@
 <?php
 
-	include("cabal_database.php");
+	include("../cabal_database.php");
 
 	if (isset($_REQUEST['action'])) {
 		$action = $_REQUEST['action'];

@@ -1,11 +1,11 @@
 <?php
 session_start();
-include("cabal_database.php");
-include("cabal_login.php");
+include("../cabal_database.php");
+include("../cabal_login.php");
 
 $logged_in = checkLogin();
 if ( ! $logged_in) {
-	header('Location: http://127.0.0.1/scout/cabal_login_page.php?where=scout');
+	header('Location: http://localhost/Scout/cabal_login_page.php?where=scout');
 	exit;
 }
 
@@ -14,9 +14,7 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");		// always modifi
 header("Cache-Control: no-store, no-cache, must-revalidate");		// HTTP/1.1
 header("Cache-Control: post-check=0, pre-check=0", false);			// HTTP/1.1
 header("Pragma: no-cache");													// HTTP/1.0
-
 ?>
-
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
