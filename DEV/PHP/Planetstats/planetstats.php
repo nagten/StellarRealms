@@ -277,7 +277,7 @@ function submitstats($post_vars_string)
       $matdelta = $post_vars_string["matdelta"];
       $bonuses = $post_vars_string["bonuses"];
       $date = date("m-d-Y H:i:s"); //date for the age column
-      echo $date;
+      //echo $date;
 
       $sqlstring = "UPDATE tblsrstats SET
           ffood = " . $mat[0] .",
