@@ -48,14 +48,15 @@ function generatehtmltable()
 
   if (!$dbcnx)
   {
-    echo ('<p>Unable to connect to the database server.</p>' );
+    echo "<p>Unable to connect to the database server.</p>";
     exit();
   }
   else
   {
     if (!@mysql_select_db($mysql_db))
     {
-        exit('<p>Unable to locate the ' . $mysql_db . ' database.</p>');
+        echo "<p>Unable to locate the " . $mysql_db . " database.</p>";
+        exit();
     }
     else
     {
@@ -101,7 +102,8 @@ function generatehtmltable()
 
       if (!$result)
       {
-        exit('<p>Error performing query: ' . mysql_error() . ' </p>');
+        echo "<p>Error performing query: " . mysql_error() . " </p>";
+        exit();
       }
       else
       {
@@ -137,11 +139,11 @@ function generatehtmltable()
         echo "</tr>\n";
 
         //variables for summary row
-        $sumCredits = 0; 
-        $sumCreditsDelta = 0; 
-        $sumTaxRate = 0; 
+        $sumCredits = 0;
+        $sumCreditsDelta = 0;
+        $sumTaxRate = 0;
         $sumPop = 0;
-        $sumPopDelta = 0; 
+        $sumPopDelta = 0;
         $sumPopSpace = 0; $sumFood = 0; $sumFuel = 0;
         $sumMetals = 0; $sumRads = 0; $sumFoodDelta = 0; $sumMetalsDelta = 0;
         $sumMatSpace = 0; $sumProjects = 0; $sumProjectsMaximum = 0; $sumWealth = 0;
@@ -242,7 +244,6 @@ function generatehtmltable()
         echo "<td align='right'><span class=style1></span></td>\n";   //echo "<td>" . round($sumWealth / $i,2) . "</td>\n";
         echo "<td align='right'><span class=style1></span></td>\n";
         echo "<td align='right'><span class=style1></span></td>\n";
-
         echo "</table>";
       }
     }
@@ -260,14 +261,15 @@ function submitstats($post_vars_string)
 
   if (!$dbcnx)
   {
-    echo ('<p>Unable to connect to the database server at this time.</p>' );
+    echo "<p>Unable to connect to the database server at this time.</p>";
     exit();
   }
   else
   {
     if (!@mysql_select_db($mysql_db))
     {
-        exit('<p>Unable to locate the ' . $mysql_db . ' database at this time.</p>');
+    	echo "<p>Unable to locate the " . $mysql_db . " database at this time.</p>";
+        exit();
     }
     else
     {
@@ -326,7 +328,7 @@ function submitstats($post_vars_string)
       }
       else
       {
-        echo '<p>Error inserting data: ' . mysql_error() . '</p>';
+        echo "<p>Error inserting data: " . mysql_error() . "</p>";
       }
     }
   }
