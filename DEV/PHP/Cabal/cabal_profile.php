@@ -2,10 +2,11 @@
 
 session_start(); 
 include('cabal_database.php');
-
+global $DEV;
 $msg = '';
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST')
+{
 	$username = $_POST['username'];
 	$oldpwd   = $_POST['oldpwd'];
 	$newpwd   = $_POST['newpwd'];
@@ -17,7 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$SQL .= 'WHERE username = \'' . $username . '\' ';
 	$SQL .= 'AND password = \'' . $md5oldpwd . '\' ';
 	$result = mysql_query($SQL,$dbconn);
-	if (mysql_num_rows($result) > 0) {
+	
+	if (mysql_num_rows($result) > 0) 
+	{
 		$SQL  = 'UPDATE users ';
 		$SQL .= 'SET password = \'' . $md5newpwd . '\' ';
 		$SQL .= 'WHERE username = \'' . $username . '\' ';
@@ -25,16 +28,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$_SESSION['reguname'] = $username;
 		$_SESSION['password'] = $md5newpwd;
 		$_SESSION['registered'] = true;
-		header('Location: http://www.alignus.com/Cabal/Dossier.php');
+		
+		if ($DEV)
+		{
+			header('Location: $DossierDebugUrl');
+		}
+		else
+		{
+			header('Location: $DossierWebUrl');
+		}
+
 		exit;
-	} else {
+	} 
+	else 
+	{
 		$msg = 'Update failed. Invalid user name or password';
 	}
 }
-
-
 ?>
-
 
 <HTML>
 <HEAD>
@@ -83,12 +94,8 @@ function dimObj(obj) {
 -->
 </script>
 </HEAD>
-
 <BODY onload=init()>
-
 <h2>PROFILE: <?php echo $_SESSION['username'] ?></h2>
-
-
 <table border=0>
   <tr><td>
 	<!-- Password Table -->
@@ -157,8 +164,5 @@ function dimObj(obj) {
 -->
   </td></tr>
 </table>
-
-
-
 </BODY>
 </HTML>

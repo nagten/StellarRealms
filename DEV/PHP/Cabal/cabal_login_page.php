@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 include("cabal_database.php");
 include("cabal_login.php");
@@ -13,35 +12,42 @@ if (isset($_REQUEST['where']))
 } 
 else 
 {
+	//default = scout
 	$where = 'scout';
 }
 
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-   if (!$_POST['user'] || !$_POST['pass']) {
-      $errMsg = 'You didn\'t fill in a required field.';
-   }
+	if (!$_POST['user'] || !$_POST['pass']) 
+	{
+		$errMsg = 'You didn\'t fill in a required field.';
+	}
 
-   /* Spruce up username, check length */
-   $_POST['user'] = trim($_POST['user']);
-   if (strlen($_POST['user']) > 30) {
-      $errMsg = "Sorry, the username is longer than 30 characters, please shorten it.";
-   }
+	/* Spruce up username, check length */
+	$_POST['user'] = trim($_POST['user']);
+	if (strlen($_POST['user']) > 30) 
+	{
+		$errMsg = "Sorry, the username is longer than 30 characters, please shorten it.";
+ 	}
 
-   /* Checks that username is in database and password is correct */
-   $md5pass = md5($_POST['pass']);
-   $result = confirmUser($_POST['user'], $md5pass);
+	/* Checks that username is in database and password is correct */
+	$md5pass = md5($_POST['pass']);
+	$result = confirmUser($_POST['user'], $md5pass);
 
-   /* Check result error codes */
-   if ($result == 0) {
+	/* Check result error codes */
+	if ($result == 0)
+   	{
 		$success = true;
-	} elseif ($result == 1) {
-      $errMsg = 'That username doesn\'t exist in our database.';
-   } else if($result == 2) {
-      $errMsg = 'Incorrect password, please try again.';
-   }
-
+	} 
+	elseif ($result == 1) 
+	{
+		$errMsg = 'That username doesn\'t exist in our database.';
+	} 
+	else if($result == 2) 
+	{
+		$errMsg = 'Incorrect password, please try again.';
+	}
+	
 	if ($success) {
 		// Username and password correct, register session variables
 		$_POST['user'] = stripslashes($_POST['user']);
@@ -49,42 +55,61 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$_SESSION['password'] = $md5pass;
 		$_SESSION['logged_in'] = true;
 
-		if (isset($_POST['remember'])) {
+		if (isset($_POST['remember'])) 
+		{
 			setcookie("cookname", $_SESSION['username'], time()+60*60*24*100, "/");
 			setcookie("cookpass", $_SESSION['password'], time()+60*60*24*100, "/");
 		}
-		if (isset($_POST['where'])) {
+		
+		if (isset($_POST['where'])) 
+		{
 			$where = $_POST['where'];
-		} else {
-			$where = 'main';
+		} 
+		else
+		{
+			//default = scout
+			$where = 'scout';
 		}
-		switch ($where) {
+		
+		switch ($where) 
+		{
 			case 'dossier':
-				header('Location: $dossierWebUrl');
-				exit;
-				break;
-			case 'scout':
-				if ($debugDev)
+				if ($DEV)
 				{
-					header('Location: ' . $scoutDebugUrl . '');
+					header('Location: ' . $DossierDebugUrl . '');
 				}
 				else
 				{
-					header('Location: ' . $scoutWebUrl . '');
+					header('Location: ' . $DossierWebUrl . '');
 				}
-				
+				exit;
+				break;
+			case 'scout':
+				if ($DEV)
+				{
+					header('Location: ' . $ScoutDebugUrl . '');
+				}
+				else
+				{
+					header('Location: ' . $ScoutWebUrl . '');
+				}
 				exit;
 				break;
 			default:
-				header('Location: ' . $dossierWebUrl . '');
+				if ($DEV)
+				{
+					header('Location: ' . $DossierDebugUrl . '');
+				}
+				else
+				{
+					header('Location: ' . $DossierWebUrl . '');
+				}
 				exit;
 				break;
 		}
 	}
 }
-
 ?>
-
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
@@ -105,9 +130,7 @@ function dimObj(obj) {
 }
 </script>
 </HEAD>
-
 <BODY>
-
 <h2>Login</h2>
 
 		<form action="" method="post">
