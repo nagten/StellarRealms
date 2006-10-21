@@ -3,11 +3,13 @@
 //Variable set for debugging
 $debugDev = true;
 
-$scoutDebugUrl = "http://127.0.0.1/ScoutDev/scout.php";
-$scoutWebUrl = "http://www.alignus.com/Cabal/scout.php";
-$dossierWebUrl = "http://www.alignus.com/Cabal/Dossier.php";
-$scoutLoginDebugUrl = "http://127.0.0.1/ScoutDev/cabal_login_page.php";
-$scoutLoginWebUrl = "http://www.alignus.com/Cabal/cabal_login_page.php";
+$scoutLoginDebugUrl = "http://localhost/Cabal/cabal_login_page.php";
+$scoutDebugUrl = "http://localhost/Cabal/Scout/scout.php";
+
+$scoutLoginWebUrl = "http://www.idsfadt.com/Cabal/cabal_login_page.php";
+$scoutWebUrl = "http://www.idsfadt.com/Cabal/Scout/scout.php";
+
+$dossierWebUrl = "http://www.idsfadt.com/Cabal/Dossier/Dossier.php"; //Not used atm
 
 // Checks whether or not the given username is in the database, if so it checks if the given password is
 // the same password in the database for that user. If the user doesn't exist or if the passwords don't
@@ -74,6 +76,8 @@ function checkLogin() {
 // Determines whether or not to display the login form or to show the user that he is logged in based on if the session variables are set.
 function displayLogin() {
 	global $logged_in;
+	global $debugDev;
+	
 	if ($logged_in) {
 		//echo "<h1>Logged In!</h1>";
 		//echo "Welcome <b>$_SESSION[username]</b>, you are logged in. <a href=\"rjb_logout.php\">Logout</a>";

@@ -7,10 +7,13 @@ include("cabal_login.php");
 $errMsg = '';
 $success = false;
 
-if (isset($_REQUEST['where'])) {
+if (isset($_REQUEST['where'])) 
+{
 	$where = $_REQUEST['where'];
-} else {
-	$where = 'main';
+} 
+else 
+{
+	$where = 'scout';
 }
 
 
@@ -118,8 +121,5 @@ function dimObj(obj) {
 		<tr><td colspan="2" align="center"><input type="submit" name="sublogin" value="Login"></td></tr>
 		</table>
 		</form>
-
-
-
 </BODY>
 </HTML>

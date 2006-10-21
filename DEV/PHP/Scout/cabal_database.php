@@ -1,6 +1,6 @@
 <?php
 
-if ($_SERVER['SERVER_NAME'] == 'www.alignus.com') 
+if ($_SERVER['SERVER_NAME'] == 'www.idsfadt.com') 
 {
 	$dbconn = mysql_connect("MySQL.alignus.com", "username", "password");
 	$result = mysql_select_db('xalignus-1',$dbconn) or die("DB Open Failure: " . mysql_error());
