@@ -10,6 +10,7 @@
 body {
 	background-color: #b0c4de;
 }
+.style1 {font-size: 13px}
 -->
 </style>
 </head>
@@ -27,7 +28,6 @@ if( !is_null( $_POST ) )
 {
     if ($_POST["action"] == "uploadstats")
     {
-      //echo "uploadstats";
       submitstats($_POST);
     }
     else
@@ -55,7 +55,7 @@ function generatehtmltable()
   {
     if (!@mysql_select_db($mysql_db))
     {
-        exit('<p>Unable to locate the sr database.</p>');
+        exit('<p>Unable to locate the ' . $mysql_db . ' database.</p>');
     }
     else
     {
@@ -84,8 +84,6 @@ function generatehtmltable()
           $sortOrder = $_GET['sortOrder'];
       }
 
-      //echo $order;
-      //TODO debug remov
       if ($order == "fpopspace")
       {
         $strSqlString = "SELECT *, fpopmaximum - fpop AS fpopspace FROM tblsrstats ORDER BY fpopspace $sortOrder";
@@ -99,52 +97,54 @@ function generatehtmltable()
             $strSqlString = "SELECT * FROM tblsrstats ORDER BY $order $sortOrder";
           }
 
-      //echo $strSqlString; //TODO debug remove
-
       $result = @mysql_query($strSqlString);
 
       if (!$result)
       {
-        exit('<p>Error performing query:  mysql_error() </p>');
+        exit('<p>Error performing query: ' . mysql_error() . ' </p>');
       }
       else
       {
         $sortOrder =  $_GET['sortOrder'] == 'ASC' ? 'DESC' : 'ASC';
         //table header
-        echo "<table width=\"1206\" border=\"1\" >\n";
+        echo "<table width=\"1030\" border=\"1\" >\n";
         echo "<tr bgcolor=\"#999999\">\n";
-        echo "<td width=\"56\"><a href=\"{$_SERVER['PHP_SELF']}?order=fplanetname&sortOrder=$sortOrder\">Name</a></td>\n";
-        echo "<td width=\"39\"><a href=\"{$_SERVER['PHP_SELF']}?order=fuser&sortOrder=$sortOrder\">User</a></td>\n";
-        echo "<td width=\"55\"><a href=\"{$_SERVER['PHP_SELF']}?order=fprestige&sortOrder=$sortOrder\">Prestige</a></td>\n";
-        echo "<td width=\"28\"><a href=\"{$_SERVER['PHP_SELF']}?order=fprestigedelta&sortOrder=$sortOrder\">Pr&Delta;</a></td>\n";
-        echo "<td width=\"67\"><a href=\"{$_SERVER['PHP_SELF']}?order=fprestigerank&sortOrder=$sortOrder\">Pr&nbsp;R</a></td>\n";
-        echo "<td width=\"50\"><a href=\"{$_SERVER['PHP_SELF']}?order=fcredits&sortOrder=$sortOrder\">Credits</a></td>\n";
-        echo "<td width=\"40\"><a href=\"{$_SERVER['PHP_SELF']}?order=fcreditsdelta&sortOrder=$sortOrder\">Cr&Delta;</a></td>\n";
-        echo "<td width=\"39\"><a href=\"{$_SERVER['PHP_SELF']}?order=fcreditsrank&sortOrder=$sortOrder\">Cr&nbsp;R</a></td>\n";
-        echo "<td width=\"31\"><a href=\"{$_SERVER['PHP_SELF']}?order=ftaxrate&sortOrder=$sortOrder\">Tax</a></td>\n";
-        echo "<td width=\"39\"><a href=\"{$_SERVER['PHP_SELF']}?order=fpop&sortOrder=$sortOrder\">Pop</a></td>\n";
-        echo "<td width=\"50\"><a href=\"{$_SERVER['PHP_SELF']}?order=fpopdelta&sortOrder=$sortOrder\">Pop&Delta;</a></td>\n";
-        echo "<td width=\"39\"><a href=\"{$_SERVER['PHP_SELF']}?order=fpoprank&sortOrder=$sortOrder\">Pop&nbsp;R</a></td>\n";
-        echo "<td width=\"88\"><a href=\"{$_SERVER['PHP_SELF']}?order=fpopspace&sortOrder=$sortOrder\">Pop&nbsp;Space</a></td>\n";
-        echo "<td width=\"20\"><a href=\"{$_SERVER['PHP_SELF']}?order=ffood&sortOrder=$sortOrder\">Fd</a></td>\n";
-        echo "<td width=\"19\"><a href=\"{$_SERVER['PHP_SELF']}?order=ffuel&sortOrder=$sortOrder\">Fu</a></td>\n";
-        echo "<td width=\"24\"><a href=\"{$_SERVER['PHP_SELF']}?order=fmetals&sortOrder=$sortOrder\">Mtl</a></td>\n";
-        echo "<td width=\"29\"><a href=\"{$_SERVER['PHP_SELF']}?order=fradioactives&sortOrder=$sortOrder\">Rad</a></td>\n";
-        echo "<td width=\"31\"><a href=\"{$_SERVER['PHP_SELF']}?order=ffooddelta&sortOrder=$sortOrder\">Fd&Delta;</a></td>\n";
-        echo "<td width=\"36\"><a href=\"{$_SERVER['PHP_SELF']}?order=fmetalsdelta&sortOrder=$sortOrder\">Mtl&Delta;</a></td>\n";
-        echo "<td width=\"81\"><a href=\"{$_SERVER['PHP_SELF']}?order=fmatspace&sortOrder=$sortOrder\">Mat&nbsp;Space</a></td>\n";
-        echo "<td width=\"59\"><a href=\"{$_SERVER['PHP_SELF']}?order=fprojects&sortOrder=$sortOrder\">Q's Used </a></td>\n";
-        echo "<td width=\"34\"><a href=\"{$_SERVER['PHP_SELF']}?order=fconstruction&sortOrder=$sortOrder\">Con</a></td>\n";
-        echo "<td width=\"33\"><a href=\"{$_SERVER['PHP_SELF']}?order=fwealth&sortOrder=$sortOrder\">Wea</a></td>\n";
-        echo "<td width=\"28\"><a href=\"{$_SERVER['PHP_SELF']}?order=falertlevel&sortOrder=$sortOrder\">Alt</a></td>\n";
-        echo "<td width=\"41\">Age</td>\n";
+        echo "<td width=\"77\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fplanetname&sortOrder=$sortOrder\">Name</a></span></td>\n";
+        echo "<td width=\"57\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fuser&sortOrder=$sortOrder\">User</a></span></td>\n";
+        echo "<td width=\"43\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fprestige&sortOrder=$sortOrder\">Prestige</a></span></td>\n";
+        echo "<td width=\"34\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fprestigedelta&sortOrder=$sortOrder\">Pr&Delta;</a></span></td>\n";
+        echo "<td width=\"22\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fprestigerank&sortOrder=$sortOrder\">Pr&nbsp;R</a></span></td>\n";
+        echo "<td width=\"42\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fcredits&sortOrder=$sortOrder\">Credits</a></span></td>\n";
+        echo "<td width=\"28\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fcreditsdelta&sortOrder=$sortOrder\">Cr&Delta;</a></span></td>\n";
+        echo "<td width=\"23\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fcreditsrank&sortOrder=$sortOrder\">Cr&nbsp;R</a></span></td>\n";
+        echo "<td width=\"32\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=ftaxrate&sortOrder=$sortOrder\">Tax</a></span></td>\n";
+        echo "<td width=\"48\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fpop&sortOrder=$sortOrder\">Pop</a></span></td>\n";
+        echo "<td width=\"30\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fpopdelta&sortOrder=$sortOrder\">Pop&Delta;</a></span></td>\n";
+        echo "<td width=\"32\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fpoprank&sortOrder=$sortOrder\">Pop&nbsp;R</a></span></td>\n";
+        echo "<td width=\"56\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fpopspace&sortOrder=$sortOrder\">Pop&nbsp;Space</a></span></td>\n";
+        echo "<td width=\"30\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=ffood&sortOrder=$sortOrder\">Fd</a></span></td>\n";
+        echo "<td width=\"30\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=ffuel&sortOrder=$sortOrder\">Fu</a></span></td>\n";
+        echo "<td width=\"30\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fmetals&sortOrder=$sortOrder\">Mtl</a></span></td>\n";
+        echo "<td width=\"30\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fradioactives&sortOrder=$sortOrder\">Rad</a></span></td>\n";
+        echo "<td width=\"24\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=ffooddelta&sortOrder=$sortOrder\">Fd&Delta;</a></span></td>\n";
+        echo "<td width=\"27\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fmetalsdelta&sortOrder=$sortOrder\">Mtl&Delta;</a></span></td>\n";
+        echo "<td width=\"38\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fmatspace&sortOrder=$sortOrder\">Mat&nbsp;S</a></span></td>\n";
+        echo "<td width=\"50\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fprojects&sortOrder=$sortOrder\">Q's Used </a></span></td>\n";
+        echo "<td width=\"23\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fconstruction&sortOrder=$sortOrder\">Con</a></span></td>\n";
+        echo "<td width=\"19\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fwealth&sortOrder=$sortOrder\">Wea</a></span></td>\n";
+        echo "<td width=\"27\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=falertlevel&sortOrder=$sortOrder\">Alt</a></span></td>\n";
+        echo "<td width=\"24\"><span class=style1>Age</span></td>\n";
         echo "</tr>\n";
 
         //variables for summary row
-        $sumCredits; $sumCreditsDelta; $sumTaxRate; $sumPop;
-        $sumPopDelta; $sumPopSpace; $sumFood; $sumFuel;
-        $sumMetals; $sumRads; $sumFoodDelta; $sumMetalsDelta;
-        $sumMatSpace; $sumProjects; $sumProjectsMaximum; $sumWealth;
+        $sumCredits = 0; 
+        $sumCreditsDelta = 0; 
+        $sumTaxRate = 0; 
+        $sumPop = 0;
+        $sumPopDelta = 0; 
+        $sumPopSpace = 0; $sumFood = 0; $sumFuel = 0;
+        $sumMetals = 0; $sumRads = 0; $sumFoodDelta = 0; $sumMetalsDelta = 0;
+        $sumMatSpace = 0; $sumProjects = 0; $sumProjectsMaximum = 0; $sumWealth = 0;
         $i = 0;
 
         for($i = 0; $i < $row = mysql_fetch_array($result); $i++)
@@ -171,31 +171,31 @@ function generatehtmltable()
             echo "<tr bgcolor=\"#f5f5f5\">\n";
           }
 
-          echo "<td>" . $row['fplanetname'] . "</td>\n";
-          echo "<td>" . $row['fuser'] . "</td>\n";
-          echo "<td>" . $row['fprestige'] . "</td>\n";
-          echo "<td>" . $row['fprestigedelta'] . "</td>\n";
-          echo "<td>" . $row['fprestigerank'] . "</td>\n";
-          echo "<td>" . $row['fcredits'] . "</td>\n";
-          echo "<td>" . $row['fcreditsdelta'] . "</td>\n";
-          echo "<td>" . $row['fcreditsrank'] . "</td>\n";
-          echo "<td>" . $row['ftaxrate'] . "%</td>\n";
-          echo "<td>" . $row['fpop'] . "</td>\n";
-          echo "<td>" . $row['fpopdelta'] . "</td>\n";
-          echo "<td>" . $row['fpoprank'] . "</td>\n";
-          echo "<td>" . $PopSpace . "</td>\n";
-          echo "<td>" . $row['ffood'] . "</td>\n";
-          echo "<td>" . $row['ffuel'] . "</td>\n";
-          echo "<td>" . $row['fmetals'] . "</td>\n";
-          echo "<td>" . $row['fradioactives'] . "</td>\n";
-          echo "<td>" . $row['ffooddelta'] . "</td>\n";
-          echo "<td>" . $row['fmetalsdelta'] . "</td>\n";
-          echo "<td>" . $MatSpace . "</td>\n";
-          echo "<td>" . $row['fprojects'] . "/" . $row['fprojectsmaximum'] . "</td>\n";
-          echo "<td>" . $row['fconstruction'] . "</td>\n";
-          echo "<td>" . $row['fwealth'] . "</td>\n";
-          echo "<td>" . $row['falertlevel'] . "</td>\n";
-          echo "<td>" . $Age . "</td>\n";
+          echo "<td><span class=style1>" . $row['fplanetname'] . "</span></td>\n";
+          echo "<td><span class=style1>" . $row['fuser'] . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $row['fprestige'] . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $row['fprestigedelta'] . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $row['fprestigerank'] . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $row['fcredits'] . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $row['fcreditsdelta'] . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $row['fcreditsrank'] . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $row['ftaxrate'] . "%</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $row['fpop'] . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $row['fpopdelta'] . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $row['fpoprank'] . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $PopSpace . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $row['ffood'] . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $row['ffuel'] . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $row['fmetals'] . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $row['fradioactives'] . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $row['ffooddelta'] . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $row['fmetalsdelta'] . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $MatSpace . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $row['fprojects'] . "/" . $row['fprojectsmaximum'] . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $row['fconstruction'] . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $row['fwealth'] . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $row['falertlevel'] . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $Age . "</span></td>\n";
 
           $sumCredits = $sumCredits + $row['fcredits'];
           $sumCreditsDelta = $sumCreditsDelta + $row['fcreditsdelta'];
@@ -217,31 +217,31 @@ function generatehtmltable()
 
         //Summary row
         echo "<tr bgcolor=\"#DCDCDC\">\n";
-        echo "<td>SUMMARY</td>\n";
-        echo "<td></td>\n";
-        echo "<td></td>\n";
-        echo "<td></td>\n";
-        echo "<td></td>\n";
-        echo "<td>" . $sumCredits . "</td>\n";
-        echo "<td>" . $sumCreditsDelta . "</td>\n";
-        echo "<td></td>\n";
-        echo "<td>" . round($sumTaxRate / $i,2)  . "%</td>\n";
-        echo "<td>" . $sumPop . "</td>\n";
-        echo "<td>" . $sumPopDelta . "</td>\n";
-        echo "<td>" . $row['fpoprank'] . "</td>\n";
-        echo "<td>" . $sumPopSpace . "</td>\n";
-        echo "<td>" . $sumFood . "</td>\n";
-        echo "<td>" . $sumFuel . "</td>\n";
-        echo "<td>" . $sumMetals . "</td>\n";
-        echo "<td>" . $sumRads . "</td>\n";
-        echo "<td>" . $sumFoodDelta . "</td>\n";
-        echo "<td>" . $sumMetalsDelta . "</td>\n";
-        echo "<td>" . $sumMatSpace . "</td>\n";
-        echo "<td>" . $sumProjects . "/" . $sumProjectsMaximum . "</td>\n";
-        echo "<td>" . $row['fconstruction'] . "</td>\n";
-        echo "<td>" . round($sumWealth / $i,2) . "</td>\n";
-        echo "<td></td>\n";
-        echo "<td></td>\n";
+        echo "<td><span class=style1>Summary</td>\n";
+        echo "<td><span class=style1></td>\n";
+        echo "<td><span class=style1></td>\n";
+        echo "<td><span class=style1></td>\n";
+        echo "<td><span class=style1></td>\n";
+        echo "<td align='right'><span class=style1>" . $sumCredits . "</span></td>\n";
+        echo "<td align='right'><span class=style1>" . $sumCreditsDelta . "</span></td>\n";
+        echo "<td align='right'><span class=style1></span></td>\n";
+        echo "<td align='right'><span class=style1>" . round($sumTaxRate / $i,2)  . "%</span></td>\n";
+        echo "<td align='right'><span class=style1>" . $sumPop . "</span></td>\n";
+        echo "<td align='right'><span class=style1>" . $sumPopDelta . "</span></td>\n";
+        echo "<td align='right'><span class=style1>" . $row['fpoprank'] . "</span></td>\n";
+        echo "<td align='right'><span class=style1>" . $sumPopSpace . "</span></td>\n";
+        echo "<td align='right'><span class=style1>" . $sumFood . "</span></td>\n";
+        echo "<td align='right'><span class=style1>" . $sumFuel . "</span></td>\n";
+        echo "<td align='right'><span class=style1>" . $sumMetals . "</span></td>\n";
+        echo "<td align='right'><span class=style1>" . $sumRads . "</span></td>\n";
+        echo "<td align='right'><span class=style1>" . $sumFoodDelta . "</span></td>\n";
+        echo "<td align='right'><span class=style1>" . $sumMetalsDelta . "</span></td>\n";
+        echo "<td align='right'><span class=style1>" . $sumMatSpace . "</span></td>\n";
+        echo "<td align='right'><span class=style1>" . $sumProjects . "/" . $sumProjectsMaximum . "</span></td>\n";
+        echo "<td align='right'><span class=style1>" . $row['fconstruction'] . "</span></td>\n";
+        echo "<td align='right'><span class=style1></span></td>\n";   //echo "<td>" . round($sumWealth / $i,2) . "</td>\n";
+        echo "<td align='right'><span class=style1></span></td>\n";
+        echo "<td align='right'><span class=style1></span></td>\n";
 
         echo "</table>";
       }
@@ -265,11 +265,9 @@ function submitstats($post_vars_string)
   }
   else
   {
-    //echo "<p>connected</p>";
-
     if (!@mysql_select_db($mysql_db))
     {
-        exit('<p>Unable to locate the sr database at this time.</p>');
+        exit('<p>Unable to locate the ' . $mysql_db . ' database at this time.</p>');
     }
     else
     {
