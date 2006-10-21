@@ -1323,6 +1323,7 @@ function getDefense($row)
 		$r .= '</tr>';
 	}
 	
+//Added orbital bulwarks
 	if ($row['OBULK'] > 0) 
 	{
 		$r .= '<tr>';
@@ -1331,14 +1332,14 @@ function getDefense($row)
 		$r .= '<td width=80% class=rptl>Orbital Bulwark</td>';
 		$r .= '</tr>';
 	}
-/*	if ($row['STIDR'] > 0) 
+	if ($row['STIDR'] > 0) 
 	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['STIDR'] * 1) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['STIDR'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Stinger" Drone</td>';
 		$r .= '</tr>';
-	}*/
+	}
 	$r .= '</table>';
 	$r .= '</td></tr></table>';
 	return $r;
@@ -1409,12 +1410,12 @@ function getFighters($row) {
 	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['VENHF'] . '</td><td class=rptl>"Venom" Heavy Fighter</td></tr>';
 	}
-	
-	if ($row['STIDR'] > 0) 
+//Stinger as fighters, comment stinger code in getDefense function	
+/*	if ($row['STIDR'] > 0) 
 	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['STIDR'] . '</td><td class=rptl>"Stinger" Drone</td></tr>';
 	}
-	
+*/	
 	$r .= '</table>';
 	$r .= '</td></tr></table>';
 	return $r;
