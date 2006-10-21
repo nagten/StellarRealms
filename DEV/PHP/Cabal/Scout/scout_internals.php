@@ -1,141 +1,178 @@
 <?php
 
-	include("../cabal_database.php");
+include("../cabal_database.php");
 
-	if (isset($_REQUEST['action'])) {
-		$action = $_REQUEST['action'];
-	} else {
-		$action = '';
-	}
+if (isset($_REQUEST['action'])) 
+{
+	$action = $_REQUEST['action'];
+} 
+else 
+{
+	$action = '';
+}
 
-	if (isset($_REQUEST['report'])) {
-		$report = $_REQUEST['report'];
-	} else {
-		$report = '';
-	}
+if (isset($_REQUEST['report'])) 
+{
+	$report = $_REQUEST['report'];
+} 
+else 
+{
+	$report = '';
+}
 
-	$dat = array();
-	initialize_dat();
+$dat = array();
+initialize_dat();
 
-	$report = str_replace("\n"  ,'|',$report);
-	$report = str_replace("\n\r",'|',$report);
-	$report = str_replace('<br>','|',$report);
-	$report = str_replace('<BR>','|',$report);
-	$report = str_replace('||'  ,'|',$report);
+$report = str_replace("\n"  ,'|',$report);
+$report = str_replace("\n\r",'|',$report);
+$report = str_replace('<br>','|',$report);
+$report = str_replace('<BR>','|',$report);
+$report = str_replace('||'  ,'|',$report);
+$ray = explode('|',$report);
 
-	$ray = explode('|',$report);
+$dateFound    = false;
+$fromFound    = false;
+$targetFound  = false;
+$structsFound = false;
 
+$firstLine = $ray[0];
+$pos = strpos($firstLine,'Date:');
 
-	$dateFound    = false;
-	$fromFound    = false;
-	$targetFound  = false;
-	$structsFound = false;
-
-	$firstLine = $ray[0];
-	$pos = strpos($firstLine,'Date:');
-	if ($pos !== false) {
+if ($pos !== false) 
+{
+	$method = 'Full Report';
+} 
+else 
+{
+	if (strtotime($firstLine) === -1) 
+	{
 		$method = 'Full Report';
-	} else {
-		if (strtotime($firstLine) === -1) {
-			$method = 'Full Report';
-		} else {
-			$method = 'Short Report';
-		}
+	} 
+	else 
+	{
+		$method = 'Short Report';
 	}
+}
 
-	if ($method == 'Full Report') {
-		$cnt = count($ray);
-		for ($i = 0; $i < $cnt; $i++) {
-			$line = $ray[$i];
-			if ( ! $dateFound) {
-				if (strpos($line,'Date:') !== false) {
-					$dateFound = true;
-					$timestamp = substr($line,6);
-					parseDate($timestamp);
-				}
-			} elseif ( ! $fromFound) {
-				if (strpos($line,'From:') !== false) {
-					$fromFound = true;
-					$from = substr($line,6);
-					parseFrom($from);
-				}
-			} elseif ( ! $targetFound) {
-				$pos = strpos($line,'reconnoiter structures at');
-				if ($pos !== false) {
-					$targetFound = true;
-					$target = substr($line,$pos +25,-1);
-					parseTarget($target);
-				}
-			} elseif ( ! $structsFound) {
-				$pos = strpos($line,'defending force consisted of');
-				if ($pos !== false) {
-					$structsFound = true;
-					$structs = substr($line,$pos + 28, -1);
-					parseStructs($structs);
-				}
+if ($method == 'Full Report') 
+{
+	$cnt = count($ray);
+	for ($i = 0; $i < $cnt; $i++)
+	{
+		$line = $ray[$i];
+		if ( ! $dateFound)
+		{
+			if (strpos($line,'Date:') !== false) 
+			{
+				$dateFound = true;
+				$timestamp = substr($line,6);
+				parseDate($timestamp);
+			}
+		} 
+		elseif ( ! $fromFound) 
+		{
+			if (strpos($line,'From:') !== false) 
+			{
+				$fromFound = true;
+				$from = substr($line,6);
+				parseFrom($from);
+			}
+		} 
+		elseif ( ! $targetFound) 
+		{
+			$pos = strpos($line,'reconnoiter structures at');
+			if ($pos !== false) 
+			{
+				$targetFound = true;
+				$target = substr($line,$pos +25,-1);
+				parseTarget($target);
 			}
 		}
-	} else {
-		$timestamp = $ray[0];
-		$from      = $ray[1];
-		$target    = $ray[2];
-		$structs   = $ray[3];
-		parseDate($timestamp);
-		parseFrom($from);
-		parseTarget($target);
-		parseStructs($structs);
+		elseif ( ! $structsFound) 
+		{
+			$pos = strpos($line,'defending force consisted of');
+			if ($pos !== false) 
+			{
+				$structsFound = true;
+				$structs = substr($line,$pos + 28, -1);
+				parseStructs($structs);
+			}
+		}
 	}
+} 
+else
+{
+	$timestamp = $ray[0];
+	$from      = $ray[1];
+	$target    = $ray[2];
+	$structs   = $ray[3];
+	parseDate($timestamp);
+	parseFrom($from);
+	parseTarget($target);
+	parseStructs($structs);
+}
 
-	$result = updateDatabase();
-
-	echo $result;
-
-
-
-
+$result = updateDatabase();
+echo $result;
 
 //================================================================================
-function parseDate($line) {
+function parseDate($line) 
+{
 	global $dat;
 	$ray = explode(' ',$line);
 	$dat['date'] = $ray[0];
-	if (array_key_exists(1,$ray)) {
+	
+	if (array_key_exists(1,$ray)) 
+	{
 		$dat['time'] = $ray[1];
 	}
-	if (array_key_exists(2,$ray)) {
+	
+	if (array_key_exists(2,$ray))
+	{
 		$dat['time'] .= ' ' . $ray[2];
 	}
 }
 
-function parseFrom($line) {
+function parseFrom($line) 
+{
 	global $dat;
 	$ray = explode(' ',$line);
 	$from = '';
-	for ($i = 0; $i < count($ray); $i++) {
+	
+	for ($i = 0; $i < count($ray); $i++) 
+	{
 		$from .= $ray[$i] . ' ';
 	}
 	$dat['from'] = trim($from);
 }
 
-function parseTarget($line) {
+function parseTarget($line) 
+{
 	global $dat;
 	$dat['target'] = trim($line);
 }
 
-function parseStructs($line) {
+function parseStructs($line) 
+{
 	$ray = explode('(s)',$line);
-	for ($i = 0; $i < count($ray); $i++) {
+	
+	for ($i = 0; $i < count($ray); $i++) 
+	{
 		$struct = $ray[$i];
 		$struct = trim($struct);
-		if ($struct != '') {
+		if ($struct != '') 
+		{
 			$pos = strpos($struct,' ');
-			if ($pos !== false) {
+			
+			if ($pos !== false) 
+			{
 				$qty  = substr($struct,0,$pos);
 				$name = substr($struct,$pos+1);
 				$name = stripslashes($name);
 				$name = str_replace('"','',$name);
 				$Initial = substr($name,0,1);
-				switch ($Initial) {
+				switch ($Initial) 
+				{
 					case 'A' : parse_A_structs($name,$qty); break;
 					case 'B' : parse_B_structs($name,$qty); break;
 					case 'C' : parse_C_structs($name,$qty); break;
@@ -168,9 +205,11 @@ function parseStructs($line) {
 	}
 }
 
-function parse_A_structs($name,$qty) {
+function parse_A_structs($name,$qty)
+{
 	global $dat;
-	switch ($name) {
+	switch ($name) 
+	{
 		case 'Advanced Genetics Lab':
 			$dat['ADVGE']       = $qty;
 			$dat['Reproduction'] += $qty;
@@ -217,9 +256,11 @@ function parse_A_structs($name,$qty) {
 	}
 }
 
-function parse_B_structs($name,$qty) {
+function parse_B_structs($name,$qty)
+{
 	global $dat;
-	switch ($name) {
+	switch ($name) 
+	{
 		case 'Badger Light Cruiser':
 			$dat['BADLC']       = $qty;
 			$dat['Capital']    += $qty;
@@ -262,9 +303,11 @@ function parse_B_structs($name,$qty) {
 	}
 }
 
-function parse_C_structs($name,$qty) {
+function parse_C_structs($name,$qty) 
+{
 	global $dat;
-	switch ($name) {
+	switch ($name) 
+	{
 		case 'Collector Frigate':
 			$dat['COLFR']       = $qty;
 			$dat['Capital']    += $qty;
@@ -288,9 +331,11 @@ function parse_C_structs($name,$qty) {
 	}
 }
 
-function parse_D_structs($name,$qty) {
+function parse_D_structs($name,$qty)
+{
 	global $dat;
-	switch ($name) {
+	switch ($name) 
+	{
 		case 'Dagger Heavy Fighter':
 			$dat['DAGHF']       = $qty;
 			$dat['Fighter']    += $qty;
@@ -326,9 +371,11 @@ function parse_D_structs($name,$qty) {
 	}
 }
 
-function parse_E_structs($name,$qty) {
+function parse_E_structs($name,$qty) 
+{
 	global $dat;
-	switch ($name) {
+	switch ($name) 
+	{
 		case 'Embassy':
 			$dat['EMBAS']       = $qty;
 			$dat['Diplomacy']  += $qty;
@@ -336,9 +383,11 @@ function parse_E_structs($name,$qty) {
 	}
 }
 
-function parse_F_structs($name,$qty) {
+function parse_F_structs($name,$qty) 
+{
 	global $dat;
-	switch ($name) {
+	switch ($name) 
+	{
 		case 'Fang Fighter Bomber':
 			$dat['FANFB']       = $qty;
 			$dat['Fighter']    += $qty;
@@ -376,9 +425,11 @@ function parse_F_structs($name,$qty) {
 	}
 }
 
-function parse_G_structs($name,$qty) {
+function parse_G_structs($name,$qty) 
+{
 	global $dat;
-	switch ($name) {
+	switch ($name) 
+	{
 		case 'Genetics Lab':
 			$dat['GELAB']        = $qty;
 			$dat['Reproduction']  += $qty;
@@ -396,9 +447,11 @@ function parse_G_structs($name,$qty) {
 	}
 }
 
-function parse_H_structs($name,$qty) {
+function parse_H_structs($name,$qty) 
+{
 	global $dat;
-	switch ($name) {
+	switch ($name) 
+	{
 		case 'Habitat':
 			$dat['HABI1']       = $qty;
 			$dat['Habitat']    += $qty;
@@ -450,7 +503,8 @@ function parse_H_structs($name,$qty) {
 	}
 }
 
-function parse_I_structs($name,$qty) {
+function parse_I_structs($name,$qty) 
+{
 	global $dat;
 	switch ($name) {
 		case 'Improved Frigate':
@@ -484,9 +538,11 @@ function parse_I_structs($name,$qty) {
 	}
 }
 
-function parse_J_structs($name,$qty) {
+function parse_J_structs($name,$qty) 
+{
 	global $dat;
-	switch ($name) {
+	switch ($name) 
+	{
 		case 'Judicator Dreadnought':
 			$dat['JUDDR']       = $qty;
 			$dat['Capital']    += $qty;
@@ -503,16 +559,19 @@ function parse_J_structs($name,$qty) {
 	}
 }
 
-function parse_K_structs($name,$qty) {
+function parse_K_structs($name,$qty) 
+{
 	global $dat;
-	switch ($name) {
-
+	switch ($name) 
+	{
 	}
 }
 
-function parse_L_structs($name,$qty) {
+function parse_L_structs($name,$qty) 
+{
 	global $dat;
-	switch ($name) {
+	switch ($name) 
+	{
 		case 'Leopard Strike Cruiser':
 			$dat['LEOSC']       = $qty;
 			$dat['Capital']    += $qty;
@@ -530,9 +589,11 @@ function parse_L_structs($name,$qty) {
 	}
 }
 
-function parse_M_structs($name,$qty) {
+function parse_M_structs($name,$qty) 
+{
 	global $dat;
-	switch ($name) {
+	switch ($name) 
+	{
 		case 'Manufacturing Plant':
 			$dat['MANU1']       = $qty;
 			$dat['Queues']     += $qty;
@@ -574,16 +635,19 @@ function parse_M_structs($name,$qty) {
 	}
 }
 
-function parse_N_structs($name,$qty) {
+function parse_N_structs($name,$qty) 
+{
 	global $dat;
-	switch ($name) {
-
+	switch ($name) 
+	{
 	}
 }
 
-function parse_O_structs($name,$qty) {
+function parse_O_structs($name,$qty) 
+{
 	global $dat;
-	switch ($name) {
+	switch ($name) 
+	{
 		case 'Orbital Bulwark':
 			$dat['OBULK']        = $qty;
 			$dat['Defense']     += $qty;
@@ -641,9 +705,11 @@ function parse_O_structs($name,$qty) {
 	}
 }
 
-function parse_P_structs($name,$qty) {
+function parse_P_structs($name,$qty)
+{
 	global $dat;
-	switch ($name) {
+	switch ($name) 
+	{
 		case 'Planetary Bank':
 			$dat['PBANK']       = $qty;
 			$dat['Wealth']     += $qty;
@@ -660,16 +726,19 @@ function parse_P_structs($name,$qty) {
 	}
 }
 
-function parse_Q_structs($name,$qty) {
+function parse_Q_structs($name,$qty) 
+{
 	global $dat;
-	switch ($name) {
-
+	switch ($name) 
+	{
 	}
 }
 
-function parse_R_structs($name,$qty) {
+function parse_R_structs($name,$qty) 
+{
 	global $dat;
-	switch ($name) {
+	switch ($name) 
+	{
 		case 'Raven Missile Cruiser':
 			$dat['RAVMC']       = $qty;
 			$dat['Capital']    += $qty;
@@ -698,9 +767,11 @@ function parse_R_structs($name,$qty) {
 	}
 }
 
-function parse_S_structs($name,$qty) {
+function parse_S_structs($name,$qty)
+{
 	global $dat;
-	switch ($name) {
+	switch ($name) 
+	{
 		case 'Satellites':
 			$dat['SATE1']        = $qty;
 			$dat['Sensors']     += $qty;
@@ -757,9 +828,11 @@ function parse_S_structs($name,$qty) {
 	}
 }
 
-function parse_T_structs($name,$qty) {
+function parse_T_structs($name,$qty) 
+{
 	global $dat;
-	switch ($name) {
+	switch ($name) 
+	{
 		case 'Tangler Defense Barge':
 			$dat['TANDB']       = $qty;
 			$dat['Capital']    += $qty;
@@ -786,9 +859,11 @@ function parse_T_structs($name,$qty) {
 	}
 }
 
-function parse_U_structs($name,$qty) {
+function parse_U_structs($name,$qty)
+{
 	global $dat;
-	switch ($name) {
+	switch ($name) 
+	{
 		case 'University':
 			$dat['UNIVE']       = $qty;
 			$dat['Training']   += $qty;
@@ -797,9 +872,11 @@ function parse_U_structs($name,$qty) {
 	}
 }
 
-function parse_V_structs($name,$qty) {
+function parse_V_structs($name,$qty) 
+{
 	global $dat;
-	switch ($name) {
+	switch ($name) 
+	{
 		case 'Venom Heavy Fighter':
 			$dat['VENHF']       = $qty;
 			$dat['Fighter']    += $qty;
@@ -817,9 +894,11 @@ function parse_V_structs($name,$qty) {
 	}
 }
 
-function parse_W_structs($name,$qty) {
+function parse_W_structs($name,$qty) 
+{
 	global $dat;
-	switch ($name) {
+	switch ($name) 
+	{
 		case 'War Factory':
 			$dat['WARFA']       = $qty;
 			$dat['Special']    += $qty;
@@ -852,23 +931,27 @@ function parse_W_structs($name,$qty) {
 	}
 }
 
-function parse_X_structs($name,$qty) {
+function parse_X_structs($name,$qty) 
+{
 	global $dat;
-	switch ($name) {
-
+	switch ($name) 
+	{
 	}
 }
 
-function parse_Y_structs($name,$qty) {
+function parse_Y_structs($name,$qty)
+{
 	global $dat;
-	switch ($name) {
-
+	switch ($name) 
+	{
 	}
 }
 
-function parse_Z_structs($name,$qty) {
+function parse_Z_structs($name,$qty) 
+{
 	global $dat;
-	switch ($name) {
+	switch ($name)
+	{
 		case 'Zephyr Fast Destroyer':
 			$dat['ZEPFD']       = $qty;
 			$dat['Capital']    += $qty;
@@ -878,7 +961,8 @@ function parse_Z_structs($name,$qty) {
 }
 
 
-function initialize_dat() {
+function initialize_dat()
+{
 	global $dat;
 	$dat['date']   = '';
 	$dat['time']   = '';
@@ -1031,9 +1115,8 @@ function initialize_dat() {
 	$dat['ZEPFD']  = '';
 }
 
-
-
-function updateDatabase() {
+function updateDatabase()
+{
 	global $dat;
 	$targetName = $dat['target'];
 	$sourceName = $dat['from'];
@@ -1042,63 +1125,81 @@ function updateDatabase() {
 
 	$ok  = true;
 	$err = '';
-	if ($targetName == '') {
+	
+	if ($targetName == '') 
+	{
 		$ok   = false;
 		$err .= 'Target planet missing. ';
 	}
-	if ($sourceName == '') {
+	
+	if ($sourceName == '')
+	{
 		$ok   = false;
 		$err .= 'Source planet missing. ';
 	}
-	if ($reportDate == '') {
+	
+	if ($reportDate == '') 
+	{
 		$ok   = false;
 		$err .= 'Report date missing. ';
 	}
-	if ($reportTime == '') {
+	
+	if ($reportTime == '') 
+	{
 		$ok = false;
 		$err .= 'Report time missing. ';
 	}
 
-	if ($ok) {
+	if ($ok) 
+	{
 		$targetName = trim($targetName);
 		$sourceName = trim($sourceName);
 		$reportDate = date('Y-m-d',strtotime($reportDate));
 		$reportTime = date('H:i:s',strtotime($reportTime));
 	}
 
-	if ($ok) {
+	if ($ok) 
+	{
 		// get target planet id
 		$SQL = 'Select RecordNumber,Rank,SID1 FROM Planet WHERE PlanetName = \'' . $targetName . '\'';
 		$result = mysql_query($SQL);
 		if (!$result) die('Invalid query: ' . mysql_error());
-		if (mysql_num_rows($result) > 0) {
+		if (mysql_num_rows($result) > 0) 
+		{
 			$row = mysql_fetch_assoc($result);
 			$planetID = $row['RecordNumber'];
 			$rank     = $row['Rank'];
 			$sid1     = $row['SID1'];
-		} else {
+		} 
+		else 
+		{
 			$ok   = false;
 			$err .= 'target planet [' . $targetName . '] not found in database. ';
 			//echo 'target planet [' . $targetName . '] not found in database. ';
 		}
 	}
 
-	if ($ok) {
+	if ($ok) 
+	{
 		// get source planet id
 		$SQL = 'Select RecordNumber FROM Planet WHERE PlanetName = \'' . $sourceName . '\'';
 		$result = mysql_query($SQL);
 		if (!$result) die('Invalid query: ' . mysql_error());
-		if (mysql_num_rows($result) > 0) {
+		if (mysql_num_rows($result) > 0)
+		{
 			$row = mysql_fetch_assoc($result);
 			$sourceID = $row['RecordNumber'];
-		} else {
+		} 
+		else 
+		{
 			$ok   = false;
 			$err .= 'source planet [' . $sourceName . '] not found in database. ';
 			//echo 'source planet [' . $sourceName . '] not found in database. ';
 		}
 	}
 
-	if ($ok) {
+	if ($ok)
+	{
 		// see if scouting report has already been entered
 		$SQL  = 'SELECT RecordNumber ';
 		$SQL .= 'FROM scout ';
@@ -1107,9 +1208,13 @@ function updateDatabase() {
 		$SQL .= 'AND ReportTime = \'' . $reportTime . '\' ';
 		$result = mysql_query($SQL);
 		if (!$result) die('Invalid query: ' . mysql_error());
-		if (mysql_num_rows($result) > 0) {
+		
+		if (mysql_num_rows($result) > 0) 
+		{
 			// do nothing, record already exists
-		} else {
+		}
+		else 
+		{
 			$SQL  = 'INSERT INTO scout (PlanetID,PlanetName,SourceID,SourceName,ReportDate,ReportTime,';
 			$SQL .= 'ADVIN,ADVGE,ADVTS,AEGMS,AIRB1,AIRB2,ANVBS,ASPHC,AVASC,BADLC,';
 			$SQL .= 'BARAF,BARR1,BARR2,BATSH,BERDE,BIOLO,BLABM,COLFR,COLOS,CRUBC,CRUIS,';
@@ -1278,23 +1383,25 @@ function updateDatabase() {
 			$SQL .= '\'' . 'Y'                   . '\' ';
 			$SQL .= ')';
 			$result = mysql_query($SQL);
+			
 			if (!$result) die('Invalid query: ' . mysql_error());
+			
 			$newid = mysql_insert_id();
 			$sid2 = $sid1;
-         $sid1 = $newid;
+         	$sid1 = $newid;
 			$SQL  = 'UPDATE Planet SET ';
 			$SQL .= 'SID1 = \'' . $sid1 . '\', ';
 			$SQL .= 'SID2 = \'' . $sid2 . '\'  ';
 			$SQL .= 'WHERE RecordNumber = ' . $planetID;
 			$result = mysql_query($SQL);
+			
 			if (!$result) die('Invalid query: ' . mysql_error());
-
 		}
 		return $planetID;
-	} else {
+	}
+	else 
+	{
 		return $err;
 	}
 }
-
-
 ?>

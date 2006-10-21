@@ -1,51 +1,62 @@
 <?php
-	$p       = array();
-	$p1      = array();
-	$p2      = array();
-	$d1      = array();
-	$xp      = array();
-	$xd      = array();
-	$sort    = 'planet';
+$p       = array();
+$p1      = array();
+$p2      = array();
+$d1      = array();
+$xp      = array();
+$xd      = array();
+$sort    = 'planet';
 
-	include("../cabal_database.php");
+include("../cabal_database.php");
 
-	if (isset($_REQUEST['action'])) {
-		$action = $_REQUEST['action'];
-	} else {
-		$action = '';
-	}
+if (isset($_REQUEST['action'])) 
+{
+	$action = $_REQUEST['action'];
+} 
+else 
+{
+	$action = '';
+}
 
-	if (isset($_REQUEST['planet'])) {
-		$planet = $_REQUEST['planet'];
-	} else {
-		$planet = '';
-	}
+if (isset($_REQUEST['planet'])) 
+{
+	$planet = $_REQUEST['planet'];
+} 
+else 
+{
+	$planet = '';
+}
 
-	if (isset($_REQUEST['report'])) {
-		$reportID = $_REQUEST['report'];
-	} else {
-		$reportID = '';
-	}
+if (isset($_REQUEST['report'])) 
+{
+	$reportID = $_REQUEST['report'];
+} 
+else 
+{
+	$reportID = '';
+}
 
-	if (isset($_REQUEST['sort'])) {
-		$sort = $_REQUEST['sort'];
-	} else {
-		$sort = 'planet';
-	}
+if (isset($_REQUEST['sort']))
+{
+	$sort = $_REQUEST['sort'];
+} 
+else 
+{
+	$sort = 'planet';
+}
 
-
-	switch ($action) {
-		case 'summary':
-			displaySummary();
-			break;
-		case 'planet':
-			displayPlanet($planet);
-			break;
-		case 'detail':
-			displayDetail($reportID);
-			break;
-	}
-
+switch ($action) 
+{
+	case 'summary':
+		displaySummary();
+		break;
+	case 'planet':
+		displayPlanet($planet);
+		break;
+	case 'detail':
+		displayDetail($reportID);
+		break;
+}
 
 //=============================================================================
 
@@ -67,15 +78,20 @@ function displaySummary() {
 	
 	$result = mysql_query($SQL);
 	if (!$result) die('Invalid query: ' . mysql_error());
-	while ($row = mysql_fetch_assoc($result)) {
+	while ($row = mysql_fetch_assoc($result)) 
+	{
 		$planetID     = $row['PlanetID'];
 		$recNbr       = $row['RecordNumber'];
-		if ( ! array_key_exists($planetID,$p)) {
+		
+		if ( ! array_key_exists($planetID,$p)) 
+		{
 			$p[$planetID] = 0;
 		}
 
-		if ($p[$planetID] < 2) {
-			if ($p[$planetID] == 0) {
+		if ($p[$planetID] < 2) 
+		{
+			if ($p[$planetID] == 0) 
+			{
 				$p[$planetID] = 1;
 				$p1[$planetID]['planetName']   = stripslashes($row['PlanetName']);
 				$p1[$planetID]['reportDate']   = $row['ReportDate'];
@@ -94,7 +110,9 @@ function displaySummary() {
 				$p1[$planetID]['slots']        = $row['Slots'];
 				$p1[$planetID]['speed']        = $row['Speed'];
 				$p1[$planetID]['rank']         = $row['Rank'];
-			} else {
+			} 
+			else 
+			{
 				$p[$planetID] = 2;
 				$p2[$planetID]['planetName']   = stripslashes($row['PlanetName']);
 				$p2[$planetID]['reportDate']   = $row['ReportDate'];
@@ -115,17 +133,18 @@ function displaySummary() {
 				$p2[$planetID]['speed']        = $row['Speed'];
 				$p2[$planetID]['rank']         = $row['Rank'];
 			}
-		} else {
+		} 
+		else 
+		{
 			$SQL = 'UPDATE scout SET Current = \'N\' WHERE RecordNumber = ' . $recNbr;
 			$dummy = mysql_query($SQL);
 		}
 	}
 
-
-
-
-	foreach ($p as $key => $value) {
-		if ($value > 1) {
+	foreach ($p as $key => $value) 
+	{
+		if ($value > 1) 
+		{
 			calcSummaryDiff($key,'airCap');
 			calcSummaryDiff($key,'offMaint');
 			calcSummaryDiff($key,'defMaint');
@@ -139,7 +158,9 @@ function displaySummary() {
 			calcSummaryDiff($key,'scouting');
 			calcSummaryDiff($key,'sensors');
 			calcSummaryDiff($key,'speed');
-		} else {
+		} 
+		else 
+		{
 			$d1[$key]['airCap']       = '';
 			$d1[$key]['offMaint']     = '';
 			$d1[$key]['defMaint']     = '';
@@ -157,7 +178,8 @@ function displaySummary() {
 		}
 	}
 
-	switch ($sort) {
+	switch ($sort) 
+	{
 		case 'planet':
 			$array = $p;
 			break;
@@ -169,8 +191,6 @@ function displaySummary() {
 			break;
 	}
 
-
-	
 	header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 	header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 	header("Cache-Control: no-store, no-cache, must-revalidate");
@@ -182,15 +202,21 @@ function displaySummary() {
 	$r .= '<table width=100% border=0 cellpadding=1 cellspacing=2 bgcolor=#FFFFFF>';
 
 	$cnt     = 0;
-	foreach ($array as $key => $value) {
-		if (($cnt % 12) == 0) {
+	foreach ($array as $key => $value)
+	{
+		if (($cnt % 12) == 0) 
+		{
 			$r .= summaryColumnHeader();
 		}
-      $cnt++;
+		
+      	$cnt++;
 
-		if ($bgcolor == '#F5F5F5') {
+		if ($bgcolor == '#F5F5F5') 
+		{
 			$bgcolor = '#FFFFFF';
-		} else {
+		} 
+		else 
+		{
 			$bgcolor = '#F5F5F5';
 		}
 
@@ -236,7 +262,8 @@ function displaySummary() {
 }
 
 
-function calcHabitatDiff($key,$item) {
+function calcHabitatDiff($key,$item) 
+{
 	global $p1;
 	global $p2;
 	global $d1;
@@ -247,16 +274,22 @@ function calcHabitatDiff($key,$item) {
 	$diff = $v1 - $v2;
 
 
-	if ($diff > 0) {
+	if ($diff > 0) 
+	{
 		$d1[$key][$item] = '<div class=positive>+' . sprintf('%01.2f',$diff)   . '</div>';
-	} elseif ($diff == 0) {
+	} 
+	elseif ($diff == 0) 
+	{
 		$d1[$key][$item] = '<div class=even>'      . ' '   . '</div>';
-	} else {
+	} 
+	else 
+	{
 		$d1[$key][$item] = '<div class=negative>' . sprintf('%01.2f',$diff)   . '</div>';
 	}
 }
 
-function calcSummaryDiff($key,$item) {
+function calcSummaryDiff($key,$item) 
+{
 	global $p1;
 	global $p2;
 	global $d1;
@@ -267,16 +300,22 @@ function calcSummaryDiff($key,$item) {
 	$diff = $v1 - $v2;
 
 
-	if ($diff > 0) {
+	if ($diff > 0) 
+	{
 		$d1[$key][$item] = '<div class=positive>+' . number_format($diff)   . '</div>';
-	} elseif ($diff == 0) {
+	} 
+	elseif ($diff == 0) 
+	{
 		$d1[$key][$item] = '<div class=even>'      . ' '   . '</div>';
-	} else {
+	} 
+	else 
+	{
 		$d1[$key][$item] = '<div class=negative>' . number_format($diff)   . '</div>';
 	}
 }
 
-function summaryColumnHeader() {
+function summaryColumnHeader() 
+{
 	global $sort;
 	$col01 = 'uhc';
 	$col02 = 'uhc';
@@ -300,7 +339,8 @@ function summaryColumnHeader() {
 	$col20 = 'uhc';
 	$col21 = 'uhc';
 
-	switch ($sort) {
+	switch ($sort) 
+	{
 		case 'planet':
 			$col01 = 'shc';
 			break;
@@ -360,7 +400,6 @@ function summaryColumnHeader() {
 			break;
 	}
 
-
 	$r  = '';
 	$r .= '<tr>';
 	$r .= '<td class=' . $col01 . ' colspan=1 onclick=sortColumn("planet") onmouseover=glowObject(this) onmouseout=dimObject(this)>Planet</td>';
@@ -387,43 +426,58 @@ function summaryColumnHeader() {
 }
 
 
-function array_sort($array, $key) {
-	for ($i = 0; $i < sizeof($array); $i++) {
+function array_sort($array, $key) 
+{
+	for ($i = 0; $i < sizeof($array); $i++) 
+	{
 		$sort_values[$i] = $array[$i][$key];
 	} 
+	
 	asort ($sort_values);
 	reset ($sort_values);
-	while (list ($arr_key, $arr_val) = each ($sort_values)) {
+	while (list ($arr_key, $arr_val) = each ($sort_values)) 
+	{
 		$sorted_arr[] = $array[$arr_key];
 	}
 	return $sorted_arr;
 }
 
-function array_csort($marray, $column) {    //coded by Ichier2003
- foreach ($marray as $row) {
-   $sortarr[] = $row[$column];
- }
- array_multisort($sortarr, $marray);
- return $marray;
+function array_csort($marray, $column) 
+{    //coded by Ichier2003
+	foreach ($marray as $row) 
+	{
+		$sortarr[] = $row[$column];
+	}
+ 	array_multisort($sortarr, $marray);
+ 	return $marray;
 }
 
-function array_column_sort() { 
+function array_column_sort() 
+{ 
 	$args = func_get_args();
 	$array = array_shift($args);
 	// make a temporary copy of array for which will fix the keys to be strings, so that array_multisort() doesn't destroy them
 	$array_mod = array();
 	foreach ($array as $key => $value)
+	{
 		$array_mod['_' . $key] = $value;
-
+	}
+	
 	$i = 0;
 	$multi_sort_line = "return array_multisort( ";
-	foreach ($args as $arg) {
+	
+	foreach ($args as $arg) 
+	{
 		$i++;
-		if ( is_string($arg) ) {
-			foreach ($array_mod as $row_key => $row) {
+		if ( is_string($arg) ) 
+		{
+			foreach ($array_mod as $row_key => $row) 
+			{
 				$sort_array[$i][] = $row[$arg];
 			}
-		} else {
+		} 
+		else 
+		{
 			$sort_array[$i] = $arg;
 		}
 		$multi_sort_line .= "\$sort_array[" . $i . "], ";
@@ -434,14 +488,18 @@ function array_column_sort() {
 	// now copy $array_mod back into $array, stripping off the "_" that we added earlier.
 	$array = array();
 	foreach ($array_mod as $key => $value)
+	{
 		$array[ substr($key, 1) ] = $value;
+	}
+	
 	return $array;
 }
 
 
 
 //==========================================================================================
-function displayPlanet($planet) {
+function displayPlanet($planet) 
+{
 	global $xp;
 	global $xd;
 
@@ -455,7 +513,8 @@ function displayPlanet($planet) {
 	$SQL .= 'ORDER BY ReportDate DESC, ReportTime DESC';
 	$result = mysql_query($SQL);
 	if (!$result) die('Invalid query: ' . mysql_error());
-	while ($row = mysql_fetch_assoc($result)) {
+	while ($row = mysql_fetch_assoc($result)) 
+	{
 		$cnt++;
 		$xp[$cnt]['scoutID']      = $row['RecordNumber'];
 		$xp[$cnt]['planetID']     = $row['PlanetID'];
@@ -483,8 +542,10 @@ function displayPlanet($planet) {
 	}
 
 	$nbrReports = $cnt;
-	for ($i = 1; $i <= $nbrReports; $i++) {
-		if ($i < $nbrReports) {
+	for ($i = 1; $i <= $nbrReports; $i++) 
+	{
+		if ($i < $nbrReports) 
+		{
 			calcReportDiff($i,'airCap');
 			calcReportDiff($i,'offMaint');
 			calcReportDiff($i,'defMaint');
@@ -502,7 +563,9 @@ function displayPlanet($planet) {
 			calcReportDiff($i,'speed');
 			calcReportDiff($i,'training');
 			calcReportDiff($i,'wealth');
-		} else {
+		} 
+		else 
+		{
 			$xd[$i]['airCap']       = '';
 			$xd[$i]['offMaint']     = '';
 			$xd[$i]['defMaint']     = '';
@@ -525,7 +588,6 @@ function displayPlanet($planet) {
 
 	$bgcolor = '#F5F5F5';
 	
-
 	header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 	header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 	header("Cache-Control: no-store, no-cache, must-revalidate");
@@ -555,11 +617,14 @@ function displayPlanet($planet) {
 	$r .= '<td class=hc colspan=2>Speed</td>';
 	$r .= '</tr>';
 
-	for ($i = 1; $i <= $nbrReports; $i++) {
-
-		if ($bgcolor == '#F5F5F5') {
+	for ($i = 1; $i <= $nbrReports; $i++) 
+	{
+		if ($bgcolor == '#F5F5F5') 
+		{
 			$bgcolor = '#FFFFFF';
-		} else {
+		} 
+		else 
+		{
 			$bgcolor = '#F5F5F5';
 		}
 
@@ -604,7 +669,8 @@ function displayPlanet($planet) {
 	echo $r;
 }
 
-function calcReportDiff($i,$item) {
+function calcReportDiff($i,$item) 
+{
 	global $xp;
 	global $xd;
 
@@ -613,17 +679,22 @@ function calcReportDiff($i,$item) {
 
 	$diff = $v1 - $v2;
 
-	if ($diff > 0) {
+	if ($diff > 0) 
+	{
 		$xd[$i][$item] = '<div class=positive>+' . number_format($diff)   . '</div>';
-	} elseif ($diff == 0) {
+	} 
+	elseif ($diff == 0)
+	{
 		$xd[$i][$item] = '<div class=even>'      . ' '   . '</div>';
-	} else {
+	} 
+	else 
+	{
 		$xd[$i][$item] = '<div class=negative>'  . number_format($diff)   . '</div>';
 	}
 }
 
-
-function calcDiffHabitat($i,$item) {
+function calcDiffHabitat($i,$item) 
+{
 	global $xp;
 	global $xd;
 
@@ -633,17 +704,23 @@ function calcDiffHabitat($i,$item) {
 	$diff = $v1 - $v2;
 
 
-	if ($diff > 0) {
+	if ($diff > 0) 
+	{
 		$xd[$i][$item] = '<div class=positive>+' . sprintf('%01.2f',$diff)   . '</div>';
-	} elseif ($diff == 0) {
+	} 
+	elseif ($diff == 0)
+	{
 		$xd[$i][$item] = '<div class=even>'      . ' '   . '</div>';
-	} else {
+	} 
+	else 
+	{
 		$xd[$i][$item] = '<div class=negative>' . sprintf('%01.2f',$diff)   . '</div>';
 	}
 }
 
 //==============================================================================================
-function displayDetail($reportID) {
+function displayDetail($reportID) 
+{
 	header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 	header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 	header("Cache-Control: no-store, no-cache, must-revalidate");
@@ -668,8 +745,6 @@ function displayDetail($reportID) {
 	$r .= '<td class=hc>Materials</td>';
 	$r .= '<td class=hc>Queues</td>';
 	
-	
-	
 	$r .= '<td class=hc>Defense</td>';
 	$r .= '<td class=hc>Diplomacy</td>';
 	$r .= '<td class=hc>Sensors</td>';
@@ -679,7 +754,8 @@ function displayDetail($reportID) {
 	$SQL  = 'SELECT * FROM scout WHERE RecordNumber=' . $reportID;
 	$result = mysql_query($SQL);
 	if (!$result) die('Invalid query: ' . mysql_error());
-	while ($row = mysql_fetch_assoc($result)) {
+	while ($row = mysql_fetch_assoc($result))
+	{
 		$pName = stripslashes($row['PlanetName']);
 		$pName = substr($pName,0,15);
 
@@ -719,428 +795,544 @@ function displayDetail($reportID) {
 		$r .= '</table>';
 	}
 	echo $r;
-
 }
 
 
-function getAirOps($row) {
+function getAirOps($row) 
+{
 	$r  = '';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#A9A9A9><tr><td>';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#FFFFFF>';
 	$r .= '<tr><td class=hc colspan=3>Air Ops</td></tr>';
-	if ($row['AIRB1'] > 0) {
+	if ($row['AIRB1'] > 0)
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptc>' . ($row['AIRB1'] * 200) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['AIRB1'] . '</td>';
 		$r .= '<td width=80% class=rptl>Airbase</td>';
 		$r .= '</tr>';
 	}
-	if ($row['AIRB2'] > 0) {
+	
+	if ($row['AIRB2'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptc>' . ($row['AIRB2'] * 300) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['AIRB2'] . '</td>';
 		$r .= '<td width=80% class=rptl>Airbase (Improved)</td>';
 		$r .= '</tr>';
 	}
-	if ($row['SBASE'] > 0) {
+	
+	if ($row['SBASE'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptc>' . ($row['SBASE'] * 50) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['SBASE'] . '</td>';
 		$r .= '<td width=80% class=rptl>Starbase</td>';
 		$r .= '</tr>';
 	}
+	
 	$r .= '</table>';
 	$r .= '</td></tr></table>';
 	return $r;
 }
 
-function getCapital($row) {
+function getCapital($row) 
+{
 	$r  = '';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#A9A9A9><tr><td>';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#FFFFFF>';
 	$r .= '<tr><td class=hc colspan=3>Capital Ships</td></tr>';
-	if ($row['ANVBS'] > 0) {
+	
+	if ($row['ANVBS'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['ANVBS'] * 249) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['ANVBS'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Anvil" Battleship</td>';
 		$r .= '</tr>';
 	}
-	if ($row['ASPHC'] > 0) {
+	
+	if ($row['ASPHC'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['ASPHC'] * 106) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['ASPHC'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Asp" Heavy Cruiser</td>';
 		$r .= '</tr>';
 	}
-	if ($row['AVASC'] > 0) {
+	
+	if ($row['AVASC'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['AVASC'] * 116) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['AVASC'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Avalanche" Sige Cruiser</td>';
 		$r .= '</tr>';
 	}
-	if ($row['BADLC'] > 0) {
+	
+	if ($row['BADLC'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['BADLC'] * 199) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['BADLC'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Badger" Light Cruiser</td>';
 		$r .= '</tr>';
 	}
-	if ($row['BARAF'] > 0) {
+	
+	if ($row['BARAF'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['BARAF'] * 25) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['BARAF'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Barracuda" Attack Frigate</td>';
 		$r .= '</tr>';
 	}
-	if ($row['BATSH'] > 0) {
+	
+	if ($row['BATSH'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['BATSH'] * 229) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['BATSH'] . '</td>';
 		$r .= '<td width=80% class=rptl>Battleship</td>';
 		$r .= '</tr>';
 	}
-	if ($row['BERDE'] > 0) {
+	
+	if ($row['BERDE'] > 0)
+	 {
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['BERDE'] * 30) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['BERDE'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Berzerker" Destroyer</td>';
 		$r .= '</tr>';
 	}
-	if ($row['BLABM'] > 0) {
+	
+	if ($row['BLABM'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['BLABM'] * 744) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['BLABM'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Black Widow" Brood Minder</td>';
 		$r .= '</tr>';
 	}
-	if ($row['COLFR'] > 0) {
+	
+	if ($row['COLFR'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['COLFR'] * 26) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['COLFR'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Collector" Frigate</td>';
 		$r .= '</tr>';
 	}
-	if ($row['COLOS'] > 0) {
+	
+	if ($row['COLOS'] > 0)
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['COLOS'] * 880) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['COLOS'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Colossus" Megaship</td>';
 		$r .= '</tr>';
 	}
-	if ($row['CRUBC'] > 0) {
+	
+	if ($row['CRUBC'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['CRUBC'] * 153) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['CRUBC'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Crusader" Battlecruiser</td>';
 		$r .= '</tr>';
 	}
-	if ($row['CRUIS'] > 0) {
+	
+	if ($row['CRUIS'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['CRUIS'] * 115) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['CRUIS'] . '</td>';
 		$r .= '<td width=80% class=rptl>Cruiser</td>';
 		$r .= '</tr>';
 	}
-	if ($row['DESTR'] > 0) {
+	
+	if ($row['DESTR'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['DESTR'] * 31) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['DESTR'] . '</td>';
 		$r .= '<td width=80% class=rptl>Destroyer</td>';
 		$r .= '</tr>';
 	}
-	if ($row['DRAMA'] > 0) {
+	
+	if ($row['DRAMA'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['DRAMA'] * 379) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['DRAMA'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Dragon" Mobil Assualt Platform</td>';
 		$r .= '</tr>';
 	}
-	if ($row['DREAD'] > 0) {
+	
+	if ($row['DREAD'] > 0)
+	 {
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['DREAD'] * 258) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['DREAD'] . '</td>';
 		$r .= '<td width=80% class=rptl>Dreadnought</td>';
 		$r .= '</tr>';
 	}
-	if ($row['FIRSD'] > 0) {
+	
+	if ($row['FIRSD'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['FIRSD'] * 34) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['FIRSD'] . '</td>';
 		$r .= '<td width=80% class=rptl>Fire Support Destroyer</td>';
 		$r .= '</tr>';
 	}
-	if ($row['FRIGA'] > 0) {
+	
+	if ($row['FRIGA'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['FRIGA'] * 21) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['FRIGA'] . '</td>';
 		$r .= '<td width=80% class=rptl>Frigate</td>';
 		$r .= '</tr>';
 	}
-	if ($row['GOLBA'] > 0) {
+	
+	if ($row['GOLBA'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['GOLBA'] * 260) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['GOLBA'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Goliath" Battleship</td>';
 		$r .= '</tr>';
 	}
-	if ($row['HAMGU'] > 0) {
+	
+	if ($row['HAMGU'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['HAMGU'] * 15) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['HAMGU'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Hammer" Gunship</td>';
 		$r .= '</tr>';
 	}
-	if ($row['HVYCA'] > 0) {
+	
+	if ($row['HVYCA'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['HVYCA'] * 257) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['HVYCA'] . '</td>';
 		$r .= '<td width=80% class=rptl>Heavy Carrier</td>';
 		$r .= '</tr>';
 	}
-	if ($row['HVYCR'] > 0) {
+	
+	if ($row['HVYCR'] > 0)
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['HVYCR'] * 125) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['HVYCR'] . '</td>';
 		$r .= '<td width=80% class=rptl>Heavy Cruiser</td>';
 		$r .= '</tr>';
 	}
-	if ($row['HURFC'] > 0) {
+	
+	if ($row['HURFC'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['HURFC'] * 115) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['HURFC'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Hurricane" Fast Cruiser</td>';
 		$r .= '</tr>';
 	}
-	if ($row['IMPFR'] > 0) {
+	
+	if ($row['IMPFR'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['IMPFR'] * 23) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['IMPFR'] . '</td>';
 		$r .= '<td width=80% class=rptl>Improved Frigate</td>';
 		$r .= '</tr>';
 	}
-	if ($row['INTFR'] > 0) {
+	
+	if ($row['INTFR'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['INTFR'] * 21) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['INTFR'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Interdictor" Frigate</td>';
 		$r .= '</tr>';
 	}
-	if ($row['JUDDR'] > 0) {
+	
+	if ($row['JUDDR'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['JUDDR'] * 234) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['JUDDR'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Judicator" Dreadnought</td>';
 		$r .= '</tr>';
 	}
-	if ($row['LEOSC'] > 0) {
+	
+	if ($row['LEOSC'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['LEOSC'] * 106) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['LEOSC'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Leopard" Strike Cruiser</td>';
 		$r .= '</tr>';
 	}
-	if ($row['LIGCA'] > 0) {
+	
+	if ($row['LIGCA'] > 0)
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['LIGCA'] * 139) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['LIGCA'] . '</td>';
 		$r .= '<td width=80% class=rptl>Light Carrier</td>';
 		$r .= '</tr>';
 	}
-	if ($row['ORCBA'] > 0) {
+	
+	if ($row['ORCBA'] > 0)
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['ORCBA'] * 246) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['ORCBA'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Orca" Battleship</td>';
 		$r .= '</tr>';
 	}
-	if ($row['PRIHC'] > 0) {
+	
+	if ($row['PRIHC'] > 0)
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['PRIHC'] * 117) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['PRIHC'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Privateer" Heavy Cruiser</td>';
 		$r .= '</tr>';
 	}
-	if ($row['RAVMC'] > 0) {
+	
+	if ($row['RAVMC'] > 0)
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['RAVMC'] * 115) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['RAVMC'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Raven" Missile Cruiser</td>';
 		$r .= '</tr>';
 	}
-	if ($row['TANDB'] > 0) {
+	
+	if ($row['TANDB'] > 0)
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['TANDB'] * 200) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['TANDB'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Tangler" Defense Barge</td>';
 		$r .= '</tr>';
 	}
-	if ($row['TERCA'] > 0) {
+	
+	if ($row['TERCA'] > 0)
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['TERCA'] * 324) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['TERCA'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Terrapin" Carrier</td>';
 		$r .= '</tr>';
 	}
-	if ($row['TORBA'] > 0) {
+	
+	if ($row['TORBA'] > 0)
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['TORBA'] * 240) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['TORBA'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Tortoise" Battleship</td>';
 		$r .= '</tr>';
 	}
-	if ($row['VESSC'] > 0) {
+	
+	if ($row['VESSC'] > 0)
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['VESSC'] * 268) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['VESSC'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Vespa" Siege Carrier</td>';
 		$r .= '</tr>';
 	}
-	if ($row['WAYEC'] > 0) {
+	
+	if ($row['WAYEC'] > 0)
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['WAYEC'] * 127) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['WAYEC'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Wayfarer" Exploration Cruiser</td>';
 		$r .= '</tr>';
 	}
-	if ($row['ZEPFD'] > 0) {
+	
+	if ($row['ZEPFD'] > 0)
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['ZEPFD'] * 32) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['ZEPFD'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Zephyr" Fast Destroyer</td>';
 		$r .= '</tr>';
 	}
+	
 	$r .= '</table>';
 	$r .= '</td></tr></table>';
 	return $r;
 }
 
-function getDefense($row) {
+function getDefense($row) 
+{
 	$r  = '';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#A9A9A9><tr><td>';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#FFFFFF>';
 	$r .= '<tr><td class=hc colspan=3>Defense</td></tr>';
-	if ($row['BARR1'] > 0) {
+	
+	if ($row['BARR1'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['BARR1'] * 35) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['BARR1'] . '</td>';
 		$r .= '<td width=80% class=rptl>Barracks</td>';
 		$r .= '</tr>';
 	}
-	if ($row['BARR2'] > 0) {
+	
+	if ($row['BARR2'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['BARR2'] * 49) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['BARR2'] . '</td>';
 		$r .= '<td width=80% class=rptl>Barracks (Veteran)</td>';
 		$r .= '</tr>';
 	}
-	if ($row['OMIN1'] > 0) {
+	
+	if ($row['OMIN1'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['OMIN1'] * 5) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['OMIN1'] . '</td>';
 		$r .= '<td width=80% class=rptl>Orbital Minefield</td>';
 		$r .= '</tr>';
 	}
-	if ($row['OMIN2'] > 0) {
+	
+	if ($row['OMIN2'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['OMIN2'] * 6) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['OMIN2'] . '</td>';
 		$r .= '<td width=80% class=rptl>Orbital Minefield (Improved)</td>';
 		$r .= '</tr>';
 	}
-	if ($row['OSLD1'] > 0) {
+	
+	if ($row['OSLD1'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['OSLD1'] * 29) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['OSLD1'] . '</td>';
 		$r .= '<td width=80% class=rptl>Orbital Shield</td>';
 		$r .= '</tr>';
 	}
-	if ($row['OSLD2'] > 0) {
+	
+	if ($row['OSLD2'] > 0)
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['OSLD2'] * 39) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['OSLD2'] . '</td>';
 		$r .= '<td width=80% class=rptl>Orbital Shield (Improved)</td>';
 		$r .= '</tr>';
 	}
-	if ($row['ODEF1'] > 0) {
+	
+	if ($row['ODEF1'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['ODEF1'] * 30) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['ODEF1'] . '</td>';
 		$r .= '<td width=80% class=rptl>Orbital Defense Platform</td>';
 		$r .= '</tr>';
 	}
-	if ($row['ODEF2'] > 0) {
+	
+	if ($row['ODEF2'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['ODEF2'] * 38) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['ODEF2'] . '</td>';
 		$r .= '<td width=80% class=rptl>Orbital Defense Platform (Improved)</td>';
 		$r .= '</tr>';
 	}
-	if ($row['ODEFM'] > 0) {
+	
+	if ($row['ODEFM'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['ODEFM'] * 41) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['ODEFM'] . '</td>';
 		$r .= '<td width=80% class=rptl>Orbital Defense Monitor</td>';
 		$r .= '</tr>';
 	}
-	if ($row['AEGMS'] > 0) {
+	
+	if ($row['AEGMS'] > 0)
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['AEGMS'] * 188) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['AEGMS'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Aegis" Mobile Shield</td>';
 		$r .= '</tr>';
 	}
-	if ($row['DEFTU'] > 0) {
+	
+	if ($row['DEFTU'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['DEFTU'] * 7) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['DEFTU'] . '</td>';
 		$r .= '<td width=80% class=rptl>Defense Turret</td>';
 		$r .= '</tr>';
 	}
-	if ($row['SDEF1'] > 0) {
+	
+	if ($row['SDEF1'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['SDEF1'] * 15) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['SDEF1'] . '</td>';
 		$r .= '<td width=80% class=rptl>Surface Defense Battery</td>';
 		$r .= '</tr>';
 	}
-	if ($row['SDEF2'] > 0) {
+	
+	if ($row['SDEF2'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['SDEF2'] * 21) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['SDEF2'] . '</td>';
 		$r .= '<td width=80% class=rptl>Surface Defense Battery (Improved)</td>';
 		$r .= '</tr>';
 	}
-	if ($row['SSLD1'] > 0) {
+	
+	if ($row['SSLD1'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['SSLD1'] * 29) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['SSLD1'] . '</td>';
 		$r .= '<td width=80% class=rptl>Surface Shield Generator</td>';
 		$r .= '</tr>';
 	}
-	if ($row['SSLD2'] > 0) {
+	
+	if ($row['SSLD2'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['SSLD2'] * 39) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['SSLD2'] . '</td>';
 		$r .= '<td width=80% class=rptl>Surface Shield Generator (Improved)</td>';
 		$r .= '</tr>';
 	}
-	if ($row['SBASE'] > 0) {
+	
+	if ($row['SBASE'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['SBASE'] * 330) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['SBASE'] . '</td>';
 		$r .= '<td width=80% class=rptl>Starbase</td>';
 		$r .= '</tr>';
 	}
-	if ($row['OBULK'] > 0) {
+	
+	if ($row['OBULK'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['OBULK'] * 1) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['OBULK'] . '</td>';
 		$r .= '<td width=80% class=rptl>Orbital Bulwark</td>';
 		$r .= '</tr>';
 	}
-/*	if ($row['STIDR'] > 0) {
+/*	if ($row['STIDR'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['STIDR'] * 1) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['STIDR'] . '</td>';
@@ -1152,15 +1344,19 @@ function getDefense($row) {
 	return $r;
 }
 
-function getDiplomacy($row) {
+function getDiplomacy($row) 
+{
 	$r  = '';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#A9A9A9><tr><td>';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#FFFFFF>';
 	$r .= '<tr><td class=hc colspan=2>Diplomacy</td></tr>';
-	if ($row['DIPCO'] > 0) {
+	if ($row['DIPCO'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['DIPCO'] . '</td><td class=rptl>Diplomatic Council</td></tr>';
 	}
-	if ($row['EMBAS'] > 0) {
+	
+	if ($row['EMBAS'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['EMBAS'] . '</td><td class=rptl>Embassy</td></tr>';
 	}
 	$r .= '</table>';
@@ -1168,37 +1364,54 @@ function getDiplomacy($row) {
 	return $r;
 }
 
-
 function getFighters($row) {
 	$r  = '';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#A9A9A9><tr><td>';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#FFFFFF>';
 	$r .= '<tr><td class=hc colspan=2>Fighter Bomber</td></tr>';
-	if ($row['FIGIN'] > 0) {
+	
+	if ($row['FIGIN'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['FIGIN'] . '</td><td class=rptl>Fighter Interceptor</td></tr>';
 	}
-	if ($row['FIGBO'] > 0) {
+	
+	if ($row['FIGBO'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['FIGBO'] . '</td><td class=rptl>Fighter Bomber</td></tr>';
 	}
-	if ($row['ADVIN'] > 0) {
+	
+	if ($row['ADVIN'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['ADVIN'] . '</td><td class=rptl>Advanced Interceptor</td></tr>';
 	}
-	if ($row['HVYBO'] > 0) {
+	
+	if ($row['HVYBO'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['HVYBO'] . '</td><td class=rptl>Heavy Bomber</td></tr>';
 	}
-	if ($row['WASFI'] > 0) {
+	
+	if ($row['WASFI'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['WASFI'] . '</td><td class=rptl>"Wasp" Fighter</td></tr>';
 	}
-	if ($row['FANFB'] > 0) {
+	
+	if ($row['FANFB'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['FANFB'] . '</td><td class=rptl>"Fang" Fighter Bomber</td></tr>';
 	}
-	if ($row['DAGHF'] > 0) {
+	
+	if ($row['DAGHF'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['DAGHF'] . '</td><td class=rptl>"Dagger" Heavy Fighter</td></tr>';
 	}
-	if ($row['VENHF'] > 0) {
+	
+	if ($row['VENHF'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['VENHF'] . '</td><td class=rptl>"Venom" Heavy Fighter</td></tr>';
 	}
-	if ($row['STIDR'] > 0) {
+	
+	if ($row['STIDR'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['STIDR'] . '</td><td class=rptl>"Stinger" Drone</td></tr>';
 	}
 	
@@ -1207,7 +1420,8 @@ function getFighters($row) {
 	return $r;
 }
 
-function getHabitat($row) {
+function getHabitat($row) 
+{
 	$r  = '';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#A9A9A9><tr><td>';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#FFFFFF>';
@@ -1217,49 +1431,63 @@ function getHabitat($row) {
 	$r .= '<td width=10% class=rptc>1</td>';
 	$r .= '<td width=80% class=rptl>Planet Default</td>';
 	$r .= '</tr>';
-	if ($row['HABI1'] > 0) {
+	
+	if ($row['HABI1'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['HABI1'] * 30000) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['HABI1'] . '</td>';
 		$r .= '<td width=80% class=rptl>Habitat</td>';
 		$r .= '</tr>';
 	}
-	if ($row['HABI2'] > 0) {
+	
+	if ($row['HABI2'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['HABI2'] * 50000) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['HABI2'] . '</td>';
 		$r .= '<td width=80% class=rptl>Habitat (Improved)</td>';
 		$r .= '</tr>';
 	}
-	if ($row['HABI3'] > 0) {
+	
+	if ($row['HABI3'] > 0)
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['HABI3'] * 70000) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['HABI3'] . '</td>';
 		$r .= '<td width=80% class=rptl>Habitat (Ultradense)</td>';
 		$r .= '</tr>';
 	}
-	if ($row['GNDHI'] > 0) {
+	
+	if ($row['GNDHI'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['GNDHI'] * 100000) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['GNDHI'] . '</td>';
 		$r .= '<td width=80% class=rptl>Grand Hive</td>';
 		$r .= '</tr>';
 	}
-	if ($row['HIBCA'] > 0) {
+	
+	if ($row['HIBCA'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['HIBCA'] * 250000) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['HIBCA'] . '</td>';
 		$r .= '<td width=80% class=rptl>Hibernation Cave</td>';
 		$r .= '</tr>';
 	}
-	if ($row['VINEM'] > 0) {
+	
+	if ($row['VINEM'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['VINEM'] * 100000) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['VINEM'] . '</td>';
 		$r .= '<td width=80% class=rptl>Vinemind</td>';
 		$r .= '</tr>';
 	}
-	if ($row['SBASE'] > 0) {
+	
+	if ($row['SBASE'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['SBASE'] * 10000) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['SBASE'] . '</td>';
@@ -1271,7 +1499,8 @@ function getHabitat($row) {
 	return $r;
 }
 
-function getInfo($row) {
+function getInfo($row) 
+{
 	$r  = '';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#A9A9A9><tr><td>';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#FFFFFF>';
@@ -1285,14 +1514,18 @@ function getInfo($row) {
 	return $r;
 }
 
-function getIntelOps($row) {
+function getIntelOps($row) 
+{
 	$r  = '';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#A9A9A9><tr><td>';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#FFFFFF>';
 	$r .= '<tr><td class=hc colspan=2>Intel Ops</td></tr>';
-	if ($row['INTEL'] > 0) {
+	
+	if ($row['INTEL'] > 0) 
+	{
 		$r .= '<tr><td width=10% width=10% class=rptc>' . $row['INTEL'] . '</td><td width=90% class=rptl>Intelligence Agency</td></tr>';
 	}
+	
 	$r .= '</table>';
 	$r .= '</td></tr></table>';
 	return $r;
@@ -1303,54 +1536,86 @@ function getMaterials($row) {
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#A9A9A9><tr><td>';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#FFFFFF>';
 	$r .= '<tr><td class=hc colspan=2>Materials</td></tr>';
-	if ($row['FARM1'] > 0) {
+	if ($row['FARM1'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['FARM1'] . '</td><td width=90% class=rptl>Farm I</td></tr>';
 	}
-	if ($row['FARM2'] > 0) {
+	
+	if ($row['FARM2'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['FARM2'] . '</td><td width=90% class=rptl>Farm II</td></tr>';
 	}
-	if ($row['FARM3'] > 0) {
+	
+	if ($row['FARM3'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['FARM3'] . '</td><td width=90% class=rptl>Farm III</td></tr>';
 	}
-	if ($row['MINE1'] > 0) {
+	
+	if ($row['MINE1'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['MINE1'] . '</td><td width=90% class=rptl>Mining Facility (Metals)</td></tr>';
 	}
-	if ($row['MINE2'] > 0) {
+	
+	if ($row['MINE2'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['MINE2'] . '</td><td width=90% class=rptl>Mining Facility (Metals Improved)</td></tr>';
 	}
-	if ($row['RADI1'] > 0) {
+	
+	if ($row['RADI1'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['RADI1'] . '</td><td width=90% class=rptl>Mining Facility (Radioactives)</td></tr>';
 	}
-	if ($row['RADI2'] > 0) {
+	
+	if ($row['RADI2'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['RADI2'] . '</td><td width=90% class=rptl>Mining Facility (Radioactives Improved)</td></tr>';
 	}
-	if ($row['FUEL1'] > 0) {
+	
+	if ($row['FUEL1'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['FUEL1'] . '</td><td width=90% class=rptl>Refinery (Fuel)</td></tr>';
 	}
-	if ($row['FUEL2'] > 0) {
+	
+	if ($row['FUEL2'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['FUEL2'] . '</td><td width=90% class=rptl>Refinery (Fuel Improved)</td></tr>';
 	}
-	if ($row['MATS1'] > 0) {
+	
+	if ($row['MATS1'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['MATS1'] . '</td><td width=90% class=rptl>Materials Processing Plant</td></tr>';
 	}
-	if ($row['MATS2'] > 0) {
+	
+	if ($row['MATS2'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['MATS2'] . '</td><td width=90% class=rptl>Materials Processing Plant (Improved)</td></tr>';
 	}
-	if ($row['MATRC'] > 0) {
+	
+	if ($row['MATRC'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['MATRC'] . '</td><td width=90% class=rptl>Materials Research Complex</td></tr>';
 	}
-	if ($row['WHSE1'] > 0) {
+	
+	if ($row['WHSE1'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['WHSE1'] . '</td><td width=90% class=rptl>Warehouse (small)</td></tr>';
 	}
-	if ($row['WHSE2'] > 0) {
+	
+	if ($row['WHSE2'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['WHSE2'] . '</td><td width=90% class=rptl>Warehouse (Medium)</td></tr>';
 	}
-	if ($row['WHSE3'] > 0) {
+	
+	if ($row['WHSE3'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['WHSE3'] . '</td><td width=90% class=rptl>Warehouse (Large)</td></tr>';
 	}
-	if ($row['INTMP'] > 0) {
+	
+	if ($row['INTMP'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['INTMP'] . '</td><td width=90% class=rptl>Interplanetary Marketplace</td></tr>';
 	}
+	
 	$r .= '</table>';
 	$r .= '</td></tr></table>';
 	return $r;
@@ -1366,42 +1631,53 @@ function getQueues($row) {
 	$r .= '<td width=10% class=rptc>1</td>';
 	$r .= '<td width=80% class=rptl>Default Queue</td>';
 	$r .= '</tr>';
-	if ($row['MANU1'] > 0) {
+	if ($row['MANU1'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptc>' . ($row['MANU1'] * 1) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['MANU1'] . '</td>';
 		$r .= '<td width=80% class=rptl>Manufacturing Plant</td>';
 		$r .= '</tr>';
 	}
-	if ($row['MANU2'] > 0) {
+	
+	if ($row['MANU2'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptc>' . ($row['MANU2'] * 2) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['MANU2'] . '</td>';
 		$r .= '<td width=80% class=rptl>Manufacturing Plant (Improved)</td>';
 		$r .= '</tr>';
 	}
-	if ($row['OCON1'] > 0) {
+	
+	if ($row['OCON1'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptc>' . ($row['OCON1'] * 1) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['OCON1'] . '</td>';
 		$r .= '<td width=80% class=rptl>Orbital Construction Yard</td>';
 		$r .= '</tr>';
-	}            
-	if ($row['OCON2'] > 0) {
+	}  
+	          
+	if ($row['OCON2'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptc>' . ($row['OCON2'] * 2) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['OCON2'] . '</td>';
 		$r .= '<td width=80% class=rptl>Orbital Construction Yard (Improved)</td>';
 		$r .= '</tr>';
 	}
-	if ($row['SBASE'] > 0) {
+	
+	if ($row['SBASE'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptc>' . ($row['SBASE'] * 2) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['SBASE'] . '</td>';
 		$r .= '<td width=80% class=rptl>Starbase</td>';
 		$r .= '</tr>';
 	}
-	if ($row['ADVTS'] > 0) {
+	
+	if ($row['ADVTS'] > 0) 
+	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptc>' . ($row['ADVTS'] * 1). '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['ADVTS'] . '</td>';
@@ -1426,15 +1702,22 @@ function getReproduction($row) {
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#A9A9A9><tr><td>';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#FFFFFF>';
 	$r .= '<tr><td class=hc colspan=2>Reproduction</td></tr>';
-	if ($row['HOSPI'] > 0) {
+	
+	if ($row['HOSPI'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['HOSPI'] . '</td><td class=rptl>Hospital</td></tr>';
 	}
-	if ($row['GELAB'] > 0) {
+	
+	if ($row['GELAB'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['GELAB'] . '</td><td class=rptl>Genetics Lab</td></tr>';
 	}
-	if ($row['ADVGE'] > 0) {
+	
+	if ($row['ADVGE'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['ADVGE'] . '</td><td class=rptl>Advanced Genetics Lab</td></tr>';
 	}
+	
 	$r .= '</table>';
 	$r .= '</td></tr></table>';
 	return $r;
@@ -1445,26 +1728,36 @@ function getResearch($row) {
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#A9A9A9><tr><td>';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#FFFFFF>';
 	$r .= '<tr><td class=hc colspan=2>Research</td></tr>';
-	if ($row['RLAB1'] > 0) {
+	
+	if ($row['RLAB1'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['RLAB1'] . '</td><td class=rptl>Research Lab</td></tr>';
 	}
-	if ($row['RLAB2'] > 0) {
+	
+	if ($row['RLAB2'] > 0)
+	 {
 		$r .= '<tr><td width=10% class=rptc>' . $row['RLAB2'] . '</td><td class=rptl>Research Lab (Improved)</td></tr>';
 	}
+	
 	$r .= '</table>';
 	$r .= '</td></tr></table>';
 	return $r;
 }
 
-function getScout($row) {
+function getScout($row) 
+{
 	$r  = '';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#A9A9A9><tr><td>';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#FFFFFF>';
 	$r .= '<tr><td class=hc colspan=2>Scouting</td></tr>';
-	if ($row['SCOUT'] > 0) {
+	
+	if ($row['SCOUT'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['SCOUT'] . '</td><td width=90% class=rptl>Scout</td></tr>';
 	}
-	if ($row['DEERS'] > 0) {
+	
+	if ($row['DEERS'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['DEERS'] . '</td><td width=90% class=rptl>Deep Recon Scout</td></tr>';
 	}
 	$r .= '</table>';
@@ -1472,46 +1765,67 @@ function getScout($row) {
 	return $r;
 }
 
-function getSensors($row) {
+function getSensors($row) 
+{
 	$r  = '';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#A9A9A9><tr><td>';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#FFFFFF>';
 	$r .= '<tr><td class=hc colspan=2>Sensors</td></tr>';
-	if ($row['LISTN'] > 0) {
+	
+	if ($row['LISTN'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['LISTN'] . '</td><td class=rptl>Listening Post</td></tr>';
 	}
-	if ($row['SATE1'] > 0) {
+	
+	if ($row['SATE1'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['SATE1'] . '</td><td class=rptl>Satellites</td></tr>';
 	}
-	if ($row['SATE2'] > 0) {
+	
+	if ($row['SATE2'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['SATE2'] . '</td><td class=rptl>Satellites (Improved)</td></tr>';
 	}
-	if ($row['RSENS'] > 0) {
+	
+	if ($row['RSENS'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['RSENS'] . '</td><td class=rptl>Remote Sensor Array</td></tr>';
 	}
-	if ($row['TRACK'] > 0) {
+	
+	if ($row['TRACK'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['TRACK'] . '</td><td class=rptl>Tracking Station</td></tr>';
 	}
-	if ($row['VINEM'] > 0) {
+	
+	if ($row['VINEM'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['VINEM'] . '</td><td class=rptl>Vinemind</td></tr>';
 	}
+	
 	$r .= '</table>';
 	$r .= '</td></tr></table>';
 	return $r;
 }
 
-function getSpeed($row) {
+function getSpeed($row) 
+{
 	$r  = '';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#A9A9A9><tr><td>';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#FFFFFF>';
 	$r .= '<tr><td class=hc colspan=2>Speed</td></tr>';
-	if ($row['JUMP1'] > 0) {
+	
+	if ($row['JUMP1'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['JUMP1'] . '</td><td class=rptl>Jump Gate</td></tr>';
 	}
-	if ($row['JUMP2'] > 0) {
+	
+	if ($row['JUMP2'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['JUMP2'] . '</td><td class=rptl>Jump Gate (Improved)</td></tr>';
 	}
-	if ($row['FOLDR'] > 0) {
+	
+	if ($row['FOLDR'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['FOLDR'] . '</td><td class=rptl>Space Folder</td></tr>';
 	}
 	$r .= '</table>';
@@ -1520,15 +1834,20 @@ function getSpeed($row) {
 }
 
 
-function getTraining($row) {
+function getTraining($row) 
+{
 	$r  = '';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#A9A9A9><tr><td>';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#FFFFFF>';
 	$r .= '<tr><td class=hc colspan=2>Training</td></tr>';
-	if ($row['TSCHL'] > 0) {
+	
+	if ($row['TSCHL'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['TSCHL'] . '</td><td class=rptl>Trade School</td></tr>';
 	}
-	if ($row['UNIVE'] > 0) {
+	
+	if ($row['UNIVE'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['UNIVE'] . '</td><td class=rptl>University</td></tr>';
 	}
 	$r .= '</table>';
@@ -1536,23 +1855,29 @@ function getTraining($row) {
 	return $r;
 }
 
-function getWealth($row) {
+function getWealth($row) 
+{
 	$r  = '';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#A9A9A9><tr><td>';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#FFFFFF>';
 	$r .= '<tr><td class=hc colspan=2>Wealth</td></tr>';
-	if ($row['PBANK'] > 0) {
+	
+	if ($row['PBANK'] > 0)
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['PBANK'] . '</td><td class=rptl>Planetary Bank</td></tr>';
 	}
-	if ($row['STOCK'] > 0) {
+	
+	if ($row['STOCK'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['STOCK'] . '</td><td class=rptl>Stock Exchange</td></tr>';
 	}
-	if ($row['INTMP'] > 0) {
+	
+	if ($row['INTMP'] > 0) 
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['INTMP'] . '</td><td class=rptl>Interplanetary Marketplace</td></tr>';
 	}
 	$r .= '</table>';
 	$r .= '</td></tr></table>';
 	return $r;
 }
-
 ?>

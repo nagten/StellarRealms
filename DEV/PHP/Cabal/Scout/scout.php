@@ -2,10 +2,20 @@
 session_start();
 include("../cabal_database.php");
 include("../cabal_login.php");
-
+global $DEV;
 $logged_in = checkLogin();
-if ( ! $logged_in) {
-	header('Location: http://localhost/Scout/cabal_login_page.php?where=scout');
+
+if ( ! $logged_in) 
+{
+	//return back to the login page
+	if ($DEV)
+	{
+		header('Location: ' . $CabalLoginDebugUrl  . '?where=scout');
+	}
+	else
+	{
+		header('Location: ' . $CabalLoginWebUrl  . '?where=scout');
+	}
 	exit;
 }
 
@@ -56,7 +66,6 @@ header("Pragma: no-cache");													// HTTP/1.0
 </table>
 
 <div class=spacer>&nbsp;</div>
-
 <table width=100% border=0 bgcolor="#7BA3C9">
   <tr>
 	<td width="20%"></td>
@@ -67,10 +76,7 @@ header("Pragma: no-cache");													// HTTP/1.0
 	<td colspan="3"><div id="planet"></div></td>
   </tr>
 </table>
-
-
 <div class=spacer>&nbsp;</div>
-
 <table width=100% border=0 bgcolor="#B0C4DE">
   <tr>
 	<td width="20%"></td>
@@ -81,11 +87,7 @@ header("Pragma: no-cache");													// HTTP/1.0
 	<td colspan="3"><div id="detail"></div></td>
   </tr>
 </table>
-
 </form>
-
 <div id="hiddenHolder" class="hidden"></div>
-
 </BODY>
-
 </HTML>
