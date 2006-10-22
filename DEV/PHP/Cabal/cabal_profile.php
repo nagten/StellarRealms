@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 	$md5oldpwd = md5($oldpwd);
 	$md5newpwd = md5($newpwd);
 
-	$SQL  = 'SELECT * FROM users ';
+	$SQL  = 'SELECT * FROM tblusers ';
 	$SQL .= 'WHERE username = \'' . $username . '\' ';
 	$SQL .= 'AND password = \'' . $md5oldpwd . '\' ';
 	$result = mysql_query($SQL,$dbconn);

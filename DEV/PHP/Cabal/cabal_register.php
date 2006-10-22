@@ -20,7 +20,7 @@ function usernameTaken($username)
 function addNewUser($username, $password) 
 {
 	global $dbconn;
-	$SQL  = 'INSERT INTO users (username, password) Values (';
+	$SQL  = 'INSERT INTO tblusers (username, password) Values (';
 	$SQL .= '\'' . $username . '\', ';
 	$SQL .= '\'' . $password . '\') ';
 	echo $SQL . '<br>';

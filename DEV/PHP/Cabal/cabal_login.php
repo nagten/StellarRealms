@@ -24,7 +24,7 @@ function confirmUser($username, $password) {
 	}
 
 	// Verify that user is in database
-	$SQL = "SELECT * FROM users WHERE username = '$username'";
+	$SQL = "SELECT * FROM tblusers WHERE username = '$username'";
 	$result = mysql_query($SQL,$dbconn);
 	if ( ! $result || (mysql_numrows($result) < 1))
 	{
