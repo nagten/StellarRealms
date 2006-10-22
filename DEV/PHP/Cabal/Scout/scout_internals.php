@@ -1202,7 +1202,7 @@ function updateDatabase()
 	{
 		// see if scouting report has already been entered
 		$SQL  = 'SELECT RecordNumber ';
-		$SQL .= 'FROM scout ';
+		$SQL .= 'FROM tblscout ';
 		$SQL .= 'WHERE PlanetID = \'' . $planetID   . '\' ';
 		$SQL .= 'AND ReportDate = \'' . $reportDate . '\' ';
 		$SQL .= 'AND ReportTime = \'' . $reportTime . '\' ';

@@ -72,7 +72,7 @@ function displaySummary() {
 	$SQL  = 'SELECT RecordNumber,PlanetID,PlanetName,ReportDate,ReportTime,AirCap,';
 	$SQL .= 'Fighter,IntelOps,Materials,Reproduction,Research,';
 	$SQL .= 'Scouting,Sensors,Speed,Rank,HabSpace,Slots,DefMaint,OffMaint ';
-	$SQL .= 'FROM scout ';
+	$SQL .= 'FROM tblscout ';
 	$SQL .= 'WHERE Current = \'Y\' ';
 	$SQL .= 'ORDER BY PlanetName,ReportDate DESC,ReportTime DESC';
 	
@@ -136,7 +136,7 @@ function displaySummary() {
 		} 
 		else 
 		{
-			$SQL = 'UPDATE scout SET Current = \'N\' WHERE RecordNumber = ' . $recNbr;
+			$SQL = 'UPDATE tblscout SET Current = \'N\' WHERE RecordNumber = ' . $recNbr;
 			$dummy = mysql_query($SQL);
 		}
 	}
@@ -508,7 +508,7 @@ function displayPlanet($planet)
 	$SQL  = 'SELECT RecordNumber, PlanetID,PlanetName,ReportDate,ReportTime,AirOps,AirCap,Capital,Defense,';
 	$SQL .= 'Diplomacy,Fighter,Habitat,IntelOps,Materials,Reproduction,Queues,Research,';
 	$SQL .= 'Scouting,Sensors,Special,Speed,Training,Wealth,Rank,HabSpace,Slots,DefMaint,OffMaint ';
-	$SQL .= 'FROM scout ';
+	$SQL .= 'FROM tblscout ';
 	$SQL .= 'WHERE PlanetID=' . $planet . ' ';
 	$SQL .= 'ORDER BY ReportDate DESC, ReportTime DESC';
 	$result = mysql_query($SQL);
@@ -751,7 +751,7 @@ function displayDetail($reportID)
 	$r .= '<td class=hc>Speed</td>';
 	$r .= '</tr>';
 
-	$SQL  = 'SELECT * FROM scout WHERE RecordNumber=' . $reportID;
+	$SQL  = 'SELECT * FROM tblscout WHERE RecordNumber=' . $reportID;
 	$result = mysql_query($SQL);
 	if (!$result) die('Invalid query: ' . mysql_error());
 	while ($row = mysql_fetch_assoc($result))
