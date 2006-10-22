@@ -2,8 +2,8 @@
 
 if ($_SERVER['SERVER_NAME'] == 'www.idsfadt.com') 
 {
-	$dbconn = mysql_connect("MySQL.alignus.com", "username", "password");
-	$result = mysql_select_db('xalignus-1',$dbconn) or die("DB Open Failure: " . mysql_error());
+	$dbconn = mysql_connect("mysql191.secureserver.net", "SRstats", "c4b4Lity");
+	$result = mysql_select_db('SRstats',$dbconn) or die("DB Open Failure: " . mysql_error());
 }
 else 
 {
