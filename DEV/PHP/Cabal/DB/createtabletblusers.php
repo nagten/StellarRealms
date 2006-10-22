@@ -19,12 +19,12 @@ body {
 //This script creates the table we use for the planetstats page,
 
   //Set global variables to connect to MySQL DB
-  $mysql_server = "localhost";
-  $mysql_user = "root";
-  $mysql_password = "R0it";
+$mysql_server = "localhost";
+$mysql_user = "root";
+$mysql_password = "R0it";
+$mysql_db = "sr";
 
-  //our database name and the tablename we want to create
-  $mysql_db = "sr";
+  //the tablename we want to create
   $mysql_tablename  = "tblusers";
 
   $dbcnx = @mysql_connect($mysql_server, $mysql_user, $mysql_password);

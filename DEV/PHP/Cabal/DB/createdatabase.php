@@ -17,12 +17,10 @@ body {
 <body>
 <?php
   //Set variables to connect to MySQL DB
-  $mysql_server = "localhost";
-  $mysql_user = "root";
-  $mysql_password = "R0it";
-
-  // set our database name
-  $mysql_db = "sr";
+$mysql_server = "localhost";
+$mysql_user = "root";
+$mysql_password = "R0it";
+$mysql_db = "sr";
 
   $dbcnx = @mysql_connect($mysql_server, $mysql_user, $mysql_password);
 

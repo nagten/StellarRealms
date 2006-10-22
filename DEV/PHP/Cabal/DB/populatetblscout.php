@@ -22,6 +22,7 @@ $mysql_server = "localhost";
 $mysql_user = "root";
 $mysql_password = "R0it";
 $mysql_db = "sr";
+
 $myfile = "scout_db.sql";
 
   $dbcnx = @mysql_connect($mysql_server, $mysql_user, $mysql_password);

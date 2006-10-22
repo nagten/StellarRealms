@@ -77,7 +77,7 @@ $users = array( 0=>array('username'=>'********', 'srplanetname'=>'Infinity Edge'
                             ".rand(0,100).", ".rand(0,100).", ".rand(0,100).", ".rand(0,100).",
                             ".rand(0,5000). ", " .rand(0,100). ", ''
                             )";
-                            
+
             $result = @mysql_query($strSqlString);
 
             if (!$result)

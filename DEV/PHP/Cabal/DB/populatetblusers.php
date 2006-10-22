@@ -22,6 +22,7 @@ $mysql_server = "localhost";
 $mysql_user = "root";
 $mysql_password = "R0it";
 $mysql_db = "sr";
+
 $myfile = "users_db.sql";
 
   $dbcnx = @mysql_connect($mysql_server, $mysql_user, $mysql_password);
@@ -41,14 +42,14 @@ $myfile = "users_db.sql";
     else
     {
     	$handle = @fopen($myfile, "r");
-    	
-		if ($handle) 
+
+		if ($handle)
 		{
-			while (!feof($handle)) 
+			while (!feof($handle))
 			{
 				$strSqlString = fgets($handle, 4096);
 				$result = @mysql_query($strSqlString);
-			
+
 				if (!$result)
 				{
 					echo "<p>Error performing query: " . mysql_error() . "</p>";
@@ -56,7 +57,7 @@ $myfile = "users_db.sql";
 				}
 			}
 			fclose($handle);
-			
+
 			echo "<p>Succesfully imported " . $myfile . "</p>";
 		}
     }
