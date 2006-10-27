@@ -1,6 +1,7 @@
 <?php
 
 include("../cabal_database.php");
+include("rank.php");
 
 if (isset($_REQUEST['action']))
 {
@@ -116,6 +117,44 @@ $result = updateDatabase();
 echo $result;
 
 //================================================================================
+
+function TurnAge($start_date, $end_date)
+{
+  $_d1 = explode("-", $start_date);
+  $_d3 = explode(":", substr($start_date, -8));
+
+  $m1 = $_d1[0];
+  $d1 = $_d1[1];
+  $y1 = $_d1[2];
+  $hour1 = $_d3[0];
+  $min1 = $_d3[1];
+  $sec1 = $_d3[2];
+
+  $_d2 = explode("-", $end_date);
+  $_d4 = explode(":", substr($end_date, -8));
+
+  $m2 = $_d2[0];
+  $d2 = $_d2[1];
+  $y2 = $_d2[2];
+  $hour2 = $_d4[0];
+  $min2 = $_d4[1];
+  $sec2 = $_d4[2];
+
+  if (($y1 < 1970 || $y1 > 2037) || ($y2 < 1970 || $y2 > 2037))
+  {
+    return 0;
+  }
+  else
+  {
+     $today_stamp = mktime($hour1,$min1,$sec1,$m1,$d1,$y1);
+     $end_date_stamp = mktime($hour2,$min2,$sec2,$m2,$d2,$y2);
+
+     $difference = round(($end_date_stamp-$today_stamp));
+     $turns = floor($difference / 60 / 20);
+     return $turns;
+  }
+}
+
 function parseDate($line)
 {
 	global $dat;
@@ -1160,13 +1199,43 @@ function updateDatabase()
 
 	if ($ok)
 	{
-		// get target planet id
-		$SQL = 'Select RecordNumber,Rank,SID1 FROM tblplanet WHERE PlanetName = \'' . $targetName . '\'';
+		// get target planet id and rank
+		//first we check if rank is up to date with the help of the date column
+		$SQL = 'Select max(date), TurnCount FROM tblplanet GROUP BY date';
 		$result = mysql_query($SQL);
-		if (!$result) die('Invalid query: ' . mysql_error());
+		
+		if (!$result) 
+		{
+			die('Invalid query: ' . mysql_error());
+		}
+		else
+		{
+			if (mysql_num_rows($result) > 0)
+			{
+				$current_date = date("m-d-Y H:i:s");
+				$row = mysql_fetch_assoc($result);
+				
+				$Age = TurnAge($row['date'], $current_date);
+				
+				if ($Age > 1)
+				{	
+					//Rank isn't up to date so update it
+					UpdateRank($row['TurnCount']);
+				}
+			}
+		}
+				
+		$SQL = 'Select RecordNumber,Rank,SID1,TurnCount FROM tblplanet WHERE PlanetName = \'' . $targetName . '\'';
+		$result = mysql_query($SQL);
+		if (!$result) 
+		{
+			die('Invalid query: ' . mysql_error());
+		}
+		
 		if (mysql_num_rows($result) > 0)
 		{
 			$row = mysql_fetch_assoc($result);
+			
 			$planetID = $row['RecordNumber'];
 			$rank     = $row['Rank'];
 			$sid1     = $row['SID1'];
