@@ -114,7 +114,7 @@ else
 }
 
 $result = updateDatabase();
-echo $result;
+//echo $result;
 
 //================================================================================
 
@@ -1201,7 +1201,7 @@ function updateDatabase()
 	{
 		// get target planet id and rank
 		//first we check if rank is up to date with the help of the date column
-		$SQL = 'Select max(date), TurnCount FROM tblplanet GROUP BY date';
+		$SQL = 'Select max(date), date, TurnCount FROM tblplanet GROUP BY date';
 		$result = mysql_query($SQL);
 		
 		if (!$result) 
@@ -1216,7 +1216,11 @@ function updateDatabase()
 				$row = mysql_fetch_assoc($result);
 				
 				$Age = TurnAge($row['date'], $current_date);
+				//echo "rowdate = " . $row['date'];
+				//echo "current_date = " . $current_date;
 				
+				//echo "Age = " . $Age;
+				//echo "turns = " . $row['TurnCount'];
 				if ($Age > 1)
 				{	
 					//Rank isn't up to date so update it
