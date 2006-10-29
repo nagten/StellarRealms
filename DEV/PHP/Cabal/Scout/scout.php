@@ -3,6 +3,7 @@ session_start();
 include("../connect_to_database.php");
 include("../login.php");
 global $DEV;
+ob_start("ob_gzhandler");
 
 if ($DEV)
 {
