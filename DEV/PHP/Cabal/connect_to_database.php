@@ -4,8 +4,7 @@ include("variables.php");
 if ($_SERVER['SERVER_NAME'] == 'www.idsfadt.com')
 {
 	$dbconn = mysql_connect($mysql_server, $mysql_user, $mysql_password);
-	$result = mysql_select_db($mysql_db, $dbconn);
-
+	
 	if(!$dbconn)
 	{
     	if($DEV)
@@ -16,18 +15,24 @@ if ($_SERVER['SERVER_NAME'] == 'www.idsfadt.com')
   	}
 	else
 	{
-		if($DEV)
-    	{
-    		echo "Succesfully connected to " . $mysql_server;
-    		exit();
-    	}
+		if (!@mysql_select_db($mysql_db, $dbconn))
+	    {
+	        echo "<p>Unable to locate the " . $mysql_db . " database.</p>";
+	        exit();
+	    }
+	    else
+		{	
+			if($DEV)
+    		{
+    			//echo "Succesfully connected to " . $mysql_server . " ";
+    		}
+		}
 	}
 }
 else
 {
 	$dbconn = mysql_connect($mysql_server, $mysql_user, $mysql_password);
-	$result = mysql_select_db($mysql_db, $dbconn);
-
+	
 	if(!$dbconn)
 	{
     	if($DEV)
@@ -38,11 +43,18 @@ else
   	}
 	else
 	{
-		if($DEV)
-    	{
-    		echo "Succesfully connected to " . $mysql_server;
-    		exit();
-    	}
+		if (!@mysql_select_db($mysql_db, $dbconn))
+	    {
+	        echo "<p>Unable to locate the " . $mysql_db . " database.</p>";
+	        exit();
+	    }
+	    else
+		{	
+			if($DEV)
+    		{
+    			//echo "Succesfully connected to " . $mysql_server . " ";
+    		}
+		}
 	}
 }
 ?>
