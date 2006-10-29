@@ -1,6 +1,7 @@
 <?php
 if ($_SERVER['SERVER_NAME'] == 'www.idsfadt.com') 
 {
+	$DEV = false;
 	$mysql_server = "mysql191.secureserver.net";
 	$mysql_user = "SRstats";
 	$mysql_password = "c4b4Lity";
