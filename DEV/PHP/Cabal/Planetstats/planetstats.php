@@ -17,12 +17,7 @@ body {
 
 <body>
 <?php
-
-//Set global variables to connect to MySQL DB
-$mysql_server = "localhost";
-$mysql_user = "root";
-$mysql_password = "R0it";
-$mysql_db = "sr";
+include("../variables.php");
 
 if( !is_null( $_POST ) )
 {
