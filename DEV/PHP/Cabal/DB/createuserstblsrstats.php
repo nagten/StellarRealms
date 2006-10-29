@@ -13,15 +13,10 @@ body {
 -->
 </style>
 </head>
-
 <body>
 <?php
-
 //Set global variables to connect to MySQL DB
-$mysql_server = "localhost";
-$mysql_user = "root";
-$mysql_password = "R0it";
-$mysql_db = "sr";
+include("../connect_to_database.php");
 
 $users = array( 0=>array('username'=>'********', 'srplanetname'=>'Infinity Edge'),
                 1=>array('username'=>'********', 'srplanetname'=>'Oven'),
@@ -34,65 +29,46 @@ $users = array( 0=>array('username'=>'********', 'srplanetname'=>'Infinity Edge'
                 8=>array('username'=>'*********', 'srplanetname'=>'The Hotel')
                 );
 
-  $dbcnx = @mysql_connect($mysql_server, $mysql_user, $mysql_password);
+foreach($users as $arrayuser)
+{
+    echo "Creating user username = " . $arrayuser['username'] . " srplanetname =  ". $arrayuser['srplanetname'] . "<BR>\n";
 
-  if (!$dbcnx)
-  {
-    echo "<p>Unable to connect to the database server.</p>";
-    exit();
-  }
-  else
-  {
-    if (!@mysql_select_db($mysql_db))
+    $strSqlString = "INSERT INTO tblsrstats
+                    (fplanetname, fuser, ffood, ffooddelta, ffuel, ffueldelta,
+                    fmetals, fmetalsdelta, fradioactives, fradioactivesdelta,
+                    fmatmaximum, fcredits, fcreditsdelta, fcreditsrank,
+                    ftaxrate, fprestige, fprestigedelta, fprestigerank,
+                    fpop, fpopdelta, fpoprank, fpopmaximum,
+                    fprojects, fprojectsmaximum, fbattleslost, falertlevel,
+                    fconstruction, fresearch, fdiplomacy, foffense,
+                    fdefense, fwealth, freproduction, fmaterials,
+                    fdurability, fspeed, fsensors, fstealth,
+                    fmaintenance, fplanet, fdate)
+                    VALUES
+                    ('". $arrayuser['srplanetname']. "', '". $arrayuser['username'] ."', 0, 0, 0, 0,
+                    0, 0, 0, 0,
+                    0, 0, 0, 0,
+                    0, 0, 0, 0,
+                    0, 0, 0, 0,
+                    0, 0, 0, 0,
+                    0, 0, 0, 0,
+                    0, 0, 0, 0,
+                    0, 0, 0, 0,
+                    0, 0, ''
+                    )";
+
+    $result = @mysql_query($strSqlString);
+
+    if (!$result)
     {
-        echo "<p>Unable to locate the " . $mysql_db . " database.</p>";
-        exit();
+    	echo "<p>Error performing query: " . mysql_error() . "</p>";
+		exit();
     }
     else
     {
-        foreach($users as $arrayuser)
-        {
-            echo "Creating user username = " . $arrayuser['username'] . " srplanetname =  ". $arrayuser['srplanetname'] . "<BR>\n";
-
-            $strSqlString = "INSERT INTO tblsrstats
-                            (fplanetname, fuser, ffood, ffooddelta, ffuel, ffueldelta,
-                            fmetals, fmetalsdelta, fradioactives, fradioactivesdelta,
-                            fmatmaximum, fcredits, fcreditsdelta, fcreditsrank,
-                            ftaxrate, fprestige, fprestigedelta, fprestigerank,
-                            fpop, fpopdelta, fpoprank, fpopmaximum,
-                            fprojects, fprojectsmaximum, fbattleslost, falertlevel,
-                            fconstruction, fresearch, fdiplomacy, foffense,
-                            fdefense, fwealth, freproduction, fmaterials,
-                            fdurability, fspeed, fsensors, fstealth,
-                            fmaintenance, fplanet, fdate)
-                            VALUES
-                            ('". $arrayuser['srplanetname']. "', '". $arrayuser['username'] ."', 0, 0, 0, 0,
-                            0, 0, 0, 0,
-                            0, 0, 0, 0,
-                            0, 0, 0, 0,
-                            0, 0, 0, 0,
-                            0, 0, 0, 0,
-                            0, 0, 0, 0,
-                            0, 0, 0, 0,
-                            0, 0, 0, 0,
-                            0, 0, ''
-                            )";
-
-            $result = @mysql_query($strSqlString);
-
-            if (!$result)
-            {
-            	echo "<p>Error performing query: " . mysql_error() . "</p>";
-    			exit();
-            }
-            else
-            {
-                echo "User: " . $arrayuser['username'] ." succesfully created <BR>\n\n";
-            }
-        }
+        echo "User: " . $arrayuser['username'] ." succesfully created <BR>\n\n";
     }
-  }
-
+}
 ?>
 </body>
 </html>

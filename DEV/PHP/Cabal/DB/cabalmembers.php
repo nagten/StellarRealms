@@ -16,46 +16,22 @@ body {
 
 <body>
 <?php
+include("../connect_to_database.php");
 
-//Set global variables to connect to MySQL DB
-$mysql_server = "localhost";
-$mysql_user = "root";
-$mysql_password = "R0it";
-$mysql_db = "sr";
 $mysql_tablename = "tblplanet";
+$strSqlString = "UPDATE " . $mysql_tablename . " SET Cabal = 'Y' WHERE GroupName LIKE '%cabal%'";
 
-  $dbcnx = @mysql_connect($mysql_server, $mysql_user, $mysql_password);
+$result = @mysql_query($strSqlString);
 
-  if (!$dbcnx)
-  {
-    echo ('<p>Unable to connect to the database server.</p>' );
-    exit();
-  }
-  else
-  {
-    if (!@mysql_select_db($mysql_db))
-    {
-        echo "<p>Unable to locate the " . $mysql_db . " database.</p>";
-        exit();
-    }
-    else
-    {
-      $strSqlString = "UPDATE " . $mysql_tablename . " SET Cabal = 'Y' WHERE GroupName LIKE '%cabal%'";
-
-      $result = @mysql_query($strSqlString);
-
-       if (!$result)
-	   {
-	   		echo "<p>Error performing query: " . mysql_error() . "</p>";
-	   		exit();
-	   }
-	   else
-	   {
-	   		echo "Table: " .$mysql_tablename. " succesfully updated";
-	   }
-    }
-  }
-
+if (!$result)
+{
+	echo "<p>Error performing query: " . mysql_error() . "</p>";
+	exit();
+}
+else
+{
+	echo "Table: " .$mysql_tablename. " succesfully updated";
+}
 ?>
 </body>
 </html>

@@ -17,33 +17,12 @@ body {
 <body>
 <?php
 //This script creates the table we use for the planetstats page,
-
-  //Set global variables to connect to MySQL DB
-$mysql_server = "localhost";
-$mysql_user = "root";
-$mysql_password = "R0it";
-$mysql_db = "sr";
+include("../connect_to_database.php");
 
 //the tablename we want to create
 $mysql_tablename  = "tblplanet";
 
-  $dbcnx = @mysql_connect($mysql_server, $mysql_user, $mysql_password);
-
-  if (!$dbcnx)
-  {
-    echo "<p>Unable to connect to the database server.</p>";
-    exit();
-  }
-  else
-  {
-    if (!@mysql_select_db($mysql_db))
-    {
-        echo "<p>Unable to locate the " . $mysql_db . " database.</p>";
-        exit();
-    }
-    else
-    {
-      $strSqlString = "CREATE TABLE IF NOT EXISTS $mysql_tablename (
+$strSqlString = "CREATE TABLE $mysql_tablename (
   `RecordNumber` int(11) NOT NULL auto_increment,
   `PlanetName` varchar(60) default '',
   `Leader` varchar(60) default '',
@@ -73,19 +52,17 @@ $mysql_tablename  = "tblplanet";
   KEY `PlanetName` (`PlanetName`)
 ) TYPE=MyISAM AUTO_INCREMENT=131";
 
-      $result = @mysql_query($strSqlString);
+$result = @mysql_query($strSqlString);
 
-      if (!$result)
-      {
-      	 echo "<p>Error performing query: " . mysql_error() . "</p>";
-         exit();
-      }
-      else
-      {
-        echo "Table: " .$mysql_tablename. " succesfully created";
-      }
-    }
-  }
+if (!$result)
+{
+	echo "<p>Error performing query: " . mysql_error() . "</p>";
+	exit();
+}
+else
+{
+	echo "Table: " .$mysql_tablename. " succesfully created";
+}
 ?>
 </body>
 </html>

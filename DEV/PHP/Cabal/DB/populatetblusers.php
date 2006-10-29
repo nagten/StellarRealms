@@ -13,56 +13,31 @@ body {
 -->
 </style>
 </head>
-
 <body>
 <?php
-
 //Set global variables to connect to MySQL DB
-$mysql_server = "localhost";
-$mysql_user = "root";
-$mysql_password = "R0it";
-$mysql_db = "sr";
+include("../connect_to_database.php");
 
 $myfile = "users_db.sql";
+$handle = @fopen($myfile, "r");
 
-  $dbcnx = @mysql_connect($mysql_server, $mysql_user, $mysql_password);
+if ($handle)
+{
+	while (!feof($handle))
+	{
+		$strSqlString = fgets($handle, 4096);
+		$result = @mysql_query($strSqlString);
 
-  if (!$dbcnx)
-  {
-    echo "<p>Unable to connect to the database server.</p>";
-    exit();
-  }
-  else
-  {
-    if (!@mysql_select_db($mysql_db))
-    {
-        echo "<p>Unable to locate the " . $mysql_db . " database.</p>";
-        exit();
-    }
-    else
-    {
-    	$handle = @fopen($myfile, "r");
-
-		if ($handle)
+		if (!$result)
 		{
-			while (!feof($handle))
-			{
-				$strSqlString = fgets($handle, 4096);
-				$result = @mysql_query($strSqlString);
-
-				if (!$result)
-				{
-					echo "<p>Error performing query: " . mysql_error() . "</p>";
-					exit();
-				}
-			}
-			fclose($handle);
-
-			echo "<p>Succesfully imported " . $myfile . "</p>";
+			echo "<p>Error performing query: " . mysql_error() . "</p>";
+			exit();
 		}
-    }
-  }
+	}
+	fclose($handle);
 
+	echo "<p>Succesfully imported " . $myfile . "</p>";
+}
 ?>
 </body>
 </html>
