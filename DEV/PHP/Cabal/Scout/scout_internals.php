@@ -1,6 +1,6 @@
 <?php
 
-include("../cabal_database.php");
+include("../connect_to_database.php");
 include("rank.php");
 
 if (isset($_REQUEST['action']))

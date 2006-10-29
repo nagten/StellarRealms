@@ -7,7 +7,7 @@ $xp      = array();
 $xd      = array();
 $sort    = 'planet';
 
-include("../cabal_database.php");
+include("../connect_to_database.php");
 
 if (isset($_REQUEST['action'])) 
 {
@@ -60,7 +60,8 @@ switch ($action)
 
 //=============================================================================
 
-function displaySummary() {
+function displaySummary() 
+{
 	global $p;
 	global $p1;
 	global $p2;
@@ -78,6 +79,7 @@ function displaySummary() {
 	
 	$result = mysql_query($SQL);
 	if (!$result) die('Invalid query: ' . mysql_error());
+	debugbreak();
 	while ($row = mysql_fetch_assoc($result)) 
 	{
 		$planetID     = $row['PlanetID'];
@@ -136,6 +138,7 @@ function displaySummary() {
 		} 
 		else 
 		{
+			//TODO check why we update it?
 			$SQL = 'UPDATE tblscout SET Current = \'N\' WHERE RecordNumber = ' . $recNbr;
 			$dummy = mysql_query($SQL);
 		}

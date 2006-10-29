@@ -1,11 +1,20 @@
 <?php
 session_start();
-include("../cabal_database.php");
-include("../cabal_login.php");
+include("../connect_to_database.php");
+include("../login.php");
 global $DEV;
-$logged_in = checkLogin();
 
-if ( ! $logged_in) 
+if ($DEV)
+{
+	//for testing only this makes sure we are logged in
+	$logged_in = true;
+}
+else
+{
+	$logged_in = checkLogin();
+}
+
+if (!$logged_in) 
 {
 	//return back to the login page
 	if ($DEV)
