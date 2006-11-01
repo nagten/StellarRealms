@@ -43,7 +43,7 @@ else
 	$mysql_server = "localhost";
 	$mysql_user = "root";
 	$mysql_password = "R0it";
-	$mysql_db = "sr";
+	$mysql_db = "CabalDB";
 
 	$LoginDebugUrl = "http://localhost/Cabal/login_page.php";
 	$ScoutDebugUrl = "http://localhost/Cabal/Scout/scout.php";
