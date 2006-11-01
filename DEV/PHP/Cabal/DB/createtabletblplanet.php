@@ -46,6 +46,7 @@ $strSqlString = "CREATE TABLE $mysql_tablename (
   `GroupName` varchar(15) default NULL,
   `SID1` int(11) default NULL,
   `SID2` int(11) default NULL,
+  `date` VARCHAR(64) default NULL,
   PRIMARY KEY  (`RecordNumber`),
   KEY `SID1` (`SID1`),
   KEY `SID2` (`SID2`),
