@@ -78,6 +78,8 @@ function submitTZ()
 function cancelProfile() 
 {
 	window.location = 'http://www.alignus.com/Cabal/Dossier.php';
+	//window.location = 'http://www.alignus.com/Murc/Dossier.php';
+	//window.location = 'http://www.alignus.com/Shriner/Dossier.php';
 }
 
 function init() 
@@ -103,7 +105,7 @@ function dimObj(obj)
   <tr><td>
 	<!-- Password Table -->
 
-<form name="profile" action="cabal_profile.php" method="post" onsubmit="return submitCheck()">
+<form name="profile" action="profile.php" method="post" onsubmit="return submitCheck()">
 	<table  align=left border=0 bgcolor=#00FFFF>
 	  <tr><td>&nbsp;Change Password</td></tr>
 	  <tr><td>

@@ -113,7 +113,7 @@ else
 <title>Registration Page</title>
 <body>
 <h1>Register</h1>
-<form action="cabal_register.php" method="post">
+<form action="register.php" method="post">
 <table align="left" border="0" cellspacing="0" cellpadding="3">
 <tr><td>Username:</td><td><input type="text" name="user" maxlength="30"></td></tr>
 <tr><td>Password:</td><td><input type="password" name="pass" maxlength="30"></td></tr>
