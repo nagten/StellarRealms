@@ -67,7 +67,7 @@ function displaySummary()
 	global $p2;
 	global $d1;
 	global $sort;
-
+	
 	$bgcolor = '#F5F5F5';
 
 	$SQL  = 'SELECT RecordNumber,PlanetID,PlanetName,ReportDate,ReportTime,AirCap,';
@@ -79,7 +79,7 @@ function displaySummary()
 	
 	$result = mysql_query($SQL);
 	if (!$result) die('Invalid query: ' . mysql_error());
-	debugbreak();
+	
 	while ($row = mysql_fetch_assoc($result)) 
 	{
 		$planetID     = $row['PlanetID'];
@@ -828,7 +828,7 @@ function getAirOps($row)
 	if ($row['SBASE'] > 0) 
 	{
 		$r .= '<tr>';
-		$r .= '<td width=10% class=rptc>' . ($row['SBASE'] * 50) . '</td>';
+		$r .= '<td width=10% class=rptc>' . ($row['SBASE'] * 50 ) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['SBASE'] . '</td>';
 		$r .= '<td width=80% class=rptl>Starbase</td>';
 		$r .= '</tr>';
