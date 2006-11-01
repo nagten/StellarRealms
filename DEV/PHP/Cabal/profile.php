@@ -19,14 +19,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 	
 	if (mysql_num_rows($result) > 0) 
 	{
-		$SQL  = 'UPDATE users ';
+		$SQL  = 'UPDATE tblusers ';
 		$SQL .= 'SET password = \'' . $md5newpwd . '\' ';
 		$SQL .= 'WHERE username = \'' . $username . '\' ';
 		$result = mysql_query($SQL,$dbconn);
-		$_SESSION['reguname'] = $username;
-		$_SESSION['password'] = $md5newpwd;
-		$_SESSION['registered'] = true;
 		
+		if (!$result)
+		{
+			echo 'Invalid query: ' . mysql_error();
+		}
+		else
+		{
+			$_SESSION['reguname'] = $username;
+			$_SESSION['password'] = $md5newpwd;
+			$_SESSION['registered'] = true;
+			
+			echo "Password for user  " . $username . " has been changed"; 	
+		}
+
+		/*
 		if ($DEV)
 		{
 			header('Location: $DossierDebugUrl');
@@ -35,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		{
 			header('Location: $DossierWebUrl');
 		}
-
+		*/
 		exit;
 	} 
 	else 
@@ -51,7 +62,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 <META NAME="Author" CONTENT="">
 <META NAME="Keywords" CONTENT="">
 <META NAME="Description" CONTENT="">
-<LINK rel="stylesheet" type="text/css" href="./SR_Dossier.css">
 <script language="Javascript" type="text/javascript" src="./1k_standards.js"></script>
 <script language="Javascript" type="text/javascript">
 <!--
