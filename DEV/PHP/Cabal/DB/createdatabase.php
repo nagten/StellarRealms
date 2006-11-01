@@ -18,13 +18,13 @@ body {
 //Creates the $mysql_db database
 
 //Set variables to connect to MySQL DB
-if ($_SERVER['SERVER_NAME'] == 'www.idsfadt.com') 
+if ($_SERVER['SERVER_NAME'] == 'www.idsfadt.com')
 {
 	$mysql_server = "mysql191.secureserver.net";
 	$mysql_user = "SRstats";
 	$mysql_password = "c4b4Lity";
 }
-else 
+else
 {
 	$mysql_server = "localhost";
 	$mysql_user = "root";
@@ -35,7 +35,9 @@ else
 $dbcnx = @mysql_connect($mysql_server, $mysql_user, $mysql_password);
 
 //Set the database name
-$mysql_db = "sr";
+$mysql_db = "MurcDB";
+//$mysql_db = "CabalDB";
+//$mysql_db = "ShrinerDB";
 
 if (!$dbcnx)
 {
@@ -48,7 +50,7 @@ else
 	$strSqlString = "CREATE DATABASE $mysql_db";
 
 	$result = @mysql_query($strSqlString);
-	
+
 	if (!$result)
 	{
 		echo "<p>Error performing query: ". mysql_error() . "</p>";
