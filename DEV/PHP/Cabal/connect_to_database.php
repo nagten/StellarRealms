@@ -52,7 +52,7 @@ else
 		{	
 			if($DEV)
     		{
-    			//echo "Succesfully connected to " . $mysql_server . " ";
+    			//echo "Succesfully connected to " . $mysql_server . " " . $mysql_db . " ";
     		}
 		}
 	}
