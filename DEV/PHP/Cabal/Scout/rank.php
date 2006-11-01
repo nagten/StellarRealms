@@ -3,6 +3,8 @@ require_once('xml.php');
 
 function UpdateRank($dbTurn)
 {
+	global $DEV;
+	
 	//--- GET THE PLANETS --------------------------------------------------------------------------------------
 	$planets = array();
 	$pIndex  = array();
@@ -41,6 +43,11 @@ function UpdateRank($dbTurn)
 	$doc  = 'http://sr.primeaxiom.com/webservices/galaxy_overview.asp?un=' . urlencode('apiusers') . '&pwd=hitcvjnjrc';
 	$cmd  = 'GET ' . $doc . '  HTTP/1.0' . $crlf . 'Host: ' . $host  . $crlf . $crlf;
 
+	if ($DEV)
+	{
+		echo "Getting rank info <BR>";
+	}
+			
 	$attempt = 0;
 
 	do
@@ -75,6 +82,7 @@ function UpdateRank($dbTurn)
 	$expression = '//go:context';
 	$context    = '';
 	$results = $xml->evaluate($expression, $context);
+	
 	foreach ( $results as $result )
 	{
 		$a = array();
