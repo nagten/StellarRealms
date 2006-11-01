@@ -112,14 +112,18 @@ else
 	parseTarget($target);
 	parseStructs($structs);
 }
-
+$DEV = false;
 if ($DEV)
 {
-	echo "All data parsed update database <BR>";
+	echo "All data parsed <BR>";
 }
 
 $result = updateDatabase();
-//echo $result;
+
+if ($DEV)
+{
+	echo $result;
+}
 
 //================================================================================
 
@@ -1163,6 +1167,7 @@ function updateDatabase()
 {
 	global $dat;
 	global $DEV;
+	$DEV = false;
 	
 	$targetName = $dat['target'];
 	$sourceName = $dat['from'];
@@ -1263,7 +1268,6 @@ function updateDatabase()
 		{
 			$ok   = false;
 			$err .= 'target planet [' . $targetName . '] not found in database. ';
-			//echo 'target planet [' . $targetName . '] not found in database. ';
 		}
 	}
 
@@ -1488,7 +1492,7 @@ function updateDatabase()
 			{
 				if ($DEV)
 				{
-					echo "Scouting added<BR>";
+					echo "Scouting added <BR>";
 				}
 			}
 
@@ -1509,7 +1513,7 @@ function updateDatabase()
 			{
 				if ($DEV)
 				{
-					echo "tblplanet SID1 and SID2 updated<BR>";
+					echo "tblplanet SID1 and SID2 updated <BR>";
 				}
 			}
 		}
