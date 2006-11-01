@@ -4,6 +4,7 @@ if ($_SERVER['SERVER_NAME'] == 'www.idsfadt.com')
 	$DEV = false;
 
 	//Cabal
+	
 	$mysql_server = "mysql191.secureserver.net";
 	$mysql_user = "SRstats";
 	$mysql_password = "c4b4Lity";
@@ -14,21 +15,20 @@ if ($_SERVER['SERVER_NAME'] == 'www.idsfadt.com')
 	$DossierWebUrl = "http://www.idsfadt.com/Cabal/Dossier/Dossier.php";
 
 	//Murc
-	/*
-	$mysql_server = "mysql191.secureserver.net";
-	$mysql_user = "SRstats";
+/*
+	$mysql_server = "mysql231.secureserver.net";
+	$mysql_user = "MurcDB";
 	$mysql_password = "c4b4Lity";
 	$mysql_db = "MurcDB";
 
 	$LoginWebUrl = "http://www.idsfadt.com/Murc/login_page.php";
 	$ScoutWebUrl = "http://www.idsfadt.com/Murc/Scout/scout.php";
 	$DossierWebUrl = "http://www.idsfadt.com/Murc/Dossier/Dossier.php";
-	*/
-
+*/
 	//Shriner
 	/*
-	$mysql_server = "mysql191.secureserver.net";
-	$mysql_user = "SRstats";
+	$mysql_server = "mysql231.secureserver.net";
+	$mysql_user = "ShrinerDB";
 	$mysql_password = "c4b4Lity";
 	$mysql_db = "ShrinerDB";
 
