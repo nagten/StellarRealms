@@ -20,11 +20,11 @@ if (!$logged_in)
 	//return back to the login page
 	if ($DEV)
 	{
-		header('Location: ' . $CabalLoginDebugUrl  . '?where=scout');
+		header('Location: ' . $LoginDebugUrl  . '?where=scout');
 	}
 	else
 	{
-		header('Location: ' . $CabalLoginWebUrl  . '?where=scout');
+		header('Location: ' . $LoginWebUrl  . '?where=scout');
 	}
 	exit;
 }
