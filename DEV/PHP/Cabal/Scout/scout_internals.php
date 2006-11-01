@@ -54,7 +54,7 @@ else
 		$method = 'Short Report';
 	}
 }
-
+	
 if ($method == 'Full Report')
 {
 	$cnt = count($ray);
@@ -111,6 +111,11 @@ else
 	parseFrom($from);
 	parseTarget($target);
 	parseStructs($structs);
+}
+
+if ($DEV)
+{
+	echo "All data parsed update database <BR>";
 }
 
 $result = updateDatabase();
@@ -1157,6 +1162,8 @@ function initialize_dat()
 function updateDatabase()
 {
 	global $dat;
+	global $DEV;
+	
 	$targetName = $dat['target'];
 	$sourceName = $dat['from'];
 	$reportDate = $dat['date'];
@@ -1196,6 +1203,7 @@ function updateDatabase()
 		$reportDate = date('Y-m-d',strtotime($reportDate));
 		$reportTime = date('H:i:s',strtotime($reportTime));
 	}
+	
 
 	if ($ok)
 	{
@@ -1203,43 +1211,50 @@ function updateDatabase()
 		//first we check if rank is up to date with the help of the date column
 		$SQL = 'Select max(date), date, TurnCount FROM tblplanet GROUP BY date';
 		$result = mysql_query($SQL);
-		
-		if (!$result) 
+
+		if (!$result)
 		{
 			die('Invalid query: ' . mysql_error());
 		}
 		else
 		{
+			if (mysql_num_rows($result) == 0)
+			{
+				//No planets in planet table so updaterank() this will add all planets
+				UpdateRank(0);
+			}
+				
 			if (mysql_num_rows($result) > 0)
 			{
 				$current_date = date("m-d-Y H:i:s");
 				$row = mysql_fetch_assoc($result);
-				
+
 				$Age = TurnAge($row['date'], $current_date);
 				//echo "rowdate = " . $row['date'];
 				//echo "current_date = " . $current_date;
-				
+
 				//echo "Age = " . $Age;
 				//echo "turns = " . $row['TurnCount'];
+
 				if ($Age > 1)
-				{	
+				{
 					//Rank isn't up to date so update it
 					UpdateRank($row['TurnCount']);
 				}
 			}
 		}
-				
+
 		$SQL = 'Select RecordNumber,Rank,SID1,TurnCount FROM tblplanet WHERE PlanetName = \'' . $targetName . '\'';
 		$result = mysql_query($SQL);
-		if (!$result) 
+		if (!$result)
 		{
 			die('Invalid query: ' . mysql_error());
 		}
-		
+
 		if (mysql_num_rows($result) > 0)
 		{
 			$row = mysql_fetch_assoc($result);
-			
+
 			$planetID = $row['RecordNumber'];
 			$rank     = $row['Rank'];
 			$sid1     = $row['SID1'];
@@ -1280,11 +1295,19 @@ function updateDatabase()
 		$SQL .= 'AND ReportDate = \'' . $reportDate . '\' ';
 		$SQL .= 'AND ReportTime = \'' . $reportTime . '\' ';
 		$result = mysql_query($SQL);
-		if (!$result) die('Invalid query: ' . mysql_error());
+		
+		if (!$result)
+		{
+			echo "Invalid query: " . mysql_error();
+		}
 
 		if (mysql_num_rows($result) > 0)
 		{
 			// do nothing, record already exists
+			if ($DEV)
+			{
+				echo "Scouting report has already been added<BR>";
+			}
 		}
 		else
 		{
@@ -1457,7 +1480,17 @@ function updateDatabase()
 			$SQL .= ')';
 			$result = mysql_query($SQL);
 
-			if (!$result) die('Invalid query: ' . mysql_error());
+			if (!$result)
+			{
+				echo 'Invalid query: ' . mysql_error();
+			}
+			else
+			{
+				if ($DEV)
+				{
+					echo "Scouting added<BR>";
+				}
+			}
 
 			$newid = mysql_insert_id();
 			$sid2 = $sid1;
@@ -1468,7 +1501,17 @@ function updateDatabase()
 			$SQL .= 'WHERE RecordNumber = ' . $planetID;
 			$result = mysql_query($SQL);
 
-			if (!$result) die('Invalid query: ' . mysql_error());
+			if (!$result)
+			{
+				echo 'Invalid query: ' . mysql_error();
+			}
+			else
+			{
+				if ($DEV)
+				{
+					echo "tblplanet SID1 and SID2 updated<BR>";
+				}
+			}
 		}
 		return $planetID;
 	}
