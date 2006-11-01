@@ -4,6 +4,7 @@ require_once('xml.php');
 function UpdateRank($dbTurn)
 {
 	global $DEV;
+	$DEV = false;
 	
 	//--- GET THE PLANETS --------------------------------------------------------------------------------------
 	$planets = array();
@@ -53,7 +54,12 @@ function UpdateRank($dbTurn)
 	do
 	{
 		$attempt++;
-		echo date('M d Y  H:i:s') . ' Attempt ' . $attempt . $lf;
+		
+		if ($DEV)
+		{
+			echo date('M d Y  H:i:s') . ' Attempt ' . $attempt . $lf;
+		}
+		
 		$fp = @fsockopen ('www.primeaxiom.com', 80, $errno, $errstr, 10);
 		if (!$fp)
 		{
