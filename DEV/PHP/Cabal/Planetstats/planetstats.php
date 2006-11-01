@@ -17,6 +17,8 @@ body {
 
 <body>
 <?php
+ob_start("ob_gzhandler");
+
 include("../variables.php");
 
 if( !is_null( $_POST ) )
