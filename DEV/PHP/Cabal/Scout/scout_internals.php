@@ -112,17 +112,17 @@ else
 	parseTarget($target);
 	parseStructs($structs);
 }
-$DEV = false;
+
 if ($DEV)
 {
-	echo "All data parsed <BR>";
+	//echo "All data parsed <BR>";
 }
 
 $result = updateDatabase();
 
 if ($DEV)
 {
-	echo $result;
+	//echo $result;
 }
 
 //================================================================================
@@ -771,6 +771,14 @@ function parse_P_structs($name,$qty)
 			$dat['Capital']    += $qty;
 			$dat['OffMaint']   += ($qty * 117);
 			break;
+		/*
+		//enable next round this fix requires a database change
+		  case 'planetary shield':
+			$dat['AMIPS']       = $qty;
+			$dat['Defense']    += $qty;
+			$dat['DefMaint']   += ($qty * 1000);
+			break;
+		*/
 	}
 }
 
@@ -1161,13 +1169,13 @@ function initialize_dat()
 	$dat['WHSE3']  = '';
 	$dat['WEATL']  = '';
 	$dat['ZEPFD']  = '';
+	//$dat['AMIPS']  = '';
 }
 
 function updateDatabase()
 {
 	global $dat;
 	global $DEV;
-	$DEV = false;
 	
 	$targetName = $dat['target'];
 	$sourceName = $dat['from'];
@@ -1310,7 +1318,7 @@ function updateDatabase()
 			// do nothing, record already exists
 			if ($DEV)
 			{
-				echo "Scouting report has already been added<BR>";
+				//echo "Scouting report has already been added<BR>";
 			}
 		}
 		else
@@ -1331,6 +1339,10 @@ function updateDatabase()
 			$SQL .= 'AirOps,Capital,Defense,Diplomacy,Fighter,Habitat,IntelOps,';
 			$SQL .= 'Materials,Reproduction,Queues,Research,Scouting,Sensors,';
 			$SQL .= 'Special,Speed,Training,Wealth,Rank,AirCap,HabSpace,Slots,DefMaint,OffMaint,Current';
+			/*
+			//todo enable next round this change requires a database change
+			$SQL .= 'Special,Speed,Training,Wealth,Rank,AirCap,HabSpace,Slots,DefMaint,OffMaint,Current,AMIPS';
+			*/
 			$SQL .= ') VALUES (';
 			$SQL .= '\'' . $planetID         . '\',';
 			$SQL .= '\'' . $dat['target']    . '\',';
@@ -1481,6 +1493,11 @@ function updateDatabase()
 			$SQL .= '\'' . $dat['DefMaint']      . '\',';
 			$SQL .= '\'' . $dat['OffMaint']      . '\',';
 			$SQL .= '\'' . 'Y'                   . '\' ';
+			/*
+			//todo enable next round this requires a db change
+			$SQL .= '\'' . 'Y'                   . '\',';
+			$SQL .= '\'' . $dat['AMIPS']         . '\' '; 
+			*/
 			$SQL .= ')';
 			$result = mysql_query($SQL);
 
@@ -1492,7 +1509,7 @@ function updateDatabase()
 			{
 				if ($DEV)
 				{
-					echo "Scouting added <BR>";
+					//echo "Scouting added <BR>";
 				}
 			}
 
@@ -1513,7 +1530,7 @@ function updateDatabase()
 			{
 				if ($DEV)
 				{
-					echo "tblplanet SID1 and SID2 updated <BR>";
+					//echo "tblplanet SID1 and SID2 updated <BR>";
 				}
 			}
 		}
