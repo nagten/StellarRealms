@@ -1326,7 +1326,7 @@ function getDefense($row)
 		$r .= '</tr>';
 	}
 	
-//Added orbital bulwarks
+	//Added orbital bulwarks
 	if ($row['OBULK'] > 0) 
 	{
 		$r .= '<tr>';
@@ -1335,6 +1335,17 @@ function getDefense($row)
 		$r .= '<td width=80% class=rptl>Orbital Bulwark</td>';
 		$r .= '</tr>';
 	}
+	/*
+	//todo enable next round this change requires a database change
+	if ($row['AMIPS'] > 0) 
+	{
+		$r .= '<tr>';
+		$r .= '<td width=10% class=rptr>' . number_format($row['AMIPS'] * 1000) . '</td>';
+		$r .= '<td width=10% class=rptr>' . $row['AMIPS'] . '</td>';
+		$r .= '<td width=80% class=rptl>Planetary Shield</td>';
+		$r .= '</tr>';
+	}
+	*/ 
 	if ($row['STIDR'] > 0) 
 	{
 		$r .= '<tr>';
