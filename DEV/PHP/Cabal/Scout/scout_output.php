@@ -791,10 +791,10 @@ function displayDetail($reportID)
 		$r .= '<table width=100% border=0 cellpadding=0 cellspacing=0 bgcolor=#A9A9A9>';
 
 		$r .= '<tr valign=top>';
-		$r .= '<td>' . getHabitat($row)      . getSpeed($row)     . getCapital($row)   . getIntelOps($row)   . '</td>';
+		$r .= '<td>' . getHabitat($row)      . getSpeed($row)     . getCapital($row)    . '</td>';
 		$r .= '<td>' . getReproduction($row) . getMaterials($row) . getAirOps($row)    . getResearch($row)   . '</td>';
-		$r .= '<td>' . getWealth($row)       . getFighters($row)  . getDefense($row)   . getScout($row)      . '</td>';
-		$r .= '<td>' . getSensors($row)      . getQueues($row)    . getDiplomacy($row) . getTraining($row)   . '</td>';
+		$r .= '<td>' . getWealth($row)       . getFighters($row)  . getDrones($row)	. getSurfaceDefense($row)   . getOrbitalDefense($row) 	 . getScout($row)      . '</td>';
+		$r .= '<td>' . getSensors($row)      . getQueues($row)    . getDiplomacy($row) . getTraining($row)   .  getIntelOps($row) . '</td>';
 		$r .= '</tr>';
 		$r .= '</table>';
 	}
@@ -1184,13 +1184,33 @@ function getCapital($row)
 	$r .= '</td></tr></table>';
 	return $r;
 }
-
-function getDefense($row) 
+function getDrones($row)
 {
 	$r  = '';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#A9A9A9><tr><td>';
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#FFFFFF>';
-	$r .= '<tr><td class=hc colspan=3>Defense</td></tr>';
+	$r .= '<tr><td class=hc colspan=3>Drones</td></tr>';
+	
+	if ($row['STIDR'] > 0) 
+	{
+		$r .= '<tr>';
+		$r .= '<td width=10% class=rptr>' . number_format($row['STIDR'] * conSTIDR) . '</td>';
+		$r .= '<td width=10% class=rptr>' . $row['STIDR'] . '</td>';
+		$r .= '<td width=80% class=rptl>"Stinger" Drone</td>';
+		$r .= '</tr>';
+	}
+	
+	$r .= '</table>';
+	$r .= '</td></tr></table>';
+	return $r;	
+}
+
+function getSurfaceDefense($row) 
+{
+	$r  = '';
+	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#A9A9A9><tr><td>';
+	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#FFFFFF>';
+	$r .= '<tr><td class=hc colspan=3>Surface Defense</td></tr>';
 	
 	if ($row['BARR1'] > 0) 
 	{
@@ -1210,7 +1230,76 @@ function getDefense($row)
 		$r .= '</tr>';
 	}
 	
-	if ($row['OMIN1'] > 0) 
+	if ($row['DEFTU'] > 0) 
+	{
+		$r .= '<tr>';
+		$r .= '<td width=10% class=rptr>' . number_format($row['DEFTU'] * conDEFTU) . '</td>';
+		$r .= '<td width=10% class=rptr>' . $row['DEFTU'] . '</td>';
+		$r .= '<td width=80% class=rptl>Defense Turret</td>';
+		$r .= '</tr>';
+	}
+	
+	if ($row['SDEF1'] > 0) 
+	{
+		$r .= '<tr>';
+		$r .= '<td width=10% class=rptr>' . number_format($row['SDEF1'] * conSDEF1) . '</td>';
+		$r .= '<td width=10% class=rptr>' . $row['SDEF1'] . '</td>';
+		$r .= '<td width=80% class=rptl>Surface Defense Battery</td>';
+		$r .= '</tr>';
+	}
+	
+	if ($row['SDEF2'] > 0) 
+	{
+		$r .= '<tr>';
+		$r .= '<td width=10% class=rptr>' . number_format($row['SDEF2'] * conSDEF2) . '</td>';
+		$r .= '<td width=10% class=rptr>' . $row['SDEF2'] . '</td>';
+		$r .= '<td width=80% class=rptl>Surface Defense Battery (Improved)</td>';
+		$r .= '</tr>';
+	}
+	
+	if ($row['SSLD1'] > 0) 
+	{
+		$r .= '<tr>';
+		$r .= '<td width=10% class=rptr>' . number_format($row['SSLD1'] * conSSLD1) . '</td>';
+		$r .= '<td width=10% class=rptr>' . $row['SSLD1'] . '</td>';
+		$r .= '<td width=80% class=rptl>Surface Shield Generator</td>';
+		$r .= '</tr>';
+	}
+	
+	if ($row['SSLD2'] > 0) 
+	{
+		$r .= '<tr>';
+		$r .= '<td width=10% class=rptr>' . number_format($row['SSLD2'] * conSSLD2) . '</td>';
+		$r .= '<td width=10% class=rptr>' . $row['SSLD2'] . '</td>';
+		$r .= '<td width=80% class=rptl>Surface Shield Generator (Improved)</td>';
+		$r .= '</tr>';
+	}
+	
+	/*
+	//todo enable next round this change requires a database change
+	if ($row['AMIPS'] > 0) 
+	{
+		$r .= '<tr>';
+		$r .= '<td width=10% class=rptr>' . number_format($row['AMIPS'] * 1000) . '</td>';
+		$r .= '<td width=10% class=rptr>' . $row['AMIPS'] . '</td>';
+		$r .= '<td width=80% class=rptl>Planetary Shield</td>';
+		$r .= '</tr>';
+	}
+	*/ 
+
+	$r .= '</table>';
+	$r .= '</td></tr></table>';
+	return $r;
+}
+
+function getOrbitalDefense($row) 
+{
+	$r  = '';
+	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#A9A9A9><tr><td>';
+	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#FFFFFF>';
+	$r .= '<tr><td class=hc colspan=3>Orbital Defense</td></tr>';
+	
+if ($row['OMIN1'] > 0) 
 	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['OMIN1'] * conOMIN1) . '</td>';
@@ -1273,51 +1362,6 @@ function getDefense($row)
 		$r .= '</tr>';
 	}
 	
-	if ($row['DEFTU'] > 0) 
-	{
-		$r .= '<tr>';
-		$r .= '<td width=10% class=rptr>' . number_format($row['DEFTU'] * conDEFTU) . '</td>';
-		$r .= '<td width=10% class=rptr>' . $row['DEFTU'] . '</td>';
-		$r .= '<td width=80% class=rptl>Defense Turret</td>';
-		$r .= '</tr>';
-	}
-	
-	if ($row['SDEF1'] > 0) 
-	{
-		$r .= '<tr>';
-		$r .= '<td width=10% class=rptr>' . number_format($row['SDEF1'] * conSDEF1) . '</td>';
-		$r .= '<td width=10% class=rptr>' . $row['SDEF1'] . '</td>';
-		$r .= '<td width=80% class=rptl>Surface Defense Battery</td>';
-		$r .= '</tr>';
-	}
-	
-	if ($row['SDEF2'] > 0) 
-	{
-		$r .= '<tr>';
-		$r .= '<td width=10% class=rptr>' . number_format($row['SDEF2'] * conSDEF2) . '</td>';
-		$r .= '<td width=10% class=rptr>' . $row['SDEF2'] . '</td>';
-		$r .= '<td width=80% class=rptl>Surface Defense Battery (Improved)</td>';
-		$r .= '</tr>';
-	}
-	
-	if ($row['SSLD1'] > 0) 
-	{
-		$r .= '<tr>';
-		$r .= '<td width=10% class=rptr>' . number_format($row['SSLD1'] * conSSLD1) . '</td>';
-		$r .= '<td width=10% class=rptr>' . $row['SSLD1'] . '</td>';
-		$r .= '<td width=80% class=rptl>Surface Shield Generator</td>';
-		$r .= '</tr>';
-	}
-	
-	if ($row['SSLD2'] > 0) 
-	{
-		$r .= '<tr>';
-		$r .= '<td width=10% class=rptr>' . number_format($row['SSLD2'] * conSSLD2) . '</td>';
-		$r .= '<td width=10% class=rptr>' . $row['SSLD2'] . '</td>';
-		$r .= '<td width=80% class=rptl>Surface Shield Generator (Improved)</td>';
-		$r .= '</tr>';
-	}
-	
 	if ($row['SBASE'] > 0) 
 	{
 		$r .= '<tr>';
@@ -1336,25 +1380,7 @@ function getDefense($row)
 		$r .= '<td width=80% class=rptl>Orbital Bulwark</td>';
 		$r .= '</tr>';
 	}
-	/*
-	//todo enable next round this change requires a database change
-	if ($row['AMIPS'] > 0) 
-	{
-		$r .= '<tr>';
-		$r .= '<td width=10% class=rptr>' . number_format($row['AMIPS'] * 1000) . '</td>';
-		$r .= '<td width=10% class=rptr>' . $row['AMIPS'] . '</td>';
-		$r .= '<td width=80% class=rptl>Planetary Shield</td>';
-		$r .= '</tr>';
-	}
-	*/ 
-	if ($row['STIDR'] > 0) 
-	{
-		$r .= '<tr>';
-		$r .= '<td width=10% class=rptr>' . number_format($row['STIDR'] * conSTIDR) . '</td>';
-		$r .= '<td width=10% class=rptr>' . $row['STIDR'] . '</td>';
-		$r .= '<td width=80% class=rptl>"Stinger" Drone</td>';
-		$r .= '</tr>';
-	}
+	
 	$r .= '</table>';
 	$r .= '</td></tr></table>';
 	return $r;
