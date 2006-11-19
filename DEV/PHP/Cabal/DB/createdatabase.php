@@ -35,8 +35,8 @@ else
 $dbcnx = @mysql_connect($mysql_server, $mysql_user, $mysql_password);
 
 //Set the database name
-$mysql_db = "MurcDB";
-//$mysql_db = "CabalDB";
+//$mysql_db = "MurcDB";
+$mysql_db = "CabalDB";
 //$mysql_db = "ShrinerDB";
 
 if (!$dbcnx)
