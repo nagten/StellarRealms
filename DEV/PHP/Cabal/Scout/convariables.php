@@ -120,4 +120,39 @@
 	define("conWHSE3", "90");
 	define("conWEATL", "50");
 	define("conZEPFD", "18");
+	
+	//Airbase capacity
+	define("conAIRB1CAP", "200");
+	define("conAIRB2CAP", "300");
+	define("conSBASEAIRBCAP", "50");
+	
+	//Production capacity
+	define("conFARM1PROD", "2");
+	define("conFARM2PROD", "4");
+	define("conFARM3PROD", "8");
+	define("conMINE1PROD", "4");
+	define("conMINE2PROD", "8");
+	define("conRAD1PROD", "2");
+	define("conRAD2PROD", "4");
+	define("conFUEL1PROD", "2");
+	define("conFUEL2PROD", "4");
+	
+	//Habspace
+	define("conSBASECAP", "10000");
+	define("conHABI1CAP", "30000");
+	define("conHABI2CAP", "50000");
+	define("conHABI3CAP", "70000");
+	define("conGNDHICAP", "100000");
+	define("conVINEMCAP", "100000");
+	define("conHIBCACAP", "250000");
+	define("conBROCECAP", "1000000");
+	
+	define("conINSHTCAP", "500");
+	define("conUNIVECAP", "500");
+	define("conINTELCAP", "1000");
+		
+	//Warehouse space
+	define("conWHSE1CAP", "1000");
+	define("conWHSE2CAP", "2500");
+	define("conWHSE3CAP", "6000");
 ?>
