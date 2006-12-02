@@ -55,5 +55,7 @@
 
 	.rptl		{font-size:8pt; padding-top:0px; padding-bottom:0px;}
 	.rptc		{font-size:8pt; padding-top:0px; padding-bottom:0px; text-align:center}
+	.rptcdur	{font-size:8pt; padding-top:0px; padding-bottom:0px; text-align:center; font-weight: Bold}
 	.rptr		{font-size:8pt; padding-top:0px; padding-bottom:0px; text-align:right}
+	.rptrdur	{font-size:8pt; padding-top:0px; padding-bottom:0px; text-align:right; font-weight: Bold}
 	.rrow		{font-size:8pt; margin-top:0px; margin-bottom:0px;}
