@@ -1285,15 +1285,6 @@ function getSurfaceDefense($row)
 		$r .= '</tr>';
 	}
 
-	if ($row['AMIPS'] > 0) 
-	{
-		$r .= '<tr>';
-		$r .= '<td width=10% class=rptrdur>' . number_format($row['AMIPS'] * conAMIPS) . '</td>';
-		$r .= '<td width=10% class=rptr>' . $row['AMIPS'] . '</td>';
-		$r .= '<td width=80% class=rptl>Planetary Shield</td>';
-		$r .= '</tr>';
-	}
-
 	$r .= '</table>';
 	$r .= '</td></tr></table>';
 	return $r;
@@ -1306,7 +1297,7 @@ function getOrbitalDefense($row)
 	$r .= '<table width=100% border=0 cellspacing=1 cellpadding=1 bgcolor=#FFFFFF>';
 	$r .= '<tr><td class=hc colspan=3>Orbital Defense</td></tr>';
 	
-if ($row['OMIN1'] > 0) 
+	if ($row['OMIN1'] > 0) 
 	{
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptrdur>' . number_format($row['OMIN1'] * conOMIN1) . '</td>';
@@ -1385,6 +1376,15 @@ if ($row['OMIN1'] > 0)
 		$r .= '<td width=10% class=rptrdur>' . number_format($row['OBULK'] * conOBULK) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['OBULK'] . '</td>';
 		$r .= '<td width=80% class=rptl>Orbital Bulwark</td>';
+		$r .= '</tr>';
+	}
+	
+	if ($row['AMIPS'] > 0) 
+	{
+		$r .= '<tr>';
+		$r .= '<td width=10% class=rptrdur>' . number_format($row['AMIPS'] * conAMIPS) . '</td>';
+		$r .= '<td width=10% class=rptr>' . $row['AMIPS'] . '</td>';
+		$r .= '<td width=80% class=rptl>Planetary Shield</td>';
 		$r .= '</tr>';
 	}
 	
