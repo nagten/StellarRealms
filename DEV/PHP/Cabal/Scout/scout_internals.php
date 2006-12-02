@@ -219,7 +219,8 @@ function parseStructs($line)
 				$name = substr($struct,$pos+1);
 				$name = stripslashes($name);
 				$name = str_replace('"','',$name);
-				$Initial = substr($name,0,1);
+				$Initial = strtoupper(substr($name,0,1));
+				
 				switch ($Initial)
 				{
 					case 'A' : parse_A_structs($name,$qty); break;
@@ -353,12 +354,10 @@ function parse_B_structs($name,$qty)
 			$dat['Capital']    += $qty;
 			$dat['OffMaint']   += ($qty * conBLABM);
 			break;
-		//TODO add brood center requires DB change
-		/*case 'Brood Center':
+		case 'Brood Center' || 'brood center':
 			$dat['BROCE']       = $qty;
 			$dat['DefMaint']   += ($qty * conBROCE);
 			break;
-		*/
 	}
 }
 
@@ -820,14 +819,11 @@ function parse_P_structs($name,$qty)
 			$dat['Capital']    += $qty;
 			$dat['OffMaint']   += ($qty * conPRIHC);
 			break;
-		/*
-		//enable next round this fix requires a database change
-		  case 'planetary shield':
+		case 'planetary shield' || 'Planetary Shield':
 			$dat['AMIPS']       = $qty;
 			$dat['Defense']    += $qty;
 			$dat['DefMaint']   += ($qty * conAMIPS);
 			break;
-		*/
 	}
 }
 
@@ -1122,7 +1118,7 @@ function initialize_dat()
 	$dat['AEGMS']  = '';
 	$dat['AIRB1']  = '';
 	$dat['AIRB2']  = '';
-	//$dat['AMIPS']  = '';
+	$dat['AMIPS']  = '';
 	$dat['ANVBS']  = '';
 	$dat['ASPHC']  = '';
 	$dat['AVASC']  = '';
@@ -1134,6 +1130,7 @@ function initialize_dat()
 	$dat['BERDE']  = '';
 	$dat['BIOLO']  = '';
 	$dat['BLABM']  = '';
+	$dat['BROCE']  = '';
 	$dat['COLFR']  = '';
 	$dat['COLOS']  = '';
 	$dat['CRUBC']  = '';
@@ -1401,7 +1398,7 @@ function updateDatabase()
 			$SQL .= 'OSLD2,PBANK,PLATE,PRIHC,FUEL1,FUEL2,RAVMC,RSENS,RLAB1,RLAB2,';
 			$SQL .= 'SATE1,SATE2,SCOUT,FOLDR,SBASE,STIDR,STOCK,SDEF1,SDEF2,SSLD1,';
 			$SQL .= 'SSLD2,TANDB,TERCA,TORBA,TRACK,TSCHL,UNIVE,VENHF,VESSC,VINEM,';
-			$SQL .= 'WARFA,WASFI,WAYEC,WHSE1,WHSE2,WHSE3,WEATL,ZEPFD,';
+			$SQL .= 'WARFA,WASFI,WAYEC,WHSE1,WHSE2,WHSE3,WEATL,ZEPFD,BROCE,AMIPS,';
 			$SQL .= 'AirOps,Capital,Defense,Diplomacy,Fighter,Habitat,IntelOps,';
 			$SQL .= 'Materials,Reproduction,Queues,Research,Scouting,Sensors,';
 			$SQL .= 'Special,Speed,Training,Wealth,Rank,AirCap,HabSpace,Slots,DefMaint,OffMaint,Current';
@@ -1535,6 +1532,8 @@ function updateDatabase()
 			$SQL .= '\'' . $dat['WHSE3']         . '\',';
 			$SQL .= '\'' . $dat['WEATL']         . '\',';
 			$SQL .= '\'' . $dat['ZEPFD']         . '\',';
+			$SQL .= '\'' . $dat['BROCE']         . '\',';
+			$SQL .= '\'' . $dat['AMIPS']         . '\',';
 			$SQL .= '\'' . $dat['AirOps']        . '\',';
 			$SQL .= '\'' . $dat['Capital']       . '\',';
 			$SQL .= '\'' . $dat['Defense']       . '\',';
