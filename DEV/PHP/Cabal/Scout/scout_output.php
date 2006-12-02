@@ -73,7 +73,7 @@ function displaySummary()
 
 	$SQL  = 'SELECT RecordNumber,PlanetID,PlanetName,ReportDate,ReportTime,AirCap,';
 	$SQL .= 'Fighter,IntelOps,Materials,Reproduction,Research,';
-	$SQL .= 'Scouting,Sensors,Speed,Rank,HabSpace,Slots,DefMaint,OffMaint ';
+	$SQL .= 'Scouting,Warehouse,Speed,Rank,HabSpace,Slots,DefMaint,OffMaint,Species ';
 	$SQL .= 'FROM tblscout ';
 	$SQL .= 'WHERE Current = \'Y\' ';
 	$SQL .= 'ORDER BY PlanetName,ReportDate DESC,ReportTime DESC';
@@ -97,6 +97,7 @@ function displaySummary()
 			{
 				$p[$planetID] = 1;
 				$p1[$planetID]['planetName']   = stripslashes($row['PlanetName']);
+				$p1[$planetID]['species']	   = $row['Species'];
 				$p1[$planetID]['reportDate']   = $row['ReportDate'];
 				$p1[$planetID]['reportTime']   = $row['ReportTime'];
 				$p1[$planetID]['airCap']       = $row['AirCap'];
@@ -109,7 +110,7 @@ function displaySummary()
 				$p1[$planetID]['reproduction'] = $row['Reproduction'];
 				$p1[$planetID]['research']     = $row['Research'];
 				$p1[$planetID]['scouting']     = $row['Scouting'];
-				$p1[$planetID]['sensors']      = $row['Sensors'];
+				$p1[$planetID]['warehouse']    = $row['Warehouse'];
 				$p1[$planetID]['slots']        = $row['Slots'];
 				$p1[$planetID]['speed']        = $row['Speed'];
 				$p1[$planetID]['rank']         = $row['Rank'];
@@ -130,8 +131,7 @@ function displaySummary()
 				$p2[$planetID]['reproduction'] = $row['Reproduction'];
 				$p2[$planetID]['research']     = $row['Research'];
 				$p2[$planetID]['scouting']     = $row['Scouting'];
-				$p2[$planetID]['sensors']      = $row['Sensors'];
-				$p2[$planetID]['sensors']      = $row['Sensors'];
+				$p2[$planetID]['warehouse']      = $row['Warehouse'];
 				$p2[$planetID]['slots']        = $row['Slots'];
 				$p2[$planetID]['speed']        = $row['Speed'];
 				$p2[$planetID]['rank']         = $row['Rank'];
@@ -160,7 +160,7 @@ function displaySummary()
 			calcSummaryDiff($key,'slots');
 			calcSummaryDiff($key,'research');
 			calcSummaryDiff($key,'scouting');
-			calcSummaryDiff($key,'sensors');
+			calcSummaryDiff($key,'warehouse');
 			calcSummaryDiff($key,'speed');
 		} 
 		else 
@@ -176,7 +176,7 @@ function displaySummary()
 			$d1[$key]['slots']        = '';
 			$d1[$key]['research']     = '';
 			$d1[$key]['scouting']     = '';
-			$d1[$key]['sensors']      = '';
+			$d1[$key]['warehouse']    = '';
 			$d1[$key]['special']      = '';
 			$d1[$key]['speed']        = '';
 		}
@@ -225,10 +225,11 @@ function displaySummary()
 		}
 
 		$pName = $p1[$key]['planetName'];
+		$specie = $p1[$key]['species'];
 		$pName = substr($pName,0,15);
 
 		$r .= '<tr bgcolor=' . $bgcolor . ' onclick="getPlanet(' . $key . ')">';
-		$r .= '<td class=ull>' . $pName . '<div class=hidden id=p_' . $cnt . '>' . $key . '</div></td>';
+		$r .= '<td class=ull>' . $pName . ' (' . $specie . ')'. '<div class=hidden id=p_' . $cnt . '>' . $key . '</div></td>';
 		$r .= '<td class=xc>' . date('d-M',strtotime($p1[$key]['reportDate']))   . '</td>';
 		$r .= '<td class=xc>' . date('H:i',strtotime($p1[$key]['reportTime']))   . '</td>';
 		$r .= '<td class=xc>' . $p1[$key]['rank']                        . '</td>';
@@ -254,8 +255,8 @@ function displaySummary()
 		$r .= '<td class=xc>' . $d1[$key]['research']     . '</td>';
 		$r .= '<td class=xc>' . $p1[$key]['scouting']     . '</td>';
 		$r .= '<td class=xc>' . $d1[$key]['scouting']     . '</td>';
-		$r .= '<td class=xc>' . $p1[$key]['sensors']      . '</td>';
-		$r .= '<td class=xc>' . $d1[$key]['sensors']      . '</td>';
+		$r .= '<td class=xc>' . $p1[$key]['warehouse']      . '</td>';
+		$r .= '<td class=xc>' . $d1[$key]['warehouse']      . '</td>';
 		$r .= '<td class=xc>' . $p1[$key]['speed']        . '</td>';
 		$r .= '<td class=xc>' . $d1[$key]['speed']        . '</td>';
 	}
@@ -384,7 +385,7 @@ function summaryColumnHeader()
 		case 'scouting':
 			$col15 = 'shc';
 			break;
-		case 'sensors':
+		case 'warehouse':
 			$col16 = 'shc';
 			break;
 		case 'special':
@@ -421,7 +422,7 @@ function summaryColumnHeader()
 	$r .= '<td class=' . $col13 . ' colspan=2 onclick=sortColumn("slots") onmouseover=glowObject(this) onmouseout=dimObject(this)>Queues</td>';
 	$r .= '<td class=' . $col14 . ' colspan=2 onclick=sortColumn("research") onmouseover=glowObject(this) onmouseout=dimObject(this)>Research</td>';
 	$r .= '<td class=' . $col15 . ' colspan=2 onclick=sortColumn("scouting") onmouseover=glowObject(this) onmouseout=dimObject(this)>Scouting</td>';
-	$r .= '<td class=' . $col16 . ' colspan=2 onclick=sortColumn("sensors") onmouseover=glowObject(this) onmouseout=dimObject(this)>Sensors</td>';
+	$r .= '<td class=' . $col16 . ' colspan=2 onclick=sortColumn("warehouse") onmouseover=glowObject(this) onmouseout=dimObject(this)>Warehouse</td>';
 	$r .= '<td class=' . $col18 . ' colspan=2 onclick=sortColumn("speed") onmouseover=glowObject(this) onmouseout=dimObject(this)>Speed</td>';
 	//$r .= '<td class=' . $col19 . ' colspan=2 onclick=sortColumn("training") onmouseover=glowObject(this) onmouseout=dimObject(this)>Training</td>';
 	//$r .= '<td class=' . $col20 . ' colspan=2 onclick=sortColumn("wealth") onmouseover=glowObject(this) onmouseout=dimObject(this)>Wealth</td>';
@@ -511,7 +512,7 @@ function displayPlanet($planet)
 
 	$SQL  = 'SELECT RecordNumber, PlanetID,PlanetName,ReportDate,ReportTime,AirOps,AirCap,Capital,Defense,';
 	$SQL .= 'Diplomacy,Fighter,Habitat,IntelOps,Materials,Reproduction,Queues,Research,';
-	$SQL .= 'Scouting,Sensors,Special,Speed,Training,Wealth,Rank,HabSpace,Slots,DefMaint,OffMaint ';
+	$SQL .= 'Scouting,Sensors,Warehouse,Special,Speed,Training,Wealth,Rank,HabSpace,Slots,DefMaint,OffMaint ';
 	$SQL .= 'FROM tblscout ';
 	$SQL .= 'WHERE PlanetID=' . $planet . ' ';
 	$SQL .= 'ORDER BY ReportDate DESC, ReportTime DESC';
@@ -537,7 +538,7 @@ function displayPlanet($planet)
 		$xp[$cnt]['slots']        = $row['Slots'];
 		$xp[$cnt]['research']     = $row['Research'];
 		$xp[$cnt]['scouting']     = $row['Scouting'];
-		$xp[$cnt]['sensors']      = $row['Sensors'];
+		$xp[$cnt]['warehouse']      = $row['Warehouse'];
 		$xp[$cnt]['special']      = $row['Special'];
 		$xp[$cnt]['speed']        = $row['Speed'];
 		$xp[$cnt]['training']     = $row['Training'];
@@ -562,7 +563,7 @@ function displayPlanet($planet)
 			calcReportDiff($i,'slots');
 			calcReportDiff($i,'research');
 			calcReportDiff($i,'scouting');
-			calcReportDiff($i,'sensors');
+			calcReportDiff($i,'warehouse');
 			calcReportDiff($i,'special');
 			calcReportDiff($i,'speed');
 			calcReportDiff($i,'training');
@@ -582,7 +583,7 @@ function displayPlanet($planet)
 			$xd[$i]['slots']        = '';
 			$xd[$i]['research']     = '';
 			$xd[$i]['scouting']     = '';
-			$xd[$i]['sensors']      = '';
+			$xd[$i]['warehouse']      = '';
 			$xd[$i]['special']      = '';
 			$xd[$i]['speed']        = '';
 			$xd[$i]['training']     = '';
@@ -617,7 +618,7 @@ function displayPlanet($planet)
 	$r .= '<td class=hc colspan=2>Queues</td>';
 	$r .= '<td class=hc colspan=2>Research</td>';
 	$r .= '<td class=hc colspan=2>Scouting</td>';
-	$r .= '<td class=hc colspan=2>Sensors</td>';
+	$r .= '<td class=hc colspan=2>Warehouse</td>';
 	$r .= '<td class=hc colspan=2>Speed</td>';
 	$r .= '</tr>';
 
@@ -662,8 +663,8 @@ function displayPlanet($planet)
 		$r .= '<td class=xc>' . $xd[$i]['research']     . '</td>';
 		$r .= '<td class=xc>' . $xp[$i]['scouting']     . '</td>';
 		$r .= '<td class=xc>' . $xd[$i]['scouting']     . '</td>';
-		$r .= '<td class=xc>' . $xp[$i]['sensors']      . '</td>';
-		$r .= '<td class=xc>' . $xd[$i]['sensors']      . '</td>';
+		$r .= '<td class=xc>' . $xp[$i]['warehouse']      . '</td>';
+		$r .= '<td class=xc>' . $xd[$i]['warehouse']      . '</td>';
 		$r .= '<td class=xc>' . $xp[$i]['speed']        . '</td>';
 		$r .= '<td class=xc>' . $xd[$i]['speed']        . '</td>';
 	}
@@ -751,7 +752,7 @@ function displayDetail($reportID)
 	
 	$r .= '<td class=hc>Struct Off</td>';
 	$r .= '<td class=hc>Diplomacy</td>';
-	$r .= '<td class=hc>Sensors</td>';
+	$r .= '<td class=hc>Warehouse</td>';
 	$r .= '<td class=hc>Speed</td>';
 	$r .= '</tr>';
 
@@ -781,7 +782,7 @@ function displayDetail($reportID)
 		$r .= '<td class=xc>' . $row['Queues']	. '</td>'; 
 		$r .= '<td class=xc>' . $row['Defense']       . '</td>';
 		$r .= '<td class=xc>' . $row['Diplomacy']     . '</td>';
-		$r .= '<td class=xc>' . $row['Sensors']       . '</td>';
+		$r .= '<td class=xc>' . $row['Warehouse']       . '</td>';
 		$r .= '<td class=xc>' . $row['Speed']         . '</td>';
 		$r .= '</tr>';
 		$r .= '</table>';
@@ -1516,7 +1517,7 @@ function getHabitat($row)
 	if ($row['HABI1'] > 0) 
 	{
 		$r .= '<tr>';
-		$r .= '<td width=10% class=rptr>' . number_format($row['HABI1'] * 30000) . '</td>';
+		$r .= '<td width=10% class=rptr>' . number_format($row['HABI1'] * conHABI1CAP) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['HABI1'] . '</td>';
 		$r .= '<td width=80% class=rptl>Habitat</td>';
 		$r .= '</tr>';
@@ -1525,7 +1526,7 @@ function getHabitat($row)
 	if ($row['HABI2'] > 0) 
 	{
 		$r .= '<tr>';
-		$r .= '<td width=10% class=rptr>' . number_format($row['HABI2'] * 50000) . '</td>';
+		$r .= '<td width=10% class=rptr>' . number_format($row['HABI2'] * conHABI2CAP) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['HABI2'] . '</td>';
 		$r .= '<td width=80% class=rptl>Habitat (Improved)</td>';
 		$r .= '</tr>';
@@ -1534,7 +1535,7 @@ function getHabitat($row)
 	if ($row['HABI3'] > 0)
 	{
 		$r .= '<tr>';
-		$r .= '<td width=10% class=rptr>' . number_format($row['HABI3'] * 70000) . '</td>';
+		$r .= '<td width=10% class=rptr>' . number_format($row['HABI3'] * conHABI3CAP) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['HABI3'] . '</td>';
 		$r .= '<td width=80% class=rptl>Habitat (Ultradense)</td>';
 		$r .= '</tr>';
@@ -1543,7 +1544,7 @@ function getHabitat($row)
 	if ($row['GNDHI'] > 0) 
 	{
 		$r .= '<tr>';
-		$r .= '<td width=10% class=rptr>' . number_format($row['GNDHI'] * 100000) . '</td>';
+		$r .= '<td width=10% class=rptr>' . number_format($row['GNDHI'] * conGNDHICAP) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['GNDHI'] . '</td>';
 		$r .= '<td width=80% class=rptl>Grand Hive</td>';
 		$r .= '</tr>';
@@ -1552,7 +1553,7 @@ function getHabitat($row)
 	if ($row['HIBCA'] > 0) 
 	{
 		$r .= '<tr>';
-		$r .= '<td width=10% class=rptr>' . number_format($row['HIBCA'] * 250000) . '</td>';
+		$r .= '<td width=10% class=rptr>' . number_format($row['HIBCA'] * conHIBCACAP) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['HIBCA'] . '</td>';
 		$r .= '<td width=80% class=rptl>Hibernation Cave</td>';
 		$r .= '</tr>';
@@ -1561,7 +1562,7 @@ function getHabitat($row)
 	if ($row['VINEM'] > 0) 
 	{
 		$r .= '<tr>';
-		$r .= '<td width=10% class=rptr>' . number_format($row['VINEM'] * 100000) . '</td>';
+		$r .= '<td width=10% class=rptr>' . number_format($row['VINEM'] * conVINEMCAP) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['VINEM'] . '</td>';
 		$r .= '<td width=80% class=rptl>Vinemind</td>';
 		$r .= '</tr>';
@@ -1570,7 +1571,7 @@ function getHabitat($row)
 	if ($row['SBASE'] > 0) 
 	{
 		$r .= '<tr>';
-		$r .= '<td width=10% class=rptr>' . number_format($row['SBASE'] * 10000) . '</td>';
+		$r .= '<td width=10% class=rptr>' . number_format($row['SBASE'] * conSBASECAP) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['SBASE'] . '</td>';
 		$r .= '<td width=80% class=rptl>Starbase</td>';
 		$r .= '</tr>';
@@ -1579,7 +1580,7 @@ function getHabitat($row)
 	if ($row['BROCE'] > 0) 
 	{
 		$r .= '<tr>';
-		$r .= '<td width=10% class=rptr>' . number_format($row['BROCE'] * 1000000) . '</td>';
+		$r .= '<td width=10% class=rptr>' . number_format($row['BROCE'] * conBROCECAP) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['BROCE'] . '</td>';
 		$r .= '<td width=80% class=rptl>Brood Center</td>';
 		$r .= '</tr>';
@@ -1630,7 +1631,7 @@ function getMaterials($row) {
 	if ($row['FARM1'] > 0) 
 	{
 		$r .= '<tr>';
-		$r .= '<td width=10% class=rptc>' . number_format($row['FARM1'] *  2) . '</td>';
+		$r .= '<td width=10% class=rptc>' . number_format($row['FARM1'] *  conFARM1PROD) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['FARM1'] . '</td>';
 		$r .= '<td width=80% class=rptl>Farm 1</td>';
 		$r .= '</tr>';
@@ -1639,7 +1640,7 @@ function getMaterials($row) {
 	if ($row['FARM2'] > 0) 
 	{
 		$r .= '<tr>';
-		$r .= '<td width=10% class=rptc>' . number_format($row['FARM2'] *  4) . '</td>';
+		$r .= '<td width=10% class=rptc>' . number_format($row['FARM2'] *  conFARM2PROD) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['FARM2'] . '</td>';
 		$r .= '<td width=80% class=rptl>Farm II</td>';
 		$r .= '</tr>';
@@ -1648,7 +1649,7 @@ function getMaterials($row) {
 	if ($row['FARM3'] > 0) 
 	{
 		$r .= '<tr>';
-		$r .= '<td width=10% class=rptc>' . number_format($row['FARM3'] *  8) . '</td>';
+		$r .= '<td width=10% class=rptc>' . number_format($row['FARM3'] *  conFARM3PROD) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['FARM3'] . '</td>';
 		$r .= '<td width=80% class=rptl>Farm III</td>';
 		$r .= '</tr>';
@@ -1657,7 +1658,7 @@ function getMaterials($row) {
 	if ($row['MINE1'] > 0) 
 	{
 		$r .= '<tr>';
-		$r .= '<td width=10% class=rptc>' . number_format($row['MINE1'] *  4) . '</td>';
+		$r .= '<td width=10% class=rptc>' . number_format($row['MINE1'] *  conMINE1PROD) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['MINE1'] . '</td>';
 		$r .= '<td width=80% class=rptl>Mining Facility (Metals)</td>';
 		$r .= '</tr>';
@@ -1666,7 +1667,7 @@ function getMaterials($row) {
 	if ($row['MINE2'] > 0) 
 	{
 		$r .= '<tr>';
-		$r .= '<td width=10% class=rptc>' . number_format($row['MINE2'] *  8) . '</td>';
+		$r .= '<td width=10% class=rptc>' . number_format($row['MINE2'] *  conMINE2PROD) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['MINE2'] . '</td>';
 		$r .= '<td width=80% class=rptl>Mining Facility (Metals Improved)</td>';
 		$r .= '</tr>';
@@ -1675,7 +1676,7 @@ function getMaterials($row) {
 	if ($row['RADI1'] > 0) 
 	{
 		$r .= '<tr>';
-		$r .= '<td width=10% class=rptc>' . number_format($row['RADI1'] *  2) . '</td>';
+		$r .= '<td width=10% class=rptc>' . number_format($row['RADI1'] *  conRAD1PROD) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['RADI1'] . '</td>';
 		$r .= '<td width=80% class=rptl>Mining Facility (Radioactives)</td>';
 		$r .= '</tr>';
@@ -1684,7 +1685,7 @@ function getMaterials($row) {
 	if ($row['RADI2'] > 0) 
 	{
 		$r .= '<tr>';
-		$r .= '<td width=10% class=rptc>' . number_format($row['RADI2'] *  4) . '</td>';
+		$r .= '<td width=10% class=rptc>' . number_format($row['RADI2'] *  conRAD2PROD) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['RADI2'] . '</td>';
 		$r .= '<td width=80% class=rptl>Mining Facility (Radioactives Improved)</td>';
 		$r .= '</tr>';
@@ -1693,7 +1694,7 @@ function getMaterials($row) {
 	if ($row['FUEL1'] > 0) 
 	{
 		$r .= '<tr>';
-		$r .= '<td width=10% class=rptc>' . number_format($row['FUEL1'] *  2) . '</td>';
+		$r .= '<td width=10% class=rptc>' . number_format($row['FUEL1'] * conFUEL1PROD) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['FUEL1'] . '</td>';
 		$r .= '<td width=80% class=rptl>Refinery (Fuel)</td>';
 		$r .= '</tr>';
@@ -1702,7 +1703,7 @@ function getMaterials($row) {
 	if ($row['FUEL2'] > 0) 
 	{
 		$r .= '<tr>';
-		$r .= '<td width=10% class=rptc>' . number_format($row['FUEL2'] *  4) . '</td>';
+		$r .= '<td width=10% class=rptc>' . number_format($row['FUEL2'] * conFUEL2PROD) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['FUEL2'] . '</td>';
 		$r .= '<td width=80% class=rptl>Refinery (Fuel Improved)</td>';
 		$r .= '</tr>';
@@ -1729,7 +1730,7 @@ function getMaterials($row) {
 	if ($row['WHSE1'] > 0) 
 	{
 		$r .= '<tr>';
-		$r .= '<td width=10% class=rptc></td>';
+		$r .= '<td width=10% class=rptc>' . number_format($row['WHSE1'] *  conWHSE1CAP) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['WHSE1'] . '</td>';
 		$r .= '<td width=80% class=rptl>Warehouse (Small)</td>';
 		$r .= '</tr>';
@@ -1738,7 +1739,7 @@ function getMaterials($row) {
 	if ($row['WHSE2'] > 0) 
 	{
 		$r .= '<tr>';
-		$r .= '<td width=10% class=rptc></td>';
+		$r .= '<td width=10% class=rptc>' . number_format($row['WHSE2'] *  conWHSE2CAP) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['WHSE2'] . '</td>';
 		$r .= '<td width=80% class=rptl>Warehouse (Medium)</td>';
 		$r .= '</tr>';
@@ -1747,7 +1748,7 @@ function getMaterials($row) {
 	if ($row['WHSE3'] > 0) 
 	{
 		$r .= '<tr>';
-		$r .= '<td width=10% class=rptc></td>';
+		$r .= '<td width=10% class=rptc>' . number_format($row['WHSE3'] *  conWHSE3CAP) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['WHSE3'] . '</td>';
 		$r .= '<td width=80% class=rptl>Warehouse (Large)</td>';
 		$r .= '</tr>';
