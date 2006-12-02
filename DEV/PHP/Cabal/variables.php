@@ -4,11 +4,11 @@ if ($_SERVER['SERVER_NAME'] == 'www.idsfadt.com')
 	$DEV = false;
 
 	//Cabal
-	
-	$mysql_server = "mysql191.secureserver.net";
-	$mysql_user = "SRstats";
+
+	$mysql_server = "mysql137.secureserver.net";
+	$mysql_user = "CabalDB";
 	$mysql_password = "c4b4Lity";
-	$mysql_db = "SRstats";
+	$mysql_db = "CabalDB";
 
 	$LoginWebUrl = "http://www.idsfadt.com/Cabal/login_page.php";
 	$ScoutWebUrl = "http://www.idsfadt.com/Cabal/Scout/scout.php";
