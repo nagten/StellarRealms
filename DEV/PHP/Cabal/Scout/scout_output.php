@@ -1285,6 +1285,24 @@ function getSurfaceDefense($row)
 		$r .= '</tr>';
 	}
 
+	if ($row['WEATL'] > 0) 
+	{
+		$r .= '<tr>';
+		$r .= '<td width=10% class=rptrdur>' . number_format($row['WEATL'] * conWEATL) . '</td>';
+		$r .= '<td width=10% class=rptr>' . $row['WEATL'] . '</td>';
+		$r .= '<td width=80% class=rptl>Weapons Technology Laboratory</td>';
+		$r .= '</tr>';
+	}
+	
+	if ($row['PLATE'] > 0) 
+	{
+		$r .= '<tr>';
+		$r .= '<td width=10% class=rptrdur>' . number_format($row['PLATE'] * conPLATE) . '</td>';
+		$r .= '<td width=10% class=rptr>' . $row['PLATE'] . '</td>';
+		$r .= '<td width=80% class=rptl>Plating Factory</td>';
+		$r .= '</tr>';
+	}
+	
 	$r .= '</table>';
 	$r .= '</td></tr></table>';
 	return $r;
@@ -1860,6 +1878,16 @@ function getReproduction($row) {
 		$r .= '<tr><td width=10% class=rptc>' . $row['ADVGE'] . '</td><td class=rptl>Advanced Genetics Lab</td></tr>';
 	}
 	
+	if ($row['BIOLO'] > 0) 
+	{
+		$r .= '<tr><td width=10% class=rptc>' . $row['BIOLO'] . '</td><td class=rptl>Biological Research Facility</td></tr>';
+	}		
+		
+	if ($row['INTFO'] > 0) 
+	{
+		$r .= '<tr><td width=10% class=rptc>' . $row['INTFO'] . '</td><td class=rptl>Interstellar Forum</td></tr>';
+	}	
+		
 	$r .= '</table>';
 	$r .= '</td></tr></table>';
 	return $r;
@@ -1877,8 +1905,13 @@ function getResearch($row) {
 	}
 	
 	if ($row['RLAB2'] > 0)
-	 {
+	{
 		$r .= '<tr><td width=10% class=rptc>' . $row['RLAB2'] . '</td><td class=rptl>Research Lab (Improved)</td></tr>';
+	}
+	
+	if ($row['INSHT'] > 0)
+	{
+		$r .= '<tr><td width=10% class=rptc>' . $row['INSHT'] . '</td><td class=rptl>Institute of Higher Thought</td></tr>';
 	}
 	
 	$r .= '</table>';
