@@ -37,6 +37,9 @@ $fromFound    = false;
 $targetFound  = false;
 $structsFound = false;
 
+$matproc = false;
+$impmatproc = false;
+
 $firstLine = $ray[0];
 $pos = strpos($firstLine,'Date:');
 
@@ -677,6 +680,9 @@ function parse_L_structs($name,$qty)
 function parse_M_structs($name,$qty)
 {
 	global $dat;
+	global $matproc;
+	global $impmatproc;
+	
 	switch ($name)
 	{
 		case 'Manufacturing Plant':
@@ -692,10 +698,12 @@ function parse_M_structs($name,$qty)
 			$dat['DefMaint']   += ($qty * conMANU2);
 			break;
 		case 'Materials Processing Plant':
+			$matproc = true;
 			$dat['MATS1']       = $qty;
 			$dat['DefMaint']   += ($qty * conMATS1);
 			break;
 		case 'Materials Processing Plant (Improved)':
+		  	$impmatproc = true;
 			$dat['MATS2']       = $qty;
 			$dat['DefMaint']   += ($qty * conMATS2);
 			break;
@@ -1244,6 +1252,8 @@ function initialize_dat()
 function updateDatabase()
 {
 	global $dat;
+	global $matproc;
+	global $impmatproc;
 	global $DEV;
 	
 	$targetName = $dat['target'];
@@ -1394,6 +1404,17 @@ function updateDatabase()
 		}
 		else
 		{
+			
+			if ($matproc)
+			{
+				$dat['Materials'] = $dat['Materials'] * 1.05;
+			}
+			
+			if ($impmatproc)
+			{
+				$dat['Materials'] = $dat['Materials'] * 1.07;
+			}
+			
 			$SQL  = 'INSERT INTO tblscout (PlanetID,PlanetName,SourceID,SourceName,ReportDate,ReportTime,';
 			$SQL .= 'ADVIN,ADVGE,ADVTS,AEGMS,AIRB1,AIRB2,ANVBS,ASPHC,AVASC,BADLC,';
 			$SQL .= 'BARAF,BARR1,BARR2,BATSH,BERDE,BIOLO,BLABM,COLFR,COLOS,CRUBC,CRUIS,';
