@@ -58,7 +58,7 @@ else
 		$method = 'Short Report';
 	}
 }
-	
+
 if ($method == 'Full Report')
 {
 	$cnt = count($ray);
@@ -223,7 +223,7 @@ function parseStructs($line)
 				$name = stripslashes($name);
 				$name = str_replace('"','',$name);
 				$Initial = strtoupper(substr($name,0,1));
-				
+
 				switch ($Initial)
 				{
 					case 'A' : parse_A_structs($name,$qty); break;
@@ -682,7 +682,7 @@ function parse_M_structs($name,$qty)
 	global $dat;
 	global $matproc;
 	global $impmatproc;
-	
+
 	switch ($name)
 	{
 		case 'Manufacturing Plant':
@@ -971,8 +971,8 @@ function parse_T_structs($name,$qty)
 			$dat['OffMaint']   += ($qty * conTORBA);
 			break;
 		case 'Tracking Station':
-			$dat['TRACK']       = $qty;		
-			$dat['Sensors']    += $qty;			
+			$dat['TRACK']       = $qty;
+			$dat['Sensors']    += $qty;
 			$dat['DefMaint']   += ($qty * conTRACK);
 			break;
 		case 'Trade School':
@@ -1255,7 +1255,7 @@ function updateDatabase()
 	global $matproc;
 	global $impmatproc;
 	global $DEV;
-	
+
 	$targetName = $dat['target'];
 	$sourceName = $dat['from'];
 	$reportDate = $dat['date'];
@@ -1295,7 +1295,7 @@ function updateDatabase()
 		$reportDate = date('Y-m-d',strtotime($reportDate));
 		$reportTime = date('H:i:s',strtotime($reportTime));
 	}
-	
+
 
 	if ($ok)
 	{
@@ -1315,7 +1315,7 @@ function updateDatabase()
 				//No planets in planet table so updaterank() this will add all planets
 				UpdateRank(0);
 			}
-				
+
 			if (mysql_num_rows($result) > 0)
 			{
 				$current_date = date("m-d-Y H:i:s");
@@ -1388,7 +1388,7 @@ function updateDatabase()
 		$SQL .= 'AND ReportDate = \'' . $reportDate . '\' ';
 		$SQL .= 'AND ReportTime = \'' . $reportTime . '\' ';
 		$result = mysql_query($SQL);
-		
+
 		if (!$result)
 		{
 			echo "Invalid query: " . mysql_error();
@@ -1404,17 +1404,17 @@ function updateDatabase()
 		}
 		else
 		{
-			
+
 			if ($matproc)
 			{
 				$dat['Materials'] = $dat['Materials'] * 1.05;
 			}
-			
+
 			if ($impmatproc)
 			{
 				$dat['Materials'] = $dat['Materials'] * 1.07;
 			}
-			
+
 			$SQL  = 'INSERT INTO tblscout (PlanetID,PlanetName,SourceID,SourceName,ReportDate,ReportTime,';
 			$SQL .= 'ADVIN,ADVGE,ADVTS,AEGMS,AIRB1,AIRB2,ANVBS,ASPHC,AVASC,BADLC,';
 			$SQL .= 'BARAF,BARR1,BARR2,BATSH,BERDE,BIOLO,BLABM,COLFR,COLOS,CRUBC,CRUIS,';
@@ -1588,7 +1588,7 @@ function updateDatabase()
 			$SQL .= '\'' . $dat['DefMaint']      . '\',';
 			$SQL .= '\'' . $dat['OffMaint']      . '\',';
 			$SQL .= '\'' . 'Y'                   . '\',';
-			$SQL .= '\'' . $species              . '\'';
+			$SQL .= '\'' . addslashes($species)  . '\'';
 			$SQL .= ')';
 			$result = mysql_query($SQL);
 
