@@ -106,7 +106,7 @@ function generatehtmltable()
       {
         $sortOrder =  $_GET['sortOrder'] == 'ASC' ? 'DESC' : 'ASC';
         //table header
-        echo "<table width=\"1030\" border=\"0\" >\n";
+        echo "<table width=\"1057\" border=\"0\" >\n";
         echo "<tr bgcolor=\"#999999\">\n";
         echo "<td width=\"77\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fplanetname&sortOrder=$sortOrder\">Name</a></span></td>\n";
         echo "<td width=\"57\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fuser&sortOrder=$sortOrder\">User</a></span></td>\n";
@@ -133,6 +133,7 @@ function generatehtmltable()
         echo "<td width=\"19\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fwealth&sortOrder=$sortOrder\">Wea</a></span></td>\n";
         echo "<td width=\"27\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=falertlevel&sortOrder=$sortOrder\">Alt</a></span></td>\n";
         echo "<td width=\"24\"><span class=style1>Age</span></td>\n";
+        echo "<td width=\"27\"><span class=style1>COP</span></td>\n";
         echo "</tr>\n";
 
         //variables for summary row
@@ -150,6 +151,8 @@ function generatehtmltable()
         {
           $MatSpace = $row['fmatmaximum'] - ($row['ffood'] + $row['ffuel'] + $row['fmetals'] + $row['fradioactives']);
           $PopSpace = $row['fpopmaximum'] - $row['fpop'];
+          $COP = round(7.5 * (1.1 + $row['fwealth']/100) / (1+$row['freproduction']/100), 2);
+          
           $current_date = date("m-d-Y H:i:s");
           if ($row['fdate'] != "")
           {
@@ -195,6 +198,7 @@ function generatehtmltable()
           echo "<td align='right'><span class=style1>" . $row['fwealth'] . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $row['falertlevel'] . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $Age . "</span></td>\n";
+		  echo "<td align='right'><span class=style1>" . $COP . "</span></td>\n";
 
           $sumCredits = $sumCredits + $row['fcredits'];
           $sumCreditsDelta = $sumCreditsDelta + $row['fcreditsdelta'];
@@ -239,6 +243,7 @@ function generatehtmltable()
         echo "<td align='right'><span class=style1>" . $sumProjects . "/" . $sumProjectsMaximum . "</span></td>\n";
         echo "<td align='right'><span class=style1>" . $row['fconstruction'] . "</span></td>\n";
         echo "<td align='right'><span class=style1></span></td>\n";   //echo "<td>" . round($sumWealth / $i,2) . "</td>\n";
+        echo "<td align='right'><span class=style1></span></td>\n";
         echo "<td align='right'><span class=style1></span></td>\n";
         echo "<td align='right'><span class=style1></span></td>\n";
         echo "</table>";
