@@ -178,7 +178,7 @@
         // Setup initial table contents with 4 extra buttons
         var filterSpan = document.createElement("span");
         filterSpan.innerHTML =  '<table width="100%" cellspacing="0" cellpadding="0"><tbody id="multiScoutBody">' +
-                                '<tr id="multiScoutHeader"><td width="100%" colspan="3" class="v11-TABLE-title">TEST Multi Scout Submit</td></tr>' +
+                                '<tr id="multiScoutHeader"><td width="100%" colspan="3" class="v11-TABLE-title">Multi Scout Submit</td></tr>' +
                                 '<tr><td width="100%" colspan="3" class="v11-cell-normal">' +
                                 ' <button id="multiSubmitScout-ScoutReportsSelAll">Select all scouts</button>' +
                                 ' <button id="multiSubmitScout-ScoutReportsSelNone">Deselect all scouts</button>' +
@@ -261,6 +261,10 @@
          if (scoutToDbArrayControl == checkboxes.length && blnSend == true)
          {
                 alert(reportsSent+ " reports sent to the DB");
+
+                //reset values
+                scoutToDbArrayControl = 0;
+                reportsSent = 0;
          }
          else if (scoutToDbArrayControl == checkboxes.length && blnSend == false)
          {
@@ -271,7 +275,6 @@
             window.setTimeout(sendMultipleScoutToDB, pauseLengthBetweenReports);
          }
     }
-
 
     function sendMultipleScoutsToClipBoard()
     {
