@@ -283,7 +283,7 @@ function sendScout(planetID)
 		data: postdata,
 		onload: function(responseDetails)
 		{
-			if(responseDetails.status = 200) //completed normally
+			if(responseDetails.status == 200) //completed normally
 			{
 				GM_log(responseDetails.responseText);
 
