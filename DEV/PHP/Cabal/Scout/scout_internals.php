@@ -1033,17 +1033,17 @@ function parse_W_structs($name,$qty)
 			break;
 		case 'Warehouse (Small)':
 			$dat['WHSE1']       = $qty;
-			$dat['Warehouse']   = ($qty * conWHSE1CAP);
+			$dat['Warehouse']  += ($qty * conWHSE1CAP);
 			$dat['DefMaint']   += ($qty * conWHSE1);
 			break;
 		case 'Warehouse (Medium)':
 			$dat['WHSE2']       = $qty;
-			$dat['Warehouse']   = ($qty * conWHSE2CAP);
+			$dat['Warehouse']  += ($qty * conWHSE2CAP);
 			$dat['DefMaint']   += ($qty * conWHSE2);
 			break;
 		case 'Warehouse (Large)':
 			$dat['WHSE3']       = $qty;
-			$dat['Warehouse']   = ($qty * conWHSE3CAP);
+			$dat['Warehouse']  += ($qty * conWHSE3CAP);
 			$dat['DefMaint']   += ($qty * conWHSE3);
 			break;
 		case 'Wasp Fighter':
