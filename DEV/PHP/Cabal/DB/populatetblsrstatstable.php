@@ -45,16 +45,16 @@ foreach($users as $arrayuser)
                     fdurability, fspeed, fsensors, fstealth,
                     fmaintenance, fplanet, fdate)
                     VALUES
-                    ('". $arrayuser['srplanetname']. "', '". $arrayuser['username'] ."', "0", "0", "0", "0",
-                    "0", "0", "0", "0",
-                    "0", "0", "0", "0",
-                    "0", "0", "0", "0",
-                    "0", "0", "0", "0",
-                    "0", "0", "0", "0",
-                    "0", "0", "0", "0",
-                    "0", "0", "0", "0",
-                    "0", "0", "0", "0",
-                    "0", "0", ''
+                    ('". $arrayuser['srplanetname']. "', '". $arrayuser['username'] ."', '0', '0', '0', '0',
+                    '0', '0', '0', '0',
+                    '0', '0', '0', '0',
+                    '0', '0', '0', '0',
+                    '0', '0', '0', '0',
+                    '0', '0', '0', '0',
+                    '0', '0', '0', '0',
+                    '0', '0', '0', '0',
+                    '0', '0', '0', '0',
+                    '0', '0', ''
                     )";
 
     $result = @mysql_query($strSqlString);
