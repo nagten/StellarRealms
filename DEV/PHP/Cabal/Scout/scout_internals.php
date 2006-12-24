@@ -126,7 +126,11 @@ $result = updateDatabase();
 
 if ($DEV)
 {
-	//echo $result;
+	echo $result;
+}
+else
+{
+	echo $result;
 }
 
 //================================================================================
