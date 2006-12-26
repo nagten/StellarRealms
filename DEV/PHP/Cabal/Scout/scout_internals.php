@@ -278,9 +278,10 @@ function parse_A_structs($name,$qty)
 			$dat['FleetRating']   += ($qty * conADVIN);
 			break;
 		case 'Advanced Technologies Shipyard':
-			$dat['ADVTS']       = $qty;
-			$dat['Queues']     += ($qty * 1);
-			$dat['BuildRating']   += ($qty * conADVTS);
+			$dat['ADVTS']	= $qty;
+			$dat['Speed']	+= ($qty * conADVTSSPEED);
+			$dat['Queues']	+= ($qty * 1);
+			$dat['BuildRating']	+= ($qty * conADVTS);
 			break;
 		case 'Aegis Mobile Shield':
 			$dat['AEGMS']       = $qty;
@@ -637,14 +638,14 @@ function parse_J_structs($name,$qty)
 			$dat['FleetRating']   += ($qty * conJUDDR);
 			break;
 		case 'Jumpgate':
-			$dat['JUMP1']       = $qty;
-			$dat['Speed']      += $qty;
-			$dat['BuildRating']   += ($qty * conJUMP1);
+			$dat['JUMP1']	= $qty;
+			$dat['Speed']	+= ($qty * conJUMP1SPEED);
+			$dat['BuildRating']	+= ($qty * conJUMP1);
 			break;
 		case 'Jumpgate (Improved)':
-			$dat['JUMP2']       = $qty;
-			$dat['Speed']      += $qty;
-			$dat['BuildRating']   += ($qty * conJUMP2);
+			$dat['JUMP2']	= $qty;
+			$dat['Speed']	+= ($qty * conJUMP2SPEED);
+			$dat['BuildRating']	+= ($qty * conJUMP2);
 			break;
 	}
 }
@@ -893,9 +894,9 @@ function parse_S_structs($name,$qty)
 			$dat['FleetRating']   += ($qty * conSCOUT);
 			break;
 		case 'Space Folder':
-			$dat['FOLDR']        = $qty;
-			$dat['Speed']       += $qty;
-			$dat['BuildRating']   += ($qty * conFOLDR);
+			$dat['FOLDR']	= $qty;
+			$dat['Speed']	+= ($qty * conFOLDRSPEED);
+			$dat['BuildRating']	+= ($qty * conFOLDR);
 			break;
 		case 'Starbase':
 			$dat['SBASE']       = $qty;
