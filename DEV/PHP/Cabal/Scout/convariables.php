@@ -155,4 +155,10 @@
 	define("conWHSE1CAP", "1000");
 	define("conWHSE2CAP", "2500");
 	define("conWHSE3CAP", "6000");
+	
+	//Speed
+	define("conFOLDRSPEED", "8");
+	define("conJUMP2SPEED", "6");
+	define("conJUMP1SPEED", "4");
+	define("conADVTSSPEED", "1");
 ?>
