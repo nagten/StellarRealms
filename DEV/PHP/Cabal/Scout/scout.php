@@ -90,7 +90,7 @@ header("Pragma: no-cache");													// HTTP/1.0
 <table width=100% border=0 bgcolor="#B0C4DE">
   <tr>
 	<td width="20%"></td>
-	<td width="60%" align="center">Scout Report</td>
+	<td width="60%" align="center">Scouting Report</td>
 	<td width="20%"></td>
   </tr>
   <tr>
