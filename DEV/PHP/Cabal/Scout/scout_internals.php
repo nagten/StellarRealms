@@ -37,8 +37,13 @@ $fromFound    = false;
 $targetFound  = false;
 $structsFound = false;
 
-$matproc = false;
-$impmatproc = false;
+$blnmatproc = false;
+$blnimpmatproc = false;
+$blnPlatingFactory = false;
+$blnAdvancedTechShipyard = false;
+$blnMatResearchComplex = false;
+$blnWarFactory = false;
+$blnBiologicalResearch = false;
 
 $firstLine = $ray[0];
 $pos = strpos($firstLine,'Date:');
@@ -265,6 +270,8 @@ function parseStructs($line)
 function parse_A_structs($name,$qty)
 {
 	global $dat;
+	global $blnAdvancedTechShipyard;
+	
 	switch ($name)
 	{
 		case 'Advanced Genetics Lab':
@@ -282,6 +289,7 @@ function parse_A_structs($name,$qty)
 			$dat['Speed']	+= ($qty * conADVTSSPEED);
 			$dat['Queues']	+= ($qty * 1);
 			$dat['BuildRating']	+= ($qty * conADVTS);
+			$blnAdvancedTechShipyard = true;
 			break;
 		case 'Aegis Mobile Shield':
 			$dat['AEGMS']       = $qty;
@@ -321,6 +329,8 @@ function parse_A_structs($name,$qty)
 function parse_B_structs($name,$qty)
 {
 	global $dat;
+	global $blnBiologicalResearch;
+	
 	switch ($name)
 	{
 		case 'Badger Light Cruiser':
@@ -355,6 +365,7 @@ function parse_B_structs($name,$qty)
 			$dat['BIOLO']        = $qty;
 			$dat['Reproduction']  += $qty;
 			$dat['BuildRating']   += ($qty * conBIOLO);
+			$blnBiologicalResearch = true;
 			break;
 		case 'Black Widow Brood Minder':
 			$dat['BLABM']       = $qty;
@@ -684,8 +695,9 @@ function parse_L_structs($name,$qty)
 function parse_M_structs($name,$qty)
 {
 	global $dat;
-	global $matproc;
-	global $impmatproc;
+	global $blnmatproc;
+	global $blnimpmatproc;
+	global $blnMatResearchComplex;
 
 	switch ($name)
 	{
@@ -700,12 +712,12 @@ function parse_M_structs($name,$qty)
 			$dat['BuildRating']   += ($qty * conMANU2);
 			break;
 		case 'Materials Processing Plant':
-			$matproc = true;
+			$blnmatproc = true;
 			$dat['MATS1']       = $qty;
 			$dat['BuildRating']   += ($qty * conMATS1);
 			break;
 		case 'Materials Processing Plant (Improved)':
-		  	$impmatproc = true;
+		  	$blnimpmatproc = true;
 			$dat['MATS2']       = $qty;
 			$dat['BuildRating']   += ($qty * conMATS2);
 			break;
@@ -713,6 +725,7 @@ function parse_M_structs($name,$qty)
 			$dat['MATRC']       = $qty;
 			$dat['Queues']     += ($qty * 1);
 			$dat['BuildRating']   += ($qty * conMATRC);
+			$blnMatResearchComplex = true;
 			break;
 		case 'Mining Facility (Metals)':
 			$dat['MINE1']       = $qty;
@@ -803,6 +816,8 @@ function parse_O_structs($name,$qty)
 function parse_P_structs($name,$qty)
 {
 	global $dat;
+	global $blnPlatingFactory;
+	
 	switch ($name)
 	{
 		case 'Planetary Bank':
@@ -814,6 +829,7 @@ function parse_P_structs($name,$qty)
 			$dat['PLATE']       = $qty;
 			$dat['Special']    += $qty;
 			$dat['SurRating']   += ($qty * conPLATE);
+			$blnPlatingFactory = true;
 			break;
 		case 'Privateer Heavy Cruiser':
 			$dat['PRIHC']       = $qty;
@@ -1007,12 +1023,15 @@ function parse_V_structs($name,$qty)
 function parse_W_structs($name,$qty)
 {
 	global $dat;
+	global $blnWarFactory;
+	
 	switch ($name)
 	{
 		case 'War Factory':
 			$dat['WARFA']       = $qty;
 			$dat['Special']    += $qty;
 			$dat['SurRating']   += ($qty *conWARFA);
+			$blnWarFactory = true;
 			break;
 		case 'Warehouse (Small)':
 			$dat['WHSE1']       = $qty;
@@ -1097,7 +1116,6 @@ function initialize_dat()
 	$dat['HabSpace']	= 1250000;
 	$dat['IntelOps']	= 0;
 	$dat['Materials']	= 0;
-	$dat['OffMaint']	= 0;
 	$dat['Reproduction']	= 0;
 	$dat['Queues']	= 1;
 	$dat['Research']	= 0;
@@ -1238,7 +1256,14 @@ function updateDatabase()
 	global $matproc;
 	global $impmatproc;
 	global $DEV;
-
+	global $blnPlatingFactory;
+	global $blnAdvancedTechShipyard;
+	global $blnMatResearchComplex;
+	global $blnWarFactory;
+	global $blnBiologicalResearch;
+	
+	$durability = '1.0';
+	
 	$targetName = $dat['target'];
 	$sourceName = $dat['from'];
 	$reportDate = $dat['date'];
@@ -1387,7 +1412,156 @@ function updateDatabase()
 		}
 		else
 		{
-
+			if ($blnPlatingFactory || $blnMatResearchComplex || $blnAdvancedTechShipyard || $blnWarFactory || $blnBiologicalResearch)
+			{
+				if ($blnMatResearchComplex)
+				{
+					//durability +10%
+					$durability = '1.10';
+				}
+				else if ($blnPlatingFactory)
+				{
+					//durability +7%
+					$durability = '1.07';	
+				}
+				else if ($blnWarFactory || $blnAdvancedTechShipyard)
+				{
+					//durability +5%
+					$durability = '1.05';
+				}
+				else if ($blnBiologicalResearch)
+				{
+					//durability +3%
+					$durability = '1.03';
+				}
+				
+				$dat['ADVIN']  = $dat['ADVIN'] * $durability;
+				$dat['ADVGE']  = $dat['ADVGE'] * $durability;
+				$dat['ADVTS']  = $dat['ADVTS'] * $durability;
+				$dat['AEGMS']  = $dat['AEGMS'] * $durability;
+				$dat['AIRB1']  = $dat['AIRB1'] * $durability;
+				$dat['AIRB2']  = $dat['AIRB2'] * $durability;
+				$dat['AMIPS']  = $dat['AMIPS'] * $durability;
+				$dat['ANVBS']  = $dat['ANVBS'] * $durability;
+				$dat['ASPHC']  = $dat['ASPHC'] * $durability;
+				$dat['AVASC']  = $dat['AVASC'] * $durability;
+				$dat['BADLC']  = $dat['BADLC'] * $durability;
+				$dat['BARAF']  = $dat['BARAF'] * $durability;
+				$dat['BARR1']  = $dat['BARR1'] * $durability;
+				$dat['BARR2']  = $dat['BARR2'] * $durability;
+				$dat['BATSH']  = $dat['BATSH'] * $durability;
+				$dat['BERDE']  = $dat['BERDE'] * $durability;
+				$dat['BIOLO']  = $dat['BIOLO'] * $durability;
+				$dat['BLABM']  = $dat['BLABM'] * $durability;
+				$dat['BROCE']  = $dat['BROCE'] * $durability;
+				$dat['COLFR']  = $dat['COLFR'] * $durability;
+				$dat['COLOS']  = $dat['COLOS'] * $durability;
+				$dat['CRUBC']  = $dat['CRUBC'] * $durability;
+				$dat['CRUIS']  = $dat['CRUIS'] * $durability;
+				$dat['DAGHF']  = $dat['DAGHF'] * $durability;
+				$dat['DEERS']  = $dat['DEERS'] * $durability;
+				$dat['DEFTU']  = $dat['DEFTU'] * $durability;
+				$dat['DESTR']  = $dat['DESTR'] * $durability;
+				$dat['DIPCO']  = $dat['DIPCO'] * $durability;
+				$dat['DRAMA']  = $dat['DRAMA'] * $durability;
+				$dat['DREAD']  = $dat['DREAD'] * $durability;
+				$dat['EMBAS']  = $dat['EMBAS'] * $durability;
+				$dat['FANFB']  = $dat['FANFB'] * $durability;
+				$dat['FARM1']  = $dat['FARM1'] * $durability;
+				$dat['FARM2']  = $dat['FARM2'] * $durability;
+				$dat['FARM3']  = $dat['FARM3'] * $durability;
+				$dat['FIGBO']  = $dat['FIGBO'] * $durability;
+				$dat['FIGIN']  = $dat['FIGIN'] * $durability;
+				$dat['FIRSD']  = $dat['FIRSD'] * $durability;
+				$dat['FOLDR']  = $dat['FOLDR'] * $durability;
+				$dat['FRIGA']  = $dat['FRIGA'] * $durability;
+				$dat['FUEL1']  = $dat['FUEL1'] * $durability;
+				$dat['FUEL2']  = $dat['FUEL2'] * $durability;
+				$dat['GELAB']  = $dat['GELAB'] * $durability;
+				$dat['GNDHI']  = $dat['GNDHI'] * $durability;
+				$dat['GOLBA']  = $dat['GOLBA'] * $durability;
+				$dat['HABI1']  = $dat['HABI1'] * $durability;
+				$dat['HABI2']  = $dat['HABI2'] * $durability;
+				$dat['HABI3']  = $dat['HABI3'] * $durability;
+				$dat['HAMGU']  = $dat['HAMGU'] * $durability;
+				$dat['HVYBO']  = $dat['HVYBO'] * $durability;
+				$dat['HVYCA']  = $dat['HVYCA'] * $durability;
+				$dat['HVYCR']  = $dat['HVYCR'] * $durability;
+				$dat['HIBCA']  = $dat['HIBCA'] * $durability;
+				$dat['HOSPI']  = $dat['HOSPI'] * $durability;
+				$dat['HURFC']  = $dat['HURFC'] * $durability;
+				$dat['IMPFR']  = $dat['IMPFR'] * $durability;
+				$dat['INSHT']  = $dat['INSHT'] * $durability;
+				$dat['INTEL']  = $dat['INTEL'] * $durability;
+				$dat['INTFR']  = $dat['INTFR'] * $durability;
+				$dat['INTMP']  = $dat['INTMP'] * $durability;
+				$dat['INTFO']  = $dat['INTFO'] * $durability;
+				$dat['JUDDR']  = $dat['JUDDR'] * $durability;
+				$dat['JUMP1']  = $dat['JUMP1'] * $durability;
+				$dat['JUMP2']  = $dat['JUMP2'] * $durability;
+				$dat['LEOSC']  = $dat['LEOSC'] * $durability;
+				$dat['LIGCA']  = $dat['LIGCA'] * $durability;
+				$dat['LISTN']  = $dat['LISTN'] * $durability;
+				$dat['MANU1']  = $dat['MANU1'] * $durability;
+				$dat['MANU2']  = $dat['MANU2'] * $durability;
+				$dat['MATS1']  = $dat['MATS1'] * $durability;
+				$dat['MATS2']  = $dat['MATS2'] * $durability;
+				$dat['MATRC']  = $dat['MATRC'] * $durability;
+				$dat['MINE1']  = $dat['MINE1'] * $durability;
+				$dat['MINE2']  = $dat['MINE2'] * $durability;
+				$dat['RADI1']  = $dat['RADI1'] * $durability;
+				$dat['RADI2']  = $dat['RADI2'] * $durability;
+				$dat['OBULK']  = $dat['OBULK'] * $durability;
+				$dat['OCON1']  = $dat['OCON1'] * $durability;
+				$dat['OCON2']  = $dat['OCON2'] * $durability;
+				$dat['ODEFM']  = $dat['ODEFM'] * $durability;
+				$dat['ODEF1']  = $dat['ODEF1'] * $durability;
+				$dat['ODEF2']  = $dat['ODEF2'] * $durability;
+				$dat['OMIN1']  = $dat['OMIN1'] * $durability;
+				$dat['OMIN2']  = $dat['OMIN2'] * $durability;
+				$dat['ORCBA']  = $dat['ORCBA'] * $durability;
+				$dat['OSLD1']  = $dat['OSLD1'] * $durability;
+				$dat['OSLD2']  = $dat['OSLD2'] * $durability;
+				$dat['PBANK']  = $dat['PBANK'] * $durability;
+				$dat['PLATE']  = $dat['PLATE'] * $durability;
+				$dat['PRIHC']  = $dat['PRIHC'] * $durability;
+				$dat['RAVMC']  = $dat['RAVMC'] * $durability;
+				$dat['RSENS']  = $dat['RSENS'] * $durability;
+				$dat['RLAB1']  = $dat['RLAB1'] * $durability;
+				$dat['RLAB2']  = $dat['RLAB2'] * $durability;
+				$dat['SATE1']  = $dat['SATE1'] * $durability;
+				$dat['SATE2']  = $dat['SATE2'] * $durability;
+				$dat['SCOUT']  = $dat['SCOUT'] * $durability;
+				$dat['SBASE']  = $dat['SBASE'] * $durability;
+				$dat['STIDR']  = $dat['STIDR'] * $durability;
+				$dat['STOCK']  = $dat['STOCK'] * $durability;
+				$dat['SDEF1']  = $dat['SDEF1'] * $durability;
+				$dat['SDEF2']  = $dat['SDEF2'] * $durability;
+				$dat['SSLD1']  = $dat['SSLD1'] * $durability;
+				$dat['SSLD2']  = $dat['SSLD2'] * $durability;
+				$dat['TANDB']  = $dat['TANDB'] * $durability;
+				$dat['TERCA']  = $dat['TERCA'] * $durability;
+				$dat['TORBA']  = $dat['TORBA'] * $durability;
+				$dat['TRACK']  = $dat['TRACK'] * $durability;
+				$dat['TSCHL']  = $dat['TSCHL'] * $durability;
+				$dat['UNIVE']  = $dat['UNIVE'] * $durability;
+				$dat['VENHF']  = $dat['VENHF'] * $durability;
+				$dat['VESSC']  = $dat['VESSC'] * $durability;
+				$dat['VINEM']  = $dat['VINEM'] * $durability;
+				$dat['WARFA']  = $dat['WARFA'] * $durability;
+				$dat['WASFI']  = $dat['WASFI'] * $durability;
+				$dat['WAYEC']  = $dat['WAYEC'] * $durability;
+				$dat['WHSE1']  = $dat['WHSE1'] * $durability;
+				$dat['WHSE2']  = $dat['WHSE2'] * $durability;
+				$dat['WHSE3']  = $dat['WHSE3'] * $durability;
+				$dat['WEATL']  = $dat['WEATL'] * $durability;
+				$dat['ZEPFD']  = $dat['ZEPFD'] * $durability;
+				$dat['SurRating'] = $dat['SurRating'] * $durability;
+				$dat['OrbRating'] = $dat['OrbRating'] * $durability;
+				$dat['FleetRating'] = $dat['FleetRating'] * $durability;
+				$dat['BuildRating'] = $dat['BuildRating'] * $durability;		
+			}
+			
 			if ($matproc)
 			{
 				$dat['Materials'] = $dat['Materials'] * 1.05;
