@@ -74,7 +74,7 @@ function displaySummary()
 
 	$SQL  = 'SELECT RecordNumber,PlanetID,PlanetName,ReportDate,ReportTime,AirCap,';
 	$SQL .= 'Fighter,IntelOps,Materials,FleetRating,OrbRating,SurRating,BuildRating,';
-	$SQL .= 'Scouting,Warehouse,Speed,Rank,HabSpace,Queues,Species,SBASE ';
+	$SQL .= 'Scouting,Warehouse,Speed,Rank,HabSpace,Queues,Species,SBASE,STIDR ';
 	$SQL .= 'FROM tblscout ';
 	$SQL .= 'WHERE Current = \'Y\' ';
 	$SQL .= 'ORDER BY PlanetName,ReportDate DESC,ReportTime DESC';
@@ -109,6 +109,7 @@ function displaySummary()
 				$p1[$planetID]['starbases']	= $row['SBASE'];
 				$p1[$planetID]['airCap']	= $row['AirCap'];
 				$p1[$planetID]['fighter']	= $row['Fighter'];
+				$p1[$planetID]['drones']	= $row['STIDR'];
 				$p1[$planetID]['habSpace']	= ($row['HabSpace'] / 1000000);
 				$p1[$planetID]['intelOps']	= $row['IntelOps'];
 				$p1[$planetID]['materials']	= $row['Materials'];
@@ -131,6 +132,7 @@ function displaySummary()
 				$p2[$planetID]['starbases']	= $row['SBASE'];
 				$p2[$planetID]['airCap']	= $row['AirCap'];
 				$p2[$planetID]['fighter']	= $row['Fighter'];
+				$p2[$planetID]['drones']	= $row['STIDR'];
 				$p2[$planetID]['habSpace']	= ($row['HabSpace'] / 1000000);
 				$p2[$planetID]['intelOps']	= $row['IntelOps'];
 				$p2[$planetID]['materials']	= $row['Materials'];
@@ -159,6 +161,7 @@ function displaySummary()
 			calcSummaryDiff($key,'starbases');
 			calcSummaryDiff($key,'airCap');
 			calcSummaryDiff($key,'fighter');
+			calcSummaryDiff($key,'drones');
 			calcHabitatDiff($key,'habSpace');
 			calcSummaryDiff($key,'intelOps');
 			calcSummaryDiff($key,'materials');
@@ -176,6 +179,7 @@ function displaySummary()
 			$d1[$key]['starbases']	= '';
 			$d1[$key]['airCap']	= '';
 			$d1[$key]['fighter']	= '';
+			$d1[$key]['drones']	= '';
 			$d1[$key]['habSpace']	= '';
 			$d1[$key]['intelOps']	= '';
 			$d1[$key]['materials']	= '';
@@ -251,6 +255,8 @@ function displaySummary()
 		$r .= '<td class=xr>' . $d1[$key]['airCap']                      . '</td>';
 		$r .= '<td class=xr>' . number_format($p1[$key]['fighter'])      . '</td>';
 		$r .= '<td class=xr>' . $d1[$key]['fighter']                     . '</td>';
+		$r .= '<td class=xr>' . number_format($p1[$key]['drones'])      . '</td>';
+		$r .= '<td class=xr>' . $d1[$key]['drones']                     . '</td>';
 		$r .= '<td class=xr>' . sprintf('%01.2f',$p1[$key]['habSpace'])  . '</td>';
 		$r .= '<td class=xr>' . $d1[$key]['habSpace']                    . '</td>';
 		$r .= '<td class=xc>' . $p1[$key]['intelOps']     . '</td>';
@@ -346,6 +352,7 @@ function summaryColumnHeader()
 	$col16 = 'uhc';
 	$col17 = 'uhc';
 	$col18 = 'uhc';
+	$col19 = 'uhc';
 
 	switch ($sort)
 	{
@@ -375,6 +382,9 @@ function summaryColumnHeader()
 			break;
 		case 'fighter':
 			$col11 = 'shc';
+			break;
+		case 'drones':
+			$col19 = 'shc';
 			break;
 		case 'habSpace':
 			$col12 = 'shc';
@@ -412,6 +422,7 @@ function summaryColumnHeader()
 	$r .= '<td class=' . $col09 . ' colspan=2 onclick=sortColumn("starbases") onmouseover=glowObject(this) onmouseout=dimObject(this)>Starbases</td>';
 	$r .= '<td class=' . $col10 . ' colspan=2 onclick=sortColumn("airCap") onmouseover=glowObject(this) onmouseout=dimObject(this)>AirBase</td>';
 	$r .= '<td class=' . $col11 . ' colspan=2 onclick=sortColumn("fighter") onmouseover=glowObject(this) onmouseout=dimObject(this)>Fighter</td>';
+	$r .= '<td class=' . $col19 . ' colspan=2 onclick=sortColumn("drones") onmouseover=glowObject(this) onmouseout=dimObject(this)>Drones</td>';
 	$r .= '<td class=' . $col12 . ' colspan=2 onclick=sortColumn("habSpace") onmouseover=glowObject(this) onmouseout=dimObject(this)>Habitat</td>';
 	$r .= '<td class=' . $col13 . ' colspan=2 onclick=sortColumn("intelOps") onmouseover=glowObject(this) onmouseout=dimObject(this)>Intel</td>';
 	$r .= '<td class=' . $col14 . ' colspan=2 onclick=sortColumn("materials") onmouseover=glowObject(this) onmouseout=dimObject(this)>Materials</td>';
@@ -506,7 +517,7 @@ function displayPlanet($planet)
 
 	$SQL  = 'SELECT RecordNumber, PlanetID,PlanetName,ReportDate,ReportTime,AirOps,AirCap,';
 	$SQL .= 'Fighter,Habitat,IntelOps,Materials,Queues,';
-	$SQL .= 'Scouting,Sensors,Warehouse,Special,Speed,Rank,HabSpace,Slots,SBASE, ';
+	$SQL .= 'Scouting,Sensors,Warehouse,Special,Speed,Rank,HabSpace,Slots,SBASE,STIDR, ';
 	$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating ';
 	$SQL .= 'FROM tblscout ';
 	$SQL .= 'WHERE PlanetID=' . $planet . ' ';
@@ -529,6 +540,7 @@ function displayPlanet($planet)
 		$xp[$cnt]['starbases']	= $row['SBASE'];
 		$xp[$cnt]['airCap']	= $row['AirCap'];
 		$xp[$cnt]['fighter']	= $row['Fighter'];
+		$xp[$cnt]['drones']	= $row['STIDR'];
 		$xp[$cnt]['habSpace']	= ($row['HabSpace'] / 1000000);
 		$xp[$cnt]['intelOps']	= $row['IntelOps'];
 		$xp[$cnt]['materials']	= $row['Materials'];
@@ -550,6 +562,7 @@ function displayPlanet($planet)
 			calcReportDiff($i,'starbases');
 			calcReportDiff($i,'airCap');
 			calcReportDiff($i,'fighter');
+			calcReportDiff($i,'drones');
 			calcDiffHabitat($i,'habSpace');
 			calcReportDiff($i,'intelOps');
 			calcReportDiff($i,'materials');
@@ -567,6 +580,7 @@ function displayPlanet($planet)
 			$xd[$i]['starbases']	= '';
 			$xd[$i]['airCap']	= '';
 			$xd[$i]['fighter']	= '';
+			$xd[$i]['drones']	= '';
 			$xd[$i]['habSpace']	= '';
 			$xd[$i]['intelOps']	= '';
 			$xd[$i]['materials']	= '';
@@ -600,6 +614,7 @@ function displayPlanet($planet)
 	$r .= '<td class=hc colspan=2>Starbases</td>';
 	$r .= '<td class=hc colspan=2>AirBase</td>';
 	$r .= '<td class=hc colspan=2>Fighter</td>';
+	$r .= '<td class=hc colspan=2>Drones</td>';
 	$r .= '<td class=hc colspan=2>Habitat</td>';
 	$r .= '<td class=hc colspan=2>Intel</td>';
 	$r .= '<td class=hc colspan=2>Materials</td>';
@@ -642,6 +657,8 @@ function displayPlanet($planet)
 		$r .= '<td class=xr>' . $xd[$i]['airCap']       . '</td>';
 		$r .= '<td class=xr>' . number_format($xp[$i]['fighter'])      . '</td>';
 		$r .= '<td class=xr>' . $xd[$i]['fighter']      . '</td>';
+		$r .= '<td class=xr>' . number_format($xp[$i]['drones'])      . '</td>';
+		$r .= '<td class=xr>' . $xd[$i]['drones']      . '</td>';
 		$r .= '<td class=xr>' . sprintf('%01.2f',$xp[$i]['habSpace'])   . '</td>';
 		$r .= '<td class=xr>' . $xd[$i]['habSpace']      . '</td>';
 		$r .= '<td class=xc>' . $xp[$i]['intelOps']     . '</td>';
