@@ -395,7 +395,7 @@ function summaryColumnHeader()
 		case 'materials':
 			$col14 = 'shc';
 			break;
-		case 'slots':
+		case 'queues':
 			$col15 = 'shc';
 			break;
 		case 'scouting':
@@ -426,7 +426,7 @@ function summaryColumnHeader()
 	$r .= '<td class=' . $col12 . ' colspan=2 onclick=sortColumn("habSpace") onmouseover=glowObject(this) onmouseout=dimObject(this)>Habitat</td>';
 	$r .= '<td class=' . $col13 . ' colspan=2 onclick=sortColumn("intelOps") onmouseover=glowObject(this) onmouseout=dimObject(this)>Intel</td>';
 	$r .= '<td class=' . $col14 . ' colspan=2 onclick=sortColumn("materials") onmouseover=glowObject(this) onmouseout=dimObject(this)>Materials</td>';
-	$r .= '<td class=' . $col15 . ' colspan=2 onclick=sortColumn("slots") onmouseover=glowObject(this) onmouseout=dimObject(this)>Queues</td>';
+	$r .= '<td class=' . $col15 . ' colspan=2 onclick=sortColumn("queues") onmouseover=glowObject(this) onmouseout=dimObject(this)>Queues</td>';
 	$r .= '<td class=' . $col16 . ' colspan=2 onclick=sortColumn("scouting") onmouseover=glowObject(this) onmouseout=dimObject(this)>Scouting</td>';
 	$r .= '<td class=' . $col17 . ' colspan=2 onclick=sortColumn("warehouse") onmouseover=glowObject(this) onmouseout=dimObject(this)>Warehouse</td>';
 	$r .= '<td class=' . $col18 . ' colspan=2 onclick=sortColumn("speed") onmouseover=glowObject(this) onmouseout=dimObject(this)>Speed</td>';
@@ -516,8 +516,8 @@ function displayPlanet($planet)
 	$cnt     = 0;
 
 	$SQL  = 'SELECT RecordNumber, PlanetID,PlanetName,ReportDate,ReportTime,AirOps,AirCap,';
-	$SQL .= 'Fighter,Habitat,IntelOps,Materials,Queues,';
-	$SQL .= 'Scouting,Sensors,Warehouse,Special,Speed,Rank,HabSpace,Slots,SBASE,STIDR, ';
+	$SQL .= 'Fighter,Habitat,IntelOps,Materials,';
+	$SQL .= 'Scouting,Sensors,Warehouse,Special,Speed,Rank,HabSpace,SBASE,STIDR, ';
 	$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating ';
 	$SQL .= 'FROM tblscout ';
 	$SQL .= 'WHERE PlanetID=' . $planet . ' ';
@@ -1604,7 +1604,7 @@ function getHabitat($row)
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptr>' . number_format($row['BROCE'] * conBROCECAP) . '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['BROCE'] . '</td>';
-		$r .= '<td width=80% class=rptl>Brood Center (con +' . ($row['BROCE'] * 10) . '%, diplo +' . ($row['BROCE'] * 5) . '%, wealth + ' . ($row['BROCE'] * 5) . '%)</td>';
+		$r .= '<td width=80% class=rptl>Brood Center (con +' . ($row['BROCE'] * 10) . '%, diplo +' . ($row['BROCE'] * 5) . '%, wealth +' . ($row['BROCE'] * 5) . '%)</td>';
 		$r .= '</tr>';
 	}
 	$r .= '</table>';
@@ -1842,7 +1842,7 @@ function getQueues($row) {
 		$r .= '<tr>';
 		$r .= '<td width=10% class=rptc>' . ($row['ADVTS'] * 1). '</td>';
 		$r .= '<td width=10% class=rptc>' . $row['ADVTS'] . '</td>';
-		$r .= '<td width=80% class=rptl>Advanced Technologies Shipyard (con +' . ($row['ADVTS'] * 5) . '%, dur +' . ($row['ADVTS'] * 5) . '%, speed + ' . ($row['ADVTS'] * 5) . '%)</td>';
+		$r .= '<td width=80% class=rptl>Advanced Technologies Shipyard (con +' . ($row['ADVTS'] * 5) . '%, dur +' . ($row['ADVTS'] * 5) . '%, speed +' . ($row['ADVTS'] * 5) . '%)</td>';
 		$r .= '</tr>';
 	}
 
