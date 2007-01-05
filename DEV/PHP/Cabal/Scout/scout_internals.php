@@ -48,6 +48,7 @@ $blnBiologicalResearch = false;
 $firstLine = $ray[0];
 $pos = strpos($firstLine,'Date:');
 
+//determine if we got a full report or not
 if ($pos !== false)
 {
 	$method = 'Full Report';
@@ -66,10 +67,10 @@ else
 
 if ($method == 'Full Report')
 {
-	$cnt = count($ray);
-	for ($i = 0; $i < $cnt; $i++)
+	$intraycount = count($ray);
+	for ($intI = 0; $intI < $intraycount; $intI++)
 	{
-		$line = $ray[$i];
+		$line = $ray[$intI];
 		if ( ! $dateFound)
 		{
 			if (strpos($line,'Date:') !== false)
@@ -142,39 +143,42 @@ else
 
 function TurnAge($start_date, $end_date)
 {
-  $_d1 = explode("-", $start_date);
-  $_d3 = explode(":", substr($start_date, -8));
+	//Calculate turns passed between two dates
+	
+	//Split a string by string
+	$_d1 = explode("-", $start_date);
+	$_d3 = explode(":", substr($start_date, -8));
 
-  $m1 = $_d1[0];
-  $d1 = $_d1[1];
-  $y1 = $_d1[2];
-  $hour1 = $_d3[0];
-  $min1 = $_d3[1];
-  $sec1 = $_d3[2];
+	$m1 = $_d1[0];
+	$d1 = $_d1[1];
+	$y1 = $_d1[2];
+	$hour1 = $_d3[0];
+	$min1 = $_d3[1];
+	$sec1 = $_d3[2];
 
-  $_d2 = explode("-", $end_date);
-  $_d4 = explode(":", substr($end_date, -8));
+	$_d2 = explode("-", $end_date);
+	$_d4 = explode(":", substr($end_date, -8));
 
-  $m2 = $_d2[0];
-  $d2 = $_d2[1];
-  $y2 = $_d2[2];
-  $hour2 = $_d4[0];
-  $min2 = $_d4[1];
-  $sec2 = $_d4[2];
+	$m2 = $_d2[0];
+	$d2 = $_d2[1];
+	$y2 = $_d2[2];
+	$hour2 = $_d4[0];
+	$min2 = $_d4[1];
+	$sec2 = $_d4[2];
 
-  if (($y1 < 1970 || $y1 > 2037) || ($y2 < 1970 || $y2 > 2037))
-  {
-    return 0;
-  }
-  else
-  {
-     $today_stamp = mktime($hour1,$min1,$sec1,$m1,$d1,$y1);
-     $end_date_stamp = mktime($hour2,$min2,$sec2,$m2,$d2,$y2);
+	if (($y1 < 1970 || $y1 > 2037) || ($y2 < 1970 || $y2 > 2037))
+	{
+		return 0;
+	}
+	else
+	{
+		$today_stamp = mktime($hour1,$min1,$sec1,$m1,$d1,$y1);
+		$end_date_stamp = mktime($hour2,$min2,$sec2,$m2,$d2,$y2);
 
-     $difference = round(($end_date_stamp-$today_stamp));
-     $turns = floor($difference / 60 / 20);
-     return $turns;
-  }
+		$difference = round(($end_date_stamp-$today_stamp));
+		$turns = floor($difference / 60 / 20);
+		return $turns;
+	}
 }
 
 function parseDate($line)
@@ -200,9 +204,9 @@ function parseFrom($line)
 	$ray = explode(' ',$line);
 	$from = '';
 
-	for ($i = 0; $i < count($ray); $i++)
+	for ($intI = 0; $intI < count($ray); $intI++)
 	{
-		$from .= $ray[$i] . ' ';
+		$from .= $ray[$intI] . ' ';
 	}
 	$dat['from'] = trim($from);
 }
@@ -217,10 +221,14 @@ function parseStructs($line)
 {
 	$ray = explode('(s)',$line);
 
-	for ($i = 0; $i < count($ray); $i++)
+	//Iterate all structures
+	$intraycount = count($ray);
+	
+	for ($intI = 0; $intI < $intraycount; $intI++)
 	{
-		$struct = $ray[$i];
+		$struct = $ray[$intI];
 		$struct = trim($struct);
+		
 		if ($struct != '')
 		{
 			$pos = strpos($struct,' ');
@@ -271,7 +279,7 @@ function parse_A_structs($name,$qty)
 {
 	global $dat;
 	global $blnAdvancedTechShipyard;
-	
+
 	switch ($name)
 	{
 		case 'Advanced Genetics Lab':
@@ -330,7 +338,7 @@ function parse_B_structs($name,$qty)
 {
 	global $dat;
 	global $blnBiologicalResearch;
-	
+
 	switch ($name)
 	{
 		case 'Badger Light Cruiser':
@@ -817,7 +825,7 @@ function parse_P_structs($name,$qty)
 {
 	global $dat;
 	global $blnPlatingFactory;
-	
+
 	switch ($name)
 	{
 		case 'Planetary Bank':
@@ -1024,7 +1032,7 @@ function parse_W_structs($name,$qty)
 {
 	global $dat;
 	global $blnWarFactory;
-	
+
 	switch ($name)
 	{
 		case 'War Factory':
@@ -1252,6 +1260,7 @@ function initialize_dat()
 
 function updateDatabase()
 {
+	//update the database
 	global $dat;
 	global $matproc;
 	global $impmatproc;
@@ -1261,9 +1270,10 @@ function updateDatabase()
 	global $blnMatResearchComplex;
 	global $blnWarFactory;
 	global $blnBiologicalResearch;
-	
+
+	//default durability
 	$durability = '1.0';
-	
+
 	$targetName = $dat['target'];
 	$sourceName = $dat['from'];
 	$reportDate = $dat['date'];
@@ -1307,7 +1317,7 @@ function updateDatabase()
 
 	if ($ok)
 	{
-		// get target planet id and rank
+		//get target planet id and rank
 		//first we check if rank is up to date with the help of the date column
 		$SQL = 'Select max(date), date, TurnCount FROM tblplanet GROUP BY date';
 		$result = mysql_query($SQL);
@@ -1320,12 +1330,14 @@ function updateDatabase()
 		{
 			if (mysql_num_rows($result) == 0)
 			{
-				//No planets in planet table so updaterank() this will add all planets
+				//No planets in planet table so updaterank() this will also add all planets the first time
+				// or update the planettable with new planets
 				UpdateRank(0);
 			}
 
 			if (mysql_num_rows($result) > 0)
 			{
+				//12-20-2006 23:02:03
 				$current_date = date("m-d-Y H:i:s");
 				$row = mysql_fetch_assoc($result);
 
@@ -1368,6 +1380,8 @@ function updateDatabase()
 		}
 	}
 
+	/*
+	// we can skip this test the source planet will always be in the table
 	if ($ok)
 	{
 		// get source planet id
@@ -1386,7 +1400,8 @@ function updateDatabase()
 			//echo 'source planet [' . $sourceName . '] not found in database. ';
 		}
 	}
-
+	*/
+	
 	if ($ok)
 	{
 		// see if scouting report has already been entered
@@ -1412,6 +1427,7 @@ function updateDatabase()
 		}
 		else
 		{
+			//Calculate durability take into account durability bonusses
 			if ($blnPlatingFactory || $blnMatResearchComplex || $blnAdvancedTechShipyard || $blnWarFactory || $blnBiologicalResearch)
 			{
 				if ($blnMatResearchComplex)
@@ -1422,7 +1438,7 @@ function updateDatabase()
 				else if ($blnPlatingFactory)
 				{
 					//durability +7%
-					$durability = '1.07';	
+					$durability = '1.07';
 				}
 				else if ($blnWarFactory || $blnAdvancedTechShipyard)
 				{
@@ -1434,7 +1450,7 @@ function updateDatabase()
 					//durability +3%
 					$durability = '1.03';
 				}
-				
+
 				$dat['ADVIN']  = $dat['ADVIN'] * $durability;
 				$dat['ADVGE']  = $dat['ADVGE'] * $durability;
 				$dat['ADVTS']  = $dat['ADVTS'] * $durability;
@@ -1559,9 +1575,10 @@ function updateDatabase()
 				$dat['SurRating'] = $dat['SurRating'] * $durability;
 				$dat['OrbRating'] = $dat['OrbRating'] * $durability;
 				$dat['FleetRating'] = $dat['FleetRating'] * $durability;
-				$dat['BuildRating'] = $dat['BuildRating'] * $durability;		
+				$dat['BuildRating'] = $dat['BuildRating'] * $durability;
 			}
-			
+
+			//Calculate materials take into account material bonusses
 			if ($matproc)
 			{
 				$dat['Materials'] = $dat['Materials'] * 1.05;
@@ -1572,6 +1589,7 @@ function updateDatabase()
 				$dat['Materials'] = $dat['Materials'] * 1.07;
 			}
 
+			//Insert the new scouting report
 			$SQL  = 'INSERT INTO tblscout (PlanetID,PlanetName,SourceID,SourceName,ReportDate,ReportTime,';
 			$SQL .= 'ADVIN,ADVGE,ADVTS,AEGMS,AIRB1,AIRB2,ANVBS,ASPHC,AVASC,BADLC,';
 			$SQL .= 'BARAF,BARR1,BARR2,BATSH,BERDE,BIOLO,BLABM,COLFR,COLOS,CRUBC,CRUIS,';
@@ -1590,159 +1608,159 @@ function updateDatabase()
 			$SQL .= 'Special,Speed,Training,Wealth,Rank,AirCap,HabSpace,Current,Species,';
 			$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating';
 			$SQL .= ') VALUES (';
-			$SQL .= '\'' . $planetID         . '\',';
-			$SQL .= '\'' . $dat['target']    . '\',';
-			$SQL .= '\'' . $sourceID         . '\',';
-			$SQL .= '\'' . $dat['from']      . '\',';
-			$SQL .= '\'' . $reportDate       . '\',';
-			$SQL .= '\'' . $reportTime       . '\',';
-			$SQL .= '\'' . $dat['ADVIN']     . '\',';
-			$SQL .= '\'' . $dat['ADVGE']     . '\',';
-			$SQL .= '\'' . $dat['ADVTS']     . '\',';
-			$SQL .= '\'' . $dat['AEGMS']     . '\',';
-			$SQL .= '\'' . $dat['AIRB1']     . '\',';
-			$SQL .= '\'' . $dat['AIRB2']     . '\',';
-			$SQL .= '\'' . $dat['ANVBS']     . '\',';
-			$SQL .= '\'' . $dat['ASPHC']     . '\',';
-			$SQL .= '\'' . $dat['AVASC']     . '\',';
-			$SQL .= '\'' . $dat['BADLC']     . '\',';
-			$SQL .= '\'' . $dat['BARAF']     . '\',';
-			$SQL .= '\'' . $dat['BARR1']     . '\',';
-			$SQL .= '\'' . $dat['BARR2']     . '\',';
-			$SQL .= '\'' . $dat['BATSH']     . '\',';
-			$SQL .= '\'' . $dat['BERDE']     . '\',';
-			$SQL .= '\'' . $dat['BIOLO']     . '\',';
-			$SQL .= '\'' . $dat['BLABM']     . '\',';
-			$SQL .= '\'' . $dat['COLFR']     . '\',';
-			$SQL .= '\'' . $dat['COLOS']     . '\',';
-			$SQL .= '\'' . $dat['CRUBC']     . '\',';
-			$SQL .= '\'' . $dat['CRUIS']     . '\',';
-			$SQL .= '\'' . $dat['DAGHF']     . '\',';
-			$SQL .= '\'' . $dat['DEERS']     . '\',';
-			$SQL .= '\'' . $dat['DEFTU']     . '\',';
-			$SQL .= '\'' . $dat['DESTR']     . '\',';
-			$SQL .= '\'' . $dat['DIPCO']     . '\',';
-			$SQL .= '\'' . $dat['DRAMA']     . '\',';
-			$SQL .= '\'' . $dat['DREAD']     . '\',';
-			$SQL .= '\'' . $dat['EMBAS']     . '\',';
-			$SQL .= '\'' . $dat['FANFB']     . '\',';
-			$SQL .= '\'' . $dat['FARM1']     . '\',';
-			$SQL .= '\'' . $dat['FARM2']     . '\',';
-			$SQL .= '\'' . $dat['FARM3']     . '\',';
-			$SQL .= '\'' . $dat['FIGBO']     . '\',';
-			$SQL .= '\'' . $dat['FIGIN']     . '\',';
-			$SQL .= '\'' . $dat['FIRSD']     . '\',';
-			$SQL .= '\'' . $dat['FRIGA']     . '\',';
-			$SQL .= '\'' . $dat['GELAB']     . '\',';
-			$SQL .= '\'' . $dat['GNDHI']     . '\',';
-			$SQL .= '\'' . $dat['GOLBA']     . '\',';
-			$SQL .= '\'' . $dat['HABI1']     . '\',';
-			$SQL .= '\'' . $dat['HABI2']     . '\',';
-			$SQL .= '\'' . $dat['HABI3']     . '\',';
-			$SQL .= '\'' . $dat['HAMGU']     . '\',';
-			$SQL .= '\'' . $dat['HVYBO']     . '\',';
-			$SQL .= '\'' . $dat['HVYCA']     . '\',';
-			$SQL .= '\'' . $dat['HVYCR']     . '\',';
-			$SQL .= '\'' . $dat['HIBCA']     . '\',';
-			$SQL .= '\'' . $dat['HOSPI']     . '\',';
-			$SQL .= '\'' . $dat['HURFC']     . '\',';
-			$SQL .= '\'' . $dat['IMPFR']     . '\',';
-			$SQL .= '\'' . $dat['INSHT']     . '\',';
-			$SQL .= '\'' . $dat['INTEL']     . '\',';
-			$SQL .= '\'' . $dat['INTFR']     . '\',';
-			$SQL .= '\'' . $dat['INTMP']     . '\',';
-			$SQL .= '\'' . $dat['INTFO']     . '\',';
-			$SQL .= '\'' . $dat['JUDDR']     . '\',';
-			$SQL .= '\'' . $dat['JUMP1']     . '\',';
-			$SQL .= '\'' . $dat['JUMP2']     . '\',';
-			$SQL .= '\'' . $dat['LEOSC']     . '\',';
-			$SQL .= '\'' . $dat['LIGCA']     . '\',';
-			$SQL .= '\'' . $dat['LISTN']     . '\',';
-			$SQL .= '\'' . $dat['MANU1']     . '\',';
-			$SQL .= '\'' . $dat['MANU2']     . '\',';
-			$SQL .= '\'' . $dat['MATS1']     . '\',';
-			$SQL .= '\'' . $dat['MATS2']     . '\',';
-			$SQL .= '\'' . $dat['MATRC']     . '\',';
-			$SQL .= '\'' . $dat['MINE1']     . '\',';
-			$SQL .= '\'' . $dat['MINE2']     . '\',';
-			$SQL .= '\'' . $dat['RADI1']     . '\',';
-			$SQL .= '\'' . $dat['RADI2']     . '\',';
-			$SQL .= '\'' . $dat['OBULK']     . '\',';
-			$SQL .= '\'' . $dat['OCON1']     . '\',';
-			$SQL .= '\'' . $dat['OCON2']     . '\',';
-			$SQL .= '\'' . $dat['ODEFM']     . '\',';
-			$SQL .= '\'' . $dat['ODEF1']     . '\',';
-			$SQL .= '\'' . $dat['ODEF2']         . '\',';
-			$SQL .= '\'' . $dat['OMIN1']         . '\',';
-			$SQL .= '\'' . $dat['OMIN2']         . '\',';
-			$SQL .= '\'' . $dat['ORCBA']         . '\',';
-			$SQL .= '\'' . $dat['OSLD1']         . '\',';
-			$SQL .= '\'' . $dat['OSLD2']         . '\',';
-			$SQL .= '\'' . $dat['PBANK']         . '\',';
-			$SQL .= '\'' . $dat['PLATE']         . '\',';
-			$SQL .= '\'' . $dat['PRIHC']         . '\',';
-			$SQL .= '\'' . $dat['FUEL1']         . '\',';
-			$SQL .= '\'' . $dat['FUEL2']         . '\',';
-			$SQL .= '\'' . $dat['RAVMC']         . '\',';
-			$SQL .= '\'' . $dat['RSENS']         . '\',';
-			$SQL .= '\'' . $dat['RLAB1']         . '\',';
-			$SQL .= '\'' . $dat['RLAB2']         . '\',';
-			$SQL .= '\'' . $dat['SATE1']         . '\',';
-			$SQL .= '\'' . $dat['SATE2']         . '\',';
-			$SQL .= '\'' . $dat['SCOUT']         . '\',';
-			$SQL .= '\'' . $dat['FOLDR']         . '\',';
-			$SQL .= '\'' . $dat['SBASE']         . '\',';
-			$SQL .= '\'' . $dat['STIDR']         . '\',';
-			$SQL .= '\'' . $dat['STOCK']         . '\',';
-			$SQL .= '\'' . $dat['SDEF1']         . '\',';
-			$SQL .= '\'' . $dat['SDEF2']         . '\',';
-			$SQL .= '\'' . $dat['SSLD1']         . '\',';
-			$SQL .= '\'' . $dat['SSLD2']         . '\',';
-			$SQL .= '\'' . $dat['TANDB']         . '\',';
-			$SQL .= '\'' . $dat['TERCA']         . '\',';
-			$SQL .= '\'' . $dat['TORBA']         . '\',';
-			$SQL .= '\'' . $dat['TRACK']         . '\',';
-			$SQL .= '\'' . $dat['TSCHL']         . '\',';
-			$SQL .= '\'' . $dat['UNIVE']         . '\',';
-			$SQL .= '\'' . $dat['VENHF']         . '\',';
-			$SQL .= '\'' . $dat['VESSC']         . '\',';
-			$SQL .= '\'' . $dat['VINEM']         . '\',';
-			$SQL .= '\'' . $dat['WARFA']         . '\',';
-			$SQL .= '\'' . $dat['WASFI']         . '\',';
-			$SQL .= '\'' . $dat['WAYEC']         . '\',';
-			$SQL .= '\'' . $dat['WHSE1']         . '\',';
-			$SQL .= '\'' . $dat['WHSE2']         . '\',';
-			$SQL .= '\'' . $dat['WHSE3']         . '\',';
-			$SQL .= '\'' . $dat['WEATL']         . '\',';
-			$SQL .= '\'' . $dat['ZEPFD']         . '\',';
-			$SQL .= '\'' . $dat['BROCE']         . '\',';
-			$SQL .= '\'' . $dat['AMIPS']         . '\',';
-			$SQL .= '\'' . $dat['AirOps']        . '\',';
-			$SQL .= '\'' . $dat['Capital']       . '\',';
-			$SQL .= '\'' . $dat['Diplomacy']     . '\',';
-			$SQL .= '\'' . $dat['Fighter']       . '\',';
-			$SQL .= '\'' . $dat['Habitat']       . '\',';
-			$SQL .= '\'' . $dat['IntelOps']      . '\',';
-			$SQL .= '\'' . $dat['Materials']     . '\',';
-			$SQL .= '\'' . $dat['Reproduction']  . '\',';
-			$SQL .= '\'' . $dat['Queues']        . '\',';
-			$SQL .= '\'' . $dat['Research']      . '\',';
-			$SQL .= '\'' . $dat['Scouting']      . '\',';
-			$SQL .= '\'' . $dat['Sensors']       . '\',';
-			$SQL .= '\'' . $dat['Warehouse']     . '\',';
-			$SQL .= '\'' . $dat['Special']       . '\',';
-			$SQL .= '\'' . $dat['Speed']         . '\',';
-			$SQL .= '\'' . $dat['Training']      . '\',';
-			$SQL .= '\'' . $dat['Wealth']        . '\',';
-			$SQL .= '\'' . $rank                 . '\',';
-			$SQL .= '\'' . $dat['AirCap']        . '\',';
-			$SQL .= '\'' . $dat['HabSpace']      . '\',';
-			$SQL .= '\'' . 'Y'                   . '\',';
-			$SQL .= '\'' . addslashes($species)  . '\',';
-			$SQL .= '\'' . $dat['FleetRating']   . '\',';
-			$SQL .= '\'' . $dat['OrbRating']     . '\',';
-			$SQL .= '\'' . $dat['SurRating']     . '\',';
-			$SQL .= '\'' . $dat['BuildRating']   . '\'';
+			$SQL .= '\'' . $planetID	. '\',';
+			$SQL .= '\'' . $dat['target']	. '\',';
+			$SQL .= '\'' . $sourceID	. '\',';
+			$SQL .= '\'' . $dat['from']	. '\',';
+			$SQL .= '\'' . $reportDate	. '\',';
+			$SQL .= '\'' . $reportTime	. '\',';
+			$SQL .= '\'' . $dat['ADVIN']	. '\',';
+			$SQL .= '\'' . $dat['ADVGE']	. '\',';
+			$SQL .= '\'' . $dat['ADVTS']	. '\',';
+			$SQL .= '\'' . $dat['AEGMS']	. '\',';
+			$SQL .= '\'' . $dat['AIRB1']	. '\',';
+			$SQL .= '\'' . $dat['AIRB2']	. '\',';
+			$SQL .= '\'' . $dat['ANVBS']	. '\',';
+			$SQL .= '\'' . $dat['ASPHC']	. '\',';
+			$SQL .= '\'' . $dat['AVASC']	. '\',';
+			$SQL .= '\'' . $dat['BADLC']	. '\',';
+			$SQL .= '\'' . $dat['BARAF']	. '\',';
+			$SQL .= '\'' . $dat['BARR1']	. '\',';
+			$SQL .= '\'' . $dat['BARR2']	. '\',';
+			$SQL .= '\'' . $dat['BATSH']	. '\',';
+			$SQL .= '\'' . $dat['BERDE']	. '\',';
+			$SQL .= '\'' . $dat['BIOLO']	. '\',';
+			$SQL .= '\'' . $dat['BLABM']	. '\',';
+			$SQL .= '\'' . $dat['COLFR']	. '\',';
+			$SQL .= '\'' . $dat['COLOS']	. '\',';
+			$SQL .= '\'' . $dat['CRUBC']	. '\',';
+			$SQL .= '\'' . $dat['CRUIS']	. '\',';
+			$SQL .= '\'' . $dat['DAGHF']	. '\',';
+			$SQL .= '\'' . $dat['DEERS']	. '\',';
+			$SQL .= '\'' . $dat['DEFTU']	. '\',';
+			$SQL .= '\'' . $dat['DESTR']	. '\',';
+			$SQL .= '\'' . $dat['DIPCO']	. '\',';
+			$SQL .= '\'' . $dat['DRAMA']	. '\',';
+			$SQL .= '\'' . $dat['DREAD']	. '\',';
+			$SQL .= '\'' . $dat['EMBAS']	. '\',';
+			$SQL .= '\'' . $dat['FANFB']	. '\',';
+			$SQL .= '\'' . $dat['FARM1']	. '\',';
+			$SQL .= '\'' . $dat['FARM2']	. '\',';
+			$SQL .= '\'' . $dat['FARM3']	. '\',';
+			$SQL .= '\'' . $dat['FIGBO']	. '\',';
+			$SQL .= '\'' . $dat['FIGIN']	. '\',';
+			$SQL .= '\'' . $dat['FIRSD']	. '\',';
+			$SQL .= '\'' . $dat['FRIGA']	. '\',';
+			$SQL .= '\'' . $dat['GELAB']	. '\',';
+			$SQL .= '\'' . $dat['GNDHI']	. '\',';
+			$SQL .= '\'' . $dat['GOLBA']	. '\',';
+			$SQL .= '\'' . $dat['HABI1']	. '\',';
+			$SQL .= '\'' . $dat['HABI2']	. '\',';
+			$SQL .= '\'' . $dat['HABI3']	. '\',';
+			$SQL .= '\'' . $dat['HAMGU']	. '\',';
+			$SQL .= '\'' . $dat['HVYBO']	. '\',';
+			$SQL .= '\'' . $dat['HVYCA']	. '\',';
+			$SQL .= '\'' . $dat['HVYCR']	. '\',';
+			$SQL .= '\'' . $dat['HIBCA']	. '\',';
+			$SQL .= '\'' . $dat['HOSPI']	. '\',';
+			$SQL .= '\'' . $dat['HURFC']	. '\',';
+			$SQL .= '\'' . $dat['IMPFR']	. '\',';
+			$SQL .= '\'' . $dat['INSHT']	. '\',';
+			$SQL .= '\'' . $dat['INTEL']	. '\',';
+			$SQL .= '\'' . $dat['INTFR']	. '\',';
+			$SQL .= '\'' . $dat['INTMP']	. '\',';
+			$SQL .= '\'' . $dat['INTFO']	. '\',';
+			$SQL .= '\'' . $dat['JUDDR']	. '\',';
+			$SQL .= '\'' . $dat['JUMP1']	. '\',';
+			$SQL .= '\'' . $dat['JUMP2']	. '\',';
+			$SQL .= '\'' . $dat['LEOSC']	. '\',';
+			$SQL .= '\'' . $dat['LIGCA']	. '\',';
+			$SQL .= '\'' . $dat['LISTN']	. '\',';
+			$SQL .= '\'' . $dat['MANU1']	. '\',';
+			$SQL .= '\'' . $dat['MANU2']	. '\',';
+			$SQL .= '\'' . $dat['MATS1']	. '\',';
+			$SQL .= '\'' . $dat['MATS2']	. '\',';
+			$SQL .= '\'' . $dat['MATRC']	. '\',';
+			$SQL .= '\'' . $dat['MINE1']	. '\',';
+			$SQL .= '\'' . $dat['MINE2']	. '\',';
+			$SQL .= '\'' . $dat['RADI1']	. '\',';
+			$SQL .= '\'' . $dat['RADI2']	. '\',';
+			$SQL .= '\'' . $dat['OBULK']	. '\',';
+			$SQL .= '\'' . $dat['OCON1']	. '\',';
+			$SQL .= '\'' . $dat['OCON2']	. '\',';
+			$SQL .= '\'' . $dat['ODEFM']	. '\',';
+			$SQL .= '\'' . $dat['ODEF1']	. '\',';
+			$SQL .= '\'' . $dat['ODEF2']	. '\',';
+			$SQL .= '\'' . $dat['OMIN1']	. '\',';
+			$SQL .= '\'' . $dat['OMIN2']	. '\',';
+			$SQL .= '\'' . $dat['ORCBA']	. '\',';
+			$SQL .= '\'' . $dat['OSLD1']	. '\',';
+			$SQL .= '\'' . $dat['OSLD2']	. '\',';
+			$SQL .= '\'' . $dat['PBANK']	. '\',';
+			$SQL .= '\'' . $dat['PLATE']	. '\',';
+			$SQL .= '\'' . $dat['PRIHC']	. '\',';
+			$SQL .= '\'' . $dat['FUEL1']	. '\',';
+			$SQL .= '\'' . $dat['FUEL2']	. '\',';
+			$SQL .= '\'' . $dat['RAVMC']	. '\',';
+			$SQL .= '\'' . $dat['RSENS']	. '\',';
+			$SQL .= '\'' . $dat['RLAB1']	. '\',';
+			$SQL .= '\'' . $dat['RLAB2']	. '\',';
+			$SQL .= '\'' . $dat['SATE1']	. '\',';
+			$SQL .= '\'' . $dat['SATE2']	. '\',';
+			$SQL .= '\'' . $dat['SCOUT']	. '\',';
+			$SQL .= '\'' . $dat['FOLDR']	. '\',';
+			$SQL .= '\'' . $dat['SBASE']	. '\',';
+			$SQL .= '\'' . $dat['STIDR']	. '\',';
+			$SQL .= '\'' . $dat['STOCK']	. '\',';
+			$SQL .= '\'' . $dat['SDEF1']	. '\',';
+			$SQL .= '\'' . $dat['SDEF2']	. '\',';
+			$SQL .= '\'' . $dat['SSLD1']	. '\',';
+			$SQL .= '\'' . $dat['SSLD2']	. '\',';
+			$SQL .= '\'' . $dat['TANDB']	. '\',';
+			$SQL .= '\'' . $dat['TERCA']	. '\',';
+			$SQL .= '\'' . $dat['TORBA']	. '\',';
+			$SQL .= '\'' . $dat['TRACK']	. '\',';
+			$SQL .= '\'' . $dat['TSCHL']	. '\',';
+			$SQL .= '\'' . $dat['UNIVE']	. '\',';
+			$SQL .= '\'' . $dat['VENHF']	. '\',';
+			$SQL .= '\'' . $dat['VESSC']	. '\',';
+			$SQL .= '\'' . $dat['VINEM']	. '\',';
+			$SQL .= '\'' . $dat['WARFA']	. '\',';
+			$SQL .= '\'' . $dat['WASFI']	. '\',';
+			$SQL .= '\'' . $dat['WAYEC']	. '\',';
+			$SQL .= '\'' . $dat['WHSE1']	. '\',';
+			$SQL .= '\'' . $dat['WHSE2']	. '\',';
+			$SQL .= '\'' . $dat['WHSE3']	. '\',';
+			$SQL .= '\'' . $dat['WEATL']	. '\',';
+			$SQL .= '\'' . $dat['ZEPFD']	. '\',';
+			$SQL .= '\'' . $dat['BROCE']	. '\',';
+			$SQL .= '\'' . $dat['AMIPS']	. '\',';
+			$SQL .= '\'' . $dat['AirOps']	. '\',';
+			$SQL .= '\'' . $dat['Capital']	. '\',';
+			$SQL .= '\'' . $dat['Diplomacy']	. '\',';
+			$SQL .= '\'' . $dat['Fighter']	. '\',';
+			$SQL .= '\'' . $dat['Habitat']	. '\',';
+			$SQL .= '\'' . $dat['IntelOps']	. '\',';
+			$SQL .= '\'' . $dat['Materials']	. '\',';
+			$SQL .= '\'' . $dat['Reproduction']	. '\',';
+			$SQL .= '\'' . $dat['Queues']	. '\',';
+			$SQL .= '\'' . $dat['Research']	. '\',';
+			$SQL .= '\'' . $dat['Scouting']	. '\',';
+			$SQL .= '\'' . $dat['Sensors']	. '\',';
+			$SQL .= '\'' . $dat['Warehouse']	. '\',';
+			$SQL .= '\'' . $dat['Special']	. '\',';
+			$SQL .= '\'' . $dat['Speed']	. '\',';
+			$SQL .= '\'' . $dat['Training']	. '\',';
+			$SQL .= '\'' . $dat['Wealth']	. '\',';
+			$SQL .= '\'' . $rank	. '\',';
+			$SQL .= '\'' . $dat['AirCap']	. '\',';
+			$SQL .= '\'' . $dat['HabSpace']	. '\',';
+			$SQL .= '\'' . 'Y'	. '\',';
+			$SQL .= '\'' . addslashes($species)	. '\',';
+			$SQL .= '\'' . $dat['FleetRating']	. '\',';
+			$SQL .= '\'' . $dat['OrbRating']	. '\',';
+			$SQL .= '\'' . $dat['SurRating']	. '\',';
+			$SQL .= '\'' . $dat['BuildRating']	. '\'';
 			$SQL .= ')';
 			$result = mysql_query($SQL);
 
@@ -1758,9 +1776,10 @@ function updateDatabase()
 				}
 			}
 
-			$newid = mysql_insert_id();
-			$sid2 = $sid1;
-         	$sid1 = $newid;
+			$newid = mysql_insert_id(); //get the new record number
+			$sid2 = $sid1;	//assign the old report number
+			$sid1 = $newid; //assign the new report number
+         	
 			$SQL  = 'UPDATE tblplanet SET ';
 			$SQL .= 'SID1 = \'' . $sid1 . '\', ';
 			$SQL .= 'SID2 = \'' . $sid2 . '\'  ';
