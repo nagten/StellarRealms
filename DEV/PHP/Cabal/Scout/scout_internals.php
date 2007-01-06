@@ -1380,7 +1380,6 @@ function updateDatabase()
 		}
 	}
 
-	/*
 	// we can skip this test the source planet will always be in the table
 	if ($ok)
 	{
@@ -1400,7 +1399,6 @@ function updateDatabase()
 			//echo 'source planet [' . $sourceName . '] not found in database. ';
 		}
 	}
-	*/
 	
 	if ($ok)
 	{
