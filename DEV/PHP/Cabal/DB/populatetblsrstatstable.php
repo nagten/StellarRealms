@@ -18,15 +18,15 @@ body {
 //Set global variables to connect to MySQL DB
 include("../connect_to_database.php");
 
-$users = array( 0=>array('username'=>'********', 'srplanetname'=>'Illyria'),
-                1=>array('username'=>'********', 'srplanetname'=>'Underworld'),
-                2=>array('username'=>'********', 'srplanetname'=>'Peanut Butter'),
-                3=>array('username'=>'******', 'srplanetname'=>'Neutral Planet'),
-                4=>array('username'=>'******', 'srplanetname'=>'poetingspaintry'),
-                5=>array('username'=>'*********', 'srplanetname'=>'da Pumpatorium'),
-                6=>array('username'=>'**********', 'srplanetname'=>'Tomorrow'),
-                7=>array('username'=>'*******', 'srplanetname'=>'Juuousei'),
-                8=>array('username'=>'*********', 'srplanetname'=>'La 2019')
+$users = array( 0=>array('username'=>'********', 'srplanetname'=>'Lifeboat'),
+                1=>array('username'=>'********', 'srplanetname'=>'Erevna'),
+                2=>array('username'=>'********', 'srplanetname'=>'Fatu-Krey'),
+                3=>array('username'=>'******', 'srplanetname'=>'Oa'),
+                4=>array('username'=>'******', 'srplanetname'=>'Independent News Organization'),
+                5=>array('username'=>'*********', 'srplanetname'=>'Positive'),
+                6=>array('username'=>'**********', 'srplanetname'=>'The Mercenary Guild'),
+                7=>array('username'=>'*******', 'srplanetname'=>'Waystation'),
+                8=>array('username'=>'*********', 'srplanetname'=>'Shantaram')
                 );
 
 foreach($users as $arrayuser)
