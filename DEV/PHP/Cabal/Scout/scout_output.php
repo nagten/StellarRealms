@@ -124,6 +124,7 @@ function displaySummary()
 				$p1[$planetID]['warehouse']	= $row['Warehouse'];
 				$p1[$planetID]['queues']	= $row['Queues'];
 				$p1[$planetID]['speed']	= $row['Speed'];
+				$p1[$planetID]['species']	= $row['Species'];
 			}
 			else
 			{
@@ -148,6 +149,7 @@ function displaySummary()
 				$p2[$planetID]['warehouse']	= $row['Warehouse'];
 				$p2[$planetID]['queues']	= $row['Queues'];
 				$p2[$planetID]['speed']	= $row['Speed'];
+				$p2[$planetID]['species']	= $row['Species'];
 			}
 		}
 		else
