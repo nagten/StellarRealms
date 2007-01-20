@@ -29,7 +29,7 @@
 	.c10		{font-size:10pt; text-align:center;}
 	.r10		{font-size:10pt; text-align:right;}
 	.menu		{font-size:10pt; text-align:center; font-weight:bold; background-color:#DCDCDC; border: 1px solid #F5F5F5;}
-	.mtable		{margin-top:5; margin-bottom:5;}
+	.mtable		{margin-top:5pt; margin-bottom:5pt;}
 	.hidden		{display:none;}
 
 	.divSummary		{overflow: auto; width: 100%;  height: 144px; padding:0px; margin: 0px;}
@@ -43,7 +43,7 @@
 	.relSelec	{font-size:10pt; font-weight:bold;   color:#000000; cursor:default;}
 	.relUnsel	{font-size:8pt; font-weight:normal; color:#0000FF; cursor:pointer; text-decoration:underline;}
 
-	.error		{font-size:10ptl font_weight:bold; color:#FF0000; text-align:center}
+	.error		{font-size:10pt; font-weight:bold; color:#FF0000; text-align:center}
 	.textarea	{font-size:9pt; font-family:arial;}
 
 	.positive	{font-size:8pt; text-align:center; color:#228B22;}
