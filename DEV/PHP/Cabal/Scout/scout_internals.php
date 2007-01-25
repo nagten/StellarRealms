@@ -96,18 +96,18 @@ if ($method == 'Full Report')
 			
 			if ($pos == 0)
 			{
-				//determine target form a fleet reconnaissance
-				$pos = strpos($line,' fleet reconnaissance at');
+				//determine target from a fleet reconnaissance
+				$pos = strpos($line,' fleet reconnaissance at'); //leave the extra space it's important
 				
 				if ($pos !== false)
 				{	
-					$reconnaitertype = '1'; //structure
-				}	
+					$reconnaitertype = '2'; //fleet
+				}					
 			}
-			else
+			/*else
 			{
 				$reconnaitertype = '2'; //fleet
-			}
+			}*/
 			
 			if ($pos !== false)
 			{
