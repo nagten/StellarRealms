@@ -31,6 +31,7 @@ $report = str_replace('<br>','|',$report);
 $report = str_replace('<BR>','|',$report);
 $report = str_replace('||'  ,'|',$report);
 $ray = explode('|',$report);
+$reconnaitertype = '1'; //1 structure, 2 fleet
 
 $dateFound    = false;
 $fromFound    = false;
@@ -92,6 +93,22 @@ if ($method == 'Full Report')
 		elseif ( ! $targetFound)
 		{
 			$pos = strpos($line,'reconnoiter structures at');
+			
+			if ($pos == 0)
+			{
+				//determine target form a fleet reconnaissance
+				$pos = strpos($line,' fleet reconnaissance at');
+				
+				if ($pos !== false)
+				{	
+					$reconnaitertype = '1'; //structure
+				}	
+			}
+			else
+			{
+				$reconnaitertype = '2'; //fleet
+			}
+			
 			if ($pos !== false)
 			{
 				$targetFound = true;
@@ -129,6 +146,7 @@ if ($DEV)
 }
 
 $result = updateDatabase();
+//$result = $result . "target = " . $target;
 
 if ($DEV)
 {
@@ -1270,6 +1288,7 @@ function updateDatabase()
 	global $blnMatResearchComplex;
 	global $blnWarFactory;
 	global $blnBiologicalResearch;
+	global $reconnaitertype;
 
 	//default durability
 	$durability = '1.0';
@@ -1380,7 +1399,6 @@ function updateDatabase()
 		}
 	}
 
-	// we can skip this test the source planet will always be in the table
 	if ($ok)
 	{
 		// get source planet id
@@ -1408,6 +1426,7 @@ function updateDatabase()
 		$SQL .= 'WHERE PlanetID = \'' . $planetID   . '\' ';
 		$SQL .= 'AND ReportDate = \'' . $reportDate . '\' ';
 		$SQL .= 'AND ReportTime = \'' . $reportTime . '\' ';
+		$SQL .= 'AND Reconnaitertype = \'' .$reconnaitertype . '\' ';
 		$result = mysql_query($SQL);
 
 		if (!$result)
@@ -1604,7 +1623,7 @@ function updateDatabase()
 			$SQL .= 'AirOps,Capital,Diplomacy,Fighter,Habitat,IntelOps,';
 			$SQL .= 'Materials,Reproduction,Queues,Research,Scouting,Sensors,Warehouse,';
 			$SQL .= 'Special,Speed,Training,Wealth,Rank,AirCap,HabSpace,Current,Species,';
-			$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating';
+			$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating,Reconnaitertype';
 			$SQL .= ') VALUES (';
 			$SQL .= '\'' . $planetID	. '\',';
 			$SQL .= '\'' . $dat['target']	. '\',';
@@ -1758,7 +1777,8 @@ function updateDatabase()
 			$SQL .= '\'' . $dat['FleetRating']	. '\',';
 			$SQL .= '\'' . $dat['OrbRating']	. '\',';
 			$SQL .= '\'' . $dat['SurRating']	. '\',';
-			$SQL .= '\'' . $dat['BuildRating']	. '\'';
+			$SQL .= '\'' . $dat['BuildRating']	. '\',';
+			$SQL .= '\'' . $reconnaitertype	. '\'';
 			$SQL .= ')';
 			$result = mysql_query($SQL);
 
