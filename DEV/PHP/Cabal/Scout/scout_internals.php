@@ -67,7 +67,7 @@ else
 }
 
 if ($method == 'Full Report')
-{
+{	
 	$intraycount = count($ray);
 	for ($intI = 0; $intI < $intraycount; $intI++)
 	{
@@ -94,23 +94,27 @@ if ($method == 'Full Report')
 		{
 			$pos = strpos($line,'reconnoiter structures at');
 			
-			if ($pos == 0)
+			if ($pos === false) //reconnaiter structures wasn't found
 			{
-				//determine target from a fleet reconnaissance
+				//Determine target from a fleet reconnaissance
 				$pos = strpos($line,' fleet reconnaissance at'); //leave the extra space it's important
 				
-				if ($pos !== false)
-				{	
+				if ($pos === false) //fleet reconnaissance wasn't found
+				{
+					//error
+					$result = 'Reconnaissance report not recognized, something went wrong';
+				}
+				else
+				{
 					$reconnaitertype = '2'; //fleet
-				}					
+					$targetFound = true;
+					$target = substr($line,$pos +25,-1);
+					parseTarget($target);
+				}			
 			}
-			/*else
+			else //reconnaiter structures was found
 			{
-				$reconnaitertype = '2'; //fleet
-			}*/
-			
-			if ($pos !== false)
-			{
+				$reconnaitertype = '1'; //structure
 				$targetFound = true;
 				$target = substr($line,$pos +25,-1);
 				parseTarget($target);
@@ -130,10 +134,41 @@ if ($method == 'Full Report')
 }
 else
 {
-	$timestamp = $ray[0];
-	$from      = $ray[1];
-	$target    = $ray[2];
-	$structs   = $ray[3];
+	if (count($ray) == 4)
+	{
+		//Old style short report (before the fleet/structure change)
+		$timestamp	= $ray[0];
+		$from	= $ray[1];
+		$target	= $ray[2];
+		$structs	= $ray[3];
+		
+		$reconnaitertype = '1'; //structure
+	}
+	else
+	{
+		//New style short report (before the fleet/structure change)
+		$timestamp	= $ray[0];
+		$from	= $ray[1];
+		$recon	= $ray[2]; //reconnoiter structures, conduct fleet reconnaissance
+		$target	= $ray[3];
+		$structs	= $ray[4];
+		
+		//echo $timestamp . '<br>';
+		//echo $from . '<br>';
+		//echo $target . '<br>';
+		//echo $recon . '<br>';
+		//echo $structs . '<br>';
+		
+		//Determine structure or fleet recon
+		if ($recon == 'reconnoiter structures')
+		{
+			$reconnaitertype = '1'; //structure
+		}
+		else
+		{
+			$reconnaitertype = '2'; //fleet
+		}
+	}
 	parseDate($timestamp);
 	parseFrom($from);
 	parseTarget($target);
