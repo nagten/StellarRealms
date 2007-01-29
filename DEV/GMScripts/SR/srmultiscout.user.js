@@ -14,6 +14,11 @@ var ageThreshold = GM_getValue('ageThreshold', 72);
 	var scoutType = GM_getValue('scoutType', 0);
 	if (scoutType < 0) GM_setValue('scoutType', 0); //Normal scout
 	if (scoutType > 1) GM_setValue('scoutType', 1); //Deep recon scout
+
+	var scoutType = GM_getValue('reconnaiterType', 0);
+	if (scoutType < 0 ) GM_setValue('reconnaiterType', 0); //Fleet recon //|| > 2
+	if (scoutType == 1) GM_setValue('reconnaiterType', 1); //Struct recon
+	if (scoutType == 2) GM_setValue('reconnaiterType', 2); //Both, fleet and structure recon
 }
 
 function initTable()
@@ -23,6 +28,9 @@ function initTable()
 	filterSpan.innerHTML =	'<table width="100%" cellspacing="0" cellpadding="0"><tbody id="multiScoutBody">' +
 							'<tr id="multiScoutHeader"><td width="100%" colspan="3" class="v11-TABLE-title">Multi Scout</td></tr>' +
 							'<tr><td width="100%" colspan="3" class="v11-cell-normal">Scout type: ' +
+							'<label for="multiScout-OptReconnaiterType0"><input type="radio" name="multiScout-OptReconnaiterType" value="0" id="multiScout-OptReconnaiterType0"> Fleet</label>' +
+							'<label for="multiScout-OptReconnaiterType1"><input type="radio" name="multiScout-OptReconnaiterType" value="1" id="multiScout-OptReconnaiterType1"> Structures</label>' +
+							'<label for="multiScout-OptReconnaiterType2"><input type="radio" name="multiScout-OptReconnaiterType" value="2" id="multiScout-OptReconnaiterType2"> Both</label>' +
 							'<label for="multiScout-OptTypeScout0"><input type="radio" name="multiScout-OptTypeScout" value="0" id="multiScout-OptTypeScout0"> Scout</label>' +
 							'<label for="multiScout-OptTypeScout1"><input type="radio" name="multiScout-OptTypeScout" value="1" id="multiScout-OptTypeScout1"> Deep Recon</label>' +
 							'  <button id="multiScout-OptAgeThreshold">Highlight threshold</button>' +
@@ -45,9 +53,17 @@ function initTable()
 	//Select scout type default is Normal Scout
 	document.getElementById("multiScout-OptTypeScout"+GM_getValue('scoutType', 0)).checked = true;
 
+	//Select reconnaiter type default is fleet
+	document.getElementById("multiScout-OptReconnaiterType"+GM_getValue('reconnaiterType', 0)).checked = true;
+
 	//Set option handlers
 	document.getElementById("multiScout-OptTypeScout0").addEventListener('click', function () { GM_setValue('scoutType', 0); }, false);
 	document.getElementById("multiScout-OptTypeScout1").addEventListener('click', function () { GM_setValue('scoutType', 1); }, false);
+
+	document.getElementById("multiScout-OptReconnaiterType0").addEventListener('click', function () { GM_setValue('reconnaiterType', 0); }, false);
+	document.getElementById("multiScout-OptReconnaiterType1").addEventListener('click', function () { GM_setValue('reconnaiterType', 1); }, false);
+	document.getElementById("multiScout-OptReconnaiterType2").addEventListener('click', function () { GM_setValue('reconnaiterType', 2); }, false);
+
 	document.getElementById("multiScout-OptAgeThreshold").addEventListener('click', function ()
 	{GM_setValue('scoutType', prompt("Highlight planets that haven't been scouted for how many turns? (Changes take effect after refresh.)", GM_getValue('ageThreshold', ageThreshold))); }, false);
 
@@ -101,7 +117,7 @@ function addAllPlanets()
 	for (var intI=1; intI < planetListLength; intI++)
 	{
 
-		planetsList = planetsList + intI
+		planetsList = planetsList + intI;
 
 		if (planetListLength != intI + 1)
 		{
@@ -165,7 +181,7 @@ function addRow(planetID, insertAtEnd)
 	newRow.appendChild(planetCell);
 
 	//Now start on status
-	planetCell = document.createElement("td")
+	planetCell = document.createElement("td");
 	planetCell.className = "v11-cell-normal";
 	planetCell.width = "100%";
 
@@ -194,7 +210,7 @@ function addRow(planetID, insertAtEnd)
 	newRow.appendChild(planetCell);
 
 	//Now start on tools
-	planetCell = document.createElement("td")
+	planetCell = document.createElement("td");
 	planetCell.className = "v11-cell-normal";
 	planetCell.noWrap = true;
 
@@ -265,13 +281,8 @@ function deletePlanet(planetID)
 	document.getElementById("multiScoutBody").removeChild(document.getElementById("multiScout-PlanetRow"+planetID));
 }
 
-function sendScout(planetID)
+function sendScoutWithUrl(postdata, planetID)
 {
-	//We send out the scout
-	var postdata = "AttackTypeID=7"; //scouting
-	postdata = postdata + "&Unit_"+(5+GM_getValue('scoutType',0))+"=1";
-	postdata = postdata + "&TargetID="+planetID;
-
 	GM_xmlhttpRequest(
 	{
 		method: 'POST',
@@ -283,9 +294,9 @@ function sendScout(planetID)
 		data: postdata,
 		onload: function(responseDetails)
 		{
-			if(responseDetails.status == 200) //completed normally
+			if(responseDetails.status = 200) //completed normally
 			{
-				GM_log(responseDetails.responseText);
+				//GM_log(responseDetails.responseText);
 
 				var matches = responseDetails.responseText.match(/Will arrive at destination in (\d+) month/);
 				if (matches)
@@ -336,6 +347,48 @@ function sendScout(planetID)
 			}
 		}
 	});
+}
+
+function sendScout(planetID)
+{
+	var postdata = '';
+
+	//We send out the scout
+	if (GM_getValue('reconnaiterType',0) == 0)
+	{
+		//Reconnaiter Fleet
+		postdata = "AttackTypeID=6"; //scouting
+		postdata = postdata + "&Unit_"+(5+GM_getValue('scoutType',0))+"=1";
+		postdata = postdata + "&TargetID="+planetID;
+
+		sendScoutWithUrl(postdata, planetID);
+	}
+	else if (GM_getValue('reconnaiterType',0) == 1)
+	{
+		//Reconnaiter Structures
+		postdata = "AttackTypeID=7"; //scouting
+		postdata = postdata + "&Unit_"+(5+GM_getValue('scoutType',0))+"=1";
+		postdata = postdata + "&TargetID="+planetID;
+
+		sendScoutWithUrl(postdata, planetID);
+	}
+	else if (GM_getValue('reconnaiterType',0) == 2)
+	{
+		//Reconnaiter Both structure and Fleet
+		postdata = "AttackTypeID=6"; //scouting
+		postdata = postdata + "&Unit_"+(5+GM_getValue('scoutType',0))+"=1";
+		postdata = postdata + "&TargetID="+planetID;
+
+		//Fleet
+		sendScoutWithUrl(postdata, planetID);
+
+		postdata = "AttackTypeID=7"; //scouting
+		postdata = postdata + "&Unit_"+(5+GM_getValue('scoutType',0))+"=1";
+		postdata = postdata + "&TargetID="+planetID;
+
+		//Structure
+		sendScoutWithUrl(postdata, planetID);
+	}
 }
 
 function selectPlanet(planetID, state)
@@ -392,7 +445,7 @@ function countSelected()
 
 function sendScoutToMany()
 {
-	//Send mnay scouts at once
+	//Send many scouts at once
 	doSelected(function (planetID){	changeStatus(planetID, "Attempting to send scout. "); sendScout(planetID);});
 }
 
