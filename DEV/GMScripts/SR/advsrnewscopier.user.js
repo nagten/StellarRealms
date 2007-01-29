@@ -7,11 +7,10 @@
 
 (function()
 {
-    var scouturl = ['http://www.idsfadt.com/Cabal/Scout/scout_internals.php?action=input&report=','http://www.idsfadt.com/Murc/Scout/scout_internals.php?action=input&report='];
+   	//var scouturl = ['http://www.idsfadt.com/Cabal/Scout/scout_internals.php?action=input&report=','http://www.idsfadt.com/Murc/Scout/scout_internals.php?action=input&report='];
+	var scouturl = ['http://localhost/Cabal/Scout/scout_internals.php?action=input&report='];
 
-    /* -------- setClipboard -------- //
-    *
-    * Puts "text" on the windows clipboard.
+    /* Puts "text" on the windows clipboard.
     * From: http://www.bigbold.com/snippets/posts/show/1080
     */
     function setClipboard(text)
@@ -74,65 +73,71 @@
             }
             return buf.join("")
         }
-    } // -------- End setClipboard -------- //
+    }
 
-    /* -------- extractScoutMsg -------- //
-    *
-    * Extract the usefull data from a scout report.
-    */
+    //Extract the usefull data from a scout report.
     function extractScoutMsg(msgToExtract,delimiter)
-    {
-        var msgExtd, msgDefenses;
-        msgExtd = msgToExtract.childNodes[0].nodeValue.match(/Date:\s+([^M]*M)/)[1] + delimiter;
-        msgExtd += msgToExtract.childNodes[2].nodeValue.match(/From:\s+(.*)/)[1] + delimiter;
-        msgExtd += msgToExtract.childNodes[8].nodeValue.match(/reconnoiter structures at (.*).$/)[1] + delimiter;
-        msgDefenses = msgToExtract.innerHTML.replace(/\n/g, " ").match(/defending force consisted of ([^.]*)\./);
-        if (msgDefenses)
-        {
-            msgExtd += msgDefenses[1];
-        } else
-        {
-            msgExtd += 'No defending forces were found.'
-            // == 'No defending forces were found.'
-        }
-        return msgExtd;
-    } // -------- End extractScoutMsg -------- //
+	    {
+	        var msgExtd, msgDefenses;
 
-    /* -------- scoutToClipboard -------- //
-    *
-    * Event handler that sends the usefull data from a scout report to the clipboard.
-    */
+			//get date
+			//GM_log(msgToExtract.childNodes[0].nodeValue.match(/Date:\s+([^M]*M)/)[1] + delimiter);
+	        msgExtd = msgToExtract.childNodes[0].nodeValue.match(/Date:\s+([^M]*M)/)[1] + delimiter;
+
+	        //get from
+	        //GM_log(msgToExtract.childNodes[2].nodeValue.match(/From:\s+(.*)/)[1] + delimiter);
+	        msgExtd += msgToExtract.childNodes[2].nodeValue.match(/From:\s+(.*)/)[1] + delimiter;
+
+			//get type strcutures or fleet recon
+			//GM_log(msgToExtract.childNodes[8].nodeValue.match(/to (.*) at/)[1] + delimiter);
+			msgExtd += msgToExtract.childNodes[8].nodeValue.match(/to (.*) at/)[1] + delimiter;
+
+			//get planet
+			//GM_log(msgToExtract.childNodes[8].nodeValue.match(/at (.*)./)[1]  + delimiter);
+	     	msgExtd += msgToExtract.childNodes[8].nodeValue.match(/at (.*)./)[1]  + delimiter;
+
+			//Get defenses
+	        msgDefenses = msgToExtract.innerHTML.replace(/\n/g, " ").match(/defending force consisted of ([^.]*)\./);
+
+	        if (msgDefenses)
+	        {
+	            msgExtd += msgDefenses[1];
+	        }
+	        else
+	        {
+	            msgExtd += 'No defending forces were found.';
+	            // == 'No defending forces were found.'
+	        }
+	        return msgExtd;
+    }
+
+    //Event handler that sends the usefull data from a scout report to the clipboard.
     function scoutToClipboard(ev)
     {
+		//GM_log(ev.currentTarget.parentNode.nodeName);
         setClipboard(extractScoutMsg(ev.currentTarget.parentNode,'\r\n'));
-    } // -------- End scoutToClipboard -------- //
+    }
 
-    /* -------- scoutToDatabase -------- //
-    *
-    * Event handler that sends the usefull data from a scout report to the Scout Report Tool:
-    */
+    //Event handler that sends the usefull data from a scout report to the Scout Report Tool:
     function scoutToDatabase(ev)
     {
         for (intI=0;intI<scouturl.length;intI++)
-	{
-	var request = extractScoutMsg(ev.currentTarget.parentNode,'<br>');
+		{
+			var request = extractScoutMsg(ev.currentTarget.parentNode,'<br>');
 
-        request = scouturl[intI] + encodeURI(request);
-
-        GM_xmlhttpRequest({
-            method: 'GET',
-            url: request,
-            headers: {'User-agent': 'Mozilla/4.0 (compatible) Greasemonkey'},
-            onload: function(rD) {alert('status: ' + rD.statusText);},
-            onerror: function(rD) {alert('Error: ' + rD.status);},
-            onreadystatechange: function(rD) {var blub = rD.status;}
-        });
+   		 	request = scouturl[intI] + encodeURI(request);
+        	GM_xmlhttpRequest({
+	            method: 'GET',
+	            url: request,
+	            headers: {'User-agent': 'Mozilla/4.0 (compatible) Greasemonkey'},
+	            onload: function(rD) {alert('status: ' + rD.statusText);},
+	            onerror: function(rD) {alert('Error: ' + rD.status);},
+	            onreadystatechange: function(rD) {var blub = rD.status;}
+        	});
         }
-    } // -------- End scoutToDatabase -------- //
+    }
 
-    /* -------- createClickButton -------- //
-    *
-    * Creates a submit button with a given:
+	/* Creates a submit button with a given:
     *   Name (inputName)
     *   Caption (inputValue)
     *   OnClick event handler (clickHandler)
@@ -146,17 +151,17 @@
         btnInput.setAttribute('style','margin-right: 2pt;');
         btnInput.addEventListener('click',clickHandler,false);
         return(btnInput);
-    } // -------- End createClickButton -------- //
+    }
 
     // -------- Main -------- //
-
     var tbody = document.getElementsByTagName("center")[1].childNodes[5].childNodes[1];
-
     var cellMsg;
+
     for (i = 3; i < tbody.childNodes.length / 2; i++)
     {
         cellMsg = tbody.childNodes[i*2].childNodes[3];
-        if (cellMsg.childNodes[8].nodeValue.match(/reconnoiter structures/))
+
+       	if (cellMsg.childNodes[8].nodeValue.match(/reconnoiter structures/) || cellMsg.childNodes[8].nodeValue.match(/conduct fleet reconnaissance/))
         {
             cellMsg.setAttribute('msgType', 'StructScout');
             cellMsg.appendChild(createClickButton('StC' + i,'Scout to Clipboard',scoutToClipboard));
@@ -164,13 +169,10 @@
         }
     }
 
-
-    /* -------- Send scouting reports to the database -------- //
+    /* Send scouting reports to the database -------- //
     *
     *   Still need some cleaning up and need to rewrite the doselected function
     *   otherwise the selectall is a bit useless :)
-    *
-    *
     */
 
     function initTable()
@@ -184,7 +186,7 @@
                                 ' <button id="multiSubmitScout-ScoutReportsSelNone">Deselect all scouts</button>' +
                                 ' <button id="multiSubmitScout-SendToCB">Copy to Clipboard</button>' +
                                 ' <button id="multiSubmitScout-SubmitToDB">Submit to DB</button>' +
-				' <button id="multiSubmitScout-SetPauseLength">Set Pause Length</button>' +
+								' <button id="multiSubmitScout-SetPauseLength">Set Pause Length</button>' +
                                 '</td></tr>' +
                                 '</tbody></table><br>';
         document.body.appendChild(filterSpan);
@@ -194,9 +196,8 @@
         document.getElementById("multiSubmitScout-ScoutReportsSelNone").addEventListener('click', function () { selectAllScouts(false); }, false);
         document.getElementById("multiSubmitScout-SubmitToDB").addEventListener('click', sendMultipleScoutToDB, false);
         document.getElementById("multiSubmitScout-SendToCB").addEventListener('click', sendMultipleScoutsToClipBoard, false);
-	document.getElementById("multiSubmitScout-SetPauseLength").addEventListener('click', setPauseLengthOnDbSubmit, false);
+		document.getElementById("multiSubmitScout-SetPauseLength").addEventListener('click', setPauseLengthOnDbSubmit, false);
     }
-
 
     function selectAllScouts(state)
     {
@@ -205,7 +206,7 @@
             for (var i=0; i<checkboxes.length; i++)
             {
                 // Select,Deselect all scouting reports
-                if (checkboxes[i].parentNode.parentNode.childNodes[3].childNodes[8].nodeValue.match(/reconnoiter structures/))
+                if (checkboxes[i].parentNode.parentNode.childNodes[3].childNodes[8].nodeValue.match(/reconnoiter structures/) || checkboxes[i].parentNode.parentNode.childNodes[3].childNodes[8].nodeValue.match(/conduct fleet reconnaissance/))
                 {
                     checkboxes[i].checked = state;
                 }
@@ -213,14 +214,14 @@
         }
     }
 
-   var scoutToDbArrayControl = 0;
-   var reportsSent = 0;
-   var blnSend = false;
-   var pauseLengthBetweenReports = 200;
+	var scoutToDbArrayControl = 0;
+	var reportsSent = 0;
+	var blnSend = false;
+	var pauseLengthBetweenReports = 200;
 
     function setPauseLengthOnDbSubmit()
     {
-	pauseLengthBetweenReports = prompt("For testing you may change the pause between reports", "enter time in milliseconds");
+		pauseLengthBetweenReports = prompt("For testing you may change the pause between reports", "enter time in milliseconds");
     }
 
     function sendMultipleScoutToDB()
@@ -232,15 +233,13 @@
             if (checkboxes[scoutToDbArrayControl].checked)
                 {
                     //just an extra test
-                    if (checkboxes[scoutToDbArrayControl].parentNode.parentNode.childNodes[3].childNodes[8].nodeValue.match(/reconnoiter structures/))
-                    {
-
+                    if (checkboxes[scoutToDbArrayControl].parentNode.parentNode.childNodes[3].childNodes[8].nodeValue.match(/reconnoiter structures/) || checkboxes[scoutToDbArrayControl].parentNode.parentNode.childNodes[3].childNodes[8].nodeValue.match(/conduct fleet reconnaissance/))
+		    		{
                         for (intI=0;intI<scouturl.length;intI++)
 						{
 							var request = extractScoutMsg(checkboxes[scoutToDbArrayControl].parentNode.parentNode.childNodes[3].childNodes[8].parentNode,'<br>');
 
                         	request = scouturl[intI] + encodeURI(request);
-
 							GM_xmlhttpRequest({
 								method: 'GET',
 								url: request,
@@ -290,7 +289,7 @@
                 if (checkboxes[i].checked)
                 {
                     //just an extra test
-                    if (checkboxes[i].parentNode.parentNode.childNodes[3].childNodes[8].nodeValue.match(/reconnoiter structures/))
+                    if (checkboxes[i].parentNode.parentNode.childNodes[3].childNodes[8].nodeValue.match(/reconnoiter structures/) || checkboxes[i].parentNode.parentNode.childNodes[3].childNodes[8].nodeValue.match(/conduct fleet reconnaissance/))
                     {
                         request = request + extractScoutMsg(checkboxes[i].parentNode.parentNode.childNodes[3].childNodes[8].parentNode,'\r\n');
                         request = request + '\r\n\r\n'
