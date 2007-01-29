@@ -18,7 +18,6 @@ body {
 <body>
 <?php
 ob_start("ob_gzhandler");
-
 include("../variables.php");
 
 if( !is_null( $_POST ) )
@@ -134,6 +133,7 @@ function generatehtmltable()
         echo "<td width=\"27\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=falertlevel&sortOrder=$sortOrder\">Alt</a></span></td>\n";
         echo "<td width=\"24\"><span class=style1>Age</span></td>\n";
         echo "<td width=\"27\"><span class=style1>COP</span></td>\n";
+        echo "<td width=\"27\"><span class=style1>VOP</span></td>\n";
         echo "</tr>\n";
 
         //variables for summary row
@@ -146,14 +146,17 @@ function generatehtmltable()
         $sumMetals = 0; $sumRads = 0; $sumFoodDelta = 0; $sumMetalsDelta = 0;
         $sumMatSpace = 0; $sumProjects = 0; $sumProjectsMaximum = 0; $sumWealth = 0;
         $i = 0;
-
+        $roundend = date("m-d-Y H:i:s",mktime(10,20,00,2,27,2007));
+          
         for($i = 0; $i < $row = mysql_fetch_array($result); $i++)
         {
+          $current_date = date("m-d-Y H:i:s");
+          
           $MatSpace = $row['fmatmaximum'] - ($row['ffood'] + $row['ffuel'] + $row['fmetals'] + $row['fradioactives']);
           $PopSpace = $row['fpopmaximum'] - $row['fpop'];
           $COP = round(7.5 * (1.1 + $row['fwealth']/100) / (1+$row['freproduction']/100), 2);
+          $VOP =  round(0.05/12 * (1 + $row['fwealth']/100 + 0.1) * (TurnAge($current_date,$roundend)),2);
           
-          $current_date = date("m-d-Y H:i:s");
           if ($row['fdate'] != "")
           {
             $Age = TurnAge($row['fdate'], $current_date);
@@ -198,8 +201,9 @@ function generatehtmltable()
           echo "<td align='right'><span class=style1>" . $row['fwealth'] . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $row['falertlevel'] . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $Age . "</span></td>\n";
-		  echo "<td align='right'><span class=style1>" . $COP . "</span></td>\n";
-
+          echo "<td align='right'><span class=style1>" . $COP . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $VOP . "</span></td>\n";
+			
           $sumCredits = $sumCredits + $row['fcredits'];
           $sumCreditsDelta = $sumCreditsDelta + $row['fcreditsdelta'];
           $sumTaxRate = $sumTaxRate + $row['ftaxrate'];
@@ -246,6 +250,7 @@ function generatehtmltable()
         echo "<td align='right'><span class=style1></span></td>\n";
         echo "<td align='right'><span class=style1></span></td>\n";
         echo "<td align='right'><span class=style1></span></td>\n";
+        echo "<td align='right'><span class=style1></span></td>\n";
         echo "</table>";
       }
     }
@@ -279,7 +284,6 @@ function submitstats($post_vars_string)
       $matdelta = $post_vars_string["matdelta"];
       $bonuses = $post_vars_string["bonuses"];
       $date = date("m-d-Y H:i:s"); //date for the age column
-      //echo $date;
 
       $sqlstring = "UPDATE tblsrstats SET
           ffood = " . $mat[0] .",
