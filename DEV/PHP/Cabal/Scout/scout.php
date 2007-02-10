@@ -67,7 +67,7 @@ header("Pragma: no-cache");													// HTTP/1.0
 		onmouseout="calSwapImg('btn_dialog', 'img_Date_UP',true);"
 		title="Input Scout Report" alt="">
 	</td>
-	<td width="60%" align="center">Scouting Reports</td>
+	<td width="60%" align="center">Scouting Reports Summary</td>
 	<td width="20%"></td>
   </tr>
   <tr>
@@ -77,7 +77,7 @@ header("Pragma: no-cache");													// HTTP/1.0
 
 <div class=spacer>&nbsp;</div>
 <table width=100% border=0 bgcolor="#7BA3C9">
-  <tr>
+   <tr>
 	<td width="20%"></td>
 	<td width="60%" align="center">Planet Detail</td>
 	<td width="20%"><div id="result"></div></td>
