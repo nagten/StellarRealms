@@ -53,10 +53,11 @@ switch ($action)
 		displaySummary();
 		break;
 	case 'planet':
-		displayPlanet($planet);
+		displayPlanetDetails($planet, 1); //Structures
+		displayPlanetDetails($planet, 2); //Fleet
 		break;
 	case 'detail':
-		displayDetail($reportID);
+		displayScoutingReport($reportID);
 		break;
 }
 
@@ -64,7 +65,8 @@ switch ($action)
 
 function displaySummary()
 {
-	//Scouting Reports //1 structure, 2 fleet
+	//Scouting Reports 
+	//Reconnaitertype: 1 structure, 2 fleet
 	global $p;
 	global $p1;
 	global $p2;
@@ -647,7 +649,7 @@ function array_column_sort()
 }
 
 //==========================================================================================
-function displayPlanet($planet)
+function displayPlanetDetails($planet, $Type)
 {
 	//Planet Detail
 	global $xp;
@@ -655,13 +657,26 @@ function displayPlanet($planet)
 
 	$cnt = 0;
 
-	$SQL  = 'SELECT RecordNumber, PlanetID,PlanetName,ReportDate,ReportTime,AirOps,AirCap,';
-	$SQL .= 'Fighter,Habitat,IntelOps,Materials,';
-	$SQL .= 'Scouting,Sensors,Warehouse,Special,Speed,Rank,HabSpace,SBASE,STIDR, ';
-	$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating,Queues, SourceName, Reconnaitertype ';
-	$SQL .= 'FROM tblscout ';
-	$SQL .= 'WHERE PlanetID=' . $planet . ' ';
-	$SQL .= 'ORDER BY ReportDate DESC, ReportTime DESC';
+	if ($Type == 1)
+	{
+		$SQL  = 'SELECT RecordNumber, PlanetID,PlanetName,ReportDate,ReportTime,AirOps,AirCap,';
+		$SQL .= 'Fighter,Habitat,IntelOps,Materials,';
+		$SQL .= 'Scouting,Sensors,Warehouse,Special,Speed,Rank,HabSpace,SBASE,STIDR, ';
+		$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating,Queues, SourceName, Reconnaitertype ';
+		$SQL .= 'FROM tblscout ';
+		$SQL .= 'WHERE PlanetID=' . $planet . '  and Reconnaitertype = 1 ';
+		$SQL .= 'ORDER BY ReportDate DESC, ReportTime DESC';
+	}
+	else
+	{
+		$SQL  = 'SELECT RecordNumber, PlanetID,PlanetName,ReportDate,ReportTime,AirOps,AirCap,';
+		$SQL .= 'Fighter,Habitat,IntelOps,Materials,';
+		$SQL .= 'Scouting,Sensors,Warehouse,Special,Speed,Rank,HabSpace,SBASE,STIDR, ';
+		$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating,Queues, SourceName, Reconnaitertype ';
+		$SQL .= 'FROM tblscout ';
+		$SQL .= 'WHERE PlanetID=' . $planet . '  and Reconnaitertype = 2 ';
+		$SQL .= 'ORDER BY ReportDate DESC, ReportTime DESC';	
+	}
 	$result = mysql_query($SQL);
 	
 	if (!$result)
@@ -740,12 +755,14 @@ function displayPlanet($planet)
 
 	$bgcolor = '#F5F5F5';
 
+	/*
 	header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 	header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 	header("Cache-Control: no-store, no-cache, must-revalidate");
 	header("Cache-Control: post-check=0, pre-check=0", false);
 	header("Pragma: no-cache");
-
+	*/
+	
 	$r  = '';
 	$r .= '<div class=divDetail>';
 	$r .= '<table width=100% border=0 cellpadding=1 cellspacing=2 bgcolor=#FFFFFF>';
@@ -897,7 +914,7 @@ function calcDiffHabitat($intI,$item)
 }
 
 //==============================================================================================
-function displayDetail($reportID)
+function displayScoutingReport($reportID)
 {
 	//Selected planet Scouting Report
 	header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
