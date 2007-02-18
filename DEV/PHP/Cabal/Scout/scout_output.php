@@ -65,7 +65,7 @@ switch ($action)
 
 function displaySummary()
 {
-	//Scouting Reports 
+	//Scouting Reports
 	//Reconnaitertype: 1 structure, 2 fleet
 	global $p;
 	global $p1;
@@ -112,7 +112,7 @@ function displaySummary()
 				//We clear our planet array for the fleet recons
 				$p = array();
 			}
-		}		
+		}
 
 		while ($row = mysql_fetch_assoc($result))
 		{
@@ -133,17 +133,17 @@ function displaySummary()
 					//first report
 					$p[$planetID] = 1;
 					$p1[$planetID]['planetName'] = stripslashes($row['PlanetName']);
-					
+
 					if ($row['Reconnaitertype'] == 1)
-					{ 
+					{
 						$p1[$planetID]['reportDateTimeStructureReport']	= $row['ReportDate'] . " " . $row['ReportTime'];
 					}
 					else
 					{
 						$p1[$planetID]['reportDateTimeFleetReport'] = $row['ReportDate'] . " " . $row['ReportTime'];
 					}
-					
-					$p1[$planetID]['rank']	= $row['Rank']; //TODO maybe later show the highest rank currently fleet
+
+					$p1[$planetID]['rank']	= $row['Rank'];
 					$p1[$planetID]['sourcename']	= $row['SourceName'];
 					$p1[$planetID]['fleetrating']	= $p1[$planetID]['fleetrating'] + $row['FleetRating'];
 					$p1[$planetID]['orbrating']	= $p1[$planetID]['orbrating'] + $row['OrbRating'];
@@ -153,21 +153,21 @@ function displaySummary()
 					$p1[$planetID]['airCap']	= $p1[$planetID]['airCap'] + $row['AirCap'];
 					$p1[$planetID]['fighter']	= $p1[$planetID]['fighter'] + $row['Fighter'];
 					$p1[$planetID]['drones']	= $row['STIDR'];
-					
+
 					if ($row['Reconnaitertype'] == 1)
-					{ 
+					{
 						$p1[$planetID]['habSpace']	= $p1[$planetID]['habSpace'] + ($row['HabSpace'] / 1000000);
 					}
 					else
 					{
 						$p1[$planetID]['habSpace']	= $p1[$planetID]['habSpace'];
 					}
-					
+
 					$p1[$planetID]['intelOps']	= $p1[$planetID]['intelOps'] + $row['IntelOps'];
 					$p1[$planetID]['materials']	= $p1[$planetID]['materials'] + $row['Materials'];
 					$p1[$planetID]['scouting']	= $p1[$planetID]['scouting'] + $row['Scouting'];
 					$p1[$planetID]['warehouse']	= $p1[$planetID]['warehouse'] + $row['Warehouse'];
-					
+
 					if ($row['Reconnaitertype'] == 1)
 					{
 						$p1[$planetID]['queues']	= $p1[$planetID]['queues'] + $row['Queues'];
@@ -176,7 +176,7 @@ function displaySummary()
 					{
 						$p1[$planetID]['queues']	= $p1[$planetID]['queues'] + $row['Queues'] - 1;
 					}
-					
+
 					$p1[$planetID]['speed']	= $p1[$planetID]['speed'] + $row['Speed'];
 					$p1[$planetID]['species']	= $row['Species'];
 					$p1[$planetID]['reconnaitertype']	= $p1[$planetID]['reconnaitertype'] + $row['Reconnaitertype'];
@@ -188,7 +188,7 @@ function displaySummary()
 					$p2[$planetID]['planetName'] = stripslashes($row['PlanetName']);
 
 					if ($row['Reconnaitertype'] == 1)
-					{ 
+					{
 						$p2[$planetID]['reportDateTimeStructureReport']	= $row['ReportDate'] . " " . $row['ReportTime'];
 					}
 					else
@@ -196,7 +196,7 @@ function displaySummary()
 						$p2[$planetID]['reportDateTimeFleetReport'] = $row['ReportDate'] . " " . $row['ReportTime'];
 					}
 
-					$p2[$planetID]['rank']	= $row['Rank']; //TODO maybe later show the highest rank currently fleet
+					$p2[$planetID]['rank']	= $row['Rank'];
 					$p2[$planetID]['sourcename']	= $row['SourceName'];
 					$p2[$planetID]['fleetrating']	= $p2[$planetID]['fleetrating'] + $row['FleetRating'];
 					$p2[$planetID]['orbrating']	= $p2[$planetID]['orbrating'] + $row['OrbRating'];
@@ -206,9 +206,9 @@ function displaySummary()
 					$p2[$planetID]['airCap']	= $p2[$planetID]['airCap'] + $row['AirCap'];
 					$p2[$planetID]['fighter']	= $p2[$planetID]['fighter'] + $row['Fighter'];
 					$p2[$planetID]['drones']	= $row['STIDR'];
-					
+
 					if ($row['Reconnaitertype'] == 1)
-					{ 
+					{
 						$p2[$planetID]['habSpace']	= $p2[$planetID]['habSpace'] + ($row['HabSpace'] / 1000000);
 					}
 					else
@@ -216,12 +216,12 @@ function displaySummary()
 						$p2[$planetID]['habSpace']	= $p2[$planetID]['habSpace'] ;
 					}
 					//$p2[$planetID]['habSpace']	= $p2[$planetID]['habSpace'] + $row['HabSpace'];
-					
+
 					$p2[$planetID]['intelOps']	= $p2[$planetID]['intelOps'] + $row['IntelOps'];
 					$p2[$planetID]['materials']	= $p2[$planetID]['materials'] + $row['Materials'];
 					$p2[$planetID]['scouting']	= $p2[$planetID]['scouting'] + $row['Scouting'];
 					$p2[$planetID]['warehouse']	= $p2[$planetID]['warehouse'] + $row['Warehouse'];
-					
+
 					if ($row['Reconnaitertype'] == 1)
 					{
 						$p2[$planetID]['queues']	= $p2[$planetID]['queues'] + $row['Queues'];
@@ -243,7 +243,9 @@ function displaySummary()
 				$SQL = 'UPDATE tblscout SET Current = \'N\' WHERE RecordNumber = ' . $recNbr;
 				$dummy = mysql_query($SQL);
 			}
-		}	
+		}
+		
+		mysql_free_result($result);
 	}
 
 	foreach ($p1 as $key => $value)
@@ -318,7 +320,7 @@ function displaySummary()
 		}
 
       	$cnt++;
-		
+
 		//alternating colors
 		if ($bgcolor == '#F5F5F5')
 		{
@@ -340,7 +342,7 @@ function displaySummary()
 		if ($p1[$key]['reconnaitertype'] == 1)
 		{
 			//Structure
-			$r .= '<td class=ull>' . $pName . ' (' . $specie . ') (S)' . '<div class=hidden id=p_' . $cnt . '>' . $key . '</div></td>';	
+			$r .= '<td class=ull>' . $pName . ' (' . $specie . ') (S)' . '<div class=hidden id=p_' . $cnt . '>' . $key . '</div></td>';
 		}
 		else if ($p1[$key]['reconnaitertype'] == 2)
 		{
@@ -352,7 +354,7 @@ function displaySummary()
 			//Combined
 			$r .= '<td class=ull>' . $pName . ' (' . $specie . ') (C)' . '<div class=hidden id=p_' . $cnt . '>' . $key . '</div></td>';
 		}
-		
+
 		if ($p1[$key]['reportDateTimeStructureReport'] != '')
 		{
 			$r .= '<td class=xc>' . date('d-M H:i',strtotime($p1[$key]['reportDateTimeStructureReport'])) . '</td>';
@@ -361,7 +363,7 @@ function displaySummary()
 		{
 			$r .= '<td class=xc>' . $p1[$key]['reportDateTimeStructureReport'] . '</td>';
 		}
-		
+
 		if ($p1[$key]['reportDateTimeFleetReport'] != '')
 		{
 			$r .= '<td class=xc>' . date('d-M H:i',strtotime($p1[$key]['reportDateTimeFleetReport'])) . '</td>';
@@ -370,7 +372,7 @@ function displaySummary()
 		{
 			$r .= '<td class=xc>' . $p1[$key]['reportDateTimeFleetReport'] . '</td>';
 		}
-		
+
 		$r .= '<td class=xc>' . $p1[$key]['rank']	. '</td>';
 		$r .= '<td class=xc>' . $p1[$key]['sourcename']	. '</td>';
 		$r .= '<td class=xr>' . number_format($p1[$key]['fleetrating'])  . '</td>';
@@ -487,7 +489,7 @@ function summaryColumnHeader()
 	$col20 = 'uhc';
 	$col21 = 'uhc';
 	$col22 = 'uhc';
-	
+
 	switch ($sort)
 	{
 		case 'planet':
@@ -675,10 +677,10 @@ function displayPlanetDetails($planet, $Type)
 		$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating,Queues, SourceName, Reconnaitertype ';
 		$SQL .= 'FROM tblscout ';
 		$SQL .= 'WHERE PlanetID=' . $planet . '  and Reconnaitertype = 2 ';
-		$SQL .= 'ORDER BY ReportDate DESC, ReportTime DESC';	
+		$SQL .= 'ORDER BY ReportDate DESC, ReportTime DESC';
 	}
 	$result = mysql_query($SQL);
-	
+
 	if (!$result)
 	{
 		die('Invalid query: ' . mysql_error());
@@ -711,6 +713,8 @@ function displayPlanetDetails($planet, $Type)
 		$xp[$cnt]['speed']	= $row['Speed'];
 		$xp[$cnt]['reconnaitertype'] = $row['Reconnaitertype'];
 	}
+	
+	mysql_free_result($result);
 
 	$nbrReports = $cnt;
 	for ($intI = 1; $intI <= $nbrReports; $intI++)
@@ -762,7 +766,7 @@ function displayPlanetDetails($planet, $Type)
 	header("Cache-Control: post-check=0, pre-check=0", false);
 	header("Pragma: no-cache");
 	*/
-	
+
 	$r  = '';
 	$r .= '<div class=divDetail>';
 	$r .= '<table width=100% border=0 cellpadding=1 cellspacing=2 bgcolor=#FFFFFF>';
@@ -804,25 +808,26 @@ function displayPlanetDetails($planet, $Type)
 		$pName = substr($pName,0,15); //Limit name to 15 chars
 
 		$r .= '<tr bgcolor=' . $bgcolor . ' onclick="getDetail(' . $xp[$intI]['scoutID'] . ')">';
-		
-	//	$r .= '<td class=xx>' . $pName  . '<div class=hidden id=' . ('d_' . $intI) . '>' . $xp[$intI]['scoutID'] . '</div></td>';	
-		
+
+	//	$r .= '<td class=xx>' . $pName  . '<div class=hidden id=' . ('d_' . $intI) . '>' . $xp[$intI]['scoutID'] . '</div></td>';
+
 		if ($xp[$intI]['reconnaitertype'] == 1)
 		{
 			//Structure
-			$r .= '<td class=xx>' . $pName  . " (S)" . '<div class=hidden id=' . ('d_' . $intI) . '>' . $xp[$intI]['scoutID'] . '</div></td>';	
+			$r .= '<td class=xx>' . $pName  . " (S)" . '<div class=hidden id=' . ('d_' . $intI) . '>' . $xp[$intI]['scoutID'] . '</div></td>';
 		}
 		else if ($xp[$intI]['reconnaitertype'] == 2)
 		{
 			//Fleet
-			$r .= '<td class=xx>' . $pName  . " (F)" . '<div class=hidden id=' . ('d_' . $intI) . '>' . $xp[$intI]['scoutID'] . '</div></td>';	
+			//c_ to workaround an IE only bug (getelementbyID is buggy in IE)
+			$r .= '<td class=xx>' . $pName  . " (F)" . '<div class=hidden id=' . ('c_' . $intI) . '>' . $xp[$intI]['scoutID'] . '</div></td>';
 		}
-		else 
+		else
 		{
 			//Combined
-			$r .= '<td class=xx>' . $pName  . " (C)" . '<div class=hidden id=' . ('d_' . $intI) . '>' . $xp[$intI]['scoutID'] . '</div></td>';	
+			$r .= '<td class=xx>' . $pName  . " (C)" . '<div class=hidden id=' . ('d_' . $intI) . '>' . $xp[$intI]['scoutID'] . '</div></td>';
 		}
-		
+
 		$r .= '<td class=ulc>' . date('d-M-y',strtotime($xp[$intI]['reportDate']))   . '</td>';
 		$r .= '<td class=ulc>' . date('H:i',strtotime($xp[$intI]['reportTime']))   . '</td>';
 		$r .= '<td class=xc>' . $xp[$intI]['rank']         . '</td>';
@@ -949,7 +954,7 @@ function displayScoutingReport($reportID)
 	//$SQL  = 'SELECT * FROM tblscout WHERE RecordNumber=' . $reportID;
 	$SQL  = 'select PlanetID, ReportDate, ReportTime from tblscout where recordnumber =' . $reportID;
 	$result = mysql_query($SQL);
-	
+
 	if (!$result)
 	{
 		die('Invalid query: ' . mysql_error());
@@ -957,200 +962,199 @@ function displayScoutingReport($reportID)
 	else
 	{
 		$row = mysql_fetch_assoc($result);
-		
-			$SQL  = 'SELECT RecordNumber,PlanetID,PlanetName,SourceID,SourceName,ReportDate,ReportTime,';
-			$SQL .= 'sum(Reconnaitertype) as Reconnaitertype,';
-			$SQL .= 'sum(ADVGE) as ADVGE,'; 
-			$SQL .= 'sum(ADVIN) as ADVIN,'; 
-			$SQL .= 'sum(ADVTS) as ADVTS,'; 
-			$SQL .= 'sum(AEGMS) as AEGMS,'; 
-			$SQL .= 'sum(AIRB1) as AIRB1,'; 
-			$SQL .= 'sum(AIRB2) as AIRB2,'; 
-			$SQL .= 'sum(AMIPS) as AMIPS,';
-			$SQL .= 'sum(ANVBS) as ANVBS,';
-			$SQL .= 'sum(ASPHC) as ASPHC,'; 
-			$SQL .= 'sum(AVASC) as AVASC,'; 
-			$SQL .= 'sum(BADLC) as BADLC,'; 
-			$SQL .= 'sum(BARAF) as BARAF,'; 
-			$SQL .= 'sum(BARR1) as BARR1,'; 
-			$SQL .= 'sum(BARR2) as BARR2,'; 
-			$SQL .= 'sum(BATSH) as BATSH,'; 
-			$SQL .= 'sum(BERDE) as BERDE,'; 
-			$SQL .= 'sum(BIOLO) as BIOLO,'; 
-			$SQL .= 'sum(BLABM) as BLABM,'; 
-			$SQL .= 'sum(BROCE) as BROCE,'; 
-			$SQL .= 'sum(COLFR) as COLFR,'; 
-			$SQL .= 'sum(COLOS) as COLOS,'; 
-			$SQL .= 'sum(CRUBC) as CRUBC,'; 
-			$SQL .= 'sum(CRUIS) as CRUIS,'; 
-			$SQL .= 'sum(DAGHF) as DAGHF,'; 
-			$SQL .= 'sum(DEERS) as DEERS,'; 
-			$SQL .= 'sum(DEFTU) as DEFTU,'; 
-			$SQL .= 'sum(DESTR) as DESTR,'; 
-			$SQL .= 'sum(DIPCO) as DIPCO,'; 
-			$SQL .= 'sum(DRAMA) as DRAMA,'; 
-			$SQL .= 'sum(DREAD) as DREAD,'; 
-			$SQL .= 'sum(EMBAS) as EMBAS,'; 
-			$SQL .= 'sum(FANFB) as FANFB,'; 
-			$SQL .= 'sum(FARM1) as FARM1,'; 
-			$SQL .= 'sum(FARM2) as FARM2,'; 
-			$SQL .= 'sum(FARM3) as FARM3,'; 
-			$SQL .= 'sum(FIGBO) as FIGBO,'; 
-			$SQL .= 'sum(FIGIN) as FIGIN,'; 
-			$SQL .= 'sum(FIRSD) as FIRSD,'; 
-			$SQL .= 'sum(FRIGA) as FRIGA,'; 
-			$SQL .= 'sum(FUEL1) as FUEL1,'; 
-			$SQL .= 'sum(FUEL2) as FUEL2,'; 
-			$SQL .= 'sum(FOLDR) as FOLDR,'; 
-			$SQL .= 'sum(GELAB) as GELAB,'; 
-			$SQL .= 'sum(GOLBA) as GOLBA,'; 
-			$SQL .= 'sum(GNDHI) as GNDHI,'; 
-			$SQL .= 'sum(HABI1) as HABI1,'; 
-			$SQL .= 'sum(HABI2) as HABI2,'; 
-			$SQL .= 'sum(HABI3) as HABI3,'; 
-			$SQL .= 'sum(HAMGU) as HAMGU,'; 
-			$SQL .= 'sum(HVYBO) as HVYBO,'; 
-			$SQL .= 'sum(HVYCA) as HVYCA,'; 
-			$SQL .= 'sum(HVYCR) as HVYCR,'; 
-			$SQL .= 'sum(HIBCA) as HIBCA,'; 
-			$SQL .= 'sum(HOSPI) as HOPSI,'; 
-			$SQL .= 'sum(HURFC) as HURFC,'; 
-			$SQL .= 'sum(IMPFR) as IMPFR,'; 
-			$SQL .= 'sum(INSHT) as INSHT,'; 
-			$SQL .= 'sum(INTEL) as INTEL,'; 
-			$SQL .= 'sum(INTFR) as INTFR,'; 
-			$SQL .= 'sum(INTMP) as INTMP,'; 
-			$SQL .= 'sum(INTFO) as INTFO,'; 
-			$SQL .= 'sum(JUDDR) as JUDDR,'; 
-			$SQL .= 'sum(JUMP1) as JUMP1,'; 
-			$SQL .= 'sum(JUMP2) as JUMP2,'; 
-			$SQL .= 'sum(LEOSC) as LEOSC,'; 
-			$SQL .= 'sum(LIGCA) as LIGCA,'; 
-			$SQL .= 'sum(LISTN) as LISTN,'; 
-			$SQL .= 'sum(MANU1) as MANU1,'; 
-			$SQL .= 'sum(MANU2) as MANU2,'; 
-			$SQL .= 'sum(MATS1) as MATS1,'; 
-			$SQL .= 'sum(MATS2) as MATS2,'; 
-			$SQL .= 'sum(MATRC) as MATRC,'; 
-			$SQL .= 'sum(MINE1) as MINE1,'; 
-			$SQL .= 'sum(MINE2) as MINE2,'; 
-			$SQL .= 'sum(RADI1) as RADI1,'; 
-			$SQL .= 'sum(RADI2) as RADI2,'; 
-			$SQL .= 'sum(OBULK) as OBULK,'; 
-			$SQL .= 'sum(OCON1) as OCON1,'; 
-			$SQL .= 'sum(OCON2) as OCON2,'; 
-			$SQL .= 'sum(ODEFM) as ODEFM,'; 
-			$SQL .= 'sum(ODEF1) as ODEF1,'; 
-			$SQL .= 'sum(ODEF2) as ODEF2,'; 
-			$SQL .= 'sum(OMIN1) as OMIN1,'; 
-			$SQL .= 'sum(OMIN2) as OMIN2,'; 
-			$SQL .= 'sum(ORCBA) as ORCBA,'; 
-			$SQL .= 'sum(OSLD1) as OSLD1,'; 
-			$SQL .= 'sum(OSLD2) as OSLD2,'; 
-			$SQL .= 'sum(PBANK) as PBANK,'; 
-			$SQL .= 'sum(PLATE) as PLATE,'; 
-			$SQL .= 'sum(PRIHC) as PRIHC,'; 
-			$SQL .= 'sum(RAVMC) as RAVMC,'; 
-			$SQL .= 'sum(RSENS) as RSENS,'; 
-			$SQL .= 'sum(RLAB1) as RLAB1,'; 
-			$SQL .= 'sum(RLAB2) as RLAB2,'; 
-			$SQL .= 'sum(SATE1) as SATE1,'; 
-			$SQL .= 'sum(SATE2) as SATE2,'; 
-			$SQL .= 'sum(SCOUT) as SCOUT,'; 
-			$SQL .= 'sum(SBASE) as SBASE,'; 
-			$SQL .= 'sum(STIDR) as STIDR,'; 
-			$SQL .= 'sum(STOCK) as STOCK,'; 
-			$SQL .= 'sum(SDEF1) as SDEF1,'; 
-			$SQL .= 'sum(SDEF2) as SDEF2,'; 
-			$SQL .= 'sum(SSLD1) as SSLD1,'; 
-			$SQL .= 'sum(SSLD2) as SSLD2,'; 
-			$SQL .= 'sum(TANDB) as TANDB,'; 
-			$SQL .= 'sum(TERCA) as TERCA,'; 
-			$SQL .= 'sum(TORBA) as TORBA,'; 
-			$SQL .= 'sum(TRACK) as TRACK,'; 
-			$SQL .= 'sum(TSCHL) as TSCHL,'; 
-			$SQL .= 'sum(UNIVE) as UNIVE,'; 
-			$SQL .= 'sum(VENHF) as VENHF,'; 
-			$SQL .= 'sum(VESSC) as VESSC,'; 
-			$SQL .= 'sum(VINEM) as VINEM,'; 
-			$SQL .= 'sum(WARFA) as WARFA,'; 
-			$SQL .= 'sum(WASFI) as WASFI,'; 
-			$SQL .= 'sum(WAYEC) as WAYEC,'; 
-			$SQL .= 'sum(WHSE1) as WHSE1,'; 
-			$SQL .= 'sum(WHSE2) as WHSE2,'; 
-			$SQL .= 'sum(WHSE3) as WHSE3,'; 
-			$SQL .= 'sum(WEATL) as WEATL,'; 
-			$SQL .= 'sum(ZEPFD) as ZEPFD,'; 
-			$SQL .= 'AirOps, Capital, Diplomacy, sum(Fighter) as Fighter, Habitat, sum(IntelOps) as IntelOps, sum(Materials) as Materials,';
-			$SQL .= 'Reproduction, (sum(Queues) - 1) as Queues, Research, sum(Scouting) as Scouting, Sensors, Special, Speed, Training,';
-			$SQL .= 'Warehouse, Wealth, Rank, Aircap, Habspace, sum(FleetRating) as FleetRating, sum(OrbRating) as OrbRating,';
-			$SQL .= 'sum(SurRating) as SurRating, sum(BuildRating) as BuildRating, Current, Species, DurabilityPerc ';
-			$SQL .= 'FROM tblscout ';
-			$SQL .= 'WHERE PlanetID= ' . $row['PlanetID'] . ' and reportdate= \'' . $row['ReportDate'] . '\' and reporttime= \'' . $row['ReportTime'] . '\'';
-			$SQL .= ' group by PlanetID, ReportDate, ReportTime';
-			
-			$result = mysql_query($SQL);
 
-			if (!$result)
-			{
-				die('Invalid query: ' . mysql_error());
-			}
-	
-			$row = mysql_fetch_assoc($result);
-			
-			$pName = stripslashes($row['PlanetName']);
-			$pName = substr($pName,0,15); //Limit name to 15 chars
-	
-			$r .= '<tr>';
-			
-			if ($row['Reconnaitertype'] == 1)
-			{
-				//Structure
-				$r .= '<td class=xx>' . $pName	. ' (S)</td>';
-			}
-			else if($row['Reconnaitertype'] == 2)
-			{
-				//Fleet
-				$r .= '<td class=xx>' . $pName	. ' (F)</td>';
-			}
-			else if($row['Reconnaitertype'] == 3)
-			{
-				//Combined
-				$r .= '<td class=xx>' . $pName	. ' (C)</td>';
-			}
+		$SQL  = 'SELECT RecordNumber,PlanetID,PlanetName,SourceID,SourceName,ReportDate,ReportTime,';
+		$SQL .= 'sum(Reconnaitertype) as Reconnaitertype,';
+		$SQL .= 'sum(ADVGE) as ADVGE,';
+		$SQL .= 'sum(ADVIN) as ADVIN,';
+		$SQL .= 'sum(ADVTS) as ADVTS,';
+		$SQL .= 'sum(AEGMS) as AEGMS,';
+		$SQL .= 'sum(AIRB1) as AIRB1,';
+		$SQL .= 'sum(AIRB2) as AIRB2,';
+		$SQL .= 'sum(AMIPS) as AMIPS,';
+		$SQL .= 'sum(ANVBS) as ANVBS,';
+		$SQL .= 'sum(ASPHC) as ASPHC,';
+		$SQL .= 'sum(AVASC) as AVASC,';
+		$SQL .= 'sum(BADLC) as BADLC,';
+		$SQL .= 'sum(BARAF) as BARAF,';
+		$SQL .= 'sum(BARR1) as BARR1,';
+		$SQL .= 'sum(BARR2) as BARR2,';
+		$SQL .= 'sum(BATSH) as BATSH,';
+		$SQL .= 'sum(BERDE) as BERDE,';
+		$SQL .= 'sum(BIOLO) as BIOLO,';
+		$SQL .= 'sum(BLABM) as BLABM,';
+		$SQL .= 'sum(BROCE) as BROCE,';
+		$SQL .= 'sum(COLFR) as COLFR,';
+		$SQL .= 'sum(COLOS) as COLOS,';
+		$SQL .= 'sum(CRUBC) as CRUBC,';
+		$SQL .= 'sum(CRUIS) as CRUIS,';
+		$SQL .= 'sum(DAGHF) as DAGHF,';
+		$SQL .= 'sum(DEERS) as DEERS,';
+		$SQL .= 'sum(DEFTU) as DEFTU,';
+		$SQL .= 'sum(DESTR) as DESTR,';
+		$SQL .= 'sum(DIPCO) as DIPCO,';
+		$SQL .= 'sum(DRAMA) as DRAMA,';
+		$SQL .= 'sum(DREAD) as DREAD,';
+		$SQL .= 'sum(EMBAS) as EMBAS,';
+		$SQL .= 'sum(FANFB) as FANFB,';
+		$SQL .= 'sum(FARM1) as FARM1,';
+		$SQL .= 'sum(FARM2) as FARM2,';
+		$SQL .= 'sum(FARM3) as FARM3,';
+		$SQL .= 'sum(FIGBO) as FIGBO,';
+		$SQL .= 'sum(FIGIN) as FIGIN,';
+		$SQL .= 'sum(FIRSD) as FIRSD,';
+		$SQL .= 'sum(FRIGA) as FRIGA,';
+		$SQL .= 'sum(FUEL1) as FUEL1,';
+		$SQL .= 'sum(FUEL2) as FUEL2,';
+		$SQL .= 'sum(FOLDR) as FOLDR,';
+		$SQL .= 'sum(GELAB) as GELAB,';
+		$SQL .= 'sum(GOLBA) as GOLBA,';
+		$SQL .= 'sum(GNDHI) as GNDHI,';
+		$SQL .= 'sum(HABI1) as HABI1,';
+		$SQL .= 'sum(HABI2) as HABI2,';
+		$SQL .= 'sum(HABI3) as HABI3,';
+		$SQL .= 'sum(HAMGU) as HAMGU,';
+		$SQL .= 'sum(HVYBO) as HVYBO,';
+		$SQL .= 'sum(HVYCA) as HVYCA,';
+		$SQL .= 'sum(HVYCR) as HVYCR,';
+		$SQL .= 'sum(HIBCA) as HIBCA,';
+		$SQL .= 'sum(HOSPI) as HOPSI,';
+		$SQL .= 'sum(HURFC) as HURFC,';
+		$SQL .= 'sum(IMPFR) as IMPFR,';
+		$SQL .= 'sum(INSHT) as INSHT,';
+		$SQL .= 'sum(INTEL) as INTEL,';
+		$SQL .= 'sum(INTFR) as INTFR,';
+		$SQL .= 'sum(INTMP) as INTMP,';
+		$SQL .= 'sum(INTFO) as INTFO,';
+		$SQL .= 'sum(JUDDR) as JUDDR,';
+		$SQL .= 'sum(JUMP1) as JUMP1,';
+		$SQL .= 'sum(JUMP2) as JUMP2,';
+		$SQL .= 'sum(LEOSC) as LEOSC,';
+		$SQL .= 'sum(LIGCA) as LIGCA,';
+		$SQL .= 'sum(LISTN) as LISTN,';
+		$SQL .= 'sum(MANU1) as MANU1,';
+		$SQL .= 'sum(MANU2) as MANU2,';
+		$SQL .= 'sum(MATS1) as MATS1,';
+		$SQL .= 'sum(MATS2) as MATS2,';
+		$SQL .= 'sum(MATRC) as MATRC,';
+		$SQL .= 'sum(MINE1) as MINE1,';
+		$SQL .= 'sum(MINE2) as MINE2,';
+		$SQL .= 'sum(RADI1) as RADI1,';
+		$SQL .= 'sum(RADI2) as RADI2,';
+		$SQL .= 'sum(OBULK) as OBULK,';
+		$SQL .= 'sum(OCON1) as OCON1,';
+		$SQL .= 'sum(OCON2) as OCON2,';
+		$SQL .= 'sum(ODEFM) as ODEFM,';
+		$SQL .= 'sum(ODEF1) as ODEF1,';
+		$SQL .= 'sum(ODEF2) as ODEF2,';
+		$SQL .= 'sum(OMIN1) as OMIN1,';
+		$SQL .= 'sum(OMIN2) as OMIN2,';
+		$SQL .= 'sum(ORCBA) as ORCBA,';
+		$SQL .= 'sum(OSLD1) as OSLD1,';
+		$SQL .= 'sum(OSLD2) as OSLD2,';
+		$SQL .= 'sum(PBANK) as PBANK,';
+		$SQL .= 'sum(PLATE) as PLATE,';
+		$SQL .= 'sum(PRIHC) as PRIHC,';
+		$SQL .= 'sum(RAVMC) as RAVMC,';
+		$SQL .= 'sum(RSENS) as RSENS,';
+		$SQL .= 'sum(RLAB1) as RLAB1,';
+		$SQL .= 'sum(RLAB2) as RLAB2,';
+		$SQL .= 'sum(SATE1) as SATE1,';
+		$SQL .= 'sum(SATE2) as SATE2,';
+		$SQL .= 'sum(SCOUT) as SCOUT,';
+		$SQL .= 'sum(SBASE) as SBASE,';
+		$SQL .= 'sum(STIDR) as STIDR,';
+		$SQL .= 'sum(STOCK) as STOCK,';
+		$SQL .= 'sum(SDEF1) as SDEF1,';
+		$SQL .= 'sum(SDEF2) as SDEF2,';
+		$SQL .= 'sum(SSLD1) as SSLD1,';
+		$SQL .= 'sum(SSLD2) as SSLD2,';
+		$SQL .= 'sum(TANDB) as TANDB,';
+		$SQL .= 'sum(TERCA) as TERCA,';
+		$SQL .= 'sum(TORBA) as TORBA,';
+		$SQL .= 'sum(TRACK) as TRACK,';
+		$SQL .= 'sum(TSCHL) as TSCHL,';
+		$SQL .= 'sum(UNIVE) as UNIVE,';
+		$SQL .= 'sum(VENHF) as VENHF,';
+		$SQL .= 'sum(VESSC) as VESSC,';
+		$SQL .= 'sum(VINEM) as VINEM,';
+		$SQL .= 'sum(WARFA) as WARFA,';
+		$SQL .= 'sum(WASFI) as WASFI,';
+		$SQL .= 'sum(WAYEC) as WAYEC,';
+		$SQL .= 'sum(WHSE1) as WHSE1,';
+		$SQL .= 'sum(WHSE2) as WHSE2,';
+		$SQL .= 'sum(WHSE3) as WHSE3,';
+		$SQL .= 'sum(WEATL) as WEATL,';
+		$SQL .= 'sum(ZEPFD) as ZEPFD,';
+		$SQL .= 'AirOps, Capital, Diplomacy, sum(Fighter) as Fighter, Habitat, sum(IntelOps) as IntelOps, sum(Materials) as Materials,';
+		$SQL .= 'Reproduction, (sum(Queues) - 1) as Queues, Research, sum(Scouting) as Scouting, Sensors, Special, Speed, Training,';
+		$SQL .= 'Warehouse, Wealth, Rank, Aircap, Habspace, sum(FleetRating) as FleetRating, sum(OrbRating) as OrbRating,';
+		$SQL .= 'sum(SurRating) as SurRating, sum(BuildRating) as BuildRating, Current, Species, DurabilityPerc ';
+		$SQL .= 'FROM tblscout ';
+		$SQL .= 'WHERE PlanetID= ' . $row['PlanetID'] . ' and reportdate= \'' . $row['ReportDate'] . '\' and reporttime= \'' . $row['ReportTime'] . '\'';
+		$SQL .= ' group by PlanetID, ReportDate, ReportTime';
 
-			$r .= '<td class=xc>' . date('d-M-y',strtotime($row['ReportDate']))	. '</td>';
-			$r .= '<td class=xc>' . date('H:i',strtotime($row['ReportTime']))	. '</td>';
-			$r .= '<td class=xc>' . $row['Rank']	. '</td>';
-			$r .= '<td class=xc>' . $row['SourceName']	. '</td>';
-			$r .= '<td class=xc>' . $row['AirOps']	. '</td>';
-			$r .= '<td class=xc>' . $row['Capital']	. '</td>';
-			$r .= '<td class=xc>' . $row['Fighter']	. '</td>';
-			$r .= '<td class=xc>' . $row['Habitat']	. '</td>';
-			$r .= '<td class=xc>' . $row['Reproduction']	. '</td>';
-			$r .= '<td class=xc>' . $row['Wealth']	. '</td>';
-			$r .= '<td class=xc>' . $row['IntelOps']	. '</td>';
-			$r .= '<td class=xc>' . $row['Research']	. '</td>';
-			$r .= '<td class=xc>' . $row['Scouting']	. '</td>';
-			$r .= '<td class=xc>' . $row['Materials']	. '</td>';
-			$r .= '<td class=xc>' . $row['Queues']	. '</td>';
-			$r .= '<td class=xc>' . $row['Diplomacy']	. '</td>';
-			$r .= '<td class=xc>' . $row['Warehouse']	. '</td>';
-			$r .= '<td class=xc>' . $row['Speed']	. '</td>';
-			$r .= '</tr>';
-			$r .= '</table>';
-			$r .= '<div class=spacer></div>';
-			$r .= '<table width=100% border=0 cellpadding=0 cellspacing=0 bgcolor=#A9A9A9>';
-			$r .= '<tr valign=top>';
-			$r .= '<td>' . getHabitat($row)	. getSpeed($row)	. getCapital($row)	. '</td>';
-			$r .= '<td>' . getReproduction($row) . getMaterials($row) . getAirOps($row)	. getResearch($row)   . '</td>';
-			$r .= '<td>' . getWealth($row)	. getFighters($row)	. getDrones($row)	. getSurfaceDefense($row)   . getOrbitalDefense($row) 	 . getScout($row)      . '</td>';
-			$r .= '<td>' . getSensors($row)	. getQueues($row)	. getDiplomacy($row)	. getTraining($row)   .  getIntelOps($row) . '</td>';
-			$r .= '</tr>';
-			$r .= '</table>';
+		$result = mysql_query($SQL);
+
+		if (!$result)
+		{
+			die('Invalid query: ' . mysql_error());
+		}
+
+		$row = mysql_fetch_assoc($result);
+
+		$pName = stripslashes($row['PlanetName']);
+		$pName = substr($pName,0,15); //Limit name to 15 chars
+
+		$r .= '<tr>';
+
+		if ($row['Reconnaitertype'] == 1)
+		{
+			//Structure
+			$r .= '<td class=xx>' . $pName	. ' (S)</td>';
+		}
+		else if($row['Reconnaitertype'] == 2)
+		{
+			//Fleet
+			$r .= '<td class=xx>' . $pName	. ' (F)</td>';
+		}
+		else if($row['Reconnaitertype'] == 3)
+		{
+			//Combined
+			$r .= '<td class=xx>' . $pName	. ' (C)</td>';
+		}
+
+		$r .= '<td class=xc>' . date('d-M-y',strtotime($row['ReportDate']))	. '</td>';
+		$r .= '<td class=xc>' . date('H:i',strtotime($row['ReportTime']))	. '</td>';
+		$r .= '<td class=xc>' . $row['Rank']	. '</td>';
+		$r .= '<td class=xc>' . $row['SourceName']	. '</td>';
+		$r .= '<td class=xc>' . $row['AirOps']	. '</td>';
+		$r .= '<td class=xc>' . $row['Capital']	. '</td>';
+		$r .= '<td class=xc>' . $row['Fighter']	. '</td>';
+		$r .= '<td class=xc>' . $row['Habitat']	. '</td>';
+		$r .= '<td class=xc>' . $row['Reproduction']	. '</td>';
+		$r .= '<td class=xc>' . $row['Wealth']	. '</td>';
+		$r .= '<td class=xc>' . $row['IntelOps']	. '</td>';
+		$r .= '<td class=xc>' . $row['Research']	. '</td>';
+		$r .= '<td class=xc>' . $row['Scouting']	. '</td>';
+		$r .= '<td class=xc>' . $row['Materials']	. '</td>';
+		$r .= '<td class=xc>' . $row['Queues']	. '</td>';
+		$r .= '<td class=xc>' . $row['Diplomacy']	. '</td>';
+		$r .= '<td class=xc>' . $row['Warehouse']	. '</td>';
+		$r .= '<td class=xc>' . $row['Speed']	. '</td>';
+		$r .= '</tr>';
+		$r .= '</table>';
+		$r .= '<div class=spacer></div>';
+		$r .= '<table width=100% border=0 cellpadding=0 cellspacing=0 bgcolor=#A9A9A9>';
+		$r .= '<tr valign=top>';
+		$r .= '<td>' . getHabitat($row)	. getSpeed($row)	. getCapital($row)	. '</td>';
+		$r .= '<td>' . getReproduction($row) . getMaterials($row) . getAirOps($row)	. getResearch($row)   . '</td>';
+		$r .= '<td>' . getWealth($row)	. getFighters($row)	. getDrones($row)	. getSurfaceDefense($row)   . getOrbitalDefense($row) 	 . getScout($row)      . '</td>';
+		$r .= '<td>' . getSensors($row)	. getQueues($row)	. getDiplomacy($row)	. getTraining($row)   .  getIntelOps($row) . '</td>';
+		$r .= '</tr>';
+		$r .= '</table>';
 	}
-	
-	
+	mysql_free_result($result);
 	echo $r;
 }
 
