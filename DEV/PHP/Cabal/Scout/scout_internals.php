@@ -1475,6 +1475,7 @@ function updateDatabase()
 			if ($DEV)
 			{
 				//echo "Scouting report has already been added<BR>";
+				mysql_free_result($result);
 			}
 		}
 		else
