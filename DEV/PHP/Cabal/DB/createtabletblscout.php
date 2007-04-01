@@ -30,6 +30,8 @@ $strSqlString = "CREATE TABLE $mysql_tablename (
 				  `SourceName` varchar(60) NOT NULL default '',
 				  `ReportDate` date NOT NULL default '0000-00-00',
 				  `ReportTime` time NOT NULL default '00:00:00',
+				  `ReportDateTime` datetime NOT NULL default '0000-00-00 00:00:00',
+				  `Reconnaitertype` tinyint(1) NOT NULL default '1',
 				  `ADVGE` int(1) default '0',
 				  `ADVIN` int(5) default '0',
 				  `ADVTS` int(1) default '0',
@@ -177,10 +179,12 @@ $strSqlString = "CREATE TABLE $mysql_tablename (
 				  `BuildRating` int(7) default '0',
 				  `Current` char(1) default 'N',
 				  `Species` varchar(40) default '',
+				  `DurabilityPerc` float default '1',
 				  PRIMARY KEY  (`RecordNumber`,`PlanetID`,`SourceID`),
 				  KEY `PlanetID` (`PlanetID`),
 				  KEY `ReportDate` (`ReportDate`),
 				  KEY `ReportTime` (`ReportTime`),
+				  KEY `ReportDateTime` (`ReportDateTime`),
 				  KEY `Current` (`Current`)
                   ) TYPE=MyISAM";
 
