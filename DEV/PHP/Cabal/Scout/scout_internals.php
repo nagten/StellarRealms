@@ -1332,6 +1332,7 @@ function updateDatabase()
 	$sourceName = $dat['from'];
 	$reportDate = $dat['date'];
 	$reportTime = $dat['time'];
+	$reportDateTime = $dat['date'] . ' ' . $dat['time'];
 
 	$ok  = true;
 	$err = '';
@@ -1642,8 +1643,10 @@ function updateDatabase()
 				$dat['Materials'] = $dat['Materials'] * 1.07;
 			}
 
+			$reportDateTime = $reportDate . ' ' . $reportTime;
+			
 			//Insert the new scouting report
-			$SQL  = 'INSERT INTO tblscout (PlanetID,PlanetName,SourceID,SourceName,ReportDate,ReportTime,';
+			$SQL  = 'INSERT INTO tblscout (PlanetID,PlanetName,SourceID,SourceName,ReportDate,ReportTime,ReportDateTime,';
 			$SQL .= 'ADVIN,ADVGE,ADVTS,AEGMS,AIRB1,AIRB2,ANVBS,ASPHC,AVASC,BADLC,';
 			$SQL .= 'BARAF,BARR1,BARR2,BATSH,BERDE,BIOLO,BLABM,COLFR,COLOS,CRUBC,CRUIS,';
 			$SQL .= 'DAGHF,DEERS,DEFTU,DESTR,DIPCO,DRAMA,DREAD,EMBAS,FANFB,FARM1,';
@@ -1667,6 +1670,7 @@ function updateDatabase()
 			$SQL .= '\'' . $dat['from']	. '\',';
 			$SQL .= '\'' . $reportDate	. '\',';
 			$SQL .= '\'' . $reportTime	. '\',';
+			$SQL .= '\'' . $reportDateTime . '\',';
 			$SQL .= '\'' . $dat['ADVIN']	. '\',';
 			$SQL .= '\'' . $dat['ADVGE']	. '\',';
 			$SQL .= '\'' . $dat['ADVTS']	. '\',';
