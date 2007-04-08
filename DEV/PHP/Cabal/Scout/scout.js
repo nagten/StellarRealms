@@ -72,12 +72,28 @@ function displayDetail() {
 }
 
 
+function log(message) {
+    if (!log.window_ || log.window_.closed) {
+        var win = window.open("", null, "width=400,height=200," +
+                              "scrollbars=yes,resizable=yes,status=no," +
+                              "location=no,menubar=no,toolbar=no");
+        if (!win) return;
+        var doc = win.document;
+        doc.write("<html><head><title>Debug Log</title></head>" +
+                  "<body></body></html>");
+        doc.close();
+        log.window_ = win;
+    }
+    var logLine = log.window_.document.createElement("div");
+    logLine.appendChild(log.window_.document.createTextNode(message));
+    log.window_.document.body.appendChild(logLine);
+}
 
 function processInput() {
 	var report = gE('hiddenHolder').innerText;
 	
 	report = ConvertCRLF(report);
-	report = encodeURI(report);
+	report = encodeURIComponent(report);
 
 	http1.open('get', 'scout_internals.php?action=input&report=' + report);
 	http1.onreadystatechange = displayTable; 
