@@ -687,7 +687,7 @@ function displayPlanetDetails($planet, $Type)
 	}
 
 	while ($row = mysql_fetch_assoc($result))
-	{
+	{		
 		$cnt++;
 		$xp[$cnt]['scoutID']	= $row['RecordNumber'];
 		$xp[$cnt]['planetID']	= $row['PlanetID'];
@@ -716,7 +716,7 @@ function displayPlanetDetails($planet, $Type)
 	
 	mysql_free_result($result);
 
-	$nbrReports = $cnt;
+	$nbrReports = $cnt;		
 	for ($intI = 1; $intI <= $nbrReports; $intI++)
 	{
 		if ($intI < $nbrReports)
@@ -794,7 +794,7 @@ function displayPlanetDetails($planet, $Type)
 	$r .= '</tr>';
 
 	for ($intI = 1; $intI <= $nbrReports; $intI++)
-	{
+	{	
 		if ($bgcolor == '#F5F5F5')
 		{
 			$bgcolor = '#FFFFFF';
@@ -1086,6 +1086,7 @@ function displayScoutingReport($reportID)
 		$SQL .= 'sum(WHSE3) as WHSE3,';
 		$SQL .= 'sum(WEATL) as WEATL,';
 		$SQL .= 'sum(ZEPFD) as ZEPFD,';
+		$SQL .= 'sum(BBFIL) as BBFIL,';
 		$SQL .= 'AirOps, Capital, Diplomacy, sum(Fighter) as Fighter, Habitat, sum(IntelOps) as IntelOps, sum(Materials) as Materials,';
 		$SQL .= 'Reproduction, (sum(Queues) - 1) as Queues, Research, sum(Scouting) as Scouting, Sensors, Special, Speed, Training,';
 		$SQL .= 'Warehouse, Wealth, Rank, Aircap, Habspace, sum(FleetRating) as FleetRating, sum(OrbRating) as OrbRating,';
@@ -1275,6 +1276,15 @@ function getCapital($row)
 		$r .= '</tr>';
 	}
 
+	if ($row['BBFIL'] > 0)
+	{
+		$r .= '<tr>';
+		$r .= '<td width=10% class=rptrdur>' . number_format($row['BBFIL'] * conBBFIL * $row['DurabilityPerc']) . '</td>';
+		$r .= '<td width=10% class=rptr>' . $row['BBFIL'] . '</td>';
+		$r .= '<td width=80% class=rptl>bundle of black filaments</td>';
+		$r .= '</tr>';
+	}
+	
 	if ($row['COLFR'] > 0)
 	{
 		$r .= '<tr>';
