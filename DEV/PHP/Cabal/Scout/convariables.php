@@ -120,6 +120,7 @@
 	define("conWAYEC", "32"); //Wayfarer Exploration Cruiser
 	define("conWEATL", "50"); //Weapons Technology Laboratory
 	define("conZEPFD", "18"); //Zephyr Fast Destroyer
+	define("conBBFIL", "1"); //bundle of black filaments
 
 	//Airbase capacity
 	define("conAIRB1CAP", "200");
