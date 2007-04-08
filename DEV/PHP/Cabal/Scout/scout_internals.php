@@ -234,6 +234,21 @@ function TurnAge($start_date, $end_date)
 	}
 }
 
+function write_to_log($text)
+{
+	$CRLF = "\r\n";
+	$log_file = '../Logs/scout_log_' . date("mdy") . '.txt';
+	$fp = fopen($log_file,'a');
+	
+	if ($fp) 
+	{
+		//$text = str_replace(chr(2),'$',$text);
+		$msg = date("m.d.y H:i:s") . ' - ' . $text . $CRLF;
+		fwrite($fp,$msg);
+		fclose($fp);
+	}
+}
+
 function parseDate($line)
 {
 	global $dat;
@@ -394,6 +409,11 @@ function parse_B_structs($name,$qty)
 
 	switch ($name)
 	{
+		case 'bundle of black filaments':
+			$dat['BBFIL']       = $qty;
+			$dat['Capital']    += $qty;
+			$dat['FleetRating']   += ($qty * conBBFIL);
+			break;
 		case 'Badger Light Cruiser':
 			$dat['BADLC']       = $qty;
 			$dat['Capital']    += $qty;
@@ -1504,7 +1524,7 @@ function updateDatabase()
 					//durability +3%
 					$durability = '1.03';
 				}
-
+/*
 				$dat['ADVIN']  = $dat['ADVIN'];
 				$dat['ADVGE']  = $dat['ADVGE'];
 				$dat['ADVTS']  = $dat['ADVTS'];
@@ -1626,6 +1646,7 @@ function updateDatabase()
 				$dat['WHSE3']  = $dat['WHSE3'];
 				$dat['WEATL']  = $dat['WEATL'];
 				$dat['ZEPFD']  = $dat['ZEPFD'];
+				*/
 				$dat['SurRating'] = $dat['SurRating'] * $durability;
 				$dat['OrbRating'] = $dat['OrbRating'] * $durability;
 				$dat['FleetRating'] = $dat['FleetRating'] * $durability;
@@ -1662,7 +1683,7 @@ function updateDatabase()
 			$SQL .= 'AirOps,Capital,Diplomacy,Fighter,Habitat,IntelOps,';
 			$SQL .= 'Materials,Reproduction,Queues,Research,Scouting,Sensors,Warehouse,';
 			$SQL .= 'Special,Speed,Training,Wealth,Rank,AirCap,HabSpace,Current,Species,';
-			$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating,Reconnaitertype,DurabilityPerc';
+			$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating,Reconnaitertype,DurabilityPerc,BBFIL';
 			$SQL .= ') VALUES (';
 			$SQL .= '\'' . $planetID	. '\',';
 			$SQL .= '\'' . $dat['target']	. '\',';
@@ -1819,7 +1840,8 @@ function updateDatabase()
 			$SQL .= '\'' . $dat['SurRating']	. '\',';
 			$SQL .= '\'' . $dat['BuildRating']	. '\',';
 			$SQL .= '\'' . $reconnaitertype	. '\',';
-			$SQL .= '\'' . $durability	. '\'';
+			$SQL .= '\'' . $durability	. '\',';
+			$SQL .= '\'' . $dat['BBFIL'] . '\'';
 			$SQL .= ')';
 			$result = mysql_query($SQL);
 
