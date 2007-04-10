@@ -125,7 +125,7 @@
 		{
 			var request = extractScoutMsg(ev.currentTarget.parentNode,'<br>');
 
-   		 	request = scouturl[intI] + encodeURI(request);
+   		 	request = scouturl[intI] + encodeURIComponent(request);
         	GM_xmlhttpRequest({
 	            method: 'GET',
 	            url: request,
@@ -239,7 +239,7 @@
 						{
 							var request = extractScoutMsg(checkboxes[scoutToDbArrayControl].parentNode.parentNode.childNodes[3].childNodes[8].parentNode,'<br>');
 
-                        	request = scouturl[intI] + encodeURI(request);
+                        	request = scouturl[intI] + encodeURIComponent(request);
 							GM_xmlhttpRequest({
 								method: 'GET',
 								url: request,
