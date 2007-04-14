@@ -1035,6 +1035,21 @@ function parse_T_structs($name,$qty)
 	global $dat;
 	switch ($name)
 	{
+		case 'Tarantula Attack Station Mark I':
+			$dat['TARA1']       = $qty;
+			$dat['Capital']    += $qty;
+			$dat['FleetRating']   += ($qty * conTARA1);
+			break;
+		case 'Tarantula Attack Station Mark II':
+			$dat['TARA2']       = $qty;
+			$dat['Capital']    += $qty;
+			$dat['FleetRating']   += ($qty * conTARA2);
+			break;
+		case 'Tarantula Attack Station Mark V':
+			$dat['TARA5']       = $qty;
+			$dat['Capital']    += $qty;
+			$dat['FleetRating']   += ($qty * conTARA5);
+			break;
 		case 'Tangler Defense Barge':
 			$dat['TANDB']       = $qty;
 			$dat['Capital']    += $qty;
@@ -1223,6 +1238,7 @@ function initialize_dat()
 	$dat['BARR1']  = '';
 	$dat['BARR2']  = '';
 	$dat['BATSH']  = '';
+	$dat['BBFIL']  = '';
 	$dat['BERDE']  = '';
 	$dat['BIOLO']  = '';
 	$dat['BLABM']  = '';
@@ -1313,6 +1329,9 @@ function initialize_dat()
 	$dat['SSLD1']  = '';
 	$dat['SSLD2']  = '';
 	$dat['TANDB']  = '';
+	$dat['TARA1']  = '';
+	$dat['TARA2']  = '';
+	$dat['TARA5']  = '';
 	$dat['TERCA']  = '';
 	$dat['TORBA']  = '';
 	$dat['TRACK']  = '';
@@ -1669,7 +1688,7 @@ function updateDatabase()
 			//Insert the new scouting report
 			$SQL  = 'INSERT INTO tblscout (PlanetID,PlanetName,SourceID,SourceName,ReportDate,ReportTime,ReportDateTime,';
 			$SQL .= 'ADVIN,ADVGE,ADVTS,AEGMS,AIRB1,AIRB2,ANVBS,ASPHC,AVASC,BADLC,';
-			$SQL .= 'BARAF,BARR1,BARR2,BATSH,BERDE,BIOLO,BLABM,COLFR,COLOS,CRUBC,CRUIS,';
+			$SQL .= 'BARAF,BARR1,BARR2,BATSH,BBFIL,BERDE,BIOLO,BLABM,COLFR,COLOS,CRUBC,CRUIS,';
 			$SQL .= 'DAGHF,DEERS,DEFTU,DESTR,DIPCO,DRAMA,DREAD,EMBAS,FANFB,FARM1,';
 			$SQL .= 'FARM2,FARM3,FIGBO,FIGIN,FIRSD,FRIGA,GELAB,GNDHI,GOLBA,HABI1,';
 			$SQL .= 'HABI2,HABI3,HAMGU,HVYBO,HVYCA,HVYCR,HIBCA,HOSPI,HURFC,IMPFR,';
@@ -1678,12 +1697,12 @@ function updateDatabase()
 			$SQL .= 'OBULK,OCON1,OCON2,ODEFM,ODEF1,ODEF2,OMIN1,OMIN2,ORCBA,OSLD1,';
 			$SQL .= 'OSLD2,PBANK,PLATE,PRIHC,FUEL1,FUEL2,RAVMC,RSENS,RLAB1,RLAB2,';
 			$SQL .= 'SATE1,SATE2,SCOUT,FOLDR,SBASE,STIDR,STOCK,SDEF1,SDEF2,SSLD1,';
-			$SQL .= 'SSLD2,TANDB,TERCA,TORBA,TRACK,TSCHL,UNIVE,VENHF,VESSC,VINEM,';
+			$SQL .= 'SSLD2,TANDB,TARA1,TARA2,TARA5,TERCA,TORBA,TRACK,TSCHL,UNIVE,VENHF,VESSC,VINEM,';
 			$SQL .= 'WARFA,WASFI,WAYEC,WHSE1,WHSE2,WHSE3,WEATL,ZEPFD,BROCE,AMIPS,';
 			$SQL .= 'AirOps,Capital,Diplomacy,Fighter,Habitat,IntelOps,';
 			$SQL .= 'Materials,Reproduction,Queues,Research,Scouting,Sensors,Warehouse,';
 			$SQL .= 'Special,Speed,Training,Wealth,Rank,AirCap,HabSpace,Current,Species,';
-			$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating,Reconnaitertype,DurabilityPerc,BBFIL';
+			$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating,Reconnaitertype,DurabilityPerc';
 			$SQL .= ') VALUES (';
 			$SQL .= '\'' . $planetID	. '\',';
 			$SQL .= '\'' . $dat['target']	. '\',';
@@ -1706,6 +1725,7 @@ function updateDatabase()
 			$SQL .= '\'' . $dat['BARR1']	. '\',';
 			$SQL .= '\'' . $dat['BARR2']	. '\',';
 			$SQL .= '\'' . $dat['BATSH']	. '\',';
+			$SQL .= '\'' . $dat['BBFIL'] 	. '\',';
 			$SQL .= '\'' . $dat['BERDE']	. '\',';
 			$SQL .= '\'' . $dat['BIOLO']	. '\',';
 			$SQL .= '\'' . $dat['BLABM']	. '\',';
@@ -1795,6 +1815,9 @@ function updateDatabase()
 			$SQL .= '\'' . $dat['SSLD1']	. '\',';
 			$SQL .= '\'' . $dat['SSLD2']	. '\',';
 			$SQL .= '\'' . $dat['TANDB']	. '\',';
+			$SQL .= '\'' . $dat['TARA1']	. '\',';
+			$SQL .= '\'' . $dat['TARA2']	. '\',';
+			$SQL .= '\'' . $dat['TARA5']	. '\',';
 			$SQL .= '\'' . $dat['TERCA']	. '\',';
 			$SQL .= '\'' . $dat['TORBA']	. '\',';
 			$SQL .= '\'' . $dat['TRACK']	. '\',';
@@ -1840,8 +1863,7 @@ function updateDatabase()
 			$SQL .= '\'' . $dat['SurRating']	. '\',';
 			$SQL .= '\'' . $dat['BuildRating']	. '\',';
 			$SQL .= '\'' . $reconnaitertype	. '\',';
-			$SQL .= '\'' . $durability	. '\',';
-			$SQL .= '\'' . $dat['BBFIL'] . '\'';
+			$SQL .= '\'' . $durability	. '\'';
 			$SQL .= ')';
 			$result = mysql_query($SQL);
 

@@ -1070,6 +1070,9 @@ function displayScoutingReport($reportID)
 		$SQL .= 'sum(SSLD1) as SSLD1,';
 		$SQL .= 'sum(SSLD2) as SSLD2,';
 		$SQL .= 'sum(TANDB) as TANDB,';
+		$SQL .= 'sum(TARA1) as TARA1,';
+		$SQL .= 'sum(TARA2) as TARA2,';
+		$SQL .= 'sum(TARA5) as TARA5,';
 		$SQL .= 'sum(TERCA) as TERCA,';
 		$SQL .= 'sum(TORBA) as TORBA,';
 		$SQL .= 'sum(TRACK) as TRACK,';
@@ -1489,6 +1492,33 @@ function getCapital($row)
 		$r .= '<td width=10% class=rptrdur>' . number_format($row['TANDB'] * conTANDB * $row['DurabilityPerc']) . '</td>';
 		$r .= '<td width=10% class=rptr>' . $row['TANDB'] . '</td>';
 		$r .= '<td width=80% class=rptl>"Tangler" Defense Barge</td>';
+		$r .= '</tr>';
+	}
+	
+	if ($row['TARA1'] > 0)
+	{
+		$r .= '<tr>';
+		$r .= '<td width=10% class=rptrdur>' . number_format($row['TARA1'] * conTARA1 * $row['DurabilityPerc']) . '</td>';
+		$r .= '<td width=10% class=rptr>' . $row['TARA1'] . '</td>';
+		$r .= '<td width=80% class=rptl>Tarantula Attack Station Mark I</td>';
+		$r .= '</tr>';
+	}
+	
+	if ($row['TARA2'] > 0)
+	{
+		$r .= '<tr>';
+		$r .= '<td width=10% class=rptrdur>' . number_format($row['TARA2'] * conTARA2 * $row['DurabilityPerc']) . '</td>';
+		$r .= '<td width=10% class=rptr>' . $row['TARA2'] . '</td>';
+		$r .= '<td width=80% class=rptl>Tarantula Attack Station Mark II</td>';
+		$r .= '</tr>';
+	}
+	
+	if ($row['TARA5'] > 0)
+	{
+		$r .= '<tr>';
+		$r .= '<td width=10% class=rptrdur>' . number_format($row['TARA5'] * conTARA5 * $row['DurabilityPerc']) . '</td>';
+		$r .= '<td width=10% class=rptr>' . $row['TARA5'] . '</td>';
+		$r .= '<td width=80% class=rptl>Tarantula Attack Station Mark V</td>';
 		$r .= '</tr>';
 	}
 
