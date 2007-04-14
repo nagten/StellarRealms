@@ -104,6 +104,9 @@
 	define("conSSLD1", "200"); //Surface Shield Generator
 	define("conSSLD2", "250"); //Surface Shield Generator (Improved)
 	define("conTANDB", "70"); //Tangler Defense Barge
+	define("conTARA1", "60"); //Taratula Attack Station Mark I
+	define("conTARA2", "60"); //Taratula Attack Station Mark II
+	define("conTARA5", "60"); //Taratula Attack Station Mark V
 	define("conTERCA", "50"); //Terrapin Carrier
 	define("conTORBA", "60"); //Tortoise Battleship
 	define("conTRACK", "60"); //Tracking Station
