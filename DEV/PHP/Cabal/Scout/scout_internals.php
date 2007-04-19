@@ -1660,12 +1660,13 @@ function updateDatabase()
 			$SQL .= 'OBULK,OCON1,OCON2,ODEFM,ODEF1,ODEF2,OMIN1,OMIN2,ORCBA,OSLD1,';
 			$SQL .= 'OSLD2,PBANK,PLATE,PRIHC,FUEL1,FUEL2,RAVMC,RSENS,RLAB1,RLAB2,';
 			$SQL .= 'SATE1,SATE2,SCOUT,FOLDR,SBASE,STIDR,STOCK,SDEF1,SDEF2,SSLD1,';
-			$SQL .= 'SSLD2,TANDB,TARA1,TARA2,TARA5,TERCA,TORBA,TRACK,TSCHL,UNIVE,VENHF,VESSC,VINEM,';
+			$SQL .= 'SSLD2,TANDB,TARA1,TARA2,TARA3,TARA4,TARA5,TERCA,TORBA,TRACK,';
+			$SQL .= 'TSCHL,UNIVE,VENHF,VESSC,VINEM,';
 			$SQL .= 'WARFA,WASFI,WAYEC,WHSE1,WHSE2,WHSE3,WEATL,ZEPFD,BROCE,AMIPS,';
 			$SQL .= 'AirOps,Capital,Diplomacy,Fighter,Habitat,IntelOps,';
 			$SQL .= 'Materials,Reproduction,Queues,Research,Scouting,Sensors,Warehouse,';
 			$SQL .= 'Special,Speed,Training,Wealth,Rank,AirCap,HabSpace,Current,Species,';
-			$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating,Reconnaitertype,DurabilityPerc';
+			$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating,Reconnaitertype,OrbSpace,SurSpace,DurabilityPerc';
 			$SQL .= ') VALUES (';
 			$SQL .= '\'' . $planetID	. '\',';
 			$SQL .= '\'' . $dat['target']	. '\',';
