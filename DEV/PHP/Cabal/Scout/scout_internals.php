@@ -354,6 +354,7 @@ function parse_A_structs($name,$qty)
 			$dat['ADVGE']       = $qty;
 			$dat['Reproduction'] += $qty;
 			$dat['BuildRating']   += ($qty * conADVGE);
+			$dat['SurSpace']   += ($qty * conssADVGE);
 			break;
 		case 'Advanced Interceptor':
 			$dat['ADVIN']       = $qty;
@@ -365,6 +366,7 @@ function parse_A_structs($name,$qty)
 			$dat['Speed']	+= ($qty * conADVTSSPEED);
 			$dat['Queues']	+= ($qty * 1);
 			$dat['BuildRating']	+= ($qty * conADVTS);
+			$dat['SurSpace']   += ($qty * conssADVTS);
 			$blnAdvancedTechShipyard = true;
 			break;
 		case 'Aegis Mobile Shield':
@@ -377,12 +379,14 @@ function parse_A_structs($name,$qty)
 			$dat['AirOps']     += $qty;
 			$dat['AirCap']     += ($qty * conAIRB1CAP);
 			$dat['BuildRating']   += ($qty * conAIRB1);
+			$dat['SurSpace']   += ($qty * conssAIRB1);
 			break;
 		case 'Airbase (Improved)':
 			$dat['AIRB2']       = $qty;
 			$dat['AirOps']     += $qty;
 			$dat['AirCap']     += ($qty * conAIRB2CAP);
 			$dat['BuildRating']   += ($qty * conAIRB2);
+			$dat['SurSpace']   += ($qty * conssAIRB2);
 			break;
 		case 'Anvil Battleship':
 			$dat['ANVBS']       = $qty;
@@ -422,10 +426,12 @@ function parse_B_structs($name,$qty)
 		case 'Barracks':
 			$dat['BARR1']       = $qty;
 			$dat['SurRating']   += ($qty * conBARR1);
+			$dat['SurSpace']   += ($qty * conssBARR1);
 			break;
 		case 'Barracks (Veteran)':
 			$dat['BARR2']       = $qty;
 			$dat['SurRating']   += ($qty * conBARR2);
+			$dat['SurSpace']   += ($qty * conssBARR2);
 			break;
 		case 'Barracuda Attack Frigate':
 			$dat['BARAF']       = $qty;
@@ -446,6 +452,7 @@ function parse_B_structs($name,$qty)
 			$dat['BIOLO']        = $qty;
 			$dat['Reproduction']  += $qty;
 			$dat['BuildRating']   += ($qty * conBIOLO);
+			$dat['SurSpace']   += ($qty * conssBIOLO);
 			$blnBiologicalResearch = true;
 			break;
 		case 'Black Widow Brood Minder':
@@ -458,6 +465,7 @@ function parse_B_structs($name,$qty)
 			$dat['Habitat']    += $qty;
 			$dat['HabSpace']   += ($qty * conBROCECAP);
 			$dat['BuildRating']   += ($qty * conBROCE);
+			$dat['SurSpace']   += ($qty * conssBROCE);
 			break;
 	}
 }
@@ -509,6 +517,7 @@ function parse_D_structs($name,$qty)
 			$dat['DEFTU']       = $qty;
 			$dat['SurDefense']    += ($qty * conDEFTU);
 			$dat['SurRating']   += ($qty * conDEFTU);
+			$dat['SurSpace']   += ($qty * conssDEFTU);
 			break;
 		case 'Destroyer':
 			$dat['DESTR']       = $qty;
@@ -519,6 +528,7 @@ function parse_D_structs($name,$qty)
 			$dat['DIPCO']       = $qty;
 			$dat['Diplomacy']  += $qty;
 			$dat['BuildRating']   += ($qty * conDIPCO);
+			$dat['SurSpace']   += ($qty * conssDIPCO);
 			break;
 		case 'Dragon Mobile Assault Platform':
 			$dat['DRAMA']       = $qty;
@@ -542,6 +552,7 @@ function parse_E_structs($name,$qty)
 			$dat['EMBAS']       = $qty;
 			$dat['Diplomacy']  += $qty;
 			$dat['BuildRating']   += ($qty * conEMBAS);
+			$dat['SurSpace']   += ($qty * conssEMBAS);
 			break;
 	}
 }
@@ -560,16 +571,19 @@ function parse_F_structs($name,$qty)
 			$dat['FARM1']       = $qty;
 			$dat['Materials']  += ($qty * conFARM1PROD);
 			$dat['BuildRating']   += ($qty * conFARM1);
+			$dat['SurSpace']   += ($qty * conssFARM1);
 			break;
 		case 'Farm II':
 			$dat['FARM2']       = $qty;
 			$dat['Materials']  += ($qty * conFARM2PROD);
 			$dat['BuildRating']   += ($qty * conFARM2);
+			$dat['SurSpace']   += ($qty * conssFARM2);
 			break;
 		case 'Farm III':
 			$dat['FARM3']       = $qty;
 			$dat['Materials']  += ($qty * conFARM3PROD);
 			$dat['BuildRating']   += ($qty * conFARM3);
+			$dat['SurSpace']   += ($qty * conssFARM3);
 			break;
 		case 'Fighter Bomber':
 			$dat['FIGBO']       = $qty;
@@ -603,6 +617,7 @@ function parse_G_structs($name,$qty)
 			$dat['GELAB']        = $qty;
 			$dat['Reproduction']  += $qty;
 			$dat['BuildRating']   += ($qty * conGELAB);
+			$dat['SurSpace']   += ($qty * conssGELAB);
 			break;
 		case 'Goliath Battleship':
 			$dat['GOLBA']       = $qty;
@@ -614,6 +629,7 @@ function parse_G_structs($name,$qty)
 			$dat['Habitat']    += $qty;
 			$dat['HabSpace']   += ($qty * conGNDHICAP);
 			$dat['BuildRating']   += ($qty * conGNDHI);
+			$dat['SurSpace']   += ($qty * conssGNDHI);
 			break;
 	}
 }
@@ -628,18 +644,21 @@ function parse_H_structs($name,$qty)
 			$dat['Habitat']    += $qty;
 			$dat['HabSpace']   += ($qty * conHABI1CAP);
 			$dat['BuildRating']   += ($qty * conHABI1);
+			$dat['SurSpace']   += ($qty * conssHABI1);
 			break;
 		case 'Habitat (Improved)':
 			$dat['HABI2']       = $qty;
 			$dat['Habitat']    += $qty;
 			$dat['HabSpace']   += ($qty * conHABI2CAP);
 			$dat['BuildRating']   += ($qty * conHABI2);
+			$dat['SurSpace']   += ($qty * conssHABI2);
 			break;
 		case 'Habitat (Ultradense)':
 			$dat['HABI3']       = $qty;
 			$dat['Habitat']    += $qty;
 			$dat['HabSpace']   += ($qty * conHABI3CAP);
 			$dat['BuildRating']   += ($qty * conHABI3);
+			$dat['SurSpace']   += ($qty * conssHABI3);
 			break;
 		case 'Hammer Gunship':
 			$dat['HAMGU']       = $qty;
@@ -666,11 +685,13 @@ function parse_H_structs($name,$qty)
 			$dat['Habitat']    += $qty;
 			$dat['HabSpace']   += ($qty * conHIBCACAP);
 			$dat['BuildRating']   += ($qty * conHIBCA);
+			$dat['SurSpace']   += ($qty * conssHIBCA);
 			break;
 		case 'Hospital':
 			$dat['HOSPI']        = $qty;
 			$dat['Reproduction']  += $qty;
 			$dat['BuildRating']   += ($qty * conHOSPI);
+			$dat['SurSpace']   += ($qty * conssHOSPI);
 			break;
 		case 'Hurricane Fast Cruiser':
 			$dat['HURFC']       = $qty;
@@ -694,12 +715,14 @@ function parse_I_structs($name,$qty)
 			$dat['Research']   += $qty;
 			$dat['HabSpace']   += ($qty * conINSHTCAP);
 			$dat['BuildRating']   += ($qty * conINSHT);
+			$dat['SurSpace']   += ($qty * conssHOSPI);
 			break;
 		case 'Intelligence Agency':
 			$dat['INTEL']       = $qty;
 			$dat['IntelOps']   += $qty;
 			$dat['HabSpace']   += ($qty * conINTELCAP);
 			$dat['BuildRating']   += ($qty * conINTEL);
+			$dat['SurSpace']   += ($qty * conssINTEL);
 			break;
 		case 'Interdictor Frigate':
 			$dat['INTFR']       = $qty;
@@ -710,11 +733,13 @@ function parse_I_structs($name,$qty)
 			$dat['INTMP']       = $qty;
 			$dat['Wealth']     += $qty;
 			$dat['BuildRating']   += ($qty * conINTMP);
+			$dat['SurSpace']   += ($qty * conssINTMP);
 			break;
 		case 'Interstellar Forum':
 			$dat['INTFO']       = $qty;
 			$dat['Reproduction'] += $qty;
 			$dat['BuildRating']   += ($qty * conINTFO);
+			$dat['SurSpace']   += ($qty * conssINTFO);
 			break;
 	}
 }
@@ -733,11 +758,13 @@ function parse_J_structs($name,$qty)
 			$dat['JUMP1']	= $qty;
 			$dat['Speed']	+= ($qty * conJUMP1SPEED);
 			$dat['BuildRating']	+= ($qty * conJUMP1);
+			$dat['OrbSpace']   += ($qty * conosJUMP1);
 			break;
 		case 'Jumpgate (Improved)':
 			$dat['JUMP2']	= $qty;
 			$dat['Speed']	+= ($qty * conJUMP2SPEED);
 			$dat['BuildRating']	+= ($qty * conJUMP2);
+			$dat['OrbSpace']   += ($qty * conosJUMP2);
 			break;
 	}
 }
@@ -769,6 +796,7 @@ function parse_L_structs($name,$qty)
 			$dat['LISTN']       = $qty;
 			$dat['Sensors']    += $qty;
 			$dat['BuildRating']   += ($qty * conLISTN);
+			$dat['OrbSpace']   += ($qty * conosLISTN);
 			break;
 	}
 }
@@ -786,47 +814,56 @@ function parse_M_structs($name,$qty)
 			$dat['MANU1']       = $qty;
 			$dat['Queues']     += ($qty * 1);
 			$dat['BuildRating']   += ($qty * conMANU1);
+			$dat['SurSpace']   += ($qty * conssMANU1);
 			break;
 		case 'Manufacturing Plant (Improved)':
 			$dat['MANU2']       = $qty;
 			$dat['Queues']     += ($qty * 2);
 			$dat['BuildRating']   += ($qty * conMANU2);
+			$dat['SurSpace']   += ($qty * conssMANU2);
 			break;
 		case 'Materials Processing Plant':
 			$blnmatproc = true;
 			$dat['MATS1']       = $qty;
 			$dat['BuildRating']   += ($qty * conMATS1);
+			$dat['SurSpace']   += ($qty * conssMATS1);
 			break;
 		case 'Materials Processing Plant (Improved)':
 		  	$blnimpmatproc = true;
 			$dat['MATS2']       = $qty;
 			$dat['BuildRating']   += ($qty * conMATS2);
+			$dat['SurSpace']   += ($qty * conssMATS2);
 			break;
 		case 'Materials Research Complex':
 			$dat['MATRC']       = $qty;
 			$dat['Queues']     += ($qty * 1);
 			$dat['BuildRating']   += ($qty * conMATRC);
+			$dat['SurSpace']   += ($qty * conssMATRC);
 			$blnMatResearchComplex = true;
 			break;
 		case 'Mining Facility (Metals)':
 			$dat['MINE1']       = $qty;
 			$dat['Materials']  += ($qty * conMINE1PROD);
 			$dat['BuildRating']   += ($qty * conMINE1);
+			$dat['SurSpace']   += ($qty * conssMINE1);
 			break;
 		case 'Mining Facility (Metals - Improved)':
 			$dat['MINE2']       = $qty;
 			$dat['Materials']  += ($qty * conMINE2PROD);
 			$dat['BuildRating']   += ($qty * conMINE2);
+			$dat['SurSpace']   += ($qty * conssMINE2);
 			break;
 		case 'Mining Facility (Radioactives)':
 			$dat['RADI1']       = $qty;
 			$dat['Materials']  += ($qty * conRAD1PROD);
 			$dat['BuildRating']   += ($qty * conRADI1);
+			$dat['SurSpace']   += ($qty * conssRADI1);
 			break;
 		case 'Mining Facility (Radioactives - Improved)':
 			$dat['RADI2']       = $qty;
 			$dat['Materials']  += ($qty * conRAD2PROD);
 			$dat['BuildRating']   += ($qty * conRADI2);
+			$dat['SurSpace']   += ($qty * conssRADI2);
 			break;
 	}
 }
@@ -847,44 +884,54 @@ function parse_O_structs($name,$qty)
 		case 'Orbital Bulwark':
 			$dat['OBULK']        = $qty;
 			$dat['OrbRating']   += ($qty * conOBULK);
+			$dat['OrbSpace']   += ($qty * conosOBULK);
 			break;
 		case 'Orbital Construction Yard':
 			$dat['OCON1']        = $qty;
 			$dat['Queues']      += ($qty * 1);
 			$dat['BuildRating']   += ($qty * conOCON1);
+			$dat['OrbSpace']   += ($qty * conosOCON1);
 			break;
 		case 'Orbital Construction Yard (Improved)':
 			$dat['OCON2']        = $qty;
 			$dat['Queues']      += ($qty * 2);
 			$dat['BuildRating']   += ($qty * conOCON2);
+			$dat['OrbSpace']   += ($qty * conosOCON2);
 			break;
 		case 'Orbital Defense Monitor':
 			$dat['ODEFM']       = $qty;
 			$dat['OrbRating']   += ($qty * conODEFM);
+			$dat['OrbSpace']   += ($qty * conosODEFM);
 			break;
 		case 'Orbital Defense Platform':
 			$dat['ODEF1']       = $qty;
 			$dat['OrbRating']   += ($qty * conODEF1);
+			$dat['OrbSpace']   += ($qty * conosODEF1);
 			break;
 		case 'Orbital Defense Platform (Improved)':
 			$dat['ODEF2']       = $qty;
 			$dat['OrbRating']   += ($qty * conODEF2);
+			$dat['OrbSpace']   += ($qty * conosODEF2);
 			break;
 		case 'Orbital Minefield':
 			$dat['OMIN1']       = $qty;
 			$dat['OrbRating']   += ($qty * conOMIN1);
+			$dat['OrbSpace']   += ($qty * conosOMIN1);
 			break;
 		case 'Orbital Minefield (Improved)':
 			$dat['OMIN2']       = $qty;
 			$dat['OrbRating']   += ($qty * conOMIN2);
+			$dat['OrbSpace']   += ($qty * conosOMIN2);
 			break;
 		case 'Orbital Shield':
 			$dat['OSLD1']       = $qty;
 			$dat['OrbRating']   += ($qty * conOSLD1);
+			$dat['OrbSpace']   += ($qty * conosOSLD1);
 			break;
 		case 'Orbital Shield (Improved)':
 			$dat['OSLD2']       = $qty;
 			$dat['OrbRating']   += ($qty * conOSLD2);
+			$dat['OrbSpace']   += ($qty * conosOSLD2);
 			break;
 		case 'Orca Battleship':
 			$dat['ORCBA']       = $qty;
@@ -905,11 +952,13 @@ function parse_P_structs($name,$qty)
 			$dat['PBANK']       = $qty;
 			$dat['Wealth']     += $qty;
 			$dat['BuildRating']   += ($qty * conPBANK);
+			$dat['SurSpace']   += ($qty * conssPBANK);
 			break;
 		case 'Plating Factory':
 			$dat['PLATE']       = $qty;
 			$dat['Special']    += $qty;
 			$dat['SurRating']   += ($qty * conPLATE);
+			$dat['SurSpace']   += ($qty * conssPLATE);
 			$blnPlatingFactory = true;
 			break;
 		case 'Privateer Heavy Cruiser':
@@ -946,26 +995,31 @@ function parse_R_structs($name,$qty)
 			$dat['FUEL1']       = $qty;
 			$dat['Materials']  += ($qty * conFUEL1PROD);
 			$dat['BuildRating']   += ($qty * conFUEL1);
+			$dat['SurSpace']   += ($qty * conssFUEL1);
 			break;
 		case 'Refinery (Fuel - Improved)':
 			$dat['FUEL2']       = $qty;
 			$dat['Materials']  += ($qty * conFUEL2PROD);
 			$dat['BuildRating']   += ($qty * conFUEL2);
+			$dat['SurSpace']   += ($qty * conssFUEL2);
 			break;
 		case 'Remote Sensor Array':
 			$dat['RSENS']       = $qty;
 			$dat['Sensors']    += $qty;
 			$dat['BuildRating']   += ($qty * conRSENS);
+			$dat['OrbSpace']   += ($qty * conosRSENS);
 			break;
 		case 'Research Lab':
 			$dat['RLAB1']       = $qty;
 			$dat['Research']   += $qty;
 			$dat['BuildRating']   += ($qty * conRLAB1);
+			$dat['SurSpace']   += ($qty * conssRLAB1);
 			break;
 		case 'Research Lab (Improved)':
 			$dat['RLAB2']       = $qty;
 			$dat['Research']   += $qty;
 			$dat['BuildRating']   += ($qty * conRLAB2);
+			$dat['SurSpace']   += ($qty * conssRLAB2);
 			break;
 	}
 }
@@ -979,11 +1033,13 @@ function parse_S_structs($name,$qty)
 			$dat['SATE1']        = $qty;
 			$dat['Sensors']     += $qty;
 			$dat['BuildRating']   += ($qty * conSATE1);
+			$dat['OrbSpace']   += ($qty * conosSATE1);
 			break;
 		case 'Satellites (Improved)':
 			$dat['SATE2']        = $qty;
 			$dat['Sensors']     += $qty;
 			$dat['BuildRating']   += ($qty * conSATE2);
+			$dat['OrbSpace']   += ($qty * conosSATE2);
 			break;
 		case 'Scout':
 			$dat['SCOUT']        = $qty;
@@ -994,6 +1050,7 @@ function parse_S_structs($name,$qty)
 			$dat['FOLDR']	= $qty;
 			$dat['Speed']	+= ($qty * conFOLDRSPEED);
 			$dat['BuildRating']	+= ($qty * conFOLDR);
+			$dat['OrbSpace']   += ($qty * conosFOLDR);
 			break;
 		case 'Starbase':
 			$dat['SBASE']       = $qty;
@@ -1001,6 +1058,7 @@ function parse_S_structs($name,$qty)
 			$dat['Queues']     += ($qty * 2);
 			$dat['OrbRating']   += ($qty * conSBASE);
 			$dat['AirCap']     += ($qty * conSBASEAIRBCAP);
+			$dat['OrbSpace']   += ($qty * conosSBASE);
 			break;
 		case 'Stinger Drone':
 			$dat['STIDR']       = $qty;
@@ -1010,22 +1068,27 @@ function parse_S_structs($name,$qty)
 			$dat['STOCK']       = $qty;
 			$dat['Wealth']     += $qty;
 			$dat['BuildRating']   += ($qty * conSTOCK);
+			$dat['SurSpace']   += ($qty * conssSTOCK);
 			break;
 		case 'Surface Defense Battery':
 			$dat['SDEF1']       = $qty;
 			$dat['SurRating']   += ($qty * conSDEF1);
+			$dat['SurSpace']   += ($qty * conssSDEF1);
 			break;
 		case 'Surface Defense Battery (Improved)':
 			$dat['SDEF2']       = $qty;
 			$dat['SurRating']   += ($qty * conSDEF2);
+			$dat['SurSpace']   += ($qty * conssSDEF2);
 			break;
 		case 'Surface Shield Generator':
 			$dat['SSLD1']       = $qty;
 			$dat['SurRating']   += ($qty * conSSLD1);
+			$dat['SurSpace']   += ($qty * conssSSLD1);
 			break;
 		case 'Surface Shield Generator (Improved)':
 			$dat['SSLD2']       = $qty;
 			$dat['SurRating']   += ($qty * conSSLD2);
+			$dat['SurSpace']   += ($qty * conssSSLD2);
 			break;
 	}
 }
@@ -1044,6 +1107,16 @@ function parse_T_structs($name,$qty)
 			$dat['TARA2']       = $qty;
 			$dat['Capital']    += $qty;
 			$dat['FleetRating']   += ($qty * conTARA2);
+			break;
+		case 'Tarantula Attack Station Mark III':
+			$dat['TARA3']       = $qty;
+			$dat['Capital']    += $qty;
+			$dat['FleetRating']   += ($qty * conTARA3);
+			break;
+		case 'Tarantula Attack Station Mark IV':
+			$dat['TARA4']       = $qty;
+			$dat['Capital']    += $qty;
+			$dat['FleetRating']   += ($qty * conTARA4);
 			break;
 		case 'Tarantula Attack Station Mark V':
 			$dat['TARA5']       = $qty;
@@ -1069,11 +1142,13 @@ function parse_T_structs($name,$qty)
 			$dat['TRACK']       = $qty;
 			$dat['Sensors']    += $qty;
 			$dat['BuildRating']   += ($qty * conTRACK);
+			$dat['OrbSpace']   += ($qty * conosTRACK);
 			break;
 		case 'Trade School':
 			$dat['TSCHL']       = $qty;
 			$dat['Training']   += $qty;
 			$dat['BuildRating']   += ($qty * conTSCHL);
+			$dat['SurSpace']   += ($qty * conssTSCHL);
 			break;
 	}
 }
@@ -1088,6 +1163,7 @@ function parse_U_structs($name,$qty)
 			$dat['Training']   += $qty;
 			$dat['HabSpace']   += ($qty * conUNIVECAP);
 			$dat['BuildRating']   += ($qty * conUNIVE);
+			$dat['SurSpace']   += ($qty * conssUNIVE);
 			break;
 	}
 }
@@ -1112,6 +1188,7 @@ function parse_V_structs($name,$qty)
 			$dat['Sensors']    += $qty;
 			$dat['HabSpace']   += ($qty * conVINEMCAP);
 			$dat['BuildRating']   += ($qty * conVINEM);
+			$dat['SurSpace']   += ($qty * conssVINEM);
 			break;
 	}
 }
@@ -1133,16 +1210,19 @@ function parse_W_structs($name,$qty)
 			$dat['WHSE1']       = $qty;
 			$dat['Warehouse']  += ($qty * conWHSE1CAP);
 			$dat['BuildRating']   += ($qty * conWHSE1);
+			$dat['SurSpace']   += ($qty * conssWHSE1);
 			break;
 		case 'Warehouse (Medium)':
 			$dat['WHSE2']       = $qty;
 			$dat['Warehouse']  += ($qty * conWHSE2CAP);
 			$dat['BuildRating']   += ($qty * conWHSE2);
+			$dat['SurSpace']   += ($qty * conssWHSE2);
 			break;
 		case 'Warehouse (Large)':
 			$dat['WHSE3']       = $qty;
 			$dat['Warehouse']  += ($qty * conWHSE3CAP);
 			$dat['BuildRating']   += ($qty * conWHSE3);
+			$dat['SurSpace']   += ($qty * conssWHSE3);
 			break;
 		case 'Wasp Fighter':
 			$dat['WASFI']       = $qty;
@@ -1158,6 +1238,7 @@ function parse_W_structs($name,$qty)
 			$dat['WEATL']       = $qty;
 			$dat['Special']    += $qty;
 			$dat['SurRating']   += ($qty * conWEATL);
+			$dat['SurSpace']   += ($qty * conssWEATL);
 			break;
 	}
 }
@@ -1331,6 +1412,8 @@ function initialize_dat()
 	$dat['TANDB']  = '';
 	$dat['TARA1']  = '';
 	$dat['TARA2']  = '';
+	$dat['TARA3']  = '';
+	$dat['TARA4']  = '';
 	$dat['TARA5']  = '';
 	$dat['TERCA']  = '';
 	$dat['TORBA']  = '';
@@ -1348,6 +1431,8 @@ function initialize_dat()
 	$dat['WHSE3']  = '';
 	$dat['WEATL']  = '';
 	$dat['ZEPFD']  = '';
+	$dat['SurSpace'] = '';
+	$dat['OrbSpace'] = '';
 }
 
 function updateDatabase()
@@ -1543,129 +1628,7 @@ function updateDatabase()
 					//durability +3%
 					$durability = '1.03';
 				}
-/*
-				$dat['ADVIN']  = $dat['ADVIN'];
-				$dat['ADVGE']  = $dat['ADVGE'];
-				$dat['ADVTS']  = $dat['ADVTS'];
-				$dat['AEGMS']  = $dat['AEGMS'];
-				$dat['AIRB1']  = $dat['AIRB1'];
-				$dat['AIRB2']  = $dat['AIRB2'];
-				$dat['AMIPS']  = $dat['AMIPS'];
-				$dat['ANVBS']  = $dat['ANVBS'];
-				$dat['ASPHC']  = $dat['ASPHC'];
-				$dat['AVASC']  = $dat['AVASC'];
-				$dat['BADLC']  = $dat['BADLC'];
-				$dat['BARAF']  = $dat['BARAF'];
-				$dat['BARR1']  = $dat['BARR1'];
-				$dat['BARR2']  = $dat['BARR2'];
-				$dat['BATSH']  = $dat['BATSH'];
-				$dat['BERDE']  = $dat['BERDE'];
-				$dat['BIOLO']  = $dat['BIOLO'];
-				$dat['BLABM']  = $dat['BLABM'];
-				$dat['BROCE']  = $dat['BROCE'];
-				$dat['COLFR']  = $dat['COLFR'];
-				$dat['COLOS']  = $dat['COLOS'];
-				$dat['CRUBC']  = $dat['CRUBC'];
-				$dat['CRUIS']  = $dat['CRUIS'];
-				$dat['DAGHF']  = $dat['DAGHF'];
-				$dat['DEERS']  = $dat['DEERS'];
-				$dat['DEFTU']  = $dat['DEFTU'];
-				$dat['DESTR']  = $dat['DESTR'];
-				$dat['DIPCO']  = $dat['DIPCO'];
-				$dat['DRAMA']  = $dat['DRAMA'];
-				$dat['DREAD']  = $dat['DREAD'];
-				$dat['EMBAS']  = $dat['EMBAS'];
-				$dat['FANFB']  = $dat['FANFB'];
-				$dat['FARM1']  = $dat['FARM1'];
-				$dat['FARM2']  = $dat['FARM2'];
-				$dat['FARM3']  = $dat['FARM3'];
-				$dat['FIGBO']  = $dat['FIGBO'];
-				$dat['FIGIN']  = $dat['FIGIN'];
-				$dat['FIRSD']  = $dat['FIRSD'];
-				$dat['FOLDR']  = $dat['FOLDR'];
-				$dat['FRIGA']  = $dat['FRIGA'];
-				$dat['FUEL1']  = $dat['FUEL1'];
-				$dat['FUEL2']  = $dat['FUEL2'];
-				$dat['GELAB']  = $dat['GELAB'];
-				$dat['GNDHI']  = $dat['GNDHI'];
-				$dat['GOLBA']  = $dat['GOLBA'];
-				$dat['HABI1']  = $dat['HABI1'];
-				$dat['HABI2']  = $dat['HABI2'];
-				$dat['HABI3']  = $dat['HABI3'];
-				$dat['HAMGU']  = $dat['HAMGU'];
-				$dat['HVYBO']  = $dat['HVYBO'];
-				$dat['HVYCA']  = $dat['HVYCA'];
-				$dat['HVYCR']  = $dat['HVYCR'];
-				$dat['HIBCA']  = $dat['HIBCA'];
-				$dat['HOSPI']  = $dat['HOSPI'];
-				$dat['HURFC']  = $dat['HURFC'];
-				$dat['IMPFR']  = $dat['IMPFR'];
-				$dat['INSHT']  = $dat['INSHT'];
-				$dat['INTEL']  = $dat['INTEL'];
-				$dat['INTFR']  = $dat['INTFR'];
-				$dat['INTMP']  = $dat['INTMP'];
-				$dat['INTFO']  = $dat['INTFO'];
-				$dat['JUDDR']  = $dat['JUDDR'];
-				$dat['JUMP1']  = $dat['JUMP1'];
-				$dat['JUMP2']  = $dat['JUMP2'];
-				$dat['LEOSC']  = $dat['LEOSC'];
-				$dat['LIGCA']  = $dat['LIGCA'];
-				$dat['LISTN']  = $dat['LISTN'];
-				$dat['MANU1']  = $dat['MANU1'];
-				$dat['MANU2']  = $dat['MANU2'];
-				$dat['MATS1']  = $dat['MATS1'];
-				$dat['MATS2']  = $dat['MATS2'];
-				$dat['MATRC']  = $dat['MATRC'];
-				$dat['MINE1']  = $dat['MINE1'];
-				$dat['MINE2']  = $dat['MINE2'];
-				$dat['RADI1']  = $dat['RADI1'];
-				$dat['RADI2']  = $dat['RADI2'];
-				$dat['OBULK']  = $dat['OBULK'];
-				$dat['OCON1']  = $dat['OCON1'];
-				$dat['OCON2']  = $dat['OCON2'];
-				$dat['ODEFM']  = $dat['ODEFM'];
-				$dat['ODEF1']  = $dat['ODEF1'];
-				$dat['ODEF2']  = $dat['ODEF2'];
-				$dat['OMIN1']  = $dat['OMIN1'];
-				$dat['OMIN2']  = $dat['OMIN2'];
-				$dat['ORCBA']  = $dat['ORCBA'];
-				$dat['OSLD1']  = $dat['OSLD1'];
-				$dat['OSLD2']  = $dat['OSLD2'];
-				$dat['PBANK']  = $dat['PBANK'];
-				$dat['PLATE']  = $dat['PLATE'];
-				$dat['PRIHC']  = $dat['PRIHC'];
-				$dat['RAVMC']  = $dat['RAVMC'];
-				$dat['RSENS']  = $dat['RSENS'];
-				$dat['RLAB1']  = $dat['RLAB1'];
-				$dat['RLAB2']  = $dat['RLAB2'];
-				$dat['SATE1']  = $dat['SATE1'];
-				$dat['SATE2']  = $dat['SATE2'];
-				$dat['SCOUT']  = $dat['SCOUT'];
-				$dat['SBASE']  = $dat['SBASE'];
-				$dat['STIDR']  = $dat['STIDR'];
-				$dat['STOCK']  = $dat['STOCK'];
-				$dat['SDEF1']  = $dat['SDEF1'];
-				$dat['SDEF2']  = $dat['SDEF2'];
-				$dat['SSLD1']  = $dat['SSLD1'];
-				$dat['SSLD2']  = $dat['SSLD2'];
-				$dat['TANDB']  = $dat['TANDB'];
-				$dat['TERCA']  = $dat['TERCA'];
-				$dat['TORBA']  = $dat['TORBA'];
-				$dat['TRACK']  = $dat['TRACK'];
-				$dat['TSCHL']  = $dat['TSCHL'];
-				$dat['UNIVE']  = $dat['UNIVE'];
-				$dat['VENHF']  = $dat['VENHF'];
-				$dat['VESSC']  = $dat['VESSC'];
-				$dat['VINEM']  = $dat['VINEM'];
-				$dat['WARFA']  = $dat['WARFA'];
-				$dat['WASFI']  = $dat['WASFI'];
-				$dat['WAYEC']  = $dat['WAYEC'];
-				$dat['WHSE1']  = $dat['WHSE1'];
-				$dat['WHSE2']  = $dat['WHSE2'];
-				$dat['WHSE3']  = $dat['WHSE3'];
-				$dat['WEATL']  = $dat['WEATL'];
-				$dat['ZEPFD']  = $dat['ZEPFD'];
-				*/
+
 				$dat['SurRating'] = $dat['SurRating'] * $durability;
 				$dat['OrbRating'] = $dat['OrbRating'] * $durability;
 				$dat['FleetRating'] = $dat['FleetRating'] * $durability;
@@ -1817,6 +1780,8 @@ function updateDatabase()
 			$SQL .= '\'' . $dat['TANDB']	. '\',';
 			$SQL .= '\'' . $dat['TARA1']	. '\',';
 			$SQL .= '\'' . $dat['TARA2']	. '\',';
+			$SQL .= '\'' . $dat['TARA3']	. '\',';
+			$SQL .= '\'' . $dat['TARA4']	. '\',';
 			$SQL .= '\'' . $dat['TARA5']	. '\',';
 			$SQL .= '\'' . $dat['TERCA']	. '\',';
 			$SQL .= '\'' . $dat['TORBA']	. '\',';
@@ -1863,6 +1828,8 @@ function updateDatabase()
 			$SQL .= '\'' . $dat['SurRating']	. '\',';
 			$SQL .= '\'' . $dat['BuildRating']	. '\',';
 			$SQL .= '\'' . $reconnaitertype	. '\',';
+			$SQL .= '\'' . $dat['OrbSpace'] 	. '\',';
+			$SQL .= '\'' . $dat['SurSpace'] 	. '\',';	
 			$SQL .= '\'' . $durability	. '\'';
 			$SQL .= ')';
 			$result = mysql_query($SQL);
