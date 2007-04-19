@@ -949,6 +949,8 @@ function displayScoutingReport($reportID)
 	$r .= '<td class=hc>Diplomacy</td>';
 	$r .= '<td class=hc>Warehouse</td>';
 	$r .= '<td class=hc>Speed</td>';
+	$r .= '<td class=hc>SurSpace</td>';
+	$r .= '<td class=hc>OrbSpace</td>';
 	$r .= '</tr>';
 
 	//$SQL  = 'SELECT * FROM tblscout WHERE RecordNumber=' . $reportID;
@@ -1093,7 +1095,7 @@ function displayScoutingReport($reportID)
 		$SQL .= 'AirOps, Capital, Diplomacy, sum(Fighter) as Fighter, Habitat, sum(IntelOps) as IntelOps, sum(Materials) as Materials,';
 		$SQL .= 'Reproduction, (sum(Queues) - 1) as Queues, Research, sum(Scouting) as Scouting, Sensors, Special, Speed, Training,';
 		$SQL .= 'Warehouse, Wealth, Rank, Aircap, Habspace, sum(FleetRating) as FleetRating, sum(OrbRating) as OrbRating,';
-		$SQL .= 'sum(SurRating) as SurRating, sum(BuildRating) as BuildRating, Current, Species, DurabilityPerc ';
+		$SQL .= 'sum(SurRating) as SurRating, sum(BuildRating) as BuildRating, Current, Species, DurabilityPerc, sum(OrbSpace) as OrbSpace, sum(SurSpace) as SurSpace ';
 		$SQL .= 'FROM tblscout ';
 		$SQL .= 'WHERE PlanetID= ' . $row['PlanetID'] . ' and reportdate= \'' . $row['ReportDate'] . '\' and reporttime= \'' . $row['ReportTime'] . '\'';
 		$SQL .= ' group by PlanetID, ReportDate, ReportTime';
@@ -1146,6 +1148,8 @@ function displayScoutingReport($reportID)
 		$r .= '<td class=xc>' . $row['Diplomacy']	. '</td>';
 		$r .= '<td class=xc>' . $row['Warehouse']	. '</td>';
 		$r .= '<td class=xc>' . $row['Speed']	. '</td>';
+		$r .= '<td class=xc>' . $row['SurSpace']	. '</td>';
+		$r .= '<td class=xc>' . $row['OrbSpace']	. '</td>';
 		$r .= '</tr>';
 		$r .= '</table>';
 		$r .= '<div class=spacer></div>';
