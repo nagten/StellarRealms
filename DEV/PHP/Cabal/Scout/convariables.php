@@ -53,79 +53,79 @@
 	define("conssWEATL", "50"); //Weapons Technology Laboratory
 	
 	//Orbital Structures orbital space
-	define("conosFOLDR", "40"); //Space Folder
-	define("conosJUMP1", "50"); //Jumpgate
-	define("conosJUMP2", "60"); //Jumpgate (Improved)
-	define("conosLISTN", "30"); //Listening Post
-	define("conosOBULK", "130"); //Orbital Bulwark
-	define("conosOCON1", "50"); //Orbital Construction Yard
-	define("conosOCON2", "60"); //Orbital Construction Yard (Improved)
-	define("conosODEFM", "80"); //Orbital Defense Monitor
-	define("conosODEF1", "50"); //Orbital Defense Platform
-	define("conosODEF2", "70"); //Orbital Defense Platform (Improved)
-	define("conosOMIN1", "20"); //Orbital Minefield
-	define("conosOMIN2", "25"); //Orbital Minefield (Improved)
-	define("conosOSLD1", "100"); //Orbital Shield
-	define("conosOSLD2", "125"); //Orbital Shield (Improved)
-	define("conosPBANK", "50"); //Planetary Bank
-	define("conosPLATE", "70"); //Plating Factory
-	define("conosRSENS", "40"); //Remote Sensor Array
-	define("conosSATE1", "22"); //Satellites
-	define("conosSATE2", "30"); //Satellites (Improved)
-	define("conosSBASE", "400"); //Starbase	
-	define("conosTRACK", "60"); //Tracking Station	
+	define("conosFOLDR", "10"); //Space Folder
+	define("conosJUMP1", "6"); //Jumpgate
+	define("conosJUMP2", "7"); //Jumpgate (Improved)
+	define("conosLISTN", "3"); //Listening Post
+	define("conosOBULK", "6"); //Orbital Bulwark
+	define("conosOCON1", "6"); //Orbital Construction Yard
+	define("conosOCON2", "7"); //Orbital Construction Yard (Improved)
+	define("conosODEFM", "0"); //Orbital Defense Monitor
+	define("conosODEF1", "4"); //Orbital Defense Platform
+	define("conosODEF2", "5"); //Orbital Defense Platform (Improved)
+	define("conosOMIN1", "1"); //Orbital Minefield
+	define("conosOMIN2", "1"); //Orbital Minefield (Improved)
+	define("conosOSLD1", "5"); //Orbital Shield
+	define("conosOSLD2", "6"); //Orbital Shield (Improved)
+	define("conosRSENS", "4"); //Remote Sensor Array
+	define("conosSATE1", "1"); //Satellites
+	define("conosSATE2", "2"); //Satellites (Improved)
+	define("conosSBASE", "12"); //Starbase	
+	define("conosTRACK", "0"); //Tracking Station	
 	
 	//Surface Structures
-	define("conADVTS", "60"); //Advanced Technologies Shipyard	
-	define("conAIRB1", "50"); //Airbase
-	define("conAIRB2", "75"); //Airbase Improved	
-	define("conBARR1", "50"); //Barracks
-	define("conBARR2", "7"); //Barracks Veteran	
-	define("conBIOLO", "60"); //Biological Research Facility	
-	define("conBROCE", "400"); //Brood Center	
-	define("conDEFTU", "60"); //Defense Turret
-	define("conDIPCO", "60"); //Diplomatic Council
-	define("conEMBAS", "50"); //Embassy	
-	define("conFARM1", "50"); //Farm I
-	define("conFARM2", "50"); //Farm II
-	define("conFARM3", "50"); //Farm III	
-	define("conFUEL1", "50"); //Refinery (Fuel)
-	define("conFUEL2", "60"); //Refinery (Fuel - Improved)
-	define("conGELAB", "50"); //Genetics Lab
-	define("conGNDHI", "140"); //Grand Hive
-	define("conHABI1", "100"); //Habitat
-	define("conHABI2", "120"); //Habitat (Improved)
-	define("conHABI3", "140"); //Habitat (Ultradense)
-	define("conHIBCA", "200"); //Hibernation Caves
-	define("conHOSPI", "100"); //Hospital
-	define("conINSHT", "50"); //Institute of Higher Thought
-	define("conINTEL", "100"); //Intelligence Agency
-	define("conINTMP", "60"); //Interplanetary Marketplace
-	define("conINTFO", "40"); //Interstellar Forum
-	define("conMANU1", "50"); //Manufacturing Plant
-	define("conMANU2", "60"); //Manufacturing Plant (Improved)
-	define("conMATS1", "50"); //Materials Processing Plant
-	define("conMATS2", "70"); //Materials Processing Plant (Improved)
-	define("conMATRC", "70"); //Materials Research Complex
-	define("conMINE1", "50"); //Mining Facility (Metals)
-	define("conMINE2", "60"); //Mining Facility (Metals - Improved)
-	define("conRADI1", "50"); //Mining Facility (Radioactives)
-	define("conRADI2", "60"); //Mining Facility (Radioactives - Improved)
-	define("conRLAB1", "50"); //Research Lab
-	define("conRLAB2", "60"); //Research Lab (Improved)
-	define("conVINEM", "12"); //Vinemind
-	define("conWARFA", "70"); //War Factory
-	define("conWHSE1", "50"); //Warehouse (Small)
-	define("conWHSE2", "70"); //Warehouse (Medium)
-	define("conWHSE3", "90"); //Warehouse (Large)
-	define("conSTOCK", "60"); //Stock Exchange
-	define("conSDEF1", "50"); //Surface Defense Battery
-	define("conSDEF2", "60"); //Surface Defense Battery (Improved)
-	define("conSSLD1", "200"); //Surface Shield Generator
-	define("conSSLD2", "250"); //Surface Shield Generator (Improved)
-	define("conTANDB", "70"); //Tangler Defense Barge
-	define("conTSCHL", "50"); //Trade School
-	define("conUNIVE", "50"); //University
+	define("conADVTS", "8"); //Advanced Technologies Shipyard	
+	define("conAIRB1", "6"); //Airbase
+	define("conAIRB2", "8"); //Airbase Improved	
+	define("conBARR1", "4"); //Barracks
+	define("conBARR2", "5"); //Barracks Veteran	
+	define("conBIOLO", "5"); //Biological Research Facility	
+	define("conBROCE", "0"); //Brood Center	
+	define("conDEFTU", "1"); //Defense Turret
+	define("conDIPCO", "0"); //Diplomatic Council
+	define("conEMBAS", "4"); //Embassy	
+	define("conFARM1", "5"); //Farm I
+	define("conFARM2", "4"); //Farm II
+	define("conFARM3", "3"); //Farm III	
+	define("conFUEL1", "2"); //Refinery (Fuel)
+	define("conFUEL2", "3"); //Refinery (Fuel - Improved)
+	define("conGELAB", "5"); //Genetics Lab
+	define("conGNDHI", "3"); //Grand Hive
+	define("conHABI1", "3"); //Habitat
+	define("conHABI2", "4"); //Habitat (Improved)
+	define("conHABI3", "5"); //Habitat (Ultradense)
+	define("conHIBCA", "0"); //Hibernation Caves
+	define("conHOSPI", "6"); //Hospital
+	define("conINSHT", "0"); //Institute of Higher Thought
+	define("conINTEL", "6"); //Intelligence Agency
+	define("conINTMP", "0"); //Interplanetary Marketplace
+	define("conINTFO", "0"); //Interstellar Forum
+	define("conMANU1", "5"); //Manufacturing Plant
+	define("conMANU2", "6"); //Manufacturing Plant (Improved)
+	define("conMATS1", "5"); //Materials Processing Plant
+	define("conMATS2", "6"); //Materials Processing Plant (Improved)
+	define("conMATRC", ""); //Materials Research Complex
+	define("conMINE1", "4"); //Mining Facility (Metals)
+	define("conMINE2", "5"); //Mining Facility (Metals - Improved)
+	define("conosPBANK", "4"); //Planetary Bank
+	define("conosPLATE", "0"); //Plating Factory
+	define("conRADI1", "4"); //Mining Facility (Radioactives)
+	define("conRADI2", "5"); //Mining Facility (Radioactives - Improved)
+	define("conRLAB1", "3"); //Research Lab
+	define("conRLAB2", "4"); //Research Lab (Improved)
+	define("conSTOCK", "5"); //Stock Exchange
+	define("conSDEF1", "3"); //Surface Defense Battery
+	define("conSDEF2", "3"); //Surface Defense Battery (Improved)
+	define("conSSLD1", "4"); //Surface Shield Generator
+	define("conSSLD2", "5"); //Surface Shield Generator (Improved)
+	define("conTSCHL", "3"); //Trade School
+	define("conUNIVE", "4"); //University
+	define("conVINEM", "0"); //Vinemind
+	define("conWARFA", "0"); //War Factory
+	define("conWHSE1", "2"); //Warehouse (Small)
+	define("conWHSE2", "4"); //Warehouse (Medium)
+	define("conWHSE3", "6"); //Warehouse (Large)
+	
 	
 	//Orbital structures
 	define("conFOLDR", "40"); //Space Folder
@@ -195,6 +195,7 @@
 	define("conRAVMC", "30"); //Raven Missile Cruiser	
 	define("conSCOUT", "7"); //Scout	
 	define("conSTIDR", "2"); //Stinger Drone	
+	define("conTANDB", ""); //Tangler Defense Barge
 	define("conTARA1", "60"); //Taratula Attack Station Mark I
 	define("conTARA2", "60"); //Taratula Attack Station Mark II
 	define("conTARA3", "75"); //Taratula Attack Station Mark III
