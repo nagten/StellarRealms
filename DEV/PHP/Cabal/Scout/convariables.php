@@ -199,7 +199,7 @@
 	define("conTARA1", "60"); //Taratula Attack Station Mark I
 	define("conTARA2", "60"); //Taratula Attack Station Mark II
 	define("conTARA3", "75"); //Taratula Attack Station Mark III
-	define("conTARA4", "60"); //Taratula Attack Station Mark III
+	define("conTARA4", "60"); //Taratula Attack Station Mark IV
 	define("conTARA5", "60"); //Taratula Attack Station Mark V
 	define("conTERCA", "50"); //Terrapin Carrier
 	define("conTORBA", "60"); //Tortoise Battleship
