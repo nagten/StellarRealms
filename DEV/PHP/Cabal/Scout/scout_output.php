@@ -244,7 +244,7 @@ function displaySummary()
 				$dummy = mysql_query($SQL);
 			}
 		}
-		
+
 		mysql_free_result($result);
 	}
 
@@ -687,7 +687,7 @@ function displayPlanetDetails($planet, $Type)
 	}
 
 	while ($row = mysql_fetch_assoc($result))
-	{		
+	{
 		$cnt++;
 		$xp[$cnt]['scoutID']	= $row['RecordNumber'];
 		$xp[$cnt]['planetID']	= $row['PlanetID'];
@@ -713,10 +713,10 @@ function displayPlanetDetails($planet, $Type)
 		$xp[$cnt]['speed']	= $row['Speed'];
 		$xp[$cnt]['reconnaitertype'] = $row['Reconnaitertype'];
 	}
-	
+
 	mysql_free_result($result);
 
-	$nbrReports = $cnt;		
+	$nbrReports = $cnt;
 	for ($intI = 1; $intI <= $nbrReports; $intI++)
 	{
 		if ($intI < $nbrReports)
@@ -794,7 +794,7 @@ function displayPlanetDetails($planet, $Type)
 	$r .= '</tr>';
 
 	for ($intI = 1; $intI <= $nbrReports; $intI++)
-	{	
+	{
 		if ($bgcolor == '#F5F5F5')
 		{
 			$bgcolor = '#FFFFFF';
@@ -1074,6 +1074,8 @@ function displayScoutingReport($reportID)
 		$SQL .= 'sum(TANDB) as TANDB,';
 		$SQL .= 'sum(TARA1) as TARA1,';
 		$SQL .= 'sum(TARA2) as TARA2,';
+		$SQL .= 'sum(TARA3) as TARA3,';
+		$SQL .= 'sum(TARA4) as TARA4,';
 		$SQL .= 'sum(TARA5) as TARA5,';
 		$SQL .= 'sum(TERCA) as TERCA,';
 		$SQL .= 'sum(TORBA) as TORBA,';
@@ -1291,7 +1293,7 @@ function getCapital($row)
 		$r .= '<td width=80% class=rptl>bundle of black filaments</td>';
 		$r .= '</tr>';
 	}
-	
+
 	if ($row['COLFR'] > 0)
 	{
 		$r .= '<tr>';
@@ -1498,7 +1500,7 @@ function getCapital($row)
 		$r .= '<td width=80% class=rptl>"Tangler" Defense Barge</td>';
 		$r .= '</tr>';
 	}
-	
+
 	if ($row['TARA1'] > 0)
 	{
 		$r .= '<tr>';
@@ -1507,7 +1509,7 @@ function getCapital($row)
 		$r .= '<td width=80% class=rptl>Tarantula Attack Station Mark I</td>';
 		$r .= '</tr>';
 	}
-	
+
 	if ($row['TARA2'] > 0)
 	{
 		$r .= '<tr>';
@@ -1516,7 +1518,25 @@ function getCapital($row)
 		$r .= '<td width=80% class=rptl>Tarantula Attack Station Mark II</td>';
 		$r .= '</tr>';
 	}
-	
+
+	if ($row['TARA3'] > 0)
+		{
+			$r .= '<tr>';
+			$r .= '<td width=10% class=rptrdur>' . number_format($row['TARA3'] * conTARA3 * $row['DurabilityPerc']) . '</td>';
+			$r .= '<td width=10% class=rptr>' . $row['TARA3'] . '</td>';
+			$r .= '<td width=80% class=rptl>Tarantula Attack Station Mark III</td>';
+			$r .= '</tr>';
+	}
+
+	if ($row['TARA4'] > 0)
+		{
+			$r .= '<tr>';
+			$r .= '<td width=10% class=rptrdur>' . number_format($row['TARA4'] * conTARA4 * $row['DurabilityPerc']) . '</td>';
+			$r .= '<td width=10% class=rptr>' . $row['TARA4'] . '</td>';
+			$r .= '<td width=80% class=rptl>Tarantula Attack Station Mark IV</td>';
+			$r .= '</tr>';
+	}
+
 	if ($row['TARA5'] > 0)
 	{
 		$r .= '<tr>';
