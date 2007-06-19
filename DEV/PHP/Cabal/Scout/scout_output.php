@@ -1020,7 +1020,7 @@ function displayScoutingReport($reportID)
 		$SQL .= 'sum(HVYCA) as HVYCA,';
 		$SQL .= 'sum(HVYCR) as HVYCR,';
 		$SQL .= 'sum(HIBCA) as HIBCA,';
-		$SQL .= 'sum(HOSPI) as HOPSI,';
+		$SQL .= 'sum(HOSPI) as HOSPI,';
 		$SQL .= 'sum(HURFC) as HURFC,';
 		$SQL .= 'sum(IMPFR) as IMPFR,';
 		$SQL .= 'sum(INSHT) as INSHT,';
@@ -2284,7 +2284,7 @@ function getReproduction($row) {
 
 	if ($row['HOSPI'] > 0)
 	{
-		$r .= '<tr><td width=10% class=rptc>' . $row['HOSPI'] . '</td><td class=rptl>Hospital</td></tr>';
+		$r .= '<tr><td width=10% class=rptc>' . $row['HOSPI'] . '</td><td class=rptl>Hospital  (repro +' . ($row['HOSPI'] * 5) . '%)</td></tr>';
 	}
 
 	if ($row['GELAB'] > 0)
