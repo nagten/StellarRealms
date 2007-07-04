@@ -25,14 +25,16 @@ else
 $dat = array();
 initialize_dat();
 
+$reconnaitertype = '1'; //1 structure, 2 fleet
+$blnFS = '0'; //0 normal or ambush deployment, 1 is Fighter Spread
+
 $report = str_replace("\n"  ,'|',$report);
 $report = str_replace("\n\r",'|',$report);
 $report = str_replace('<br>','|',$report);
 $report = str_replace('<BR>','|',$report);
 $report = str_replace('||'  ,'|',$report);
 $ray = explode('|',$report);
-$reconnaitertype = '1'; //1 structure, 2 fleet
-
+	
 $dateFound    = false;
 $fromFound    = false;
 $targetFound  = false;
@@ -287,8 +289,11 @@ function parseTarget($line)
 
 function parseStructs($line)
 {
+	global $blnFS;
+	
 	$ray = explode('(s)',$line);
-
+	$blnFormationRecognized = false;
+	
 	//Iterate all structures
 	$intraycount = count($ray);
 	
@@ -309,6 +314,54 @@ function parseStructs($line)
 				$name = str_replace('"','',$name);
 				$Initial = strtoupper(substr($name,0,1));
 
+				if ($blnFormationRecognized !== true)
+				{
+					switch ($name)
+					{
+						case 'Fang Fighter Bomber' : 
+							$blnFormationRecognized = true; 
+							$blnFS = '1'; 
+							break;
+						case 'Fighter Bomber' :
+							$blnFormationRecognized = true; 
+							$blnFS = '1'; 
+							break;
+						case 'Fighter Interceptor' :
+							$blnFormationRecognized = true; 
+							$blnFS = '1'; 
+							break;
+						case 'Heavy Bomber' :
+							$blnFormationRecognized = true; 
+							$blnFS = '1'; 
+							break;
+						case 'Advanced Interceptor' :
+							$blnFormationRecognized = true; 
+							$blnFS = '1'; 
+							break;
+						case 'Dagger Heavy Fighter' :
+							$blnFormationRecognized = true; 
+							$blnFS = '1'; 
+							break;
+						case 'Venom Heavy Fighter' :
+							$blnFormationRecognized = true; 
+							$blnFS = '1'; 
+							break;
+						case 'Wasp Fighter' :
+							$blnFormationRecognized = true; 
+							$blnFS = '1';  
+							break;
+						case 'Stinger Drone' :
+							$blnFormationRecognized = true; 
+							$blnFS = '1'; 
+							break;
+						default:
+							//some other ship then a fighter so we get a normal or ambush defensive formation
+							$blnFormationRecognized = true; 
+							$blnFS = '0'; 
+							break;
+					}
+				}
+				
 				switch ($Initial)
 				{
 					case 'A' : parse_A_structs($name,$qty); break;
@@ -1448,6 +1501,7 @@ function updateDatabase()
 	global $blnWarFactory;
 	global $blnBiologicalResearch;
 	global $reconnaitertype;
+	global $blnFS;	
 
 	//default durability
 	$durability = '1.0';
@@ -1666,7 +1720,7 @@ function updateDatabase()
 			$SQL .= 'AirOps,Capital,Diplomacy,Fighter,Habitat,IntelOps,';
 			$SQL .= 'Materials,Reproduction,Queues,Research,Scouting,Sensors,Warehouse,';
 			$SQL .= 'Special,Speed,Training,Wealth,Rank,AirCap,HabSpace,Current,Species,';
-			$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating,Reconnaitertype,OrbSpace,SurSpace,DurabilityPerc';
+			$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating,Reconnaitertype,OrbSpace,SurSpace,FS,DurabilityPerc';
 			$SQL .= ') VALUES (';
 			$SQL .= '\'' . $planetID	. '\',';
 			$SQL .= '\'' . $dat['target']	. '\',';
@@ -1830,9 +1884,11 @@ function updateDatabase()
 			$SQL .= '\'' . $dat['BuildRating']	. '\',';
 			$SQL .= '\'' . $reconnaitertype	. '\',';
 			$SQL .= '\'' . $dat['OrbSpace'] 	. '\',';
-			$SQL .= '\'' . $dat['SurSpace'] 	. '\',';	
+			$SQL .= '\'' . $dat['SurSpace'] 	. '\',';
+			$SQL .= '\'' . $blnFS . '\',';	
 			$SQL .= '\'' . $durability	. '\'';
 			$SQL .= ')';
+			
 			$result = mysql_query($SQL);
 
 			if (!$result)
