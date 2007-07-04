@@ -664,7 +664,7 @@ function displayPlanetDetails($planet, $Type)
 		$SQL  = 'SELECT RecordNumber, PlanetID,PlanetName,ReportDate,ReportTime,AirOps,AirCap,';
 		$SQL .= 'Fighter,Habitat,IntelOps,Materials,';
 		$SQL .= 'Scouting,Sensors,Warehouse,Special,Speed,Rank,HabSpace,SBASE,STIDR, ';
-		$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating,Queues, SourceName, Reconnaitertype ';
+		$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating,Queues, SourceName, Reconnaitertype, FS ';
 		$SQL .= 'FROM tblscout ';
 		$SQL .= 'WHERE PlanetID=' . $planet . '  and Reconnaitertype = 1 ';
 		$SQL .= 'ORDER BY ReportDate DESC, ReportTime DESC';
@@ -674,7 +674,7 @@ function displayPlanetDetails($planet, $Type)
 		$SQL  = 'SELECT RecordNumber, PlanetID,PlanetName,ReportDate,ReportTime,AirOps,AirCap,';
 		$SQL .= 'Fighter,Habitat,IntelOps,Materials,';
 		$SQL .= 'Scouting,Sensors,Warehouse,Special,Speed,Rank,HabSpace,SBASE,STIDR, ';
-		$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating,Queues, SourceName, Reconnaitertype ';
+		$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating,Queues, SourceName, Reconnaitertype, FS ';
 		$SQL .= 'FROM tblscout ';
 		$SQL .= 'WHERE PlanetID=' . $planet . '  and Reconnaitertype = 2 ';
 		$SQL .= 'ORDER BY ReportDate DESC, ReportTime DESC';
@@ -712,6 +712,7 @@ function displayPlanetDetails($planet, $Type)
 		$xp[$cnt]['warehouse']	= $row['Warehouse'];
 		$xp[$cnt]['speed']	= $row['Speed'];
 		$xp[$cnt]['reconnaitertype'] = $row['Reconnaitertype'];
+		$xp[$cnt]['FS'] = $row['FS'];
 	}
 
 	mysql_free_result($result);
@@ -804,6 +805,15 @@ function displayPlanetDetails($planet, $Type)
 			$bgcolor = '#F5F5F5';
 		}
 
+		if ($xp[$intI]['FS'] == 1)
+		{
+			$FS = " FS";
+		}
+		else
+		{
+			$FS = " Normal";
+		}
+		
 		$pName = $xp[$intI]['planetName'];
 		$pName = substr($pName,0,15); //Limit name to 15 chars
 
@@ -814,18 +824,18 @@ function displayPlanetDetails($planet, $Type)
 		if ($xp[$intI]['reconnaitertype'] == 1)
 		{
 			//Structure
-			$r .= '<td class=xx>' . $pName  . " (S)" . '<div class=hidden id=' . ('d_' . $intI) . '>' . $xp[$intI]['scoutID'] . '</div></td>';
+			$r .= '<td class=xx>' . $pName  . " (S)" . $FS  . '<div class=hidden id=' . ('d_' . $intI) . '>' . $xp[$intI]['scoutID'] . '</div></td>';
 		}
 		else if ($xp[$intI]['reconnaitertype'] == 2)
 		{
 			//Fleet
 			//c_ to workaround an IE only bug (getelementbyID is buggy in IE)
-			$r .= '<td class=xx>' . $pName  . " (F)" . '<div class=hidden id=' . ('c_' . $intI) . '>' . $xp[$intI]['scoutID'] . '</div></td>';
+			$r .= '<td class=xx>' . $pName  . " (F)" . $FS  . '<div class=hidden id=' . ('c_' . $intI) . '>' . $xp[$intI]['scoutID'] . '</div></td>';
 		}
 		else
 		{
 			//Combined
-			$r .= '<td class=xx>' . $pName  . " (C)" . '<div class=hidden id=' . ('d_' . $intI) . '>' . $xp[$intI]['scoutID'] . '</div></td>';
+			$r .= '<td class=xx>' . $pName  . " (C)" . $FS  . '<div class=hidden id=' . ('d_' . $intI) . '>' . $xp[$intI]['scoutID'] . '</div></td>';
 		}
 
 		$r .= '<td class=ulc>' . date('d-M-y',strtotime($xp[$intI]['reportDate']))   . '</td>';
