@@ -33,12 +33,29 @@ if( !is_null( $_POST ) )
     }
 }
 
+function write_to_log($text)
+{
+	$CRLF = "\r\n";
+	$log_file = '../Logs/access_log_' . date("mdy") . '.txt';
+	$fp = fopen($log_file,'a');
+	
+	if ($fp) 
+	{
+		//$text = str_replace(chr(2),'$',$text);
+		$msg = date("m.d.y H:i:s") . ' - ' . $text . $CRLF;
+		fwrite($fp,$msg);
+		fclose($fp);
+	}
+}
+
 function generatehtmltable()
 {
   global $mysql_server;
   global $mysql_user;
   global $mysql_password;
   global $mysql_db;
+
+write_to_log($_SERVER['REMOTE_ADDR'] . ' Host:' . $_SERVER['REMOTE_HOST'] . ' URI:' . $_SERVER['REQUEST_URI'] . ' Referer:' . $_SERVER['HTTP_REFERER'] . ' Method:' . $_SERVER['REQUEST_METHOD']);
 
   $dbcnx = @mysql_connect($mysql_server, $mysql_user, $mysql_password);
 
