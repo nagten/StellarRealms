@@ -53,8 +53,8 @@ switch ($action)
 		displaySummary();
 		break;
 	case 'planet':
-		displayPlanetDetails($planet, 1); //Structures
-		displayPlanetDetails($planet, 2); //Fleet
+		displayPlanetDetails($planet, 2); //Structures
+		displayPlanetDetails($planet, 1); //Fleet
 		break;
 	case 'detail':
 		displayScoutingReport($reportID);
@@ -377,20 +377,20 @@ function displaySummary()
 		$r .= '<td class=xc>' . $p1[$key]['sourcename']	. '</td>';
 		$r .= '<td class=xr>' . number_format($p1[$key]['fleetrating'])  . '</td>';
 		$r .= '<td class=xr>' . $d1[$key]['fleetrating']	. '</td>';
+		$r .= '<td class=xr>' . $p1[$key]['starbases'] . '</td>';
+		$r .= '<td class=xr>' . $d1[$key]['starbases'] . '</td>';
+		$r .= '<td class=xr>' . number_format($p1[$key]['fighter'])	. '</td>';
+		$r .= '<td class=xr>' . $d1[$key]['fighter']	. '</td>';
+		$r .= '<td class=xr>' . number_format($p1[$key]['drones'])	. '</td>';
+		$r .= '<td class=xr>' . $d1[$key]['drones']	. '</td>';
 		$r .= '<td class=xr>' . number_format($p1[$key]['orbrating'])	. '</td>';
 		$r .= '<td class=xr>' . $d1[$key]['orbrating']	. '</td>';
 		$r .= '<td class=xr>' . number_format($p1[$key]['surrating'])	. '</td>';
 		$r .= '<td class=xr>' . $d1[$key]['surrating']	. '</td>';
 		$r .= '<td class=xr>' . number_format($p1[$key]['buildrating'])  . '</td>';
 		$r .= '<td class=xr>' . $d1[$key]['buildrating']	. '</td>';
-		$r .= '<td class=xr>' . $p1[$key]['starbases'] . '</td>';
-		$r .= '<td class=xr>' . $d1[$key]['starbases'] . '</td>';
 		$r .= '<td class=xr>' . number_format($p1[$key]['airCap'])	. '</td>';
 		$r .= '<td class=xr>' . $d1[$key]['airCap']	. '</td>';
-		$r .= '<td class=xr>' . number_format($p1[$key]['fighter'])	. '</td>';
-		$r .= '<td class=xr>' . $d1[$key]['fighter']	. '</td>';
-		$r .= '<td class=xr>' . number_format($p1[$key]['drones'])	. '</td>';
-		$r .= '<td class=xr>' . $d1[$key]['drones']	. '</td>';
 		$r .= '<td class=xr>' . sprintf('%01.2f',$p1[$key]['habSpace'])	. '</td>';
 		$r .= '<td class=xr>' . $d1[$key]['habSpace']	. '</td>';
 		$r .= '<td class=xr>' . $p1[$key]['intelOps']	. '</td>';
@@ -562,13 +562,13 @@ function summaryColumnHeader()
 	$r .= '<td class=' . $col04 . ' colspan=1 onclick=sortColumn("rank") onmouseover=glowObject(this) onmouseout=dimObject(this)>Rank</td>';
 	$r .= '<td class=' . $col21 . ' colspan=1 onclick=sortColumn("sourcename") onmouseover=glowObject(this) onmouseout=dimObject(this)>Source</td>';
 	$r .= '<td class=' . $col05 . ' colspan=2 onclick=sortColumn("fleetrating") onmouseover=glowObject(this) onmouseout=dimObject(this)>Fleet</td>';
+	$r .= '<td class=' . $col09 . ' colspan=2 onclick=sortColumn("starbases") onmouseover=glowObject(this) onmouseout=dimObject(this)>Starbases</td>';
+	$r .= '<td class=' . $col11 . ' colspan=2 onclick=sortColumn("fighter") onmouseover=glowObject(this) onmouseout=dimObject(this)>Fighter</td>';
+	$r .= '<td class=' . $col19 . ' colspan=2 onclick=sortColumn("drones") onmouseover=glowObject(this) onmouseout=dimObject(this)>Drones</td>';
 	$r .= '<td class=' . $col06 . ' colspan=2 onclick=sortColumn("orbrating") onmouseover=glowObject(this) onmouseout=dimObject(this)>Orbital Off/Def</td>';
 	$r .= '<td class=' . $col07 . ' colspan=2 onclick=sortColumn("surrating") onmouseover=glowObject(this) onmouseout=dimObject(this)>Surface Off/Def</td>';
 	$r .= '<td class=' . $col08 . ' colspan=2 onclick=sortColumn("buildrating") onmouseover=glowObject(this) onmouseout=dimObject(this)>Buildings</td>';
-	$r .= '<td class=' . $col09 . ' colspan=2 onclick=sortColumn("starbases") onmouseover=glowObject(this) onmouseout=dimObject(this)>Starbases</td>';
 	$r .= '<td class=' . $col10 . ' colspan=2 onclick=sortColumn("airCap") onmouseover=glowObject(this) onmouseout=dimObject(this)>AirBase</td>';
-	$r .= '<td class=' . $col11 . ' colspan=2 onclick=sortColumn("fighter") onmouseover=glowObject(this) onmouseout=dimObject(this)>Fighter</td>';
-	$r .= '<td class=' . $col19 . ' colspan=2 onclick=sortColumn("drones") onmouseover=glowObject(this) onmouseout=dimObject(this)>Drones</td>';
 	$r .= '<td class=' . $col12 . ' colspan=2 onclick=sortColumn("habSpace") onmouseover=glowObject(this) onmouseout=dimObject(this)>Habitat</td>';
 	$r .= '<td class=' . $col13 . ' colspan=2 onclick=sortColumn("intelOps") onmouseover=glowObject(this) onmouseout=dimObject(this)>Intel</td>';
 	$r .= '<td class=' . $col14 . ' colspan=2 onclick=sortColumn("materials") onmouseover=glowObject(this) onmouseout=dimObject(this)>Materials</td>';
@@ -778,13 +778,13 @@ function displayPlanetDetails($planet, $Type)
 	$r .= '<td class=hc colspan=1>Rank</td>';
 	$r .= '<td class=hc colspan=1>Source</td>';
 	$r .= '<td class=hc colspan=2>Fleet</td>';
+	$r .= '<td class=hc colspan=2>Starbases</td>';
+	$r .= '<td class=hc colspan=2>Fighter</td>';
+	$r .= '<td class=hc colspan=2>Drones</td>';
 	$r .= '<td class=hc colspan=2>Orbital Off/Def</td>';
 	$r .= '<td class=hc colspan=2>Surface Off/Def</td>';
 	$r .= '<td class=hc colspan=2>Buildings</td>';
-	$r .= '<td class=hc colspan=2>Starbases</td>';
 	$r .= '<td class=hc colspan=2>AirBase</td>';
-	$r .= '<td class=hc colspan=2>Fighter</td>';
-	$r .= '<td class=hc colspan=2>Drones</td>';
 	$r .= '<td class=hc colspan=2>Habitat</td>';
 	$r .= '<td class=hc colspan=2>Intel</td>';
 	$r .= '<td class=hc colspan=2>Materials</td>';
@@ -813,7 +813,7 @@ function displayPlanetDetails($planet, $Type)
 		{
 			$FS = " Normal";
 		}
-		
+
 		$pName = $xp[$intI]['planetName'];
 		$pName = substr($pName,0,15); //Limit name to 15 chars
 
@@ -824,7 +824,7 @@ function displayPlanetDetails($planet, $Type)
 		if ($xp[$intI]['reconnaitertype'] == 1)
 		{
 			//Structure
-			$r .= '<td class=xx>' . $pName  . " (S)" . $FS  . '<div class=hidden id=' . ('d_' . $intI) . '>' . $xp[$intI]['scoutID'] . '</div></td>';
+			$r .= '<td class=xx>' . $pName  . " (S)" . '<div class=hidden id=' . ('d_' . $intI) . '>' . $xp[$intI]['scoutID'] . '</div></td>';
 		}
 		else if ($xp[$intI]['reconnaitertype'] == 2)
 		{
@@ -844,20 +844,20 @@ function displayPlanetDetails($planet, $Type)
 		$r .= '<td class=xc>' . $xp[$intI]['sourcename']         . '</td>';
 		$r .= '<td class=xr>' . number_format($xp[$intI]['fleetrating'])      . '</td>';
 		$r .= '<td class=xr>' . $xd[$intI]['fleetrating']      . '</td>';
+		$r .= '<td class=xr>' . $xp[$intI]['starbases'] . '</td>';
+		$r .= '<td class=xr>' . $xd[$intI]['starbases'] . '</td>';
+		$r .= '<td class=xr>' . number_format($xp[$intI]['fighter'])      . '</td>';
+		$r .= '<td class=xr>' . $xd[$intI]['fighter']      . '</td>';
+		$r .= '<td class=xr>' . number_format($xp[$intI]['drones'])      . '</td>';
+		$r .= '<td class=xr>' . $xd[$intI]['drones']  . '</td>';
 		$r .= '<td class=xr>' . number_format($xp[$intI]['orbrating'])      . '</td>';
 		$r .= '<td class=xr>' . $xd[$intI]['orbrating']      . '</td>';
 		$r .= '<td class=xr>' . number_format($xp[$intI]['surrating'])      . '</td>';
 		$r .= '<td class=xr>' . $xd[$intI]['surrating']      . '</td>';
 		$r .= '<td class=xr>' . number_format($xp[$intI]['buildrating'])      . '</td>';
 		$r .= '<td class=xr>' . $xd[$intI]['buildrating']      . '</td>';
-		$r .= '<td class=xr>' . $xp[$intI]['starbases'] . '</td>';
-		$r .= '<td class=xr>' . $xd[$intI]['starbases'] . '</td>';
 		$r .= '<td class=xr>' . number_format($xp[$intI]['airCap'])       . '</td>';
 		$r .= '<td class=xr>' . $xd[$intI]['airCap']       . '</td>';
-		$r .= '<td class=xr>' . number_format($xp[$intI]['fighter'])      . '</td>';
-		$r .= '<td class=xr>' . $xd[$intI]['fighter']      . '</td>';
-		$r .= '<td class=xr>' . number_format($xp[$intI]['drones'])      . '</td>';
-		$r .= '<td class=xr>' . $xd[$intI]['drones']      . '</td>';
 		$r .= '<td class=xr>' . sprintf('%01.2f',$xp[$intI]['habSpace'])   . '</td>';
 		$r .= '<td class=xr>' . $xd[$intI]['habSpace']      . '</td>';
 		$r .= '<td class=xr>' . $xp[$intI]['intelOps']     . '</td>';
