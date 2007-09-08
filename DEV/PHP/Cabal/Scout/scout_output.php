@@ -1104,6 +1104,9 @@ function displayScoutingReport($reportID)
 		$SQL .= 'sum(WEATL) as WEATL,';
 		$SQL .= 'sum(ZEPFD) as ZEPFD,';
 		$SQL .= 'sum(BBFIL) as BBFIL,';
+		$SQL .= 'sum(MONOL) as MONOL,';
+		$SQL .= 'sum(MAELS) as MAELS,';
+		$SQL .= 'sum(SANDS) as SANDS,';
 		$SQL .= 'AirOps, Capital, Diplomacy, sum(Fighter) as Fighter, Habitat, sum(IntelOps) as IntelOps, sum(Materials) as Materials,';
 		$SQL .= 'Reproduction, (sum(Queues) - 1) as Queues, Research, sum(Scouting) as Scouting, Sensors, Special, Speed, Training,';
 		$SQL .= 'Warehouse, Wealth, Rank, Aircap, Habspace, sum(FleetRating) as FleetRating, sum(OrbRating) as OrbRating,';
@@ -1474,6 +1477,24 @@ function getCapital($row)
 		$r .= '<td width=80% class=rptl>Light Carrier</td>';
 		$r .= '</tr>';
 	}
+	
+	if ($row['MAELS'] > 0)
+	{
+		$r .= '<tr>';
+		$r .= '<td width=10% class=rptrdur>' . number_format($row['MAELS'] * conMAELS * $row['DurabilityPerc']) . '</td>';
+		$r .= '<td width=10% class=rptr>' . $row['MAELS'] . '</td>';
+		$r .= '<td width=80% class=rptl>"Maelstrom" Siege Platform</td>';
+		$r .= '</tr>';
+	}
+	
+	if ($row['SANDS'] > 0)
+	{
+		$r .= '<tr>';
+		$r .= '<td width=10% class=rptrdur>' . number_format($row['SANDS'] * conSANDS * $row['DurabilityPerc']) . '</td>';
+		$r .= '<td width=10% class=rptr>' . $row['SANDS'] . '</td>';
+		$r .= '<td width=80% class=rptl>"Sandstorm" Anti-Fighter Platform</td>';
+		$r .= '</tr>';
+	}
 
 	if ($row['ORCBA'] > 0)
 	{
@@ -1668,7 +1689,16 @@ function getSurfaceDefense($row)
 		$r .= '<td width=80% class=rptl>Defense Turret</td>';
 		$r .= '</tr>';
 	}
-
+	
+	if ($row['MONOL'] > 0)
+	{
+		$r .= '<tr>';
+		$r .= '<td width=10% class=rptrdur>' . number_format($row['MONOL'] * conMONOL * $row['DurabilityPerc']) . '</td>';
+		$r .= '<td width=10% class=rptr>' . $row['MONOL'] . '</td>';
+		$r .= '<td width=80% class=rptl>Monolith</td>';
+		$r .= '</tr>';
+	}
+	
 	if ($row['SDEF1'] > 0)
 	{
 		$r .= '<tr>';
