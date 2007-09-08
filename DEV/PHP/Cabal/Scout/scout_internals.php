@@ -34,7 +34,7 @@ $report = str_replace('<br>','|',$report);
 $report = str_replace('<BR>','|',$report);
 $report = str_replace('||'  ,'|',$report);
 $ray = explode('|',$report);
-	
+
 $dateFound    = false;
 $fromFound    = false;
 $targetFound  = false;
@@ -69,7 +69,7 @@ else
 }
 
 if ($method == 'Full Report')
-{	
+{
 	$intraycount = count($ray);
 	for ($intI = 0; $intI < $intraycount; $intI++)
 	{
@@ -95,12 +95,12 @@ if ($method == 'Full Report')
 		elseif ( ! $targetFound)
 		{
 			$pos = strpos($line,'reconnoiter structures at');
-			
+
 			if ($pos === false) //reconnaiter structures wasn't found
 			{
 				//Determine target from a fleet reconnaissance
 				$pos = strpos($line,' fleet reconnaissance at'); //leave the extra space it's important
-				
+
 				if ($pos === false) //fleet reconnaissance wasn't found
 				{
 					//error
@@ -112,7 +112,7 @@ if ($method == 'Full Report')
 					$targetFound = true;
 					$target = substr($line,$pos +25,-1);
 					parseTarget($target);
-				}			
+				}
 			}
 			else //reconnaiter structures was found
 			{
@@ -143,7 +143,7 @@ else
 		$from	= $ray[1];
 		$target	= $ray[2];
 		$structs	= $ray[3];
-		
+
 		$reconnaitertype = '1'; //structure
 	}
 	else
@@ -154,13 +154,13 @@ else
 		$recon	= $ray[2]; //reconnoiter structures, conduct fleet reconnaissance
 		$target	= $ray[3];
 		$structs	= $ray[4];
-		
+
 		//echo $timestamp . '<br>';
 		//echo $from . '<br>';
 		//echo $target . '<br>';
 		//echo $recon . '<br>';
 		//echo $structs . '<br>';
-		
+
 		//Determine structure or fleet recon
 		if ($recon == 'reconnoiter structures')
 		{
@@ -199,7 +199,7 @@ else
 function TurnAge($start_date, $end_date)
 {
 	//Calculate turns passed between two dates
-	
+
 	//Split a string by string
 	$_d1 = explode("-", $start_date);
 	$_d3 = explode(":", substr($start_date, -8));
@@ -241,8 +241,8 @@ function write_to_log($text)
 	$CRLF = "\r\n";
 	$log_file = '../Logs/scout_log_' . date("mdy") . '.txt';
 	$fp = fopen($log_file,'a');
-	
-	if ($fp) 
+
+	if ($fp)
 	{
 		//$text = str_replace(chr(2),'$',$text);
 		$msg = date("m.d.y H:i:s") . ' - ' . $text . $CRLF;
@@ -290,18 +290,18 @@ function parseTarget($line)
 function parseStructs($line)
 {
 	global $blnFS;
-	
+
 	$ray = explode('(s)',$line);
 	$blnFormationRecognized = false;
-	
+
 	//Iterate all structures
 	$intraycount = count($ray);
-	
+
 	for ($intI = 0; $intI < $intraycount; $intI++)
 	{
 		$struct = $ray[$intI];
 		$struct = trim($struct);
-		
+
 		if ($struct != '')
 		{
 			$pos = strpos($struct,' ');
@@ -318,50 +318,50 @@ function parseStructs($line)
 				{
 					switch ($name)
 					{
-						case 'Fang Fighter Bomber' : 
-							$blnFormationRecognized = true; 
-							$blnFS = '1'; 
+						case 'Fang Fighter Bomber' :
+							$blnFormationRecognized = true;
+							$blnFS = '1';
 							break;
 						case 'Fighter Bomber' :
-							$blnFormationRecognized = true; 
-							$blnFS = '1'; 
+							$blnFormationRecognized = true;
+							$blnFS = '1';
 							break;
 						case 'Fighter Interceptor' :
-							$blnFormationRecognized = true; 
-							$blnFS = '1'; 
+							$blnFormationRecognized = true;
+							$blnFS = '1';
 							break;
 						case 'Heavy Bomber' :
-							$blnFormationRecognized = true; 
-							$blnFS = '1'; 
+							$blnFormationRecognized = true;
+							$blnFS = '1';
 							break;
 						case 'Advanced Interceptor' :
-							$blnFormationRecognized = true; 
-							$blnFS = '1'; 
+							$blnFormationRecognized = true;
+							$blnFS = '1';
 							break;
 						case 'Dagger Heavy Fighter' :
-							$blnFormationRecognized = true; 
-							$blnFS = '1'; 
+							$blnFormationRecognized = true;
+							$blnFS = '1';
 							break;
 						case 'Venom Heavy Fighter' :
-							$blnFormationRecognized = true; 
-							$blnFS = '1'; 
+							$blnFormationRecognized = true;
+							$blnFS = '1';
 							break;
 						case 'Wasp Fighter' :
-							$blnFormationRecognized = true; 
-							$blnFS = '1';  
+							$blnFormationRecognized = true;
+							$blnFS = '1';
 							break;
 						case 'Stinger Drone' :
-							$blnFormationRecognized = true; 
-							$blnFS = '1'; 
+							$blnFormationRecognized = true;
+							$blnFS = '1';
 							break;
 						default:
 							//some other ship then a fighter so we get a normal or ambush defensive formation
-							$blnFormationRecognized = true; 
-							$blnFS = '0'; 
+							$blnFormationRecognized = true;
+							$blnFS = '0';
 							break;
 					}
 				}
-				
+
 				switch ($Initial)
 				{
 					case 'A' : parse_A_structs($name,$qty); break;
@@ -863,6 +863,11 @@ function parse_M_structs($name,$qty)
 
 	switch ($name)
 	{
+		case 'Maelstrom Siege Platform':
+			$dat['MAELS']       = $qty;
+			$dat['Capital']    += $qty;
+			$dat['FleetRating']   += ($qty * conMAELS);
+			break;
 		case 'Manufacturing Plant':
 			$dat['MANU1']       = $qty;
 			$dat['Queues']     += ($qty * 1);
@@ -917,6 +922,11 @@ function parse_M_structs($name,$qty)
 			$dat['Materials']  += ($qty * conRAD2PROD);
 			$dat['BuildRating']   += ($qty * conRADI2);
 			$dat['SurSpace']   += ($qty * conssRADI2);
+			break;
+		case 'Monolith':
+			$dat['MONOL']       = $qty;	
+			$dat['BuildRating']   += ($qty * conMONOL);
+			$dat['SurSpace']   += ($qty * conssMONOL);
 			break;
 	}
 }
@@ -1082,6 +1092,11 @@ function parse_S_structs($name,$qty)
 	global $dat;
 	switch ($name)
 	{
+		case 'Sandstorm Anti-Fighter Platform':
+			$dat['SANDS']       = $qty;
+			$dat['Capital']    += $qty;
+			$dat['FleetRating']   += ($qty * conSANDS);
+			break;
 		case 'Satellites':
 			$dat['SATE1']        = $qty;
 			$dat['Sensors']     += $qty;
@@ -1425,6 +1440,7 @@ function initialize_dat()
 	$dat['LEOSC']  = '';
 	$dat['LIGCA']  = '';
 	$dat['LISTN']  = '';
+	$dat['MAELS']  = '';
 	$dat['MANU1']  = '';
 	$dat['MANU2']  = '';
 	$dat['MATS1']  = '';
@@ -1432,6 +1448,7 @@ function initialize_dat()
 	$dat['MATRC']  = '';
 	$dat['MINE1']  = '';
 	$dat['MINE2']  = '';
+	$dat['MONOL']  = '';
 	$dat['RADI1']  = '';
 	$dat['RADI2']  = '';
 	$dat['OBULK']  = '';
@@ -1452,6 +1469,7 @@ function initialize_dat()
 	$dat['RSENS']  = '';
 	$dat['RLAB1']  = '';
 	$dat['RLAB2']  = '';
+	$dat['SANDS']  = '';
 	$dat['SATE1']  = '';
 	$dat['SATE2']  = '';
 	$dat['SCOUT']  = '';
@@ -1501,7 +1519,7 @@ function updateDatabase()
 	global $blnWarFactory;
 	global $blnBiologicalResearch;
 	global $reconnaitertype;
-	global $blnFS;	
+	global $blnFS;
 
 	//default durability
 	$durability = '1.0';
@@ -1581,11 +1599,11 @@ function updateDatabase()
 				//echo "Age = " . $Age;
 				//echo "turns = " . $row['TurnCount'];
 
-				if ($Age > 1)
-				{
-					//Rank isn't up to date so update it
-					UpdateRank($row['TurnCount']);
-				}
+				//if ($Age > 1)
+				//{
+				//	//Rank isn't up to date so update it
+				//	UpdateRank($row['TurnCount']);
+				//}
 			}
 		}
 
@@ -1631,7 +1649,7 @@ function updateDatabase()
 			//echo 'source planet [' . $sourceName . '] not found in database. ';
 		}
 	}
-	
+
 	if ($ok)
 	{
 		// see if scouting report has already been entered
@@ -1701,7 +1719,7 @@ function updateDatabase()
 			}
 
 			$reportDateTime = $reportDate . ' ' . $reportTime;
-			
+
 			//Insert the new scouting report
 			$SQL  = 'INSERT INTO tblscout (PlanetID,PlanetName,SourceID,SourceName,ReportDate,ReportTime,ReportDateTime,';
 			$SQL .= 'ADVIN,ADVGE,ADVTS,AEGMS,AIRB1,AIRB2,ANVBS,ASPHC,AVASC,BADLC,';
@@ -1720,7 +1738,8 @@ function updateDatabase()
 			$SQL .= 'AirOps,Capital,Diplomacy,Fighter,Habitat,IntelOps,';
 			$SQL .= 'Materials,Reproduction,Queues,Research,Scouting,Sensors,Warehouse,';
 			$SQL .= 'Special,Speed,Training,Wealth,Rank,AirCap,HabSpace,Current,Species,';
-			$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating,Reconnaitertype,OrbSpace,SurSpace,FS,DurabilityPerc';
+			$SQL .= 'FleetRating,OrbRating,SurRating,BuildRating,Reconnaitertype,OrbSpace,SurSpace,FS,DurabilityPerc,';
+			$SQL .= 'MONOL,MAELS,SANDS';
 			$SQL .= ') VALUES (';
 			$SQL .= '\'' . $planetID	. '\',';
 			$SQL .= '\'' . $dat['target']	. '\',';
@@ -1885,10 +1904,13 @@ function updateDatabase()
 			$SQL .= '\'' . $reconnaitertype	. '\',';
 			$SQL .= '\'' . $dat['OrbSpace'] 	. '\',';
 			$SQL .= '\'' . $dat['SurSpace'] 	. '\',';
-			$SQL .= '\'' . $blnFS . '\',';	
-			$SQL .= '\'' . $durability	. '\'';
+			$SQL .= '\'' . $blnFS . '\',';
+			$SQL .= '\'' . $durability	. '\',';
+			$SQL .= '\'' . $dat['MONOL']	. '\',';
+			$SQL .= '\'' . $dat['MAELS']	. '\',';
+			$SQL .= '\'' . $dat['SANDS']	. '\'';
 			$SQL .= ')';
-			
+
 			$result = mysql_query($SQL);
 
 			if (!$result)
@@ -1906,7 +1928,7 @@ function updateDatabase()
 			$newid = mysql_insert_id(); //get the new record number
 			$sid2 = $sid1;	//assign the old report number
 			$sid1 = $newid; //assign the new report number
-         	
+
 			$SQL  = 'UPDATE tblplanet SET ';
 			$SQL .= 'SID1 = \'' . $sid1 . '\', ';
 			$SQL .= 'SID2 = \'' . $sid2 . '\'  ';
