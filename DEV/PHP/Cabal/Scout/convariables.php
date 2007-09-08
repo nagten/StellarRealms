@@ -6,7 +6,7 @@
 	define("conssBARR1", "4"); //Barracks
 	define("conssBARR2", "5"); //Barracks Veteran
 	define("conssBIOLO", "5"); //Biological Research Facility
-	define("conssBROCE", "0"); //Brood Center
+	define("conssBROCE", "6"); //Brood Center
 	define("conssDEFTU", "1"); //Defense Turret
 	define("conssDIPCO", "0"); //Diplomatic Council
 	define("conssEMBAS", "4"); //Embassy
@@ -33,6 +33,7 @@
 	define("conssMATRC", "0"); //Materials Research Complex
 	define("conssMINE1", "4"); //Mining Facility (Metals)
 	define("conssMINE2", "5"); //Mining Facility (Metals - Improved)
+	define("conssMONOL", "8"); //Monolith
 	define("conssPBANK", "4"); //Planetary Bank
 	define("conssPLATE", "0"); //Plating Factory
 	define("conssRADI1", "4"); //Mining Facility (Radioactives)
@@ -109,6 +110,7 @@
 	define("conMINE2", "60"); //Mining Facility (Metals - Improved)
 	define("conRADI1", "50"); //Mining Facility (Radioactives)
 	define("conRADI2", "60"); //Mining Facility (Radioactives - Improved)
+	define("conMONOL", "500"); //Monolith
 	define("conPBANK", "50"); //Planetary Bank
 	define("conPLATE", "70"); //Plating Factory
 	define("conRLAB1", "50"); //Research Lab
@@ -190,12 +192,14 @@
 	define("conJUDDR", "50"); //Judicator Dreadnought
 	define("conLEOSC", "30"); //Leopard Strike Cruiser
 	define("conLIGCA", "30"); //Light Carrier
+	define("conMAELS", "140"); //Maelstrom Siege Platform
 	define("conORCBA", "50"); //Orca Battleship
 	define("conPRIHC", "30"); //Privateer Heavy Cruiser
 	define("conRAVMC", "30"); //Raven Missile Cruiser
+	define("conSANDS", "140"); //Sandstorm Anti-Fighter Platform
 	define("conSCOUT", "7"); //Scout
 	define("conSTIDR", "2"); //Stinger Drone
-	define("conTANDB", ""); //Tangler Defense Barge
+	define("conTANDB", "70"); //Tangler Defense Barge
 	define("conTARA1", "60"); //Taratula Attack Station Mark I
 	define("conTARA2", "60"); //Taratula Attack Station Mark II
 	define("conTARA3", "75"); //Taratula Attack Station Mark III
