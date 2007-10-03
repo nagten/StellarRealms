@@ -199,19 +199,54 @@ write_to_log($_SERVER['REMOTE_ADDR'] . ' Host:' . $_SERVER['REMOTE_HOST'] . ' UR
           echo "<td align='right'><span class=style1>" . $row['fprestigedelta'] . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $row['fprestigerank'] . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $row['fcredits'] . "</span></td>\n";
-          echo "<td align='right'><span class=style1>" . $row['fcreditsdelta'] . "</span></td>\n";
+          
+          if ($row['fcreditsdelta'] < 0)
+          {
+          	echo "<td BGCOLOR = red align='right' ><span class=style1 >" . $row['fcreditsdelta'] . "</span></td>\n";
+          }
+          else
+          {
+          	echo "<td align='right'><span class=style1>" . $row['fcreditsdelta'] . "</span></td>\n";
+          }
+          
           echo "<td align='right'><span class=style1>" . $row['fcreditsrank'] . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $row['ftaxrate'] . "%</span></td>\n";
           echo "<td align='right'><span class=style1>" . $row['fpop'] . "</span></td>\n";
-          echo "<td align='right'><span class=style1>" . $row['fpopdelta'] . "</span></td>\n";
+          
+          if ($row['fpopdelta'] < 0)
+          {
+          	echo "<td BGCOLOR = red align='right'><span class=style1>" . $row['fpopdelta'] . "</span></td>\n";
+          }
+          else
+          {
+          	echo "<td align='right'><span class=style1>" . $row['fpopdelta'] . "</span></td>\n";
+          }
+
           echo "<td align='right'><span class=style1>" . $row['fpoprank'] . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $PopSpace . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $row['ffood'] . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $row['ffuel'] . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $row['fmetals'] . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $row['fradioactives'] . "</span></td>\n";
-          echo "<td align='right'><span class=style1>" . $row['ffooddelta'] . "</span></td>\n";
-          echo "<td align='right'><span class=style1>" . $row['fmetalsdelta'] . "</span></td>\n";
+          
+          if ($row['ffooddelta'] < 0)
+          {
+          	echo "<td BGCOLOR = red align='right'><span class=style1>" . $row['ffooddelta'] . "</span></td>\n";
+          }
+          else
+          {
+          	echo "<td align='right'><span class=style1>" . $row['ffooddelta'] . "</span></td>\n";
+          }
+          
+          if ($row['fmetalsdelta'] < 0)
+          {
+          	echo "<td BGCOLOR = red align='right'><span class=style1>" . $row['fmetalsdelta'] . "</span></td>\n";
+          }
+          else
+          {
+          	echo "<td align='right'><span class=style1>" . $row['fmetalsdelta'] . "</span></td>\n";
+          }
+          
           echo "<td align='right'><span class=style1>" . $MatSpace . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $row['fprojects'] . "/" . $row['fprojectsmaximum'] . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $row['fconstruction'] . "</span></td>\n";
