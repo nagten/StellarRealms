@@ -7,7 +7,8 @@
 
 (function()
 {
-   	//var scouturl = ['http://www.idsfadt.com/Cabal/Scout/scout_internals.php?action=input&report=','http://www.idsfadt.com/Murc/Scout/scout_internals.php?action=input&report='];
+//	var scouturl = ['http://localhost/Murc/Scout/scout_internals.php?action=input&report='];
+//var scouturl = ['http://www.idsfadt.com/Cabal/Scout/scout_internals.php?action=input&report=','http://www.idsfadt.com/Murc/Scout/scout_internals.php?action=input&report='];
 	var scouturl = ['http://localhost/Cabal/Scout/scout_internals.php?action=input&report='];
 
     /* Puts "text" on the windows clipboard.
