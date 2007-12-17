@@ -90,12 +90,12 @@
 	        msgExtd += msgToExtract.childNodes[2].nodeValue.match(/From:\s+(.*)/)[1] + delimiter;
 
 			//get type strcutures or fleet recon
-			//GM_log(msgToExtract.childNodes[8].nodeValue.match(/to (.*) at/)[1] + delimiter);
-			msgExtd += msgToExtract.childNodes[8].nodeValue.match(/to (.*) at/)[1] + delimiter;
+			//GM_log(msgToExtract.childNodes[6].nodeValue.match(/to (.*) at/)[1] + delimiter);
+			msgExtd += msgToExtract.childNodes[6].nodeValue.match(/to (.*) at/)[1] + delimiter;
 
 			//get planet
-			//GM_log(msgToExtract.childNodes[8].nodeValue.match(/at (.*)./)[1]  + delimiter);
-	     	msgExtd += msgToExtract.childNodes[8].nodeValue.match(/at (.*)./)[1]  + delimiter;
+			//GM_log(msgToExtract.childNodes[6].nodeValue.match(/at (.*)./)[1]  + delimiter);
+	     	msgExtd += msgToExtract.childNodes[6].nodeValue.match(/at (.*)./)[1]  + delimiter;
 
 			//Get defenses
 	        msgDefenses = msgToExtract.innerHTML.replace(/\n/g, " ").match(/defending force consisted of ([^.]*)\./);
@@ -162,7 +162,7 @@
     {
         cellMsg = tbody.childNodes[i*2].childNodes[3];
 
-       	if (cellMsg.childNodes[8].nodeValue.match(/reconnoiter structures/) || cellMsg.childNodes[8].nodeValue.match(/conduct fleet reconnaissance/))
+       	if (cellMsg.childNodes[6].nodeValue.match(/reconnoiter structures/) || cellMsg.childNodes[6].nodeValue.match(/conduct fleet reconnaissance/))
         {
             cellMsg.setAttribute('msgType', 'StructScout');
             cellMsg.appendChild(createClickButton('StC' + i,'Scout to Clipboard',scoutToClipboard));
@@ -207,7 +207,7 @@
             for (var i=0; i<checkboxes.length; i++)
             {
                 // Select,Deselect all scouting reports
-                if (checkboxes[i].parentNode.parentNode.childNodes[3].childNodes[8].nodeValue.match(/reconnoiter structures/) || checkboxes[i].parentNode.parentNode.childNodes[3].childNodes[8].nodeValue.match(/conduct fleet reconnaissance/))
+                if (checkboxes[i].parentNode.parentNode.childNodes[3].childNodes[6].nodeValue.match(/reconnoiter structures/) || checkboxes[i].parentNode.parentNode.childNodes[3].childNodes[6].nodeValue.match(/conduct fleet reconnaissance/))
                 {
                     checkboxes[i].checked = state;
                 }
@@ -234,11 +234,11 @@
             if (checkboxes[scoutToDbArrayControl].checked)
                 {
                     //just an extra test
-                    if (checkboxes[scoutToDbArrayControl].parentNode.parentNode.childNodes[3].childNodes[8].nodeValue.match(/reconnoiter structures/) || checkboxes[scoutToDbArrayControl].parentNode.parentNode.childNodes[3].childNodes[8].nodeValue.match(/conduct fleet reconnaissance/))
+                    if (checkboxes[scoutToDbArrayControl].parentNode.parentNode.childNodes[3].childNodes[6].nodeValue.match(/reconnoiter structures/) || checkboxes[scoutToDbArrayControl].parentNode.parentNode.childNodes[3].childNodes[6].nodeValue.match(/conduct fleet reconnaissance/))
 		    		{
                         for (intI=0;intI<scouturl.length;intI++)
 						{
-							var request = extractScoutMsg(checkboxes[scoutToDbArrayControl].parentNode.parentNode.childNodes[3].childNodes[8].parentNode,'<br>');
+							var request = extractScoutMsg(checkboxes[scoutToDbArrayControl].parentNode.parentNode.childNodes[3].childNodes[6].parentNode,'<br>');
 
                         	request = scouturl[intI] + encodeURIComponent(request);
 							GM_xmlhttpRequest({
@@ -290,9 +290,9 @@
                 if (checkboxes[i].checked)
                 {
                     //just an extra test
-                    if (checkboxes[i].parentNode.parentNode.childNodes[3].childNodes[8].nodeValue.match(/reconnoiter structures/) || checkboxes[i].parentNode.parentNode.childNodes[3].childNodes[8].nodeValue.match(/conduct fleet reconnaissance/))
+                    if (checkboxes[i].parentNode.parentNode.childNodes[3].childNodes[6].nodeValue.match(/reconnoiter structures/) || checkboxes[i].parentNode.parentNode.childNodes[3].childNodes[6].nodeValue.match(/conduct fleet reconnaissance/))
                     {
-                        request = request + extractScoutMsg(checkboxes[i].parentNode.parentNode.childNodes[3].childNodes[8].parentNode,'\r\n');
+                        request = request + extractScoutMsg(checkboxes[i].parentNode.parentNode.childNodes[3].childNodes[6].parentNode,'\r\n');
                         request = request + '\r\n\r\n'
                         blnSend = true;
                     }
