@@ -38,8 +38,8 @@ function write_to_log($text)
 	$CRLF = "\r\n";
 	$log_file = '../Logs/access_log_' . date("mdy") . '.txt';
 	$fp = fopen($log_file,'a');
-	
-	if ($fp) 
+
+	if ($fp)
 	{
 		//$text = str_replace(chr(2),'$',$text);
 		$msg = date("m.d.y H:i:s") . ' - ' . $text . $CRLF;
@@ -147,6 +147,7 @@ write_to_log($_SERVER['REMOTE_ADDR'] . ' Host:' . $_SERVER['REMOTE_HOST'] . ' UR
         echo "<td width=\"50\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fprojects&sortOrder=$sortOrder\">Q's Used </a></span></td>\n";
         echo "<td width=\"23\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fconstruction&sortOrder=$sortOrder\">Con</a></span></td>\n";
         echo "<td width=\"19\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=fwealth&sortOrder=$sortOrder\">Wea</a></span></td>\n";
+        echo "<td width=\"19\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=freproduction&sortOrder=$sortOrder\">Rep</a></span></td>\n";
         echo "<td width=\"27\"><span class=style1><a href=\"{$_SERVER['PHP_SELF']}?order=falertlevel&sortOrder=$sortOrder\">Alt</a></span></td>\n";
         echo "<td width=\"24\"><span class=style1>Age</span></td>\n";
         echo "<td width=\"27\"><span class=style1>COP</span></td>\n";
@@ -163,17 +164,17 @@ write_to_log($_SERVER['REMOTE_ADDR'] . ' Host:' . $_SERVER['REMOTE_HOST'] . ' UR
         $sumMetals = 0; $sumRads = 0; $sumFoodDelta = 0; $sumMetalsDelta = 0;
         $sumMatSpace = 0; $sumProjects = 0; $sumProjectsMaximum = 0; $sumWealth = 0;
         $i = 0;
-        $roundend = date("m-d-Y H:i:s",mktime(10,20,00,2,27,2007));
-          
+        $roundend = date("m-d-Y H:i:s",mktime(6,40,00,01,01,2008));
+
         for($i = 0; $i < $row = mysql_fetch_array($result); $i++)
         {
           $current_date = date("m-d-Y H:i:s");
-          
+
           $MatSpace = $row['fmatmaximum'] - ($row['ffood'] + $row['ffuel'] + $row['fmetals'] + $row['fradioactives']);
           $PopSpace = $row['fpopmaximum'] - $row['fpop'];
           $COP = round(7.5 * (1.1 + $row['fwealth']/100) / (1+$row['freproduction']/100), 2);
           $VOP =  round(0.05/12 * (1 + $row['fwealth']/100 + 0.1) * (TurnAge($current_date,$roundend)),2);
-          
+
           if ($row['fdate'] != "")
           {
             $Age = TurnAge($row['fdate'], $current_date);
@@ -199,23 +200,23 @@ write_to_log($_SERVER['REMOTE_ADDR'] . ' Host:' . $_SERVER['REMOTE_HOST'] . ' UR
           echo "<td align='right'><span class=style1>" . $row['fprestigedelta'] . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $row['fprestigerank'] . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $row['fcredits'] . "</span></td>\n";
-          
+
           if ($row['fcreditsdelta'] < 0)
           {
-          	echo "<td BGCOLOR = red align='right' ><span class=style1 >" . $row['fcreditsdelta'] . "</span></td>\n";
+          	echo "<td BGCOLOR = yellow align='right' ><span class=style1 >" . $row['fcreditsdelta'] . "</span></td>\n";
           }
           else
           {
           	echo "<td align='right'><span class=style1>" . $row['fcreditsdelta'] . "</span></td>\n";
           }
-          
+
           echo "<td align='right'><span class=style1>" . $row['fcreditsrank'] . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $row['ftaxrate'] . "%</span></td>\n";
           echo "<td align='right'><span class=style1>" . $row['fpop'] . "</span></td>\n";
-          
+
           if ($row['fpopdelta'] < 0)
           {
-          	echo "<td BGCOLOR = red align='right'><span class=style1>" . $row['fpopdelta'] . "</span></td>\n";
+          	echo "<td BGCOLOR = yellow align='right'><span class=style1>" . $row['fpopdelta'] . "</span></td>\n";
           }
           else
           {
@@ -228,34 +229,35 @@ write_to_log($_SERVER['REMOTE_ADDR'] . ' Host:' . $_SERVER['REMOTE_HOST'] . ' UR
           echo "<td align='right'><span class=style1>" . $row['ffuel'] . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $row['fmetals'] . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $row['fradioactives'] . "</span></td>\n";
-          
+
           if ($row['ffooddelta'] < 0)
           {
-          	echo "<td BGCOLOR = red align='right'><span class=style1>" . $row['ffooddelta'] . "</span></td>\n";
+          	echo "<td BGCOLOR = yellow align='right'><span class=style1>" . $row['ffooddelta'] . "</span></td>\n";
           }
           else
           {
           	echo "<td align='right'><span class=style1>" . $row['ffooddelta'] . "</span></td>\n";
           }
-          
+
           if ($row['fmetalsdelta'] < 0)
           {
-          	echo "<td BGCOLOR = red align='right'><span class=style1>" . $row['fmetalsdelta'] . "</span></td>\n";
+          	echo "<td BGCOLOR = yellow align='right'><span class=style1>" . $row['fmetalsdelta'] . "</span></td>\n";
           }
           else
           {
           	echo "<td align='right'><span class=style1>" . $row['fmetalsdelta'] . "</span></td>\n";
           }
-          
+
           echo "<td align='right'><span class=style1>" . $MatSpace . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $row['fprojects'] . "/" . $row['fprojectsmaximum'] . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $row['fconstruction'] . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $row['fwealth'] . "</span></td>\n";
+          echo "<td align='right'><span class=style1>" . $row['freproduction'] . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $row['falertlevel'] . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $Age . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $COP . "</span></td>\n";
           echo "<td align='right'><span class=style1>" . $VOP . "</span></td>\n";
-			
+
           $sumCredits = $sumCredits + $row['fcredits'];
           $sumCreditsDelta = $sumCreditsDelta + $row['fcreditsdelta'];
           $sumTaxRate = $sumTaxRate + $row['ftaxrate'];
@@ -303,6 +305,7 @@ write_to_log($_SERVER['REMOTE_ADDR'] . ' Host:' . $_SERVER['REMOTE_HOST'] . ' UR
         echo "<td align='right'><span class=style1></span></td>\n";
         echo "<td align='right'><span class=style1></span></td>\n";
         echo "<td align='right'><span class=style1></span></td>\n";
+        echo "<td align='right'><span class=style1>" . TurnAge($current_date,$roundend) . "</span></td>\n";
         echo "</table>";
       }
     }
