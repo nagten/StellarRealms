@@ -136,7 +136,9 @@ if ($method == 'Full Report')
 }
 else
 {
-	if (count($ray) == 4)
+/*
+//Vorkuta removed the from field from a scouting message
+if (count($ray) == 4)
 	{
 		//Old style short report (before the fleet/structure change)
 		$timestamp	= $ray[0];
@@ -147,6 +149,7 @@ else
 		$reconnaitertype = '1'; //structure
 	}
 	else
+*/
 	{
 		//New style short report (before the fleet/structure change)
 		$timestamp	= $ray[0];
@@ -155,11 +158,13 @@ else
 		$target	= $ray[3];
 		$structs	= $ray[4];
 
-		//echo $timestamp . '<br>';
-		//echo $from . '<br>';
-		//echo $target . '<br>';
-		//echo $recon . '<br>';
-		//echo $structs . '<br>';
+		//echo '0 ' . $ray[0] . '<br>';
+		//echo '1 ' . $ray[1] . '<br>';
+		//echo '2 ' . $ray[2] . '<br>';
+		//echo '3 ' . $ray[3] . '<br>';
+		//echo '4 ' . $ray[4] . '<br>';
+		//echo '5 ' . $ray[5] . '<br>';
+		//echo '6 ' . $ray[6] . '<br>';
 
 		//Determine structure or fleet recon
 		if ($recon == 'reconnoiter structures')
@@ -181,9 +186,17 @@ if ($DEV)
 {
 	//echo "All data parsed <BR>";
 }
-
-$result = updateDatabase();
-//$result = $result . "target = " . $target;
+//echo $ray[4];
+if ($ray[4] != 'However, we have not heard from the fleet for their regular status updates')
+{
+	//echo 'Update';
+	$result = updateDatabase();
+}
+else
+{
+	//we skip this report
+	//echo 'No update';
+}
 
 if ($DEV)
 {
@@ -924,7 +937,7 @@ function parse_M_structs($name,$qty)
 			$dat['SurSpace']   += ($qty * conssRADI2);
 			break;
 		case 'Monolith':
-			$dat['MONOL']       = $qty;	
+			$dat['MONOL']       = $qty;
 			$dat['BuildRating']   += ($qty * conMONOL);
 			$dat['SurSpace']   += ($qty * conssMONOL);
 			break;
