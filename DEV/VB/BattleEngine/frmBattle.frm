@@ -1,17 +1,17 @@
 VERSION 5.00
 Begin VB.Form frmBattle 
    Caption         =   "Battle v0.4 Alpha"
-   ClientHeight    =   10695
-   ClientLeft      =   255
-   ClientTop       =   345
-   ClientWidth     =   14490
+   ClientHeight    =   10995
+   ClientLeft      =   3315
+   ClientTop       =   2670
+   ClientWidth     =   14400
    LinkTopic       =   "Form1"
-   ScaleHeight     =   10695
-   ScaleWidth      =   14490
+   ScaleHeight     =   10995
+   ScaleWidth      =   14400
    Begin VB.Frame frmSurStruct 
       Caption         =   "Surface Structures"
-      Height          =   2535
-      Left            =   3720
+      Height          =   2415
+      Left            =   3600
       TabIndex        =   175
       Top             =   8280
       Width           =   2655
@@ -21,7 +21,7 @@ Begin VB.Form frmBattle
          MaxLength       =   3
          TabIndex        =   219
          Text            =   "0"
-         Top             =   2160
+         Top             =   2040
          Width           =   495
       End
       Begin VB.TextBox txtTurret 
@@ -30,7 +30,7 @@ Begin VB.Form frmBattle
          MaxLength       =   3
          TabIndex        =   185
          Text            =   "0"
-         Top             =   1800
+         Top             =   1680
          Width           =   495
       End
       Begin VB.TextBox txtIMPSDB 
@@ -39,7 +39,7 @@ Begin VB.Form frmBattle
          MaxLength       =   3
          TabIndex        =   184
          Text            =   "0"
-         Top             =   1440
+         Top             =   1320
          Width           =   495
       End
       Begin VB.TextBox txtSDB 
@@ -48,7 +48,7 @@ Begin VB.Form frmBattle
          MaxLength       =   3
          TabIndex        =   183
          Text            =   "0"
-         Top             =   1080
+         Top             =   960
          Width           =   495
       End
       Begin VB.TextBox txtIMPSSG 
@@ -57,7 +57,7 @@ Begin VB.Form frmBattle
          MaxLength       =   3
          TabIndex        =   182
          Text            =   "0"
-         Top             =   720
+         Top             =   600
          Width           =   495
       End
       Begin VB.TextBox txtSSG 
@@ -66,7 +66,7 @@ Begin VB.Form frmBattle
          MaxLength       =   3
          TabIndex        =   181
          Text            =   "0"
-         Top             =   360
+         Top             =   240
          Width           =   495
       End
       Begin VB.Label Label82 
@@ -74,7 +74,7 @@ Begin VB.Form frmBattle
          Height          =   255
          Left            =   120
          TabIndex        =   220
-         Top             =   2160
+         Top             =   2040
          Width           =   1095
       End
       Begin VB.Label Label75 
@@ -82,7 +82,7 @@ Begin VB.Form frmBattle
          Height          =   255
          Left            =   120
          TabIndex        =   180
-         Top             =   1800
+         Top             =   1680
          Width           =   1095
       End
       Begin VB.Label Label74 
@@ -90,7 +90,7 @@ Begin VB.Form frmBattle
          Height          =   255
          Left            =   120
          TabIndex        =   179
-         Top             =   1440
+         Top             =   1320
          Width           =   1095
       End
       Begin VB.Label Label73 
@@ -98,7 +98,7 @@ Begin VB.Form frmBattle
          Height          =   255
          Left            =   120
          TabIndex        =   178
-         Top             =   1080
+         Top             =   960
          Width           =   1095
       End
       Begin VB.Label Label72 
@@ -106,7 +106,7 @@ Begin VB.Form frmBattle
          Height          =   255
          Left            =   120
          TabIndex        =   177
-         Top             =   720
+         Top             =   600
          Width           =   1095
       End
       Begin VB.Label Label71 
@@ -114,14 +114,14 @@ Begin VB.Form frmBattle
          Height          =   255
          Left            =   120
          TabIndex        =   176
-         Top             =   360
+         Top             =   240
          Width           =   1335
       End
    End
    Begin VB.ListBox lstDefender 
       Height          =   3180
       ItemData        =   "frmBattle.frx":0000
-      Left            =   11880
+      Left            =   11760
       List            =   "frmBattle.frx":0002
       TabIndex        =   163
       Top             =   360
@@ -130,7 +130,7 @@ Begin VB.Form frmBattle
    Begin VB.ListBox lstAttacker 
       Height          =   3180
       ItemData        =   "frmBattle.frx":0004
-      Left            =   9240
+      Left            =   9120
       List            =   "frmBattle.frx":0006
       MultiSelect     =   2  'Extended
       TabIndex        =   161
@@ -139,7 +139,7 @@ Begin VB.Form frmBattle
    End
    Begin VB.Frame frmShips 
       Height          =   10935
-      Left            =   120
+      Left            =   0
       TabIndex        =   0
       Top             =   0
       Width           =   14295
@@ -189,7 +189,7 @@ Begin VB.Form frmBattle
          Height          =   375
          Left            =   12960
          TabIndex        =   209
-         Top             =   9840
+         Top             =   9000
          Width           =   1215
       End
       Begin VB.TextBox txtResult 
@@ -2922,7 +2922,7 @@ Private Sub cmdTest_Click()
         txtTurret.Text = 76
         
         'Volleys bombard
-        txtVolleys.Text = 3
+        txtVolleys.Text = 1
         'Attack Formation
         optBombard.Value = True
         'Defense Formation
@@ -4402,6 +4402,10 @@ Private Function BattleResult(objAttacker As clsShip, objDefender As clsShip) As
 
     BattleResult = CInt(sngResult)
 
+    If BattleResult = 0 Then
+        BattleResult = CInt(Rand(0.1, 0.9))
+    End If
+    
     objDefender.Durability = objDefender.Durability - BattleResult
 End Function
 
