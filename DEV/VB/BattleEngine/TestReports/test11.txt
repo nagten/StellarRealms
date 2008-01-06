@@ -1,0 +1,11 @@
+A fleet of vessels from the planet 'Unnamed' attempted to perform a fighter screen at Japan.
+The attacking force was detected before entering the system!
+Because Japan is in a state of anger against Unnamed, its units will have a 5% offense bonus.
+Because Unnamed is in a state of anger against Japan, its units will have a 5% offense bonus.
+The attacking force consisted of 70 Heavy Bomber(s) 230 Advanced Interceptor(s) 55 Deep Recon Scout(s) 75 Scout(s) 1 "Barracuda" Attack Frigate(s) 200 Fire Support Destroyer(s) 20 Light Carrier(s) 19 Battleship(s) 4 "Orca" Battleship(s) 127 Dreadnought(s).
+The defending force consisted of 7 Starbase(s) 200 "Stinger" Drone(s) 1397 "Wasp" Fighter(s) 150 Heavy Bomber(s) 3 Advanced Interceptor(s) 1 Scout(s) 7 Deep Recon Scout(s) 10 Destroyer(s) 325 Fire Support Destroyer(s) 16 Battleship(s) 2 "Orca" Battleship(s) 37 Dreadnought(s) .
+Attacker's losses were 230 Advanced Interceptor(s) 70 Heavy Bomber(s) 75 Scout(s) 55 Deep Recon Scout(s) 200 Fire Support Destroyer(s) 19 Battleship(s) 105 Dreadnought(s) 20 Light Carrier(s) 1 "Barracuda" Attack Frigate(s) 4 "Orca" Battleship(s) and 282745 personnel.
+Defender's losses were 248 "Wasp" Fighter(s) 200 "Stinger" Drone(s) and 14248 personnel.
+Defender lost 7 Starbase(s) .
+Attacker lost 64506 prestige.
+Defender gained 90069 prestige.

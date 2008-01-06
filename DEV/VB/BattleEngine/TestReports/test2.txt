@@ -1,0 +1,110 @@
+A fleet of vessels from an unknown source attempted to perform a fighter screen at Atlantis.
+The attacking force was detected before entering the system!
+Because an unknown source is in a state of vendetta against Atlantis, its units will have a 10% offense bonus.
+The attacking force consisted of 15 Destroyer(s).
+The defending force consisted of 45 Heavy Bomber(s) .
+In the opening volley, an unknown source Destroyer 1 fired at Atlantis Heavy Bomber 1 and hit it for 14 damage, destroying it!
+Atlantis Heavy Bomber 1 fired at an unknown source Destroyer 1 and hit it, but did no damage.
+an unknown source Destroyer 1 fired at Atlantis Heavy Bomber 2 and hit it, doing 1 damage. Remaining hull strength is 2.
+Atlantis Heavy Bomber 2 fired at an unknown source Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 22.
+an unknown source Destroyer 1 fired at Atlantis Heavy Bomber 2 and hit it for 24 damage, destroying it!
+Atlantis Heavy Bomber 3 fired at an unknown source Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 21.
+an unknown source Destroyer 1 fired at Atlantis Heavy Bomber 3 and hit it, doing 1 damage. Remaining hull strength is 2.
+Atlantis Heavy Bomber 4 fired at an unknown source Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 20.
+an unknown source Destroyer 2 fired at Atlantis Heavy Bomber 3 and hit it for 8 damage, destroying it!
+Atlantis Heavy Bomber 5 fired at an unknown source Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 19.
+an unknown source Destroyer 2 fired at Atlantis Heavy Bomber 4 and hit it for 11 damage, destroying it!
+Atlantis Heavy Bomber 6 fired at an unknown source Destroyer 1 and hit it, doing 3 damage. Remaining hull strength is 16.
+an unknown source Destroyer 2 fired at Atlantis Heavy Bomber 5 and hit it for 4 damage, destroying it!
+Atlantis Heavy Bomber 7 fired at an unknown source Destroyer 1 and hit it, doing 2 damage. Remaining hull strength is 14.
+an unknown source Destroyer 2 fired at Atlantis Heavy Bomber 6 and hit it for 36 damage, destroying it!
+Atlantis Heavy Bomber 8 fired at an unknown source Destroyer 1 and hit it, doing 2 damage. Remaining hull strength is 12.
+an unknown source Destroyer 3 fired at Atlantis Heavy Bomber 7 and hit it for 3 damage, destroying it!
+Atlantis Heavy Bomber 9 fired at an unknown source Destroyer 1 and hit it, doing 3 damage. Remaining hull strength is 9.
+an unknown source Destroyer 3 fired at Atlantis Heavy Bomber 8 and hit it for 3 damage, destroying it!
+Atlantis Heavy Bomber 10 fired at an unknown source Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 8.
+an unknown source Destroyer 3 fired at Atlantis Heavy Bomber 9 and hit it for 4 damage, destroying it!
+Atlantis Heavy Bomber 11 fired at an unknown source Destroyer 1 and hit it, doing 2 damage. Remaining hull strength is 6.
+an unknown source Destroyer 3 fired at Atlantis Heavy Bomber 10 and hit it for 18 damage, destroying it!
+Atlantis Heavy Bomber 12 fired at an unknown source Destroyer 1 and hit it, doing 2 damage. Remaining hull strength is 4.
+an unknown source Destroyer 4 fired at Atlantis Heavy Bomber 11 and hit it for 3 damage, destroying it!
+Atlantis Heavy Bomber 13 fired at an unknown source Destroyer 1 and hit it, doing 2 damage. Remaining hull strength is 2.
+an unknown source Destroyer 4 fired at Atlantis Heavy Bomber 12 and hit it for 6 damage, destroying it!
+Atlantis Heavy Bomber 14 fired at an unknown source Destroyer 1 and hit it, but did no damage.
+an unknown source Destroyer 4 fired at Atlantis Heavy Bomber 13 and hit it for 3 damage, destroying it!
+Atlantis Heavy Bomber 15 fired at an unknown source Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 1.
+an unknown source Destroyer 4 fired at Atlantis Heavy Bomber 14 and hit it for 5 damage, destroying it!
+Atlantis Heavy Bomber 16 fired at an unknown source Destroyer 1 and hit it for 1 damage, destroying it!
+an unknown source Destroyer 5 fired at Atlantis Heavy Bomber 15 and hit it for 5 damage, destroying it!
+Atlantis Heavy Bomber 17 fired at an unknown source Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 22.
+an unknown source Destroyer 5 fired at Atlantis Heavy Bomber 16 and hit it for 8 damage, destroying it!
+Atlantis Heavy Bomber 18 fired at an unknown source Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 21.
+an unknown source Destroyer 5 fired at Atlantis Heavy Bomber 17 and hit it, doing 1 damage. Remaining hull strength is 2.
+Atlantis Heavy Bomber 19 fired at an unknown source Destroyer 2 and hit it, doing 3 damage. Remaining hull strength is 18.
+an unknown source Destroyer 5 fired at Atlantis Heavy Bomber 17 and hit it for 11 damage, destroying it!
+Atlantis Heavy Bomber 20 fired at an unknown source Destroyer 2 and hit it, but did no damage.
+an unknown source Destroyer 6 fired at Atlantis Heavy Bomber 18 and hit it for 12 damage, destroying it!
+Atlantis Heavy Bomber 21 fired at an unknown source Destroyer 2 and hit it, doing 3 damage. Remaining hull strength is 15.
+an unknown source Destroyer 6 fired at Atlantis Heavy Bomber 19 and hit it for 3 damage, destroying it!
+Atlantis Heavy Bomber 22 fired at an unknown source Destroyer 2 and hit it, doing 3 damage. Remaining hull strength is 12.
+an unknown source Destroyer 6 fired at Atlantis Heavy Bomber 20 and hit it, but did no damage.
+Atlantis Heavy Bomber 23 fired at an unknown source Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 11.
+an unknown source Destroyer 6 fired at Atlantis Heavy Bomber 20 and hit it for 15 damage, destroying it!
+Atlantis Heavy Bomber 24 fired at an unknown source Destroyer 2 and hit it, doing 2 damage. Remaining hull strength is 9.
+an unknown source Destroyer 7 fired at Atlantis Heavy Bomber 21 and hit it for 3 damage, destroying it!
+Atlantis Heavy Bomber 25 fired at an unknown source Destroyer 2 and hit it, doing 2 damage. Remaining hull strength is 7.
+an unknown source Destroyer 7 fired at Atlantis Heavy Bomber 22 and hit it for 6 damage, destroying it!
+Atlantis Heavy Bomber 26 fired at an unknown source Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 6.
+an unknown source Destroyer 7 fired at Atlantis Heavy Bomber 23 and hit it, doing 1 damage. Remaining hull strength is 2.
+Atlantis Heavy Bomber 27 fired at an unknown source Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 5.
+an unknown source Destroyer 7 fired at Atlantis Heavy Bomber 23 and hit it for 3 damage, destroying it!
+Atlantis Heavy Bomber 28 fired at an unknown source Destroyer 2 and hit it, doing 3 damage. Remaining hull strength is 2.
+an unknown source Destroyer 8 fired at Atlantis Heavy Bomber 24 and hit it for 20 damage, destroying it!
+Atlantis Heavy Bomber 29 fired at an unknown source Destroyer 2 and hit it for 2 damage, destroying it!
+an unknown source Destroyer 8 fired at Atlantis Heavy Bomber 25 and hit it for 7 damage, destroying it!
+Atlantis Heavy Bomber 30 fired at an unknown source Destroyer 3 and hit it, doing 3 damage. Remaining hull strength is 20.
+an unknown source Destroyer 8 fired at Atlantis Heavy Bomber 26 and hit it for 6 damage, destroying it!
+Atlantis Heavy Bomber 31 fired at an unknown source Destroyer 3 and hit it, doing 1 damage. Remaining hull strength is 19.
+an unknown source Destroyer 8 fired at Atlantis Heavy Bomber 27 and hit it, doing 1 damage. Remaining hull strength is 2.
+Atlantis Heavy Bomber 32 fired at an unknown source Destroyer 3 and hit it, doing 2 damage. Remaining hull strength is 17.
+an unknown source Destroyer 9 fired at Atlantis Heavy Bomber 27 and hit it for 11 damage, destroying it!
+Atlantis Heavy Bomber 33 fired at an unknown source Destroyer 3 and hit it, doing 1 damage. Remaining hull strength is 16.
+an unknown source Destroyer 9 fired at Atlantis Heavy Bomber 28 and hit it for 7 damage, destroying it!
+Atlantis Heavy Bomber 34 fired at an unknown source Destroyer 3 and hit it, doing 2 damage. Remaining hull strength is 14.
+an unknown source Destroyer 9 fired at Atlantis Heavy Bomber 29 and hit it for 14 damage, destroying it!
+Atlantis Heavy Bomber 35 fired at an unknown source Destroyer 3 and hit it, doing 1 damage. Remaining hull strength is 13.
+an unknown source Destroyer 9 fired at Atlantis Heavy Bomber 30 and hit it for 12 damage, destroying it!
+Atlantis Heavy Bomber 36 fired at an unknown source Destroyer 3 and hit it, doing 2 damage. Remaining hull strength is 11.
+an unknown source Destroyer 10 fired at Atlantis Heavy Bomber 31 and hit it for 30 damage, destroying it!
+Atlantis Heavy Bomber 37 fired at an unknown source Destroyer 3 but missed.
+an unknown source Destroyer 10 fired at Atlantis Heavy Bomber 32 and hit it, doing 2 damage. Remaining hull strength is 1.
+Atlantis Heavy Bomber 38 fired at an unknown source Destroyer 3 but missed.
+an unknown source Destroyer 10 fired at Atlantis Heavy Bomber 32 and hit it for 20 damage, destroying it!
+Atlantis Heavy Bomber 39 fired at an unknown source Destroyer 3 and hit it, doing 1 damage. Remaining hull strength is 10.
+an unknown source Destroyer 10 fired at Atlantis Heavy Bomber 33 and hit it for 20 damage, destroying it!
+Atlantis Heavy Bomber 40 fired at an unknown source Destroyer 3 and hit it, doing 1 damage. Remaining hull strength is 9.
+an unknown source Destroyer 11 fired at Atlantis Heavy Bomber 34 and hit it for 30 damage, destroying it!
+Atlantis Heavy Bomber 41 fired at an unknown source Destroyer 3 and hit it, doing 2 damage. Remaining hull strength is 7.
+an unknown source Destroyer 11 fired at Atlantis Heavy Bomber 35 and hit it for 22 damage, destroying it!
+Atlantis Heavy Bomber 42 fired at an unknown source Destroyer 3 and hit it, doing 2 damage. Remaining hull strength is 5.
+an unknown source Destroyer 11 fired at Atlantis Heavy Bomber 36 and hit it for 5 damage, destroying it!
+Atlantis Heavy Bomber 43 fired at an unknown source Destroyer 3 and hit it, but did no damage.
+an unknown source Destroyer 11 fired at Atlantis Heavy Bomber 37 and hit it for 3 damage, destroying it!
+Atlantis Heavy Bomber 44 fired at an unknown source Destroyer 3 and hit it, but did no damage.
+an unknown source Destroyer 12 fired at Atlantis Heavy Bomber 38 and hit it, doing 1 damage. Remaining hull strength is 2.
+Atlantis Heavy Bomber 45 fired at an unknown source Destroyer 3 and hit it, doing 1 damage. Remaining hull strength is 4.
+an unknown source Destroyer 12 fired at Atlantis Heavy Bomber 38 and hit it for 14 damage, destroying it!
+an unknown source Destroyer 12 fired at Atlantis Heavy Bomber 39 but missed.
+an unknown source Destroyer 12 fired at Atlantis Heavy Bomber 39 and hit it for 6 damage, destroying it!
+an unknown source Destroyer 13 fired at Atlantis Heavy Bomber 40 and hit it for 3 damage, destroying it!
+an unknown source Destroyer 13 fired at Atlantis Heavy Bomber 41 and hit it for 18 damage, destroying it!
+an unknown source Destroyer 13 fired at Atlantis Heavy Bomber 42 and hit it for 12 damage, destroying it!
+an unknown source Destroyer 13 fired at Atlantis Heavy Bomber 43 and hit it for 32 damage, destroying it!
+an unknown source Destroyer 14 fired at Atlantis Heavy Bomber 44 and hit it for 11 damage, destroying it!
+an unknown source Destroyer 14 fired at Atlantis Heavy Bomber 45 and hit it for 14 damage, destroying it!
+Attackers losses were 2 Destroyer(s) and 320 personnel.
+Defenders losses were 45 Heavy Bomber(s) and 135 personnel.
+Defender lost no structures.
+Attacker gained 2498 prestige.
+Attacker gained 3939 prestige due to the difference in planetary status.
+Defender lost 1098 prestige.

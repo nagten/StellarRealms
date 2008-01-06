@@ -1,0 +1,15 @@
+Date: 7/1/2007 11:01:00 PM
+From: Aquarium
+To: Aquarium
+Subject: Combat Report A fleet of vessels from the planet 'Aquarium' attempted to destroy sensor structures at The Senate.
+The attacking force was able to gain the element of surprise!
+Because The Senate is in a state of anger against Aquarium, its units will have a 5% offense bonus.
+Because Aquarium is in a state of anger against The Senate, its units will have a 5% offense bonus.
+The attacking force consisted of 6 Deep Recon Scout(s) 33 Scout(s) 72 "Barracuda" Attack Frigate(s) 16 "Orca" Battleship(s) 10 Destroyer(s) 198 Fire Support Destroyer(s).
+The defending force consisted of 9 Orbital Shield(s) 8 Orbital Defense Platform(s) 1 Orbital Construction Yard (Improved)(s) 1 Jumpgate(s) 451 "Stinger" Drone(s) 50 Fighter Bomber(s) 40 "Dagger" Heavy Fighter(s) 90 Heavy Bomber(s) 4 Deep Recon Scout(s) 22 "Interdictor" Frigate(s) 8 Improved Frigate(s) 21 "Hammer" Gunship(s) 21 Destroyer(s) 30 Fire Support Destroyer(s) 8 Cruiser(s) 14 Battleship(s) 6 "Judicator" Dreadnought(s) .
+Attacker's losses were 33 Scout(s) 6 Deep Recon Scout(s) 10 Destroyer(s) 46 Fire Support Destroyer(s) 72 "Barracuda" Attack Frigate(s) 16 "Orca" Battleship(s) and 44992 personnel.
+Defender's losses were 50 Fighter Bomber(s) 90 Heavy Bomber(s) 4 Deep Recon Scout(s) 8 Improved Frigate(s) 21 Destroyer(s) 30 Fire Support Destroyer(s) 8 Cruiser(s) 3 Battleship(s) 451 "Stinger" Drone(s) 22 "Interdictor" Frigate(s) 21 "Hammer" Gunship(s) 40 "Dagger" Heavy Fighter(s) and 27110 personnel.
+Defender lost 8 Orbital Defense Platform(s) 9 Orbital Shield(s) 1 Orbital Construction Yard (Improved)(s) 1 Jumpgate(s) .
+Attacker gained 26264 prestige.
+Attacker lost 15135 prestige due to the difference in planetary status.
+Defender lost 163 prestige.

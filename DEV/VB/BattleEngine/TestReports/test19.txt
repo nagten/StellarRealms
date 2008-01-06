@@ -1,0 +1,17 @@
+Date: 7/3/2007 2:40:00 PM
+From: Nomad
+To: Nomad
+Subject: Combat Report A fleet of vessels from the planet 'Nomad' attempted to destroy sensor structures at The Senate.
+The attacking force was detected before entering the system!
+Because The Senate is in a state of anger against Nomad, its units will have a 5% offense bonus.
+Because Nomad is in a state of anger against The Senate, its units will have a 5% offense bonus.
+The attacking force consisted of 19 Fire Support Destroyer(s) 7 Frigate(s) 9 Battleship(s) 45 Fighter Bomber(s) 3 Light Carrier(s).
+The defending force consisted of 1 Jumpgate(s) 2 Orbital Construction Yard (Improved)(s) 85 Heavy Bomber(s) 105 Advanced Interceptor(s) 20 "Hammer" Gunship(s) 1 "Dragon" Mobile Assault Platform(s) .
+Attacker's losses were 1 Frigate(s) 19 Fire Support Destroyer(s) and 3425 personnel.
+Defender's losses were 7 Advanced Interceptor(s) 85 Heavy Bomber(s) and 2169 personnel.
+Defender lost 2 Orbital Construction Yard (Improved)(s) 1 Jumpgate(s) .
+Attacker gained 4084 prestige.
+Attacker lost 430 prestige due to the difference in planetary status.
+Defender lost 484 prestige.
+
+Messed up?

@@ -1,0 +1,1606 @@
+Date: 8/24/2005 3:04:00 PM
+From: Terminus (private)
+Subject: Combat ReportA fleet of vessels from Cylon attempted to perform a fighter screen at Terminus.
+The attacking force was detected before entering the system!
+The attacking force consisted of 25 Advanced Interceptor(s) 5 Frigate(s) 5 Fire Support Destroyer(s) 186 Destroyer(s) 5 Cruiser(s) 29 "Asp" Heavy Cruiser(s) 10 "Dragon" Mobile Assault Platform(s) 1 "Colossus" Megaship(s).
+The defending force consisted of 380 Fighter Bomber(s) 82 Heavy Bomber(s) 1 Deep Recon Scout(s) 60 Frigate(s) 29 Improved Frigate(s) .
+In the opening volley, Cylon Advanced Interceptor 1 fired at Terminus Fighter Bomber 1 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 1 fired at Cylon Advanced Interceptor 1 but missed.
+Cylon Advanced Interceptor 2 fired at Terminus Fighter Bomber 2 and hit it for 7 damage, destroying it!
+Terminus Fighter Bomber 2 fired at Cylon Advanced Interceptor 1 but missed.
+Cylon Advanced Interceptor 3 fired at Terminus Fighter Bomber 3 and hit it for 9 damage, destroying it!
+Terminus Fighter Bomber 3 fired at Cylon Advanced Interceptor 1 and hit it, doing 1 damage. Remaining hull strength is 3.
+Cylon Advanced Interceptor 4 fired at Terminus Fighter Bomber 4 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 4 fired at Cylon Advanced Interceptor 1 but missed.
+Cylon Advanced Interceptor 5 fired at Terminus Fighter Bomber 4 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 5 fired at Cylon Advanced Interceptor 1 but missed.
+Cylon Advanced Interceptor 6 fired at Terminus Fighter Bomber 5 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 6 fired at Cylon Advanced Interceptor 1 but missed.
+Cylon Advanced Interceptor 7 fired at Terminus Fighter Bomber 5 and hit it for 7 damage, destroying it!
+Terminus Fighter Bomber 7 fired at Cylon Advanced Interceptor 1 and hit it, doing 1 damage. Remaining hull strength is 2.
+Cylon Advanced Interceptor 8 fired at Terminus Fighter Bomber 6 and hit it for 9 damage, destroying it!
+Terminus Fighter Bomber 8 fired at Cylon Advanced Interceptor 1 and hit it, doing 1 damage. Remaining hull strength is 1.
+Cylon Advanced Interceptor 9 fired at Terminus Fighter Bomber 7 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 9 fired at Cylon Advanced Interceptor 1 and hit it, but did no damage.
+Cylon Advanced Interceptor 10 fired at Terminus Fighter Bomber 7 and hit it for 1 damage, destroying it!
+Terminus Fighter Bomber 10 fired at Cylon Advanced Interceptor 1 and hit it, but did no damage.
+Cylon Advanced Interceptor 11 fired at Terminus Fighter Bomber 8 and hit it for 7 damage, destroying it!
+Terminus Fighter Bomber 11 fired at Cylon Advanced Interceptor 1 but missed.
+Cylon Advanced Interceptor 12 fired at Terminus Fighter Bomber 9 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 12 fired at Cylon Advanced Interceptor 1 but missed.
+Cylon Advanced Interceptor 13 fired at Terminus Fighter Bomber 10 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 13 fired at Cylon Advanced Interceptor 1 and hit it for 1 damage, destroying it!
+Cylon Advanced Interceptor 14 fired at Terminus Fighter Bomber 10 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 14 fired at Cylon Advanced Interceptor 2 and hit it, doing 1 damage. Remaining hull strength is 3.
+Cylon Advanced Interceptor 15 fired at Terminus Fighter Bomber 11 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 15 fired at Cylon Advanced Interceptor 2 and hit it for 3 damage, destroying it!
+Cylon Advanced Interceptor 16 fired at Terminus Fighter Bomber 12 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 16 fired at Cylon Advanced Interceptor 3 and hit it, doing 1 damage. Remaining hull strength is 3.
+Cylon Advanced Interceptor 17 fired at Terminus Fighter Bomber 12 but missed.
+Terminus Fighter Bomber 17 fired at Cylon Advanced Interceptor 3 but missed.
+Cylon Advanced Interceptor 18 fired at Terminus Fighter Bomber 12 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 18 fired at Cylon Advanced Interceptor 3 and hit it, doing 2 damage. Remaining hull strength is 1.
+Cylon Advanced Interceptor 19 fired at Terminus Fighter Bomber 13 and hit it for 4 damage, destroying it!
+Terminus Fighter Bomber 19 fired at Cylon Advanced Interceptor 3 and hit it for 1 damage, destroying it!
+Cylon Advanced Interceptor 20 fired at Terminus Fighter Bomber 14 but missed.
+Terminus Fighter Bomber 20 fired at Cylon Advanced Interceptor 4 and hit it, doing 1 damage. Remaining hull strength is 3.
+Cylon Advanced Interceptor 21 fired at Terminus Fighter Bomber 14 and hit it for 11 damage, destroying it!
+Terminus Fighter Bomber 21 fired at Cylon Advanced Interceptor 4 and hit it, doing 1 damage. Remaining hull strength is 2.
+Cylon Advanced Interceptor 22 fired at Terminus Fighter Bomber 15 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 22 fired at Cylon Advanced Interceptor 4 and hit it, doing 1 damage. Remaining hull strength is 1.
+Cylon Advanced Interceptor 23 fired at Terminus Fighter Bomber 16 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 23 fired at Cylon Advanced Interceptor 4 and hit it for 3 damage, destroying it!
+Cylon Advanced Interceptor 24 fired at Terminus Fighter Bomber 17 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 24 fired at Cylon Advanced Interceptor 5 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Advanced Interceptor 25 fired at Terminus Fighter Bomber 18 and hit it for 7 damage, destroying it!
+Terminus Fighter Bomber 25 fired at Cylon Advanced Interceptor 5 and hit it, doing 1 damage. Remaining hull strength is 1.
+Cylon Frigate 1 fired at Terminus Fighter Bomber 19 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 26 fired at Cylon Advanced Interceptor 5 and hit it for 1 damage, destroying it!
+Cylon Frigate 1 fired at Terminus Fighter Bomber 20 and hit it for 11 damage, destroying it!
+Terminus Fighter Bomber 27 fired at Cylon Advanced Interceptor 6 but missed.
+Cylon Frigate 2 fired at Terminus Fighter Bomber 21 and hit it for 4 damage, destroying it!
+Terminus Fighter Bomber 28 fired at Cylon Advanced Interceptor 6 and hit it, doing 3 damage. Remaining hull strength is 1.
+Cylon Frigate 2 fired at Terminus Fighter Bomber 22 and hit it for 20 damage, destroying it!
+Terminus Fighter Bomber 29 fired at Cylon Advanced Interceptor 6 and hit it for 3 damage, destroying it!
+Cylon Frigate 3 fired at Terminus Fighter Bomber 23 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 30 fired at Cylon Advanced Interceptor 7 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Frigate 3 fired at Terminus Fighter Bomber 23 and hit it for 15 damage, destroying it!
+Terminus Fighter Bomber 31 fired at Cylon Advanced Interceptor 7 and hit it for 2 damage, destroying it!
+Cylon Frigate 4 fired at Terminus Fighter Bomber 24 and hit it for 7 damage, destroying it!
+Terminus Fighter Bomber 32 fired at Cylon Advanced Interceptor 8 but missed.
+Cylon Frigate 4 fired at Terminus Fighter Bomber 25 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 33 fired at Cylon Advanced Interceptor 8 but missed.
+Cylon Frigate 5 fired at Terminus Fighter Bomber 25 and hit it for 18 damage, destroying it!
+Terminus Fighter Bomber 34 fired at Cylon Advanced Interceptor 8 and hit it, doing 1 damage. Remaining hull strength is 3.
+Cylon Frigate 5 fired at Terminus Fighter Bomber 26 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 35 fired at Cylon Advanced Interceptor 8 and hit it, doing 1 damage. Remaining hull strength is 2.
+Cylon Fire Support Destroyer 1 fired at Terminus Fighter Bomber 26 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 36 fired at Cylon Advanced Interceptor 8 and hit it, doing 1 damage. Remaining hull strength is 1.
+Cylon Fire Support Destroyer 1 fired at Terminus Fighter Bomber 27 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 37 fired at Cylon Advanced Interceptor 8 but missed.
+Cylon Fire Support Destroyer 1 fired at Terminus Fighter Bomber 28 and hit it for 8 damage, destroying it!
+Terminus Fighter Bomber 38 fired at Cylon Advanced Interceptor 8 and hit it for 1 damage, destroying it!
+Cylon Fire Support Destroyer 1 fired at Terminus Fighter Bomber 29 and hit it for 13 damage, destroying it!
+Terminus Fighter Bomber 39 fired at Cylon Advanced Interceptor 9 and hit it, doing 1 damage. Remaining hull strength is 3.
+Cylon Fire Support Destroyer 2 fired at Terminus Fighter Bomber 30 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 40 fired at Cylon Advanced Interceptor 9 and hit it, doing 2 damage. Remaining hull strength is 1.
+Cylon Fire Support Destroyer 2 fired at Terminus Fighter Bomber 30 and hit it for 1 damage, destroying it!
+Terminus Fighter Bomber 41 fired at Cylon Advanced Interceptor 9 and hit it for 1 damage, destroying it!
+Cylon Fire Support Destroyer 2 fired at Terminus Fighter Bomber 31 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 42 fired at Cylon Advanced Interceptor 10 and hit it, doing 1 damage. Remaining hull strength is 3.
+Cylon Fire Support Destroyer 2 fired at Terminus Fighter Bomber 31 but missed.
+Terminus Fighter Bomber 43 fired at Cylon Advanced Interceptor 10 and hit it for 3 damage, destroying it!
+Cylon Fire Support Destroyer 3 fired at Terminus Fighter Bomber 31 and hit it for 20 damage, destroying it!
+Terminus Fighter Bomber 44 fired at Cylon Advanced Interceptor 11 and hit it, doing 1 damage. Remaining hull strength is 3.
+Cylon Fire Support Destroyer 3 fired at Terminus Fighter Bomber 32 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 45 fired at Cylon Advanced Interceptor 11 but missed.
+Cylon Fire Support Destroyer 3 fired at Terminus Fighter Bomber 33 and hit it for 11 damage, destroying it!
+Terminus Fighter Bomber 46 fired at Cylon Advanced Interceptor 11 but missed.
+Cylon Fire Support Destroyer 3 fired at Terminus Fighter Bomber 34 and hit it for 14 damage, destroying it!
+Terminus Fighter Bomber 47 fired at Cylon Advanced Interceptor 11 but missed.
+Cylon Fire Support Destroyer 4 fired at Terminus Fighter Bomber 35 and hit it for 10 damage, destroying it!
+Terminus Fighter Bomber 48 fired at Cylon Advanced Interceptor 11 and hit it, but did no damage.
+Cylon Fire Support Destroyer 4 fired at Terminus Fighter Bomber 36 and hit it for 10 damage, destroying it!
+Terminus Fighter Bomber 49 fired at Cylon Advanced Interceptor 11 and hit it, doing 2 damage. Remaining hull strength is 1.
+Cylon Fire Support Destroyer 4 fired at Terminus Fighter Bomber 37 and hit it for 4 damage, destroying it!
+Terminus Fighter Bomber 50 fired at Cylon Advanced Interceptor 11 and hit it, but did no damage.
+Cylon Fire Support Destroyer 4 fired at Terminus Fighter Bomber 38 and hit it for 20 damage, destroying it!
+Terminus Fighter Bomber 51 fired at Cylon Advanced Interceptor 11 but missed.
+Cylon Fire Support Destroyer 5 fired at Terminus Fighter Bomber 39 and hit it for 29 damage, destroying it!
+Terminus Fighter Bomber 52 fired at Cylon Advanced Interceptor 11 and hit it for 3 damage, destroying it!
+Cylon Fire Support Destroyer 5 fired at Terminus Fighter Bomber 40 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 53 fired at Cylon Advanced Interceptor 12 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Fire Support Destroyer 5 fired at Terminus Fighter Bomber 40 and hit it for 1 damage, destroying it!
+Terminus Fighter Bomber 54 fired at Cylon Advanced Interceptor 12 and hit it for 2 damage, destroying it!
+Cylon Fire Support Destroyer 5 fired at Terminus Fighter Bomber 41 and hit it for 14 damage, destroying it!
+Terminus Fighter Bomber 55 fired at Cylon Advanced Interceptor 13 but missed.
+Cylon Destroyer 1 fired at Terminus Fighter Bomber 42 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 56 fired at Cylon Advanced Interceptor 13 but missed.
+Cylon Destroyer 1 fired at Terminus Fighter Bomber 43 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 57 fired at Cylon Advanced Interceptor 13 but missed.
+Cylon Destroyer 1 fired at Terminus Fighter Bomber 44 and hit it for 4 damage, destroying it!
+Terminus Fighter Bomber 58 fired at Cylon Advanced Interceptor 13 and hit it, doing 1 damage. Remaining hull strength is 3.
+Cylon Destroyer 1 fired at Terminus Fighter Bomber 45 and hit it for 12 damage, destroying it!
+Terminus Fighter Bomber 59 fired at Cylon Advanced Interceptor 13 but missed.
+Cylon Destroyer 2 fired at Terminus Fighter Bomber 46 and hit it for 4 damage, destroying it!
+Terminus Fighter Bomber 60 fired at Cylon Advanced Interceptor 13 and hit it, doing 2 damage. Remaining hull strength is 1.
+Cylon Destroyer 2 fired at Terminus Fighter Bomber 47 and hit it for 29 damage, destroying it!
+Terminus Fighter Bomber 61 fired at Cylon Advanced Interceptor 13 and hit it for 3 damage, destroying it!
+Cylon Destroyer 2 fired at Terminus Fighter Bomber 48 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 62 fired at Cylon Advanced Interceptor 14 and hit it, doing 1 damage. Remaining hull strength is 3.
+Cylon Destroyer 2 fired at Terminus Fighter Bomber 48 and hit it for 29 damage, destroying it!
+Terminus Fighter Bomber 63 fired at Cylon Advanced Interceptor 14 and hit it for 3 damage, destroying it!
+Cylon Destroyer 3 fired at Terminus Fighter Bomber 49 and hit it for 11 damage, destroying it!
+Terminus Fighter Bomber 64 fired at Cylon Advanced Interceptor 15 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Destroyer 3 fired at Terminus Fighter Bomber 50 and hit it for 4 damage, destroying it!
+Terminus Fighter Bomber 65 fired at Cylon Advanced Interceptor 15 and hit it for 3 damage, destroying it!
+Cylon Destroyer 3 fired at Terminus Fighter Bomber 51 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 66 fired at Cylon Advanced Interceptor 16 and hit it, doing 3 damage. Remaining hull strength is 1.
+Cylon Destroyer 3 fired at Terminus Fighter Bomber 52 and hit it for 9 damage, destroying it!
+Terminus Fighter Bomber 67 fired at Cylon Advanced Interceptor 16 but missed.
+Cylon Destroyer 4 fired at Terminus Fighter Bomber 53 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 68 fired at Cylon Advanced Interceptor 16 and hit it for 2 damage, destroying it!
+Cylon Destroyer 4 fired at Terminus Fighter Bomber 54 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 69 fired at Cylon Advanced Interceptor 17 and hit it, but did no damage.
+Cylon Destroyer 4 fired at Terminus Fighter Bomber 55 and hit it for 27 damage, destroying it!
+Terminus Fighter Bomber 70 fired at Cylon Advanced Interceptor 17 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Destroyer 4 fired at Terminus Fighter Bomber 56 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 71 fired at Cylon Advanced Interceptor 17 and hit it for 3 damage, destroying it!
+Cylon Destroyer 5 fired at Terminus Fighter Bomber 57 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 72 fired at Cylon Advanced Interceptor 18 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Destroyer 5 fired at Terminus Fighter Bomber 58 and hit it for 21 damage, destroying it!
+Terminus Fighter Bomber 73 fired at Cylon Advanced Interceptor 18 and hit it, doing 1 damage. Remaining hull strength is 1.
+Cylon Destroyer 5 fired at Terminus Fighter Bomber 59 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 74 fired at Cylon Advanced Interceptor 18 and hit it for 3 damage, destroying it!
+Cylon Destroyer 5 fired at Terminus Fighter Bomber 60 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 75 fired at Cylon Advanced Interceptor 19 and hit it, but did no damage.
+Cylon Destroyer 6 fired at Terminus Fighter Bomber 61 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 76 fired at Cylon Advanced Interceptor 19 and hit it, doing 1 damage. Remaining hull strength is 3.
+Cylon Destroyer 6 fired at Terminus Fighter Bomber 62 and hit it for 10 damage, destroying it!
+Terminus Fighter Bomber 77 fired at Cylon Advanced Interceptor 19 but missed.
+Cylon Destroyer 6 fired at Terminus Fighter Bomber 63 but missed.
+Terminus Fighter Bomber 78 fired at Cylon Advanced Interceptor 19 and hit it, doing 1 damage. Remaining hull strength is 2.
+Cylon Destroyer 6 fired at Terminus Fighter Bomber 63 and hit it for 9 damage, destroying it!
+Terminus Fighter Bomber 79 fired at Cylon Advanced Interceptor 19 and hit it for 3 damage, destroying it!
+Cylon Destroyer 7 fired at Terminus Fighter Bomber 64 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 80 fired at Cylon Advanced Interceptor 20 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Destroyer 7 fired at Terminus Fighter Bomber 65 and hit it for 8 damage, destroying it!
+Terminus Fighter Bomber 81 fired at Cylon Advanced Interceptor 20 and hit it, doing 1 damage. Remaining hull strength is 1.
+Cylon Destroyer 7 fired at Terminus Fighter Bomber 66 and hit it for 17 damage, destroying it!
+Terminus Fighter Bomber 82 fired at Cylon Advanced Interceptor 20 and hit it for 1 damage, destroying it!
+Cylon Destroyer 7 fired at Terminus Fighter Bomber 67 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 83 fired at Cylon Advanced Interceptor 21 and hit it, doing 1 damage. Remaining hull strength is 3.
+Cylon Destroyer 8 fired at Terminus Fighter Bomber 68 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 84 fired at Cylon Advanced Interceptor 21 and hit it for 3 damage, destroying it!
+Cylon Destroyer 8 fired at Terminus Fighter Bomber 69 and hit it for 20 damage, destroying it!
+Terminus Fighter Bomber 85 fired at Cylon Advanced Interceptor 22 and hit it, doing 1 damage. Remaining hull strength is 3.
+Cylon Destroyer 8 fired at Terminus Fighter Bomber 70 and hit it for 25 damage, destroying it!
+Terminus Fighter Bomber 86 fired at Cylon Advanced Interceptor 22 and hit it, doing 1 damage. Remaining hull strength is 2.
+Cylon Destroyer 8 fired at Terminus Fighter Bomber 71 and hit it for 14 damage, destroying it!
+Terminus Fighter Bomber 87 fired at Cylon Advanced Interceptor 22 but missed.
+Cylon Destroyer 9 fired at Terminus Fighter Bomber 72 and hit it for 5 damage, destroying it!
+Terminus Fighter Bomber 88 fired at Cylon Advanced Interceptor 22 but missed.
+Cylon Destroyer 9 fired at Terminus Fighter Bomber 73 and hit it for 13 damage, destroying it!
+Terminus Fighter Bomber 89 fired at Cylon Advanced Interceptor 22 but missed.
+Cylon Destroyer 9 fired at Terminus Fighter Bomber 74 and hit it for 5 damage, destroying it!
+Terminus Fighter Bomber 90 fired at Cylon Advanced Interceptor 22 but missed.
+Cylon Destroyer 9 fired at Terminus Fighter Bomber 75 and hit it for 17 damage, destroying it!
+Terminus Fighter Bomber 91 fired at Cylon Advanced Interceptor 22 and hit it for 2 damage, destroying it!
+Cylon Destroyer 10 fired at Terminus Fighter Bomber 76 and hit it for 7 damage, destroying it!
+Terminus Fighter Bomber 92 fired at Cylon Advanced Interceptor 23 but missed.
+Cylon Destroyer 10 fired at Terminus Fighter Bomber 77 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 93 fired at Cylon Advanced Interceptor 23 and hit it, doing 3 damage. Remaining hull strength is 1.
+Cylon Destroyer 10 fired at Terminus Fighter Bomber 77 and hit it for 1 damage, destroying it!
+Terminus Fighter Bomber 94 fired at Cylon Advanced Interceptor 23 and hit it for 2 damage, destroying it!
+Cylon Destroyer 10 fired at Terminus Fighter Bomber 78 and hit it for 9 damage, destroying it!
+Terminus Fighter Bomber 95 fired at Cylon Advanced Interceptor 24 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Destroyer 11 fired at Terminus Fighter Bomber 79 and hit it for 7 damage, destroying it!
+Terminus Fighter Bomber 96 fired at Cylon Advanced Interceptor 24 and hit it for 2 damage, destroying it!
+Cylon Destroyer 11 fired at Terminus Fighter Bomber 80 and hit it for 23 damage, destroying it!
+Terminus Fighter Bomber 97 fired at Cylon Advanced Interceptor 25 and hit it, doing 1 damage. Remaining hull strength is 3.
+Cylon Destroyer 11 fired at Terminus Fighter Bomber 81 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 98 fired at Cylon Advanced Interceptor 25 and hit it, but did no damage.
+Cylon Destroyer 11 fired at Terminus Fighter Bomber 82 and hit it for 31 damage, destroying it!
+Terminus Fighter Bomber 99 fired at Cylon Advanced Interceptor 25 and hit it, but did no damage.
+Cylon Destroyer 12 fired at Terminus Fighter Bomber 83 and hit it for 12 damage, destroying it!
+Terminus Fighter Bomber 100 fired at Cylon Advanced Interceptor 25 but missed.
+Cylon Destroyer 12 fired at Terminus Fighter Bomber 84 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 101 fired at Cylon Advanced Interceptor 25 but missed.
+Cylon Destroyer 12 fired at Terminus Fighter Bomber 85 and hit it for 5 damage, destroying it!
+Terminus Fighter Bomber 102 fired at Cylon Advanced Interceptor 25 but missed.
+Cylon Destroyer 12 fired at Terminus Fighter Bomber 86 and hit it for 5 damage, destroying it!
+Terminus Fighter Bomber 103 fired at Cylon Advanced Interceptor 25 and hit it, doing 2 damage. Remaining hull strength is 1.
+Cylon Destroyer 13 fired at Terminus Fighter Bomber 87 and hit it for 9 damage, destroying it!
+Terminus Fighter Bomber 104 fired at Cylon Advanced Interceptor 25 and hit it for 1 damage, destroying it!
+Cylon Destroyer 13 fired at Terminus Fighter Bomber 88 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 105 fired at Cylon Frigate 1 but missed.
+Cylon Destroyer 13 fired at Terminus Fighter Bomber 89 and hit it for 16 damage, destroying it!
+Terminus Fighter Bomber 106 fired at Cylon Frigate 1 and hit it, doing 1 damage. Remaining hull strength is 13.
+Cylon Destroyer 13 fired at Terminus Fighter Bomber 90 and hit it for 12 damage, destroying it!
+Terminus Fighter Bomber 107 fired at Cylon Frigate 1 and hit it, doing 1 damage. Remaining hull strength is 12.
+Cylon Destroyer 14 fired at Terminus Fighter Bomber 91 and hit it for 4 damage, destroying it!
+Terminus Fighter Bomber 108 fired at Cylon Frigate 1 and hit it, doing 2 damage. Remaining hull strength is 10.
+Cylon Destroyer 14 fired at Terminus Fighter Bomber 92 and hit it for 19 damage, destroying it!
+Terminus Fighter Bomber 109 fired at Cylon Frigate 1 and hit it, doing 2 damage. Remaining hull strength is 8.
+Cylon Destroyer 14 fired at Terminus Fighter Bomber 93 and hit it for 13 damage, destroying it!
+Terminus Fighter Bomber 110 fired at Cylon Frigate 1 and hit it, doing 2 damage. Remaining hull strength is 6.
+Cylon Destroyer 14 fired at Terminus Fighter Bomber 94 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 111 fired at Cylon Frigate 1 and hit it, doing 2 damage. Remaining hull strength is 4.
+Cylon Destroyer 15 fired at Terminus Fighter Bomber 95 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 112 fired at Cylon Frigate 1 and hit it, doing 1 damage. Remaining hull strength is 3.
+Cylon Destroyer 15 fired at Terminus Fighter Bomber 96 and hit it for 20 damage, destroying it!
+Terminus Fighter Bomber 113 fired at Cylon Frigate 1 and hit it, doing 1 damage. Remaining hull strength is 2.
+Cylon Destroyer 15 fired at Terminus Fighter Bomber 97 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 114 fired at Cylon Frigate 1 and hit it, but did no damage.
+Cylon Destroyer 15 fired at Terminus Fighter Bomber 98 and hit it for 18 damage, destroying it!
+Terminus Fighter Bomber 115 fired at Cylon Frigate 1 but missed.
+Cylon Destroyer 16 fired at Terminus Fighter Bomber 99 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 116 fired at Cylon Frigate 1 and hit it for 2 damage, destroying it!
+Cylon Destroyer 16 fired at Terminus Fighter Bomber 100 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 117 fired at Cylon Frigate 2 and hit it, doing 2 damage. Remaining hull strength is 12.
+Cylon Destroyer 16 fired at Terminus Fighter Bomber 101 and hit it for 15 damage, destroying it!
+Terminus Fighter Bomber 118 fired at Cylon Frigate 2 and hit it, doing 3 damage. Remaining hull strength is 9.
+Cylon Destroyer 16 fired at Terminus Fighter Bomber 102 and hit it for 13 damage, destroying it!
+Terminus Fighter Bomber 119 fired at Cylon Frigate 2 and hit it, but did no damage.
+Cylon Destroyer 17 fired at Terminus Fighter Bomber 103 and hit it for 4 damage, destroying it!
+Terminus Fighter Bomber 120 fired at Cylon Frigate 2 and hit it, doing 1 damage. Remaining hull strength is 8.
+Cylon Destroyer 17 fired at Terminus Fighter Bomber 104 and hit it for 14 damage, destroying it!
+Terminus Fighter Bomber 121 fired at Cylon Frigate 2 but missed.
+Cylon Destroyer 17 fired at Terminus Fighter Bomber 105 and hit it for 29 damage, destroying it!
+Terminus Fighter Bomber 122 fired at Cylon Frigate 2 and hit it, doing 2 damage. Remaining hull strength is 6.
+Cylon Destroyer 17 fired at Terminus Fighter Bomber 106 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 123 fired at Cylon Frigate 2 and hit it, doing 2 damage. Remaining hull strength is 4.
+Cylon Destroyer 18 fired at Terminus Fighter Bomber 107 and hit it for 8 damage, destroying it!
+Terminus Fighter Bomber 124 fired at Cylon Frigate 2 and hit it, doing 1 damage. Remaining hull strength is 3.
+Cylon Destroyer 18 fired at Terminus Fighter Bomber 108 and hit it for 15 damage, destroying it!
+Terminus Fighter Bomber 125 fired at Cylon Frigate 2 and hit it, but did no damage.
+Cylon Destroyer 18 fired at Terminus Fighter Bomber 109 and hit it for 5 damage, destroying it!
+Terminus Fighter Bomber 126 fired at Cylon Frigate 2 and hit it for 3 damage, destroying it!
+Cylon Destroyer 18 fired at Terminus Fighter Bomber 110 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 127 fired at Cylon Frigate 3 and hit it, doing 1 damage. Remaining hull strength is 13.
+Cylon Destroyer 19 fired at Terminus Fighter Bomber 111 and hit it for 11 damage, destroying it!
+Terminus Fighter Bomber 128 fired at Cylon Frigate 3 and hit it, doing 2 damage. Remaining hull strength is 11.
+Cylon Destroyer 19 fired at Terminus Fighter Bomber 112 and hit it for 9 damage, destroying it!
+Terminus Fighter Bomber 129 fired at Cylon Frigate 3 and hit it, doing 2 damage. Remaining hull strength is 9.
+Cylon Destroyer 19 fired at Terminus Fighter Bomber 113 and hit it for 4 damage, destroying it!
+Terminus Fighter Bomber 130 fired at Cylon Frigate 3 and hit it, doing 2 damage. Remaining hull strength is 7.
+Cylon Destroyer 19 fired at Terminus Fighter Bomber 114 and hit it for 26 damage, destroying it!
+Terminus Fighter Bomber 131 fired at Cylon Frigate 3 and hit it, doing 1 damage. Remaining hull strength is 6.
+Cylon Destroyer 20 fired at Terminus Fighter Bomber 115 and hit it for 14 damage, destroying it!
+Terminus Fighter Bomber 132 fired at Cylon Frigate 3 and hit it, but did no damage.
+Cylon Destroyer 20 fired at Terminus Fighter Bomber 116 and hit it for 15 damage, destroying it!
+Terminus Fighter Bomber 133 fired at Cylon Frigate 3 and hit it, doing 2 damage. Remaining hull strength is 4.
+Cylon Destroyer 20 fired at Terminus Fighter Bomber 117 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 134 fired at Cylon Frigate 3 and hit it, doing 3 damage. Remaining hull strength is 1.
+Cylon Destroyer 20 fired at Terminus Fighter Bomber 117 and hit it for 20 damage, destroying it!
+Terminus Fighter Bomber 135 fired at Cylon Frigate 3 and hit it, but did no damage.
+Cylon Destroyer 21 fired at Terminus Fighter Bomber 118 and hit it for 18 damage, destroying it!
+Terminus Fighter Bomber 136 fired at Cylon Frigate 3 and hit it for 3 damage, destroying it!
+Cylon Destroyer 21 fired at Terminus Fighter Bomber 119 and hit it for 21 damage, destroying it!
+Terminus Fighter Bomber 137 fired at Cylon Frigate 4 and hit it, doing 1 damage. Remaining hull strength is 13.
+Cylon Destroyer 21 fired at Terminus Fighter Bomber 120 and hit it for 10 damage, destroying it!
+Terminus Fighter Bomber 138 fired at Cylon Frigate 4 and hit it, doing 2 damage. Remaining hull strength is 11.
+Cylon Destroyer 21 fired at Terminus Fighter Bomber 121 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 139 fired at Cylon Frigate 4 and hit it, doing 2 damage. Remaining hull strength is 9.
+Cylon Destroyer 22 fired at Terminus Fighter Bomber 121 and hit it, but did no damage.
+Terminus Fighter Bomber 140 fired at Cylon Frigate 4 and hit it, doing 1 damage. Remaining hull strength is 8.
+Cylon Destroyer 22 fired at Terminus Fighter Bomber 121 and hit it for 21 damage, destroying it!
+Terminus Fighter Bomber 141 fired at Cylon Frigate 4 but missed.
+Cylon Destroyer 22 fired at Terminus Fighter Bomber 122 and hit it for 5 damage, destroying it!
+Terminus Fighter Bomber 142 fired at Cylon Frigate 4 and hit it, doing 2 damage. Remaining hull strength is 6.
+Cylon Destroyer 22 fired at Terminus Fighter Bomber 123 and hit it for 14 damage, destroying it!
+Terminus Fighter Bomber 143 fired at Cylon Frigate 4 and hit it, doing 1 damage. Remaining hull strength is 5.
+Cylon Destroyer 23 fired at Terminus Fighter Bomber 124 and hit it for 4 damage, destroying it!
+Terminus Fighter Bomber 144 fired at Cylon Frigate 4 and hit it, but did no damage.
+Cylon Destroyer 23 fired at Terminus Fighter Bomber 125 and hit it for 8 damage, destroying it!
+Terminus Fighter Bomber 145 fired at Cylon Frigate 4 and hit it, doing 1 damage. Remaining hull strength is 4.
+Cylon Destroyer 23 fired at Terminus Fighter Bomber 126 and hit it for 17 damage, destroying it!
+Terminus Fighter Bomber 146 fired at Cylon Frigate 4 and hit it, doing 1 damage. Remaining hull strength is 3.
+Cylon Destroyer 23 fired at Terminus Fighter Bomber 127 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 147 fired at Cylon Frigate 4 and hit it, but did no damage.
+Cylon Destroyer 24 fired at Terminus Fighter Bomber 128 and hit it for 15 damage, destroying it!
+Terminus Fighter Bomber 148 fired at Cylon Frigate 4 and hit it for 3 damage, destroying it!
+Cylon Destroyer 24 fired at Terminus Fighter Bomber 129 and hit it for 7 damage, destroying it!
+Terminus Fighter Bomber 149 fired at Cylon Frigate 5 and hit it, doing 2 damage. Remaining hull strength is 12.
+Cylon Destroyer 24 fired at Terminus Fighter Bomber 130 and hit it for 9 damage, destroying it!
+Terminus Fighter Bomber 150 fired at Cylon Frigate 5 and hit it, doing 1 damage. Remaining hull strength is 11.
+Cylon Destroyer 24 fired at Terminus Fighter Bomber 131 and hit it for 30 damage, destroying it!
+Terminus Fighter Bomber 151 fired at Cylon Frigate 5 and hit it, doing 2 damage. Remaining hull strength is 9.
+Cylon Destroyer 25 fired at Terminus Fighter Bomber 132 and hit it for 7 damage, destroying it!
+Terminus Fighter Bomber 152 fired at Cylon Frigate 5 and hit it, doing 2 damage. Remaining hull strength is 7.
+Cylon Destroyer 25 fired at Terminus Fighter Bomber 133 and hit it for 27 damage, destroying it!
+Terminus Fighter Bomber 153 fired at Cylon Frigate 5 and hit it, doing 1 damage. Remaining hull strength is 6.
+Cylon Destroyer 25 fired at Terminus Fighter Bomber 134 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 154 fired at Cylon Frigate 5 and hit it, doing 2 damage. Remaining hull strength is 4.
+Cylon Destroyer 25 fired at Terminus Fighter Bomber 135 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 155 fired at Cylon Frigate 5 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Destroyer 26 fired at Terminus Fighter Bomber 136 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 156 fired at Cylon Frigate 5 and hit it for 2 damage, destroying it!
+Cylon Destroyer 26 fired at Terminus Fighter Bomber 136 and hit it for 5 damage, destroying it!
+Terminus Fighter Bomber 157 fired at Cylon Fire Support Destroyer 1 but missed.
+Cylon Destroyer 26 fired at Terminus Fighter Bomber 137 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 158 fired at Cylon Fire Support Destroyer 1 and hit it, doing 2 damage. Remaining hull strength is 22.
+Cylon Destroyer 26 fired at Terminus Fighter Bomber 137 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 159 fired at Cylon Fire Support Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 21.
+Cylon Destroyer 27 fired at Terminus Fighter Bomber 138 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 160 fired at Cylon Fire Support Destroyer 1 and hit it, doing 2 damage. Remaining hull strength is 19.
+Cylon Destroyer 27 fired at Terminus Fighter Bomber 139 and hit it for 11 damage, destroying it!
+Terminus Fighter Bomber 161 fired at Cylon Fire Support Destroyer 1 and hit it, doing 2 damage. Remaining hull strength is 17.
+Cylon Destroyer 27 fired at Terminus Fighter Bomber 140 and hit it for 11 damage, destroying it!
+Terminus Fighter Bomber 162 fired at Cylon Fire Support Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 16.
+Cylon Destroyer 27 fired at Terminus Fighter Bomber 141 and hit it for 5 damage, destroying it!
+Terminus Fighter Bomber 163 fired at Cylon Fire Support Destroyer 1 and hit it, doing 2 damage. Remaining hull strength is 14.
+Cylon Destroyer 28 fired at Terminus Fighter Bomber 142 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 164 fired at Cylon Fire Support Destroyer 1 but missed.
+Cylon Destroyer 28 fired at Terminus Fighter Bomber 143 and hit it for 11 damage, destroying it!
+Terminus Fighter Bomber 165 fired at Cylon Fire Support Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 13.
+Cylon Destroyer 28 fired at Terminus Fighter Bomber 144 and hit it for 16 damage, destroying it!
+Terminus Fighter Bomber 166 fired at Cylon Fire Support Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 12.
+Cylon Destroyer 28 fired at Terminus Fighter Bomber 145 and hit it for 14 damage, destroying it!
+Terminus Fighter Bomber 167 fired at Cylon Fire Support Destroyer 1 and hit it, doing 7 damage. Remaining hull strength is 5.
+Cylon Destroyer 29 fired at Terminus Fighter Bomber 146 and hit it for 12 damage, destroying it!
+Terminus Fighter Bomber 168 fired at Cylon Fire Support Destroyer 1 and hit it, doing 3 damage. Remaining hull strength is 2.
+Cylon Destroyer 29 fired at Terminus Fighter Bomber 147 and hit it for 4 damage, destroying it!
+Terminus Fighter Bomber 169 fired at Cylon Fire Support Destroyer 1 and hit it for 2 damage, destroying it!
+Cylon Destroyer 29 fired at Terminus Fighter Bomber 148 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 170 fired at Cylon Fire Support Destroyer 2 and hit it, doing 2 damage. Remaining hull strength is 22.
+Cylon Destroyer 29 fired at Terminus Fighter Bomber 149 and hit it for 14 damage, destroying it!
+Terminus Fighter Bomber 171 fired at Cylon Fire Support Destroyer 2 and hit it, but did no damage.
+Cylon Destroyer 30 fired at Terminus Fighter Bomber 150 and hit it for 4 damage, destroying it!
+Terminus Fighter Bomber 172 fired at Cylon Fire Support Destroyer 2 but missed.
+Cylon Destroyer 30 fired at Terminus Fighter Bomber 151 and hit it for 19 damage, destroying it!
+Terminus Fighter Bomber 173 fired at Cylon Fire Support Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 21.
+Cylon Destroyer 30 fired at Terminus Fighter Bomber 152 and hit it for 11 damage, destroying it!
+Terminus Fighter Bomber 174 fired at Cylon Fire Support Destroyer 2 and hit it, doing 2 damage. Remaining hull strength is 19.
+Cylon Destroyer 30 fired at Terminus Fighter Bomber 153 and hit it for 8 damage, destroying it!
+Terminus Fighter Bomber 175 fired at Cylon Fire Support Destroyer 2 and hit it, doing 3 damage. Remaining hull strength is 16.
+Cylon Destroyer 31 fired at Terminus Fighter Bomber 154 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 176 fired at Cylon Fire Support Destroyer 2 and hit it, doing 2 damage. Remaining hull strength is 14.
+Cylon Destroyer 31 fired at Terminus Fighter Bomber 155 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 177 fired at Cylon Fire Support Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 13.
+Cylon Destroyer 31 fired at Terminus Fighter Bomber 156 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 178 fired at Cylon Fire Support Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 12.
+Cylon Destroyer 31 fired at Terminus Fighter Bomber 156 and hit it for 1 damage, destroying it!
+Terminus Fighter Bomber 179 fired at Cylon Fire Support Destroyer 2 and hit it, but did no damage.
+Cylon Destroyer 32 fired at Terminus Fighter Bomber 157 and hit it, but did no damage.
+Terminus Fighter Bomber 180 fired at Cylon Fire Support Destroyer 2 but missed.
+Cylon Destroyer 32 fired at Terminus Fighter Bomber 157 and hit it for 13 damage, destroying it!
+Terminus Fighter Bomber 181 fired at Cylon Fire Support Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 11.
+Cylon Destroyer 32 fired at Terminus Fighter Bomber 158 and hit it for 7 damage, destroying it!
+Terminus Fighter Bomber 182 fired at Cylon Fire Support Destroyer 2 and hit it, doing 2 damage. Remaining hull strength is 9.
+Cylon Destroyer 32 fired at Terminus Fighter Bomber 159 and hit it for 5 damage, destroying it!
+Terminus Fighter Bomber 183 fired at Cylon Fire Support Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 8.
+Cylon Destroyer 33 fired at Terminus Fighter Bomber 160 and hit it for 12 damage, destroying it!
+Terminus Fighter Bomber 184 fired at Cylon Fire Support Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 7.
+Cylon Destroyer 33 fired at Terminus Fighter Bomber 161 and hit it for 10 damage, destroying it!
+Terminus Fighter Bomber 185 fired at Cylon Fire Support Destroyer 2 and hit it, doing 3 damage. Remaining hull strength is 4.
+Cylon Destroyer 33 fired at Terminus Fighter Bomber 162 and hit it, but did no damage.
+Terminus Fighter Bomber 186 fired at Cylon Fire Support Destroyer 2 and hit it, but did no damage.
+Cylon Destroyer 33 fired at Terminus Fighter Bomber 162 but missed.
+Terminus Fighter Bomber 187 fired at Cylon Fire Support Destroyer 2 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Destroyer 34 fired at Terminus Fighter Bomber 162 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 188 fired at Cylon Fire Support Destroyer 2 but missed.
+Cylon Destroyer 34 fired at Terminus Fighter Bomber 163 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 189 fired at Cylon Fire Support Destroyer 2 and hit it for 3 damage, destroying it!
+Cylon Destroyer 34 fired at Terminus Fighter Bomber 164 and hit it for 29 damage, destroying it!
+Terminus Fighter Bomber 190 fired at Cylon Fire Support Destroyer 3 and hit it, doing 2 damage. Remaining hull strength is 22.
+Cylon Destroyer 34 fired at Terminus Fighter Bomber 165 and hit it for 16 damage, destroying it!
+Terminus Fighter Bomber 191 fired at Cylon Fire Support Destroyer 3 and hit it, doing 2 damage. Remaining hull strength is 20.
+Cylon Destroyer 35 fired at Terminus Fighter Bomber 166 and hit it for 30 damage, destroying it!
+Terminus Fighter Bomber 192 fired at Cylon Fire Support Destroyer 3 and hit it, doing 2 damage. Remaining hull strength is 18.
+Cylon Destroyer 35 fired at Terminus Fighter Bomber 167 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 193 fired at Cylon Fire Support Destroyer 3 and hit it, doing 3 damage. Remaining hull strength is 15.
+Cylon Destroyer 35 fired at Terminus Fighter Bomber 168 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 194 fired at Cylon Fire Support Destroyer 3 and hit it, doing 2 damage. Remaining hull strength is 13.
+Cylon Destroyer 35 fired at Terminus Fighter Bomber 168 and hit it for 1 damage, destroying it!
+Terminus Fighter Bomber 195 fired at Cylon Fire Support Destroyer 3 and hit it, doing 3 damage. Remaining hull strength is 10.
+Cylon Destroyer 36 fired at Terminus Fighter Bomber 169 and hit it for 17 damage, destroying it!
+Terminus Fighter Bomber 196 fired at Cylon Fire Support Destroyer 3 and hit it, doing 1 damage. Remaining hull strength is 9.
+Cylon Destroyer 36 fired at Terminus Fighter Bomber 170 and hit it for 5 damage, destroying it!
+Terminus Fighter Bomber 197 fired at Cylon Fire Support Destroyer 3 and hit it, doing 1 damage. Remaining hull strength is 8.
+Cylon Destroyer 36 fired at Terminus Fighter Bomber 171 and hit it for 7 damage, destroying it!
+Terminus Fighter Bomber 198 fired at Cylon Fire Support Destroyer 3 and hit it, but did no damage.
+Cylon Destroyer 36 fired at Terminus Fighter Bomber 172 and hit it, but did no damage.
+Terminus Fighter Bomber 199 fired at Cylon Fire Support Destroyer 3 and hit it, doing 1 damage. Remaining hull strength is 7.
+Cylon Destroyer 37 fired at Terminus Fighter Bomber 172 and hit it for 15 damage, destroying it!
+Terminus Fighter Bomber 200 fired at Cylon Fire Support Destroyer 3 and hit it, doing 2 damage. Remaining hull strength is 5.
+Cylon Destroyer 37 fired at Terminus Fighter Bomber 173 and hit it for 19 damage, destroying it!
+Terminus Fighter Bomber 201 fired at Cylon Fire Support Destroyer 3 and hit it, but did no damage.
+Cylon Destroyer 37 fired at Terminus Fighter Bomber 174 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 202 fired at Cylon Fire Support Destroyer 3 and hit it, doing 1 damage. Remaining hull strength is 4.
+Cylon Destroyer 37 fired at Terminus Fighter Bomber 175 and hit it for 12 damage, destroying it!
+Terminus Fighter Bomber 203 fired at Cylon Fire Support Destroyer 3 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Destroyer 38 fired at Terminus Fighter Bomber 176 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 204 fired at Cylon Fire Support Destroyer 3 and hit it, doing 1 damage. Remaining hull strength is 1.
+Cylon Destroyer 38 fired at Terminus Fighter Bomber 176 and hit it for 7 damage, destroying it!
+Terminus Fighter Bomber 205 fired at Cylon Fire Support Destroyer 3 and hit it for 3 damage, destroying it!
+Cylon Destroyer 38 fired at Terminus Fighter Bomber 177 and hit it for 9 damage, destroying it!
+Terminus Fighter Bomber 206 fired at Cylon Fire Support Destroyer 4 and hit it, doing 1 damage. Remaining hull strength is 23.
+Cylon Destroyer 38 fired at Terminus Fighter Bomber 178 and hit it for 20 damage, destroying it!
+Terminus Fighter Bomber 207 fired at Cylon Fire Support Destroyer 4 and hit it, doing 2 damage. Remaining hull strength is 21.
+Cylon Destroyer 39 fired at Terminus Fighter Bomber 179 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 208 fired at Cylon Fire Support Destroyer 4 and hit it, doing 2 damage. Remaining hull strength is 19.
+Cylon Destroyer 39 fired at Terminus Fighter Bomber 179 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 209 fired at Cylon Fire Support Destroyer 4 and hit it, doing 2 damage. Remaining hull strength is 17.
+Cylon Destroyer 39 fired at Terminus Fighter Bomber 180 and hit it for 13 damage, destroying it!
+Terminus Fighter Bomber 210 fired at Cylon Fire Support Destroyer 4 and hit it, doing 2 damage. Remaining hull strength is 15.
+Cylon Destroyer 39 fired at Terminus Fighter Bomber 181 and hit it for 20 damage, destroying it!
+Terminus Fighter Bomber 211 fired at Cylon Fire Support Destroyer 4 and hit it, doing 3 damage. Remaining hull strength is 12.
+Cylon Destroyer 40 fired at Terminus Fighter Bomber 182 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 212 fired at Cylon Fire Support Destroyer 4 and hit it, doing 1 damage. Remaining hull strength is 11.
+Cylon Destroyer 40 fired at Terminus Fighter Bomber 183 and hit it for 19 damage, destroying it!
+Terminus Fighter Bomber 213 fired at Cylon Fire Support Destroyer 4 and hit it, doing 1 damage. Remaining hull strength is 10.
+Cylon Destroyer 40 fired at Terminus Fighter Bomber 184 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 214 fired at Cylon Fire Support Destroyer 4 and hit it, doing 2 damage. Remaining hull strength is 8.
+Cylon Destroyer 40 fired at Terminus Fighter Bomber 185 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 215 fired at Cylon Fire Support Destroyer 4 and hit it, doing 1 damage. Remaining hull strength is 7.
+Cylon Destroyer 41 fired at Terminus Fighter Bomber 186 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 216 fired at Cylon Fire Support Destroyer 4 and hit it, doing 2 damage. Remaining hull strength is 5.
+Cylon Destroyer 41 fired at Terminus Fighter Bomber 186 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 217 fired at Cylon Fire Support Destroyer 4 but missed.
+Cylon Destroyer 41 fired at Terminus Fighter Bomber 187 and hit it for 5 damage, destroying it!
+Terminus Fighter Bomber 218 fired at Cylon Fire Support Destroyer 4 and hit it, doing 1 damage. Remaining hull strength is 4.
+Cylon Destroyer 41 fired at Terminus Fighter Bomber 188 and hit it for 5 damage, destroying it!
+Terminus Fighter Bomber 219 fired at Cylon Fire Support Destroyer 4 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Destroyer 42 fired at Terminus Fighter Bomber 189 and hit it for 13 damage, destroying it!
+Terminus Fighter Bomber 220 fired at Cylon Fire Support Destroyer 4 and hit it for 2 damage, destroying it!
+Cylon Destroyer 42 fired at Terminus Fighter Bomber 190 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 221 fired at Cylon Fire Support Destroyer 5 and hit it, doing 1 damage. Remaining hull strength is 23.
+Cylon Destroyer 42 fired at Terminus Fighter Bomber 191 and hit it for 11 damage, destroying it!
+Terminus Fighter Bomber 222 fired at Cylon Fire Support Destroyer 5 and hit it, doing 2 damage. Remaining hull strength is 21.
+Cylon Destroyer 42 fired at Terminus Fighter Bomber 192 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 223 fired at Cylon Fire Support Destroyer 5 and hit it, doing 1 damage. Remaining hull strength is 20.
+Cylon Destroyer 43 fired at Terminus Fighter Bomber 192 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 224 fired at Cylon Fire Support Destroyer 5 and hit it, but did no damage.
+Cylon Destroyer 43 fired at Terminus Fighter Bomber 193 and hit it for 12 damage, destroying it!
+Terminus Fighter Bomber 225 fired at Cylon Fire Support Destroyer 5 and hit it, doing 1 damage. Remaining hull strength is 19.
+Cylon Destroyer 43 fired at Terminus Fighter Bomber 194 and hit it for 4 damage, destroying it!
+Terminus Fighter Bomber 226 fired at Cylon Fire Support Destroyer 5 and hit it, doing 3 damage. Remaining hull strength is 16.
+Cylon Destroyer 43 fired at Terminus Fighter Bomber 195 and hit it for 22 damage, destroying it!
+Terminus Fighter Bomber 227 fired at Cylon Fire Support Destroyer 5 and hit it, but did no damage.
+Cylon Destroyer 44 fired at Terminus Fighter Bomber 196 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 228 fired at Cylon Fire Support Destroyer 5 and hit it, doing 2 damage. Remaining hull strength is 14.
+Cylon Destroyer 44 fired at Terminus Fighter Bomber 197 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 229 fired at Cylon Fire Support Destroyer 5 and hit it, doing 2 damage. Remaining hull strength is 12.
+Cylon Destroyer 44 fired at Terminus Fighter Bomber 197 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 230 fired at Cylon Fire Support Destroyer 5 and hit it, doing 3 damage. Remaining hull strength is 9.
+Cylon Destroyer 44 fired at Terminus Fighter Bomber 198 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 231 fired at Cylon Fire Support Destroyer 5 and hit it, doing 3 damage. Remaining hull strength is 6.
+Cylon Destroyer 45 fired at Terminus Fighter Bomber 199 and hit it for 7 damage, destroying it!
+Terminus Fighter Bomber 232 fired at Cylon Fire Support Destroyer 5 and hit it, doing 1 damage. Remaining hull strength is 5.
+Cylon Destroyer 45 fired at Terminus Fighter Bomber 200 and hit it for 26 damage, destroying it!
+Terminus Fighter Bomber 233 fired at Cylon Fire Support Destroyer 5 but missed.
+Cylon Destroyer 45 fired at Terminus Fighter Bomber 201 and hit it for 23 damage, destroying it!
+Terminus Fighter Bomber 234 fired at Cylon Fire Support Destroyer 5 and hit it, but did no damage.
+Cylon Destroyer 45 fired at Terminus Fighter Bomber 202 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 235 fired at Cylon Fire Support Destroyer 5 and hit it, doing 1 damage. Remaining hull strength is 4.
+Cylon Destroyer 46 fired at Terminus Fighter Bomber 202 and hit it for 9 damage, destroying it!
+Terminus Fighter Bomber 236 fired at Cylon Fire Support Destroyer 5 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Destroyer 46 fired at Terminus Fighter Bomber 203 and hit it for 13 damage, destroying it!
+Terminus Fighter Bomber 237 fired at Cylon Fire Support Destroyer 5 but missed.
+Cylon Destroyer 46 fired at Terminus Fighter Bomber 204 and hit it for 13 damage, destroying it!
+Terminus Fighter Bomber 238 fired at Cylon Fire Support Destroyer 5 and hit it for 2 damage, destroying it!
+Cylon Destroyer 46 fired at Terminus Fighter Bomber 205 but missed.
+Terminus Fighter Bomber 239 fired at Cylon Destroyer 1 and hit it, but did no damage.
+Cylon Destroyer 47 fired at Terminus Fighter Bomber 205 and hit it for 5 damage, destroying it!
+Terminus Fighter Bomber 240 fired at Cylon Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 20.
+Cylon Destroyer 47 fired at Terminus Fighter Bomber 206 and hit it for 8 damage, destroying it!
+Terminus Fighter Bomber 241 fired at Cylon Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 19.
+Cylon Destroyer 47 fired at Terminus Fighter Bomber 207 and hit it for 15 damage, destroying it!
+Terminus Fighter Bomber 242 fired at Cylon Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 18.
+Cylon Destroyer 47 fired at Terminus Fighter Bomber 208 and hit it for 9 damage, destroying it!
+Terminus Fighter Bomber 243 fired at Cylon Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 17.
+Cylon Destroyer 48 fired at Terminus Fighter Bomber 209 and hit it, but did no damage.
+Terminus Fighter Bomber 244 fired at Cylon Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 16.
+Cylon Destroyer 48 fired at Terminus Fighter Bomber 209 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 245 fired at Cylon Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 15.
+Cylon Destroyer 48 fired at Terminus Fighter Bomber 210 and hit it for 12 damage, destroying it!
+Terminus Fighter Bomber 246 fired at Cylon Destroyer 1 and hit it, doing 3 damage. Remaining hull strength is 12.
+Cylon Destroyer 48 fired at Terminus Fighter Bomber 211 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 247 fired at Cylon Destroyer 1 and hit it, doing 3 damage. Remaining hull strength is 9.
+Cylon Destroyer 49 fired at Terminus Fighter Bomber 212 and hit it for 22 damage, destroying it!
+Terminus Fighter Bomber 248 fired at Cylon Destroyer 1 and hit it, doing 3 damage. Remaining hull strength is 6.
+Cylon Destroyer 49 fired at Terminus Fighter Bomber 213 and hit it for 29 damage, destroying it!
+Terminus Fighter Bomber 249 fired at Cylon Destroyer 1 and hit it, doing 3 damage. Remaining hull strength is 3.
+Cylon Destroyer 49 fired at Terminus Fighter Bomber 214 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 250 fired at Cylon Destroyer 1 and hit it, but did no damage.
+Cylon Destroyer 49 fired at Terminus Fighter Bomber 215 and hit it for 13 damage, destroying it!
+Terminus Fighter Bomber 251 fired at Cylon Destroyer 1 and hit it, doing 2 damage. Remaining hull strength is 1.
+Cylon Destroyer 50 fired at Terminus Fighter Bomber 216 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 252 fired at Cylon Destroyer 1 and hit it for 3 damage, destroying it!
+Cylon Destroyer 50 fired at Terminus Fighter Bomber 216 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 253 fired at Cylon Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 20.
+Cylon Destroyer 50 fired at Terminus Fighter Bomber 217 and hit it for 21 damage, destroying it!
+Terminus Fighter Bomber 254 fired at Cylon Destroyer 2 and hit it, but did no damage.
+Cylon Destroyer 50 fired at Terminus Fighter Bomber 218 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 255 fired at Cylon Destroyer 2 and hit it, doing 2 damage. Remaining hull strength is 18.
+Cylon Destroyer 51 fired at Terminus Fighter Bomber 218 and hit it for 5 damage, destroying it!
+Terminus Fighter Bomber 256 fired at Cylon Destroyer 2 and hit it, doing 3 damage. Remaining hull strength is 15.
+Cylon Destroyer 51 fired at Terminus Fighter Bomber 219 and hit it for 28 damage, destroying it!
+Terminus Fighter Bomber 257 fired at Cylon Destroyer 2 and hit it, doing 3 damage. Remaining hull strength is 12.
+Cylon Destroyer 51 fired at Terminus Fighter Bomber 220 and hit it for 4 damage, destroying it!
+Terminus Fighter Bomber 258 fired at Cylon Destroyer 2 and hit it, doing 2 damage. Remaining hull strength is 10.
+Cylon Destroyer 51 fired at Terminus Fighter Bomber 221 and hit it for 4 damage, destroying it!
+Terminus Fighter Bomber 259 fired at Cylon Destroyer 2 and hit it, doing 2 damage. Remaining hull strength is 8.
+Cylon Destroyer 52 fired at Terminus Fighter Bomber 222 and hit it for 7 damage, destroying it!
+Terminus Fighter Bomber 260 fired at Cylon Destroyer 2 and hit it, doing 3 damage. Remaining hull strength is 5.
+Cylon Destroyer 52 fired at Terminus Fighter Bomber 223 but missed.
+Terminus Fighter Bomber 261 fired at Cylon Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 4.
+Cylon Destroyer 52 fired at Terminus Fighter Bomber 223 and hit it for 11 damage, destroying it!
+Terminus Fighter Bomber 262 fired at Cylon Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 3.
+Cylon Destroyer 52 fired at Terminus Fighter Bomber 224 and hit it for 27 damage, destroying it!
+Terminus Fighter Bomber 263 fired at Cylon Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 2.
+Cylon Destroyer 53 fired at Terminus Fighter Bomber 225 and hit it for 16 damage, destroying it!
+Terminus Fighter Bomber 264 fired at Cylon Destroyer 2 and hit it for 2 damage, destroying it!
+Cylon Destroyer 53 fired at Terminus Fighter Bomber 226 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 265 fired at Cylon Destroyer 3 and hit it, doing 2 damage. Remaining hull strength is 19.
+Cylon Destroyer 53 fired at Terminus Fighter Bomber 227 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 266 fired at Cylon Destroyer 3 and hit it, doing 2 damage. Remaining hull strength is 17.
+Cylon Destroyer 53 fired at Terminus Fighter Bomber 228 and hit it for 4 damage, destroying it!
+Terminus Fighter Bomber 267 fired at Cylon Destroyer 3 and hit it, doing 2 damage. Remaining hull strength is 15.
+Cylon Destroyer 54 fired at Terminus Fighter Bomber 229 and hit it for 12 damage, destroying it!
+Terminus Fighter Bomber 268 fired at Cylon Destroyer 3 and hit it, but did no damage.
+Cylon Destroyer 54 fired at Terminus Fighter Bomber 230 and hit it for 25 damage, destroying it!
+Terminus Fighter Bomber 269 fired at Cylon Destroyer 3 and hit it, but did no damage.
+Cylon Destroyer 54 fired at Terminus Fighter Bomber 231 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 270 fired at Cylon Destroyer 3 and hit it, doing 1 damage. Remaining hull strength is 14.
+Cylon Destroyer 54 fired at Terminus Fighter Bomber 231 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 271 fired at Cylon Destroyer 3 but missed.
+Cylon Destroyer 55 fired at Terminus Fighter Bomber 232 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 272 fired at Cylon Destroyer 3 and hit it, but did no damage.
+Cylon Destroyer 55 fired at Terminus Fighter Bomber 233 and hit it for 9 damage, destroying it!
+Terminus Fighter Bomber 273 fired at Cylon Destroyer 3 but missed.
+Cylon Destroyer 55 fired at Terminus Fighter Bomber 234 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 274 fired at Cylon Destroyer 3 and hit it, doing 2 damage. Remaining hull strength is 12.
+Cylon Destroyer 55 fired at Terminus Fighter Bomber 235 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 275 fired at Cylon Destroyer 3 and hit it, doing 3 damage. Remaining hull strength is 9.
+Cylon Destroyer 56 fired at Terminus Fighter Bomber 235 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 276 fired at Cylon Destroyer 3 and hit it, doing 3 damage. Remaining hull strength is 6.
+Cylon Destroyer 56 fired at Terminus Fighter Bomber 236 and hit it for 29 damage, destroying it!
+Terminus Fighter Bomber 277 fired at Cylon Destroyer 3 and hit it, doing 4 damage. Remaining hull strength is 2.
+Cylon Destroyer 56 fired at Terminus Fighter Bomber 237 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 278 fired at Cylon Destroyer 3 and hit it, doing 1 damage. Remaining hull strength is 1.
+Cylon Destroyer 56 fired at Terminus Fighter Bomber 238 and hit it for 20 damage, destroying it!
+Terminus Fighter Bomber 279 fired at Cylon Destroyer 3 and hit it for 1 damage, destroying it!
+Cylon Destroyer 57 fired at Terminus Fighter Bomber 239 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 280 fired at Cylon Destroyer 4 and hit it, doing 3 damage. Remaining hull strength is 18.
+Cylon Destroyer 57 fired at Terminus Fighter Bomber 240 and hit it for 29 damage, destroying it!
+Terminus Fighter Bomber 281 fired at Cylon Destroyer 4 and hit it, doing 3 damage. Remaining hull strength is 15.
+Cylon Destroyer 57 fired at Terminus Fighter Bomber 241 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 282 fired at Cylon Destroyer 4 and hit it, doing 2 damage. Remaining hull strength is 13.
+Cylon Destroyer 57 fired at Terminus Fighter Bomber 242 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 283 fired at Cylon Destroyer 4 and hit it, doing 2 damage. Remaining hull strength is 11.
+Cylon Destroyer 58 fired at Terminus Fighter Bomber 243 and hit it for 7 damage, destroying it!
+Terminus Fighter Bomber 284 fired at Cylon Destroyer 4 and hit it, doing 2 damage. Remaining hull strength is 9.
+Cylon Destroyer 58 fired at Terminus Fighter Bomber 244 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 285 fired at Cylon Destroyer 4 and hit it, but did no damage.
+Cylon Destroyer 58 fired at Terminus Fighter Bomber 244 and hit it for 1 damage, destroying it!
+Terminus Fighter Bomber 286 fired at Cylon Destroyer 4 and hit it, doing 1 damage. Remaining hull strength is 8.
+Cylon Destroyer 58 fired at Terminus Fighter Bomber 245 and hit it for 16 damage, destroying it!
+Terminus Fighter Bomber 287 fired at Cylon Destroyer 4 and hit it, doing 1 damage. Remaining hull strength is 7.
+Cylon Destroyer 59 fired at Terminus Fighter Bomber 246 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 288 fired at Cylon Destroyer 4 and hit it, doing 2 damage. Remaining hull strength is 5.
+Cylon Destroyer 59 fired at Terminus Fighter Bomber 247 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 289 fired at Cylon Destroyer 4 and hit it, doing 2 damage. Remaining hull strength is 3.
+Cylon Destroyer 59 fired at Terminus Fighter Bomber 247 and hit it for 1 damage, destroying it!
+Terminus Fighter Bomber 290 fired at Cylon Destroyer 4 and hit it, doing 1 damage. Remaining hull strength is 2.
+Cylon Destroyer 59 fired at Terminus Fighter Bomber 248 and hit it for 29 damage, destroying it!
+Terminus Fighter Bomber 291 fired at Cylon Destroyer 4 and hit it, doing 1 damage. Remaining hull strength is 1.
+Cylon Destroyer 60 fired at Terminus Fighter Bomber 249 and hit it for 19 damage, destroying it!
+Terminus Fighter Bomber 292 fired at Cylon Destroyer 4 and hit it for 1 damage, destroying it!
+Cylon Destroyer 60 fired at Terminus Fighter Bomber 250 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 293 fired at Cylon Destroyer 5 but missed.
+Cylon Destroyer 60 fired at Terminus Fighter Bomber 251 and hit it, but did no damage.
+Terminus Fighter Bomber 294 fired at Cylon Destroyer 5 and hit it, but did no damage.
+Cylon Destroyer 60 fired at Terminus Fighter Bomber 251 and hit it for 7 damage, destroying it!
+Terminus Fighter Bomber 295 fired at Cylon Destroyer 5 and hit it, doing 2 damage. Remaining hull strength is 19.
+Cylon Destroyer 61 fired at Terminus Fighter Bomber 252 and hit it for 5 damage, destroying it!
+Terminus Fighter Bomber 296 fired at Cylon Destroyer 5 and hit it, doing 3 damage. Remaining hull strength is 16.
+Cylon Destroyer 61 fired at Terminus Fighter Bomber 253 and hit it for 19 damage, destroying it!
+Terminus Fighter Bomber 297 fired at Cylon Destroyer 5 and hit it, doing 2 damage. Remaining hull strength is 14.
+Cylon Destroyer 61 fired at Terminus Fighter Bomber 254 and hit it for 8 damage, destroying it!
+Terminus Fighter Bomber 298 fired at Cylon Destroyer 5 and hit it, doing 1 damage. Remaining hull strength is 13.
+Cylon Destroyer 61 fired at Terminus Fighter Bomber 255 and hit it for 38 damage, destroying it!
+Terminus Fighter Bomber 299 fired at Cylon Destroyer 5 and hit it, doing 2 damage. Remaining hull strength is 11.
+Cylon Destroyer 62 fired at Terminus Fighter Bomber 256 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 300 fired at Cylon Destroyer 5 and hit it, doing 2 damage. Remaining hull strength is 9.
+Cylon Destroyer 62 fired at Terminus Fighter Bomber 257 and hit it for 20 damage, destroying it!
+Terminus Fighter Bomber 301 fired at Cylon Destroyer 5 and hit it, doing 2 damage. Remaining hull strength is 7.
+Cylon Destroyer 62 fired at Terminus Fighter Bomber 258 and hit it for 16 damage, destroying it!
+Terminus Fighter Bomber 302 fired at Cylon Destroyer 5 and hit it, doing 2 damage. Remaining hull strength is 5.
+Cylon Destroyer 62 fired at Terminus Fighter Bomber 259 and hit it for 5 damage, destroying it!
+Terminus Fighter Bomber 303 fired at Cylon Destroyer 5 and hit it, doing 3 damage. Remaining hull strength is 2.
+Cylon Destroyer 63 fired at Terminus Fighter Bomber 260 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 304 fired at Cylon Destroyer 5 and hit it, but did no damage.
+Cylon Destroyer 63 fired at Terminus Fighter Bomber 260 and hit it for 18 damage, destroying it!
+Terminus Fighter Bomber 305 fired at Cylon Destroyer 5 and hit it for 2 damage, destroying it!
+Cylon Destroyer 63 fired at Terminus Fighter Bomber 261 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 306 fired at Cylon Destroyer 6 and hit it, but did no damage.
+Cylon Destroyer 63 fired at Terminus Fighter Bomber 262 and hit it for 4 damage, destroying it!
+Terminus Fighter Bomber 307 fired at Cylon Destroyer 6 and hit it, doing 2 damage. Remaining hull strength is 19.
+Cylon Destroyer 64 fired at Terminus Fighter Bomber 263 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 308 fired at Cylon Destroyer 6 and hit it, doing 1 damage. Remaining hull strength is 18.
+Cylon Destroyer 64 fired at Terminus Fighter Bomber 264 and hit it for 4 damage, destroying it!
+Terminus Fighter Bomber 309 fired at Cylon Destroyer 6 and hit it, doing 2 damage. Remaining hull strength is 16.
+Cylon Destroyer 64 fired at Terminus Fighter Bomber 265 and hit it for 20 damage, destroying it!
+Terminus Fighter Bomber 310 fired at Cylon Destroyer 6 and hit it, doing 2 damage. Remaining hull strength is 14.
+Cylon Destroyer 64 fired at Terminus Fighter Bomber 266 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 311 fired at Cylon Destroyer 6 and hit it, doing 1 damage. Remaining hull strength is 13.
+Cylon Destroyer 65 fired at Terminus Fighter Bomber 267 and hit it for 15 damage, destroying it!
+Terminus Fighter Bomber 312 fired at Cylon Destroyer 6 and hit it, doing 2 damage. Remaining hull strength is 11.
+Cylon Destroyer 65 fired at Terminus Fighter Bomber 268 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 313 fired at Cylon Destroyer 6 and hit it, but did no damage.
+Cylon Destroyer 65 fired at Terminus Fighter Bomber 268 and hit it for 30 damage, destroying it!
+Terminus Fighter Bomber 314 fired at Cylon Destroyer 6 and hit it, doing 2 damage. Remaining hull strength is 9.
+Cylon Destroyer 65 fired at Terminus Fighter Bomber 269 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 315 fired at Cylon Destroyer 6 and hit it, doing 2 damage. Remaining hull strength is 7.
+Cylon Destroyer 66 fired at Terminus Fighter Bomber 270 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 316 fired at Cylon Destroyer 6 and hit it, doing 2 damage. Remaining hull strength is 5.
+Cylon Destroyer 66 fired at Terminus Fighter Bomber 271 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 317 fired at Cylon Destroyer 6 and hit it, doing 3 damage. Remaining hull strength is 2.
+Cylon Destroyer 66 fired at Terminus Fighter Bomber 271 and hit it for 10 damage, destroying it!
+Terminus Fighter Bomber 318 fired at Cylon Destroyer 6 and hit it, doing 1 damage. Remaining hull strength is 1.
+Cylon Destroyer 66 fired at Terminus Fighter Bomber 272 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 319 fired at Cylon Destroyer 6 but missed.
+Cylon Destroyer 67 fired at Terminus Fighter Bomber 273 and hit it for 9 damage, destroying it!
+Terminus Fighter Bomber 320 fired at Cylon Destroyer 6 and hit it for 1 damage, destroying it!
+Cylon Destroyer 67 fired at Terminus Fighter Bomber 274 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 321 fired at Cylon Destroyer 7 and hit it, doing 1 damage. Remaining hull strength is 20.
+Cylon Destroyer 67 fired at Terminus Fighter Bomber 275 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 322 fired at Cylon Destroyer 7 but missed.
+Cylon Destroyer 67 fired at Terminus Fighter Bomber 275 and hit it for 1 damage, destroying it!
+Terminus Fighter Bomber 323 fired at Cylon Destroyer 7 and hit it, doing 3 damage. Remaining hull strength is 17.
+Cylon Destroyer 68 fired at Terminus Fighter Bomber 276 and hit it for 12 damage, destroying it!
+Terminus Fighter Bomber 324 fired at Cylon Destroyer 7 and hit it, doing 2 damage. Remaining hull strength is 15.
+Cylon Destroyer 68 fired at Terminus Fighter Bomber 277 and hit it for 5 damage, destroying it!
+Terminus Fighter Bomber 325 fired at Cylon Destroyer 7 and hit it, but did no damage.
+Cylon Destroyer 68 fired at Terminus Fighter Bomber 278 and hit it for 7 damage, destroying it!
+Terminus Fighter Bomber 326 fired at Cylon Destroyer 7 but missed.
+Cylon Destroyer 68 fired at Terminus Fighter Bomber 279 and hit it for 9 damage, destroying it!
+Terminus Fighter Bomber 327 fired at Cylon Destroyer 7 and hit it, but did no damage.
+Cylon Destroyer 69 fired at Terminus Fighter Bomber 280 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 328 fired at Cylon Destroyer 7 and hit it, doing 1 damage. Remaining hull strength is 14.
+Cylon Destroyer 69 fired at Terminus Fighter Bomber 281 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 329 fired at Cylon Destroyer 7 and hit it, doing 3 damage. Remaining hull strength is 11.
+Cylon Destroyer 69 fired at Terminus Fighter Bomber 282 and hit it for 10 damage, destroying it!
+Terminus Fighter Bomber 330 fired at Cylon Destroyer 7 and hit it, doing 1 damage. Remaining hull strength is 10.
+Cylon Destroyer 69 fired at Terminus Fighter Bomber 283 and hit it for 16 damage, destroying it!
+Terminus Fighter Bomber 331 fired at Cylon Destroyer 7 and hit it, doing 1 damage. Remaining hull strength is 9.
+Cylon Destroyer 70 fired at Terminus Fighter Bomber 284 and hit it for 16 damage, destroying it!
+Terminus Fighter Bomber 332 fired at Cylon Destroyer 7 and hit it, doing 2 damage. Remaining hull strength is 7.
+Cylon Destroyer 70 fired at Terminus Fighter Bomber 285 and hit it for 12 damage, destroying it!
+Terminus Fighter Bomber 333 fired at Cylon Destroyer 7 and hit it, doing 2 damage. Remaining hull strength is 5.
+Cylon Destroyer 70 fired at Terminus Fighter Bomber 286 and hit it for 21 damage, destroying it!
+Terminus Fighter Bomber 334 fired at Cylon Destroyer 7 and hit it, doing 3 damage. Remaining hull strength is 2.
+Cylon Destroyer 70 fired at Terminus Fighter Bomber 287 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 335 fired at Cylon Destroyer 7 and hit it for 2 damage, destroying it!
+Cylon Destroyer 71 fired at Terminus Fighter Bomber 288 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 336 fired at Cylon Destroyer 8 and hit it, but did no damage.
+Cylon Destroyer 71 fired at Terminus Fighter Bomber 289 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 337 fired at Cylon Destroyer 8 but missed.
+Cylon Destroyer 71 fired at Terminus Fighter Bomber 290 but missed.
+Terminus Fighter Bomber 338 fired at Cylon Destroyer 8 and hit it, doing 3 damage. Remaining hull strength is 18.
+Cylon Destroyer 71 fired at Terminus Fighter Bomber 290 and hit it for 10 damage, destroying it!
+Terminus Fighter Bomber 339 fired at Cylon Destroyer 8 and hit it, but did no damage.
+Cylon Destroyer 72 fired at Terminus Fighter Bomber 291 and hit it for 22 damage, destroying it!
+Terminus Fighter Bomber 340 fired at Cylon Destroyer 8 and hit it, doing 1 damage. Remaining hull strength is 17.
+Cylon Destroyer 72 fired at Terminus Fighter Bomber 292 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 341 fired at Cylon Destroyer 8 and hit it, doing 1 damage. Remaining hull strength is 16.
+Cylon Destroyer 72 fired at Terminus Fighter Bomber 292 and hit it for 12 damage, destroying it!
+Terminus Fighter Bomber 342 fired at Cylon Destroyer 8 and hit it, doing 2 damage. Remaining hull strength is 14.
+Cylon Destroyer 72 fired at Terminus Fighter Bomber 293 and hit it for 21 damage, destroying it!
+Terminus Fighter Bomber 343 fired at Cylon Destroyer 8 and hit it, doing 2 damage. Remaining hull strength is 12.
+Cylon Destroyer 73 fired at Terminus Fighter Bomber 294 and hit it for 8 damage, destroying it!
+Terminus Fighter Bomber 344 fired at Cylon Destroyer 8 and hit it, doing 2 damage. Remaining hull strength is 10.
+Cylon Destroyer 73 fired at Terminus Fighter Bomber 295 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 345 fired at Cylon Destroyer 8 and hit it, doing 1 damage. Remaining hull strength is 9.
+Cylon Destroyer 73 fired at Terminus Fighter Bomber 296 and hit it for 13 damage, destroying it!
+Terminus Fighter Bomber 346 fired at Cylon Destroyer 8 but missed.
+Cylon Destroyer 73 fired at Terminus Fighter Bomber 297 and hit it for 7 damage, destroying it!
+Terminus Fighter Bomber 347 fired at Cylon Destroyer 8 and hit it, doing 1 damage. Remaining hull strength is 8.
+Cylon Destroyer 74 fired at Terminus Fighter Bomber 298 and hit it for 4 damage, destroying it!
+Terminus Fighter Bomber 348 fired at Cylon Destroyer 8 and hit it, doing 2 damage. Remaining hull strength is 6.
+Cylon Destroyer 74 fired at Terminus Fighter Bomber 299 and hit it for 34 damage, destroying it!
+Terminus Fighter Bomber 349 fired at Cylon Destroyer 8 and hit it, but did no damage.
+Cylon Destroyer 74 fired at Terminus Fighter Bomber 300 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 350 fired at Cylon Destroyer 8 and hit it, doing 3 damage. Remaining hull strength is 3.
+Cylon Destroyer 74 fired at Terminus Fighter Bomber 301 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 351 fired at Cylon Destroyer 8 and hit it, but did no damage.
+Cylon Destroyer 75 fired at Terminus Fighter Bomber 302 and hit it for 29 damage, destroying it!
+Terminus Fighter Bomber 352 fired at Cylon Destroyer 8 and hit it for 3 damage, destroying it!
+Cylon Destroyer 75 fired at Terminus Fighter Bomber 303 and hit it for 15 damage, destroying it!
+Terminus Fighter Bomber 353 fired at Cylon Destroyer 9 and hit it, doing 2 damage. Remaining hull strength is 19.
+Cylon Destroyer 75 fired at Terminus Fighter Bomber 304 and hit it for 14 damage, destroying it!
+Terminus Fighter Bomber 354 fired at Cylon Destroyer 9 and hit it, doing 3 damage. Remaining hull strength is 16.
+Cylon Destroyer 75 fired at Terminus Fighter Bomber 305 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 355 fired at Cylon Destroyer 9 and hit it, doing 2 damage. Remaining hull strength is 14.
+Cylon Destroyer 76 fired at Terminus Fighter Bomber 306 and hit it for 20 damage, destroying it!
+Terminus Fighter Bomber 356 fired at Cylon Destroyer 9 and hit it, doing 1 damage. Remaining hull strength is 13.
+Cylon Destroyer 76 fired at Terminus Fighter Bomber 307 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 357 fired at Cylon Destroyer 9 but missed.
+Cylon Destroyer 76 fired at Terminus Fighter Bomber 308 and hit it for 5 damage, destroying it!
+Terminus Fighter Bomber 358 fired at Cylon Destroyer 9 and hit it, doing 2 damage. Remaining hull strength is 11.
+Cylon Destroyer 76 fired at Terminus Fighter Bomber 309 and hit it for 6 damage, destroying it!
+Terminus Fighter Bomber 359 fired at Cylon Destroyer 9 and hit it, doing 2 damage. Remaining hull strength is 9.
+Cylon Destroyer 77 fired at Terminus Fighter Bomber 310 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 360 fired at Cylon Destroyer 9 and hit it, doing 2 damage. Remaining hull strength is 7.
+Cylon Destroyer 77 fired at Terminus Fighter Bomber 310 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 361 fired at Cylon Destroyer 9 and hit it, but did no damage.
+Cylon Destroyer 77 fired at Terminus Fighter Bomber 311 and hit it for 25 damage, destroying it!
+Terminus Fighter Bomber 362 fired at Cylon Destroyer 9 and hit it, doing 1 damage. Remaining hull strength is 6.
+Cylon Destroyer 77 fired at Terminus Fighter Bomber 312 and hit it for 23 damage, destroying it!
+Terminus Fighter Bomber 363 fired at Cylon Destroyer 9 and hit it, doing 2 damage. Remaining hull strength is 4.
+Cylon Destroyer 78 fired at Terminus Fighter Bomber 313 and hit it for 8 damage, destroying it!
+Terminus Fighter Bomber 364 fired at Cylon Destroyer 9 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Destroyer 78 fired at Terminus Fighter Bomber 314 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 365 fired at Cylon Destroyer 9 and hit it for 4 damage, destroying it!
+Cylon Destroyer 78 fired at Terminus Fighter Bomber 315 and hit it for 2 damage, destroying it!
+Terminus Fighter Bomber 366 fired at Cylon Destroyer 10 and hit it, doing 1 damage. Remaining hull strength is 20.
+Cylon Destroyer 78 fired at Terminus Fighter Bomber 316 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 367 fired at Cylon Destroyer 10 and hit it, doing 1 damage. Remaining hull strength is 19.
+Cylon Destroyer 79 fired at Terminus Fighter Bomber 317 and hit it for 12 damage, destroying it!
+Terminus Fighter Bomber 368 fired at Cylon Destroyer 10 and hit it, doing 2 damage. Remaining hull strength is 17.
+Cylon Destroyer 79 fired at Terminus Fighter Bomber 318 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 369 fired at Cylon Destroyer 10 but missed.
+Cylon Destroyer 79 fired at Terminus Fighter Bomber 319 and hit it for 26 damage, destroying it!
+Terminus Fighter Bomber 370 fired at Cylon Destroyer 10 but missed.
+Cylon Destroyer 79 fired at Terminus Fighter Bomber 320 and hit it for 4 damage, destroying it!
+Terminus Fighter Bomber 371 fired at Cylon Destroyer 10 and hit it, doing 3 damage. Remaining hull strength is 14.
+Cylon Destroyer 80 fired at Terminus Fighter Bomber 321 and hit it for 11 damage, destroying it!
+Terminus Fighter Bomber 372 fired at Cylon Destroyer 10 and hit it, doing 1 damage. Remaining hull strength is 13.
+Cylon Destroyer 80 fired at Terminus Fighter Bomber 322 and hit it for 5 damage, destroying it!
+Terminus Fighter Bomber 373 fired at Cylon Destroyer 10 but missed.
+Cylon Destroyer 80 fired at Terminus Fighter Bomber 323 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Fighter Bomber 374 fired at Cylon Destroyer 10 and hit it, but did no damage.
+Cylon Destroyer 80 fired at Terminus Fighter Bomber 323 and hit it for 24 damage, destroying it!
+Terminus Fighter Bomber 375 fired at Cylon Destroyer 10 and hit it, doing 2 damage. Remaining hull strength is 11.
+Cylon Destroyer 81 fired at Terminus Fighter Bomber 324 and hit it for 25 damage, destroying it!
+Terminus Fighter Bomber 376 fired at Cylon Destroyer 10 and hit it, doing 1 damage. Remaining hull strength is 10.
+Cylon Destroyer 81 fired at Terminus Fighter Bomber 325 and hit it for 5 damage, destroying it!
+Terminus Fighter Bomber 377 fired at Cylon Destroyer 10 and hit it, doing 2 damage. Remaining hull strength is 8.
+Cylon Destroyer 81 fired at Terminus Fighter Bomber 326 and hit it for 15 damage, destroying it!
+Terminus Fighter Bomber 378 fired at Cylon Destroyer 10 and hit it, but did no damage.
+Cylon Destroyer 81 fired at Terminus Fighter Bomber 327 and hit it for 3 damage, destroying it!
+Terminus Fighter Bomber 379 fired at Cylon Destroyer 10 and hit it, but did no damage.
+Cylon Destroyer 82 fired at Terminus Fighter Bomber 328 and hit it for 5 damage, destroying it!
+Terminus Fighter Bomber 380 fired at Cylon Destroyer 10 and hit it, doing 3 damage. Remaining hull strength is 5.
+Cylon Destroyer 82 fired at Terminus Fighter Bomber 329 and hit it for 10 damage, destroying it!
+Terminus Heavy Bomber 1 fired at Cylon Destroyer 10 and hit it, doing 2 damage. Remaining hull strength is 3.
+Cylon Destroyer 82 fired at Terminus Fighter Bomber 330 and hit it for 14 damage, destroying it!
+Terminus Heavy Bomber 2 fired at Cylon Destroyer 10 and hit it, doing 2 damage. Remaining hull strength is 1.
+Cylon Destroyer 82 fired at Terminus Fighter Bomber 331 and hit it for 3 damage, destroying it!
+Terminus Heavy Bomber 3 fired at Cylon Destroyer 10 and hit it, but did no damage.
+Cylon Destroyer 83 fired at Terminus Fighter Bomber 332 but missed.
+Terminus Heavy Bomber 4 fired at Cylon Destroyer 10 and hit it for 2 damage, destroying it!
+Cylon Destroyer 83 fired at Terminus Fighter Bomber 332 and hit it for 8 damage, destroying it!
+Terminus Heavy Bomber 5 fired at Cylon Destroyer 11 and hit it, doing 1 damage. Remaining hull strength is 20.
+Cylon Destroyer 83 fired at Terminus Fighter Bomber 333 and hit it for 26 damage, destroying it!
+Terminus Heavy Bomber 6 fired at Cylon Destroyer 11 and hit it, doing 3 damage. Remaining hull strength is 17.
+Cylon Destroyer 83 fired at Terminus Fighter Bomber 334 and hit it for 5 damage, destroying it!
+Terminus Heavy Bomber 7 fired at Cylon Destroyer 11 and hit it, doing 2 damage. Remaining hull strength is 15.
+Cylon Destroyer 84 fired at Terminus Fighter Bomber 335 and hit it for 20 damage, destroying it!
+Terminus Heavy Bomber 8 fired at Cylon Destroyer 11 and hit it, doing 2 damage. Remaining hull strength is 13.
+Cylon Destroyer 84 fired at Terminus Fighter Bomber 336 and hit it for 8 damage, destroying it!
+Terminus Heavy Bomber 9 fired at Cylon Destroyer 11 and hit it, doing 3 damage. Remaining hull strength is 10.
+Cylon Destroyer 84 fired at Terminus Fighter Bomber 337 and hit it for 26 damage, destroying it!
+Terminus Heavy Bomber 10 fired at Cylon Destroyer 11 and hit it, doing 1 damage. Remaining hull strength is 9.
+Cylon Destroyer 84 fired at Terminus Fighter Bomber 338 and hit it for 15 damage, destroying it!
+Terminus Heavy Bomber 11 fired at Cylon Destroyer 11 and hit it, doing 3 damage. Remaining hull strength is 6.
+Cylon Destroyer 85 fired at Terminus Fighter Bomber 339 and hit it for 10 damage, destroying it!
+Terminus Heavy Bomber 12 fired at Cylon Destroyer 11 and hit it, doing 2 damage. Remaining hull strength is 4.
+Cylon Destroyer 85 fired at Terminus Fighter Bomber 340 and hit it for 10 damage, destroying it!
+Terminus Heavy Bomber 13 fired at Cylon Destroyer 11 and hit it, doing 1 damage. Remaining hull strength is 3.
+Cylon Destroyer 85 fired at Terminus Fighter Bomber 341 and hit it for 4 damage, destroying it!
+Terminus Heavy Bomber 14 fired at Cylon Destroyer 11 and hit it, doing 1 damage. Remaining hull strength is 2.
+Cylon Destroyer 85 fired at Terminus Fighter Bomber 342 and hit it for 2 damage, destroying it!
+Terminus Heavy Bomber 15 fired at Cylon Destroyer 11 and hit it for 3 damage, destroying it!
+Cylon Destroyer 86 fired at Terminus Fighter Bomber 343 and hit it for 15 damage, destroying it!
+Terminus Heavy Bomber 16 fired at Cylon Destroyer 12 and hit it, doing 2 damage. Remaining hull strength is 19.
+Cylon Destroyer 86 fired at Terminus Fighter Bomber 344 and hit it for 21 damage, destroying it!
+Terminus Heavy Bomber 17 fired at Cylon Destroyer 12 and hit it, doing 2 damage. Remaining hull strength is 17.
+Cylon Destroyer 86 fired at Terminus Fighter Bomber 345 and hit it for 2 damage, destroying it!
+Terminus Heavy Bomber 18 fired at Cylon Destroyer 12 but missed.
+Cylon Destroyer 86 fired at Terminus Fighter Bomber 346 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 19 fired at Cylon Destroyer 12 and hit it, doing 1 damage. Remaining hull strength is 16.
+Cylon Destroyer 87 fired at Terminus Fighter Bomber 346 and hit it for 23 damage, destroying it!
+Terminus Heavy Bomber 20 fired at Cylon Destroyer 12 but missed.
+Cylon Destroyer 87 fired at Terminus Fighter Bomber 347 and hit it for 10 damage, destroying it!
+Terminus Heavy Bomber 21 fired at Cylon Destroyer 12 but missed.
+Cylon Destroyer 87 fired at Terminus Fighter Bomber 348 and hit it for 3 damage, destroying it!
+Terminus Heavy Bomber 22 fired at Cylon Destroyer 12 but missed.
+Cylon Destroyer 87 fired at Terminus Fighter Bomber 349 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 23 fired at Cylon Destroyer 12 but missed.
+Cylon Destroyer 88 fired at Terminus Fighter Bomber 349 and hit it for 13 damage, destroying it!
+Terminus Heavy Bomber 24 fired at Cylon Destroyer 12 and hit it, doing 2 damage. Remaining hull strength is 14.
+Cylon Destroyer 88 fired at Terminus Fighter Bomber 350 and hit it for 2 damage, destroying it!
+Terminus Heavy Bomber 25 fired at Cylon Destroyer 12 and hit it, but did no damage.
+Cylon Destroyer 88 fired at Terminus Fighter Bomber 351 and hit it for 19 damage, destroying it!
+Terminus Heavy Bomber 26 fired at Cylon Destroyer 12 and hit it, doing 2 damage. Remaining hull strength is 12.
+Cylon Destroyer 88 fired at Terminus Fighter Bomber 352 and hit it for 3 damage, destroying it!
+Terminus Heavy Bomber 27 fired at Cylon Destroyer 12 and hit it, doing 2 damage. Remaining hull strength is 10.
+Cylon Destroyer 89 fired at Terminus Fighter Bomber 353 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 28 fired at Cylon Destroyer 12 but missed.
+Cylon Destroyer 89 fired at Terminus Fighter Bomber 353 and hit it for 8 damage, destroying it!
+Terminus Heavy Bomber 29 fired at Cylon Destroyer 12 and hit it, doing 3 damage. Remaining hull strength is 7.
+Cylon Destroyer 89 fired at Terminus Fighter Bomber 354 and hit it for 2 damage, destroying it!
+Terminus Heavy Bomber 30 fired at Cylon Destroyer 12 and hit it, but did no damage.
+Cylon Destroyer 89 fired at Terminus Fighter Bomber 355 and hit it for 2 damage, destroying it!
+Terminus Heavy Bomber 31 fired at Cylon Destroyer 12 and hit it, but did no damage.
+Cylon Destroyer 90 fired at Terminus Fighter Bomber 356 and hit it for 4 damage, destroying it!
+Terminus Heavy Bomber 32 fired at Cylon Destroyer 12 and hit it, doing 3 damage. Remaining hull strength is 4.
+Cylon Destroyer 90 fired at Terminus Fighter Bomber 357 and hit it for 3 damage, destroying it!
+Terminus Heavy Bomber 33 fired at Cylon Destroyer 12 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Destroyer 90 fired at Terminus Fighter Bomber 358 and hit it for 7 damage, destroying it!
+Terminus Heavy Bomber 34 fired at Cylon Destroyer 12 and hit it for 3 damage, destroying it!
+Cylon Destroyer 90 fired at Terminus Fighter Bomber 359 and hit it for 4 damage, destroying it!
+Terminus Heavy Bomber 35 fired at Cylon Destroyer 13 and hit it, doing 1 damage. Remaining hull strength is 20.
+Cylon Destroyer 91 fired at Terminus Fighter Bomber 360 and hit it for 9 damage, destroying it!
+Terminus Heavy Bomber 36 fired at Cylon Destroyer 13 but missed.
+Cylon Destroyer 91 fired at Terminus Fighter Bomber 361 and hit it for 3 damage, destroying it!
+Terminus Heavy Bomber 37 fired at Cylon Destroyer 13 and hit it, doing 2 damage. Remaining hull strength is 18.
+Cylon Destroyer 91 fired at Terminus Fighter Bomber 362 and hit it for 16 damage, destroying it!
+Terminus Heavy Bomber 38 fired at Cylon Destroyer 13 and hit it, doing 1 damage. Remaining hull strength is 17.
+Cylon Destroyer 91 fired at Terminus Fighter Bomber 363 and hit it for 22 damage, destroying it!
+Terminus Heavy Bomber 39 fired at Cylon Destroyer 13 and hit it, doing 2 damage. Remaining hull strength is 15.
+Cylon Destroyer 92 fired at Terminus Fighter Bomber 364 and hit it for 13 damage, destroying it!
+Terminus Heavy Bomber 40 fired at Cylon Destroyer 13 and hit it, doing 1 damage. Remaining hull strength is 14.
+Cylon Destroyer 92 fired at Terminus Fighter Bomber 365 and hit it for 2 damage, destroying it!
+Terminus Heavy Bomber 41 fired at Cylon Destroyer 13 and hit it, doing 1 damage. Remaining hull strength is 13.
+Cylon Destroyer 92 fired at Terminus Fighter Bomber 366 and hit it for 17 damage, destroying it!
+Terminus Heavy Bomber 42 fired at Cylon Destroyer 13 and hit it, doing 1 damage. Remaining hull strength is 12.
+Cylon Destroyer 92 fired at Terminus Fighter Bomber 367 and hit it for 24 damage, destroying it!
+Terminus Heavy Bomber 43 fired at Cylon Destroyer 13 and hit it, doing 1 damage. Remaining hull strength is 11.
+Cylon Destroyer 93 fired at Terminus Fighter Bomber 368 and hit it for 2 damage, destroying it!
+Terminus Heavy Bomber 44 fired at Cylon Destroyer 13 and hit it, doing 1 damage. Remaining hull strength is 10.
+Cylon Destroyer 93 fired at Terminus Fighter Bomber 369 and hit it for 23 damage, destroying it!
+Terminus Heavy Bomber 45 fired at Cylon Destroyer 13 and hit it, doing 1 damage. Remaining hull strength is 9.
+Cylon Destroyer 93 fired at Terminus Fighter Bomber 370 and hit it for 15 damage, destroying it!
+Terminus Heavy Bomber 46 fired at Cylon Destroyer 13 but missed.
+Cylon Destroyer 93 fired at Terminus Fighter Bomber 371 and hit it for 12 damage, destroying it!
+Terminus Heavy Bomber 47 fired at Cylon Destroyer 13 and hit it, doing 2 damage. Remaining hull strength is 7.
+Cylon Destroyer 94 fired at Terminus Fighter Bomber 372 and hit it for 10 damage, destroying it!
+Terminus Heavy Bomber 48 fired at Cylon Destroyer 13 and hit it, doing 1 damage. Remaining hull strength is 6.
+Cylon Destroyer 94 fired at Terminus Fighter Bomber 373 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 49 fired at Cylon Destroyer 13 and hit it, doing 2 damage. Remaining hull strength is 4.
+Cylon Destroyer 94 fired at Terminus Fighter Bomber 373 and hit it for 1 damage, destroying it!
+Terminus Heavy Bomber 50 fired at Cylon Destroyer 13 but missed.
+Cylon Destroyer 94 fired at Terminus Fighter Bomber 374 and hit it for 14 damage, destroying it!
+Terminus Heavy Bomber 51 fired at Cylon Destroyer 13 and hit it, doing 1 damage. Remaining hull strength is 3.
+Cylon Destroyer 95 fired at Terminus Fighter Bomber 375 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 52 fired at Cylon Destroyer 13 and hit it, doing 1 damage. Remaining hull strength is 2.
+Cylon Destroyer 95 fired at Terminus Fighter Bomber 375 and hit it for 3 damage, destroying it!
+Terminus Heavy Bomber 53 fired at Cylon Destroyer 13 and hit it, but did no damage.
+Cylon Destroyer 95 fired at Terminus Fighter Bomber 376 and hit it for 14 damage, destroying it!
+Terminus Heavy Bomber 54 fired at Cylon Destroyer 13 and hit it, but did no damage.
+Cylon Destroyer 95 fired at Terminus Fighter Bomber 377 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 55 fired at Cylon Destroyer 13 and hit it, but did no damage.
+Cylon Destroyer 96 fired at Terminus Fighter Bomber 377 and hit it for 8 damage, destroying it!
+Terminus Heavy Bomber 56 fired at Cylon Destroyer 13 and hit it for 2 damage, destroying it!
+Cylon Destroyer 96 fired at Terminus Fighter Bomber 378 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 57 fired at Cylon Destroyer 14 and hit it, doing 1 damage. Remaining hull strength is 20.
+Cylon Destroyer 96 fired at Terminus Fighter Bomber 378 and hit it for 1 damage, destroying it!
+Terminus Heavy Bomber 58 fired at Cylon Destroyer 14 but missed.
+Cylon Destroyer 96 fired at Terminus Fighter Bomber 379 and hit it for 18 damage, destroying it!
+Terminus Heavy Bomber 59 fired at Cylon Destroyer 14 and hit it, doing 3 damage. Remaining hull strength is 17.
+Cylon Destroyer 97 fired at Terminus Fighter Bomber 380 and hit it for 3 damage, destroying it!
+Terminus Heavy Bomber 60 fired at Cylon Destroyer 14 and hit it, doing 1 damage. Remaining hull strength is 16.
+Cylon Destroyer 97 fired at Terminus Heavy Bomber 1 and hit it for 20 damage, destroying it!
+Terminus Heavy Bomber 61 fired at Cylon Destroyer 14 and hit it, doing 3 damage. Remaining hull strength is 13.
+Cylon Destroyer 97 fired at Terminus Heavy Bomber 2 and hit it for 15 damage, destroying it!
+Terminus Heavy Bomber 62 fired at Cylon Destroyer 14 and hit it, doing 2 damage. Remaining hull strength is 11.
+Cylon Destroyer 97 fired at Terminus Heavy Bomber 3 and hit it for 4 damage, destroying it!
+Terminus Heavy Bomber 63 fired at Cylon Destroyer 14 and hit it, doing 3 damage. Remaining hull strength is 8.
+Cylon Destroyer 98 fired at Terminus Heavy Bomber 4 and hit it for 2 damage, destroying it!
+Terminus Heavy Bomber 64 fired at Cylon Destroyer 14 and hit it, doing 2 damage. Remaining hull strength is 6.
+Cylon Destroyer 98 fired at Terminus Heavy Bomber 5 and hit it for 5 damage, destroying it!
+Terminus Heavy Bomber 65 fired at Cylon Destroyer 14 and hit it, doing 3 damage. Remaining hull strength is 3.
+Cylon Destroyer 98 fired at Terminus Heavy Bomber 6 and hit it for 6 damage, destroying it!
+Terminus Heavy Bomber 66 fired at Cylon Destroyer 14 and hit it, but did no damage.
+Cylon Destroyer 98 fired at Terminus Heavy Bomber 7 and hit it for 14 damage, destroying it!
+Terminus Heavy Bomber 67 fired at Cylon Destroyer 14 and hit it for 3 damage, destroying it!
+Cylon Destroyer 99 fired at Terminus Heavy Bomber 8 and hit it for 2 damage, destroying it!
+Terminus Heavy Bomber 68 fired at Cylon Destroyer 15 and hit it, but did no damage.
+Cylon Destroyer 99 fired at Terminus Heavy Bomber 9 and hit it for 32 damage, destroying it!
+Terminus Heavy Bomber 69 fired at Cylon Destroyer 15 and hit it, but did no damage.
+Cylon Destroyer 99 fired at Terminus Heavy Bomber 10 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 70 fired at Cylon Destroyer 15 and hit it, doing 3 damage. Remaining hull strength is 18.
+Cylon Destroyer 99 fired at Terminus Heavy Bomber 10 and hit it for 3 damage, destroying it!
+Terminus Heavy Bomber 71 fired at Cylon Destroyer 15 and hit it, doing 1 damage. Remaining hull strength is 17.
+Cylon Destroyer 100 fired at Terminus Heavy Bomber 11 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 72 fired at Cylon Destroyer 15 and hit it, doing 1 damage. Remaining hull strength is 16.
+Cylon Destroyer 100 fired at Terminus Heavy Bomber 11 and hit it for 1 damage, destroying it!
+Terminus Heavy Bomber 73 fired at Cylon Destroyer 15 and hit it, doing 2 damage. Remaining hull strength is 14.
+Cylon Destroyer 100 fired at Terminus Heavy Bomber 12 and hit it for 12 damage, destroying it!
+Terminus Heavy Bomber 74 fired at Cylon Destroyer 15 and hit it, doing 3 damage. Remaining hull strength is 11.
+Cylon Destroyer 100 fired at Terminus Heavy Bomber 13 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 75 fired at Cylon Destroyer 15 and hit it, doing 2 damage. Remaining hull strength is 9.
+Cylon Destroyer 101 fired at Terminus Heavy Bomber 13 and hit it for 9 damage, destroying it!
+Terminus Heavy Bomber 76 fired at Cylon Destroyer 15 and hit it, doing 2 damage. Remaining hull strength is 7.
+Cylon Destroyer 101 fired at Terminus Heavy Bomber 14 and hit it for 14 damage, destroying it!
+Terminus Heavy Bomber 77 fired at Cylon Destroyer 15 but missed.
+Cylon Destroyer 101 fired at Terminus Heavy Bomber 15 and hit it for 16 damage, destroying it!
+Terminus Heavy Bomber 78 fired at Cylon Destroyer 15 and hit it, but did no damage.
+Cylon Destroyer 101 fired at Terminus Heavy Bomber 16 and hit it for 3 damage, destroying it!
+Terminus Heavy Bomber 79 fired at Cylon Destroyer 15 and hit it, but did no damage.
+Cylon Destroyer 102 fired at Terminus Heavy Bomber 17 and hit it for 10 damage, destroying it!
+Terminus Heavy Bomber 80 fired at Cylon Destroyer 15 and hit it, doing 3 damage. Remaining hull strength is 4.
+Cylon Destroyer 102 fired at Terminus Heavy Bomber 18 and hit it for 20 damage, destroying it!
+Terminus Heavy Bomber 81 fired at Cylon Destroyer 15 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Destroyer 102 fired at Terminus Heavy Bomber 19 and hit it for 5 damage, destroying it!
+Terminus Heavy Bomber 82 fired at Cylon Destroyer 15 and hit it for 2 damage, destroying it!
+Cylon Destroyer 102 fired at Terminus Heavy Bomber 20 and hit it for 5 damage, destroying it!
+Terminus Deep Recon Scout 1 fired at Cylon Destroyer 16 but missed.
+Cylon Destroyer 103 fired at Terminus Heavy Bomber 21 and hit it for 4 damage, destroying it!
+Terminus Frigate 1 fired at Cylon Destroyer 16 and hit it, doing 1 damage. Remaining hull strength is 20.
+Cylon Destroyer 103 fired at Terminus Heavy Bomber 22 and hit it for 3 damage, destroying it!
+Terminus Frigate 1 fired at Cylon Destroyer 16 but missed.
+Cylon Destroyer 103 fired at Terminus Heavy Bomber 23 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Frigate 2 fired at Cylon Destroyer 16 and hit it, doing 4 damage. Remaining hull strength is 16.
+Cylon Destroyer 103 fired at Terminus Heavy Bomber 23 and hit it for 14 damage, destroying it!
+Terminus Frigate 2 fired at Cylon Destroyer 16 but missed.
+Cylon Destroyer 104 fired at Terminus Heavy Bomber 24 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Frigate 3 fired at Cylon Destroyer 16 and hit it, doing 1 damage. Remaining hull strength is 15.
+Cylon Destroyer 104 fired at Terminus Heavy Bomber 24 and hit it for 25 damage, destroying it!
+Terminus Frigate 3 fired at Cylon Destroyer 16 and hit it, doing 2 damage. Remaining hull strength is 13.
+Cylon Destroyer 104 fired at Terminus Heavy Bomber 25 and hit it for 19 damage, destroying it!
+Terminus Frigate 4 fired at Cylon Destroyer 16 and hit it, doing 3 damage. Remaining hull strength is 10.
+Cylon Destroyer 104 fired at Terminus Heavy Bomber 26 and hit it for 3 damage, destroying it!
+Terminus Frigate 4 fired at Cylon Destroyer 16 and hit it, doing 1 damage. Remaining hull strength is 9.
+Cylon Destroyer 105 fired at Terminus Heavy Bomber 27 and hit it for 12 damage, destroying it!
+Terminus Frigate 5 fired at Cylon Destroyer 16 and hit it, doing 1 damage. Remaining hull strength is 8.
+Cylon Destroyer 105 fired at Terminus Heavy Bomber 28 and hit it for 21 damage, destroying it!
+Terminus Frigate 5 fired at Cylon Destroyer 16 and hit it, but did no damage.
+Cylon Destroyer 105 fired at Terminus Heavy Bomber 29 and hit it for 2 damage, destroying it!
+Terminus Frigate 6 fired at Cylon Destroyer 16 and hit it, doing 2 damage. Remaining hull strength is 6.
+Cylon Destroyer 105 fired at Terminus Heavy Bomber 30 and hit it for 17 damage, destroying it!
+Terminus Frigate 6 fired at Cylon Destroyer 16 and hit it, doing 1 damage. Remaining hull strength is 5.
+Cylon Destroyer 106 fired at Terminus Heavy Bomber 31 and hit it for 8 damage, destroying it!
+Terminus Frigate 7 fired at Cylon Destroyer 16 and hit it, doing 2 damage. Remaining hull strength is 3.
+Cylon Destroyer 106 fired at Terminus Heavy Bomber 32 and hit it, but did no damage.
+Terminus Frigate 7 fired at Cylon Destroyer 16 and hit it for 3 damage, destroying it!
+Cylon Destroyer 106 fired at Terminus Heavy Bomber 32 and hit it for 2 damage, destroying it!
+Terminus Frigate 8 fired at Cylon Destroyer 17 and hit it, doing 3 damage. Remaining hull strength is 18.
+Cylon Destroyer 106 fired at Terminus Heavy Bomber 33 and hit it for 13 damage, destroying it!
+Terminus Frigate 8 fired at Cylon Destroyer 17 and hit it, doing 2 damage. Remaining hull strength is 16.
+Cylon Destroyer 107 fired at Terminus Heavy Bomber 34 and hit it for 3 damage, destroying it!
+Terminus Frigate 9 fired at Cylon Destroyer 17 and hit it, but did no damage.
+Cylon Destroyer 107 fired at Terminus Heavy Bomber 35 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Frigate 9 fired at Cylon Destroyer 17 and hit it, doing 2 damage. Remaining hull strength is 14.
+Cylon Destroyer 107 fired at Terminus Heavy Bomber 35 and hit it for 17 damage, destroying it!
+Terminus Frigate 10 fired at Cylon Destroyer 17 and hit it, but did no damage.
+Cylon Destroyer 107 fired at Terminus Heavy Bomber 36 and hit it for 11 damage, destroying it!
+Terminus Frigate 10 fired at Cylon Destroyer 17 and hit it, doing 2 damage. Remaining hull strength is 12.
+Cylon Destroyer 108 fired at Terminus Heavy Bomber 37 and hit it for 6 damage, destroying it!
+Terminus Frigate 11 fired at Cylon Destroyer 17 and hit it, doing 2 damage. Remaining hull strength is 10.
+Cylon Destroyer 108 fired at Terminus Heavy Bomber 38 but missed.
+Terminus Frigate 11 fired at Cylon Destroyer 17 and hit it, doing 1 damage. Remaining hull strength is 9.
+Cylon Destroyer 108 fired at Terminus Heavy Bomber 38 and hit it for 21 damage, destroying it!
+Terminus Frigate 12 fired at Cylon Destroyer 17 and hit it, doing 2 damage. Remaining hull strength is 7.
+Cylon Destroyer 108 fired at Terminus Heavy Bomber 39 and hit it for 3 damage, destroying it!
+Terminus Frigate 12 fired at Cylon Destroyer 17 and hit it, doing 3 damage. Remaining hull strength is 4.
+Cylon Destroyer 109 fired at Terminus Heavy Bomber 40 and hit it for 18 damage, destroying it!
+Terminus Frigate 13 fired at Cylon Destroyer 17 and hit it, doing 1 damage. Remaining hull strength is 3.
+Cylon Destroyer 109 fired at Terminus Heavy Bomber 41 and hit it for 4 damage, destroying it!
+Terminus Frigate 13 fired at Cylon Destroyer 17 and hit it, doing 1 damage. Remaining hull strength is 2.
+Cylon Destroyer 109 fired at Terminus Heavy Bomber 42 and hit it for 8 damage, destroying it!
+Terminus Frigate 14 fired at Cylon Destroyer 17 and hit it for 2 damage, destroying it!
+Cylon Destroyer 109 fired at Terminus Heavy Bomber 43 and hit it for 10 damage, destroying it!
+Terminus Frigate 14 fired at Cylon Destroyer 18 and hit it, doing 1 damage. Remaining hull strength is 20.
+Cylon Destroyer 110 fired at Terminus Heavy Bomber 44 and hit it, but did no damage.
+Terminus Frigate 15 fired at Cylon Destroyer 18 and hit it, doing 1 damage. Remaining hull strength is 19.
+Cylon Destroyer 110 fired at Terminus Heavy Bomber 44 and hit it for 7 damage, destroying it!
+Terminus Frigate 15 fired at Cylon Destroyer 18 and hit it, doing 2 damage. Remaining hull strength is 17.
+Cylon Destroyer 110 fired at Terminus Heavy Bomber 45 and hit it for 15 damage, destroying it!
+Terminus Frigate 16 fired at Cylon Destroyer 18 and hit it, doing 1 damage. Remaining hull strength is 16.
+Cylon Destroyer 110 fired at Terminus Heavy Bomber 46 and hit it for 3 damage, destroying it!
+Terminus Frigate 16 fired at Cylon Destroyer 18 but missed.
+Cylon Destroyer 111 fired at Terminus Heavy Bomber 47 and hit it for 10 damage, destroying it!
+Terminus Frigate 17 fired at Cylon Destroyer 18 and hit it, but did no damage.
+Cylon Destroyer 111 fired at Terminus Heavy Bomber 48 and hit it for 3 damage, destroying it!
+Terminus Frigate 17 fired at Cylon Destroyer 18 and hit it, doing 2 damage. Remaining hull strength is 14.
+Cylon Destroyer 111 fired at Terminus Heavy Bomber 49 and hit it for 35 damage, destroying it!
+Terminus Frigate 18 fired at Cylon Destroyer 18 and hit it, doing 3 damage. Remaining hull strength is 11.
+Cylon Destroyer 111 fired at Terminus Heavy Bomber 50 and hit it for 21 damage, destroying it!
+Terminus Frigate 18 fired at Cylon Destroyer 18 and hit it, doing 2 damage. Remaining hull strength is 9.
+Cylon Destroyer 112 fired at Terminus Heavy Bomber 51 and hit it for 2 damage, destroying it!
+Terminus Frigate 19 fired at Cylon Destroyer 18 and hit it, doing 2 damage. Remaining hull strength is 7.
+Cylon Destroyer 112 fired at Terminus Heavy Bomber 52 and hit it for 3 damage, destroying it!
+Terminus Frigate 19 fired at Cylon Destroyer 18 and hit it, doing 2 damage. Remaining hull strength is 5.
+Cylon Destroyer 112 fired at Terminus Heavy Bomber 53 and hit it for 2 damage, destroying it!
+Terminus Frigate 20 fired at Cylon Destroyer 18 but missed.
+Cylon Destroyer 112 fired at Terminus Heavy Bomber 54 and hit it for 2 damage, destroying it!
+Terminus Frigate 20 fired at Cylon Destroyer 18 and hit it, doing 1 damage. Remaining hull strength is 4.
+Cylon Destroyer 113 fired at Terminus Heavy Bomber 55 and hit it for 9 damage, destroying it!
+Terminus Frigate 21 fired at Cylon Destroyer 18 and hit it for 5 damage, destroying it!
+Cylon Destroyer 113 fired at Terminus Heavy Bomber 56 and hit it for 5 damage, destroying it!
+Terminus Frigate 21 fired at Cylon Destroyer 19 and hit it, doing 1 damage. Remaining hull strength is 20.
+Cylon Destroyer 113 fired at Terminus Heavy Bomber 57 and hit it for 8 damage, destroying it!
+Terminus Frigate 22 fired at Cylon Destroyer 19 and hit it, doing 3 damage. Remaining hull strength is 17.
+Cylon Destroyer 113 fired at Terminus Heavy Bomber 58 and hit it for 13 damage, destroying it!
+Terminus Frigate 22 fired at Cylon Destroyer 19 and hit it, doing 3 damage. Remaining hull strength is 14.
+Cylon Destroyer 114 fired at Terminus Heavy Bomber 59 and hit it for 25 damage, destroying it!
+Terminus Frigate 23 fired at Cylon Destroyer 19 and hit it, but did no damage.
+Cylon Destroyer 114 fired at Terminus Heavy Bomber 60 and hit it for 20 damage, destroying it!
+Terminus Frigate 23 fired at Cylon Destroyer 19 and hit it, but did no damage.
+Cylon Destroyer 114 fired at Terminus Heavy Bomber 61 and hit it for 24 damage, destroying it!
+Terminus Frigate 24 fired at Cylon Destroyer 19 and hit it, doing 2 damage. Remaining hull strength is 12.
+Cylon Destroyer 114 fired at Terminus Heavy Bomber 62 and hit it for 3 damage, destroying it!
+Terminus Frigate 24 fired at Cylon Destroyer 19 and hit it, doing 2 damage. Remaining hull strength is 10.
+Cylon Destroyer 115 fired at Terminus Heavy Bomber 63 and hit it for 10 damage, destroying it!
+Terminus Frigate 25 fired at Cylon Destroyer 19 and hit it, doing 1 damage. Remaining hull strength is 9.
+Cylon Destroyer 115 fired at Terminus Heavy Bomber 64 and hit it for 22 damage, destroying it!
+Terminus Frigate 25 fired at Cylon Destroyer 19 and hit it, doing 2 damage. Remaining hull strength is 7.
+Cylon Destroyer 115 fired at Terminus Heavy Bomber 65 and hit it for 9 damage, destroying it!
+Terminus Frigate 26 fired at Cylon Destroyer 19 and hit it, doing 2 damage. Remaining hull strength is 5.
+Cylon Destroyer 115 fired at Terminus Heavy Bomber 66 and hit it for 13 damage, destroying it!
+Terminus Frigate 26 fired at Cylon Destroyer 19 and hit it, doing 2 damage. Remaining hull strength is 3.
+Cylon Destroyer 116 fired at Terminus Heavy Bomber 67 and hit it for 3 damage, destroying it!
+Terminus Frigate 27 fired at Cylon Destroyer 19 and hit it for 3 damage, destroying it!
+Cylon Destroyer 116 fired at Terminus Heavy Bomber 68 and hit it for 22 damage, destroying it!
+Terminus Frigate 27 fired at Cylon Destroyer 20 and hit it, doing 3 damage. Remaining hull strength is 18.
+Cylon Destroyer 116 fired at Terminus Heavy Bomber 69 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Frigate 28 fired at Cylon Destroyer 20 and hit it, doing 3 damage. Remaining hull strength is 15.
+Cylon Destroyer 116 fired at Terminus Heavy Bomber 69 and hit it for 22 damage, destroying it!
+Terminus Frigate 28 fired at Cylon Destroyer 20 and hit it, doing 1 damage. Remaining hull strength is 14.
+Cylon Destroyer 117 fired at Terminus Heavy Bomber 70 and hit it for 9 damage, destroying it!
+Terminus Frigate 29 fired at Cylon Destroyer 20 and hit it, but did no damage.
+Cylon Destroyer 117 fired at Terminus Heavy Bomber 71 and hit it for 7 damage, destroying it!
+Terminus Frigate 29 fired at Cylon Destroyer 20 and hit it, doing 2 damage. Remaining hull strength is 12.
+Cylon Destroyer 117 fired at Terminus Heavy Bomber 72 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Frigate 30 fired at Cylon Destroyer 20 and hit it, doing 1 damage. Remaining hull strength is 11.
+Cylon Destroyer 117 fired at Terminus Heavy Bomber 72 and hit it for 11 damage, destroying it!
+Terminus Frigate 30 fired at Cylon Destroyer 20 and hit it, doing 2 damage. Remaining hull strength is 9.
+Cylon Destroyer 118 fired at Terminus Heavy Bomber 73 and hit it for 19 damage, destroying it!
+Terminus Frigate 31 fired at Cylon Destroyer 20 but missed.
+Cylon Destroyer 118 fired at Terminus Heavy Bomber 74 but missed.
+Terminus Frigate 31 fired at Cylon Destroyer 20 and hit it, doing 3 damage. Remaining hull strength is 6.
+Cylon Destroyer 118 fired at Terminus Heavy Bomber 74 and hit it for 13 damage, destroying it!
+Terminus Frigate 32 fired at Cylon Destroyer 20 and hit it, doing 2 damage. Remaining hull strength is 4.
+Cylon Destroyer 118 fired at Terminus Heavy Bomber 75 and hit it for 8 damage, destroying it!
+Terminus Frigate 32 fired at Cylon Destroyer 20 and hit it, doing 3 damage. Remaining hull strength is 1.
+Cylon Destroyer 119 fired at Terminus Heavy Bomber 76 and hit it for 17 damage, destroying it!
+Terminus Frigate 33 fired at Cylon Destroyer 20 and hit it for 1 damage, destroying it!
+Cylon Destroyer 119 fired at Terminus Heavy Bomber 77 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Frigate 33 fired at Cylon Destroyer 21 and hit it, doing 2 damage. Remaining hull strength is 19.
+Cylon Destroyer 119 fired at Terminus Heavy Bomber 77 and hit it for 3 damage, destroying it!
+Terminus Frigate 34 fired at Cylon Destroyer 21 and hit it, doing 1 damage. Remaining hull strength is 18.
+Cylon Destroyer 119 fired at Terminus Heavy Bomber 78 and hit it for 3 damage, destroying it!
+Terminus Frigate 34 fired at Cylon Destroyer 21 and hit it, doing 1 damage. Remaining hull strength is 17.
+Cylon Destroyer 120 fired at Terminus Heavy Bomber 79 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Frigate 35 fired at Cylon Destroyer 21 and hit it, doing 2 damage. Remaining hull strength is 15.
+Cylon Destroyer 120 fired at Terminus Heavy Bomber 79 and hit it for 25 damage, destroying it!
+Terminus Frigate 35 fired at Cylon Destroyer 21 and hit it, doing 1 damage. Remaining hull strength is 14.
+Cylon Destroyer 120 fired at Terminus Heavy Bomber 80 and hit it for 3 damage, destroying it!
+Terminus Frigate 36 fired at Cylon Destroyer 21 and hit it, doing 2 damage. Remaining hull strength is 12.
+Cylon Destroyer 120 fired at Terminus Heavy Bomber 81 and hit it for 17 damage, destroying it!
+Terminus Frigate 36 fired at Cylon Destroyer 21 and hit it, doing 2 damage. Remaining hull strength is 10.
+Cylon Destroyer 121 fired at Terminus Heavy Bomber 82 and hit it for 19 damage, destroying it!
+Terminus Frigate 37 fired at Cylon Destroyer 21 but missed.
+Cylon Destroyer 121 fired at Terminus Deep Recon Scout 1 and hit it, doing 1 damage. Remaining hull strength is 7.
+Terminus Frigate 37 fired at Cylon Destroyer 21 and hit it, doing 3 damage. Remaining hull strength is 7.
+Cylon Destroyer 121 fired at Terminus Deep Recon Scout 1 but missed.
+Terminus Frigate 38 fired at Cylon Destroyer 21 and hit it, doing 1 damage. Remaining hull strength is 6.
+Cylon Destroyer 121 fired at Terminus Deep Recon Scout 1 but missed.
+Terminus Frigate 38 fired at Cylon Destroyer 21 and hit it, doing 2 damage. Remaining hull strength is 4.
+Cylon Destroyer 122 fired at Terminus Deep Recon Scout 1 and hit it, doing 2 damage. Remaining hull strength is 5.
+Terminus Frigate 39 fired at Cylon Destroyer 21 and hit it for 5 damage, destroying it!
+Cylon Destroyer 122 fired at Terminus Deep Recon Scout 1 and hit it, doing 4 damage. Remaining hull strength is 1.
+Terminus Frigate 39 fired at Cylon Destroyer 22 but missed.
+Cylon Destroyer 122 fired at Terminus Deep Recon Scout 1 and hit it, but did no damage.
+Terminus Frigate 40 fired at Cylon Destroyer 22 and hit it, doing 2 damage. Remaining hull strength is 19.
+Cylon Destroyer 122 fired at Terminus Deep Recon Scout 1 and hit it for 2 damage, destroying it!
+Terminus Frigate 40 fired at Cylon Destroyer 22 and hit it, doing 2 damage. Remaining hull strength is 17.
+Cylon Destroyer 123 fired at Terminus Frigate 1 and hit it, doing 1 damage. Remaining hull strength is 12.
+Terminus Frigate 41 fired at Cylon Destroyer 22 and hit it, doing 2 damage. Remaining hull strength is 15.
+Cylon Destroyer 123 fired at Terminus Frigate 1 and hit it, doing 3 damage. Remaining hull strength is 9.
+Terminus Frigate 41 fired at Cylon Destroyer 22 and hit it, doing 1 damage. Remaining hull strength is 14.
+Cylon Destroyer 123 fired at Terminus Frigate 1 and hit it, doing 6 damage. Remaining hull strength is 3.
+Terminus Frigate 42 fired at Cylon Destroyer 22 and hit it, doing 1 damage. Remaining hull strength is 13.
+Cylon Destroyer 123 fired at Terminus Frigate 1 and hit it, doing 2 damage. Remaining hull strength is 1.
+Terminus Frigate 42 fired at Cylon Destroyer 22 and hit it, doing 3 damage. Remaining hull strength is 10.
+Cylon Destroyer 124 fired at Terminus Frigate 1 and hit it for 7 damage, destroying it!
+Terminus Frigate 43 fired at Cylon Destroyer 22 and hit it, doing 3 damage. Remaining hull strength is 7.
+Cylon Destroyer 124 fired at Terminus Frigate 2 and hit it, doing 4 damage. Remaining hull strength is 9.
+Terminus Frigate 43 fired at Cylon Destroyer 22 and hit it, doing 2 damage. Remaining hull strength is 5.
+Cylon Destroyer 124 fired at Terminus Frigate 2 and hit it, doing 1 damage. Remaining hull strength is 8.
+Terminus Frigate 44 fired at Cylon Destroyer 22 and hit it, doing 3 damage. Remaining hull strength is 2.
+Cylon Destroyer 124 fired at Terminus Frigate 2 and hit it, doing 1 damage. Remaining hull strength is 7.
+Terminus Frigate 44 fired at Cylon Destroyer 22 and hit it, doing 1 damage. Remaining hull strength is 1.
+Cylon Destroyer 125 fired at Terminus Frigate 2 and hit it, doing 1 damage. Remaining hull strength is 6.
+Terminus Frigate 45 fired at Cylon Destroyer 22 and hit it for 2 damage, destroying it!
+Cylon Destroyer 125 fired at Terminus Frigate 2 and hit it, doing 1 damage. Remaining hull strength is 5.
+Terminus Frigate 45 fired at Cylon Destroyer 23 and hit it, doing 1 damage. Remaining hull strength is 20.
+Cylon Destroyer 125 fired at Terminus Frigate 2 and hit it, doing 1 damage. Remaining hull strength is 4.
+Terminus Frigate 46 fired at Cylon Destroyer 23 and hit it, doing 1 damage. Remaining hull strength is 19.
+Cylon Destroyer 125 fired at Terminus Frigate 2 and hit it for 5 damage, destroying it!
+Terminus Frigate 46 fired at Cylon Destroyer 23 and hit it, doing 2 damage. Remaining hull strength is 17.
+Cylon Destroyer 126 fired at Terminus Frigate 3 and hit it, doing 9 damage. Remaining hull strength is 4.
+Terminus Frigate 47 fired at Cylon Destroyer 23 and hit it, doing 3 damage. Remaining hull strength is 14.
+Cylon Destroyer 126 fired at Terminus Frigate 3 and hit it, doing 1 damage. Remaining hull strength is 3.
+Terminus Frigate 47 fired at Cylon Destroyer 23 but missed.
+Cylon Destroyer 126 fired at Terminus Frigate 3 and hit it, but did no damage.
+Terminus Frigate 48 fired at Cylon Destroyer 23 and hit it, doing 2 damage. Remaining hull strength is 12.
+Cylon Destroyer 126 fired at Terminus Frigate 3 and hit it for 4 damage, destroying it!
+Terminus Frigate 48 fired at Cylon Destroyer 23 and hit it, doing 1 damage. Remaining hull strength is 11.
+Cylon Destroyer 127 fired at Terminus Frigate 4 and hit it, but did no damage.
+Terminus Frigate 49 fired at Cylon Destroyer 23 and hit it, doing 1 damage. Remaining hull strength is 10.
+Cylon Destroyer 127 fired at Terminus Frigate 4 and hit it, doing 1 damage. Remaining hull strength is 12.
+Terminus Frigate 49 fired at Cylon Destroyer 23 and hit it, doing 3 damage. Remaining hull strength is 7.
+Cylon Destroyer 127 fired at Terminus Frigate 4 and hit it, doing 2 damage. Remaining hull strength is 10.
+Terminus Frigate 50 fired at Cylon Destroyer 23 and hit it, doing 2 damage. Remaining hull strength is 5.
+Cylon Destroyer 127 fired at Terminus Frigate 4 and hit it, doing 6 damage. Remaining hull strength is 4.
+Terminus Frigate 50 fired at Cylon Destroyer 23 and hit it, but did no damage.
+Cylon Destroyer 128 fired at Terminus Frigate 4 and hit it, doing 1 damage. Remaining hull strength is 3.
+Terminus Frigate 51 fired at Cylon Destroyer 23 but missed.
+Cylon Destroyer 128 fired at Terminus Frigate 4 and hit it, doing 2 damage. Remaining hull strength is 1.
+Terminus Frigate 51 fired at Cylon Destroyer 23 and hit it, but did no damage.
+Cylon Destroyer 128 fired at Terminus Frigate 4 and hit it, but did no damage.
+Terminus Frigate 52 fired at Cylon Destroyer 23 and hit it, but did no damage.
+Cylon Destroyer 128 fired at Terminus Frigate 4 and hit it for 5 damage, destroying it!
+Terminus Frigate 52 fired at Cylon Destroyer 23 and hit it, doing 1 damage. Remaining hull strength is 4.
+Cylon Destroyer 129 fired at Terminus Frigate 5 and hit it, doing 5 damage. Remaining hull strength is 8.
+Terminus Frigate 53 fired at Cylon Destroyer 23 and hit it, but did no damage.
+Cylon Destroyer 129 fired at Terminus Frigate 5 and hit it, doing 1 damage. Remaining hull strength is 7.
+Terminus Frigate 53 fired at Cylon Destroyer 23 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Destroyer 129 fired at Terminus Frigate 5 and hit it, doing 4 damage. Remaining hull strength is 3.
+Terminus Frigate 54 fired at Cylon Destroyer 23 and hit it, doing 1 damage. Remaining hull strength is 1.
+Cylon Destroyer 129 fired at Terminus Frigate 5 and hit it for 3 damage, destroying it!
+Terminus Frigate 54 fired at Cylon Destroyer 23 and hit it for 1 damage, destroying it!
+Cylon Destroyer 130 fired at Terminus Frigate 6 and hit it, doing 4 damage. Remaining hull strength is 9.
+Terminus Frigate 55 fired at Cylon Destroyer 24 and hit it, doing 4 damage. Remaining hull strength is 17.
+Cylon Destroyer 130 fired at Terminus Frigate 6 and hit it, doing 2 damage. Remaining hull strength is 7.
+Terminus Frigate 55 fired at Cylon Destroyer 24 and hit it, doing 1 damage. Remaining hull strength is 16.
+Cylon Destroyer 130 fired at Terminus Frigate 6 and hit it, doing 2 damage. Remaining hull strength is 5.
+Terminus Frigate 56 fired at Cylon Destroyer 24 and hit it, doing 2 damage. Remaining hull strength is 14.
+Cylon Destroyer 130 fired at Terminus Frigate 6 and hit it for 6 damage, destroying it!
+Terminus Frigate 56 fired at Cylon Destroyer 24 and hit it, doing 2 damage. Remaining hull strength is 12.
+Cylon Destroyer 131 fired at Terminus Frigate 7 and hit it, doing 3 damage. Remaining hull strength is 10.
+Terminus Frigate 57 fired at Cylon Destroyer 24 and hit it, doing 1 damage. Remaining hull strength is 11.
+Cylon Destroyer 131 fired at Terminus Frigate 7 and hit it, doing 6 damage. Remaining hull strength is 4.
+Terminus Frigate 57 fired at Cylon Destroyer 24 and hit it, but did no damage.
+Cylon Destroyer 131 fired at Terminus Frigate 7 and hit it, doing 3 damage. Remaining hull strength is 1.
+Terminus Frigate 58 fired at Cylon Destroyer 24 and hit it, doing 1 damage. Remaining hull strength is 10.
+Cylon Destroyer 131 fired at Terminus Frigate 7 and hit it for 4 damage, destroying it!
+Terminus Frigate 58 fired at Cylon Destroyer 24 and hit it, doing 3 damage. Remaining hull strength is 7.
+Cylon Destroyer 132 fired at Terminus Frigate 8 and hit it, doing 2 damage. Remaining hull strength is 11.
+Terminus Frigate 59 fired at Cylon Destroyer 24 and hit it, doing 3 damage. Remaining hull strength is 4.
+Cylon Destroyer 132 fired at Terminus Frigate 8 and hit it, doing 2 damage. Remaining hull strength is 9.
+Terminus Frigate 59 fired at Cylon Destroyer 24 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Destroyer 132 fired at Terminus Frigate 8 and hit it, doing 2 damage. Remaining hull strength is 7.
+Terminus Frigate 60 fired at Cylon Destroyer 24 and hit it for 2 damage, destroying it!
+Cylon Destroyer 132 fired at Terminus Frigate 8 and hit it, doing 1 damage. Remaining hull strength is 6.
+Terminus Frigate 60 fired at Cylon Destroyer 25 and hit it, doing 5 damage. Remaining hull strength is 16.
+Cylon Destroyer 133 fired at Terminus Frigate 8 and hit it, doing 2 damage. Remaining hull strength is 4.
+Terminus Improved Frigate 1 fired at Cylon Destroyer 25 and hit it, doing 1 damage. Remaining hull strength is 15.
+Cylon Destroyer 133 fired at Terminus Frigate 8 and hit it, doing 1 damage. Remaining hull strength is 3.
+Terminus Improved Frigate 1 fired at Cylon Destroyer 25 and hit it, doing 2 damage. Remaining hull strength is 13.
+Cylon Destroyer 133 fired at Terminus Frigate 8 and hit it, doing 1 damage. Remaining hull strength is 2.
+Terminus Improved Frigate 1 fired at Cylon Destroyer 25 and hit it, doing 2 damage. Remaining hull strength is 11.
+Cylon Destroyer 133 fired at Terminus Frigate 8 and hit it for 2 damage, destroying it!
+Terminus Improved Frigate 2 fired at Cylon Destroyer 25 and hit it, doing 4 damage. Remaining hull strength is 7.
+Cylon Destroyer 134 fired at Terminus Frigate 9 and hit it, doing 1 damage. Remaining hull strength is 12.
+Terminus Improved Frigate 2 fired at Cylon Destroyer 25 and hit it, but did no damage.
+Cylon Destroyer 134 fired at Terminus Frigate 9 and hit it, doing 1 damage. Remaining hull strength is 11.
+Terminus Improved Frigate 2 fired at Cylon Destroyer 25 and hit it, doing 2 damage. Remaining hull strength is 5.
+Cylon Destroyer 134 fired at Terminus Frigate 9 and hit it, doing 1 damage. Remaining hull strength is 10.
+Terminus Improved Frigate 3 fired at Cylon Destroyer 25 and hit it, doing 2 damage. Remaining hull strength is 3.
+Cylon Destroyer 134 fired at Terminus Frigate 9 and hit it, doing 6 damage. Remaining hull strength is 4.
+Terminus Improved Frigate 3 fired at Cylon Destroyer 25 and hit it, doing 1 damage. Remaining hull strength is 2.
+Cylon Destroyer 135 fired at Terminus Frigate 9 and hit it, doing 1 damage. Remaining hull strength is 3.
+Terminus Improved Frigate 3 fired at Cylon Destroyer 25 and hit it, but did no damage.
+Cylon Destroyer 135 fired at Terminus Frigate 9 and hit it for 3 damage, destroying it!
+Terminus Improved Frigate 4 fired at Cylon Destroyer 25 but missed.
+Cylon Destroyer 135 fired at Terminus Frigate 10 and hit it, doing 4 damage. Remaining hull strength is 9.
+Terminus Improved Frigate 4 fired at Cylon Destroyer 25 and hit it, but did no damage.
+Cylon Destroyer 135 fired at Terminus Frigate 10 and hit it, but did no damage.
+Terminus Improved Frigate 4 fired at Cylon Destroyer 25 and hit it for 3 damage, destroying it!
+Cylon Destroyer 136 fired at Terminus Frigate 10 and hit it, doing 2 damage. Remaining hull strength is 7.
+Terminus Improved Frigate 5 fired at Cylon Destroyer 26 and hit it, but did no damage.
+Cylon Destroyer 136 fired at Terminus Frigate 10 and hit it, doing 3 damage. Remaining hull strength is 4.
+Terminus Improved Frigate 5 fired at Cylon Destroyer 26 and hit it, doing 1 damage. Remaining hull strength is 20.
+Cylon Destroyer 136 fired at Terminus Frigate 10 and hit it for 7 damage, destroying it!
+Terminus Improved Frigate 5 fired at Cylon Destroyer 26 and hit it, doing 3 damage. Remaining hull strength is 17.
+Cylon Destroyer 136 fired at Terminus Frigate 11 and hit it, doing 2 damage. Remaining hull strength is 11.
+Terminus Improved Frigate 6 fired at Cylon Destroyer 26 and hit it, doing 4 damage. Remaining hull strength is 13.
+Cylon Destroyer 137 fired at Terminus Frigate 11 and hit it, doing 1 damage. Remaining hull strength is 10.
+Terminus Improved Frigate 6 fired at Cylon Destroyer 26 and hit it, doing 1 damage. Remaining hull strength is 12.
+Cylon Destroyer 137 fired at Terminus Frigate 11 and hit it, but did no damage.
+Terminus Improved Frigate 6 fired at Cylon Destroyer 26 and hit it, doing 2 damage. Remaining hull strength is 10.
+Cylon Destroyer 137 fired at Terminus Frigate 11 and hit it, doing 5 damage. Remaining hull strength is 5.
+Terminus Improved Frigate 7 fired at Cylon Destroyer 26 and hit it, doing 3 damage. Remaining hull strength is 7.
+Cylon Destroyer 137 fired at Terminus Frigate 11 and hit it, doing 1 damage. Remaining hull strength is 4.
+Terminus Improved Frigate 7 fired at Cylon Destroyer 26 and hit it, doing 1 damage. Remaining hull strength is 6.
+Cylon Destroyer 138 fired at Terminus Frigate 11 and hit it, doing 2 damage. Remaining hull strength is 2.
+Terminus Improved Frigate 7 fired at Cylon Destroyer 26 but missed.
+Cylon Destroyer 138 fired at Terminus Frigate 11 and hit it for 2 damage, destroying it!
+Terminus Improved Frigate 8 fired at Cylon Destroyer 26 and hit it, doing 1 damage. Remaining hull strength is 5.
+Cylon Destroyer 138 fired at Terminus Frigate 12 and hit it, doing 1 damage. Remaining hull strength is 12.
+Terminus Improved Frigate 8 fired at Cylon Destroyer 26 and hit it, doing 2 damage. Remaining hull strength is 3.
+Cylon Destroyer 138 fired at Terminus Frigate 12 and hit it, doing 2 damage. Remaining hull strength is 10.
+Terminus Improved Frigate 8 fired at Cylon Destroyer 26 and hit it, doing 2 damage. Remaining hull strength is 1.
+Cylon Destroyer 139 fired at Terminus Frigate 12 and hit it, doing 3 damage. Remaining hull strength is 7.
+Terminus Improved Frigate 9 fired at Cylon Destroyer 26 and hit it for 3 damage, destroying it!
+Cylon Destroyer 139 fired at Terminus Frigate 12 and hit it, doing 2 damage. Remaining hull strength is 5.
+Terminus Improved Frigate 9 fired at Cylon Destroyer 27 and hit it, doing 1 damage. Remaining hull strength is 20.
+Cylon Destroyer 139 fired at Terminus Frigate 12 and hit it for 5 damage, destroying it!
+Terminus Improved Frigate 9 fired at Cylon Destroyer 27 and hit it, doing 3 damage. Remaining hull strength is 17.
+Cylon Destroyer 139 fired at Terminus Frigate 13 and hit it, doing 1 damage. Remaining hull strength is 12.
+Terminus Improved Frigate 10 fired at Cylon Destroyer 27 and hit it, doing 9 damage. Remaining hull strength is 8.
+Cylon Destroyer 140 fired at Terminus Frigate 13 and hit it, but did no damage.
+Terminus Improved Frigate 10 fired at Cylon Destroyer 27 and hit it, doing 3 damage. Remaining hull strength is 5.
+Cylon Destroyer 140 fired at Terminus Frigate 13 and hit it, doing 7 damage. Remaining hull strength is 5.
+Terminus Improved Frigate 10 fired at Cylon Destroyer 27 and hit it, doing 2 damage. Remaining hull strength is 3.
+Cylon Destroyer 140 fired at Terminus Frigate 13 and hit it, doing 2 damage. Remaining hull strength is 3.
+Terminus Improved Frigate 11 fired at Cylon Destroyer 27 and hit it, doing 1 damage. Remaining hull strength is 2.
+Cylon Destroyer 140 fired at Terminus Frigate 13 and hit it for 3 damage, destroying it!
+Terminus Improved Frigate 11 fired at Cylon Destroyer 27 and hit it, doing 1 damage. Remaining hull strength is 1.
+Cylon Destroyer 141 fired at Terminus Frigate 14 and hit it, doing 3 damage. Remaining hull strength is 10.
+Terminus Improved Frigate 11 fired at Cylon Destroyer 27 and hit it for 6 damage, destroying it!
+Cylon Destroyer 141 fired at Terminus Frigate 14 and hit it, doing 2 damage. Remaining hull strength is 8.
+Terminus Improved Frigate 12 fired at Cylon Destroyer 28 and hit it, doing 2 damage. Remaining hull strength is 19.
+Cylon Destroyer 141 fired at Terminus Frigate 14 and hit it, doing 1 damage. Remaining hull strength is 7.
+Terminus Improved Frigate 12 fired at Cylon Destroyer 28 and hit it, doing 1 damage. Remaining hull strength is 18.
+Cylon Destroyer 141 fired at Terminus Frigate 14 and hit it, doing 1 damage. Remaining hull strength is 6.
+Terminus Improved Frigate 12 fired at Cylon Destroyer 28 and hit it, doing 1 damage. Remaining hull strength is 17.
+Cylon Destroyer 142 fired at Terminus Frigate 14 and hit it, doing 1 damage. Remaining hull strength is 5.
+Terminus Improved Frigate 13 fired at Cylon Destroyer 28 and hit it, doing 5 damage. Remaining hull strength is 12.
+Cylon Destroyer 142 fired at Terminus Frigate 14 and hit it, doing 3 damage. Remaining hull strength is 2.
+Terminus Improved Frigate 13 fired at Cylon Destroyer 28 and hit it, doing 2 damage. Remaining hull strength is 10.
+Cylon Destroyer 142 fired at Terminus Frigate 14 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Improved Frigate 13 fired at Cylon Destroyer 28 and hit it, doing 3 damage. Remaining hull strength is 7.
+Cylon Destroyer 142 fired at Terminus Frigate 14 and hit it for 5 damage, destroying it!
+Terminus Improved Frigate 14 fired at Cylon Destroyer 28 but missed.
+Cylon Destroyer 143 fired at Terminus Frigate 15 and hit it, doing 2 damage. Remaining hull strength is 11.
+Terminus Improved Frigate 14 fired at Cylon Destroyer 28 and hit it, doing 1 damage. Remaining hull strength is 6.
+Cylon Destroyer 143 fired at Terminus Frigate 15 and hit it, doing 3 damage. Remaining hull strength is 8.
+Terminus Improved Frigate 14 fired at Cylon Destroyer 28 and hit it, but did no damage.
+Cylon Destroyer 143 fired at Terminus Frigate 15 and hit it, doing 2 damage. Remaining hull strength is 6.
+Terminus Improved Frigate 15 fired at Cylon Destroyer 28 and hit it, doing 5 damage. Remaining hull strength is 1.
+Cylon Destroyer 143 fired at Terminus Frigate 15 and hit it, doing 2 damage. Remaining hull strength is 4.
+Terminus Improved Frigate 15 fired at Cylon Destroyer 28 and hit it for 1 damage, destroying it!
+Cylon Destroyer 144 fired at Terminus Frigate 15 and hit it, doing 1 damage. Remaining hull strength is 3.
+Terminus Improved Frigate 15 fired at Cylon Destroyer 29 and hit it, doing 4 damage. Remaining hull strength is 17.
+Cylon Destroyer 144 fired at Terminus Frigate 15 and hit it, doing 1 damage. Remaining hull strength is 2.
+Terminus Improved Frigate 16 fired at Cylon Destroyer 29 and hit it, doing 3 damage. Remaining hull strength is 14.
+Cylon Destroyer 144 fired at Terminus Frigate 15 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Improved Frigate 16 fired at Cylon Destroyer 29 and hit it, doing 1 damage. Remaining hull strength is 13.
+Cylon Destroyer 144 fired at Terminus Frigate 15 and hit it for 2 damage, destroying it!
+Terminus Improved Frigate 16 fired at Cylon Destroyer 29 and hit it, doing 3 damage. Remaining hull strength is 10.
+Cylon Destroyer 145 fired at Terminus Frigate 16 and hit it, doing 3 damage. Remaining hull strength is 10.
+Terminus Improved Frigate 17 fired at Cylon Destroyer 29 and hit it, doing 2 damage. Remaining hull strength is 8.
+Cylon Destroyer 145 fired at Terminus Frigate 16 and hit it, doing 6 damage. Remaining hull strength is 4.
+Terminus Improved Frigate 17 fired at Cylon Destroyer 29 and hit it, doing 2 damage. Remaining hull strength is 6.
+Cylon Destroyer 145 fired at Terminus Frigate 16 and hit it for 5 damage, destroying it!
+Terminus Improved Frigate 17 fired at Cylon Destroyer 29 and hit it, but did no damage.
+Cylon Destroyer 145 fired at Terminus Frigate 17 and hit it, but did no damage.
+Terminus Improved Frigate 18 fired at Cylon Destroyer 29 and hit it, doing 1 damage. Remaining hull strength is 5.
+Cylon Destroyer 146 fired at Terminus Frigate 17 and hit it, but did no damage.
+Terminus Improved Frigate 18 fired at Cylon Destroyer 29 and hit it, doing 1 damage. Remaining hull strength is 4.
+Cylon Destroyer 146 fired at Terminus Frigate 17 and hit it, doing 1 damage. Remaining hull strength is 12.
+Terminus Improved Frigate 18 fired at Cylon Destroyer 29 and hit it for 4 damage, destroying it!
+Cylon Destroyer 146 fired at Terminus Frigate 17 and hit it, doing 1 damage. Remaining hull strength is 11.
+Terminus Improved Frigate 19 fired at Cylon Destroyer 30 and hit it, doing 2 damage. Remaining hull strength is 19.
+Cylon Destroyer 146 fired at Terminus Frigate 17 and hit it, but did no damage.
+Terminus Improved Frigate 19 fired at Cylon Destroyer 30 and hit it, doing 5 damage. Remaining hull strength is 14.
+Cylon Destroyer 147 fired at Terminus Frigate 17 and hit it, doing 1 damage. Remaining hull strength is 10.
+Terminus Improved Frigate 19 fired at Cylon Destroyer 30 and hit it, doing 1 damage. Remaining hull strength is 13.
+Cylon Destroyer 147 fired at Terminus Frigate 17 and hit it, doing 3 damage. Remaining hull strength is 7.
+Terminus Improved Frigate 20 fired at Cylon Destroyer 30 and hit it, doing 3 damage. Remaining hull strength is 10.
+Cylon Destroyer 147 fired at Terminus Frigate 17 and hit it, doing 2 damage. Remaining hull strength is 5.
+Terminus Improved Frigate 20 fired at Cylon Destroyer 30 and hit it, doing 1 damage. Remaining hull strength is 9.
+Cylon Destroyer 147 fired at Terminus Frigate 17 and hit it, doing 2 damage. Remaining hull strength is 3.
+Terminus Improved Frigate 20 fired at Cylon Destroyer 30 and hit it, doing 3 damage. Remaining hull strength is 6.
+Cylon Destroyer 148 fired at Terminus Frigate 17 and hit it for 7 damage, destroying it!
+Terminus Improved Frigate 21 fired at Cylon Destroyer 30 and hit it, doing 2 damage. Remaining hull strength is 4.
+Cylon Destroyer 148 fired at Terminus Frigate 18 and hit it, but did no damage.
+Terminus Improved Frigate 21 fired at Cylon Destroyer 30 and hit it, but did no damage.
+Cylon Destroyer 148 fired at Terminus Frigate 18 and hit it, doing 3 damage. Remaining hull strength is 10.
+Terminus Improved Frigate 21 fired at Cylon Destroyer 30 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Destroyer 148 fired at Terminus Frigate 18 and hit it, doing 1 damage. Remaining hull strength is 9.
+Terminus Improved Frigate 22 fired at Cylon Destroyer 30 and hit it for 2 damage, destroying it!
+Cylon Destroyer 149 fired at Terminus Frigate 18 and hit it, doing 4 damage. Remaining hull strength is 5.
+Terminus Improved Frigate 22 fired at Cylon Destroyer 31 and hit it, doing 1 damage. Remaining hull strength is 20.
+Cylon Destroyer 149 fired at Terminus Frigate 18 and hit it, doing 1 damage. Remaining hull strength is 4.
+Terminus Improved Frigate 22 fired at Cylon Destroyer 31 and hit it, doing 3 damage. Remaining hull strength is 17.
+Cylon Destroyer 149 fired at Terminus Frigate 18 and hit it for 5 damage, destroying it!
+Terminus Improved Frigate 23 fired at Cylon Destroyer 31 and hit it, doing 2 damage. Remaining hull strength is 15.
+Cylon Destroyer 149 fired at Terminus Frigate 19 and hit it, doing 2 damage. Remaining hull strength is 11.
+Terminus Improved Frigate 23 fired at Cylon Destroyer 31 and hit it, doing 3 damage. Remaining hull strength is 12.
+Cylon Destroyer 150 fired at Terminus Frigate 19 and hit it, doing 3 damage. Remaining hull strength is 8.
+Terminus Improved Frigate 23 fired at Cylon Destroyer 31 and hit it, doing 1 damage. Remaining hull strength is 11.
+Cylon Destroyer 150 fired at Terminus Frigate 19 and hit it, doing 2 damage. Remaining hull strength is 6.
+Terminus Improved Frigate 24 fired at Cylon Destroyer 31 and hit it, doing 3 damage. Remaining hull strength is 8.
+Cylon Destroyer 150 fired at Terminus Frigate 19 and hit it, doing 4 damage. Remaining hull strength is 2.
+Terminus Improved Frigate 24 fired at Cylon Destroyer 31 and hit it, doing 2 damage. Remaining hull strength is 6.
+Cylon Destroyer 150 fired at Terminus Frigate 19 and hit it for 2 damage, destroying it!
+Terminus Improved Frigate 24 fired at Cylon Destroyer 31 but missed.
+Cylon Destroyer 151 fired at Terminus Frigate 20 and hit it, doing 6 damage. Remaining hull strength is 7.
+Terminus Improved Frigate 25 fired at Cylon Destroyer 31 but missed.
+Cylon Destroyer 151 fired at Terminus Frigate 20 and hit it, doing 2 damage. Remaining hull strength is 5.
+Terminus Improved Frigate 25 fired at Cylon Destroyer 31 and hit it, doing 2 damage. Remaining hull strength is 4.
+Cylon Destroyer 151 fired at Terminus Frigate 20 and hit it, but did no damage.
+Terminus Improved Frigate 25 fired at Cylon Destroyer 31 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Destroyer 151 fired at Terminus Frigate 20 and hit it, but did no damage.
+Terminus Improved Frigate 26 fired at Cylon Destroyer 31 but missed.
+Cylon Destroyer 152 fired at Terminus Frigate 20 and hit it, but did no damage.
+Terminus Improved Frigate 26 fired at Cylon Destroyer 31 and hit it for 2 damage, destroying it!
+Cylon Destroyer 152 fired at Terminus Frigate 20 and hit it, doing 2 damage. Remaining hull strength is 3.
+Terminus Improved Frigate 26 fired at Cylon Destroyer 32 and hit it, doing 2 damage. Remaining hull strength is 19.
+Cylon Destroyer 152 fired at Terminus Frigate 20 and hit it for 3 damage, destroying it!
+Terminus Improved Frigate 27 fired at Cylon Destroyer 32 and hit it, doing 2 damage. Remaining hull strength is 17.
+Cylon Destroyer 152 fired at Terminus Frigate 21 and hit it, doing 3 damage. Remaining hull strength is 10.
+Terminus Improved Frigate 27 fired at Cylon Destroyer 32 and hit it, doing 2 damage. Remaining hull strength is 15.
+Cylon Destroyer 153 fired at Terminus Frigate 21 and hit it, doing 6 damage. Remaining hull strength is 4.
+Terminus Improved Frigate 27 fired at Cylon Destroyer 32 and hit it, doing 5 damage. Remaining hull strength is 10.
+Cylon Destroyer 153 fired at Terminus Frigate 21 and hit it, doing 1 damage. Remaining hull strength is 3.
+Terminus Improved Frigate 28 fired at Cylon Destroyer 32 and hit it, doing 1 damage. Remaining hull strength is 9.
+Cylon Destroyer 153 fired at Terminus Frigate 21 and hit it, doing 1 damage. Remaining hull strength is 2.
+Terminus Improved Frigate 28 fired at Cylon Destroyer 32 and hit it, doing 1 damage. Remaining hull strength is 8.
+Cylon Destroyer 153 fired at Terminus Frigate 21 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Improved Frigate 28 fired at Cylon Destroyer 32 and hit it, doing 2 damage. Remaining hull strength is 6.
+Cylon Destroyer 154 fired at Terminus Frigate 21 and hit it for 2 damage, destroying it!
+Terminus Improved Frigate 29 fired at Cylon Destroyer 32 and hit it, doing 1 damage. Remaining hull strength is 5.
+Cylon Destroyer 154 fired at Terminus Frigate 22 and hit it, doing 4 damage. Remaining hull strength is 9.
+Terminus Improved Frigate 29 fired at Cylon Destroyer 32 and hit it, doing 2 damage. Remaining hull strength is 3.
+Cylon Destroyer 154 fired at Terminus Frigate 22 and hit it, doing 4 damage. Remaining hull strength is 5.
+Terminus Improved Frigate 29 fired at Cylon Destroyer 32 and hit it for 4 damage, destroying it!
+Cylon Destroyer 154 fired at Terminus Frigate 22 and hit it, doing 4 damage. Remaining hull strength is 1.
+Cylon Destroyer 155 fired at Terminus Frigate 22 and hit it for 7 damage, destroying it!
+Cylon Destroyer 155 fired at Terminus Frigate 23 and hit it, doing 1 damage. Remaining hull strength is 12.
+Cylon Destroyer 155 fired at Terminus Frigate 23 and hit it, doing 1 damage. Remaining hull strength is 11.
+Cylon Destroyer 155 fired at Terminus Frigate 23 and hit it, doing 2 damage. Remaining hull strength is 9.
+Cylon Destroyer 156 fired at Terminus Frigate 23 and hit it, doing 1 damage. Remaining hull strength is 8.
+Cylon Destroyer 156 fired at Terminus Frigate 23 and hit it, doing 2 damage. Remaining hull strength is 6.
+Cylon Destroyer 156 fired at Terminus Frigate 23 and hit it for 9 damage, destroying it!
+Cylon Destroyer 156 fired at Terminus Frigate 24 and hit it, doing 1 damage. Remaining hull strength is 12.
+Cylon Destroyer 157 fired at Terminus Frigate 24 and hit it, doing 2 damage. Remaining hull strength is 10.
+Cylon Destroyer 157 fired at Terminus Frigate 24 and hit it, doing 1 damage. Remaining hull strength is 9.
+Cylon Destroyer 157 fired at Terminus Frigate 24 and hit it, doing 6 damage. Remaining hull strength is 3.
+Cylon Destroyer 157 fired at Terminus Frigate 24 and hit it, but did no damage.
+Cylon Destroyer 158 fired at Terminus Frigate 24 and hit it for 3 damage, destroying it!
+Cylon Destroyer 158 fired at Terminus Frigate 25 and hit it, doing 1 damage. Remaining hull strength is 12.
+Cylon Destroyer 158 fired at Terminus Frigate 25 and hit it, doing 1 damage. Remaining hull strength is 11.
+Cylon Destroyer 158 fired at Terminus Frigate 25 and hit it, doing 2 damage. Remaining hull strength is 9.
+Cylon Destroyer 159 fired at Terminus Frigate 25 and hit it, doing 1 damage. Remaining hull strength is 8.
+Cylon Destroyer 159 fired at Terminus Frigate 25 and hit it for 9 damage, destroying it!
+Cylon Destroyer 159 fired at Terminus Frigate 26 and hit it, doing 6 damage. Remaining hull strength is 7.
+Cylon Destroyer 159 fired at Terminus Frigate 26 and hit it, doing 1 damage. Remaining hull strength is 6.
+Cylon Destroyer 160 fired at Terminus Frigate 26 and hit it, doing 2 damage. Remaining hull strength is 4.
+Cylon Destroyer 160 fired at Terminus Frigate 26 and hit it, doing 3 damage. Remaining hull strength is 1.
+Cylon Destroyer 160 fired at Terminus Frigate 26 and hit it for 3 damage, destroying it!
+Cylon Destroyer 160 fired at Terminus Frigate 27 and hit it, doing 1 damage. Remaining hull strength is 12.
+Cylon Destroyer 161 fired at Terminus Frigate 27 and hit it, doing 5 damage. Remaining hull strength is 7.
+Cylon Destroyer 161 fired at Terminus Frigate 27 and hit it, doing 3 damage. Remaining hull strength is 4.
+Cylon Destroyer 161 fired at Terminus Frigate 27 and hit it, but did no damage.
+Cylon Destroyer 161 fired at Terminus Frigate 27 but missed.
+Cylon Destroyer 162 fired at Terminus Frigate 27 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Destroyer 162 fired at Terminus Frigate 27 and hit it for 2 damage, destroying it!
+Cylon Destroyer 162 fired at Terminus Frigate 28 and hit it, doing 2 damage. Remaining hull strength is 11.
+Cylon Destroyer 162 fired at Terminus Frigate 28 and hit it, doing 3 damage. Remaining hull strength is 8.
+Cylon Destroyer 163 fired at Terminus Frigate 28 and hit it for 8 damage, destroying it!
+Cylon Destroyer 163 fired at Terminus Frigate 29 and hit it, doing 2 damage. Remaining hull strength is 11.
+Cylon Destroyer 163 fired at Terminus Frigate 29 and hit it, doing 1 damage. Remaining hull strength is 10.
+Cylon Destroyer 163 fired at Terminus Frigate 29 and hit it, doing 1 damage. Remaining hull strength is 9.
+Cylon Destroyer 164 fired at Terminus Frigate 29 and hit it, but did no damage.
+Cylon Destroyer 164 fired at Terminus Frigate 29 and hit it, doing 1 damage. Remaining hull strength is 8.
+Cylon Destroyer 164 fired at Terminus Frigate 29 and hit it, doing 3 damage. Remaining hull strength is 5.
+Cylon Destroyer 164 fired at Terminus Frigate 29 and hit it, doing 1 damage. Remaining hull strength is 4.
+Cylon Destroyer 165 fired at Terminus Frigate 29 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Destroyer 165 fired at Terminus Frigate 29 and hit it for 2 damage, destroying it!
+Cylon Destroyer 165 fired at Terminus Frigate 30 and hit it, doing 4 damage. Remaining hull strength is 9.
+Cylon Destroyer 165 fired at Terminus Frigate 30 and hit it, doing 1 damage. Remaining hull strength is 8.
+Cylon Destroyer 166 fired at Terminus Frigate 30 and hit it, but did no damage.
+Cylon Destroyer 166 fired at Terminus Frigate 30 and hit it, doing 2 damage. Remaining hull strength is 6.
+Cylon Destroyer 166 fired at Terminus Frigate 30 and hit it, doing 5 damage. Remaining hull strength is 1.
+Cylon Destroyer 166 fired at Terminus Frigate 30 and hit it for 1 damage, destroying it!
+Cylon Destroyer 167 fired at Terminus Frigate 31 and hit it, doing 5 damage. Remaining hull strength is 8.
+Cylon Destroyer 167 fired at Terminus Frigate 31 and hit it, doing 1 damage. Remaining hull strength is 7.
+Cylon Destroyer 167 fired at Terminus Frigate 31 and hit it, doing 1 damage. Remaining hull strength is 6.
+Cylon Destroyer 167 fired at Terminus Frigate 31 and hit it, doing 3 damage. Remaining hull strength is 3.
+Cylon Destroyer 168 fired at Terminus Frigate 31 and hit it, doing 1 damage. Remaining hull strength is 2.
+Cylon Destroyer 168 fired at Terminus Frigate 31 and hit it, doing 1 damage. Remaining hull strength is 1.
+Cylon Destroyer 168 fired at Terminus Frigate 31 and hit it for 1 damage, destroying it!
+Cylon Destroyer 168 fired at Terminus Frigate 32 and hit it, doing 1 damage. Remaining hull strength is 12.
+Cylon Destroyer 169 fired at Terminus Frigate 32 and hit it, doing 2 damage. Remaining hull strength is 10.
+Cylon Destroyer 169 fired at Terminus Frigate 32 and hit it, doing 1 damage. Remaining hull strength is 9.
+Cylon Destroyer 169 fired at Terminus Frigate 32 and hit it, doing 5 damage. Remaining hull strength is 4.
+Cylon Destroyer 169 fired at Terminus Frigate 32 and hit it, doing 3 damage. Remaining hull strength is 1.
+Cylon Destroyer 170 fired at Terminus Frigate 32 and hit it for 1 damage, destroying it!
+Cylon Destroyer 170 fired at Terminus Frigate 33 and hit it, doing 2 damage. Remaining hull strength is 11.
+Cylon Destroyer 170 fired at Terminus Frigate 33 and hit it, doing 3 damage. Remaining hull strength is 8.
+Cylon Destroyer 170 fired at Terminus Frigate 33 and hit it, doing 3 damage. Remaining hull strength is 5.
+Cylon Destroyer 171 fired at Terminus Frigate 33 and hit it, doing 4 damage. Remaining hull strength is 1.
+Cylon Destroyer 171 fired at Terminus Frigate 33 and hit it, but did no damage.
+Cylon Destroyer 171 fired at Terminus Frigate 33 and hit it for 2 damage, destroying it!
+Cylon Destroyer 171 fired at Terminus Frigate 34 and hit it, doing 2 damage. Remaining hull strength is 11.
+Cylon Destroyer 172 fired at Terminus Frigate 34 and hit it, doing 5 damage. Remaining hull strength is 6.
+Cylon Destroyer 172 fired at Terminus Frigate 34 but missed.
+Cylon Destroyer 172 fired at Terminus Frigate 34 and hit it for 7 damage, destroying it!
+Cylon Destroyer 172 fired at Terminus Frigate 35 and hit it, doing 2 damage. Remaining hull strength is 11.
+Cylon Destroyer 173 fired at Terminus Frigate 35 and hit it, doing 3 damage. Remaining hull strength is 8.
+Cylon Destroyer 173 fired at Terminus Frigate 35 but missed.
+Cylon Destroyer 173 fired at Terminus Frigate 35 and hit it, doing 2 damage. Remaining hull strength is 6.
+Cylon Destroyer 173 fired at Terminus Frigate 35 and hit it, doing 1 damage. Remaining hull strength is 5.
+Cylon Destroyer 174 fired at Terminus Frigate 35 and hit it, doing 2 damage. Remaining hull strength is 3.
+Cylon Destroyer 174 fired at Terminus Frigate 35 and hit it, doing 1 damage. Remaining hull strength is 2.
+Cylon Destroyer 174 fired at Terminus Frigate 35 and hit it, doing 1 damage. Remaining hull strength is 1.
+Cylon Destroyer 174 fired at Terminus Frigate 35 and hit it for 3 damage, destroying it!
+Cylon Destroyer 175 fired at Terminus Frigate 36 and hit it, doing 1 damage. Remaining hull strength is 12.
+Cylon Destroyer 175 fired at Terminus Frigate 36 and hit it, doing 1 damage. Remaining hull strength is 11.
+Cylon Destroyer 175 fired at Terminus Frigate 36 and hit it, doing 2 damage. Remaining hull strength is 9.
+Cylon Destroyer 175 fired at Terminus Frigate 36 and hit it, doing 3 damage. Remaining hull strength is 6.
+Cylon Destroyer 176 fired at Terminus Frigate 36 and hit it, doing 2 damage. Remaining hull strength is 4.
+Cylon Destroyer 176 fired at Terminus Frigate 36 and hit it, but did no damage.
+Cylon Destroyer 176 fired at Terminus Frigate 36 and hit it, doing 1 damage. Remaining hull strength is 3.
+Cylon Destroyer 176 fired at Terminus Frigate 36 and hit it for 3 damage, destroying it!
+Cylon Destroyer 177 fired at Terminus Frigate 37 and hit it, doing 6 damage. Remaining hull strength is 7.
+Cylon Destroyer 177 fired at Terminus Frigate 37 and hit it, doing 2 damage. Remaining hull strength is 5.
+Cylon Destroyer 177 fired at Terminus Frigate 37 and hit it, doing 1 damage. Remaining hull strength is 4.
+Cylon Destroyer 177 fired at Terminus Frigate 37 and hit it, doing 3 damage. Remaining hull strength is 1.
+Cylon Destroyer 178 fired at Terminus Frigate 37 and hit it for 1 damage, destroying it!
+Cylon Destroyer 178 fired at Terminus Frigate 38 and hit it, doing 1 damage. Remaining hull strength is 12.
+Cylon Destroyer 178 fired at Terminus Frigate 38 and hit it, doing 2 damage. Remaining hull strength is 10.
+Cylon Destroyer 178 fired at Terminus Frigate 38 and hit it, doing 4 damage. Remaining hull strength is 6.
+Cylon Destroyer 179 fired at Terminus Frigate 38 and hit it, doing 1 damage. Remaining hull strength is 5.
+Cylon Destroyer 179 fired at Terminus Frigate 38 and hit it, doing 3 damage. Remaining hull strength is 2.
+Cylon Destroyer 179 fired at Terminus Frigate 38 and hit it, doing 1 damage. Remaining hull strength is 1.
+Cylon Destroyer 179 fired at Terminus Frigate 38 and hit it for 2 damage, destroying it!
+Cylon Destroyer 180 fired at Terminus Frigate 39 and hit it, doing 1 damage. Remaining hull strength is 12.
+Cylon Destroyer 180 fired at Terminus Frigate 39 and hit it, but did no damage.
+Cylon Destroyer 180 fired at Terminus Frigate 39 and hit it, doing 2 damage. Remaining hull strength is 10.
+Cylon Destroyer 180 fired at Terminus Frigate 39 and hit it for 11 damage, destroying it!
+Cylon Destroyer 181 fired at Terminus Frigate 40 and hit it, doing 8 damage. Remaining hull strength is 5.
+Cylon Destroyer 181 fired at Terminus Frigate 40 and hit it, doing 1 damage. Remaining hull strength is 4.
+Cylon Destroyer 181 fired at Terminus Frigate 40 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Destroyer 181 fired at Terminus Frigate 40 and hit it, doing 1 damage. Remaining hull strength is 1.
+Cylon Destroyer 182 fired at Terminus Frigate 40 and hit it for 1 damage, destroying it!
+Cylon Destroyer 182 fired at Terminus Frigate 41 and hit it, doing 1 damage. Remaining hull strength is 12.
+Cylon Destroyer 182 fired at Terminus Frigate 41 and hit it, doing 9 damage. Remaining hull strength is 3.
+Cylon Destroyer 182 fired at Terminus Frigate 41 and hit it for 3 damage, destroying it!
+Cylon Destroyer 183 fired at Terminus Frigate 42 but missed.
+Cylon Destroyer 183 fired at Terminus Frigate 42 and hit it, doing 6 damage. Remaining hull strength is 7.
+Cylon Destroyer 183 fired at Terminus Frigate 42 and hit it, but did no damage.
+Cylon Destroyer 183 fired at Terminus Frigate 42 and hit it, doing 1 damage. Remaining hull strength is 6.
+Cylon Destroyer 184 fired at Terminus Frigate 42 and hit it, doing 1 damage. Remaining hull strength is 5.
+Cylon Destroyer 184 fired at Terminus Frigate 42 and hit it, doing 1 damage. Remaining hull strength is 4.
+Cylon Destroyer 184 fired at Terminus Frigate 42 and hit it, doing 3 damage. Remaining hull strength is 1.
+Cylon Destroyer 184 fired at Terminus Frigate 42 and hit it for 8 damage, destroying it!
+Cylon Destroyer 185 fired at Terminus Frigate 43 and hit it, doing 1 damage. Remaining hull strength is 12.
+Cylon Destroyer 185 fired at Terminus Frigate 43 and hit it, doing 2 damage. Remaining hull strength is 10.
+Cylon Destroyer 185 fired at Terminus Frigate 43 and hit it, doing 1 damage. Remaining hull strength is 9.
+Cylon Destroyer 185 fired at Terminus Frigate 43 and hit it, doing 4 damage. Remaining hull strength is 5.
+Cylon Destroyer 186 fired at Terminus Frigate 43 and hit it, doing 1 damage. Remaining hull strength is 4.
+Cylon Destroyer 186 fired at Terminus Frigate 43 and hit it, doing 2 damage. Remaining hull strength is 2.
+Cylon Destroyer 186 fired at Terminus Frigate 43 and hit it for 2 damage, destroying it!
+Cylon Destroyer 186 fired at Terminus Frigate 44 and hit it, doing 1 damage. Remaining hull strength is 12.
+Cylon Cruiser 1 fired at Terminus Frigate 44 and hit it, doing 2 damage. Remaining hull strength is 10.
+Cylon Cruiser 1 fired at Terminus Frigate 44 and hit it, doing 7 damage. Remaining hull strength is 3.
+Cylon Cruiser 1 fired at Terminus Frigate 44 and hit it, doing 1 damage. Remaining hull strength is 2.
+Cylon Cruiser 2 fired at Terminus Frigate 44 and hit it for 2 damage, destroying it!
+Cylon Cruiser 2 fired at Terminus Frigate 45 and hit it, doing 5 damage. Remaining hull strength is 8.
+Cylon Cruiser 2 fired at Terminus Frigate 45 and hit it, doing 5 damage. Remaining hull strength is 3.
+Cylon Cruiser 3 fired at Terminus Frigate 45 and hit it for 7 damage, destroying it!
+Cylon Cruiser 3 fired at Terminus Frigate 46 and hit it, doing 2 damage. Remaining hull strength is 11.
+Cylon Cruiser 3 fired at Terminus Frigate 46 and hit it, doing 5 damage. Remaining hull strength is 6.
+Cylon Cruiser 4 fired at Terminus Frigate 46 and hit it for 7 damage, destroying it!
+Cylon Cruiser 4 fired at Terminus Frigate 47 and hit it, doing 2 damage. Remaining hull strength is 11.
+Cylon Cruiser 4 fired at Terminus Frigate 47 and hit it, doing 2 damage. Remaining hull strength is 9.
+Cylon Cruiser 5 fired at Terminus Frigate 47 and hit it, doing 7 damage. Remaining hull strength is 2.
+Cylon Cruiser 5 fired at Terminus Frigate 47 and hit it for 2 damage, destroying it!
+Cylon Cruiser 5 fired at Terminus Frigate 48 and hit it, doing 5 damage. Remaining hull strength is 8.
+Cylon "Asp" Heavy Cruiser 1 fired at Terminus Frigate 48 and hit it, doing 7 damage. Remaining hull strength is 1.
+Cylon "Asp" Heavy Cruiser 1 fired at Terminus Frigate 48 and hit it for 13 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 1 fired at Terminus Frigate 49 and hit it, doing 7 damage. Remaining hull strength is 6.
+Cylon "Asp" Heavy Cruiser 2 fired at Terminus Frigate 49 and hit it, doing 2 damage. Remaining hull strength is 4.
+Cylon "Asp" Heavy Cruiser 2 fired at Terminus Frigate 49 and hit it for 9 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 2 fired at Terminus Frigate 50 and hit it, doing 3 damage. Remaining hull strength is 10.
+Cylon "Asp" Heavy Cruiser 3 fired at Terminus Frigate 50 and hit it, doing 3 damage. Remaining hull strength is 7.
+Cylon "Asp" Heavy Cruiser 3 fired at Terminus Frigate 50 and hit it for 7 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 3 fired at Terminus Frigate 51 and hit it, doing 4 damage. Remaining hull strength is 9.
+Cylon "Asp" Heavy Cruiser 4 fired at Terminus Frigate 51 and hit it, doing 4 damage. Remaining hull strength is 5.
+Cylon "Asp" Heavy Cruiser 4 fired at Terminus Frigate 51 and hit it for 15 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 4 fired at Terminus Frigate 52 and hit it, doing 3 damage. Remaining hull strength is 10.
+Cylon "Asp" Heavy Cruiser 5 fired at Terminus Frigate 52 and hit it, doing 1 damage. Remaining hull strength is 9.
+Cylon "Asp" Heavy Cruiser 5 fired at Terminus Frigate 52 and hit it, doing 1 damage. Remaining hull strength is 8.
+Cylon "Asp" Heavy Cruiser 5 fired at Terminus Frigate 52 and hit it, doing 3 damage. Remaining hull strength is 5.
+Cylon "Asp" Heavy Cruiser 6 fired at Terminus Frigate 52 and hit it, doing 3 damage. Remaining hull strength is 2.
+Cylon "Asp" Heavy Cruiser 6 fired at Terminus Frigate 52 and hit it for 3 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 6 fired at Terminus Frigate 53 and hit it, doing 1 damage. Remaining hull strength is 12.
+Cylon "Asp" Heavy Cruiser 7 fired at Terminus Frigate 53 and hit it for 22 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 7 fired at Terminus Frigate 54 and hit it, doing 7 damage. Remaining hull strength is 6.
+Cylon "Asp" Heavy Cruiser 7 fired at Terminus Frigate 54 and hit it, doing 1 damage. Remaining hull strength is 5.
+Cylon "Asp" Heavy Cruiser 8 fired at Terminus Frigate 54 and hit it, doing 4 damage. Remaining hull strength is 1.
+Cylon "Asp" Heavy Cruiser 8 fired at Terminus Frigate 54 and hit it for 5 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 8 fired at Terminus Frigate 55 and hit it, doing 3 damage. Remaining hull strength is 10.
+Cylon "Asp" Heavy Cruiser 9 fired at Terminus Frigate 55 and hit it, doing 1 damage. Remaining hull strength is 9.
+Cylon "Asp" Heavy Cruiser 9 fired at Terminus Frigate 55 and hit it, doing 8 damage. Remaining hull strength is 1.
+Cylon "Asp" Heavy Cruiser 9 fired at Terminus Frigate 55 and hit it for 1 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 10 fired at Terminus Frigate 56 and hit it, doing 8 damage. Remaining hull strength is 5.
+Cylon "Asp" Heavy Cruiser 10 fired at Terminus Frigate 56 and hit it for 14 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 10 fired at Terminus Frigate 57 and hit it, doing 3 damage. Remaining hull strength is 10.
+Cylon "Asp" Heavy Cruiser 11 fired at Terminus Frigate 57 and hit it, doing 1 damage. Remaining hull strength is 9.
+Cylon "Asp" Heavy Cruiser 11 fired at Terminus Frigate 57 but missed.
+Cylon "Asp" Heavy Cruiser 11 fired at Terminus Frigate 57 and hit it, doing 2 damage. Remaining hull strength is 7.
+Cylon "Asp" Heavy Cruiser 12 fired at Terminus Frigate 57 and hit it for 7 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 12 fired at Terminus Frigate 58 and hit it for 15 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 12 fired at Terminus Frigate 59 and hit it for 18 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 13 fired at Terminus Frigate 60 and hit it, doing 12 damage. Remaining hull strength is 1.
+Cylon "Asp" Heavy Cruiser 13 fired at Terminus Frigate 60 and hit it for 21 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 13 fired at Terminus Improved Frigate 1 and hit it, doing 5 damage. Remaining hull strength is 10.
+Cylon "Asp" Heavy Cruiser 14 fired at Terminus Improved Frigate 1 and hit it, doing 1 damage. Remaining hull strength is 9.
+Cylon "Asp" Heavy Cruiser 14 fired at Terminus Improved Frigate 1 and hit it for 10 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 14 fired at Terminus Improved Frigate 2 and hit it, doing 2 damage. Remaining hull strength is 13.
+Cylon "Asp" Heavy Cruiser 15 fired at Terminus Improved Frigate 2 and hit it, but did no damage.
+Cylon "Asp" Heavy Cruiser 15 fired at Terminus Improved Frigate 2 and hit it, doing 8 damage. Remaining hull strength is 5.
+Cylon "Asp" Heavy Cruiser 15 fired at Terminus Improved Frigate 2 and hit it, doing 2 damage. Remaining hull strength is 3.
+Cylon "Asp" Heavy Cruiser 16 fired at Terminus Improved Frigate 2 and hit it, doing 2 damage. Remaining hull strength is 1.
+Cylon "Asp" Heavy Cruiser 16 fired at Terminus Improved Frigate 2 and hit it for 4 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 16 fired at Terminus Improved Frigate 3 and hit it, doing 6 damage. Remaining hull strength is 9.
+Cylon "Asp" Heavy Cruiser 17 fired at Terminus Improved Frigate 3 and hit it, doing 1 damage. Remaining hull strength is 8.
+Cylon "Asp" Heavy Cruiser 17 fired at Terminus Improved Frigate 3 and hit it for 10 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 17 fired at Terminus Improved Frigate 4 and hit it, doing 5 damage. Remaining hull strength is 10.
+Cylon "Asp" Heavy Cruiser 18 fired at Terminus Improved Frigate 4 and hit it, doing 2 damage. Remaining hull strength is 8.
+Cylon "Asp" Heavy Cruiser 18 fired at Terminus Improved Frigate 4 and hit it, doing 2 damage. Remaining hull strength is 6.
+Cylon "Asp" Heavy Cruiser 18 fired at Terminus Improved Frigate 4 and hit it, doing 2 damage. Remaining hull strength is 4.
+Cylon "Asp" Heavy Cruiser 19 fired at Terminus Improved Frigate 4 and hit it for 5 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 19 fired at Terminus Improved Frigate 5 and hit it, doing 1 damage. Remaining hull strength is 14.
+Cylon "Asp" Heavy Cruiser 19 fired at Terminus Improved Frigate 5 and hit it, doing 11 damage. Remaining hull strength is 3.
+Cylon "Asp" Heavy Cruiser 20 fired at Terminus Improved Frigate 5 and hit it for 17 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 20 fired at Terminus Improved Frigate 6 and hit it, doing 1 damage. Remaining hull strength is 14.
+Cylon "Asp" Heavy Cruiser 20 fired at Terminus Improved Frigate 6 and hit it, doing 1 damage. Remaining hull strength is 13.
+Cylon "Asp" Heavy Cruiser 21 fired at Terminus Improved Frigate 6 and hit it, doing 6 damage. Remaining hull strength is 7.
+Cylon "Asp" Heavy Cruiser 21 fired at Terminus Improved Frigate 6 and hit it for 9 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 21 fired at Terminus Improved Frigate 7 and hit it, doing 2 damage. Remaining hull strength is 13.
+Cylon "Asp" Heavy Cruiser 22 fired at Terminus Improved Frigate 7 and hit it, doing 12 damage. Remaining hull strength is 1.
+Cylon "Asp" Heavy Cruiser 22 fired at Terminus Improved Frigate 7 and hit it for 8 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 22 fired at Terminus Improved Frigate 8 and hit it, doing 12 damage. Remaining hull strength is 3.
+Cylon "Asp" Heavy Cruiser 23 fired at Terminus Improved Frigate 8 and hit it for 6 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 23 fired at Terminus Improved Frigate 9 and hit it for 16 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 23 fired at Terminus Improved Frigate 10 and hit it, doing 2 damage. Remaining hull strength is 13.
+Cylon "Asp" Heavy Cruiser 24 fired at Terminus Improved Frigate 10 and hit it, but did no damage.
+Cylon "Asp" Heavy Cruiser 24 fired at Terminus Improved Frigate 10 and hit it, doing 2 damage. Remaining hull strength is 11.
+Cylon "Asp" Heavy Cruiser 24 fired at Terminus Improved Frigate 10 and hit it, doing 4 damage. Remaining hull strength is 7.
+Cylon "Asp" Heavy Cruiser 25 fired at Terminus Improved Frigate 10 and hit it, doing 2 damage. Remaining hull strength is 5.
+Cylon "Asp" Heavy Cruiser 25 fired at Terminus Improved Frigate 10 and hit it for 8 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 25 fired at Terminus Improved Frigate 11 and hit it, doing 6 damage. Remaining hull strength is 9.
+Cylon "Asp" Heavy Cruiser 26 fired at Terminus Improved Frigate 11 and hit it, doing 2 damage. Remaining hull strength is 7.
+Cylon "Asp" Heavy Cruiser 26 fired at Terminus Improved Frigate 11 and hit it for 7 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 26 fired at Terminus Improved Frigate 12 and hit it, doing 2 damage. Remaining hull strength is 13.
+Cylon "Asp" Heavy Cruiser 27 fired at Terminus Improved Frigate 12 and hit it for 13 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 27 fired at Terminus Improved Frigate 13 and hit it, doing 2 damage. Remaining hull strength is 13.
+Cylon "Asp" Heavy Cruiser 27 fired at Terminus Improved Frigate 13 and hit it, doing 3 damage. Remaining hull strength is 10.
+Cylon "Asp" Heavy Cruiser 28 fired at Terminus Improved Frigate 13 and hit it for 11 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 28 fired at Terminus Improved Frigate 14 and hit it, doing 6 damage. Remaining hull strength is 9.
+Cylon "Asp" Heavy Cruiser 28 fired at Terminus Improved Frigate 14 and hit it, doing 4 damage. Remaining hull strength is 5.
+Cylon "Asp" Heavy Cruiser 29 fired at Terminus Improved Frigate 14 and hit it for 8 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 29 fired at Terminus Improved Frigate 15 and hit it for 18 damage, destroying it!
+Cylon "Asp" Heavy Cruiser 29 fired at Terminus Improved Frigate 16 and hit it, doing 4 damage. Remaining hull strength is 11.
+Cylon "Dragon" Mobile Assault Platform 1 fired at Terminus Improved Frigate 16 and hit it, doing 3 damage. Remaining hull strength is 8.
+Cylon "Dragon" Mobile Assault Platform 1 fired at Terminus Improved Frigate 16 and hit it for 12 damage, destroying it!
+Cylon "Dragon" Mobile Assault Platform 1 fired at Terminus Improved Frigate 17 and hit it for 29 damage, destroying it!
+Cylon "Dragon" Mobile Assault Platform 1 fired at Terminus Improved Frigate 18 and hit it, doing 1 damage. Remaining hull strength is 14.
+Cylon "Dragon" Mobile Assault Platform 1 fired at Terminus Improved Frigate 18 and hit it, but did no damage.
+Cylon "Dragon" Mobile Assault Platform 2 fired at Terminus Improved Frigate 18 and hit it for 23 damage, destroying it!
+Cylon "Dragon" Mobile Assault Platform 2 fired at Terminus Improved Frigate 19 and hit it, doing 7 damage. Remaining hull strength is 8.
+Cylon "Dragon" Mobile Assault Platform 2 fired at Terminus Improved Frigate 19 and hit it, but did no damage.
+Cylon "Dragon" Mobile Assault Platform 2 fired at Terminus Improved Frigate 19 and hit it, doing 1 damage. Remaining hull strength is 7.
+Cylon "Dragon" Mobile Assault Platform 2 fired at Terminus Improved Frigate 19 and hit it, but did no damage.
+Cylon "Dragon" Mobile Assault Platform 3 fired at Terminus Improved Frigate 19 and hit it for 10 damage, destroying it!
+Cylon "Dragon" Mobile Assault Platform 3 fired at Terminus Improved Frigate 20 and hit it for 26 damage, destroying it!
+Cylon "Dragon" Mobile Assault Platform 3 fired at Terminus Improved Frigate 21 and hit it for 16 damage, destroying it!
+Cylon "Dragon" Mobile Assault Platform 3 fired at Terminus Improved Frigate 22 and hit it, doing 5 damage. Remaining hull strength is 10.
+Cylon "Dragon" Mobile Assault Platform 3 fired at Terminus Improved Frigate 22 and hit it, doing 5 damage. Remaining hull strength is 5.
+Cylon "Dragon" Mobile Assault Platform 4 fired at Terminus Improved Frigate 22 and hit it for 25 damage, destroying it!
+Cylon "Dragon" Mobile Assault Platform 4 fired at Terminus Improved Frigate 23 and hit it for 26 damage, destroying it!
+Cylon "Dragon" Mobile Assault Platform 4 fired at Terminus Improved Frigate 24 and hit it for 24 damage, destroying it!
+Cylon "Dragon" Mobile Assault Platform 4 fired at Terminus Improved Frigate 25 and hit it for 30 damage, destroying it!
+Cylon "Dragon" Mobile Assault Platform 4 fired at Terminus Improved Frigate 26 and hit it for 18 damage, destroying it!
+Cylon "Dragon" Mobile Assault Platform 5 fired at Terminus Improved Frigate 27 and hit it for 47 damage, destroying it!
+Cylon "Dragon" Mobile Assault Platform 5 fired at Terminus Improved Frigate 28 and hit it for 16 damage, destroying it!
+Cylon "Dragon" Mobile Assault Platform 5 fired at Terminus Improved Frigate 29 and hit it for 17 damage, destroying it!
+Attackers losses were 25 Advanced Interceptor(s) 5 Frigate(s) 32 Destroyer(s) 5 Fire Support Destroyer(s) and 6545 personnel.
+Defenders losses were 380 Fighter Bomber(s) 82 Heavy Bomber(s) 1 Deep Recon Scout(s) 60 Frigate(s) 29 Improved Frigate(s) and 10076 personnel.
+Defender lost no structures.
+Attacker gained 30818 prestige.
+Attacker gained 16365 prestige due to the difference in planetary status.
+Defender lost 12055 prestige.

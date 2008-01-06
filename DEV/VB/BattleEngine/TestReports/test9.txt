@@ -1,0 +1,399 @@
+Date: 3/21/2006 3:44:00 PM
+From: Tiki Bar (private)
+Subject: Combat ReportA fleet of vessels from Tiki Bar attempted to perform a hit and run attack at Freedonia.
+The attacking force was detected before entering the system!
+The attacking force consisted of 11 Cruiser(s) 40 Destroyer(s).
+The defending force consisted of 3 Orbital Minefield(s) 50 Fighter Interceptor(s) 20 Fighter Bomber(s) 10 Scout(s) 20 Frigate(s) 10 Destroyer(s) 10 Cruiser(s) .
+In the opening volley, Tiki Bar Cruiser 1 fired at Freedonia Orbital Minefield 1 and hit it, doing 1 damage. Remaining hull strength is 19.
+Freedonia Orbital Minefield 1 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Cruiser 1 fired at Freedonia Orbital Minefield 1 and hit it, doing 4 damage. Remaining hull strength is 15.
+Freedonia Orbital Minefield 2 fired at Tiki Bar Cruiser 1 and hit it, doing 2 damage. Remaining hull strength is 35.
+Tiki Bar Cruiser 1 fired at Freedonia Orbital Minefield 1 and hit it, doing 4 damage. Remaining hull strength is 11.
+Freedonia Orbital Minefield 3 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Cruiser 2 fired at Freedonia Orbital Minefield 1 and hit it for 13 damage, destroying it!
+Freedonia Fighter Interceptor 1 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Cruiser 2 fired at Freedonia Orbital Minefield 2 and hit it, doing 1 damage. Remaining hull strength is 19.
+Freedonia Fighter Interceptor 2 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Cruiser 2 fired at Freedonia Orbital Minefield 2 and hit it, doing 10 damage. Remaining hull strength is 9.
+Freedonia Fighter Interceptor 3 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Cruiser 3 fired at Freedonia Orbital Minefield 2 and hit it for 17 damage, destroying it!
+Freedonia Fighter Interceptor 4 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Cruiser 3 fired at Freedonia Orbital Minefield 3 and hit it, but did no damage.
+Freedonia Fighter Interceptor 5 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Cruiser 3 fired at Freedonia Orbital Minefield 3 and hit it, doing 15 damage. Remaining hull strength is 5.
+Freedonia Fighter Interceptor 6 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Cruiser 4 fired at Freedonia Orbital Minefield 3 and hit it for 8 damage, destroying it!
+Freedonia Fighter Interceptor 7 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Cruiser 4 fired at Freedonia Fighter Interceptor 1 and hit it, doing 1 damage. Remaining hull strength is 1.
+Freedonia Fighter Interceptor 8 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Cruiser 4 fired at Freedonia Fighter Interceptor 1 and hit it for 6 damage, destroying it!
+Freedonia Fighter Interceptor 9 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 34.
+Tiki Bar Cruiser 5 fired at Freedonia Fighter Interceptor 2 and hit it, but did no damage.
+Freedonia Fighter Interceptor 10 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Cruiser 5 fired at Freedonia Fighter Interceptor 2 and hit it for 8 damage, destroying it!
+Freedonia Fighter Interceptor 11 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Cruiser 5 fired at Freedonia Fighter Interceptor 3 and hit it, but did no damage.
+Freedonia Fighter Interceptor 12 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Cruiser 6 fired at Freedonia Fighter Interceptor 3 and hit it, doing 1 damage. Remaining hull strength is 1.
+Freedonia Fighter Interceptor 13 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Cruiser 6 fired at Freedonia Fighter Interceptor 3 and hit it for 6 damage, destroying it!
+Freedonia Fighter Interceptor 14 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 33.
+Tiki Bar Cruiser 6 fired at Freedonia Fighter Interceptor 4 and hit it for 6 damage, destroying it!
+Freedonia Fighter Interceptor 15 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Cruiser 7 fired at Freedonia Fighter Interceptor 5 and hit it for 11 damage, destroying it!
+Freedonia Fighter Interceptor 16 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Cruiser 7 fired at Freedonia Fighter Interceptor 6 and hit it for 2 damage, destroying it!
+Freedonia Fighter Interceptor 17 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Cruiser 7 fired at Freedonia Fighter Interceptor 7 and hit it for 2 damage, destroying it!
+Freedonia Fighter Interceptor 18 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Cruiser 8 fired at Freedonia Fighter Interceptor 8 but missed.
+Freedonia Fighter Interceptor 19 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Cruiser 8 fired at Freedonia Fighter Interceptor 8 and hit it for 9 damage, destroying it!
+Freedonia Fighter Interceptor 20 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Cruiser 8 fired at Freedonia Fighter Interceptor 9 but missed.
+Freedonia Fighter Interceptor 21 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Cruiser 9 fired at Freedonia Fighter Interceptor 9 and hit it for 7 damage, destroying it!
+Freedonia Fighter Interceptor 22 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 32.
+Tiki Bar Cruiser 9 fired at Freedonia Fighter Interceptor 10 and hit it for 4 damage, destroying it!
+Freedonia Fighter Interceptor 23 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Cruiser 9 fired at Freedonia Fighter Interceptor 11 and hit it for 4 damage, destroying it!
+Freedonia Fighter Interceptor 24 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 31.
+Tiki Bar Cruiser 10 fired at Freedonia Fighter Interceptor 12 and hit it, but did no damage.
+Freedonia Fighter Interceptor 25 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 30.
+Tiki Bar Cruiser 10 fired at Freedonia Fighter Interceptor 12 and hit it for 2 damage, destroying it!
+Freedonia Fighter Interceptor 26 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Cruiser 10 fired at Freedonia Fighter Interceptor 13 and hit it, but did no damage.
+Freedonia Fighter Interceptor 27 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 29.
+Tiki Bar Cruiser 11 fired at Freedonia Fighter Interceptor 13 but missed.
+Freedonia Fighter Interceptor 28 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Cruiser 11 fired at Freedonia Fighter Interceptor 13 and hit it for 7 damage, destroying it!
+Freedonia Fighter Interceptor 29 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Cruiser 11 fired at Freedonia Fighter Interceptor 14 and hit it for 2 damage, destroying it!
+Freedonia Fighter Interceptor 30 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 1 fired at Freedonia Fighter Interceptor 15 and hit it for 3 damage, destroying it!
+Freedonia Fighter Interceptor 31 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Destroyer 1 fired at Freedonia Fighter Interceptor 16 and hit it for 12 damage, destroying it!
+Freedonia Fighter Interceptor 32 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 1 fired at Freedonia Fighter Interceptor 17 and hit it for 5 damage, destroying it!
+Freedonia Fighter Interceptor 33 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 28.
+Tiki Bar Destroyer 1 fired at Freedonia Fighter Interceptor 18 and hit it, doing 1 damage. Remaining hull strength is 1.
+Freedonia Fighter Interceptor 34 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Destroyer 2 fired at Freedonia Fighter Interceptor 18 and hit it for 5 damage, destroying it!
+Freedonia Fighter Interceptor 35 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Destroyer 2 fired at Freedonia Fighter Interceptor 19 and hit it for 10 damage, destroying it!
+Freedonia Fighter Interceptor 36 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Destroyer 2 fired at Freedonia Fighter Interceptor 20 and hit it for 14 damage, destroying it!
+Freedonia Fighter Interceptor 37 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 27.
+Tiki Bar Destroyer 2 fired at Freedonia Fighter Interceptor 21 and hit it for 12 damage, destroying it!
+Freedonia Fighter Interceptor 38 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 3 fired at Freedonia Fighter Interceptor 22 but missed.
+Freedonia Fighter Interceptor 39 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 3 fired at Freedonia Fighter Interceptor 22 and hit it for 22 damage, destroying it!
+Freedonia Fighter Interceptor 40 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Destroyer 3 fired at Freedonia Fighter Interceptor 23 and hit it, but did no damage.
+Freedonia Fighter Interceptor 41 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Destroyer 3 fired at Freedonia Fighter Interceptor 23 and hit it for 10 damage, destroying it!
+Freedonia Fighter Interceptor 42 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Destroyer 4 fired at Freedonia Fighter Interceptor 24 and hit it for 12 damage, destroying it!
+Freedonia Fighter Interceptor 43 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 26.
+Tiki Bar Destroyer 4 fired at Freedonia Fighter Interceptor 25 and hit it for 12 damage, destroying it!
+Freedonia Fighter Interceptor 44 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 4 fired at Freedonia Fighter Interceptor 26 and hit it for 11 damage, destroying it!
+Freedonia Fighter Interceptor 45 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 4 fired at Freedonia Fighter Interceptor 27 and hit it, but did no damage.
+Freedonia Fighter Interceptor 46 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Destroyer 5 fired at Freedonia Fighter Interceptor 27 and hit it, doing 1 damage. Remaining hull strength is 1.
+Freedonia Fighter Interceptor 47 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 25.
+Tiki Bar Destroyer 5 fired at Freedonia Fighter Interceptor 27 and hit it for 4 damage, destroying it!
+Freedonia Fighter Interceptor 48 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 24.
+Tiki Bar Destroyer 5 fired at Freedonia Fighter Interceptor 28 and hit it for 4 damage, destroying it!
+Freedonia Fighter Interceptor 49 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Destroyer 5 fired at Freedonia Fighter Interceptor 29 and hit it for 5 damage, destroying it!
+Freedonia Fighter Interceptor 50 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 6 fired at Freedonia Fighter Interceptor 30 and hit it for 7 damage, destroying it!
+Freedonia Fighter Bomber 1 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 23.
+Tiki Bar Destroyer 6 fired at Freedonia Fighter Interceptor 31 and hit it for 11 damage, destroying it!
+Freedonia Fighter Bomber 2 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 6 fired at Freedonia Fighter Interceptor 32 and hit it for 2 damage, destroying it!
+Freedonia Fighter Bomber 3 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Destroyer 6 fired at Freedonia Fighter Interceptor 33 and hit it for 20 damage, destroying it!
+Freedonia Fighter Bomber 4 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 7 fired at Freedonia Fighter Interceptor 34 and hit it for 18 damage, destroying it!
+Freedonia Fighter Bomber 5 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Destroyer 7 fired at Freedonia Fighter Interceptor 35 and hit it, doing 1 damage. Remaining hull strength is 1.
+Freedonia Fighter Bomber 6 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 7 fired at Freedonia Fighter Interceptor 35 and hit it for 1 damage, destroying it!
+Freedonia Fighter Bomber 7 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 7 fired at Freedonia Fighter Interceptor 36 and hit it for 19 damage, destroying it!
+Freedonia Fighter Bomber 8 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 8 fired at Freedonia Fighter Interceptor 37 and hit it for 11 damage, destroying it!
+Freedonia Fighter Bomber 9 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 8 fired at Freedonia Fighter Interceptor 38 and hit it for 11 damage, destroying it!
+Freedonia Fighter Bomber 10 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 22.
+Tiki Bar Destroyer 8 fired at Freedonia Fighter Interceptor 39 and hit it for 10 damage, destroying it!
+Freedonia Fighter Bomber 11 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 8 fired at Freedonia Fighter Interceptor 40 and hit it for 4 damage, destroying it!
+Freedonia Fighter Bomber 12 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 9 fired at Freedonia Fighter Interceptor 41 and hit it for 5 damage, destroying it!
+Freedonia Fighter Bomber 13 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 21.
+Tiki Bar Destroyer 9 fired at Freedonia Fighter Interceptor 42 and hit it, doing 1 damage. Remaining hull strength is 1.
+Freedonia Fighter Bomber 14 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 9 fired at Freedonia Fighter Interceptor 42 and hit it for 4 damage, destroying it!
+Freedonia Fighter Bomber 15 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 20.
+Tiki Bar Destroyer 9 fired at Freedonia Fighter Interceptor 43 and hit it for 29 damage, destroying it!
+Freedonia Fighter Bomber 16 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 19.
+Tiki Bar Destroyer 10 fired at Freedonia Fighter Interceptor 44 and hit it for 4 damage, destroying it!
+Freedonia Fighter Bomber 17 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 18.
+Tiki Bar Destroyer 10 fired at Freedonia Fighter Interceptor 45 and hit it for 19 damage, destroying it!
+Freedonia Fighter Bomber 18 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 10 fired at Freedonia Fighter Interceptor 46 and hit it for 5 damage, destroying it!
+Freedonia Fighter Bomber 19 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 10 fired at Freedonia Fighter Interceptor 47 and hit it for 3 damage, destroying it!
+Freedonia Fighter Bomber 20 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 11 fired at Freedonia Fighter Interceptor 48 and hit it, but did no damage.
+Freedonia Scout 1 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 11 fired at Freedonia Fighter Interceptor 48 and hit it for 8 damage, destroying it!
+Freedonia Scout 2 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 11 fired at Freedonia Fighter Interceptor 49 and hit it for 17 damage, destroying it!
+Freedonia Scout 3 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 11 fired at Freedonia Fighter Interceptor 50 and hit it for 12 damage, destroying it!
+Freedonia Scout 4 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 12 fired at Freedonia Fighter Bomber 1 and hit it for 27 damage, destroying it!
+Freedonia Scout 5 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Destroyer 12 fired at Freedonia Fighter Bomber 2 and hit it for 17 damage, destroying it!
+Freedonia Scout 6 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 12 fired at Freedonia Fighter Bomber 3 and hit it for 6 damage, destroying it!
+Freedonia Scout 7 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Destroyer 12 fired at Freedonia Fighter Bomber 4 and hit it for 6 damage, destroying it!
+Freedonia Scout 8 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 17.
+Tiki Bar Destroyer 13 fired at Freedonia Fighter Bomber 5 and hit it for 7 damage, destroying it!
+Freedonia Scout 9 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 16.
+Tiki Bar Destroyer 13 fired at Freedonia Fighter Bomber 6 and hit it for 13 damage, destroying it!
+Freedonia Scout 10 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Destroyer 13 fired at Freedonia Fighter Bomber 7 and hit it for 12 damage, destroying it!
+Freedonia Frigate 1 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 13 fired at Freedonia Fighter Bomber 8 and hit it for 4 damage, destroying it!
+Freedonia Frigate 1 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 14 fired at Freedonia Fighter Bomber 9 and hit it, doing 1 damage. Remaining hull strength is 1.
+Freedonia Frigate 2 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 15.
+Tiki Bar Destroyer 14 fired at Freedonia Fighter Bomber 9 and hit it for 7 damage, destroying it!
+Freedonia Frigate 2 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 14.
+Tiki Bar Destroyer 14 fired at Freedonia Fighter Bomber 10 and hit it for 6 damage, destroying it!
+Freedonia Frigate 3 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 14 fired at Freedonia Fighter Bomber 11 and hit it for 3 damage, destroying it!
+Freedonia Frigate 3 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 15 fired at Freedonia Fighter Bomber 12 and hit it for 30 damage, destroying it!
+Freedonia Frigate 4 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 15 fired at Freedonia Fighter Bomber 13 and hit it for 21 damage, destroying it!
+Freedonia Frigate 4 fired at Tiki Bar Cruiser 1 and hit it, doing 3 damage. Remaining hull strength is 11.
+Tiki Bar Destroyer 15 fired at Freedonia Fighter Bomber 14 and hit it for 22 damage, destroying it!
+Freedonia Frigate 5 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 15 fired at Freedonia Fighter Bomber 15 and hit it for 18 damage, destroying it!
+Freedonia Frigate 5 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 16 fired at Freedonia Fighter Bomber 16 and hit it for 2 damage, destroying it!
+Freedonia Frigate 6 fired at Tiki Bar Cruiser 1 but missed.
+Tiki Bar Destroyer 16 fired at Freedonia Fighter Bomber 17 and hit it, but did no damage.
+Freedonia Frigate 6 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 16 fired at Freedonia Fighter Bomber 17 and hit it for 3 damage, destroying it!
+Freedonia Frigate 7 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 16 fired at Freedonia Fighter Bomber 18 and hit it for 3 damage, destroying it!
+Freedonia Frigate 7 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 17 fired at Freedonia Fighter Bomber 19 and hit it for 17 damage, destroying it!
+Freedonia Frigate 8 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 17 fired at Freedonia Fighter Bomber 20 and hit it for 25 damage, destroying it!
+Freedonia Frigate 8 fired at Tiki Bar Cruiser 1 and hit it, doing 4 damage. Remaining hull strength is 7.
+Tiki Bar Destroyer 17 fired at Freedonia Scout 1 and hit it, but did no damage.
+Freedonia Frigate 9 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 17 fired at Freedonia Scout 1 and hit it, but did no damage.
+Freedonia Frigate 9 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 6.
+Tiki Bar Destroyer 18 fired at Freedonia Scout 1 but missed.
+Freedonia Frigate 10 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 5.
+Tiki Bar Destroyer 18 fired at Freedonia Scout 1 and hit it, doing 1 damage. Remaining hull strength is 6.
+Freedonia Frigate 10 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 4.
+Tiki Bar Destroyer 18 fired at Freedonia Scout 1 and hit it, doing 3 damage. Remaining hull strength is 3.
+Freedonia Frigate 11 fired at Tiki Bar Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 3.
+Tiki Bar Destroyer 18 fired at Freedonia Scout 1 and hit it, doing 1 damage. Remaining hull strength is 2.
+Freedonia Frigate 11 fired at Tiki Bar Cruiser 1 and hit it, but did no damage.
+Tiki Bar Destroyer 19 fired at Freedonia Scout 1 and hit it for 2 damage, destroying it!
+Freedonia Frigate 12 fired at Tiki Bar Cruiser 1 and hit it for 3 damage, destroying it!
+Tiki Bar Destroyer 19 fired at Freedonia Scout 2 and hit it, doing 1 damage. Remaining hull strength is 6.
+Freedonia Frigate 12 fired at Tiki Bar Cruiser 2 and hit it, but did no damage.
+Tiki Bar Destroyer 19 fired at Freedonia Scout 2 and hit it, doing 3 damage. Remaining hull strength is 3.
+Freedonia Frigate 13 fired at Tiki Bar Cruiser 2 and hit it, doing 1 damage. Remaining hull strength is 36.
+Tiki Bar Destroyer 19 fired at Freedonia Scout 2 but missed.
+Freedonia Frigate 13 fired at Tiki Bar Cruiser 2 and hit it, but did no damage.
+Tiki Bar Destroyer 20 fired at Freedonia Scout 2 and hit it for 9 damage, destroying it!
+Freedonia Frigate 14 fired at Tiki Bar Cruiser 2 and hit it, but did no damage.
+Tiki Bar Destroyer 20 fired at Freedonia Scout 3 and hit it, but did no damage.
+Freedonia Frigate 14 fired at Tiki Bar Cruiser 2 and hit it, but did no damage.
+Tiki Bar Destroyer 20 fired at Freedonia Scout 3 and hit it, doing 3 damage. Remaining hull strength is 4.
+Freedonia Frigate 15 fired at Tiki Bar Cruiser 2 but missed.
+Tiki Bar Destroyer 20 fired at Freedonia Scout 3 and hit it, doing 1 damage. Remaining hull strength is 3.
+Freedonia Frigate 15 fired at Tiki Bar Cruiser 2 but missed.
+Tiki Bar Destroyer 21 fired at Freedonia Scout 3 and hit it, doing 1 damage. Remaining hull strength is 2.
+Freedonia Frigate 16 fired at Tiki Bar Cruiser 2 and hit it, but did no damage.
+Tiki Bar Destroyer 21 fired at Freedonia Scout 3 and hit it for 7 damage, destroying it!
+Freedonia Frigate 16 fired at Tiki Bar Cruiser 2 and hit it, doing 1 damage. Remaining hull strength is 35.
+Tiki Bar Destroyer 21 fired at Freedonia Scout 4 and hit it, doing 1 damage. Remaining hull strength is 6.
+Freedonia Frigate 17 fired at Tiki Bar Cruiser 2 and hit it, but did no damage.
+Tiki Bar Destroyer 21 fired at Freedonia Scout 4 and hit it, doing 3 damage. Remaining hull strength is 3.
+Freedonia Frigate 17 fired at Tiki Bar Cruiser 2 but missed.
+Tiki Bar Destroyer 22 fired at Freedonia Scout 4 and hit it, but did no damage.
+Freedonia Frigate 18 fired at Tiki Bar Cruiser 2 and hit it, doing 1 damage. Remaining hull strength is 34.
+Tiki Bar Destroyer 22 fired at Freedonia Scout 4 and hit it for 7 damage, destroying it!
+Freedonia Frigate 18 fired at Tiki Bar Cruiser 2 and hit it, but did no damage.
+Tiki Bar Destroyer 22 fired at Freedonia Scout 5 and hit it for 7 damage, destroying it!
+Freedonia Frigate 19 fired at Tiki Bar Cruiser 2 and hit it, doing 2 damage. Remaining hull strength is 32.
+Tiki Bar Destroyer 22 fired at Freedonia Scout 6 and hit it, doing 1 damage. Remaining hull strength is 6.
+Freedonia Frigate 19 fired at Tiki Bar Cruiser 2 and hit it, but did no damage.
+Tiki Bar Destroyer 23 fired at Freedonia Scout 6 and hit it, doing 1 damage. Remaining hull strength is 5.
+Freedonia Frigate 20 fired at Tiki Bar Cruiser 2 and hit it, but did no damage.
+Tiki Bar Destroyer 23 fired at Freedonia Scout 6 and hit it, doing 2 damage. Remaining hull strength is 3.
+Freedonia Frigate 20 fired at Tiki Bar Cruiser 2 and hit it, but did no damage.
+Tiki Bar Destroyer 23 fired at Freedonia Scout 6 and hit it for 4 damage, destroying it!
+Freedonia Destroyer 1 fired at Tiki Bar Cruiser 2 and hit it, doing 1 damage. Remaining hull strength is 31.
+Tiki Bar Destroyer 23 fired at Freedonia Scout 7 and hit it, but did no damage.
+Freedonia Destroyer 1 fired at Tiki Bar Cruiser 2 and hit it, doing 1 damage. Remaining hull strength is 30.
+Tiki Bar Destroyer 24 fired at Freedonia Scout 7 and hit it, doing 2 damage. Remaining hull strength is 5.
+Freedonia Destroyer 1 fired at Tiki Bar Cruiser 2 and hit it, doing 5 damage. Remaining hull strength is 25.
+Tiki Bar Destroyer 24 fired at Freedonia Scout 7 and hit it, doing 2 damage. Remaining hull strength is 3.
+Freedonia Destroyer 1 fired at Tiki Bar Cruiser 2 and hit it, but did no damage.
+Tiki Bar Destroyer 24 fired at Freedonia Scout 7 and hit it, doing 1 damage. Remaining hull strength is 2.
+Freedonia Destroyer 2 fired at Tiki Bar Cruiser 2 but missed.
+Tiki Bar Destroyer 24 fired at Freedonia Scout 7 and hit it, doing 1 damage. Remaining hull strength is 1.
+Freedonia Destroyer 2 fired at Tiki Bar Cruiser 2 and hit it, but did no damage.
+Tiki Bar Destroyer 25 fired at Freedonia Scout 7 and hit it, but did no damage.
+Freedonia Destroyer 2 fired at Tiki Bar Cruiser 2 and hit it, doing 4 damage. Remaining hull strength is 21.
+Tiki Bar Destroyer 25 fired at Freedonia Scout 7 and hit it for 1 damage, destroying it!
+Freedonia Destroyer 2 fired at Tiki Bar Cruiser 2 and hit it, doing 1 damage. Remaining hull strength is 20.
+Tiki Bar Destroyer 25 fired at Freedonia Scout 8 and hit it, doing 1 damage. Remaining hull strength is 6.
+Freedonia Destroyer 3 fired at Tiki Bar Cruiser 2 and hit it, but did no damage.
+Tiki Bar Destroyer 25 fired at Freedonia Scout 8 and hit it, doing 5 damage. Remaining hull strength is 1.
+Freedonia Destroyer 3 fired at Tiki Bar Cruiser 2 and hit it, doing 1 damage. Remaining hull strength is 19.
+Tiki Bar Destroyer 26 fired at Freedonia Scout 8 and hit it for 2 damage, destroying it!
+Freedonia Destroyer 3 fired at Tiki Bar Cruiser 2 and hit it, doing 1 damage. Remaining hull strength is 18.
+Tiki Bar Destroyer 26 fired at Freedonia Scout 9 and hit it, but did no damage.
+Freedonia Destroyer 3 fired at Tiki Bar Cruiser 2 and hit it, but did no damage.
+Tiki Bar Destroyer 26 fired at Freedonia Scout 9 and hit it, doing 2 damage. Remaining hull strength is 5.
+Freedonia Destroyer 4 fired at Tiki Bar Cruiser 2 and hit it, doing 3 damage. Remaining hull strength is 15.
+Tiki Bar Destroyer 26 fired at Freedonia Scout 9 and hit it, doing 1 damage. Remaining hull strength is 4.
+Freedonia Destroyer 4 fired at Tiki Bar Cruiser 2 and hit it, doing 2 damage. Remaining hull strength is 13.
+Tiki Bar Destroyer 27 fired at Freedonia Scout 9 and hit it for 7 damage, destroying it!
+Freedonia Destroyer 4 fired at Tiki Bar Cruiser 2 and hit it, but did no damage.
+Tiki Bar Destroyer 27 fired at Freedonia Scout 10 and hit it for 7 damage, destroying it!
+Freedonia Destroyer 4 fired at Tiki Bar Cruiser 2 and hit it, but did no damage.
+Tiki Bar Destroyer 27 fired at Freedonia Frigate 1 and hit it, doing 1 damage. Remaining hull strength is 11.
+Freedonia Destroyer 5 fired at Tiki Bar Cruiser 2 and hit it, doing 1 damage. Remaining hull strength is 12.
+Tiki Bar Destroyer 27 fired at Freedonia Frigate 1 and hit it, doing 5 damage. Remaining hull strength is 6.
+Freedonia Destroyer 5 fired at Tiki Bar Cruiser 2 and hit it, doing 5 damage. Remaining hull strength is 7.
+Tiki Bar Destroyer 28 fired at Freedonia Frigate 1 and hit it, doing 1 damage. Remaining hull strength is 5.
+Freedonia Destroyer 5 fired at Tiki Bar Cruiser 2 and hit it, doing 3 damage. Remaining hull strength is 4.
+Tiki Bar Destroyer 28 fired at Freedonia Frigate 1 and hit it, doing 1 damage. Remaining hull strength is 4.
+Freedonia Destroyer 5 fired at Tiki Bar Cruiser 2 and hit it, but did no damage.
+Tiki Bar Destroyer 28 fired at Freedonia Frigate 1 and hit it, doing 2 damage. Remaining hull strength is 2.
+Freedonia Destroyer 6 fired at Tiki Bar Cruiser 2 but missed.
+Tiki Bar Destroyer 28 fired at Freedonia Frigate 1 and hit it for 2 damage, destroying it!
+Freedonia Destroyer 6 fired at Tiki Bar Cruiser 2 and hit it, doing 1 damage. Remaining hull strength is 3.
+Tiki Bar Destroyer 29 fired at Freedonia Frigate 2 and hit it, but did no damage.
+Freedonia Destroyer 6 fired at Tiki Bar Cruiser 2 and hit it for 4 damage, destroying it!
+Tiki Bar Destroyer 29 fired at Freedonia Frigate 2 and hit it, doing 7 damage. Remaining hull strength is 5.
+Freedonia Destroyer 6 fired at Tiki Bar Cruiser 3 and hit it, but did no damage.
+Tiki Bar Destroyer 29 fired at Freedonia Frigate 2 and hit it, but did no damage.
+Freedonia Destroyer 7 fired at Tiki Bar Cruiser 3 and hit it, doing 4 damage. Remaining hull strength is 33.
+Tiki Bar Destroyer 29 fired at Freedonia Frigate 2 and hit it, doing 1 damage. Remaining hull strength is 4.
+Freedonia Destroyer 7 fired at Tiki Bar Cruiser 3 and hit it, but did no damage.
+Tiki Bar Destroyer 30 fired at Freedonia Frigate 2 and hit it, doing 2 damage. Remaining hull strength is 2.
+Freedonia Destroyer 7 fired at Tiki Bar Cruiser 3 but missed.
+Tiki Bar Destroyer 30 fired at Freedonia Frigate 2 and hit it, doing 1 damage. Remaining hull strength is 1.
+Freedonia Destroyer 7 fired at Tiki Bar Cruiser 3 and hit it, doing 1 damage. Remaining hull strength is 32.
+Tiki Bar Destroyer 30 fired at Freedonia Frigate 2 and hit it, but did no damage.
+Freedonia Destroyer 8 fired at Tiki Bar Cruiser 3 and hit it, but did no damage.
+Tiki Bar Destroyer 30 fired at Freedonia Frigate 2 and hit it for 3 damage, destroying it!
+Freedonia Destroyer 8 fired at Tiki Bar Cruiser 3 and hit it, but did no damage.
+Tiki Bar Destroyer 31 fired at Freedonia Frigate 3 and hit it, doing 1 damage. Remaining hull strength is 11.
+Freedonia Destroyer 8 fired at Tiki Bar Cruiser 3 and hit it, but did no damage.
+Tiki Bar Destroyer 31 fired at Freedonia Frigate 3 and hit it, doing 2 damage. Remaining hull strength is 9.
+Freedonia Destroyer 8 fired at Tiki Bar Cruiser 3 and hit it, but did no damage.
+Tiki Bar Destroyer 31 fired at Freedonia Frigate 3 and hit it, doing 5 damage. Remaining hull strength is 4.
+Freedonia Destroyer 9 fired at Tiki Bar Cruiser 3 and hit it, but did no damage.
+Tiki Bar Destroyer 31 fired at Freedonia Frigate 3 and hit it, doing 3 damage. Remaining hull strength is 1.
+Freedonia Destroyer 9 fired at Tiki Bar Cruiser 3 and hit it, doing 3 damage. Remaining hull strength is 29.
+Tiki Bar Destroyer 32 fired at Freedonia Frigate 3 and hit it for 6 damage, destroying it!
+Freedonia Destroyer 9 fired at Tiki Bar Cruiser 3 and hit it, doing 1 damage. Remaining hull strength is 28.
+Tiki Bar Destroyer 32 fired at Freedonia Frigate 4 and hit it, doing 3 damage. Remaining hull strength is 9.
+Freedonia Destroyer 9 fired at Tiki Bar Cruiser 3 and hit it, doing 1 damage. Remaining hull strength is 27.
+Tiki Bar Destroyer 32 fired at Freedonia Frigate 4 and hit it, but did no damage.
+Freedonia Destroyer 10 fired at Tiki Bar Cruiser 3 and hit it, doing 1 damage. Remaining hull strength is 26.
+Tiki Bar Destroyer 32 fired at Freedonia Frigate 4 but missed.
+Freedonia Destroyer 10 fired at Tiki Bar Cruiser 3 and hit it, doing 1 damage. Remaining hull strength is 25.
+Tiki Bar Destroyer 33 fired at Freedonia Frigate 4 and hit it, doing 4 damage. Remaining hull strength is 5.
+Freedonia Destroyer 10 fired at Tiki Bar Cruiser 3 and hit it, but did no damage.
+Tiki Bar Destroyer 33 fired at Freedonia Frigate 4 and hit it, doing 1 damage. Remaining hull strength is 4.
+Freedonia Destroyer 10 fired at Tiki Bar Cruiser 3 and hit it, but did no damage.
+Tiki Bar Destroyer 33 fired at Freedonia Frigate 4 and hit it, doing 1 damage. Remaining hull strength is 3.
+Freedonia Cruiser 1 fired at Tiki Bar Cruiser 3 and hit it, doing 1 damage. Remaining hull strength is 24.
+Tiki Bar Destroyer 33 fired at Freedonia Frigate 4 and hit it, doing 1 damage. Remaining hull strength is 2.
+Freedonia Cruiser 1 fired at Tiki Bar Cruiser 3 and hit it, doing 9 damage. Remaining hull strength is 15.
+Tiki Bar Destroyer 34 fired at Freedonia Frigate 4 but missed.
+Freedonia Cruiser 1 fired at Tiki Bar Cruiser 3 and hit it, doing 8 damage. Remaining hull strength is 7.
+Tiki Bar Destroyer 34 fired at Freedonia Frigate 4 and hit it, doing 1 damage. Remaining hull strength is 1.
+Freedonia Cruiser 2 fired at Tiki Bar Cruiser 3 and hit it, doing 1 damage. Remaining hull strength is 6.
+Tiki Bar Destroyer 34 fired at Freedonia Frigate 4 and hit it for 1 damage, destroying it!
+Freedonia Cruiser 2 fired at Tiki Bar Cruiser 3 and hit it, doing 5 damage. Remaining hull strength is 1.
+Tiki Bar Destroyer 34 fired at Freedonia Frigate 5 and hit it, but did no damage.
+Freedonia Cruiser 2 fired at Tiki Bar Cruiser 3 and hit it for 11 damage, destroying it!
+Tiki Bar Destroyer 35 fired at Freedonia Frigate 5 and hit it, but did no damage.
+Freedonia Cruiser 3 fired at Tiki Bar Cruiser 4 and hit it, doing 1 damage. Remaining hull strength is 36.
+Tiki Bar Destroyer 35 fired at Freedonia Frigate 5 but missed.
+Freedonia Cruiser 3 fired at Tiki Bar Cruiser 4 and hit it, doing 3 damage. Remaining hull strength is 33.
+Tiki Bar Destroyer 35 fired at Freedonia Frigate 5 and hit it, doing 1 damage. Remaining hull strength is 11.
+Freedonia Cruiser 3 fired at Tiki Bar Cruiser 4 and hit it, doing 4 damage. Remaining hull strength is 29.
+Tiki Bar Destroyer 35 fired at Freedonia Frigate 5 and hit it, doing 5 damage. Remaining hull strength is 6.
+Freedonia Cruiser 4 fired at Tiki Bar Cruiser 4 and hit it, doing 6 damage. Remaining hull strength is 23.
+Tiki Bar Destroyer 36 fired at Freedonia Frigate 5 and hit it, doing 4 damage. Remaining hull strength is 2.
+Freedonia Cruiser 4 fired at Tiki Bar Cruiser 4 and hit it, but did no damage.
+Tiki Bar Destroyer 36 fired at Freedonia Frigate 5 and hit it, but did no damage.
+Freedonia Cruiser 4 fired at Tiki Bar Cruiser 4 and hit it, doing 2 damage. Remaining hull strength is 21.
+Tiki Bar Destroyer 36 fired at Freedonia Frigate 5 and hit it, but did no damage.
+Freedonia Cruiser 5 fired at Tiki Bar Cruiser 4 and hit it, doing 9 damage. Remaining hull strength is 12.
+Tiki Bar Destroyer 36 fired at Freedonia Frigate 5 and hit it, doing 1 damage. Remaining hull strength is 1.
+Freedonia Cruiser 5 fired at Tiki Bar Cruiser 4 and hit it, doing 3 damage. Remaining hull strength is 9.
+Tiki Bar Destroyer 37 fired at Freedonia Frigate 5 and hit it for 3 damage, destroying it!
+Freedonia Cruiser 5 fired at Tiki Bar Cruiser 4 and hit it, doing 4 damage. Remaining hull strength is 5.
+Tiki Bar Destroyer 37 fired at Freedonia Frigate 6 and hit it, doing 2 damage. Remaining hull strength is 10.
+Freedonia Cruiser 6 fired at Tiki Bar Cruiser 4 and hit it, doing 1 damage. Remaining hull strength is 4.
+Tiki Bar Destroyer 37 fired at Freedonia Frigate 6 and hit it, but did no damage.
+Freedonia Cruiser 6 fired at Tiki Bar Cruiser 4 and hit it, doing 1 damage. Remaining hull strength is 3.
+Tiki Bar Destroyer 37 fired at Freedonia Frigate 6 and hit it, doing 2 damage. Remaining hull strength is 8.
+Freedonia Cruiser 6 fired at Tiki Bar Cruiser 4 and hit it, doing 1 damage. Remaining hull strength is 2.
+Tiki Bar Destroyer 38 fired at Freedonia Frigate 6 and hit it, doing 2 damage. Remaining hull strength is 6.
+Freedonia Cruiser 7 fired at Tiki Bar Cruiser 4 and hit it, doing 1 damage. Remaining hull strength is 1.
+Tiki Bar Destroyer 38 fired at Freedonia Frigate 6 and hit it, doing 3 damage. Remaining hull strength is 3.
+Freedonia Cruiser 7 fired at Tiki Bar Cruiser 4 and hit it for 1 damage, destroying it!
+Tiki Bar Destroyer 38 fired at Freedonia Frigate 6 and hit it for 6 damage, destroying it!
+Freedonia Cruiser 7 fired at Tiki Bar Cruiser 5 and hit it, but did no damage.
+Tiki Bar Destroyer 38 fired at Freedonia Frigate 7 and hit it, but did no damage.
+Freedonia Cruiser 8 fired at Tiki Bar Cruiser 5 and hit it, but did no damage.
+Tiki Bar Destroyer 39 fired at Freedonia Frigate 7 and hit it, doing 1 damage. Remaining hull strength is 11.
+Freedonia Cruiser 8 fired at Tiki Bar Cruiser 5 and hit it, doing 6 damage. Remaining hull strength is 31.
+Tiki Bar Destroyer 39 fired at Freedonia Frigate 7 and hit it, but did no damage.
+Freedonia Cruiser 8 fired at Tiki Bar Cruiser 5 and hit it, doing 4 damage. Remaining hull strength is 27.
+Tiki Bar Destroyer 39 fired at Freedonia Frigate 7 and hit it, but did no damage.
+Freedonia Cruiser 9 fired at Tiki Bar Cruiser 5 and hit it, but did no damage.
+Tiki Bar Destroyer 39 fired at Freedonia Frigate 7 and hit it, doing 1 damage. Remaining hull strength is 10.
+Freedonia Cruiser 9 fired at Tiki Bar Cruiser 5 and hit it, doing 18 damage. Remaining hull strength is 9.
+Tiki Bar Destroyer 40 fired at Freedonia Frigate 7 and hit it, doing 3 damage. Remaining hull strength is 7.
+Freedonia Cruiser 9 fired at Tiki Bar Cruiser 5 and hit it, but did no damage.
+Tiki Bar Destroyer 40 fired at Freedonia Frigate 7 and hit it, but did no damage.
+Freedonia Cruiser 10 fired at Tiki Bar Cruiser 5 and hit it, but did no damage.
+Tiki Bar Destroyer 40 fired at Freedonia Frigate 7 and hit it, but did no damage.
+Freedonia Cruiser 10 fired at Tiki Bar Cruiser 5 and hit it, doing 4 damage. Remaining hull strength is 5.
+Tiki Bar Destroyer 40 fired at Freedonia Frigate 7 and hit it, but did no damage.
+Freedonia Cruiser 10 fired at Tiki Bar Cruiser 5 and hit it, but did no damage.
+Attackers losses were 4 Cruiser(s) and 3200 personnel.
+Defenders losses were 50 Fighter Interceptor(s) 20 Fighter Bomber(s) 10 Scout(s) 6 Frigate(s) and 930 personnel.
+Defender lost 3 Orbital Minefield(s) .
+Attacker gained 4304 prestige.
+Attacker lost 9061 prestige due to the difference in planetary status.
+Defender lost 1579 prestige.
+

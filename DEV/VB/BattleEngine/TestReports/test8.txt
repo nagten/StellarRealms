@@ -1,0 +1,188 @@
+Date: 8/24/2005 11:26:00 AM
+From: Terminus (private)
+Subject: Combat ReportA fleet of vessels from Crucio Station attempted to conduct a normal attack at Terminus.
+The attacking force was detected before entering the system!
+The attacking force consisted of 8 Destroyer(s).
+The defending force consisted of 175 Heavy Bomber(s) 420 Fighter Bomber(s) 1 Deep Recon Scout(s) 60 Frigate(s) 29 Improved Frigate(s) .
+In the opening volley, Crucio Station Destroyer 1 fired at Terminus Heavy Bomber 1 and hit it for 4 damage, destroying it!
+Terminus Heavy Bomber 1 fired at Crucio Station Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 20.
+Crucio Station Destroyer 1 fired at Terminus Heavy Bomber 2 and hit it for 3 damage, destroying it!
+Terminus Heavy Bomber 2 fired at Crucio Station Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 19.
+Crucio Station Destroyer 1 fired at Terminus Heavy Bomber 3 and hit it for 5 damage, destroying it!
+Terminus Heavy Bomber 3 fired at Crucio Station Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 18.
+Crucio Station Destroyer 1 fired at Terminus Heavy Bomber 4 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 4 fired at Crucio Station Destroyer 1 and hit it, but did no damage.
+Crucio Station Destroyer 2 fired at Terminus Heavy Bomber 4 and hit it for 2 damage, destroying it!
+Terminus Heavy Bomber 5 fired at Crucio Station Destroyer 1 and hit it, doing 2 damage. Remaining hull strength is 16.
+Crucio Station Destroyer 2 fired at Terminus Heavy Bomber 5 and hit it for 4 damage, destroying it!
+Terminus Heavy Bomber 6 fired at Crucio Station Destroyer 1 and hit it, doing 2 damage. Remaining hull strength is 14.
+Crucio Station Destroyer 2 fired at Terminus Heavy Bomber 6 and hit it for 2 damage, destroying it!
+Terminus Heavy Bomber 7 fired at Crucio Station Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 13.
+Crucio Station Destroyer 2 fired at Terminus Heavy Bomber 7 and hit it for 6 damage, destroying it!
+Terminus Heavy Bomber 8 fired at Crucio Station Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 12.
+Crucio Station Destroyer 3 fired at Terminus Heavy Bomber 8 and hit it for 8 damage, destroying it!
+Terminus Heavy Bomber 9 fired at Crucio Station Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 11.
+Crucio Station Destroyer 3 fired at Terminus Heavy Bomber 9 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 10 fired at Crucio Station Destroyer 1 and hit it, doing 3 damage. Remaining hull strength is 8.
+Crucio Station Destroyer 3 fired at Terminus Heavy Bomber 9 and hit it for 5 damage, destroying it!
+Terminus Heavy Bomber 11 fired at Crucio Station Destroyer 1 but missed.
+Crucio Station Destroyer 3 fired at Terminus Heavy Bomber 10 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 12 fired at Crucio Station Destroyer 1 and hit it, doing 2 damage. Remaining hull strength is 6.
+Crucio Station Destroyer 4 fired at Terminus Heavy Bomber 10 and hit it for 3 damage, destroying it!
+Terminus Heavy Bomber 13 fired at Crucio Station Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 5.
+Crucio Station Destroyer 4 fired at Terminus Heavy Bomber 11 but missed.
+Terminus Heavy Bomber 14 fired at Crucio Station Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 4.
+Crucio Station Destroyer 4 fired at Terminus Heavy Bomber 11 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 15 fired at Crucio Station Destroyer 1 and hit it, doing 2 damage. Remaining hull strength is 2.
+Crucio Station Destroyer 4 fired at Terminus Heavy Bomber 11 and hit it for 2 damage, destroying it!
+Terminus Heavy Bomber 16 fired at Crucio Station Destroyer 1 and hit it, but did no damage.
+Crucio Station Destroyer 5 fired at Terminus Heavy Bomber 12 and hit it for 13 damage, destroying it!
+Terminus Heavy Bomber 17 fired at Crucio Station Destroyer 1 but missed.
+Crucio Station Destroyer 5 fired at Terminus Heavy Bomber 13 and hit it for 10 damage, destroying it!
+Terminus Heavy Bomber 18 fired at Crucio Station Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 1.
+Crucio Station Destroyer 5 fired at Terminus Heavy Bomber 14 and hit it for 5 damage, destroying it!
+Terminus Heavy Bomber 19 fired at Crucio Station Destroyer 1 and hit it for 3 damage, destroying it!
+Crucio Station Destroyer 5 fired at Terminus Heavy Bomber 15 and hit it for 7 damage, destroying it!
+Terminus Heavy Bomber 20 fired at Crucio Station Destroyer 2 and hit it, doing 2 damage. Remaining hull strength is 19.
+Crucio Station Destroyer 6 fired at Terminus Heavy Bomber 16 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 21 fired at Crucio Station Destroyer 2 and hit it, but did no damage.
+Crucio Station Destroyer 6 fired at Terminus Heavy Bomber 16 and hit it, but did no damage.
+Terminus Heavy Bomber 22 fired at Crucio Station Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 18.
+Crucio Station Destroyer 6 fired at Terminus Heavy Bomber 16 and hit it for 17 damage, destroying it!
+Terminus Heavy Bomber 23 fired at Crucio Station Destroyer 2 and hit it, doing 2 damage. Remaining hull strength is 16.
+Crucio Station Destroyer 6 fired at Terminus Heavy Bomber 17 and hit it for 11 damage, destroying it!
+Terminus Heavy Bomber 24 fired at Crucio Station Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 15.
+Crucio Station Destroyer 7 fired at Terminus Heavy Bomber 18 and hit it for 12 damage, destroying it!
+Terminus Heavy Bomber 25 fired at Crucio Station Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 14.
+Crucio Station Destroyer 7 fired at Terminus Heavy Bomber 19 and hit it for 2 damage, destroying it!
+Terminus Heavy Bomber 26 fired at Crucio Station Destroyer 2 and hit it, doing 3 damage. Remaining hull strength is 11.
+Crucio Station Destroyer 7 fired at Terminus Heavy Bomber 20 and hit it for 20 damage, destroying it!
+Terminus Heavy Bomber 27 fired at Crucio Station Destroyer 2 and hit it, but did no damage.
+Crucio Station Destroyer 7 fired at Terminus Heavy Bomber 21 and hit it for 10 damage, destroying it!
+Terminus Heavy Bomber 28 fired at Crucio Station Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 10.
+Crucio Station Destroyer 8 fired at Terminus Heavy Bomber 22 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 29 fired at Crucio Station Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 9.
+Crucio Station Destroyer 8 fired at Terminus Heavy Bomber 22 and hit it for 2 damage, destroying it!
+Terminus Heavy Bomber 30 fired at Crucio Station Destroyer 2 and hit it, but did no damage.
+Crucio Station Destroyer 8 fired at Terminus Heavy Bomber 23 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 31 fired at Crucio Station Destroyer 2 and hit it, doing 2 damage. Remaining hull strength is 7.
+Crucio Station Destroyer 8 fired at Terminus Heavy Bomber 23 and hit it for 2 damage, destroying it!
+Terminus Heavy Bomber 32 fired at Crucio Station Destroyer 2 but missed.
+Terminus Heavy Bomber 33 fired at Crucio Station Destroyer 2 and hit it, doing 2 damage. Remaining hull strength is 5.
+Terminus Heavy Bomber 34 fired at Crucio Station Destroyer 2 and hit it, but did no damage.
+Terminus Heavy Bomber 35 fired at Crucio Station Destroyer 2 and hit it, doing 2 damage. Remaining hull strength is 3.
+Terminus Heavy Bomber 36 fired at Crucio Station Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 2.
+Terminus Heavy Bomber 37 fired at Crucio Station Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 38 fired at Crucio Station Destroyer 2 and hit it for 1 damage, destroying it!
+Terminus Heavy Bomber 39 fired at Crucio Station Destroyer 3 and hit it, but did no damage.
+Terminus Heavy Bomber 40 fired at Crucio Station Destroyer 3 and hit it, doing 1 damage. Remaining hull strength is 20.
+Terminus Heavy Bomber 41 fired at Crucio Station Destroyer 3 and hit it, but did no damage.
+Terminus Heavy Bomber 42 fired at Crucio Station Destroyer 3 and hit it, but did no damage.
+Terminus Heavy Bomber 43 fired at Crucio Station Destroyer 3 and hit it, but did no damage.
+Terminus Heavy Bomber 44 fired at Crucio Station Destroyer 3 and hit it, doing 1 damage. Remaining hull strength is 19.
+Terminus Heavy Bomber 45 fired at Crucio Station Destroyer 3 and hit it, doing 2 damage. Remaining hull strength is 17.
+Terminus Heavy Bomber 46 fired at Crucio Station Destroyer 3 but missed.
+Terminus Heavy Bomber 47 fired at Crucio Station Destroyer 3 and hit it, doing 3 damage. Remaining hull strength is 14.
+Terminus Heavy Bomber 48 fired at Crucio Station Destroyer 3 and hit it, doing 3 damage. Remaining hull strength is 11.
+Terminus Heavy Bomber 49 fired at Crucio Station Destroyer 3 and hit it, doing 2 damage. Remaining hull strength is 9.
+Terminus Heavy Bomber 50 fired at Crucio Station Destroyer 3 and hit it, doing 3 damage. Remaining hull strength is 6.
+Terminus Heavy Bomber 51 fired at Crucio Station Destroyer 3 and hit it, doing 1 damage. Remaining hull strength is 5.
+Terminus Heavy Bomber 52 fired at Crucio Station Destroyer 3 and hit it, but did no damage.
+Terminus Heavy Bomber 53 fired at Crucio Station Destroyer 3 and hit it, doing 2 damage. Remaining hull strength is 3.
+Terminus Heavy Bomber 54 fired at Crucio Station Destroyer 3 and hit it, doing 1 damage. Remaining hull strength is 2.
+Terminus Heavy Bomber 55 fired at Crucio Station Destroyer 3 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 56 fired at Crucio Station Destroyer 3 and hit it for 2 damage, destroying it!
+Terminus Heavy Bomber 57 fired at Crucio Station Destroyer 4 and hit it, doing 3 damage. Remaining hull strength is 18.
+Terminus Heavy Bomber 58 fired at Crucio Station Destroyer 4 and hit it, doing 4 damage. Remaining hull strength is 14.
+Terminus Heavy Bomber 59 fired at Crucio Station Destroyer 4 and hit it, but did no damage.
+Terminus Heavy Bomber 60 fired at Crucio Station Destroyer 4 and hit it, doing 2 damage. Remaining hull strength is 12.
+Terminus Heavy Bomber 61 fired at Crucio Station Destroyer 4 and hit it, doing 1 damage. Remaining hull strength is 11.
+Terminus Heavy Bomber 62 fired at Crucio Station Destroyer 4 and hit it, doing 2 damage. Remaining hull strength is 9.
+Terminus Heavy Bomber 63 fired at Crucio Station Destroyer 4 and hit it, doing 2 damage. Remaining hull strength is 7.
+Terminus Heavy Bomber 64 fired at Crucio Station Destroyer 4 but missed.
+Terminus Heavy Bomber 65 fired at Crucio Station Destroyer 4 and hit it, doing 2 damage. Remaining hull strength is 5.
+Terminus Heavy Bomber 66 fired at Crucio Station Destroyer 4 and hit it, doing 3 damage. Remaining hull strength is 2.
+Terminus Heavy Bomber 67 fired at Crucio Station Destroyer 4 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 68 fired at Crucio Station Destroyer 4 and hit it, but did no damage.
+Terminus Heavy Bomber 69 fired at Crucio Station Destroyer 4 and hit it for 6 damage, destroying it!
+Terminus Heavy Bomber 70 fired at Crucio Station Destroyer 5 and hit it, doing 1 damage. Remaining hull strength is 20.
+Terminus Heavy Bomber 71 fired at Crucio Station Destroyer 5 and hit it, doing 1 damage. Remaining hull strength is 19.
+Terminus Heavy Bomber 72 fired at Crucio Station Destroyer 5 and hit it, doing 2 damage. Remaining hull strength is 17.
+Terminus Heavy Bomber 73 fired at Crucio Station Destroyer 5 and hit it, but did no damage.
+Terminus Heavy Bomber 74 fired at Crucio Station Destroyer 5 and hit it, doing 1 damage. Remaining hull strength is 16.
+Terminus Heavy Bomber 75 fired at Crucio Station Destroyer 5 and hit it, doing 2 damage. Remaining hull strength is 14.
+Terminus Heavy Bomber 76 fired at Crucio Station Destroyer 5 and hit it, doing 1 damage. Remaining hull strength is 13.
+Terminus Heavy Bomber 77 fired at Crucio Station Destroyer 5 and hit it, but did no damage.
+Terminus Heavy Bomber 78 fired at Crucio Station Destroyer 5 and hit it, but did no damage.
+Terminus Heavy Bomber 79 fired at Crucio Station Destroyer 5 and hit it, doing 1 damage. Remaining hull strength is 12.
+Terminus Heavy Bomber 80 fired at Crucio Station Destroyer 5 and hit it, but did no damage.
+Terminus Heavy Bomber 81 fired at Crucio Station Destroyer 5 but missed.
+Terminus Heavy Bomber 82 fired at Crucio Station Destroyer 5 and hit it, doing 3 damage. Remaining hull strength is 9.
+Terminus Heavy Bomber 83 fired at Crucio Station Destroyer 5 and hit it, doing 2 damage. Remaining hull strength is 7.
+Terminus Heavy Bomber 84 fired at Crucio Station Destroyer 5 and hit it, but did no damage.
+Terminus Heavy Bomber 85 fired at Crucio Station Destroyer 5 and hit it, but did no damage.
+Terminus Heavy Bomber 86 fired at Crucio Station Destroyer 5 and hit it, but did no damage.
+Terminus Heavy Bomber 87 fired at Crucio Station Destroyer 5 and hit it, doing 3 damage. Remaining hull strength is 4.
+Terminus Heavy Bomber 88 fired at Crucio Station Destroyer 5 and hit it, but did no damage.
+Terminus Heavy Bomber 89 fired at Crucio Station Destroyer 5 and hit it, but did no damage.
+Terminus Heavy Bomber 90 fired at Crucio Station Destroyer 5 and hit it, doing 1 damage. Remaining hull strength is 3.
+Terminus Heavy Bomber 91 fired at Crucio Station Destroyer 5 and hit it, doing 1 damage. Remaining hull strength is 2.
+Terminus Heavy Bomber 92 fired at Crucio Station Destroyer 5 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 93 fired at Crucio Station Destroyer 5 and hit it for 2 damage, destroying it!
+Terminus Heavy Bomber 94 fired at Crucio Station Destroyer 6 and hit it, doing 3 damage. Remaining hull strength is 18.
+Terminus Heavy Bomber 95 fired at Crucio Station Destroyer 6 and hit it, doing 1 damage. Remaining hull strength is 17.
+Terminus Heavy Bomber 96 fired at Crucio Station Destroyer 6 and hit it, doing 1 damage. Remaining hull strength is 16.
+Terminus Heavy Bomber 97 fired at Crucio Station Destroyer 6 and hit it, doing 1 damage. Remaining hull strength is 15.
+Terminus Heavy Bomber 98 fired at Crucio Station Destroyer 6 and hit it, doing 4 damage. Remaining hull strength is 11.
+Terminus Heavy Bomber 99 fired at Crucio Station Destroyer 6 and hit it, doing 1 damage. Remaining hull strength is 10.
+Terminus Heavy Bomber 100 fired at Crucio Station Destroyer 6 and hit it, doing 1 damage. Remaining hull strength is 9.
+Terminus Heavy Bomber 101 fired at Crucio Station Destroyer 6 and hit it, doing 1 damage. Remaining hull strength is 8.
+Terminus Heavy Bomber 102 fired at Crucio Station Destroyer 6 and hit it, but did no damage.
+Terminus Heavy Bomber 103 fired at Crucio Station Destroyer 6 but missed.
+Terminus Heavy Bomber 104 fired at Crucio Station Destroyer 6 and hit it, but did no damage.
+Terminus Heavy Bomber 105 fired at Crucio Station Destroyer 6 and hit it, doing 1 damage. Remaining hull strength is 7.
+Terminus Heavy Bomber 106 fired at Crucio Station Destroyer 6 but missed.
+Terminus Heavy Bomber 107 fired at Crucio Station Destroyer 6 and hit it, doing 1 damage. Remaining hull strength is 6.
+Terminus Heavy Bomber 108 fired at Crucio Station Destroyer 6 and hit it, but did no damage.
+Terminus Heavy Bomber 109 fired at Crucio Station Destroyer 6 and hit it, but did no damage.
+Terminus Heavy Bomber 110 fired at Crucio Station Destroyer 6 but missed.
+Terminus Heavy Bomber 111 fired at Crucio Station Destroyer 6 and hit it, doing 3 damage. Remaining hull strength is 3.
+Terminus Heavy Bomber 112 fired at Crucio Station Destroyer 6 and hit it, doing 2 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 113 fired at Crucio Station Destroyer 6 and hit it for 3 damage, destroying it!
+Terminus Heavy Bomber 114 fired at Crucio Station Destroyer 7 and hit it, doing 2 damage. Remaining hull strength is 19.
+Terminus Heavy Bomber 115 fired at Crucio Station Destroyer 7 and hit it, doing 1 damage. Remaining hull strength is 18.
+Terminus Heavy Bomber 116 fired at Crucio Station Destroyer 7 and hit it, doing 2 damage. Remaining hull strength is 16.
+Terminus Heavy Bomber 117 fired at Crucio Station Destroyer 7 and hit it, doing 2 damage. Remaining hull strength is 14.
+Terminus Heavy Bomber 118 fired at Crucio Station Destroyer 7 and hit it, doing 2 damage. Remaining hull strength is 12.
+Terminus Heavy Bomber 119 fired at Crucio Station Destroyer 7 and hit it, doing 2 damage. Remaining hull strength is 10.
+Terminus Heavy Bomber 120 fired at Crucio Station Destroyer 7 but missed.
+Terminus Heavy Bomber 121 fired at Crucio Station Destroyer 7 and hit it, doing 3 damage. Remaining hull strength is 7.
+Terminus Heavy Bomber 122 fired at Crucio Station Destroyer 7 but missed.
+Terminus Heavy Bomber 123 fired at Crucio Station Destroyer 7 and hit it, doing 4 damage. Remaining hull strength is 3.
+Terminus Heavy Bomber 124 fired at Crucio Station Destroyer 7 and hit it, doing 1 damage. Remaining hull strength is 2.
+Terminus Heavy Bomber 125 fired at Crucio Station Destroyer 7 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 126 fired at Crucio Station Destroyer 7 but missed.
+Terminus Heavy Bomber 127 fired at Crucio Station Destroyer 7 and hit it for 1 damage, destroying it!
+Terminus Heavy Bomber 128 fired at Crucio Station Destroyer 8 and hit it, but did no damage.
+Terminus Heavy Bomber 129 fired at Crucio Station Destroyer 8 but missed.
+Terminus Heavy Bomber 130 fired at Crucio Station Destroyer 8 and hit it, doing 2 damage. Remaining hull strength is 19.
+Terminus Heavy Bomber 131 fired at Crucio Station Destroyer 8 and hit it, doing 1 damage. Remaining hull strength is 18.
+Terminus Heavy Bomber 132 fired at Crucio Station Destroyer 8 and hit it, but did no damage.
+Terminus Heavy Bomber 133 fired at Crucio Station Destroyer 8 and hit it, doing 3 damage. Remaining hull strength is 15.
+Terminus Heavy Bomber 134 fired at Crucio Station Destroyer 8 and hit it, doing 1 damage. Remaining hull strength is 14.
+Terminus Heavy Bomber 135 fired at Crucio Station Destroyer 8 and hit it, doing 1 damage. Remaining hull strength is 13.
+Terminus Heavy Bomber 136 fired at Crucio Station Destroyer 8 and hit it, doing 1 damage. Remaining hull strength is 12.
+Terminus Heavy Bomber 137 fired at Crucio Station Destroyer 8 and hit it, doing 2 damage. Remaining hull strength is 10.
+Terminus Heavy Bomber 138 fired at Crucio Station Destroyer 8 and hit it, doing 3 damage. Remaining hull strength is 7.
+Terminus Heavy Bomber 139 fired at Crucio Station Destroyer 8 and hit it, but did no damage.
+Terminus Heavy Bomber 140 fired at Crucio Station Destroyer 8 and hit it, doing 3 damage. Remaining hull strength is 4.
+Terminus Heavy Bomber 141 fired at Crucio Station Destroyer 8 and hit it, doing 2 damage. Remaining hull strength is 2.
+Terminus Heavy Bomber 142 fired at Crucio Station Destroyer 8 and hit it, but did no damage.
+Terminus Heavy Bomber 143 fired at Crucio Station Destroyer 8 and hit it, doing 1 damage. Remaining hull strength is 1.
+Terminus Heavy Bomber 144 fired at Crucio Station Destroyer 8 and hit it for 1 damage, destroying it!
+Attackers losses were 8 Destroyer(s) and 1280 personnel.
+Defenders losses were 23 Heavy Bomber(s) and 69 personnel.
+Defender lost no structures.
+Attacker gained 530 prestige.
+Attacker lost 140 prestige due to the difference in planetary status.
+Defender gained 267 prestige.

@@ -1,0 +1,15 @@
+Date: 7/5/2007 6:40:00 AM
+From: Nomad
+To: Nomad
+Subject: Combat Report A fleet of vessels from the planet 'Kessel' attempted to bombard industry at Nomad.
+The attacking force was detected before entering the system!
+Because Nomad is in a state of anger against Kessel, its units will have a 5% offense bonus.
+Because Kessel is in a state of anger against Nomad, its units will have a 5% offense bonus.
+The attacking force consisted of 5 "Dragon" Mobile Assault Platform(s) 10 "Goliath" Battleship(s).
+The defending force consisted of 2 Orbital Shield(s) 5 Orbital Shield (Improved)(s) 5 Orbital Defense Platform(s) 1 Jumpgate(s) 1 Orbital Construction Yard(s) 1 Orbital Construction Yard (Improved)(s) 15 Surface Shield Generator(s) 7 Surface Shield Generator (Improved)(s) 78 Defense Turret(s) 4 Mining Facility (Metals)(s) 6 Manufacturing Plant (Improved)(s) 2 Research Lab (Improved)(s) 1 Manufacturing Plant(s) 2 Research Lab(s) .
+Attacker's losses were 10 "Goliath" Battleship(s) 5 "Dragon" Mobile Assault Platform(s) and 32000 personnel.
+Defender lost no units.
+Defender lost 2 Orbital Shield(s) 2 Orbital Shield (Improved)(s) .
+Attacker lost 6682 prestige.
+Defender gained 8014 prestige.
+Since their fleet was utterly destroyed, it is doubtful they were able to report back to their leader.

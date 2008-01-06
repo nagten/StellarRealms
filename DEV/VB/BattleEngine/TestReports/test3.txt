@@ -1,0 +1,218 @@
+Date: 9/2/2005 7:45:00 AM
+From: Lush (private)
+Subject: Combat ReportA fleet of vessels from Crucio Station attempted to conduct a normal attack at Lush.
+The attacking force was detected before entering the system!
+The attacking force consisted of 6 "Leopard" Strike Cruiser(s) 10 Destroyer(s).
+The defending force consisted of 12 Fire Support Destroyer(s) .
+In the opening volley, Crucio Station "Leopard" Strike Cruiser 1 fired at Lush Fire Support Destroyer 1 and hit it, doing 2 damage. Remaining hull strength is 24.
+Lush Fire Support Destroyer 1 fired at Crucio Station "Leopard" Strike Cruiser 1 and hit it, doing 2 damage. Remaining hull strength is 33.
+Crucio Station "Leopard" Strike Cruiser 1 fired at Lush Fire Support Destroyer 1 and hit it, doing 4 damage. Remaining hull strength is 20.
+Lush Fire Support Destroyer 1 fired at Crucio Station "Leopard" Strike Cruiser 1 and hit it, doing 2 damage. Remaining hull strength is 31.
+Crucio Station "Leopard" Strike Cruiser 1 fired at Lush Fire Support Destroyer 1 and hit it, doing 6 damage. Remaining hull strength is 14.
+Lush Fire Support Destroyer 1 fired at Crucio Station "Leopard" Strike Cruiser 1 and hit it, doing 2 damage. Remaining hull strength is 29.
+Crucio Station "Leopard" Strike Cruiser 2 fired at Lush Fire Support Destroyer 1 and hit it, doing 6 damage. Remaining hull strength is 8.
+Lush Fire Support Destroyer 1 fired at Crucio Station "Leopard" Strike Cruiser 1 and hit it, doing 2 damage. Remaining hull strength is 27.
+Crucio Station "Leopard" Strike Cruiser 2 fired at Lush Fire Support Destroyer 1 and hit it, doing 2 damage. Remaining hull strength is 6.
+Lush Fire Support Destroyer 2 fired at Crucio Station "Leopard" Strike Cruiser 1 and hit it, doing 2 damage. Remaining hull strength is 25.
+Crucio Station "Leopard" Strike Cruiser 2 fired at Lush Fire Support Destroyer 1 and hit it, doing 3 damage. Remaining hull strength is 3.
+Lush Fire Support Destroyer 2 fired at Crucio Station "Leopard" Strike Cruiser 1 and hit it, doing 8 damage. Remaining hull strength is 17.
+Crucio Station "Leopard" Strike Cruiser 3 fired at Lush Fire Support Destroyer 1 and hit it for 5 damage, destroying it!
+Lush Fire Support Destroyer 2 fired at Crucio Station "Leopard" Strike Cruiser 1 and hit it, doing 2 damage. Remaining hull strength is 15.
+Crucio Station "Leopard" Strike Cruiser 3 fired at Lush Fire Support Destroyer 2 and hit it, doing 21 damage. Remaining hull strength is 5.
+Lush Fire Support Destroyer 2 fired at Crucio Station "Leopard" Strike Cruiser 1 and hit it, doing 3 damage. Remaining hull strength is 12.
+Crucio Station "Leopard" Strike Cruiser 3 fired at Lush Fire Support Destroyer 2 and hit it for 5 damage, destroying it!
+Lush Fire Support Destroyer 3 fired at Crucio Station "Leopard" Strike Cruiser 1 and hit it, but did no damage.
+Crucio Station "Leopard" Strike Cruiser 4 fired at Lush Fire Support Destroyer 3 and hit it, doing 3 damage. Remaining hull strength is 23.
+Lush Fire Support Destroyer 3 fired at Crucio Station "Leopard" Strike Cruiser 1 and hit it, doing 2 damage. Remaining hull strength is 10.
+Crucio Station "Leopard" Strike Cruiser 4 fired at Lush Fire Support Destroyer 3 and hit it, doing 1 damage. Remaining hull strength is 22.
+Lush Fire Support Destroyer 3 fired at Crucio Station "Leopard" Strike Cruiser 1 and hit it, doing 1 damage. Remaining hull strength is 9.
+Crucio Station "Leopard" Strike Cruiser 4 fired at Lush Fire Support Destroyer 3 and hit it, doing 3 damage. Remaining hull strength is 19.
+Lush Fire Support Destroyer 3 fired at Crucio Station "Leopard" Strike Cruiser 1 and hit it, doing 4 damage. Remaining hull strength is 5.
+Crucio Station "Leopard" Strike Cruiser 5 fired at Lush Fire Support Destroyer 3 and hit it, doing 8 damage. Remaining hull strength is 11.
+Lush Fire Support Destroyer 4 fired at Crucio Station "Leopard" Strike Cruiser 1 and hit it, doing 3 damage. Remaining hull strength is 2.
+Crucio Station "Leopard" Strike Cruiser 5 fired at Lush Fire Support Destroyer 3 and hit it, doing 1 damage. Remaining hull strength is 10.
+Lush Fire Support Destroyer 4 fired at Crucio Station "Leopard" Strike Cruiser 1 and hit it, but did no damage.
+Crucio Station "Leopard" Strike Cruiser 5 fired at Lush Fire Support Destroyer 3 and hit it, doing 1 damage. Remaining hull strength is 9.
+Lush Fire Support Destroyer 4 fired at Crucio Station "Leopard" Strike Cruiser 1 and hit it for 2 damage, destroying it!
+Crucio Station "Leopard" Strike Cruiser 6 fired at Lush Fire Support Destroyer 3 and hit it for 9 damage, destroying it!
+Lush Fire Support Destroyer 4 fired at Crucio Station "Leopard" Strike Cruiser 2 and hit it, doing 2 damage. Remaining hull strength is 33.
+Crucio Station "Leopard" Strike Cruiser 6 fired at Lush Fire Support Destroyer 4 and hit it, doing 1 damage. Remaining hull strength is 25.
+Lush Fire Support Destroyer 5 fired at Crucio Station "Leopard" Strike Cruiser 2 and hit it, doing 4 damage. Remaining hull strength is 29.
+Crucio Station "Leopard" Strike Cruiser 6 fired at Lush Fire Support Destroyer 4 and hit it, doing 12 damage. Remaining hull strength is 13.
+Lush Fire Support Destroyer 5 fired at Crucio Station "Leopard" Strike Cruiser 2 and hit it, doing 1 damage. Remaining hull strength is 28.
+Crucio Station Destroyer 1 fired at Lush Fire Support Destroyer 4 and hit it, doing 2 damage. Remaining hull strength is 11.
+Lush Fire Support Destroyer 5 fired at Crucio Station "Leopard" Strike Cruiser 2 and hit it, but did no damage.
+Crucio Station Destroyer 1 fired at Lush Fire Support Destroyer 4 and hit it, doing 1 damage. Remaining hull strength is 10.
+Lush Fire Support Destroyer 5 fired at Crucio Station "Leopard" Strike Cruiser 2 and hit it, doing 1 damage. Remaining hull strength is 27.
+Crucio Station Destroyer 1 fired at Lush Fire Support Destroyer 4 and hit it, doing 1 damage. Remaining hull strength is 9.
+Lush Fire Support Destroyer 6 fired at Crucio Station "Leopard" Strike Cruiser 2 and hit it, doing 2 damage. Remaining hull strength is 25.
+Crucio Station Destroyer 1 fired at Lush Fire Support Destroyer 4 and hit it, doing 2 damage. Remaining hull strength is 7.
+Lush Fire Support Destroyer 6 fired at Crucio Station "Leopard" Strike Cruiser 2 and hit it, doing 5 damage. Remaining hull strength is 20.
+Crucio Station Destroyer 2 fired at Lush Fire Support Destroyer 4 and hit it, doing 5 damage. Remaining hull strength is 2.
+Lush Fire Support Destroyer 6 fired at Crucio Station "Leopard" Strike Cruiser 2 and hit it, doing 2 damage. Remaining hull strength is 18.
+Crucio Station Destroyer 2 fired at Lush Fire Support Destroyer 4 and hit it for 3 damage, destroying it!
+Lush Fire Support Destroyer 6 fired at Crucio Station "Leopard" Strike Cruiser 2 and hit it, doing 1 damage. Remaining hull strength is 17.
+Crucio Station Destroyer 2 fired at Lush Fire Support Destroyer 5 and hit it, doing 3 damage. Remaining hull strength is 23.
+Lush Fire Support Destroyer 7 fired at Crucio Station "Leopard" Strike Cruiser 2 and hit it, doing 2 damage. Remaining hull strength is 15.
+Crucio Station Destroyer 2 fired at Lush Fire Support Destroyer 5 and hit it, doing 3 damage. Remaining hull strength is 20.
+Lush Fire Support Destroyer 7 fired at Crucio Station "Leopard" Strike Cruiser 2 and hit it, doing 3 damage. Remaining hull strength is 12.
+Crucio Station Destroyer 3 fired at Lush Fire Support Destroyer 5 and hit it, but did no damage.
+Lush Fire Support Destroyer 7 fired at Crucio Station "Leopard" Strike Cruiser 2 and hit it, doing 1 damage. Remaining hull strength is 11.
+Crucio Station Destroyer 3 fired at Lush Fire Support Destroyer 5 and hit it, doing 2 damage. Remaining hull strength is 18.
+Lush Fire Support Destroyer 7 fired at Crucio Station "Leopard" Strike Cruiser 2 and hit it, doing 3 damage. Remaining hull strength is 8.
+Crucio Station Destroyer 3 fired at Lush Fire Support Destroyer 5 and hit it, doing 4 damage. Remaining hull strength is 14.
+Lush Fire Support Destroyer 8 fired at Crucio Station "Leopard" Strike Cruiser 2 and hit it, doing 2 damage. Remaining hull strength is 6.
+Crucio Station Destroyer 3 fired at Lush Fire Support Destroyer 5 and hit it, doing 3 damage. Remaining hull strength is 11.
+Lush Fire Support Destroyer 8 fired at Crucio Station "Leopard" Strike Cruiser 2 and hit it for 6 damage, destroying it!
+Crucio Station Destroyer 4 fired at Lush Fire Support Destroyer 5 and hit it, doing 1 damage. Remaining hull strength is 10.
+Lush Fire Support Destroyer 8 fired at Crucio Station "Leopard" Strike Cruiser 3 and hit it, but did no damage.
+Crucio Station Destroyer 4 fired at Lush Fire Support Destroyer 5 and hit it, doing 1 damage. Remaining hull strength is 9.
+Lush Fire Support Destroyer 8 fired at Crucio Station "Leopard" Strike Cruiser 3 and hit it, doing 1 damage. Remaining hull strength is 34.
+Crucio Station Destroyer 4 fired at Lush Fire Support Destroyer 5 and hit it, doing 2 damage. Remaining hull strength is 7.
+Lush Fire Support Destroyer 9 fired at Crucio Station "Leopard" Strike Cruiser 3 and hit it, doing 1 damage. Remaining hull strength is 33.
+Crucio Station Destroyer 4 fired at Lush Fire Support Destroyer 5 and hit it, doing 3 damage. Remaining hull strength is 4.
+Lush Fire Support Destroyer 9 fired at Crucio Station "Leopard" Strike Cruiser 3 and hit it, doing 1 damage. Remaining hull strength is 32.
+Crucio Station Destroyer 5 fired at Lush Fire Support Destroyer 5 and hit it, doing 2 damage. Remaining hull strength is 2.
+Lush Fire Support Destroyer 9 fired at Crucio Station "Leopard" Strike Cruiser 3 and hit it, doing 1 damage. Remaining hull strength is 31.
+Crucio Station Destroyer 5 fired at Lush Fire Support Destroyer 5 and hit it for 2 damage, destroying it!
+Lush Fire Support Destroyer 9 fired at Crucio Station "Leopard" Strike Cruiser 3 and hit it, doing 2 damage. Remaining hull strength is 29.
+Crucio Station Destroyer 5 fired at Lush Fire Support Destroyer 6 and hit it, doing 1 damage. Remaining hull strength is 25.
+Lush Fire Support Destroyer 10 fired at Crucio Station "Leopard" Strike Cruiser 3 and hit it, doing 1 damage. Remaining hull strength is 28.
+Crucio Station Destroyer 5 fired at Lush Fire Support Destroyer 6 and hit it, doing 3 damage. Remaining hull strength is 22.
+Lush Fire Support Destroyer 10 fired at Crucio Station "Leopard" Strike Cruiser 3 and hit it, doing 2 damage. Remaining hull strength is 26.
+Crucio Station Destroyer 6 fired at Lush Fire Support Destroyer 6 and hit it, doing 1 damage. Remaining hull strength is 21.
+Lush Fire Support Destroyer 10 fired at Crucio Station "Leopard" Strike Cruiser 3 and hit it, doing 2 damage. Remaining hull strength is 24.
+Crucio Station Destroyer 6 fired at Lush Fire Support Destroyer 6 and hit it, doing 2 damage. Remaining hull strength is 19.
+Lush Fire Support Destroyer 10 fired at Crucio Station "Leopard" Strike Cruiser 3 and hit it, doing 4 damage. Remaining hull strength is 20.
+Crucio Station Destroyer 6 fired at Lush Fire Support Destroyer 6 and hit it, doing 3 damage. Remaining hull strength is 16.
+Lush Fire Support Destroyer 11 fired at Crucio Station "Leopard" Strike Cruiser 3 and hit it, doing 2 damage. Remaining hull strength is 18.
+Crucio Station Destroyer 6 fired at Lush Fire Support Destroyer 6 and hit it, doing 1 damage. Remaining hull strength is 15.
+Lush Fire Support Destroyer 11 fired at Crucio Station "Leopard" Strike Cruiser 3 and hit it, doing 3 damage. Remaining hull strength is 15.
+Crucio Station Destroyer 7 fired at Lush Fire Support Destroyer 6 and hit it, doing 1 damage. Remaining hull strength is 14.
+Lush Fire Support Destroyer 11 fired at Crucio Station "Leopard" Strike Cruiser 3 and hit it, doing 2 damage. Remaining hull strength is 13.
+Crucio Station Destroyer 7 fired at Lush Fire Support Destroyer 6 and hit it, doing 2 damage. Remaining hull strength is 12.
+Lush Fire Support Destroyer 11 fired at Crucio Station "Leopard" Strike Cruiser 3 but missed.
+Crucio Station Destroyer 7 fired at Lush Fire Support Destroyer 6 and hit it, doing 2 damage. Remaining hull strength is 10.
+Lush Fire Support Destroyer 12 fired at Crucio Station "Leopard" Strike Cruiser 3 and hit it, doing 12 damage. Remaining hull strength is 1.
+Crucio Station Destroyer 7 fired at Lush Fire Support Destroyer 6 and hit it, doing 2 damage. Remaining hull strength is 8.
+Lush Fire Support Destroyer 12 fired at Crucio Station "Leopard" Strike Cruiser 3 and hit it for 1 damage, destroying it!
+Crucio Station Destroyer 8 fired at Lush Fire Support Destroyer 6 and hit it, doing 2 damage. Remaining hull strength is 6.
+Lush Fire Support Destroyer 12 fired at Crucio Station "Leopard" Strike Cruiser 4 and hit it, doing 1 damage. Remaining hull strength is 34.
+Crucio Station Destroyer 8 fired at Lush Fire Support Destroyer 6 and hit it, doing 2 damage. Remaining hull strength is 4.
+Lush Fire Support Destroyer 12 fired at Crucio Station "Leopard" Strike Cruiser 4 and hit it, doing 1 damage. Remaining hull strength is 33.
+Crucio Station Destroyer 8 fired at Lush Fire Support Destroyer 6 and hit it for 5 damage, destroying it!
+Crucio Station Destroyer 8 fired at Lush Fire Support Destroyer 7 and hit it, doing 2 damage. Remaining hull strength is 24.
+Crucio Station Destroyer 9 fired at Lush Fire Support Destroyer 7 and hit it, doing 1 damage. Remaining hull strength is 23.
+Crucio Station Destroyer 9 fired at Lush Fire Support Destroyer 7 and hit it, doing 1 damage. Remaining hull strength is 22.
+Crucio Station Destroyer 9 fired at Lush Fire Support Destroyer 7 and hit it, doing 3 damage. Remaining hull strength is 19.
+Crucio Station Destroyer 9 fired at Lush Fire Support Destroyer 7 and hit it, doing 2 damage. Remaining hull strength is 17.
+Crucio Station Destroyer 10 fired at Lush Fire Support Destroyer 7 and hit it, but did no damage.
+Crucio Station Destroyer 10 fired at Lush Fire Support Destroyer 7 and hit it, doing 1 damage. Remaining hull strength is 16.
+Crucio Station Destroyer 10 fired at Lush Fire Support Destroyer 7 and hit it, doing 2 damage. Remaining hull strength is 14.
+Crucio Station Destroyer 10 fired at Lush Fire Support Destroyer 7 and hit it, doing 1 damage. Remaining hull strength is 13.
+In the next volley, Crucio Station "Leopard" Strike Cruiser 4 fired at Lush Fire Support Destroyer 7 and hit it, doing 5 damage. Remaining hull strength is 8.
+Lush Fire Support Destroyer 7 fired at Crucio Station "Leopard" Strike Cruiser 4 and hit it, doing 1 damage. Remaining hull strength is 32.
+Crucio Station "Leopard" Strike Cruiser 4 fired at Lush Fire Support Destroyer 7 and hit it, doing 1 damage. Remaining hull strength is 7.
+Lush Fire Support Destroyer 7 fired at Crucio Station "Leopard" Strike Cruiser 4 and hit it, doing 3 damage. Remaining hull strength is 29.
+Crucio Station "Leopard" Strike Cruiser 4 fired at Lush Fire Support Destroyer 7 and hit it for 15 damage, destroying it!
+Lush Fire Support Destroyer 7 fired at Crucio Station "Leopard" Strike Cruiser 4 and hit it, doing 1 damage. Remaining hull strength is 28.
+Crucio Station "Leopard" Strike Cruiser 5 fired at Lush Fire Support Destroyer 8 and hit it, doing 1 damage. Remaining hull strength is 25.
+Lush Fire Support Destroyer 8 fired at Crucio Station "Leopard" Strike Cruiser 4 and hit it, doing 1 damage. Remaining hull strength is 27.
+Crucio Station "Leopard" Strike Cruiser 5 fired at Lush Fire Support Destroyer 8 and hit it, but did no damage.
+Lush Fire Support Destroyer 8 fired at Crucio Station "Leopard" Strike Cruiser 4 and hit it, doing 2 damage. Remaining hull strength is 25.
+Crucio Station "Leopard" Strike Cruiser 5 fired at Lush Fire Support Destroyer 8 and hit it, doing 8 damage. Remaining hull strength is 17.
+Lush Fire Support Destroyer 8 fired at Crucio Station "Leopard" Strike Cruiser 4 and hit it, doing 3 damage. Remaining hull strength is 22.
+Crucio Station "Leopard" Strike Cruiser 6 fired at Lush Fire Support Destroyer 8 and hit it, doing 13 damage. Remaining hull strength is 4.
+Lush Fire Support Destroyer 8 fired at Crucio Station "Leopard" Strike Cruiser 4 and hit it, doing 5 damage. Remaining hull strength is 17.
+Crucio Station "Leopard" Strike Cruiser 6 fired at Lush Fire Support Destroyer 8 and hit it, but did no damage.
+Lush Fire Support Destroyer 9 fired at Crucio Station "Leopard" Strike Cruiser 4 and hit it, doing 2 damage. Remaining hull strength is 15.
+Crucio Station "Leopard" Strike Cruiser 6 fired at Lush Fire Support Destroyer 8 and hit it for 21 damage, destroying it!
+Lush Fire Support Destroyer 9 fired at Crucio Station "Leopard" Strike Cruiser 4 and hit it, doing 2 damage. Remaining hull strength is 13.
+Crucio Station Destroyer 1 fired at Lush Fire Support Destroyer 9 and hit it, doing 1 damage. Remaining hull strength is 25.
+Lush Fire Support Destroyer 9 fired at Crucio Station "Leopard" Strike Cruiser 4 and hit it, doing 5 damage. Remaining hull strength is 8.
+Crucio Station Destroyer 1 fired at Lush Fire Support Destroyer 9 and hit it, doing 2 damage. Remaining hull strength is 23.
+Lush Fire Support Destroyer 9 fired at Crucio Station "Leopard" Strike Cruiser 4 and hit it, doing 4 damage. Remaining hull strength is 4.
+Crucio Station Destroyer 1 fired at Lush Fire Support Destroyer 9 and hit it, doing 1 damage. Remaining hull strength is 22.
+Lush Fire Support Destroyer 10 fired at Crucio Station "Leopard" Strike Cruiser 4 and hit it, doing 3 damage. Remaining hull strength is 1.
+Crucio Station Destroyer 1 fired at Lush Fire Support Destroyer 9 and hit it, doing 1 damage. Remaining hull strength is 21.
+Lush Fire Support Destroyer 10 fired at Crucio Station "Leopard" Strike Cruiser 4 and hit it for 1 damage, destroying it!
+Crucio Station Destroyer 2 fired at Lush Fire Support Destroyer 9 and hit it, doing 1 damage. Remaining hull strength is 20.
+Lush Fire Support Destroyer 10 fired at Crucio Station "Leopard" Strike Cruiser 5 and hit it, doing 2 damage. Remaining hull strength is 33.
+Crucio Station Destroyer 2 fired at Lush Fire Support Destroyer 9 and hit it, doing 1 damage. Remaining hull strength is 19.
+Lush Fire Support Destroyer 10 fired at Crucio Station "Leopard" Strike Cruiser 5 and hit it, doing 2 damage. Remaining hull strength is 31.
+Crucio Station Destroyer 2 fired at Lush Fire Support Destroyer 9 and hit it, doing 1 damage. Remaining hull strength is 18.
+Lush Fire Support Destroyer 11 fired at Crucio Station "Leopard" Strike Cruiser 5 and hit it, doing 3 damage. Remaining hull strength is 28.
+Crucio Station Destroyer 2 fired at Lush Fire Support Destroyer 9 and hit it, but did no damage.
+Lush Fire Support Destroyer 11 fired at Crucio Station "Leopard" Strike Cruiser 5 and hit it, doing 6 damage. Remaining hull strength is 22.
+Crucio Station Destroyer 3 fired at Lush Fire Support Destroyer 9 and hit it, but did no damage.
+Lush Fire Support Destroyer 11 fired at Crucio Station "Leopard" Strike Cruiser 5 and hit it, doing 2 damage. Remaining hull strength is 20.
+Crucio Station Destroyer 3 fired at Lush Fire Support Destroyer 9 and hit it, doing 1 damage. Remaining hull strength is 17.
+Lush Fire Support Destroyer 11 fired at Crucio Station "Leopard" Strike Cruiser 5 and hit it, doing 3 damage. Remaining hull strength is 17.
+Crucio Station Destroyer 3 fired at Lush Fire Support Destroyer 9 and hit it, doing 7 damage. Remaining hull strength is 10.
+Lush Fire Support Destroyer 12 fired at Crucio Station "Leopard" Strike Cruiser 5 and hit it, doing 2 damage. Remaining hull strength is 15.
+Crucio Station Destroyer 3 fired at Lush Fire Support Destroyer 9 and hit it, doing 2 damage. Remaining hull strength is 8.
+Lush Fire Support Destroyer 12 fired at Crucio Station "Leopard" Strike Cruiser 5 and hit it, doing 1 damage. Remaining hull strength is 14.
+Crucio Station Destroyer 4 fired at Lush Fire Support Destroyer 9 and hit it, doing 1 damage. Remaining hull strength is 7.
+Lush Fire Support Destroyer 12 fired at Crucio Station "Leopard" Strike Cruiser 5 and hit it, doing 3 damage. Remaining hull strength is 11.
+Crucio Station Destroyer 4 fired at Lush Fire Support Destroyer 9 and hit it, doing 2 damage. Remaining hull strength is 5.
+Lush Fire Support Destroyer 12 fired at Crucio Station "Leopard" Strike Cruiser 5 and hit it, doing 1 damage. Remaining hull strength is 10.
+Crucio Station Destroyer 4 fired at Lush Fire Support Destroyer 9 and hit it, doing 1 damage. Remaining hull strength is 4.
+Crucio Station Destroyer 4 fired at Lush Fire Support Destroyer 9 and hit it for 6 damage, destroying it!
+Crucio Station Destroyer 5 fired at Lush Fire Support Destroyer 10 and hit it, doing 4 damage. Remaining hull strength is 22.
+Crucio Station Destroyer 5 fired at Lush Fire Support Destroyer 10 and hit it, doing 1 damage. Remaining hull strength is 21.
+Crucio Station Destroyer 5 fired at Lush Fire Support Destroyer 10 and hit it, doing 2 damage. Remaining hull strength is 19.
+Crucio Station Destroyer 5 fired at Lush Fire Support Destroyer 10 and hit it, doing 3 damage. Remaining hull strength is 16.
+Crucio Station Destroyer 6 fired at Lush Fire Support Destroyer 10 and hit it, doing 1 damage. Remaining hull strength is 15.
+Crucio Station Destroyer 6 fired at Lush Fire Support Destroyer 10 and hit it, doing 1 damage. Remaining hull strength is 14.
+Crucio Station Destroyer 6 fired at Lush Fire Support Destroyer 10 and hit it, doing 3 damage. Remaining hull strength is 11.
+Crucio Station Destroyer 6 fired at Lush Fire Support Destroyer 10 and hit it, doing 2 damage. Remaining hull strength is 9.
+Crucio Station Destroyer 7 fired at Lush Fire Support Destroyer 10 and hit it, doing 2 damage. Remaining hull strength is 7.
+Crucio Station Destroyer 7 fired at Lush Fire Support Destroyer 10 and hit it, doing 1 damage. Remaining hull strength is 6.
+Crucio Station Destroyer 7 fired at Lush Fire Support Destroyer 10 and hit it, doing 2 damage. Remaining hull strength is 4.
+Crucio Station Destroyer 7 fired at Lush Fire Support Destroyer 10 and hit it, doing 3 damage. Remaining hull strength is 1.
+Crucio Station Destroyer 8 fired at Lush Fire Support Destroyer 10 and hit it for 1 damage, destroying it!
+Crucio Station Destroyer 8 fired at Lush Fire Support Destroyer 11 and hit it, doing 2 damage. Remaining hull strength is 24.
+Crucio Station Destroyer 8 fired at Lush Fire Support Destroyer 11 and hit it, doing 1 damage. Remaining hull strength is 23.
+Crucio Station Destroyer 8 fired at Lush Fire Support Destroyer 11 and hit it, doing 2 damage. Remaining hull strength is 21.
+Crucio Station Destroyer 9 fired at Lush Fire Support Destroyer 11 and hit it, doing 5 damage. Remaining hull strength is 16.
+Crucio Station Destroyer 9 fired at Lush Fire Support Destroyer 11 and hit it, but did no damage.
+Crucio Station Destroyer 9 fired at Lush Fire Support Destroyer 11 and hit it, doing 2 damage. Remaining hull strength is 14.
+Crucio Station Destroyer 9 fired at Lush Fire Support Destroyer 11 and hit it, doing 1 damage. Remaining hull strength is 13.
+Crucio Station Destroyer 10 fired at Lush Fire Support Destroyer 11 and hit it, doing 2 damage. Remaining hull strength is 11.
+Crucio Station Destroyer 10 fired at Lush Fire Support Destroyer 11 and hit it, doing 1 damage. Remaining hull strength is 10.
+Crucio Station Destroyer 10 fired at Lush Fire Support Destroyer 11 and hit it, doing 1 damage. Remaining hull strength is 9.
+Crucio Station Destroyer 10 fired at Lush Fire Support Destroyer 11 and hit it, doing 1 damage. Remaining hull strength is 8.
+In the next volley, Crucio Station "Leopard" Strike Cruiser 5 fired at Lush Fire Support Destroyer 11 and hit it, doing 1 damage. Remaining hull strength is 7.
+Lush Fire Support Destroyer 11 fired at Crucio Station "Leopard" Strike Cruiser 5 and hit it, doing 3 damage. Remaining hull strength is 7.
+Crucio Station "Leopard" Strike Cruiser 5 fired at Lush Fire Support Destroyer 11 and hit it, but did no damage.
+Lush Fire Support Destroyer 11 fired at Crucio Station "Leopard" Strike Cruiser 5 and hit it, doing 1 damage. Remaining hull strength is 6.
+Crucio Station "Leopard" Strike Cruiser 5 fired at Lush Fire Support Destroyer 11 and hit it, doing 1 damage. Remaining hull strength is 6.
+Lush Fire Support Destroyer 11 fired at Crucio Station "Leopard" Strike Cruiser 5 and hit it, doing 4 damage. Remaining hull strength is 2.
+Crucio Station "Leopard" Strike Cruiser 6 fired at Lush Fire Support Destroyer 11 and hit it, doing 3 damage. Remaining hull strength is 3.
+Lush Fire Support Destroyer 11 fired at Crucio Station "Leopard" Strike Cruiser 5 and hit it for 9 damage, destroying it!
+Crucio Station "Leopard" Strike Cruiser 6 fired at Lush Fire Support Destroyer 11 and hit it, doing 2 damage. Remaining hull strength is 1.
+Lush Fire Support Destroyer 12 fired at Crucio Station "Leopard" Strike Cruiser 6 and hit it, doing 2 damage. Remaining hull strength is 33.
+Crucio Station "Leopard" Strike Cruiser 6 fired at Lush Fire Support Destroyer 11 and hit it for 9 damage, destroying it!
+Lush Fire Support Destroyer 12 fired at Crucio Station "Leopard" Strike Cruiser 6 and hit it, doing 2 damage. Remaining hull strength is 31.
+Crucio Station Destroyer 1 fired at Lush Fire Support Destroyer 12 and hit it, doing 2 damage. Remaining hull strength is 24.
+Lush Fire Support Destroyer 12 fired at Crucio Station "Leopard" Strike Cruiser 6 and hit it, doing 1 damage. Remaining hull strength is 30.
+Crucio Station Destroyer 1 fired at Lush Fire Support Destroyer 12 and hit it, doing 1 damage. Remaining hull strength is 23.
+Lush Fire Support Destroyer 12 fired at Crucio Station "Leopard" Strike Cruiser 6 and hit it, doing 3 damage. Remaining hull strength is 27.
+Crucio Station Destroyer 1 fired at Lush Fire Support Destroyer 12 and hit it, doing 3 damage. Remaining hull strength is 20.
+Crucio Station Destroyer 1 fired at Lush Fire Support Destroyer 12 and hit it, but did no damage.
+Crucio Station Destroyer 2 fired at Lush Fire Support Destroyer 12 but missed.
+Crucio Station Destroyer 2 fired at Lush Fire Support Destroyer 12 and hit it, doing 3 damage. Remaining hull strength is 17.
+Crucio Station Destroyer 2 fired at Lush Fire Support Destroyer 12 and hit it, doing 3 damage. Remaining hull strength is 14.
+Crucio Station Destroyer 2 fired at Lush Fire Support Destroyer 12 and hit it, but did no damage.
+Crucio Station Destroyer 3 fired at Lush Fire Support Destroyer 12 and hit it, doing 1 damage. Remaining hull strength is 13.
+Crucio Station Destroyer 3 fired at Lush Fire Support Destroyer 12 and hit it, doing 2 damage. Remaining hull strength is 11.
+Crucio Station Destroyer 3 fired at Lush Fire Support Destroyer 12 and hit it, doing 2 damage. Remaining hull strength is 9.
+Crucio Station Destroyer 3 fired at Lush Fire Support Destroyer 12 and hit it, doing 6 damage. Remaining hull strength is 3.
+Crucio Station Destroyer 4 fired at Lush Fire Support Destroyer 12 and hit it, doing 1 damage. Remaining hull strength is 2.
+Crucio Station Destroyer 4 fired at Lush Fire Support Destroyer 12 and hit it for 2 damage, destroying it!
+Attackers losses were 5 "Leopard" Strike Cruiser(s) and 4000 personnel.
+Defenders losses were 12 Fire Support Destroyer(s) and 2100 personnel.
+Defender lost no structures.
+Attacker gained 2036 prestige.
+Attacker lost 1864 prestige due to the difference in planetary status.
+Defender lost 295 prestige.

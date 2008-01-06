@@ -1,0 +1,14 @@
+Date: 6/28/2007 5:20:00 PM
+From: Nomad
+To: Nomad
+Subject: Combat Report A fleet of vessels from the planet 'Nomad' attempted to destroy sensor structures at City 17.
+The attacking force was detected before entering the system!
+Because City 17 is in a state of anger against Nomad, its units will have a 5% offense bonus.
+Because Nomad is in a state of anger against City 17, its units will have a 5% offense bonus.
+The attacking force consisted of 55 Fire Support Destroyer(s).
+The defending force consisted of 30 Orbital Minefield(s) 10 Orbital Shield(s) 5 Satellites(s) 1 Jumpgate(s) 1 Orbital Construction Yard (Improved)(s) 1 "Tortoise" Battleship(s) 2 Cruiser(s) 5 Light Carrier(s) 1 "Raven" Missile Cruiser(s) 10 Fire Support Destroyer(s) 10 Improved Frigate(s) 4 Deep Recon Scout(s) 2 Scout(s) 180 "Wasp" Fighter(s) 40 Heavy Bomber(s) 1000 "Stinger" Drone(s) .
+Attacker's losses were 41 Fire Support Destroyer(s) and 7175 personnel.
+Defender's losses were 958 "Stinger" Drone(s) and 0 personnel.
+Defender lost 15 Orbital Minefield(s) .
+Attacker lost 2184 prestige.
+Defender gained 4202 prestige.

@@ -1,0 +1,14 @@
+Date: 7/18/2007 2:40:00 PM
+From: Nomad
+To: Nomad
+Subject: Combat Report A fleet of vessels from the planet 'Old Man Willow' attempted to bombard military installations at Nomad.
+The attacking force was detected before entering the system!
+Because Nomad is in a state of anger against Old Man Willow, its units will have a 5% offense bonus.
+Because Old Man Willow is in a state of anger against Nomad, its units will have a 5% offense bonus.
+The attacking force consisted of 62 Dreadnought(s) 32 Fire Support Destroyer(s).
+The defending force consisted of 1 Starbase(s) 17 Surface Shield Generator (Improved)(s) 6 Surface Defense Battery (Improved)(s) 76 Defense Turret(s) 1 Barracks(s) 1 Airbase (Improved)(s) 1 Barracks (Veteran)(s) 6 Deep Recon Scout(s) .
+Attacker's losses were 15 Dreadnought(s) and 27000 personnel.
+Defender lost no units.
+Defender lost 2 Surface Shield Generator (Improved)(s) 1 Starbase(s) .
+Attacker lost 2700 prestige.
+Defender gained 5453 prestige.

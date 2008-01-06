@@ -1,0 +1,15 @@
+Date: 7/4/2007 2:20:00 AM
+From: Nomad
+To: Nomad
+Subject: Combat Report A fleet of vessels from the planet 'Nomad' attempted to destroy sensor structures at Farm.
+The attacking force was detected before entering the system!
+Because Farm is in a state of anger against Nomad, its units will have a 5% offense bonus.
+Because Nomad is in a state of anger against Farm, its units will have a 5% offense bonus.
+The attacking force consisted of 1 "Tangler" Defense Barge(s) 25 Fire Support Destroyer(s) 5 Destroyer(s) 10 Fighter Bomber(s).
+The defending force consisted of 5 Satellites(s) 1 Jumpgate(s) 1 Orbital Construction Yard(s) .
+Attacker lost nothing.
+Defender lost no units.
+Defender lost 1 Orbital Construction Yard(s) 5 Satellites(s) 1 Jumpgate(s) .
+Attacker gained 1034 prestige.
+Attacker lost 1188 prestige due to the difference in planetary status.
+Defender lost 420 prestige.

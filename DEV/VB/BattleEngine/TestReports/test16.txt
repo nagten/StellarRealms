@@ -1,0 +1,15 @@
+Date: 6/30/2007 2:00:00 AM
+From: Aquarium
+To: Aquarium
+Subject: Combat Report A fleet of vessels from the planet 'Aquarium' attempted to destroy sensor structures at Sigil.
+The attacking force was detected before entering the system!
+Because Sigil is in a state of anger against Aquarium, its units will have a 5% offense bonus.
+Because Aquarium is in a state of anger against Sigil, its units will have a 5% offense bonus.
+The attacking force consisted of 61 "Barracuda" Attack Frigate(s) 22 Fire Support Destroyer(s) 115 Fighter Interceptor(s) 6 "Judicator" Dreadnought(s) 8 Battleship(s) 5 Light Carrier(s) 20 Heavy Bomber(s) 1 "Dragon" Mobile Assault Platform(s) 1 "Terrapin" Carrier(s).
+The defending force consisted of 10 Satellites(s) 1 Orbital Construction Yard (Improved)(s) 1 Orbital Construction Yard(s) 2 Dreadnought(s) 16 Battleship(s) 2 "Judicator" Dreadnought(s) .
+Attacker's losses were 10 Fire Support Destroyer(s) 61 "Barracuda" Attack Frigate(s) and 7850 personnel.
+Defender's losses were 16 Battleship(s) 2 Dreadnought(s) 2 "Judicator" Dreadnought(s) and 34100 personnel.
+Defender lost 1 Orbital Construction Yard(s) 1 Orbital Construction Yard (Improved)(s) 10 Satellites(s) .
+Attacker gained 14476 prestige.
+Attacker lost 13989 prestige due to the difference in planetary status.
+Defender lost 3593 prestige.

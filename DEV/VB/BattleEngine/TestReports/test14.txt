@@ -1,0 +1,14 @@
+Date: 7/5/2007 9:21:00 PM
+From: Nomad
+To: Nomad
+Subject: Combat Report A fleet of vessels from the planet 'Nomad' attempted to perform a fighter screen at Periapsis.
+The attacking force was detected before entering the system!
+Because Nomad is in a state of anger against Periapsis, its units will have a 5% offense bonus.
+The attacking force consisted of 70 Fighter Bomber(s) 15 Heavy Bomber(s) 22 Frigate(s) 5 Destroyer(s) 26 Fire Support Destroyer(s) 3 Light Carrier(s) 32 Battleship(s) 4 "Tangler" Defense Barge(s) 16 "Dragon" Mobile Assault Platform(s).
+The defending force consisted of 13 Battleship(s) 250 Fire Support Destroyer(s) 1 Scout(s) .
+Attacker's losses were 70 Fighter Bomber(s) 15 Heavy Bomber(s) 22 Frigate(s) 5 Destroyer(s) 26 Fire Support Destroyer(s) 28 Battleship(s) 3 Light Carrier(s) and 55175 personnel.
+Defender's losses were 1 Scout(s) 250 Fire Support Destroyer(s) 13 Battleship(s) and 64574 personnel.
+Defender lost no structures.
+Attacker gained 53538 prestige.
+Attacker lost 62964 prestige due to the difference in planetary status.
+Defender lost 14811 prestige.

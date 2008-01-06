@@ -1,0 +1,14 @@
+Date: 7/20/2007 6:41:00 AM
+From: Japan
+To: Japan
+Subject: Combat Report A fleet of vessels from the planet 'Unnamed' attempted to conduct fleet reconnaissance at Japan.
+The attacking force was detected before entering the system!
+Because Unnamed is in a state of anger against Japan, its units will have a 5% offense bonus.
+The attacking force consisted of 180 Fire Support Destroyer(s) 3 Battleship(s) 8 Light Carrier(s) 82 Dreadnought(s) 120 Advanced Interceptor(s) 4 "Orca" Battleship(s).
+The defending force consisted of 750 "Stinger" Drone(s) 1231 "Wasp" Fighter(s) 150 Heavy Bomber(s) 6 Deep Recon Scout(s) 260 Fire Support Destroyer(s) 5 "Vespa" Siege Carrier(s) 30 Dreadnought(s) .
+Attacker's losses were 114 Fire Support Destroyer(s) and 19950 personnel.
+Defender's losses were 108 "Wasp" Fighter(s) 750 "Stinger" Drone(s) and 108 personnel.
+Defender lost no structures.
+Attacker gained 1442 prestige.
+Attacker gained 138 prestige due to the difference in planetary status.
+Defender gained 7487 prestige.

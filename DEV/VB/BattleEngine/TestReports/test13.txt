@@ -1,0 +1,13 @@
+From: Nomad
+To: Nomad
+Subject: Combat Report A fleet of vessels from the planet 'Nomad' attempted to perform a hit and run attack at Farm.
+The attacking force was able to gain the element of surprise!
+Because Farm is in a state of anger against Nomad, its units will have a 5% offense bonus.
+Because Nomad is in a state of anger against Farm, its units will have a 5% offense bonus.
+The attacking force consisted of 30 "Interdictor" Frigate(s) 10 Frigate(s).
+The defending force consisted of 6 Deep Recon Scout(s) 200 "Stinger" Drone(s) .
+Attacker's losses were 23 "Interdictor" Frigate(s) and 2300 personnel.
+Defender's losses were 195 "Stinger" Drone(s) and 0 personnel.
+Defender lost no structures.
+Attacker lost 2020 prestige.
+Defender gained 2157 prestige.

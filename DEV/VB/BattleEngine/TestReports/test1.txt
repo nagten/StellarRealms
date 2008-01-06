@@ -1,0 +1,115 @@
+Date: 9/1/2005 2:25:00 PM
+From: Lush (private)
+Subject: Combat ReportA fleet of vessels from Crucio Station attempted to conduct a normal attack at Lush.
+The attacking force was detected before entering the system!
+The attacking force consisted of 10 Fire Support Destroyer(s) 40 Destroyer(s).
+The defending force consisted of 44 Heavy Bomber(s) .
+In the opening volley, Crucio Station Fire Support Destroyer 1 fired at Lush Heavy Bomber 1 and hit it, doing 1 damage. Remaining hull strength is 2.
+Lush Heavy Bomber 1 fired at Crucio Station Fire Support Destroyer 1 and hit it, but did no damage.
+Crucio Station Fire Support Destroyer 1 fired at Lush Heavy Bomber 1 and hit it, doing 1 damage. Remaining hull strength is 1.
+Lush Heavy Bomber 2 fired at Crucio Station Fire Support Destroyer 1 and hit it, but did no damage.
+Crucio Station Fire Support Destroyer 1 fired at Lush Heavy Bomber 1 and hit it for 1 damage, destroying it!
+Lush Heavy Bomber 3 fired at Crucio Station Fire Support Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 22.
+Crucio Station Fire Support Destroyer 1 fired at Lush Heavy Bomber 2 and hit it for 3 damage, destroying it!
+Lush Heavy Bomber 4 fired at Crucio Station Fire Support Destroyer 1 and hit it, doing 2 damage. Remaining hull strength is 20.
+Crucio Station Fire Support Destroyer 2 fired at Lush Heavy Bomber 3 and hit it for 6 damage, destroying it!
+Lush Heavy Bomber 5 fired at Crucio Station Fire Support Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 19.
+Crucio Station Fire Support Destroyer 2 fired at Lush Heavy Bomber 4 and hit it for 10 damage, destroying it!
+Lush Heavy Bomber 6 fired at Crucio Station Fire Support Destroyer 1 and hit it, doing 3 damage. Remaining hull strength is 16.
+Crucio Station Fire Support Destroyer 2 fired at Lush Heavy Bomber 5 and hit it for 4 damage, destroying it!
+Lush Heavy Bomber 7 fired at Crucio Station Fire Support Destroyer 1 and hit it, doing 3 damage. Remaining hull strength is 13.
+Crucio Station Fire Support Destroyer 2 fired at Lush Heavy Bomber 6 and hit it for 17 damage, destroying it!
+Lush Heavy Bomber 8 fired at Crucio Station Fire Support Destroyer 1 and hit it, doing 2 damage. Remaining hull strength is 11.
+Crucio Station Fire Support Destroyer 3 fired at Lush Heavy Bomber 7 and hit it for 3 damage, destroying it!
+Lush Heavy Bomber 9 fired at Crucio Station Fire Support Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 10.
+Crucio Station Fire Support Destroyer 3 fired at Lush Heavy Bomber 8 and hit it for 19 damage, destroying it!
+Lush Heavy Bomber 10 fired at Crucio Station Fire Support Destroyer 1 and hit it, but did no damage.
+Crucio Station Fire Support Destroyer 3 fired at Lush Heavy Bomber 9 and hit it for 16 damage, destroying it!
+Lush Heavy Bomber 11 fired at Crucio Station Fire Support Destroyer 1 and hit it, doing 2 damage. Remaining hull strength is 8.
+Crucio Station Fire Support Destroyer 3 fired at Lush Heavy Bomber 10 and hit it for 3 damage, destroying it!
+Lush Heavy Bomber 12 fired at Crucio Station Fire Support Destroyer 1 and hit it, doing 2 damage. Remaining hull strength is 6.
+Crucio Station Fire Support Destroyer 4 fired at Lush Heavy Bomber 11 and hit it for 5 damage, destroying it!
+Lush Heavy Bomber 13 fired at Crucio Station Fire Support Destroyer 1 and hit it, doing 2 damage. Remaining hull strength is 4.
+Crucio Station Fire Support Destroyer 4 fired at Lush Heavy Bomber 12 and hit it, doing 1 damage. Remaining hull strength is 2.
+Lush Heavy Bomber 14 fired at Crucio Station Fire Support Destroyer 1 and hit it, doing 1 damage. Remaining hull strength is 3.
+Crucio Station Fire Support Destroyer 4 fired at Lush Heavy Bomber 12 and hit it for 18 damage, destroying it!
+Lush Heavy Bomber 15 fired at Crucio Station Fire Support Destroyer 1 and hit it, doing 2 damage. Remaining hull strength is 1.
+Crucio Station Fire Support Destroyer 4 fired at Lush Heavy Bomber 13 and hit it for 14 damage, destroying it!
+Lush Heavy Bomber 16 fired at Crucio Station Fire Support Destroyer 1 and hit it for 1 damage, destroying it!
+Crucio Station Fire Support Destroyer 5 fired at Lush Heavy Bomber 14 and hit it for 9 damage, destroying it!
+Lush Heavy Bomber 17 fired at Crucio Station Fire Support Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 22.
+Crucio Station Fire Support Destroyer 5 fired at Lush Heavy Bomber 15 and hit it for 3 damage, destroying it!
+Lush Heavy Bomber 18 fired at Crucio Station Fire Support Destroyer 2 and hit it, but did no damage.
+Crucio Station Fire Support Destroyer 5 fired at Lush Heavy Bomber 16 and hit it for 15 damage, destroying it!
+Lush Heavy Bomber 19 fired at Crucio Station Fire Support Destroyer 2 and hit it, doing 3 damage. Remaining hull strength is 19.
+Crucio Station Fire Support Destroyer 5 fired at Lush Heavy Bomber 17 and hit it for 3 damage, destroying it!
+Lush Heavy Bomber 20 fired at Crucio Station Fire Support Destroyer 2 and hit it, but did no damage.
+Crucio Station Fire Support Destroyer 6 fired at Lush Heavy Bomber 18 and hit it, doing 2 damage. Remaining hull strength is 1.
+Lush Heavy Bomber 21 fired at Crucio Station Fire Support Destroyer 2 and hit it, doing 2 damage. Remaining hull strength is 17.
+Crucio Station Fire Support Destroyer 6 fired at Lush Heavy Bomber 18 and hit it for 1 damage, destroying it!
+Lush Heavy Bomber 22 fired at Crucio Station Fire Support Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 16.
+Crucio Station Fire Support Destroyer 6 fired at Lush Heavy Bomber 19 and hit it for 23 damage, destroying it!
+Lush Heavy Bomber 23 fired at Crucio Station Fire Support Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 15.
+Crucio Station Fire Support Destroyer 6 fired at Lush Heavy Bomber 20 and hit it for 4 damage, destroying it!
+Lush Heavy Bomber 24 fired at Crucio Station Fire Support Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 14.
+Crucio Station Fire Support Destroyer 7 fired at Lush Heavy Bomber 21 and hit it, doing 2 damage. Remaining hull strength is 1.
+Lush Heavy Bomber 25 fired at Crucio Station Fire Support Destroyer 2 and hit it, doing 3 damage. Remaining hull strength is 11.
+Crucio Station Fire Support Destroyer 7 fired at Lush Heavy Bomber 21 and hit it for 2 damage, destroying it!
+Lush Heavy Bomber 26 fired at Crucio Station Fire Support Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 10.
+Crucio Station Fire Support Destroyer 7 fired at Lush Heavy Bomber 22 and hit it, doing 2 damage. Remaining hull strength is 1.
+Lush Heavy Bomber 27 fired at Crucio Station Fire Support Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 9.
+Crucio Station Fire Support Destroyer 7 fired at Lush Heavy Bomber 22 and hit it for 2 damage, destroying it!
+Lush Heavy Bomber 28 fired at Crucio Station Fire Support Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 8.
+Crucio Station Fire Support Destroyer 8 fired at Lush Heavy Bomber 23 and hit it, doing 2 damage. Remaining hull strength is 1.
+Lush Heavy Bomber 29 fired at Crucio Station Fire Support Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 7.
+Crucio Station Fire Support Destroyer 8 fired at Lush Heavy Bomber 23 and hit it for 1 damage, destroying it!
+Lush Heavy Bomber 30 fired at Crucio Station Fire Support Destroyer 2 and hit it, doing 2 damage. Remaining hull strength is 5.
+Crucio Station Fire Support Destroyer 8 fired at Lush Heavy Bomber 24 but missed.
+Lush Heavy Bomber 31 fired at Crucio Station Fire Support Destroyer 2 and hit it, doing 1 damage. Remaining hull strength is 4.
+Crucio Station Fire Support Destroyer 8 fired at Lush Heavy Bomber 24 and hit it, doing 1 damage. Remaining hull strength is 2.
+Lush Heavy Bomber 32 fired at Crucio Station Fire Support Destroyer 2 and hit it, doing 2 damage. Remaining hull strength is 2.
+Crucio Station Fire Support Destroyer 9 fired at Lush Heavy Bomber 24 and hit it for 18 damage, destroying it!
+Lush Heavy Bomber 33 fired at Crucio Station Fire Support Destroyer 2 and hit it for 3 damage, destroying it!
+Crucio Station Fire Support Destroyer 9 fired at Lush Heavy Bomber 25 and hit it, doing 2 damage. Remaining hull strength is 1.
+Lush Heavy Bomber 34 fired at Crucio Station Fire Support Destroyer 3 and hit it, but did no damage.
+Crucio Station Fire Support Destroyer 9 fired at Lush Heavy Bomber 25 and hit it for 25 damage, destroying it!
+Lush Heavy Bomber 35 fired at Crucio Station Fire Support Destroyer 3 and hit it, doing 2 damage. Remaining hull strength is 21.
+Crucio Station Fire Support Destroyer 9 fired at Lush Heavy Bomber 26 and hit it, doing 1 damage. Remaining hull strength is 2.
+Lush Heavy Bomber 36 fired at Crucio Station Fire Support Destroyer 3 and hit it, doing 4 damage. Remaining hull strength is 17.
+Crucio Station Fire Support Destroyer 10 fired at Lush Heavy Bomber 26 and hit it for 6 damage, destroying it!
+Lush Heavy Bomber 37 fired at Crucio Station Fire Support Destroyer 3 and hit it, but did no damage.
+Crucio Station Fire Support Destroyer 10 fired at Lush Heavy Bomber 27 and hit it for 7 damage, destroying it!
+Lush Heavy Bomber 38 fired at Crucio Station Fire Support Destroyer 3 and hit it, doing 2 damage. Remaining hull strength is 15.
+Crucio Station Fire Support Destroyer 10 fired at Lush Heavy Bomber 28 and hit it for 11 damage, destroying it!
+Lush Heavy Bomber 39 fired at Crucio Station Fire Support Destroyer 3 and hit it, doing 3 damage. Remaining hull strength is 12.
+Crucio Station Fire Support Destroyer 10 fired at Lush Heavy Bomber 29 and hit it for 5 damage, destroying it!
+Lush Heavy Bomber 40 fired at Crucio Station Fire Support Destroyer 3 and hit it, doing 3 damage. Remaining hull strength is 9.
+Crucio Station Destroyer 1 fired at Lush Heavy Bomber 30 and hit it for 4 damage, destroying it!
+Lush Heavy Bomber 41 fired at Crucio Station Fire Support Destroyer 3 but missed.
+Crucio Station Destroyer 1 fired at Lush Heavy Bomber 31 and hit it for 3 damage, destroying it!
+Lush Heavy Bomber 42 fired at Crucio Station Fire Support Destroyer 3 and hit it, doing 1 damage. Remaining hull strength is 8.
+Crucio Station Destroyer 1 fired at Lush Heavy Bomber 32 and hit it for 18 damage, destroying it!
+Lush Heavy Bomber 43 fired at Crucio Station Fire Support Destroyer 3 and hit it, doing 2 damage. Remaining hull strength is 6.
+Crucio Station Destroyer 1 fired at Lush Heavy Bomber 33 and hit it, doing 2 damage. Remaining hull strength is 1.
+Lush Heavy Bomber 44 fired at Crucio Station Fire Support Destroyer 3 and hit it, doing 2 damage. Remaining hull strength is 4.
+Crucio Station Destroyer 2 fired at Lush Heavy Bomber 33 and hit it for 2 damage, destroying it!
+Crucio Station Destroyer 2 fired at Lush Heavy Bomber 34 and hit it for 3 damage, destroying it!
+Crucio Station Destroyer 2 fired at Lush Heavy Bomber 35 and hit it, doing 1 damage. Remaining hull strength is 2.
+Crucio Station Destroyer 2 fired at Lush Heavy Bomber 35 and hit it for 3 damage, destroying it!
+Crucio Station Destroyer 3 fired at Lush Heavy Bomber 36 and hit it, doing 1 damage. Remaining hull strength is 2.
+Crucio Station Destroyer 3 fired at Lush Heavy Bomber 36 and hit it for 8 damage, destroying it!
+Crucio Station Destroyer 3 fired at Lush Heavy Bomber 37 and hit it for 3 damage, destroying it!
+Crucio Station Destroyer 3 fired at Lush Heavy Bomber 38 and hit it for 6 damage, destroying it!
+Crucio Station Destroyer 4 fired at Lush Heavy Bomber 39 but missed.
+Crucio Station Destroyer 4 fired at Lush Heavy Bomber 39 and hit it for 24 damage, destroying it!
+Crucio Station Destroyer 4 fired at Lush Heavy Bomber 40 and hit it for 5 damage, destroying it!
+Crucio Station Destroyer 4 fired at Lush Heavy Bomber 41 and hit it for 12 damage, destroying it!
+Crucio Station Destroyer 5 fired at Lush Heavy Bomber 42 and hit it for 21 damage, destroying it!
+Crucio Station Destroyer 5 fired at Lush Heavy Bomber 43 and hit it for 9 damage, destroying it!
+Crucio Station Destroyer 5 fired at Lush Heavy Bomber 44 and hit it for 9 damage, destroying it!
+Attackers losses were 2 Fire Support Destroyer(s) and 350 personnel.
+Defenders losses were 44 Heavy Bomber(s) and 132 personnel.
+Defender lost no structures.
+Attacker gained 2422 prestige.
+Attacker lost 2372 prestige due to the difference in planetary status.
+Defender lost 1042 prestige.

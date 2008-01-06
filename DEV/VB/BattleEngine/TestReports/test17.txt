@@ -1,0 +1,15 @@
+Date: 6/30/2007 9:22:00 AM
+From: Aquarium
+To: Aquarium
+Subject: Combat Report A fleet of vessels from the planet 'Aquarium' attempted to destroy sensor structures at The Senate.
+The attacking force was detected before entering the system!
+Because The Senate is in a state of anger against Aquarium, its units will have a 5% offense bonus.
+Because Aquarium is in a state of anger against The Senate, its units will have a 5% offense bonus.
+The attacking force consisted of 49 Deep Recon Scout(s) 12 Scout(s) 6 "Judicator" Dreadnought(s) 12 Fire Support Destroyer(s) 115 Fighter Interceptor(s) 20 "Orca" Battleship(s) 1 "Terrapin" Carrier(s) 1 "Dragon" Mobile Assault Platform(s) 8 Battleship(s) 5 Light Carrier(s) 20 Heavy Bomber(s).
+The defending force consisted of 32 Orbital Minefield (Improved)(s) 5 Orbital Minefield(s) 8 Orbital Shield(s) 10 Satellites(s) 1 Orbital Construction Yard (Improved)(s) 1 Jumpgate(s) 61 Fire Support Destroyer(s) 13 Deep Recon Scout(s) 60 "Dagger" Heavy Fighter(s) 74 Advanced Interceptor(s) 10 Fighter Bomber(s) 75 Heavy Bomber(s) 1 "Fang" Fighter Bomber(s) .
+Attacker's losses were 115 Fighter Interceptor(s) 12 Scout(s) 49 Deep Recon Scout(s) 12 Fire Support Destroyer(s) 6 "Judicator" Dreadnought(s) and 13328 personnel.
+Defender's losses were 13 Deep Recon Scout(s) 61 Fire Support Destroyer(s) and 13100 personnel.
+Defender lost 5 Orbital Minefield(s) 32 Orbital Minefield (Improved)(s) 8 Orbital Shield(s) 1 Orbital Construction Yard (Improved)(s) 10 Satellites(s) 1 Jumpgate(s) .
+Attacker gained 21606 prestige.
+Attacker lost 14011 prestige due to the difference in planetary status.
+Defender lost 5308 prestige.
