@@ -20,12 +20,35 @@ Private intAttackShipType As Integer
 Private intAttackPreviousIndex As Integer
 Private strPreviousShipName As String
 Private strAttackPreviousShipName As String
+Private intDefenderShotsHit As Integer
+Private intDefenderShotsMiss As Integer
 
 Private Sub Class_Initialize()
     intShipType = 0
     intPreviousIndex = 0
     strPreviousShipName = ""
 End Sub
+
+Public Function GetHits()
+    GetHits = intDefenderShotsHit
+End Function
+
+Public Function GetMisses()
+    GetMisses = intDefenderShotsMiss
+End Function
+
+Public Function AddHit()
+    intDefenderShotsHit = intDefenderShotsHit + 1
+End Function
+
+Public Function AddMiss()
+    intDefenderShotsMiss = intDefenderShotsMiss + 1
+End Function
+
+Public Function ResetShots()
+    intDefenderShotsHit = 0
+    intDefenderShotsMiss = 0
+End Function
 
 Public Function ResetCounters()
     intShipType = 0
