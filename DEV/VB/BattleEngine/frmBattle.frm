@@ -1,6 +1,6 @@
 VERSION 5.00
 Begin VB.Form frmBattle 
-   Caption         =   "Battle v0.4 Alpha"
+   Caption         =   "Battle v0.5 Alpha"
    ClientHeight    =   10995
    ClientLeft      =   3315
    ClientTop       =   2670
@@ -2977,7 +2977,39 @@ Private Sub cmdTest_Click()
         Log "", ""
         Log "", "Attacker's losses were 50 Fighter Interceptor(s) 101 Advanced Interceptor(s) 74 Fighter Bomber(s) 31 Interdictor Frigate(s) and 3500 personnel."
         Log "", "Defender lost 2 Orbital Shield (Improved)(s) . "
-
+    
+    Case 27:
+        txtAttackerOffense.Text = 28
+        txtAttackerDefense.Text = 28
+        txtAttackerDurability.Text = 23
+        
+        txtDefenderOffense.Text = 28
+        txtDefenderDefense.Text = 70
+        txtDefenderDurability.Text = 30
+        
+        txtScout.Text = 3010
+        txtDRScout.Text = 1279
+        
+        txtStarbaseDEF.Text = 5
+        txtIMPODPDEF.Text = 2
+        txtIMPOMDEF.Text = 12
+        txtDrone.Text = 36
+        
+        txtAIDEF.Text = 14
+        txtHBDEF.Text = 533
+        txtDRScoutDEF.Text = 75
+        txtFSDDEF.Text = 606
+        txtDreadsDEF.Text = 90
+        txtHCDEF.Text = 8
+        
+        'Volleys
+        txtVolleys.Text = 5
+        'Attack Formation
+        optFighterScreen.Value = True
+        'Defense Formation
+        optFighterSpread.Value = True
+        
+        cmdFight_Click
     End Select
 End Sub
 
@@ -4531,8 +4563,11 @@ Private Function BattleEngine()
                 
                 'Add to our list
                 If (intOff <= 0) Then
+                    colAttacker.AddMiss
                     AddListItem "Attacker: " & attackerShipShooting.Name & " (" & intAttackerShipNbr & ") fired at " & defenderShipShot.Name & " (" & intDefenderShipNbr & ") but missed."
                 Else
+                    colAttacker.AddHit
+                    
                     If (defenderShipShot.Durability > 0) Then
                         AddListItem "Attacker: " & attackerShipShooting.Name & " (" & intAttackerShipNbr & ") fired at " & defenderShipShot.Name & " (" & intDefenderShipNbr & ") and hit it, doing " & intOff & " damage, Remaining hull strength is " & defenderShipShot.Durability & "."
                     Else
@@ -4722,14 +4757,25 @@ Private Function BattleEngine2()
     'Set the number of volleys
     intTotalvolleys = txtVolleys.Text
     
+    AddListItem "Attacking Units: " & colAttacker.Count
+    AddListItem "Defending Units: " & colDefender.Count
+    
     'first volley
     For intvolley = 1 To intTotalvolleys
+        If intvolley > 1 Then
+            AddListItem " "
+            AddListItem "Attacker Shots: " & colAttacker.GetHits & " (Total shots = " & (colAttacker.GetHits + colAttacker.GetMisses) & " Misses = " & colAttacker.GetMisses & ")"
+            AddListItem "Defender Shots: " & colDefender.GetHits & " (Total shots = " & (colDefender.GetHits + colDefender.GetMisses) & " Misses = " & colDefender.GetMisses & ")"
+        End If
+                
         'Reset all Weapons before a new volley starts
         AddListItem " "
         AddListItem "Volley number " & intvolley & ": "
         
         colDefender.ResetCounters
+        colDefender.ResetShots
         colAttacker.ResetCounters
+        colAttacker.ResetShots
         
         If intvolley > 1 Then
             ResetWeapons
@@ -4805,8 +4851,10 @@ Private Function BattleEngine2()
                 
                 'Add to our list
                 If (intOff <= 0) Then
+                    colAttacker.AddMiss
                     AddListItem "Attacker: " & attackerShipShooting.Name & " (" & intAttShootingTypeNbr & ") fired at " & defenderShipShot.Name & " (" & intDefShotTypeNbr & ") but missed."
                 Else
+                    colAttacker.AddHit
                     If (defenderShipShot.Durability > 0) Then
                         AddListItem "Attacker: " & attackerShipShooting.Name & " (" & intAttShootingTypeNbr & ") fired at " & defenderShipShot.Name & " (" & intDefShotTypeNbr & ") and hit it, doing " & intOff & " damage, Remaining hull strength is " & defenderShipShot.Durability & "."
                     Else
@@ -4961,6 +5009,11 @@ Private Function BattleEngine2()
         Next
     Next
     
+    'Last volley
+    AddListItem " "
+    AddListItem "Attacker Shots: " & colAttacker.GetHits & " (Total shots = " & (colAttacker.GetHits + colAttacker.GetMisses) & " Misses = " & colAttacker.GetMisses & ")"
+    AddListItem "Defender Shots: " & colDefender.GetHits & " (Total shots = " & (colDefender.GetHits + colDefender.GetMisses) & " Misses = " & colDefender.GetMisses & ")"
+            
     'Battle is done calculate and post results
     CalculateResult colAttacker, colDefender
     
@@ -5149,12 +5202,16 @@ Private Function DroneBattle(defendershipshooting As clsShip, attackerShipShot A
     'attackerShipShot.Durability = attackerShipShot.Durability - intOff
     'Add to our list
     If (intOff <= 0) Then
+        colDefender.AddMiss
         AddListItem "Defender: " & defendershipshooting.Name & " (" & intDefenderShipNbr & ") fired at " & attackerShipShot.Name & " (" & intAttackerShipNbr & ") but missed."
     Else
+        colDefender.AddHit
         If (attackerShipShot.Durability > 0) Then
             AddListItem "Defender: " & defendershipshooting.Name & " (" & intDefenderShipNbr & ") fired at " & attackerShipShot.Name & " (" & intAttackerShipNbr & ") and hit it, doing " & intOff & " damage, Remaining hull strength is " & attackerShipShot.Durability & "."
+            AddListItem "The drone self-destructed as part of it's attack run"
         Else
             AddListItem "Defender: " & defendershipshooting.Name & " (" & intDefenderShipNbr & ") fired at " & attackerShipShot.Name & " (" & intAttackerShipNbr & ") and hit it for " & intOff & " damage, destroying it!"
+            AddListItem "The drone self-destructed as part of it's attack run"
         End If
     End If
     
@@ -5594,7 +5651,10 @@ Private Sub cmdFight_Click()
     
     'Do the fighting
     'BattleEngine
+    
+    lstResult.Visible = False
     BattleEngine2
+    lstResult.Visible = True
     
     MousePointer = vbNormal
 End Sub
