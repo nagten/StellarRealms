@@ -7,78 +7,12 @@
 
 (function()
 {
-//	var scouturl = ['http://localhost/Murc/Scout/scout_internals.php?action=input&report='];
-//var scouturl = ['http://www.idsfadt.com/Cabal/Scout/scout_internals.php?action=input&report=','http://www.idsfadt.com/Murc/Scout/scout_internals.php?action=input&report='];
-	var scouturl = ['http://localhost/Cabal/Scout/scout_internals.php?action=input&report='];
-
-    /* Puts "text" on the windows clipboard.
-    * From: http://www.bigbold.com/snippets/posts/show/1080
-    */
-    function setClipboard(text)
-    {
-        var url = [
-            'data:text/html;charset=utf-8;base64,PGJvZHk+PC9ib2',
-            'R5PjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4KKGZ1',
-            'bmN0aW9uKGVuY29kZWQpe3ZhciBzd2ZfZGF0YSA9IFsKICdkYX',
-            'RhOmFwcGxpY2F0aW9uL3gtc2hvY2t3YXZlLWZsYXNoO2Jhc2U2',
-            'NCxRMWRUQjJ3JywKICdBQUFCNG5EUGdZbGpBd01qSTRNejAlMk',
-            'YlMkY5JTJGZTJaZkJnYUdhV3dNRE1uNUthJywKICdrTU10TjRH',
-            'ZGdaZ1NJTXdaWEZKYW01UUFFJTJCQm9iaTFCTG5uTXlDcFB6RW',
-            '9oU0dJJywKICdQRnAlMkZBeHNEREJRa3BGWkRGUUZGQ2d1eVM4',
-            'QXlqSTRBRVVCaXkwVndBJTNEJTNEJwpdLmpvaW4oIiIpOwpkb2',
-            'N1bWVudC5ib2R5LmlubmVySFRNTCA9IFsKICc8ZW1iZWQgc3Jj',
-            'PSInLHN3Zl9kYXRhLCciICcsCiAnRmxhc2hWYXJzPSJjb2RlPS',
-            'csZW5jb2RlZCwnIj4nLAogJzwvZW1iZWQ+JwpdLmpvaW4oIiIp',
-            'Owp9KSgi',
-            base64encode( encodeURIComponent(text) + '")</'+'script>')
-        ].join("");
-        var tmp = document.createElement("div");
-        tmp.innerHTML = [
-             '<iframe src="',url,'"'
-            ,' width="0" height="0">'
-            ,'</iframe>'
-        ].join("");
-        with(tmp.style){
-            position ="absolute";
-            left = "-10px";
-            top  = "-10px";
-            visibility = "hidden";
-        };
-        document.body.appendChild(tmp);
-        setTimeout(function(){document.body.removeChild(tmp)},1000);
-        function base64encode(str){
-            var Chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".split("");
-            var c1, c2, c3;
-            var buf = [];
-            var len = str.length;
-            var i = 0;
-            while(i < len){
-                c1 = str.charCodeAt(i) & 0xff;
-                c2 = str.charCodeAt(i+1);
-                c3 = str.charCodeAt(i+2);
-                buf.push(Chars[(c1 >> 2)]);
-                if(i+1 == len){
-                    buf.push(Chars[(c1 & 0x3) << 4],"==");
-                    break;
-                }
-                buf.push(Chars[((c1 & 0x3) << 4) | ((c2 & 0xF0) >> 4)]);
-                if(i+2 == len){
-                    buf.push(Chars[(c2 & 0xF) << 2],"=");
-                    break;
-                }
-                buf.push(
-                    Chars[((c2 & 0xF) << 2) | ((c3 & 0xC0) >> 6)],
-                    Chars[(c3 & 0x3F)]
-                );
-                i+=3;
-            }
-            return buf.join("")
-        }
-    }
+   	var scouturl = ['http://www.idsfadt.com/Cabal/Scout/scout_internals.php?action=input&report='];
+	var failedReports = 0;
 
     //Extract the usefull data from a scout report.
     function extractScoutMsg(msgToExtract,delimiter)
-	    {
+	{
 	        var msgExtd, msgDefenses;
 
 			//get date
@@ -90,7 +24,7 @@
 	        msgExtd += msgToExtract.childNodes[2].nodeValue.match(/From:\s+(.*)/)[1] + delimiter;
 
 			//get type strcutures or fleet recon
-			//GM_log(msgToExtract.childNodes[6].nodeValue.match(/to (.*) at/)[1] + delimiter);
+			//GM_log(msgToExtract.childNodes[8].nodeValue.match(/to (.*) at/)[1] + delimiter);
 			msgExtd += msgToExtract.childNodes[6].nodeValue.match(/to (.*) at/)[1] + delimiter;
 
 			//get planet
@@ -106,17 +40,23 @@
 	        }
 	        else
 	        {
-	            msgExtd += 'No defending forces were found.';
-	            // == 'No defending forces were found.'
+				//check for a failed scouting
+				msgDefenses = msgToExtract.innerHTML.replace(/\n/g, " ").match(/we have not heard from the fleet ([^.]*)\./);
+
+	            if (msgDefenses)
+	        	{
+					//Failed scouting
+					msgExtd += 'However, we have not heard from the fleet for their regular status updates';
+					failedReports++;
+				}
+				else
+				{
+					//No defending forces were found
+					msgExtd += 'No defending forces were found.';
+				}
+
 	        }
 	        return msgExtd;
-    }
-
-    //Event handler that sends the usefull data from a scout report to the clipboard.
-    function scoutToClipboard(ev)
-    {
-		//GM_log(ev.currentTarget.parentNode.nodeName);
-        setClipboard(extractScoutMsg(ev.currentTarget.parentNode,'\r\n'));
     }
 
     //Event handler that sends the usefull data from a scout report to the Scout Report Tool:
@@ -165,7 +105,6 @@
        	if (cellMsg.childNodes[6].nodeValue.match(/reconnoiter structures/) || cellMsg.childNodes[6].nodeValue.match(/conduct fleet reconnaissance/))
         {
             cellMsg.setAttribute('msgType', 'StructScout');
-            cellMsg.appendChild(createClickButton('StC' + i,'Scout to Clipboard',scoutToClipboard));
             cellMsg.appendChild(createClickButton('StD' + i,'Scout to Database',scoutToDatabase));
         }
     }
@@ -185,7 +124,6 @@
                                 '<tr><td width="100%" colspan="3" class="v11-cell-normal">' +
                                 ' <button id="multiSubmitScout-ScoutReportsSelAll">Select all scouts</button>' +
                                 ' <button id="multiSubmitScout-ScoutReportsSelNone">Deselect all scouts</button>' +
-                                ' <button id="multiSubmitScout-SendToCB">Copy to Clipboard</button>' +
                                 ' <button id="multiSubmitScout-SubmitToDB">Submit to DB</button>' +
 								' <button id="multiSubmitScout-SetPauseLength">Set Pause Length</button>' +
                                 '</td></tr>' +
@@ -196,7 +134,6 @@
         document.getElementById("multiSubmitScout-ScoutReportsSelAll").addEventListener('click', function () { selectAllScouts(true); }, false);
         document.getElementById("multiSubmitScout-ScoutReportsSelNone").addEventListener('click', function () { selectAllScouts(false); }, false);
         document.getElementById("multiSubmitScout-SubmitToDB").addEventListener('click', sendMultipleScoutToDB, false);
-        document.getElementById("multiSubmitScout-SendToCB").addEventListener('click', sendMultipleScoutsToClipBoard, false);
 		document.getElementById("multiSubmitScout-SetPauseLength").addEventListener('click', setPauseLengthOnDbSubmit, false);
     }
 
@@ -228,7 +165,6 @@
     function sendMultipleScoutToDB()
     {
         var checkboxes = document.getElementsByName("deleteBox");
-
         if (checkboxes)
         {
             if (checkboxes[scoutToDbArrayControl].checked)
@@ -241,6 +177,7 @@
 							var request = extractScoutMsg(checkboxes[scoutToDbArrayControl].parentNode.parentNode.childNodes[3].childNodes[6].parentNode,'<br>');
 
                         	request = scouturl[intI] + encodeURIComponent(request);
+                        	GM_log(request);
 							GM_xmlhttpRequest({
 								method: 'GET',
 								url: request,
@@ -260,9 +197,17 @@
 
          if (scoutToDbArrayControl == checkboxes.length && blnSend == true)
          {
-                alert(reportsSent+ " reports sent to the DB");
+                if (failedReports > 0)
+                {
+					alert(reportsSent+ " reports sent to the DB including " + failedReports + " failed scouting reports");
+				}
+				else
+				{
+					alert(reportsSent+ " reports sent to the DB");
+				}
 
                 //reset values
+                failedReports = 0;
                 scoutToDbArrayControl = 0;
                 reportsSent = 0;
          }
@@ -274,42 +219,6 @@
          {
             window.setTimeout(sendMultipleScoutToDB, pauseLengthBetweenReports);
          }
-    }
-
-    function sendMultipleScoutsToClipBoard()
-    {
-        var checkboxes = document.getElementsByName("deleteBox");
-        var blnSend = false;
-
-        if (checkboxes)
-        {
-            var request = "";
-
-            for (var i=0; i<checkboxes.length; i++)
-            {
-                if (checkboxes[i].checked)
-                {
-                    //just an extra test
-                    if (checkboxes[i].parentNode.parentNode.childNodes[3].childNodes[6].nodeValue.match(/reconnoiter structures/) || checkboxes[i].parentNode.parentNode.childNodes[3].childNodes[6].nodeValue.match(/conduct fleet reconnaissance/))
-                    {
-                        request = request + extractScoutMsg(checkboxes[i].parentNode.parentNode.childNodes[3].childNodes[6].parentNode,'\r\n');
-                        request = request + '\r\n\r\n'
-                        blnSend = true;
-                    }
-                }
-            }
-
-            setClipboard(request);
-
-            if (blnSend)
-            {
-                alert("Reports copied to clipboard");
-            }
-            else
-            {
-                alert("Nothing copied");
-            }
-        }
     }
 
     initTable();
