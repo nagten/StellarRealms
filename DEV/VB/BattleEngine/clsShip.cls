@@ -61,10 +61,10 @@ End Property
 Public Property Get Weapons() As Integer
 End Property
 
-Public Property Get Durability() As Integer
+Public Property Get Durability() As Single
 End Property
 
-Public Property Let Durability(ByVal intDurability As Integer)
+Public Property Let Durability(ByVal intDurability As Single)
 End Property
 
 Public Property Get OffCap() As Integer
