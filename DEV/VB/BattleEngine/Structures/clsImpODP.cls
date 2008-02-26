@@ -19,8 +19,8 @@ Private m_intShips As Integer
 Private m_intShipsLeft As Integer
 Private m_intWeapons As Integer
 Private m_intWeaponsLeft As Integer
-Private m_intDurability As Integer
-Private m_intBaseDurability As Integer
+Private m_sngDurability As Single
+Private m_sngBaseDurability As Single
 Private m_intOffCap As Integer
 Private m_intOffFight As Integer
 Private m_intDefCap As Integer
@@ -37,8 +37,8 @@ Private Sub Class_Initialize()
     m_strName = "Orbital Defense Platform Improved"
     m_intWeapons = 5
     m_intWeaponsLeft = 5
-    m_intDurability = 70
-    m_intBaseDurability = 70
+    m_sngDurability = 70
+    m_sngBaseDurability = 70
     m_intOffCap = 20
     m_intOffFight = 20
     m_intOffStruct = 0
@@ -77,11 +77,11 @@ Private Property Get clsShip_Prestige() As Integer
 End Property
 
 Private Function clsShip_ResetDurability() As Variant
-    m_intDurability = m_intBaseDurability
+    m_sngDurability = m_sngBaseDurability
 End Function
 
 Private Function clsShip_Destroyed() As Boolean
-    If m_intDurability < 1 Then
+    If m_sngDurability < 1 Then
         clsShip_Destroyed = True
     Else
         clsShip_Destroyed = False
@@ -108,12 +108,12 @@ Public Property Let clsShip_DefFight(ByVal RHS As Integer)
     m_intDefFight = RHS
 End Property
 
-Public Property Get clsShip_Durability() As Integer
-    clsShip_Durability = m_intDurability
+Public Property Get clsShip_Durability() As Single
+    clsShip_Durability = m_sngDurability
 End Property
 
-Public Property Let clsShip_Durability(ByVal RHS As Integer)
-    m_intDurability = RHS
+Public Property Let clsShip_Durability(ByVal RHS As Single)
+    m_sngDurability = RHS
 End Property
 
 Public Property Get clsShip_Name() As String
