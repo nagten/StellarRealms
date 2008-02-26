@@ -19,6 +19,9 @@ var ageThreshold = GM_getValue('ageThreshold', 72);
 	if (scoutType < 0 ) GM_setValue('reconnaiterType', 0); //Fleet recon //|| > 2
 	if (scoutType == 1) GM_setValue('reconnaiterType', 1); //Struct recon
 	if (scoutType == 2) GM_setValue('reconnaiterType', 2); //Both, fleet and structure recon
+
+	var scoutType = GM_getValue('inputNumberOfShips', 1);
+	if (scoutType < 0 ) GM_setValue('inputNumberOfShips', 1); //Number of ships to use
 }
 
 function initTable()
@@ -33,6 +36,7 @@ function initTable()
 							'<label for="multiScout-OptReconnaiterType2"><input type="radio" name="multiScout-OptReconnaiterType" value="2" id="multiScout-OptReconnaiterType2"> Both</label>' +
 							'<label for="multiScout-OptTypeScout0"><input type="radio" name="multiScout-OptTypeScout" value="0" id="multiScout-OptTypeScout0"> Scout</label>' +
 							'<label for="multiScout-OptTypeScout1"><input type="radio" name="multiScout-OptTypeScout" value="1" id="multiScout-OptTypeScout1"> Deep Recon</label>' +
+							'<label for="multiScout-InNumberOfShips0"><input type="text" name="multiScout-InNumberOfShips" value="1" size = "4" id="multiScout-InNumberOfShips0"> Number of ships</label>' +
 							'  <button id="multiScout-OptAgeThreshold">Highlight threshold</button>' +
 							'</td></tr>' +
 							'<tr id="multiScout-PlanetAddRow"><td width="100%" colspan="3" class="v11-cell-normal">' +
@@ -63,6 +67,8 @@ function initTable()
 	document.getElementById("multiScout-OptReconnaiterType0").addEventListener('click', function () { GM_setValue('reconnaiterType', 0); }, false);
 	document.getElementById("multiScout-OptReconnaiterType1").addEventListener('click', function () { GM_setValue('reconnaiterType', 1); }, false);
 	document.getElementById("multiScout-OptReconnaiterType2").addEventListener('click', function () { GM_setValue('reconnaiterType', 2); }, false);
+
+	//document.getElementById("multiScout-InNumberOfShips0").addEventListener('click', function () { GM_setValue('inputNumberOfShips', 1); }, false);
 
 	document.getElementById("multiScout-OptAgeThreshold").addEventListener('click', function ()
 	{GM_setValue('scoutType', prompt("Highlight planets that haven't been scouted for how many turns? (Changes take effect after refresh.)", GM_getValue('ageThreshold', ageThreshold))); }, false);
@@ -109,15 +115,18 @@ function addAllPlanets()
 {
 	//Add planet
 	//greasemonkey.scriptvals.tag:SRMultiScout,2006-11-27:SRMultiScout/SR Multi Scout.planets = ",1,20,30"
+	var planets = document.getElementById("multiScout-PlanetList").options;
 	var planetListLength = document.getElementById("multiScout-PlanetList").length;
 	var planetsList = ",";
 
-	//Build list we need to add we just create a list of planets form 0 to planetListLength
-	//,1,2,3,4,5, ...
+	//Build list
 	for (var intI=1; intI < planetListLength; intI++)
 	{
+		//Get the PlanetID it is stored in the option list
+		planetsList = planetsList + planets[intI].value;
 
-		planetsList = planetsList + intI;
+		var curTime = new Date();
+		GM_setValue('planetDate-'+planets[intI].value, Math.floor(curTime.getTime()/1200000) - ageThreshold);
 
 		if (planetListLength != intI + 1)
 		{
@@ -127,16 +136,8 @@ function addAllPlanets()
 
 	GM_setValue('planets', planetsList);
 
-	//Add when we last scouted those planets
-	//greasemonkey.scriptvals.tag:SRMultiScout,2006-11-27:SRMultiScout/SR Multi Scout.planetDate-12 = "969591"
-	var curTime = new Date();
-	var ageTime = Math.floor(curTime.getTime()/1200000) - ageThreshold;
-
-	for (var intI=1; intI < planetListLength; intI++)
-	{
-		GM_setValue('planetDate-'+ intI, ageTime);
-		addRow(intI, true);
-	}
+	//Renew list
+	addPlanets();
 }
 
 function addRow(planetID, insertAtEnd)
@@ -169,7 +170,7 @@ function addRow(planetID, insertAtEnd)
 		if (planets[intI].value == planetID)
 		{
 			var tempBold = document.createElement("b");
-			tempBold.appendChild(document.createTextNode(planets[intI].text + ": "));
+			tempBold.appendChild(document.createTextNode(planets[intI].text + " (" + planetID + "): "));
 			planetCell.appendChild(tempBold);
 
 			//to exit loop
@@ -268,7 +269,6 @@ function deletePlanet(planetID)
 	{
 		if (planetIDs[intI] == planetID)
 		{
-			GM_log(intI);
 			planetIDs.splice(intI,1);
 			//to exit our loop
 			intI = planetIDsLength;
@@ -288,7 +288,7 @@ function sendScoutWithUrl(postdata, planetID)
 		method: 'POST',
 		url: 'http://sr.primeaxiom.com/fleets_deploy2.asp',
 		headers: {
-			'User-agent': 'Firefox/1.5.0.8',
+			'User-agent': 'Firefox/2.0.0.12',
 			'Content-type': 'application/x-www-form-urlencoded',
 		},
 		data: postdata,
@@ -352,13 +352,14 @@ function sendScoutWithUrl(postdata, planetID)
 function sendScout(planetID)
 {
 	var postdata = '';
+	var numberOFShips = document.getElementById("multiScout-InNumberOfShips0").value;
 
 	//We send out the scout
 	if (GM_getValue('reconnaiterType',0) == 0)
 	{
 		//Reconnaiter Fleet
 		postdata = "AttackTypeID=6"; //scouting
-		postdata = postdata + "&Unit_"+(5+GM_getValue('scoutType',0))+"=1";
+		postdata = postdata + "&Unit_"+(5+GM_getValue('scoutType',0))+"="+numberOFShips;
 		postdata = postdata + "&TargetID="+planetID;
 
 		sendScoutWithUrl(postdata, planetID);
@@ -367,7 +368,7 @@ function sendScout(planetID)
 	{
 		//Reconnaiter Structures
 		postdata = "AttackTypeID=7"; //scouting
-		postdata = postdata + "&Unit_"+(5+GM_getValue('scoutType',0))+"=1";
+		postdata = postdata + "&Unit_"+(5+GM_getValue('scoutType',0))+"="+numberOFShips;
 		postdata = postdata + "&TargetID="+planetID;
 
 		sendScoutWithUrl(postdata, planetID);
@@ -376,14 +377,14 @@ function sendScout(planetID)
 	{
 		//Reconnaiter Both structure and Fleet
 		postdata = "AttackTypeID=6"; //scouting
-		postdata = postdata + "&Unit_"+(5+GM_getValue('scoutType',0))+"=1";
+		postdata = postdata + "&Unit_"+(5+GM_getValue('scoutType',0))+"="+numberOFShips;
 		postdata = postdata + "&TargetID="+planetID;
 
 		//Fleet
 		sendScoutWithUrl(postdata, planetID);
 
 		postdata = "AttackTypeID=7"; //scouting
-		postdata = postdata + "&Unit_"+(5+GM_getValue('scoutType',0))+"=1";
+		postdata = postdata + "&Unit_"+(5+GM_getValue('scoutType',0))+"="+numberOFShips;
 		postdata = postdata + "&TargetID="+planetID;
 
 		//Structure
