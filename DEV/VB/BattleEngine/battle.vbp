@@ -75,6 +75,7 @@ Class=clsImpSat; Structures\clsImpSat.cls
 Class=clsMaelstrom; Ships\clsMaelstrom.cls
 Class=clsSandstorm; Ships\clsSandstorm.cls
 Class=clsMonolith; Structures\clsMonolith.cls
+Module=Battlesim; battlesim.bas
 IconForm="frmBattle"
 Startup="frmBattle"
 HelpFile=""
