@@ -2,8 +2,8 @@ VERSION 5.00
 Begin VB.Form frmBattle 
    Caption         =   "Battle v0.5 Alpha"
    ClientHeight    =   10995
-   ClientLeft      =   3315
-   ClientTop       =   2670
+   ClientLeft      =   8715
+   ClientTop       =   3285
    ClientWidth     =   14400
    LinkTopic       =   "Form1"
    ScaleHeight     =   10995
@@ -11,9 +11,9 @@ Begin VB.Form frmBattle
    Begin VB.Frame frmSurStruct 
       Caption         =   "Surface Structures"
       Height          =   2415
-      Left            =   3600
+      Left            =   3240
       TabIndex        =   175
-      Top             =   8280
+      Top             =   8400
       Width           =   2655
       Begin VB.TextBox txtMonolith 
          Height          =   285
@@ -143,10 +143,20 @@ Begin VB.Form frmBattle
       TabIndex        =   0
       Top             =   0
       Width           =   14295
+      Begin VB.ComboBox cmbFormula 
+         Height          =   315
+         ItemData        =   "frmBattle.frx":0008
+         Left            =   12960
+         List            =   "frmBattle.frx":000A
+         Style           =   2  'Dropdown List
+         TabIndex        =   236
+         Top             =   9840
+         Width           =   1215
+      End
       Begin VB.Frame frmDrone 
          Caption         =   "Drones"
          Height          =   615
-         Left            =   3600
+         Left            =   3240
          TabIndex        =   233
          Top             =   7680
          Width           =   2655
@@ -213,7 +223,7 @@ Begin VB.Form frmBattle
       Begin VB.Frame frmRatings 
          Caption         =   "Ratings"
          Height          =   1815
-         Left            =   6360
+         Left            =   6000
          TabIndex        =   192
          Top             =   8400
          Width           =   2655
@@ -331,9 +341,9 @@ Begin VB.Form frmBattle
       End
       Begin VB.ListBox lstResult 
          Height          =   2010
-         ItemData        =   "frmBattle.frx":0008
+         ItemData        =   "frmBattle.frx":000C
          Left            =   6360
-         List            =   "frmBattle.frx":000A
+         List            =   "frmBattle.frx":000E
          MultiSelect     =   2  'Extended
          TabIndex        =   191
          Top             =   6360
@@ -375,14 +385,22 @@ Begin VB.Form frmBattle
       Begin VB.Frame frmAttackFormation 
          Caption         =   "Attack Formation"
          Height          =   2415
-         Left            =   9120
+         Left            =   8760
          TabIndex        =   164
          Top             =   8400
-         Width           =   1815
+         Width           =   2175
+         Begin VB.CheckBox chkRandom 
+            Caption         =   "Random"
+            Height          =   255
+            Left            =   1080
+            TabIndex        =   237
+            Top             =   2040
+            Width           =   975
+         End
          Begin VB.OptionButton optStructureRecon 
             Caption         =   "Structure recon"
             Height          =   255
-            Left            =   240
+            Left            =   120
             TabIndex        =   218
             Top             =   1680
             Width           =   1455
@@ -390,7 +408,7 @@ Begin VB.Form frmBattle
          Begin VB.OptionButton optSensorBlind 
             Caption         =   "Sensor Blind"
             Height          =   255
-            Left            =   240
+            Left            =   120
             TabIndex        =   213
             Top             =   960
             Width           =   1335
@@ -398,7 +416,7 @@ Begin VB.Form frmBattle
          Begin VB.OptionButton optFleetRecon 
             Caption         =   "Fleet recon"
             Height          =   255
-            Left            =   240
+            Left            =   120
             TabIndex        =   212
             Top             =   1320
             Width           =   1335
@@ -406,15 +424,15 @@ Begin VB.Form frmBattle
          Begin VB.OptionButton optBombard 
             Caption         =   "Bombard"
             Height          =   255
-            Left            =   240
+            Left            =   120
             TabIndex        =   208
             Top             =   2040
-            Width           =   1335
+            Width           =   975
          End
          Begin VB.OptionButton optFighterScreen 
             Caption         =   "Fighter Screen"
             Height          =   255
-            Left            =   240
+            Left            =   120
             TabIndex        =   167
             Top             =   600
             Width           =   1335
@@ -422,7 +440,7 @@ Begin VB.Form frmBattle
          Begin VB.OptionButton optNormal 
             Caption         =   "Normal"
             Height          =   255
-            Left            =   240
+            Left            =   120
             TabIndex        =   166
             Top             =   240
             Value           =   -1  'True
@@ -2046,6 +2064,16 @@ Private intAttackerDefense As Integer
 Private intAttackerDurability As Integer
 Private DEV As Boolean
 
+Private sngRandomfactor As Single
+Private sngRandomDropOffRatio As Single
+Private sngCriticalHitRatio As Single
+Private strLogFile As String
+
+
+Private Sub cmbFormula_LostFocus()
+    WriteINIFile
+End Sub
+
 Private Sub cmdClearAttacker_Click()
     txtScout.Text = "0"
     txtDRScout.Text = "0"
@@ -2847,6 +2875,7 @@ Private Sub cmdTest_Click()
         txtVolleys.Text = 3
         'Attack Formation
         optBombard.Value = True
+        chkRandom.Value = 0
         'Defense Formation
         optStandard.Value = True
         
@@ -2868,6 +2897,7 @@ Private Sub cmdTest_Click()
         txtVolleys.Text = 3
         'Attack Formation
         optBombard.Value = True
+        chkRandom.Value = 0
         'Defense Formation
         optStandard.Value = True
         
@@ -2900,6 +2930,7 @@ Private Sub cmdTest_Click()
         txtVolleys.Text = 3
         'Attack Formation
         optBombard.Value = True
+        chkRandom.Value = 0
         'Defense Formation
         optStandard.Value = True
         
@@ -2925,6 +2956,7 @@ Private Sub cmdTest_Click()
         txtVolleys.Text = 1
         'Attack Formation
         optBombard.Value = True
+        chkRandom.Value = 0
         'Defense Formation
         optStandard.Value = True
         
@@ -3007,13 +3039,237 @@ Private Sub cmdTest_Click()
         'Attack Formation
         optFighterScreen.Value = True
         'Defense Formation
-        optFighterSpread.Value = True
+        optStandard.Value = True
         
         cmdFight_Click
+        
+        
+        Log "", ""
+        Log "", "Attacker's losses were 3010 Scout(s) 1279 Deep Recon Scout(s) and 104215 personnel."
+        Log "", "Defender lost 12 Orbital Minefield (Improved)(s) 2 Orbital Defense Platform (Improved)(s) 5 Starbase(s) 1 Remote Sensor Array(s)"
+    
+    Case 28:
+        txtAttackerOffense.Text = 0
+        txtAttackerDefense.Text = 0
+        txtAttackerDurability.Text = 0
+        
+        txtDefenderOffense.Text = 0
+        txtDefenderDefense.Text = 0
+        txtDefenderDurability.Text = 0
+        
+        txtHB.Text = 60
+        txtFB.Text = 30
+        txtLC.Text = 6
+        
+        txtSDB.Text = 15
+        
+        'Volleys
+        txtVolleys.Text = 3
+        'Attack Formation
+        optBombard.Value = True
+        chkRandom.Value = 1
+        'Defense Formation
+        optStandard.Value = True
+        
+        cmdFight_Click
+        
+        Log "", ""
+        Log "", "Attacker's losses were 30 Fighter Bomber(s) 60 Heavy Bomber(s) 6 Light Carrier(s) and 5520 personnel."
+        Log "", "Defender lost 1 Surface Defense Battery(s) ."
+   
+    Case 29:
+        txtAttackerOffense.Text = 25
+        txtAttackerDefense.Text = 0
+        txtAttackerDurability.Text = 10
+        
+        txtDefenderOffense.Text = 0
+        txtDefenderDefense.Text = 0
+        txtDefenderDurability.Text = 0
+
+        txtDreads.Text = 2
+        txtBats.Text = 28
+        
+        txtOMDEF.Text = 66
+        txtSSG.Text = 20
+        
+        'Volleys
+        txtVolleys.Text = 3
+        'Attack Formation
+        optBombard.Value = True
+        chkRandom.Value = 1
+        'Defense Formation
+        optStandard.Value = True
+        
+        cmdFight_Click
+        
+        Log "", ""
+        Log "", "Attacker's losses were 10 Battleship(s) 2 Dreadnought(s) and 19600 personnel."
+        Log "", "Defender lost 66 Orbital Minefield(s) 7 Surface Shield Generator(s) "
+        
+    Case 30:
+        txtAttackerOffense.Text = 0
+        txtAttackerDefense.Text = 0
+        txtAttackerDurability.Text = 0
+        
+        txtDefenderOffense.Text = 0
+        txtDefenderDefense.Text = 0
+        txtDefenderDurability.Text = 0
+        
+        txtGoliath.Text = 50
+        
+        txtIMPSDB.Text = 22
+        
+        'Volleys
+        txtVolleys.Text = 3
+        'Attack Formation
+        optBombard.Value = True
+        chkRandom.Value = 1
+        'Defense Formation
+        optStandard.Value = True
+        
+        cmdFight_Click
+        
+        Log "", ""
+        Log "", "Attacker's losses were 13 Goliath Battleship(s) and 23400 personnel"
+        Log "", "Defender lost 22 Surface Defense Battery (Improved)(s)"
+        
+    Case 31:
+        txtAttackerOffense.Text = 35
+        txtAttackerDefense.Text = 75
+        txtAttackerDurability.Text = 35
+        
+        txtDefenderOffense.Text = 35
+        txtDefenderDefense.Text = 50
+        txtDefenderDurability.Text = 60
+        
+        txtGoliath.Text = 40
+        txtDreads.Text = 30
+        
+        txtSSG.Text = 2
+        txtIMPSSG.Text = 10
+        txtIMPSDB.Text = 18
+        
+        'Volleys
+        txtVolleys.Text = 3
+        'Attack Formation
+        optBombard.Value = True
+        chkRandom.Value = 1
+        'Defense Formation
+        optStandard.Value = True
+        
+        cmdFight_Click
+        
+        Log "", ""
+        Log "", "Attacker's losses were 30 Goliath Battleship(s) and 54000 personnel."
+        Log "", "Defender lost 8 Surface Shield Generator (Improved)(s)"
+        
+    Case 32:
+        txtAttackerOffense.Text = 0
+        txtAttackerDefense.Text = 0
+        txtAttackerDurability.Text = 0
+        
+        txtDefenderOffense.Text = 0
+        txtDefenderDefense.Text = 0
+        txtDefenderDurability.Text = 0
+        
+        txtMaelstrom.Text = 8
+        txtDragon.Text = 8
+        txtAnvil.Text = 5
+        
+        txtSSG.Text = 3
+        txtIMPSSG.Text = 3
+        txtIMPSDB.Text = 16
+        
+        'Volleys
+        txtVolleys.Text = 3
+        'Attack Formation
+        optBombard.Value = True
+        chkRandom.Value = 1
+        'Defense Formation
+        optStandard.Value = True
+        
+        cmdFight_Click
+        
+        Log "", ""
+        Log "", "Attacker's losses were 6 Dragon Mobile Assault Platform(s) 8 Maelstrom Siege Platform(s) and 40800 personnel."
+        Log "", "Defender lost 2 Surface Shield Generator(s) 3 Surface Shield Generator (Improved)(s) "
+        
+    Case 33:
+        txtAttackerOffense.Text = 40
+        txtAttackerDefense.Text = 70
+        txtAttackerDurability.Text = 35
+        
+        txtDefenderOffense.Text = 35
+        txtDefenderDefense.Text = 35
+        txtDefenderDurability.Text = 35
+        
+        txtAegis.Text = 30
+        txtDragon.Text = 38
+        txtAnvil.Text = 1
+        txtDreads.Text = 149
+        txtBats.Text = 4
+    
+        txtIMPSSG.Text = 45
+        txtIMPSDB.Text = 54
+        
+        'Volleys
+        txtVolleys.Text = 3
+        'Attack Formation
+        optBombard.Value = True
+        chkRandom.Value = 1
+        'Defense Formation
+        optStandard.Value = True
+        
+        cmdFight_Click
+        
+        Log "", ""
+        Log "", "Attacker's losses were 1 Anvil Battleship(s) 30 Aegis Mobile Shield(s) 24 Dragon Mobile Assault Platform(s) and 98900 personnel."
+        Log "", "Defender lost 12 Surface Defense Battery (Improved)(s) 45 Surface Shield Generator (Improved)(s) "
+
+    Case 34:
+        txtAttackerOffense.Text = 40
+        txtAttackerDefense.Text = 70
+        txtAttackerDurability.Text = 35
+        
+        txtDefenderOffense.Text = 35
+        txtDefenderDefense.Text = 35
+        txtDefenderDurability.Text = 35
+        
+        txtAegis.Text = 6
+        txtDragon.Text = 14
+        txtDreads.Text = 206
+        txtBats.Text = 38
+        txtFSD.Text = 115
+    
+        txtSSG.Text = 32
+        txtIMPSSG.Text = 20
+        txtIMPSDB.Text = 53
+        
+        'Volleys
+        txtVolleys.Text = 3
+        'Attack Formation
+        optBombard.Value = True
+        chkRandom.Value = 1
+        'Defense Formation
+        optStandard.Value = True
+        
+        cmdFight_Click
+        
+        Log "", ""
+        Log "", "Attacker's losses were 59 Dreadnought(s) 6 Aegis Mobile Shield(s) 14 Dragon Mobile Assault Platform(s) and 151400 personnel"
+        Log "", "Defender lost 53 Surface Defense Battery (Improved)(s) 32 Surface Shield Generator(s) 20 Surface Shield Generator (Improved)(s) 1 Barracks(s) 1 Barracks (Veteran)(s) 24 Manufacturing Plant (Improved)(s) "
+
     End Select
 End Sub
 
 Private Sub Form_Load()
+    'Fill the formula combobx
+    cmbFormula.AddItem "Base", 0
+    cmbFormula.AddItem "Metallikov", 1
+
+    ReadINIFile
+    
+    'Move the window in the middle
     Me.Move (Screen.Width - Me.Width) \ 2, (Screen.Height - Me.Height) \ 2
     
     DEV = False
@@ -3838,14 +4094,14 @@ Private Sub AddSurfaceStructures(Optional blnFront As Boolean = False)
         AddToDefCollection defenderShip, blnFront
     Next intI
     
-    For intI = 1 To txtIMPSDB.Text
-        Set defenderShip = New clsImpSDB
+    For intI = 1 To txtSDB.Text
+        Set defenderShip = New clsSDB
 
         AddToDefCollection defenderShip, blnFront
     Next intI
     
-    For intI = 1 To txtSDB.Text
-        Set defenderShip = New clsSDB
+    For intI = 1 To txtIMPSDB.Text
+        Set defenderShip = New clsImpSDB
 
         AddToDefCollection defenderShip, blnFront
     Next intI
@@ -3856,15 +4112,15 @@ Private Sub AddSurfaceStructures(Optional blnFront As Boolean = False)
         AddToDefCollection defenderShip, blnFront
     Next intI
     
-    For intI = 1 To txtIMPSSG.Text
-        Set defenderShip = New clsImpSSG
-        
+     For intI = 1 To txtSSG.Text
+        Set defenderShip = New clsSSG
+
         AddToDefCollection defenderShip, blnFront
     Next intI
     
-    For intI = 1 To txtSSG.Text
-        Set defenderShip = New clsSSG
-
+    For intI = 1 To txtIMPSSG.Text
+        Set defenderShip = New clsImpSSG
+        
         AddToDefCollection defenderShip, blnFront
     Next intI
 
@@ -4358,87 +4614,175 @@ Private Function DBprintDef(defendershipshooting As clsShip, intDefenderShipShoo
     End If
 End Function
 
-Private Function BattleResult(objAttacker As clsShip, objDefender As clsShip) As Integer
-    Dim sngRand1 As Single
-    Dim sngRand2 As Single
-    Dim sngOffense As Single
-    Dim sngDefense As Single
+Private Function BattleResult(objAttacker As clsShip, objDefender As clsShip) As Single
+    Dim sngBaseDamage As Single
     Dim sngResult As Single
 
-    'sngRand1 = Rand(0.1, 0.5)
-
-    If (objAttacker.ShipType = 0) Then 'Capital
-        
-        If (objDefender.SizeRank > 30) Then
-            'higher change to hit
-            If (objAttacker.Name = "Stinger Drone") Then
-                sngRand1 = Rand(0.1, 0.45)
-            Else
-                sngRand1 = Rand(0.4, 0.8)
-            End If
-        Else
-            sngRand1 = Rand(0.1, 0.45)
-        End If
-        
-        If (objDefender.ShipType = 0) Then 'Capital
-            sngOffense = objAttacker.OffCap / objDefender.DefCap
-            sngResult = sngOffense * objAttacker.OffCap * sngRand1
-        ElseIf (objDefender.ShipType = 1) Then 'fighter
-            sngOffense = objAttacker.OffFight / objDefender.DefCap
-            sngResult = sngOffense * objAttacker.OffCap * sngRand1
-        ElseIf (objDefender.ShipType = 2) Then 'structure
-            sngOffense = objAttacker.OffStruct / objDefender.DefCap
-            sngResult = sngOffense * objAttacker.OffCap * sngRand1
-        End If
-        
-  '      If (objAttacker.Name = "Stinger Drone") Then
-            'Drones explode one time and they always do 5 damage
-   '         sngResult = 5 * Rand(0.1, 0.5)
-   '     End If
-    ElseIf (objAttacker.ShipType = 1) Then 'fighter
-        If (objDefender.ShipType = 0) Then 'Capital
-        
+    If cmbFormula.ListIndex = 0 Then
+        'Base formula
+    
+        Dim sngRand1 As Single
+        Dim sngRand2 As Single
+    
+        If (objAttacker.ShipType = 0) Then
+            'Attacker is a Capital ship
+            
+            'Determine random number based on sizerank
             If (objDefender.SizeRank > 30) Then
-                'higher change to hit
-                sngRand1 = Rand(2.2, 5)
+                'Higher change to hit
+                'TODO check and remove drone code
+                If (objAttacker.Name = "Stinger Drone") Then
+                    sngRand1 = Rand(0.1, 0.45)
+                Else
+                    sngRand1 = Rand(0.4, 0.8)
+                End If
             Else
-                sngRand1 = Rand(0.4, 2) '0.4
+                sngRand1 = Rand(0.1, 0.45)
             End If
             
-            sngOffense = objAttacker.OffCap / objDefender.DefFight
-            sngResult = sngOffense * objAttacker.OffCap * sngRand1
-        ElseIf (objDefender.ShipType = 1) Then 'fighter
-            sngRand1 = Rand(0.1, 1)
-            sngOffense = objAttacker.OffFight / objDefender.DefFight
-            sngResult = sngOffense * objAttacker.OffCap * sngRand1
-        ElseIf (objDefender.ShipType = 2) Then 'structure
-            sngRand1 = Rand(0.1, 1)
-            sngOffense = objAttacker.OffStruct / objDefender.DefFight
-            sngResult = sngOffense * objAttacker.OffCap * sngRand1
+            'Use the correct offense defense values
+            If (objDefender.ShipType = 0) Then 'Capital
+                sngBaseDamage = objAttacker.OffCap / objDefender.DefCap
+                sngResult = sngBaseDamage * objAttacker.OffCap * sngRand1
+            ElseIf (objDefender.ShipType = 1) Then 'fighter
+                sngBaseDamage = objAttacker.OffFight / objDefender.DefCap
+                sngResult = sngBaseDamage * objAttacker.OffCap * sngRand1
+            ElseIf (objDefender.ShipType = 2) Then 'structure
+                sngBaseDamage = objAttacker.OffStruct / objDefender.DefCap
+                sngResult = sngBaseDamage * objAttacker.OffCap * sngRand1
+            End If
+            
+        ElseIf (objAttacker.ShipType = 1) Then
+            'Attacker is a Fighter
+            
+            'Determine random number based on sizerank
+            If (objDefender.ShipType = 0) Then 'Capital
+                'Determine random number based on sizerank
+                If (objDefender.SizeRank > 30) Then
+                    'Higher change to hit
+                    sngRand1 = Rand(2.2, 5)
+                Else
+                    sngRand1 = Rand(0.4, 2) '0.4
+                End If
+            Else
+                sngRand1 = Rand(0.1, 1)
+            End If
+            
+            If (objDefender.ShipType = 0) Then 'Capital
+                'Defender is a capital ship
+                sngBaseDamage = objAttacker.OffCap / objDefender.DefFight
+                sngResult = sngBaseDamage * objAttacker.OffCap * sngRand1
+            ElseIf (objDefender.ShipType = 1) Then
+                'Defender is a fighter
+                sngBaseDamage = objAttacker.OffFight / objDefender.DefFight
+                sngResult = sngBaseDamage * objAttacker.OffCap * sngRand1
+            ElseIf (objDefender.ShipType = 2) Then
+                'Defender is a structure
+                sngBaseDamage = objAttacker.OffStruct / objDefender.DefFight
+                sngResult = sngBaseDamage * objAttacker.OffCap * sngRand1
+            End If
+        ElseIf (objAttacker.ShipType = 2) Then
+            'Attacker is a defending structure
+            
+            'Random number
+            sngRand1 = Rand(0.1, 0.8)
+            
+            If (objDefender.ShipType = 0) Then 'Capital
+                sngBaseDamage = objAttacker.OffCap / objDefender.DefCap
+                sngResult = sngBaseDamage * objAttacker.OffCap * sngRand1
+            ElseIf (objDefender.ShipType = 1) Then 'fighter
+                sngBaseDamage = objAttacker.OffFight / objDefender.DefCap
+                sngResult = sngBaseDamage * objAttacker.OffCap * sngRand1
+            End If
         End If
-    ElseIf (objAttacker.ShipType = 2) Then 'structure
-        sngRand1 = Rand(0.1, 0.5)
-        
-        If (objDefender.ShipType = 0) Then 'Capital
-            sngOffense = objAttacker.OffCap / objDefender.DefCap
-            sngResult = sngOffense * objAttacker.OffCap * sngRand1
-        ElseIf (objDefender.ShipType = 1) Then 'fighter
-            sngOffense = objAttacker.OffFight / objDefender.DefCap
-            sngResult = sngOffense * objAttacker.OffCap * sngRand1
-        End If
-    End If
-
-
-'    sngOffense = objAttacker.OffCap / objDefender.DefCap
-'    sngResult = sngOffense * objAttacker.OffCap * sngRand1
-
-    BattleResult = CInt(sngResult)
-
-    If BattleResult = 0 Then
-        BattleResult = CInt(Rand(0.1, 0.9))
-    End If
+       
+        BattleResult = CInt(sngResult)
     
-    objDefender.Durability = objDefender.Durability - BattleResult
+        If BattleResult = 0 Then
+            '20% rule TODO
+            
+            BattleResult = CInt(Rand(0.1, 0.9))
+        End If
+        
+        'Reduce Durability
+        objDefender.Durability = objDefender.Durability - BattleResult
+    Else
+        Dim sngAdditionalDamageRatio As Single
+        Dim sngOffense As Single
+        Dim sngDefense As Single
+               
+        'Metallikovs formula
+        
+        'Determine sngOffense, sngDefense
+        If (objAttacker.ShipType = 0) Then
+            'Capital ship
+            If (objDefender.ShipType = 0) Then 'Capital
+                sngOffense = objAttacker.OffCap
+                sngDefense = objDefender.DefCap
+            ElseIf (objDefender.ShipType = 1) Then 'fighter
+                sngOffense = objAttacker.OffFight
+                sngDefense = objDefender.DefCap
+            ElseIf (objDefender.ShipType = 2) Then 'structure
+                sngOffense = objAttacker.OffStruct
+                sngDefense = objDefender.DefCap
+            End If
+        ElseIf (objAttacker.ShipType = 1) Then
+            'Attacker is a Fighter
+            If (objDefender.ShipType = 0) Then 'Capital
+                sngOffense = objAttacker.OffCap
+                sngDefense = objDefender.DefFight
+            ElseIf (objDefender.ShipType = 1) Then 'fighter
+                sngOffense = objAttacker.OffFight
+                sngDefense = objDefender.DefFight
+            ElseIf (objDefender.ShipType = 2) Then 'structure
+                sngOffense = objAttacker.OffStruct
+                sngDefense = objDefender.DefCap
+            End If
+        
+        ElseIf (objAttacker.ShipType = 2) Then
+            'Attacker is a Strucure
+            If (objDefender.ShipType = 0) Then 'Capital
+                sngOffense = objAttacker.OffStruct
+                sngDefense = objDefender.DefCap
+            ElseIf (objDefender.ShipType = 1) Then 'fighter
+                sngOffense = objAttacker.OffStruct
+                sngDefense = objDefender.DefCap
+            End If
+        End If
+        
+        If (objAttacker.OffCap * 1.2 >= objDefender.DefCap) Then
+            sngBaseDamage = objAttacker.OffCap - objDefender.DefCap
+            
+            If sngBaseDamage < 0 Then
+                sngBaseDamage = 0
+            End If
+            
+            sngAdditionalDamageRatio = objDefender.DefCap / objAttacker.OffCap
+            
+            If sngAdditionalDamageRatio > 1 Then
+                sngAdditionalDamageRatio = 1
+            End If
+            
+            sngResult = sngBaseDamage + (sngRandomfactor * (sngAdditionalDamageRatio ^ 6))
+            
+            If sngResult < 1 Then
+                sngResult = 1
+            End If
+            
+        ElseIf (objAttacker.OffCap * 1.2 < objDefender.DefCap) Then
+            sngResult = 1
+            
+            If (objAttacker.OffCap < (objDefender.DefCap / sngCriticalHitRatio)) Then
+                sngResult = 0.2
+            End If
+        End If
+    
+        BattleResult = sngResult
+        
+        'Reduce Durability
+        objDefender.Durability = objDefender.Durability - BattleResult
+    End If
+   
 End Function
 
 Private Function BattleEngine()
@@ -4456,7 +4800,7 @@ Private Function BattleEngine()
     Dim intDefenderShipNbr As Integer
     Dim intTotalDefenderShip As Integer
     Dim intTotalAttackerShip As Integer
-    Dim intOff As Integer
+    Dim sngOff As Single
     Dim blnEndLoop As Boolean
     Dim intTotalvolleys As Integer
     Dim intvolley As Integer
@@ -4559,19 +4903,19 @@ Private Function BattleEngine()
                 DBprintAtt attackerShipShooting, intAttackerShipShooting
                 DBprintDef defenderShipShot, intDefenderShipShot
                 
-                intOff = BattleResult(attackerShipShooting, defenderShipShot)
+                sngOff = BattleResult(attackerShipShooting, defenderShipShot)
                 
                 'Add to our list
-                If (intOff <= 0) Then
+                If (sngOff <= 0) Then
                     colAttacker.AddMiss
                     AddListItem "Attacker: " & attackerShipShooting.Name & " (" & intAttackerShipNbr & ") fired at " & defenderShipShot.Name & " (" & intDefenderShipNbr & ") but missed."
                 Else
                     colAttacker.AddHit
                     
                     If (defenderShipShot.Durability > 0) Then
-                        AddListItem "Attacker: " & attackerShipShooting.Name & " (" & intAttackerShipNbr & ") fired at " & defenderShipShot.Name & " (" & intDefenderShipNbr & ") and hit it, doing " & intOff & " damage, Remaining hull strength is " & defenderShipShot.Durability & "."
+                        AddListItem "Attacker: " & attackerShipShooting.Name & " (" & intAttackerShipNbr & ") fired at " & defenderShipShot.Name & " (" & intDefenderShipNbr & ") and hit it, doing " & sngOff & " damage, Remaining hull strength is " & defenderShipShot.Durability & "."
                     Else
-                        AddListItem "Attacker: " & attackerShipShooting.Name & " (" & intAttackerShipNbr & ") fired at " & defenderShipShot.Name & " (" & intDefenderShipNbr & ") and hit it for " & intOff & " damage, destroying it!"
+                        AddListItem "Attacker: " & attackerShipShooting.Name & " (" & intAttackerShipNbr & ") fired at " & defenderShipShot.Name & " (" & intDefenderShipNbr & ") and hit it for " & sngOff & " damage, destroying it!"
                     End If
                 End If
                 
@@ -4735,7 +5079,7 @@ Private Function BattleEngine2()
     'Dim intDefenderShipNbr As Integer
     Dim intTotalDefenderShip As Integer
     Dim intTotalAttackerShip As Integer
-    Dim intOff As Integer
+    Dim sngOff As Single
     Dim blnEndLoop As Boolean
     Dim intTotalvolleys As Integer
     Dim intvolley As Integer
@@ -4744,9 +5088,9 @@ Private Function BattleEngine2()
     Dim intDefShootingTypeNbr As Integer
     Dim intDefShotTypeNbr As Integer
     
-    If Dir(App.Path & "\battle.txt") <> "" Then
-        Kill App.Path & "\battle.txt"
-    End If
+    'If Dir(App.Path & "\battle.txt") <> "" Then
+    '    Kill App.Path & "\battle.txt"
+    'End If
     
     lstResult.Clear
     
@@ -4757,6 +5101,15 @@ Private Function BattleEngine2()
     'Set the number of volleys
     intTotalvolleys = txtVolleys.Text
     
+    If cmbFormula.ListIndex = 0 Then
+        'Base formula
+        Log "", "Formula used: Base formula"
+    Else
+        Log "", "Formula used: Metallikovs formula"
+    End If
+    
+    AddListItem "Attacker Off: " & intAttackerOffense & " Def: " & intAttackerDefense & " Dur: " & intAttackerDurability
+    AddListItem "Defender Off: " & intDefenderOffense & " Def: " & intDefenderDefense & " Dur: " & intDefenderDurability
     AddListItem "Attacking Units: " & colAttacker.Count
     AddListItem "Defending Units: " & colDefender.Count
     
@@ -4847,18 +5200,18 @@ Private Function BattleEngine2()
                 DBprintAtt attackerShipShooting, intAttackerShipShooting
                 DBprintDef defenderShipShot, intDefenderShipShot
                 
-                intOff = BattleResult(attackerShipShooting, defenderShipShot)
+                sngOff = BattleResult(attackerShipShooting, defenderShipShot)
                 
                 'Add to our list
-                If (intOff <= 0) Then
+                If (sngOff <= 0) Then
                     colAttacker.AddMiss
                     AddListItem "Attacker: " & attackerShipShooting.Name & " (" & intAttShootingTypeNbr & ") fired at " & defenderShipShot.Name & " (" & intDefShotTypeNbr & ") but missed."
                 Else
                     colAttacker.AddHit
                     If (defenderShipShot.Durability > 0) Then
-                        AddListItem "Attacker: " & attackerShipShooting.Name & " (" & intAttShootingTypeNbr & ") fired at " & defenderShipShot.Name & " (" & intDefShotTypeNbr & ") and hit it, doing " & intOff & " damage, Remaining hull strength is " & defenderShipShot.Durability & "."
+                        AddListItem "Attacker: " & attackerShipShooting.Name & " (" & intAttShootingTypeNbr & ") fired at " & defenderShipShot.Name & " (" & intDefShotTypeNbr & ") and hit it, doing " & sngOff & " damage, Remaining hull strength is " & defenderShipShot.Durability & "."
                     Else
-                        AddListItem "Attacker: " & attackerShipShooting.Name & " (" & intAttShootingTypeNbr & ") fired at " & defenderShipShot.Name & " (" & intDefShotTypeNbr & ") and hit it for " & intOff & " damage, destroying it!"
+                        AddListItem "Attacker: " & attackerShipShooting.Name & " (" & intAttShootingTypeNbr & ") fired at " & defenderShipShot.Name & " (" & intDefShotTypeNbr & ") and hit it for " & sngOff & " damage, destroying it!"
                     End If
                 End If
                 
@@ -5054,14 +5407,14 @@ ErrorControl:
             Set result = colResultsAttacker.Item(attackerShip.Name)
         End If
         
-        If attackerShip.Durability > 0 Then
-             'Ship survived
-            result.ShipsLeft = result.ShipsLeft + 1
-        Else
+        If attackerShip.Durability < 1 Then
             'Ship destroyed
             result.ShipsLost = result.ShipsLost + 1
             result.PrestigeLoss = result.PrestigeLoss + attackerShip.Prestige
             result.CrewLoss = result.CrewLoss + attackerShip.Crew
+        Else
+            'Ship survived
+            result.ShipsLeft = result.ShipsLeft + 1
         End If
     Next intI
      
@@ -5088,14 +5441,14 @@ ErrorControl2:
             Set result = colResultsDefender.Item(defenderShip.Name)
         End If
         
-        If defenderShip.Durability > 0 Then
-             'Ship survived
-            result.ShipsLeft = result.ShipsLeft + 1
-        Else
+        If defenderShip.Durability < 1 Then
             'Ship destroyed
             result.ShipsLost = result.ShipsLost + 1
             result.PrestigeLoss = result.PrestigeLoss + defenderShip.Prestige
             result.CrewLoss = result.CrewLoss + defenderShip.Crew
+        Else
+             'Ship survived
+            result.ShipsLeft = result.ShipsLeft + 1
         End If
     Next intI
     
@@ -5141,20 +5494,20 @@ ErrorControl2:
 End Function
 
 Private Function DroneBattle2(defendershipshooting As clsShip, attackerShipShot As clsShip, blnEndLoop As Boolean, intDefShootingTypeNbr As Integer, intAttShotTypeNbr As Integer, intDefenderShipShot As Integer, intDefenderShipShooting As Integer, intAttackerShipShot As Integer, defenderShipShot As clsShip, intTotalDefenderShip As Integer, intDefShotTypeNbr As Integer)
-    Dim intOff As Integer
+    Dim sngOff As Single
     
     'Defender ship fires at attackership
-    intOff = BattleResult(defendershipshooting, attackerShipShot)
+    sngOff = BattleResult(defendershipshooting, attackerShipShot)
     
-    'attackerShipShot.Durability = attackerShipShot.Durability - intOff
+    'attackerShipShot.Durability = attackerShipShot.Durability - sngOff
     'Add to our list
-    If (intOff <= 0) Then
+    If (sngOff <= 0) Then
         AddListItem "Defender: " & defendershipshooting.Name & " (" & intDefShootingTypeNbr & ") fired at " & attackerShipShot.Name & " (" & intAttShotTypeNbr & ") but missed."
     Else
         If (attackerShipShot.Durability > 0) Then
-            AddListItem "Defender: " & defendershipshooting.Name & " (" & intDefShootingTypeNbr & ") fired at " & attackerShipShot.Name & " (" & intAttShotTypeNbr & ") and hit it, doing " & intOff & " damage, Remaining hull strength is " & attackerShipShot.Durability & "."
+            AddListItem "Defender: " & defendershipshooting.Name & " (" & intDefShootingTypeNbr & ") fired at " & attackerShipShot.Name & " (" & intAttShotTypeNbr & ") and hit it, doing " & sngOff & " damage, Remaining hull strength is " & attackerShipShot.Durability & "."
         Else
-            AddListItem "Defender: " & defendershipshooting.Name & " (" & intDefShootingTypeNbr & ") fired at " & attackerShipShot.Name & " (" & intAttShotTypeNbr & ") and hit it for " & intOff & " damage, destroying it!"
+            AddListItem "Defender: " & defendershipshooting.Name & " (" & intDefShootingTypeNbr & ") fired at " & attackerShipShot.Name & " (" & intAttShotTypeNbr & ") and hit it for " & sngOff & " damage, destroying it!"
         End If
     End If
     
@@ -5194,23 +5547,23 @@ Private Function DroneBattle2(defendershipshooting As clsShip, attackerShipShot 
 End Function
 
 Private Function DroneBattle(defendershipshooting As clsShip, attackerShipShot As clsShip, blnEndLoop As Boolean, intDefenderShipNbr As Integer, intAttackerShipNbr As Integer, intDefenderShipShot As Integer, intDefenderShipShooting As Integer, intAttackerShipShot As Integer, defenderShipShot As clsShip, intTotalDefenderShip As Integer)
-    Dim intOff As Integer
+    Dim sngOff As Single
     
     'Defender ship fires at attackership
-    intOff = BattleResult(defendershipshooting, attackerShipShot)
+    sngOff = BattleResult(defendershipshooting, attackerShipShot)
     
-    'attackerShipShot.Durability = attackerShipShot.Durability - intOff
+    'attackerShipShot.Durability = attackerShipShot.Durability - sngOff
     'Add to our list
-    If (intOff <= 0) Then
+    If (sngOff <= 0) Then
         colDefender.AddMiss
         AddListItem "Defender: " & defendershipshooting.Name & " (" & intDefenderShipNbr & ") fired at " & attackerShipShot.Name & " (" & intAttackerShipNbr & ") but missed."
     Else
         colDefender.AddHit
         If (attackerShipShot.Durability > 0) Then
-            AddListItem "Defender: " & defendershipshooting.Name & " (" & intDefenderShipNbr & ") fired at " & attackerShipShot.Name & " (" & intAttackerShipNbr & ") and hit it, doing " & intOff & " damage, Remaining hull strength is " & attackerShipShot.Durability & "."
+            AddListItem "Defender: " & defendershipshooting.Name & " (" & intDefenderShipNbr & ") fired at " & attackerShipShot.Name & " (" & intAttackerShipNbr & ") and hit it, doing " & sngOff & " damage, Remaining hull strength is " & attackerShipShot.Durability & "."
             AddListItem "The drone self-destructed as part of it's attack run"
         Else
-            AddListItem "Defender: " & defendershipshooting.Name & " (" & intDefenderShipNbr & ") fired at " & attackerShipShot.Name & " (" & intAttackerShipNbr & ") and hit it for " & intOff & " damage, destroying it!"
+            AddListItem "Defender: " & defendershipshooting.Name & " (" & intDefenderShipNbr & ") fired at " & attackerShipShot.Name & " (" & intAttackerShipNbr & ") and hit it for " & sngOff & " damage, destroying it!"
             AddListItem "The drone self-destructed as part of it's attack run"
         End If
     End If
@@ -5406,19 +5759,19 @@ Private Function AddBombardStructures(Optional blnFront As Boolean = True)
 
         AddToDefCollection defenderShip, blnFront
     Next intI
-    
-    For intI = 1 To txtIMPSDB.Text
-        Set defenderShip = New clsImpSDB
 
-        AddToDefCollection defenderShip, blnFront
-    Next intI
-    
     For intI = 1 To txtSDB.Text
         Set defenderShip = New clsSDB
 
         AddToDefCollection defenderShip, blnFront
     Next intI
 
+    For intI = 1 To txtIMPSDB.Text
+        Set defenderShip = New clsImpSDB
+
+        AddToDefCollection defenderShip, blnFront
+    Next intI
+    
     For intI = 1 To txtODPDEF.Text
         Set defenderShip = New clsODP
 
@@ -5443,15 +5796,15 @@ Private Function AddBombardStructures(Optional blnFront As Boolean = True)
         AddToDefCollection defenderShip, blnFront
     Next intI
     
-    For intI = 1 To txtIMPSSG.Text
-        Set defenderShip = New clsImpSSG
-        
-        AddToDefCollection defenderShip, blnFront
-    Next intI
-    
     For intI = 1 To txtSSG.Text
         Set defenderShip = New clsSSG
 
+        AddToDefCollection defenderShip, blnFront
+    Next intI
+    
+    For intI = 1 To txtIMPSSG.Text
+        Set defenderShip = New clsImpSSG
+        
         AddToDefCollection defenderShip, blnFront
     Next intI
     
@@ -5601,10 +5954,39 @@ Private Function FillListbox()
     Set Ship = Nothing
 End Function
 
+Private Sub ReadINIFile()
+    Dim strString  As String
+    Dim lSize    As Long
+    Dim lReturn  As Long
+    Dim strFile As String
+
+    strFile = App.Path + "\battlesim.ini"
+    
+    strString = String$(10, "*")
+    lSize = Len(strString)
+
+    'Get the formula base values
+    lReturn = GetPrivateProfileString("Options", "BattleFormula", "0", strString, lSize, strFile)
+    cmbFormula.ListIndex = CInt(strString)
+    
+    lReturn = GetPrivateProfileString("Options", "RandomFactor", "3", strString, lSize, strFile)
+    sngRandomfactor = CSng(strString)
+    
+    lReturn = GetPrivateProfileString("Options", "RandomDropOffRatio", "6", strString, lSize, strFile)
+    sngRandomDropOffRatio = CSng(strString)
+    
+    lReturn = GetPrivateProfileString("Options", "CriticalHitRatio", "4.5", strString, lSize, strFile)
+    sngCriticalHitRatio = CSng(strString)
+End Sub
+
 Private Sub cmdFight_Click()
     MousePointer = vbHourglass
     txtResult.Text = ""
     
+    ReadINIFile
+    
+    strLogFile = "Battle " & Replace(FormatDateTime(Now, vbGeneralDate), ":", "") & ".txt"
+
     'Compose fleet for testing purposes
     intAttackerDefense = txtAttackerDefense.Text
     intAttackerDurability = txtAttackerDurability.Text
@@ -5614,7 +5996,7 @@ Private Sub cmdFight_Click()
     intDefenderDurability = txtDefenderDurability.Text
     intDefenderOffense = txtDefenderOffense.Text
     
-    'Determine Bonusses
+    'Determine Defender Bonusses
     If optStandard.Value = True Then
        'No bonusses
     ElseIf optFighterSpread.Value = True Then
@@ -5622,21 +6004,34 @@ Private Sub cmdFight_Click()
         'Grant a 5% off and 5% defense bonus
         intDefenderDefense = intDefenderDefense + 5
         intDefenderOffense = intDefenderOffense + 5
+    Else
+        'Ambush
+        '10% offense bonus
+        intDefenderOffense = intDefenderOffense + 10
+    End If
+    
+    'Attacker bonusses
+    If optNormal.Value = True Then
+        'No bonusses
     ElseIf optFleetRecon.Value = True Then
         'Fleetrecon
         intAttackerOffense = intAttackerOffense - 20
-        intAttackerDefense = intAttackerOffense - 20
+        intAttackerDefense = intAttackerDefense - 20
     ElseIf optSensorBlind.Value = True Then
         'No bonus
     ElseIf optBombard.Value = True Then
         'Bombard
         'Grants a 10% offense bonus and a 10% defense penalty to the attacker.
-        intAttackerOffense = intAttackerOffense + 10
-        intAttackerDefense = intAttackerDefense - 10
-    Else
-        'Ambush
-        '10% offense bonus
-        intDefenderOffense = intDefenderOffense + 10
+        If chkRandom.Value = 1 Then 'Checked
+            'Random bombardment
+            'Grants a 15% off bonus and a 20% defense penalty to the attacker
+            intAttackerOffense = intAttackerOffense + 15
+            intAttackerDefense = intAttackerDefense - 20
+        Else
+            'Industry or Military bombard
+            intAttackerOffense = intAttackerOffense + 10
+            intAttackerDefense = intAttackerDefense - 10
+        End If
     End If
     
     If (optBombard.Value = True Or optSensorBlind.Value = True) Then
@@ -5673,8 +6068,10 @@ End Sub
 
 Private Sub Log(sFile As String, sText As String)
     On Error Resume Next
-       
-    Open App.Path & "\battle.txt" For Append As #1 'Append As #1
+
+    'Open App.Path & "\battle.txt" For Append As #1 'Append As #1
+    Open App.Path & "\" & strLogFile For Append As #1 'Append As #1
+    
     Print #1, sText
     Close #1
 End Sub
@@ -5739,3 +6136,20 @@ End Sub
 '       End If
 '    Next
 'End Sub
+
+Private Sub WriteINIFile()
+    'Write back the Formula option
+    Dim lReturn  As Long
+    Dim strFile As String
+    strFile = App.Path + "\battlesim.ini"
+   
+    'Write settings to inifile
+    lReturn = WritePrivateProfileString("Options", "BattleFormula", CStr(cmbFormula.ListIndex), strFile)
+    
+    lReturn = WritePrivateProfileString("Options", "RandomFactor", CStr(sngRandomfactor), strFile)
+    lReturn = WritePrivateProfileString("Options", "RandomDropOffRatio", CStr(sngRandomDropOffRatio), strFile)
+    lReturn = WritePrivateProfileString("Options", "CriticalHitRatio", CStr(sngCriticalHitRatio), strFile)
+End Sub
+Private Sub Form_Unload(Cancel As Integer)
+   WriteINIFile
+End Sub
