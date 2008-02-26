@@ -1,0 +1,14 @@
+Date: 2/27/2007 12:01:00 PM
+From: The Mercenary Guild
+To: The Mercenary Guild
+Subject: Combat Report A fleet of vessels from the planet 'The Mercenary Guild' attempted to conduct a random bombardment at Eris.
+The attacking force was detected before entering the system!
+Because The Mercenary Guild is in a state of anger against Eris, its units will have a 5% offense bonus.
+The attacking force consisted of 6 "Aegis" Mobile Shield(s) 14 "Dragon" Mobile Assault Platform(s) 206 Dreadnought(s) 38 Battleship(s) 115 Fire Support Destroyer(s).
+The defending force consisted of 32 Surface Shield Generator(s) 20 Surface Shield Generator (Improved)(s) 53 Surface Defense Battery (Improved)(s) 24 Manufacturing Plant (Improved)(s) 1 Barracks (Veteran)(s) 1 Barracks(s) .
+Attacker's losses were 59 Dreadnought(s) 6 "Aegis" Mobile Shield(s) 14 "Dragon" Mobile Assault Platform(s) and 151400 personnel.
+Defender lost no units.
+Defender lost 53 Surface Defense Battery (Improved)(s) 32 Surface Shield Generator(s) 20 Surface Shield Generator (Improved)(s) 1 Barracks(s) 1 Barracks (Veteran)(s) 24 Manufacturing Plant (Improved)(s) .
+Attacker gained 20848 prestige.
+Attacker gained 8320 prestige due to the difference in planetary status.
+Defender gained 13042 prestige. 

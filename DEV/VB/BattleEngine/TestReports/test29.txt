@@ -1,0 +1,14 @@
+Date: 2/4/2008 11:40:00
+From: Walhalla
+Subject: Combat Report A fleet of vessels from the planet 'Walhalla' attempted to conduct a random bombardment at Sigil.
+The attacking force was detected before entering the system!
+Because Sigil is in a state of anger against Walhalla, its units will have a 5% offense bonus.
+Because Walhalla is in a state of anger against Sigil, its units will have a 5% offense bonus.
+The attacking force consisted of 2 Dreadnought(s) 28 Battleship(s).
+The defending force consisted of 66 Orbital Minefield(s) 20 Surface Shield Generator(s) 1 Farm II(s) 2 Manufacturing Plant (Improved)(s) 1 University(s) 2 Hospital(s) 1 Farm I(s) 5 Planetary Bank(s) 2 Research Lab(s) 1 Intelligence Agency(s) 5 Embassy(s) 12 Warehouse (Small)(s) 2 Research Lab (Improved)(s) 2 Manufacturing Plant(s) 10 Mining Facility (Metals)(s) 1 Trade School(s) 1 Materials Processing Plant(s) 1 Stock Exchange(s) 2 Genetics Lab(s) 21 Cruiser(s) 46 Deep Recon Scout(s) .
+Attacker's losses were 10 Battleship(s) 2 Dreadnought(s) and 19600 personnel.
+Defender lost no units.
+Defender lost 66 Orbital Minefield(s) 7 Surface Shield Generator(s) .
+Attacker gained 3488 prestige.
+Attacker gained 9100 prestige due to the difference in planetary status.
+Defender gained 4300 prestige.

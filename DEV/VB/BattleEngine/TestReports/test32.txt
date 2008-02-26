@@ -1,0 +1,15 @@
+Date: 12/23/2007 4:20:00 AM
+From: The Peacemaker
+Subject: Combat Report
+
+A fleet of vessels from the planet 'The Peacemaker' attempted to conduct a random bombardment at Park Security.
+The attacking force was detected before entering the system!
+Because Park Security is in a state of anger against The Peacemaker, its units will have a 5% offense bonus.
+Because The Peacemaker is in a state of anger against Park Security, its units will have a 5% offense bonus.
+The attacking force consisted of 8 "Maelstrom" Siege Platform(s) 8 "Dragon" Mobile Assault Platform(s) 5 "Anvil" Battleship(s).
+The defending force consisted of 3 Surface Shield Generator (Improved)(s) 3 Surface Shield Generator(s) 16 Surface Defense Battery (Improved)(s) 1 Mining Facility (Radioactives - Improved)(s) 1 Refinery (Fuel - Improved)(s) 10 Mining Facility (Metals - Improved)(s) 1 Intelligence Agency(s) 3 Farm III(s) 3 Manufacturing Plant (Improved)(s) 2 Research Lab(s) 1 University(s) 2 Embassy(s) 5 Warehouse (Medium)(s) 1 Stock Exchange(s) 1 Barracks (Veteran)(s) 1 Plating Factory(s) 1 Barracks(s) 2 Research Lab (Improved)(s) 5 Planetary Bank(s) 23 Habitat (Improved)(s) .
+Attacker's losses were 6 "Dragon" Mobile Assault Platform(s) 8 "Maelstrom" Siege Platform(s) and 40800 personnel.
+Defender lost no units.
+Defender lost 2 Surface Shield Generator(s) 3 Surface Shield Generator (Improved)(s) .
+Attacker lost 8206 prestige.
+Defender gained 9993 prestige.

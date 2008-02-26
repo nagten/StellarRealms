@@ -1,0 +1,13 @@
+Date: 12/22/2007 5:00:00 AM
+From: The Peacemaker
+Subject: Combat Report
+A fleet of vessels from the planet 'The Peacemaker' attempted to conduct a random bombardment at Castilia Orion IV.
+The attacking force was detected before entering the system!
+Because Castilia Orion IV is in a state of anger against The Peacemaker, its units will have a 5% offense bonus.
+The attacking force consisted of 50 "Goliath" Battleship(s).
+The defending force consisted of 22 Surface Defense Battery (Improved)(s) 2 Hospital(s) 6 Mining Facility (Metals - Improved)(s) 1 Interstellar Forum(s) 4 Manufacturing Plant(s) 2 Research Lab(s) 1 Refinery (Fuel - Improved)(s) 1 Mining Facility (Radioactives - Improved)(s) 2 Farm III(s) 5 Planetary Bank(s) 1 Stock Exchange(s) 1 Trade School(s) 1 Barracks (Veteran)(s) 2 Genetics Lab(s) 1 University(s) 2 Research Lab (Improved)(s) 1 Manufacturing Plant (Improved)(s) 1 Airbase(s) 1 Airbase (Improved)(s) 1 Barracks(s) 14 Habitat (Improved)(s) .
+Attacker's losses were 13 "Goliath" Battleship(s) and 23400 personnel.
+Defender lost no units.
+Defender lost 22 Surface Defense Battery (Improved)(s) 1 Barracks(s) 1 Barracks (Veteran)(s) 1 Airbase(s) 1 Airbase (Improved)(s) 6 Mining Facility (Metals - Improved)(s) 1 Mining Facility (Radioactives - Improved)(s) 1 Refinery (Fuel - Improved)(s) 2 Farm III(s) 14 Habitat (Improved)(s) 2 Genetics Lab(s) 2 Hospital(s) 2 Research Lab(s) 2 Research Lab (Improved)(s) 1 University(s) 1 Trade School(s) 4 Manufacturing Plant(s) 1 Manufacturing Plant (Improved)(s) 5 Planetary Bank(s) 1 Stock Exchange(s) 1 Interstellar Forum(s) .
+Attacker lost 17094 prestige.
+Defender lost 1987 prestige.
