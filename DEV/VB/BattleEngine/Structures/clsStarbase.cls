@@ -47,7 +47,7 @@ Private Sub Class_Initialize()
     m_intDefFight = 20
     m_intShipType = 2 '0 = Capital 1 = Fighter 2 = structure
     m_intSensor = 2
-    m_intPrestige = 822
+    m_intPrestige = 1644
     m_intCrew = 2000
     m_intSizeRank = 54
     m_lngCost = 36736
