@@ -239,7 +239,7 @@ Begin VB.Form frmBattle
          Begin VB.TextBox txtDefenderDurability 
             Height          =   285
             Left            =   2040
-            MaxLength       =   2
+            MaxLength       =   3
             TabIndex        =   198
             Text            =   "0"
             Top             =   1080
@@ -248,7 +248,7 @@ Begin VB.Form frmBattle
          Begin VB.TextBox txtDefenderDefense 
             Height          =   285
             Left            =   2040
-            MaxLength       =   2
+            MaxLength       =   3
             TabIndex        =   197
             Text            =   "0"
             Top             =   720
@@ -257,7 +257,7 @@ Begin VB.Form frmBattle
          Begin VB.TextBox txtAttackerDurability 
             Height          =   285
             Left            =   1440
-            MaxLength       =   2
+            MaxLength       =   3
             TabIndex        =   196
             Text            =   "0"
             Top             =   1080
@@ -266,7 +266,7 @@ Begin VB.Form frmBattle
          Begin VB.TextBox txtAttackerDefense 
             Height          =   285
             Left            =   1440
-            MaxLength       =   2
+            MaxLength       =   3
             TabIndex        =   195
             Text            =   "0"
             Top             =   720
@@ -275,7 +275,7 @@ Begin VB.Form frmBattle
          Begin VB.TextBox txtDefenderOffense 
             Height          =   285
             Left            =   2040
-            MaxLength       =   2
+            MaxLength       =   3
             TabIndex        =   194
             Text            =   "0"
             Top             =   360
@@ -284,7 +284,7 @@ Begin VB.Form frmBattle
          Begin VB.TextBox txtAttackerOffense 
             Height          =   285
             Left            =   1440
-            MaxLength       =   2
+            MaxLength       =   3
             TabIndex        =   193
             Text            =   "0"
             Top             =   360
@@ -3258,7 +3258,68 @@ Private Sub cmdTest_Click()
         Log "", ""
         Log "", "Attacker's losses were 59 Dreadnought(s) 6 Aegis Mobile Shield(s) 14 Dragon Mobile Assault Platform(s) and 151400 personnel"
         Log "", "Defender lost 53 Surface Defense Battery (Improved)(s) 32 Surface Shield Generator(s) 20 Surface Shield Generator (Improved)(s) 1 Barracks(s) 1 Barracks (Veteran)(s) 24 Manufacturing Plant (Improved)(s) "
-
+    
+    Case 35:
+        txtAttackerOffense.Text = 35
+        txtAttackerDefense.Text = 35
+        txtAttackerDurability.Text = 35
+        
+        txtDefenderOffense.Text = 35
+        txtDefenderDefense.Text = 35
+        txtDefenderDurability.Text = 35
+        
+        txtHB.Text = 60
+        txtScout.Text = 30
+        txtLC.Text = 4
+        txtBats.Text = 8
+    
+        txtOMDEF.Text = 41
+        txtOSDEF.Text = 1
+        txtODMDEF.Text = 1
+        txtInterdictorDEF.Text = 35
+        txtDRScoutDEF.Text = 40
+        txtAIDEF.Text = 9
+        txtHBDEF.Text = 5
+        
+        'Volleys
+        txtVolleys.Text = 5
+        'Attack Formation
+        optFighterScreen.Value = True
+        'Defense Formation
+        optStandard.Value = True
+        
+        cmdFight_Click
+        
+        Log "", ""
+        Log "", "Attacker's losses were 60 Heavy Bomber(s) 30 Scout(s) 2 Battleship(s) 4 Light Carrier(s) and 7620 personnel."
+        Log "", "Defender's losses were 17 Interdictor Frigate(s) and 1850 personnel. Defender lost 41 Orbital Minefield(s) 1 Orbital Shield(s) 1 Orbital Defense Monitor(s) ."
+    
+    Case 36:
+    
+        txtAttackerOffense.Text = 98
+        txtAttackerDefense.Text = 53
+        txtAttackerDurability.Text = 45
+        
+        txtDefenderOffense.Text = 40
+        txtDefenderDefense.Text = 40
+        txtDefenderDurability.Text = 35
+    
+        txtDragon.Text = 34
+        txtDreads.Text = 6
+        txtOrca.Text = 8
+        txtGoliath.Text = 35
+    
+        txtIMPSDB.Text = 50
+        txtIMPSSG.Text = 30
+    
+         'Volleys
+        txtVolleys.Text = 3
+        'Attack Formation
+        optBombard.Value = True
+        'Defense Formation
+        optStandard.Value = True
+        
+        cmdFight_Click
     End Select
 End Sub
 
@@ -4396,6 +4457,9 @@ Private Sub ResetWeapons()
         Ship.ResetWeapons
     Next
     
+    colDefender.ResetCounters
+    colAttacker.ResetCounters
+        
     Set Ship = Nothing
 End Sub
 
@@ -4490,9 +4554,7 @@ Private Function GetValidShipAttacker(ByVal colCollection As colShipsAttacker, B
     
     While intShipNumber <= intColCount
         Set GetValidShipAttacker = colCollection.Item(intShipNumber, blnAttack)
-        intTypeNbr = colCollection.ShipTypeNbr(blnAttack)
-        
-       ' If (blnAttack) Then
+        ' If (blnAttack) Then
 '            If (strPreviousShip <> GetValidShip2.Name) Then
 '                intTypeNbr = 1
 '            Else
@@ -4501,6 +4563,8 @@ Private Function GetValidShipAttacker(ByVal colCollection As colShipsAttacker, B
      '   End If
         
         If Not GetValidShipAttacker.Destroyed Then
+            intTypeNbr = colCollection.ShipTypeNbr(blnAttack)
+            
             If (blnAttack) Then
                'Check if there are weapons left
                If (GetValidShipAttacker.WeaponsLeft > 0) Then
@@ -4542,8 +4606,6 @@ Private Function GetValidShipDefender(ByVal colCollection As colShipsDefender, B
     
     While intShipNumber <= intColCount
         Set GetValidShipDefender = colCollection.Item(intShipNumber, blnAttack)
-        intTypeNbr = colCollection.ShipTypeNbr(blnAttack)
-        
        ' If (blnAttack) Then
 '            If (strPreviousShip <> GetValidShip2.Name) Then
 '                intTypeNbr = 1
@@ -4553,6 +4615,8 @@ Private Function GetValidShipDefender(ByVal colCollection As colShipsDefender, B
      '   End If
         
         If Not GetValidShipDefender.Destroyed Then
+            intTypeNbr = colCollection.ShipTypeNbr(blnAttack)
+            
             If (blnAttack) Then
                'Check if there are weapons left
                If (GetValidShipDefender.WeaponsLeft > 0) Then
@@ -4823,6 +4887,11 @@ Private Function BattleEngine()
         'Reset all Weapons before a new volley starts
         AddListItem " "
         AddListItem "Volley number " & intvolley & ": "
+        
+        colDefender.ResetCounters
+        colDefender.ResetShots
+        colAttacker.ResetCounters
+        colAttacker.ResetShots
         
         If intvolley > 1 Then
             ResetWeapons
@@ -5133,7 +5202,7 @@ Private Function BattleEngine2()
         If intvolley > 1 Then
             ResetWeapons
         End If
-        
+
         intDefenderShipShot = 1
         intDefenderShipShooting = 1
         intAttackerShipShot = 1
@@ -6035,8 +6104,10 @@ Private Sub cmdFight_Click()
     End If
     
     If (optBombard.Value = True Or optSensorBlind.Value = True) Then
-        If CInt(txtVolleys.Text) >= 4 Then
+        If CInt(txtVolleys.Text) >= 6 Then
             'Max 3 volleys in bombard or sensor blind
+            txtVolleys.Text = 5
+        ElseIf CInt(txtVolleys.Text) >= 4 Then
             txtVolleys.Text = 3
         End If
     End If
