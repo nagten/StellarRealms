@@ -4445,22 +4445,17 @@ End Sub
 
 Private Sub ResetWeapons()
     Dim intI As Integer
-    Dim Ship As clsShip
     
     For intI = 1 To colAttacker.Count
-        Set Ship = colAttacker.Item(intI, True)
-        Ship.ResetWeapons
+        colAttacker.Item(intI, True).ResetWeapons
     Next
     
     For intI = 1 To colDefender.Count
-        Set Ship = colDefender.Item(intI, False)
-        Ship.ResetWeapons
+        colDefender.Item(intI, False).ResetWeapons
     Next
     
     colDefender.ResetCounters
     colAttacker.ResetCounters
-        
-    Set Ship = Nothing
 End Sub
 
 Private Function GetValidShip(ByVal colCollection As Collection, ByRef intShipNumber As Integer, blnAttack As Boolean) As clsShip
