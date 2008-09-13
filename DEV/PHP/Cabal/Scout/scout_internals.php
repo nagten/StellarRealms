@@ -33,6 +33,10 @@ $report = str_replace("\n\r",'|',$report);
 $report = str_replace('<br>','|',$report);
 $report = str_replace('<BR>','|',$report);
 $report = str_replace('||'  ,'|',$report);
+
+//to fix a vork bug
+$report = str_replace("planetary shield", "planetary shield(s)", $report);
+
 $ray = explode('|',$report);
 
 $dateFound    = false;
