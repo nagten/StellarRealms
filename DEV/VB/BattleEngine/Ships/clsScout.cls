@@ -33,11 +33,14 @@ Private m_strName As String
 Private m_intPrestige As Integer
 Private m_intSizeRank As Long
 Private m_lngCost As Long
+Private m_sngFuelFactor As Single
+Private m_intSpeed As Integer
+
 
 Private Sub Class_Initialize()
     m_strName = "Scout"
-    m_intWeapons = 1
-    m_intWeaponsLeft = 1
+    m_intWeapons = 0
+    m_intWeaponsLeft = 0
     m_sngDurability = 7
     m_sngBaseDurability = 7
     m_intOffCap = 2
@@ -51,6 +54,8 @@ Private Sub Class_Initialize()
     m_intCrew = 24
     m_intSizeRank = 9
     m_lngCost = 396
+    m_intSpeed = 4
+    m_sngFuelFactor = ReadShipValues("Scout", "FuelFactor")
 End Sub
 
 Private Property Let clsShip_SizeRank(ByVal RHS As Integer)
@@ -186,6 +191,23 @@ End Function
 Private Property Get clsShip_ShipsLeft() As Integer
     clsShip_ShipsLeft = m_intShipsLeft
 End Property
+
 Private Property Let clsShip_ShipsLeft(ByVal RHS As Integer)
     m_intShipsLeft = RHS
+End Property
+
+Private Property Get clsShip_FuelFactor() As Single
+    clsShip_FuelFactor = m_sngFuelFactor
+End Property
+
+Private Property Let clsShip_FuelFactor(ByVal RHS As Single)
+    m_sngFuelFactor = RHS
+End Property
+
+Private Property Get clsShip_Speed() As Integer
+    clsShip_Speed = m_intSpeed
+End Property
+
+Private Property Let clsShip_Speed(ByVal RHS As Integer)
+    m_intSpeed = RHS
 End Property

@@ -33,6 +33,9 @@ Private m_strName As String
 Private m_intPrestige As Integer
 Private m_intSizeRank As Long
 Private m_lngCost As Long
+Private m_sngFuelFactor As Single
+Private m_intSpeed as Integer
+
 
 Private Sub Class_Initialize()
     m_strName = "Leopard Strike Cruiser"
@@ -51,6 +54,8 @@ Private Sub Class_Initialize()
     m_intCrew = 800
     m_intSizeRank = 22
     m_lngCost = 2160
+    m_intSpeed = 3
+    m_sngFuelFactor = ReadShipValues("Leopard", "FuelFactor")
 End Sub
 
 Private Property Let clsShip_SizeRank(ByVal RHS As Integer)
@@ -172,6 +177,7 @@ End Property
 Private Function clsShip_SubstractWeapon()
     m_intWeaponsLeft = m_intWeaponsLeft - 1
 End Function
+
 Private Property Let clsShip_Ships(ByVal RHS As Integer)
     m_intShips = RHS
 End Property
@@ -187,6 +193,23 @@ End Function
 Private Property Get clsShip_ShipsLeft() As Integer
     clsShip_ShipsLeft = m_intShipsLeft
 End Property
+
 Private Property Let clsShip_ShipsLeft(ByVal RHS As Integer)
     m_intShipsLeft = RHS
+End Property
+
+Private Property Get clsShip_FuelFactor() As Single
+    clsShip_FuelFactor = m_sngFuelFactor
+End Property
+
+Private Property Let clsShip_FuelFactor(ByVal RHS As Single)
+    m_sngFuelFactor = RHS
+End Property
+
+Private Property Get clsShip_Speed() As Integer
+    clsShip_Speed = m_intSpeed
+End Property
+
+Private Property Let clsShip_Speed(ByVal RHS As Integer)
+    m_intSpeed = RHS
 End Property
