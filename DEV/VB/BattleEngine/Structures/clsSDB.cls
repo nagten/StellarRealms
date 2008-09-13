@@ -33,6 +33,9 @@ Private m_strName As String
 Private m_intPrestige As Integer
 Private m_intSizeRank As Long
 Private m_lngCost As Long
+Private m_sngFuelFactor As Single
+Private m_intSpeed as Integer
+
 
 Private Sub Class_Initialize()
     m_strName = "Surface Defense Battery"
@@ -191,4 +194,20 @@ End Property
 
 Private Property Let clsShip_ShipsLeft(ByVal RHS As Integer)
     m_intShipsLeft = RHS
+End Property
+
+Private Property Get clsShip_FuelFactor() As Single
+    clsShip_FuelFactor = m_sngFuelFactor
+End Property
+
+Private Property Let clsShip_FuelFactor(ByVal RHS As Single)
+    m_sngFuelFactor = RHS
+End Property
+
+Private Property Get clsShip_Speed() As Integer
+    clsShip_Speed = m_intSpeed
+End Property
+
+Private Property Let clsShip_Speed(ByVal RHS As Integer)
+    m_intSpeed = RHS
 End Property
