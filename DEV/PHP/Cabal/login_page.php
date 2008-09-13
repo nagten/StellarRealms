@@ -74,17 +74,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		
 		switch ($where) 
 		{
-			case 'dossier':
-				if ($DEV)
-				{
-					header('Location: ' . $DossierDebugUrl . '');
-				}
-				else
-				{
-					header('Location: ' . $DossierWebUrl . '');
-				}
-				exit;
-				break;
 			case 'scout':
 				if ($DEV)
 				{
@@ -96,14 +85,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 				}
 				exit;
 				break;
-			default:
+			case 'stats':
 				if ($DEV)
 				{
-					header('Location: ' . $DossierDebugUrl . '');
+					header('Location: ' . $StatsDebugUrl . '');
 				}
 				else
 				{
-					header('Location: ' . $DossierWebUrl . '');
+					header('Location: ' . $StatsWebUrl . '');
+				}
+				exit;
+				break;
+			default:
+				if ($DEV)
+				{
+					header('Location: ' . $ScoutDebugUrl . '');
+				}
+				else
+				{
+					header('Location: ' . $ScoutWebUrl . '');
 				}
 				exit;
 				break;
@@ -120,7 +120,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 <META NAME="Author" CONTENT="">
 <META NAME="Keywords" CONTENT="">
 <META NAME="Description" CONTENT="">
-<LINK rel="stylesheet" type="text/css" href="./SR_Dossier.css">
 <script language="Javascript" type="text/javascript">
 function glowObj(obj) 
 {
