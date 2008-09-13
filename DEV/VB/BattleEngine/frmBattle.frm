@@ -1,19 +1,20 @@
 VERSION 5.00
 Begin VB.Form frmBattle 
    Caption         =   "Battle v0.5 Alpha"
-   ClientHeight    =   10995
-   ClientLeft      =   8715
-   ClientTop       =   3285
+   ClientHeight    =   11040
+   ClientLeft      =   5595
+   ClientTop       =   3510
    ClientWidth     =   14400
    LinkTopic       =   "Form1"
-   ScaleHeight     =   10995
+   MaxButton       =   0   'False
+   ScaleHeight     =   11040
    ScaleWidth      =   14400
    Begin VB.Frame frmSurStruct 
       Caption         =   "Surface Structures"
       Height          =   2415
       Left            =   3240
       TabIndex        =   175
-      Top             =   8400
+      Top             =   7800
       Width           =   2655
       Begin VB.TextBox txtMonolith 
          Height          =   285
@@ -138,45 +139,60 @@ Begin VB.Form frmBattle
       Width           =   2415
    End
    Begin VB.Frame frmShips 
-      Height          =   10935
+      Height          =   11055
       Left            =   0
       TabIndex        =   0
       Top             =   0
       Width           =   14295
+      Begin VB.Frame frmSpeed 
+         Caption         =   "Speed"
+         Height          =   735
+         Left            =   3240
+         TabIndex        =   235
+         Top             =   10200
+         Width           =   5415
+         Begin VB.ComboBox cmbJumpStructure 
+            Height          =   315
+            Left            =   3600
+            Style           =   2  'Dropdown List
+            TabIndex        =   241
+            Top             =   240
+            Width           =   1695
+         End
+         Begin VB.ComboBox cmbLocation 
+            Height          =   315
+            Left            =   120
+            Style           =   2  'Dropdown List
+            TabIndex        =   237
+            Top             =   240
+            Width           =   1335
+         End
+         Begin VB.TextBox txtSpeedBonus 
+            Height          =   285
+            Left            =   2760
+            TabIndex        =   236
+            Text            =   "0"
+            Top             =   240
+            Width           =   495
+         End
+         Begin VB.Label lblSpeedBonus 
+            Caption         =   "Speed bonus:"
+            Height          =   255
+            Left            =   1560
+            TabIndex        =   240
+            Top             =   240
+            Width           =   1095
+         End
+      End
       Begin VB.ComboBox cmbFormula 
          Height          =   315
          ItemData        =   "frmBattle.frx":0008
          Left            =   12960
          List            =   "frmBattle.frx":000A
          Style           =   2  'Dropdown List
-         TabIndex        =   236
+         TabIndex        =   233
          Top             =   9840
          Width           =   1215
-      End
-      Begin VB.Frame frmDrone 
-         Caption         =   "Drones"
-         Height          =   615
-         Left            =   3240
-         TabIndex        =   233
-         Top             =   7680
-         Width           =   2655
-         Begin VB.TextBox txtDrone 
-            Height          =   285
-            Left            =   2040
-            MaxLength       =   4
-            TabIndex        =   234
-            Text            =   "0"
-            Top             =   240
-            Width           =   495
-         End
-         Begin VB.Label Label40 
-            Caption         =   "Stinger Drone"
-            Height          =   255
-            Left            =   120
-            TabIndex        =   235
-            Top             =   240
-            Width           =   1695
-         End
       End
       Begin VB.CommandButton cmdClearAttacker 
          Caption         =   "Clear Attacker"
@@ -393,7 +409,7 @@ Begin VB.Form frmBattle
             Caption         =   "Random"
             Height          =   255
             Left            =   1080
-            TabIndex        =   237
+            TabIndex        =   234
             Top             =   2040
             Width           =   975
          End
@@ -745,11 +761,20 @@ Begin VB.Form frmBattle
       End
       Begin VB.Frame FrmSpecial 
          Caption         =   "Special Ships"
-         Height          =   10455
+         Height          =   10815
          Left            =   120
          TabIndex        =   22
          Top             =   120
          Width           =   3015
+         Begin VB.TextBox txtDrone 
+            Height          =   285
+            Left            =   2400
+            MaxLength       =   4
+            TabIndex        =   239
+            Text            =   "0"
+            Top             =   10440
+            Width           =   495
+         End
          Begin VB.TextBox txtMaelstromDEF 
             Height          =   285
             Left            =   2400
@@ -1253,6 +1278,14 @@ Begin VB.Form frmBattle
             Text            =   "0"
             Top             =   360
             Width           =   495
+         End
+         Begin VB.Label Label40 
+            Caption         =   "Stinger Drone"
+            Height          =   255
+            Left            =   120
+            TabIndex        =   238
+            Top             =   10440
+            Width           =   1695
          End
          Begin VB.Label Label48 
             Caption         =   "Def"
@@ -2069,8 +2102,15 @@ Private sngRandomDropOffRatio As Single
 Private sngCriticalHitRatio As Single
 Private strLogFile As String
 
-
 Private Sub cmbFormula_LostFocus()
+    WriteINIFile
+End Sub
+
+Private Sub cmbJumpStructure_LostFocus()
+    WriteINIFile
+End Sub
+
+Private Sub cmbLocation_LostFocus()
     WriteINIFile
 End Sub
 
@@ -3328,6 +3368,17 @@ Private Sub Form_Load()
     cmbFormula.AddItem "Base", 0
     cmbFormula.AddItem "Metallikov", 1
 
+    cmbLocation.AddItem "Core", 0
+    cmbLocation.AddItem "Mid", 1
+    cmbLocation.AddItem "Rim", 2
+    cmbLocation.ListIndex = 0
+    
+    cmbJumpStructure.AddItem "None", 0
+    cmbJumpStructure.AddItem "Jumpgate", 1
+    cmbJumpStructure.AddItem "Imp Jumpgate", 2
+    cmbJumpStructure.AddItem "Space Folder", 3
+    cmbJumpStructure.ListIndex = 0
+    
     ReadINIFile
     
     'Move the window in the middle
@@ -5159,7 +5210,7 @@ Private Function BattleEngine2()
     lstResult.Clear
     
     If colAttacker.Count = 0 Or colDefender.Count = 0 Then
-        Exit Function
+        GoTo CalcResult 'Exit Function
     End If
     'Fight a battle
     'Set the number of volleys
@@ -5430,7 +5481,9 @@ Private Function BattleEngine2()
     AddListItem " "
     AddListItem "Attacker Shots: " & colAttacker.GetHits & " (Total shots = " & (colAttacker.GetHits + colAttacker.GetMisses) & " Misses = " & colAttacker.GetMisses & ")"
     AddListItem "Defender Shots: " & colDefender.GetHits & " (Total shots = " & (colDefender.GetHits + colDefender.GetMisses) & " Misses = " & colDefender.GetMisses & ")"
-            
+         
+    'CalcResult
+CalcResult:
     'Battle is done calculate and post results
     CalculateResult colAttacker, colDefender
     
@@ -5467,6 +5520,8 @@ ErrorControl:
         If result Is Nothing Then
             Set result = New clsResult
             result.ShipName = attackerShip.Name
+            result.FuelFactor = attackerShip.FuelFactor
+            result.Speed = attackerShip.Speed
             colResultsAttacker.Add result, attackerShip.Name
             Set result = colResultsAttacker.Item(attackerShip.Name)
         End If
@@ -5516,11 +5571,13 @@ ErrorControl2:
         End If
     Next intI
     
+    CalculateFuelCosts colResultsAttacker
+    
     Dim intPrestigeLoss As Double
     Dim intCrewLoss As Double
     
     'Writeout end result
-    txtResult.Text = "Defender" & vbCrLf
+    txtResult.Text = txtResult.Text + "Defender" & vbCrLf
     
     For intI = 1 To colResultsDefender.Count
         Set result = colResultsDefender.Item(intI)
@@ -5555,6 +5612,52 @@ ErrorControl2:
     Set defenderShip = Nothing
     Set colResultsAttacker = Nothing
     Set colResultsDefender = Nothing
+End Function
+
+Private Function CalculateFuelCosts(colResult As Collection)
+    Dim intI As Integer
+    Dim result As clsResult
+    Dim intTotalFuel As Integer
+    Dim intFuelRequired As Integer
+    Dim intNumberOfShips As Integer
+    Dim intLocation As Integer
+    Dim intSpeedbonus As Integer
+    Dim intJumpspeed As Integer
+    Dim intTravelTime As Integer
+    
+    If cmbLocation.ListIndex = 0 Then
+        intLocation = 20
+    ElseIf cmbLocation.ListIndex = 1 Then
+        intLocation = 30
+    ElseIf cmbLocation.ListIndex = 2 Then
+        intLocation = 40
+    End If
+    
+    If cmbJumpStructure.ListIndex = 0 Then
+        intJumpspeed = 0
+    ElseIf cmbJumpStructure.ListIndex = 1 Then
+        intJumpspeed = 4
+    ElseIf cmbJumpStructure.ListIndex = 2 Then
+        intJumpspeed = 6
+    ElseIf cmbJumpStructure.ListIndex = 3 Then
+        intJumpspeed = 8
+    End If
+    
+    intSpeedbonus = Round((-(intLocation / 100)) * txtSpeedBonus.Text, 0)
+
+    For intI = 1 To colResult.Count
+         Set result = colResult.Item(intI)
+         
+         intNumberOfShips = result.ShipsLeft + result.ShipsLost
+         intTravelTime = intLocation + intSpeedbonus - result.Speed - intJumpspeed
+         intFuelRequired = Round(result.FuelFactor * CInt(txtVolleys.Text) * intNumberOfShips * intTravelTime, 0)
+         intTotalFuel = intTotalFuel + intFuelRequired
+         'For testing
+         Debug.Print result.ShipName
+         Debug.Print intTravelTime
+    Next intI
+    
+    txtResult.Text = txtResult.Text + "Total fuel required: " & intTotalFuel & vbCrLf & vbCrLf
 End Function
 
 Private Function DroneBattle2(defendershipshooting As clsShip, attackerShipShot As clsShip, blnEndLoop As Boolean, intDefShootingTypeNbr As Integer, intAttShotTypeNbr As Integer, intDefenderShipShot As Integer, intDefenderShipShooting As Integer, intAttackerShipShot As Integer, defenderShipShot As clsShip, intTotalDefenderShip As Integer, intDefShotTypeNbr As Integer)
@@ -6033,6 +6136,9 @@ Private Sub ReadINIFile()
     lReturn = GetPrivateProfileString("Options", "BattleFormula", "0", strString, lSize, strFile)
     cmbFormula.ListIndex = CInt(strString)
     
+    lReturn = GetPrivateProfileString("Options", "JumpStructure", "0", strString, lSize, strFile)
+    cmbJumpStructure.ListIndex = CInt(strString)
+    
     lReturn = GetPrivateProfileString("Options", "RandomFactor", "3", strString, lSize, strFile)
     sngRandomfactor = CSng(strString)
     
@@ -6041,7 +6147,11 @@ Private Sub ReadINIFile()
     
     lReturn = GetPrivateProfileString("Options", "CriticalHitRatio", "4.5", strString, lSize, strFile)
     sngCriticalHitRatio = CSng(strString)
+    
+    lReturn = GetPrivateProfileString("Options", "Speed", "0", strString, lSize, strFile)
+    txtSpeedBonus.Text = strString
 End Sub
+
 
 Private Sub cmdFight_Click()
     MousePointer = vbHourglass
@@ -6100,14 +6210,14 @@ Private Sub cmdFight_Click()
     
     If (optBombard.Value = True Or optSensorBlind.Value = True) Then
         If CInt(txtVolleys.Text) >= 6 Then
-            'Max 3 volleys in bombard or sensor blind
+            'Max 3 volleys in bombard or sensor blind for testing purposes
             txtVolleys.Text = 5
         ElseIf CInt(txtVolleys.Text) >= 4 Then
             txtVolleys.Text = 3
         End If
     End If
     
-    'Compose the attacker and defending fleet
+    'Compose the attacking and defending fleet
     ComposeFleet
     
     'Do the fighting
@@ -6211,11 +6321,17 @@ Private Sub WriteINIFile()
    
     'Write settings to inifile
     lReturn = WritePrivateProfileString("Options", "BattleFormula", CStr(cmbFormula.ListIndex), strFile)
+    lReturn = WritePrivateProfileString("Options", "JumpStructure", CStr(cmbJumpStructure.ListIndex), strFile)
     
     lReturn = WritePrivateProfileString("Options", "RandomFactor", CStr(sngRandomfactor), strFile)
     lReturn = WritePrivateProfileString("Options", "RandomDropOffRatio", CStr(sngRandomDropOffRatio), strFile)
     lReturn = WritePrivateProfileString("Options", "CriticalHitRatio", CStr(sngCriticalHitRatio), strFile)
+    lReturn = WritePrivateProfileString("Options", "Speed", txtSpeedBonus.Text, strFile)
 End Sub
 Private Sub Form_Unload(Cancel As Integer)
    WriteINIFile
+End Sub
+
+Private Sub txtSpeedBonus_LostFocus()
+    WriteINIFile
 End Sub

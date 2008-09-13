@@ -17,6 +17,8 @@ Private m_intShipsLeft As Double
 Private m_intCrewLoss As Double
 Private m_strShipName As String
 Private m_intPrestigeLoss As Double
+Private m_sngFuelFactor As Single
+Private m_intSpeed As Integer
 
 Public Property Get PrestigeLoss() As Double
     PrestigeLoss = m_intPrestigeLoss
@@ -56,4 +58,20 @@ End Property
 
 Public Property Let ShipName(ByVal strShipName As String)
     m_strShipName = strShipName
+End Property
+
+Public Property Get FuelFactor() As Single
+    FuelFactor = m_sngFuelFactor
+End Property
+
+Public Property Let FuelFactor(ByVal sngFuelFactor As Single)
+    m_sngFuelFactor = sngFuelFactor
+End Property
+
+Public Property Get Speed() As Integer
+    Speed = m_intSpeed
+End Property
+
+Public Property Let Speed(ByVal intSpeed As Integer)
+    m_intSpeed = intSpeed
 End Property

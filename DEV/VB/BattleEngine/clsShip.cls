@@ -114,3 +114,15 @@ End Property
 
 Public Property Let Prestige(ByVal intPrestige As Integer)
 End Property
+
+Public Property Get FuelFactor() As Single
+End Property
+
+Public Property Let FuelFactor(ByVal sngFuelFactor As Single)
+End Property
+
+Public Property Get Speed() As Integer
+End Property
+
+Public Property Let Speed(ByVal intSpeed As Integer)
+End Property
