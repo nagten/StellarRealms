@@ -12,7 +12,7 @@ if ($_SERVER['SERVER_NAME'] == 'www.idsfadt.com')
 
 	$LoginWebUrl = "http://www.idsfadt.com/Cabal/login_page.php";
 	$ScoutWebUrl = "http://www.idsfadt.com/Cabal/Scout/scout.php";
-	$DossierWebUrl = "http://www.idsfadt.com/Cabal/Dossier/Dossier.php";
+	$StatsWebUrl = "http://www.idsfadt.com/Cabal/Planetstats/planetstats.php";
 
 	//Murc
 /*
@@ -47,6 +47,6 @@ else
 
 	$LoginDebugUrl = "http://localhost/Cabal/login_page.php";
 	$ScoutDebugUrl = "http://localhost/Cabal/Scout/scout.php";
-	$DossierDebugUrl = "http://localhost/Cabal/Dossier/Dossier.php";
+	$StatsDebugUrl = "http://localhost/Cabal/Planetstats/planetstats.php";
 }
 ?>
