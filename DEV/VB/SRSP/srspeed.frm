@@ -1,19 +1,51 @@
 VERSION 5.00
 Begin VB.Form frmsrspeed 
    Caption         =   "SR Speed Calculator"
-   ClientHeight    =   2430
-   ClientLeft      =   7800
+   ClientHeight    =   2415
+   ClientLeft      =   6645
    ClientTop       =   9555
-   ClientWidth     =   5880
+   ClientWidth     =   6990
    Icon            =   "srspeed.frx":0000
    LinkTopic       =   "Form1"
-   ScaleHeight     =   2430
-   ScaleWidth      =   5880
-   StartUpPosition =   1  'CenterOwner
+   ScaleHeight     =   2415
+   ScaleWidth      =   6990
+   Begin VB.Frame frmLocation 
+      Caption         =   "Location"
+      Height          =   1335
+      Left            =   2040
+      TabIndex        =   17
+      Top             =   120
+      Width           =   1095
+      Begin VB.OptionButton optRim 
+         Caption         =   "Rim"
+         Height          =   255
+         Left            =   120
+         TabIndex        =   20
+         Top             =   960
+         Width           =   615
+      End
+      Begin VB.OptionButton optMid 
+         Caption         =   "Mid"
+         Height          =   255
+         Left            =   120
+         TabIndex        =   19
+         Top             =   600
+         Width           =   855
+      End
+      Begin VB.OptionButton optCore 
+         Caption         =   "Core"
+         Height          =   255
+         Left            =   120
+         TabIndex        =   18
+         Top             =   240
+         Value           =   -1  'True
+         Width           =   855
+      End
+   End
    Begin VB.TextBox txtDeploy 
       Alignment       =   2  'Center
       Height          =   285
-      Left            =   3840
+      Left            =   4440
       MaxLength       =   3
       TabIndex        =   16
       Text            =   "0"
@@ -23,7 +55,7 @@ Begin VB.Form frmsrspeed
    Begin VB.Frame frmtargetspeed 
       Caption         =   "Turns"
       Height          =   1095
-      Left            =   2160
+      Left            =   3240
       TabIndex        =   10
       Top             =   120
       Width           =   3615
@@ -104,7 +136,7 @@ Begin VB.Form frmsrspeed
    Begin VB.TextBox txtShipSpeed 
       Alignment       =   2  'Center
       Height          =   285
-      Left            =   3840
+      Left            =   4440
       MaxLength       =   2
       TabIndex        =   2
       Text            =   "2"
@@ -114,7 +146,7 @@ Begin VB.Form frmsrspeed
    Begin VB.TextBox txtResearchBonus 
       Alignment       =   2  'Center
       Height          =   285
-      Left            =   3840
+      Left            =   4440
       MaxLength       =   3
       TabIndex        =   1
       Text            =   "-6"
@@ -125,7 +157,7 @@ Begin VB.Form frmsrspeed
       Caption         =   "Calculate"
       Default         =   -1  'True
       Height          =   375
-      Left            =   4560
+      Left            =   5640
       TabIndex        =   0
       Top             =   1920
       Width           =   1215
@@ -133,7 +165,7 @@ Begin VB.Form frmsrspeed
    Begin VB.Label lblDeploy 
       Caption         =   " Deploying in:"
       Height          =   255
-      Left            =   2640
+      Left            =   3240
       TabIndex        =   15
       Top             =   1320
       Width           =   1215
@@ -141,7 +173,7 @@ Begin VB.Form frmsrspeed
    Begin VB.Label lblShipSpeed 
       Caption         =   "Speed of slowest ship:"
       Height          =   255
-      Left            =   2040
+      Left            =   2640
       TabIndex        =   4
       Top             =   2040
       Width           =   1695
@@ -149,7 +181,7 @@ Begin VB.Form frmsrspeed
    Begin VB.Label lblresearchbonus 
       Caption         =   "Research:"
       Height          =   255
-      Left            =   2880
+      Left            =   3480
       TabIndex        =   3
       Top             =   1680
       Width           =   855
@@ -165,7 +197,19 @@ Option Explicit
 Private Sub cmdCalculate_Click()
     'First we check if we got a jumpgate
     Dim intJumpspeed As Integer
-   
+    Dim intLocation As Integer
+    
+    'Base location
+    intLocation = 20
+    
+    If optCore.Value = True Then
+        intLocation = 20
+    ElseIf optMid.Value = True Then
+        intLocation = 30
+    ElseIf optRim.Value = True Then
+        intLocation = 40
+    End If
+    
     If optNoGate.Value = True Then
         intJumpspeed = 0
     ElseIf optJumpGate.Value = True Then
@@ -186,14 +230,14 @@ Private Sub cmdCalculate_Click()
     
         lngDeployTurns = CLng(txtDeploy.Text)
         currenttime = Format(Now, "dd-mmm-yyyy hh:mm")
-        intSpeedbonus = Round((-0.2) * txtResearchBonus.Text, 0)
+        intSpeedbonus = Round((-(intLocation / 100)) * txtResearchBonus.Text, 0)
         
         'calculate speed to target
-        intSpeedToTarget = 20 + intSpeedbonus - txtShipSpeed - intJumpspeed
+        intSpeedToTarget = intLocation + intSpeedbonus - txtShipSpeed - intJumpspeed
         lblResult.Caption = intSpeedToTarget & "  (" & Format(CalculateTime(currenttime, (intSpeedToTarget + lngDeployTurns)), "dd-mmm-yyyy hh:mm") & ")"
         
         'calculate speed back from target
-        intSpeedFromTarget = 20 + intSpeedbonus - txtShipSpeed
+        intSpeedFromTarget = intLocation + intSpeedbonus - txtShipSpeed
         lblResultBack.Caption = intSpeedFromTarget & "  (" & Format(CalculateTime(currenttime, ((intSpeedToTarget + intSpeedFromTarget) + lngDeployTurns)), "dd-mmm-yyyy hh:mm") & ")"
     Else
         MsgBox "Use numerical values", vbOKOnly, "Error"
