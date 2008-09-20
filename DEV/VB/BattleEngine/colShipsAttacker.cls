@@ -20,8 +20,9 @@ Private intAttackShipType As Integer
 Private intAttackPreviousIndex As Integer
 Private strPreviousShipName As String
 Private strAttackPreviousShipName As String
-Private intAttackerShotsHit As Integer
-Private intAttackerShotsMiss As Integer
+Private lngAttackerShotsHit As Long
+Private lngAttackerShotsMiss As Long
+Private lngAttackerTotalWeapons As Long
 
 Private Sub Class_Initialize()
     intShipType = 0
@@ -30,24 +31,28 @@ Private Sub Class_Initialize()
 End Sub
 
 Public Function GetHits()
-    GetHits = intAttackerShotsHit
+    GetHits = lngAttackerShotsHit
 End Function
 
 Public Function GetMisses()
-    GetMisses = intAttackerShotsMiss
+    GetMisses = lngAttackerShotsMiss
 End Function
 
 Public Function AddHit()
-    intAttackerShotsHit = intAttackerShotsHit + 1
+    lngAttackerShotsHit = lngAttackerShotsHit + 1
 End Function
 
 Public Function AddMiss()
-    intAttackerShotsMiss = intAttackerShotsMiss + 1
+    lngAttackerShotsMiss = lngAttackerShotsMiss + 1
+End Function
+
+Public Function GetTotalWeapons() As Long
+    GetTotalWeapons = lngAttackerTotalWeapons
 End Function
 
 Public Function ResetShots()
-    intAttackerShotsHit = 0
-    intAttackerShotsMiss = 0
+    lngAttackerShotsHit = 0
+    lngAttackerShotsMiss = 0
 End Function
 
 Public Function ResetCounters()
@@ -129,19 +134,25 @@ End Function
 Public Sub Add(ShipObject As clsShip)
     'This sub adds a reference to the passed in ShipObject to this collection
     colShips.Add ShipObject
+    lngAttackerTotalWeapons = lngAttackerTotalWeapons + ShipObject.Weapons
 End Sub
 
 Public Sub AddKey(ShipObject As clsShip, strKey As String)
     'This sub adds a reference to the passed in ShipObject to this collection
     colShips.Add ShipObject, strKey
+    lngAttackerTotalWeapons = lngAttackerTotalWeapons + ShipObject.Weapons
 End Sub
 
 Public Sub AddBefore(ShipObject As clsShip, before As Integer)
     'This sub adds a reference to the passed in ShipObject to this collection
     colShips.Add ShipObject, , before
+    lngAttackerTotalWeapons = lngAttackerTotalWeapons + ShipObject.Weapons
 End Sub
 
 Public Sub AddAfter(ShipObject As clsShip, after As Integer)
     'This sub adds a reference to the passed in ShipObject to this collection
     colShips.Add ShipObject, , , after
+    lngAttackerTotalWeapons = lngAttackerTotalWeapons + ShipObject.Weapons
 End Sub
+
+

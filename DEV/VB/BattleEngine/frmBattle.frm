@@ -1,6 +1,6 @@
 VERSION 5.00
 Begin VB.Form frmBattle 
-   Caption         =   "Battle v0.5 Alpha"
+   Caption         =   "Battle v0.7 Alpha"
    ClientHeight    =   11040
    ClientLeft      =   5595
    ClientTop       =   3510
@@ -141,7 +141,7 @@ Begin VB.Form frmBattle
    Begin VB.Frame frmShips 
       Height          =   11055
       Left            =   0
-      TabIndex        =   0
+      TabIndex        =   4
       Top             =   0
       Width           =   14295
       Begin VB.Frame frmSpeed 
@@ -274,7 +274,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1440
             MaxLength       =   3
-            TabIndex        =   196
+            TabIndex        =   195
             Text            =   "0"
             Top             =   1080
             Width           =   495
@@ -283,7 +283,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1440
             MaxLength       =   3
-            TabIndex        =   195
+            TabIndex        =   194
             Text            =   "0"
             Top             =   720
             Width           =   495
@@ -292,7 +292,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   2040
             MaxLength       =   3
-            TabIndex        =   194
+            TabIndex        =   196
             Text            =   "0"
             Top             =   360
             Width           =   495
@@ -763,7 +763,7 @@ Begin VB.Form frmBattle
          Caption         =   "Special Ships"
          Height          =   10815
          Left            =   120
-         TabIndex        =   22
+         TabIndex        =   0
          Top             =   120
          Width           =   3015
          Begin VB.TextBox txtDrone 
@@ -1049,7 +1049,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   2400
             MaxLength       =   4
-            TabIndex        =   110
+            TabIndex        =   3
             Text            =   "0"
             Top             =   360
             Width           =   495
@@ -1058,7 +1058,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   109
+            TabIndex        =   110
             Text            =   "0"
             Top             =   10080
             Width           =   495
@@ -1067,7 +1067,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   108
+            TabIndex        =   109
             Text            =   "0"
             Top             =   9720
             Width           =   495
@@ -1076,7 +1076,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   107
+            TabIndex        =   108
             Text            =   "0"
             Top             =   9360
             Width           =   495
@@ -1085,7 +1085,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   106
+            TabIndex        =   107
             Text            =   "0"
             Top             =   8640
             Width           =   495
@@ -1094,7 +1094,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   105
+            TabIndex        =   106
             Text            =   "0"
             Top             =   8280
             Width           =   495
@@ -1103,7 +1103,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   104
+            TabIndex        =   105
             Text            =   "0"
             Top             =   7560
             Width           =   495
@@ -1112,7 +1112,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   103
+            TabIndex        =   104
             Text            =   "0"
             Top             =   7200
             Width           =   495
@@ -1121,7 +1121,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   102
+            TabIndex        =   103
             Text            =   "0"
             Top             =   6840
             Width           =   495
@@ -1130,7 +1130,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   101
+            TabIndex        =   102
             Text            =   "0"
             Top             =   6120
             Width           =   495
@@ -1139,7 +1139,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   100
+            TabIndex        =   101
             Text            =   "0"
             Top             =   5760
             Width           =   495
@@ -1148,7 +1148,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   99
+            TabIndex        =   100
             Text            =   "0"
             Top             =   5400
             Width           =   495
@@ -1157,7 +1157,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   98
+            TabIndex        =   99
             Text            =   "0"
             Top             =   5040
             Width           =   495
@@ -1166,7 +1166,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   97
+            TabIndex        =   98
             Text            =   "0"
             Top             =   4680
             Width           =   495
@@ -1175,7 +1175,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   96
+            TabIndex        =   97
             Text            =   "0"
             Top             =   4320
             Width           =   495
@@ -1184,7 +1184,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   95
+            TabIndex        =   96
             Text            =   "0"
             Top             =   3960
             Width           =   495
@@ -1193,7 +1193,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   94
+            TabIndex        =   95
             Text            =   "0"
             Top             =   3600
             Width           =   495
@@ -1202,7 +1202,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   93
+            TabIndex        =   94
             Text            =   "0"
             Top             =   3240
             Width           =   495
@@ -1211,7 +1211,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   92
+            TabIndex        =   93
             Text            =   "0"
             Top             =   2880
             Width           =   495
@@ -1220,7 +1220,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   91
+            TabIndex        =   92
             Text            =   "0"
             Top             =   2520
             Width           =   495
@@ -1229,7 +1229,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   90
+            TabIndex        =   91
             Text            =   "0"
             Top             =   2160
             Width           =   495
@@ -1238,7 +1238,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   89
+            TabIndex        =   90
             Text            =   "0"
             Top             =   1800
             Width           =   495
@@ -1247,7 +1247,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   88
+            TabIndex        =   89
             Text            =   "0"
             Top             =   1440
             Width           =   495
@@ -1256,7 +1256,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   87
+            TabIndex        =   88
             Text            =   "0"
             Top             =   1080
             Width           =   495
@@ -1265,7 +1265,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   86
+            TabIndex        =   87
             Text            =   "0"
             Top             =   720
             Width           =   495
@@ -1274,7 +1274,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   85
+            TabIndex        =   2
             Text            =   "0"
             Top             =   360
             Width           =   495
@@ -1331,7 +1331,7 @@ Begin VB.Form frmBattle
             Caption         =   "Wayfarer"
             Height          =   255
             Left            =   120
-            TabIndex        =   84
+            TabIndex        =   86
             Top             =   9720
             Width           =   1695
          End
@@ -1339,7 +1339,7 @@ Begin VB.Form frmBattle
             Caption         =   "Zephyr Fast Destroyer"
             Height          =   255
             Left            =   120
-            TabIndex        =   83
+            TabIndex        =   85
             Top             =   10080
             Width           =   1695
          End
@@ -1347,7 +1347,7 @@ Begin VB.Form frmBattle
             Caption         =   "Tangler Defense Barge"
             Height          =   255
             Left            =   120
-            TabIndex        =   82
+            TabIndex        =   84
             Top             =   8280
             Width           =   1695
          End
@@ -1355,7 +1355,7 @@ Begin VB.Form frmBattle
             Caption         =   "Terrapin Carrier"
             Height          =   255
             Left            =   120
-            TabIndex        =   81
+            TabIndex        =   83
             Top             =   8640
             Width           =   1695
          End
@@ -1363,7 +1363,7 @@ Begin VB.Form frmBattle
             Caption         =   "Vespa Siege Carrier"
             Height          =   255
             Left            =   120
-            TabIndex        =   80
+            TabIndex        =   82
             Top             =   9360
             Width           =   1695
          End
@@ -1371,7 +1371,7 @@ Begin VB.Form frmBattle
             Caption         =   "Privateer"
             Height          =   255
             Left            =   120
-            TabIndex        =   79
+            TabIndex        =   81
             Top             =   7200
             Width           =   1695
          End
@@ -1379,7 +1379,7 @@ Begin VB.Form frmBattle
             Caption         =   "Raven"
             Height          =   255
             Left            =   120
-            TabIndex        =   78
+            TabIndex        =   80
             Top             =   7560
             Width           =   1695
          End
@@ -1387,7 +1387,7 @@ Begin VB.Form frmBattle
             Caption         =   "Hurricane"
             Height          =   255
             Left            =   120
-            TabIndex        =   77
+            TabIndex        =   79
             Top             =   5040
             Width           =   1695
          End
@@ -1395,7 +1395,7 @@ Begin VB.Form frmBattle
             Caption         =   "Interdictor"
             Height          =   255
             Left            =   120
-            TabIndex        =   76
+            TabIndex        =   78
             Top             =   5400
             Width           =   1695
          End
@@ -1403,7 +1403,7 @@ Begin VB.Form frmBattle
             Caption         =   "Judicator"
             Height          =   255
             Left            =   120
-            TabIndex        =   75
+            TabIndex        =   77
             Top             =   5760
             Width           =   1695
          End
@@ -1411,7 +1411,7 @@ Begin VB.Form frmBattle
             Caption         =   "Leopard"
             Height          =   255
             Left            =   120
-            TabIndex        =   74
+            TabIndex        =   76
             Top             =   6120
             Width           =   1695
          End
@@ -1419,7 +1419,7 @@ Begin VB.Form frmBattle
             Caption         =   "Orca"
             Height          =   255
             Left            =   120
-            TabIndex        =   73
+            TabIndex        =   75
             Top             =   6840
             Width           =   1695
          End
@@ -1427,7 +1427,7 @@ Begin VB.Form frmBattle
             Caption         =   "Goliath"
             Height          =   255
             Left            =   120
-            TabIndex        =   72
+            TabIndex        =   74
             Top             =   4320
             Width           =   1695
          End
@@ -1435,7 +1435,7 @@ Begin VB.Form frmBattle
             Caption         =   "Dragon Mobile Assault"
             Height          =   255
             Left            =   120
-            TabIndex        =   71
+            TabIndex        =   73
             Top             =   3960
             Width           =   1695
          End
@@ -1443,7 +1443,7 @@ Begin VB.Form frmBattle
             Caption         =   "Crusader"
             Height          =   255
             Left            =   120
-            TabIndex        =   70
+            TabIndex        =   72
             Top             =   3600
             Width           =   1695
          End
@@ -1451,7 +1451,7 @@ Begin VB.Form frmBattle
             Caption         =   "Avalanche"
             Height          =   255
             Left            =   120
-            TabIndex        =   69
+            TabIndex        =   71
             Top             =   1440
             Width           =   1695
          End
@@ -1459,7 +1459,7 @@ Begin VB.Form frmBattle
             Caption         =   "Badger"
             Height          =   255
             Left            =   120
-            TabIndex        =   68
+            TabIndex        =   70
             Top             =   1800
             Width           =   1695
          End
@@ -1467,7 +1467,7 @@ Begin VB.Form frmBattle
             Caption         =   "Barracuda"
             Height          =   255
             Left            =   120
-            TabIndex        =   67
+            TabIndex        =   69
             Top             =   2160
             Width           =   1695
          End
@@ -1475,7 +1475,7 @@ Begin VB.Form frmBattle
             Caption         =   "Berzerker"
             Height          =   255
             Left            =   120
-            TabIndex        =   66
+            TabIndex        =   68
             Top             =   2520
             Width           =   1695
          End
@@ -1483,7 +1483,7 @@ Begin VB.Form frmBattle
             Caption         =   "Collector"
             Height          =   255
             Left            =   120
-            TabIndex        =   65
+            TabIndex        =   67
             Top             =   2880
             Width           =   1695
          End
@@ -1491,7 +1491,7 @@ Begin VB.Form frmBattle
             Caption         =   "Hammer Gunship"
             Height          =   255
             Left            =   120
-            TabIndex        =   64
+            TabIndex        =   66
             Top             =   4680
             Width           =   1695
          End
@@ -1499,7 +1499,7 @@ Begin VB.Form frmBattle
             Caption         =   "Colossus"
             Height          =   255
             Left            =   120
-            TabIndex        =   26
+            TabIndex        =   28
             Top             =   3240
             Width           =   1695
          End
@@ -1507,7 +1507,7 @@ Begin VB.Form frmBattle
             Caption         =   "Asp Heavy Cruiser"
             Height          =   255
             Left            =   120
-            TabIndex        =   25
+            TabIndex        =   27
             Top             =   1080
             Width           =   1695
          End
@@ -1515,7 +1515,7 @@ Begin VB.Form frmBattle
             Caption         =   "Anvil BattleShip"
             Height          =   255
             Left            =   120
-            TabIndex        =   24
+            TabIndex        =   26
             Top             =   720
             Width           =   1695
          End
@@ -1523,7 +1523,7 @@ Begin VB.Form frmBattle
             Caption         =   "Aegis Mobile Shield"
             Height          =   255
             Left            =   120
-            TabIndex        =   23
+            TabIndex        =   1
             Top             =   360
             Width           =   1695
          End
@@ -1532,7 +1532,7 @@ Begin VB.Form frmBattle
          Caption         =   "Standard Ships"
          Height          =   4695
          Left            =   3240
-         TabIndex        =   9
+         TabIndex        =   13
          Top             =   120
          Width           =   3015
          Begin VB.TextBox txtScout 
@@ -1548,7 +1548,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   2400
             MaxLength       =   4
-            TabIndex        =   49
+            TabIndex        =   51
             Text            =   "0"
             Top             =   4320
             Width           =   495
@@ -1557,7 +1557,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   2400
             MaxLength       =   4
-            TabIndex        =   48
+            TabIndex        =   50
             Text            =   "0"
             Top             =   3960
             Width           =   495
@@ -1566,7 +1566,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   2400
             MaxLength       =   4
-            TabIndex        =   47
+            TabIndex        =   49
             Text            =   "0"
             Top             =   3600
             Width           =   495
@@ -1575,7 +1575,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   2400
             MaxLength       =   4
-            TabIndex        =   46
+            TabIndex        =   48
             Text            =   "0"
             Top             =   3240
             Width           =   495
@@ -1584,7 +1584,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   2400
             MaxLength       =   4
-            TabIndex        =   45
+            TabIndex        =   47
             Text            =   "0"
             Top             =   2880
             Width           =   495
@@ -1593,7 +1593,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   2400
             MaxLength       =   4
-            TabIndex        =   44
+            TabIndex        =   46
             Text            =   "0"
             Top             =   2520
             Width           =   495
@@ -1602,7 +1602,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   2400
             MaxLength       =   4
-            TabIndex        =   43
+            TabIndex        =   45
             Text            =   "0"
             Top             =   2160
             Width           =   495
@@ -1611,7 +1611,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   2400
             MaxLength       =   4
-            TabIndex        =   42
+            TabIndex        =   44
             Text            =   "0"
             Top             =   1800
             Width           =   495
@@ -1620,7 +1620,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   2400
             MaxLength       =   4
-            TabIndex        =   41
+            TabIndex        =   43
             Text            =   "0"
             Top             =   1440
             Width           =   495
@@ -1629,7 +1629,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   2400
             MaxLength       =   4
-            TabIndex        =   40
+            TabIndex        =   42
             Text            =   "0"
             Top             =   1080
             Width           =   495
@@ -1638,7 +1638,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   2400
             MaxLength       =   4
-            TabIndex        =   39
+            TabIndex        =   41
             Text            =   "0"
             Top             =   720
             Width           =   495
@@ -1647,7 +1647,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   2400
             MaxLength       =   4
-            TabIndex        =   38
+            TabIndex        =   40
             Text            =   "0"
             Top             =   360
             Width           =   495
@@ -1656,7 +1656,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   37
+            TabIndex        =   39
             Text            =   "0"
             Top             =   4320
             Width           =   495
@@ -1665,7 +1665,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   36
+            TabIndex        =   38
             Text            =   "0"
             Top             =   3960
             Width           =   495
@@ -1674,7 +1674,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   35
+            TabIndex        =   37
             Text            =   "0"
             Top             =   3600
             Width           =   495
@@ -1683,7 +1683,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   34
+            TabIndex        =   36
             Text            =   "0"
             Top             =   3240
             Width           =   495
@@ -1692,7 +1692,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   33
+            TabIndex        =   35
             Text            =   "0"
             Top             =   2880
             Width           =   495
@@ -1701,7 +1701,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   32
+            TabIndex        =   34
             Text            =   "0"
             Top             =   2520
             Width           =   495
@@ -1710,7 +1710,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   31
+            TabIndex        =   33
             Text            =   "0"
             Top             =   2160
             Width           =   495
@@ -1719,7 +1719,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   30
+            TabIndex        =   32
             Text            =   "0"
             Top             =   1800
             Width           =   495
@@ -1728,7 +1728,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   29
+            TabIndex        =   31
             Text            =   "0"
             Top             =   1440
             Width           =   495
@@ -1737,7 +1737,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   28
+            TabIndex        =   30
             Text            =   "0"
             Top             =   1080
             Width           =   495
@@ -1746,7 +1746,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   27
+            TabIndex        =   29
             Text            =   "0"
             Top             =   720
             Width           =   495
@@ -1771,7 +1771,7 @@ Begin VB.Form frmBattle
             Caption         =   "Heavy Carrier"
             Height          =   255
             Left            =   120
-            TabIndex        =   21
+            TabIndex        =   25
             Top             =   4320
             Width           =   1695
          End
@@ -1779,7 +1779,7 @@ Begin VB.Form frmBattle
             Caption         =   "Dreadnought"
             Height          =   255
             Left            =   120
-            TabIndex        =   20
+            TabIndex        =   24
             Top             =   3960
             Width           =   1695
          End
@@ -1787,7 +1787,7 @@ Begin VB.Form frmBattle
             Caption         =   "Battleship"
             Height          =   255
             Left            =   120
-            TabIndex        =   19
+            TabIndex        =   23
             Top             =   3600
             Width           =   975
          End
@@ -1795,7 +1795,7 @@ Begin VB.Form frmBattle
             Caption         =   "Light Carrier"
             Height          =   255
             Left            =   120
-            TabIndex        =   18
+            TabIndex        =   22
             Top             =   3240
             Width           =   1695
          End
@@ -1803,7 +1803,7 @@ Begin VB.Form frmBattle
             Caption         =   "Heavy Cruiser"
             Height          =   255
             Left            =   120
-            TabIndex        =   17
+            TabIndex        =   21
             Top             =   2880
             Width           =   1695
          End
@@ -1811,7 +1811,7 @@ Begin VB.Form frmBattle
             Caption         =   "Cruiser"
             Height          =   255
             Left            =   120
-            TabIndex        =   16
+            TabIndex        =   20
             Top             =   2520
             Width           =   975
          End
@@ -1819,7 +1819,7 @@ Begin VB.Form frmBattle
             Caption         =   "Fire Support Destroyer"
             Height          =   255
             Left            =   120
-            TabIndex        =   15
+            TabIndex        =   19
             Top             =   2160
             Width           =   1815
          End
@@ -1827,7 +1827,7 @@ Begin VB.Form frmBattle
             Caption         =   "Destroyer"
             Height          =   255
             Left            =   120
-            TabIndex        =   14
+            TabIndex        =   18
             Top             =   1800
             Width           =   1695
          End
@@ -1835,7 +1835,7 @@ Begin VB.Form frmBattle
             Caption         =   "Improved Frigate"
             Height          =   255
             Left            =   120
-            TabIndex        =   13
+            TabIndex        =   17
             Top             =   1440
             Width           =   1695
          End
@@ -1843,7 +1843,7 @@ Begin VB.Form frmBattle
             Caption         =   "Frigate"
             Height          =   255
             Left            =   120
-            TabIndex        =   12
+            TabIndex        =   16
             Top             =   1080
             Width           =   1215
          End
@@ -1851,7 +1851,7 @@ Begin VB.Form frmBattle
             Caption         =   "Scout"
             Height          =   255
             Left            =   120
-            TabIndex        =   11
+            TabIndex        =   15
             Top             =   360
             Width           =   1095
          End
@@ -1859,7 +1859,7 @@ Begin VB.Form frmBattle
             Caption         =   "Deep Recon Scout"
             Height          =   255
             Left            =   120
-            TabIndex        =   10
+            TabIndex        =   14
             Top             =   720
             Width           =   1695
          End
@@ -1868,14 +1868,14 @@ Begin VB.Form frmBattle
          Caption         =   "Fighter"
          Height          =   2895
          Left            =   3240
-         TabIndex        =   1
+         TabIndex        =   5
          Top             =   4800
          Width           =   3015
          Begin VB.TextBox txtDaggerDEF 
             Height          =   285
             Left            =   2400
             MaxLength       =   4
-            TabIndex        =   63
+            TabIndex        =   65
             Text            =   "0"
             Top             =   2520
             Width           =   495
@@ -1884,7 +1884,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   2400
             MaxLength       =   4
-            TabIndex        =   62
+            TabIndex        =   64
             Text            =   "0"
             Top             =   2160
             Width           =   495
@@ -1893,7 +1893,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   2400
             MaxLength       =   4
-            TabIndex        =   61
+            TabIndex        =   63
             Text            =   "0"
             Top             =   1800
             Width           =   495
@@ -1902,7 +1902,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   2400
             MaxLength       =   4
-            TabIndex        =   60
+            TabIndex        =   62
             Text            =   "0"
             Top             =   1440
             Width           =   495
@@ -1911,7 +1911,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   2400
             MaxLength       =   4
-            TabIndex        =   59
+            TabIndex        =   61
             Text            =   "0"
             Top             =   1080
             Width           =   495
@@ -1920,7 +1920,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   2400
             MaxLength       =   4
-            TabIndex        =   58
+            TabIndex        =   60
             Text            =   "0"
             Top             =   720
             Width           =   495
@@ -1929,7 +1929,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   2400
             MaxLength       =   4
-            TabIndex        =   57
+            TabIndex        =   59
             Text            =   "0"
             Top             =   360
             Width           =   495
@@ -1938,7 +1938,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   56
+            TabIndex        =   58
             Text            =   "0"
             Top             =   2520
             Width           =   495
@@ -1947,7 +1947,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   55
+            TabIndex        =   57
             Text            =   "0"
             Top             =   2160
             Width           =   495
@@ -1956,7 +1956,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   54
+            TabIndex        =   56
             Text            =   "0"
             Top             =   1800
             Width           =   495
@@ -1965,7 +1965,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   53
+            TabIndex        =   55
             Text            =   "0"
             Top             =   1440
             Width           =   495
@@ -1974,7 +1974,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   52
+            TabIndex        =   54
             Text            =   "0"
             Top             =   1080
             Width           =   495
@@ -1983,7 +1983,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   51
+            TabIndex        =   53
             Text            =   "0"
             Top             =   720
             Width           =   495
@@ -1992,7 +1992,7 @@ Begin VB.Form frmBattle
             Height          =   285
             Left            =   1800
             MaxLength       =   4
-            TabIndex        =   50
+            TabIndex        =   52
             Text            =   "0"
             Top             =   360
             Width           =   495
@@ -2001,7 +2001,7 @@ Begin VB.Form frmBattle
             Caption         =   "Wasp Heavy Fighter"
             Height          =   255
             Left            =   120
-            TabIndex        =   8
+            TabIndex        =   12
             Top             =   2160
             Width           =   1695
          End
@@ -2009,7 +2009,7 @@ Begin VB.Form frmBattle
             Caption         =   "Fang Heavy Bomber"
             Height          =   255
             Left            =   120
-            TabIndex        =   7
+            TabIndex        =   11
             Top             =   1800
             Width           =   1695
          End
@@ -2017,7 +2017,7 @@ Begin VB.Form frmBattle
             Caption         =   "Dagger Heavy Fighter"
             Height          =   255
             Left            =   120
-            TabIndex        =   6
+            TabIndex        =   10
             Top             =   2520
             Width           =   1695
          End
@@ -2025,7 +2025,7 @@ Begin VB.Form frmBattle
             Caption         =   "Heavy bomber"
             Height          =   255
             Left            =   120
-            TabIndex        =   5
+            TabIndex        =   9
             Top             =   1440
             Width           =   1695
          End
@@ -2033,7 +2033,7 @@ Begin VB.Form frmBattle
             Caption         =   "Fighter Interceptor"
             Height          =   255
             Left            =   120
-            TabIndex        =   4
+            TabIndex        =   8
             Top             =   360
             Width           =   1695
          End
@@ -2041,7 +2041,7 @@ Begin VB.Form frmBattle
             Caption         =   "Advanced Interceptor"
             Height          =   255
             Left            =   120
-            TabIndex        =   3
+            TabIndex        =   6
             Top             =   1080
             Width           =   1695
          End
@@ -2049,7 +2049,7 @@ Begin VB.Form frmBattle
             Caption         =   "Fighter Bomber"
             Height          =   255
             Left            =   120
-            TabIndex        =   2
+            TabIndex        =   7
             Top             =   720
             Width           =   1335
          End
@@ -3356,6 +3356,48 @@ Private Sub cmdTest_Click()
         txtVolleys.Text = 3
         'Attack Formation
         optBombard.Value = True
+        'Defense Formation
+        optStandard.Value = True
+        
+        cmdFight_Click
+    
+    Case 37:
+        txtAttackerOffense.Text = 35
+        txtAttackerDefense.Text = 30
+        txtAttackerDurability.Text = 30
+        
+        txtDefenderOffense.Text = 40
+        txtDefenderDefense.Text = 40
+        txtDefenderDurability.Text = 60
+        
+        txtAegis.Text = 18
+        txtDragon.Text = 17
+        txtGoliath.Text = 128
+        txtMaelstrom.Text = 1
+        txtAvalanche.Text = 1
+        txtBadger.Text = 4
+        txtFSD.Text = 235
+        txtDRScout.Text = 20
+        
+        txtIMPODPDEF.Text = 11
+        txtDragonDEF.Text = 10
+        txtTanglerDEF.Text = 10
+        txtGoliathDEF.Text = 17
+        txtDreadsDEF.Text = 34
+        txtVespaDEF.Text = 10
+        txtBatsDEF.Text = 26
+        txtHCDEF.Text = 2
+        txtBadgerDEF.Text = 4
+        txtBerzerkerDEF.Text = 30
+        txtFSDDEF.Text = 190
+        txtDestroyerDEF.Text = 10
+        txtDRScoutDEF.Text = 83
+        txtScoutDEF.Text = 266
+        txtWaspDEF.Text = 600
+        
+        txtVolleys.Text = 5
+        
+        optNormal.Value = True
         'Defense Formation
         optStandard.Value = True
         
@@ -5223,10 +5265,10 @@ Private Function BattleEngine2()
         Log "", "Formula used: Metallikovs formula"
     End If
     
-    AddListItem "Attacker Off: " & intAttackerOffense & " Def: " & intAttackerDefense & " Dur: " & intAttackerDurability
-    AddListItem "Defender Off: " & intDefenderOffense & " Def: " & intDefenderDefense & " Dur: " & intDefenderDurability
-    AddListItem "Attacking Units: " & colAttacker.Count
-    AddListItem "Defending Units: " & colDefender.Count
+    AddListItem "Attacker off: " & intAttackerOffense & " Def: " & intAttackerDefense & " Dur: " & intAttackerDurability
+    AddListItem "Defender off: " & intDefenderOffense & " Def: " & intDefenderDefense & " Dur: " & intDefenderDurability
+    AddListItem "Attacking units: " & colAttacker.Count & " total weapons: " & colAttacker.GetTotalWeapons
+    AddListItem "Defending units: " & colDefender.Count & " total weapons: " & colDefender.GetTotalWeapons
     
     'first volley
     For intvolley = 1 To intTotalvolleys
@@ -5282,6 +5324,11 @@ Private Function BattleEngine2()
                         'Attacker is out of ships
                          Exit Do
                     End If
+                    
+                    If attackerShipShooting.WeaponsLeft = 0 Then
+                        Exit Do
+                    End If
+                    
                 End If
                 
                 If Not defenderShipShot Is Nothing Then
@@ -5657,6 +5704,7 @@ Private Function CalculateFuelCosts(colResult As Collection)
          Debug.Print intTravelTime
     Next intI
     
+    txtResult.Text = txtResult.Text + "Travel time: " & intTravelTime & vbCrLf & vbCrLf
     txtResult.Text = txtResult.Text + "Total fuel required: " & intTotalFuel & vbCrLf & vbCrLf
 End Function
 
@@ -5669,8 +5717,10 @@ Private Function DroneBattle2(defendershipshooting As clsShip, attackerShipShot 
     'attackerShipShot.Durability = attackerShipShot.Durability - sngOff
     'Add to our list
     If (sngOff <= 0) Then
+        colDefender.AddMiss
         AddListItem "Defender: " & defendershipshooting.Name & " (" & intDefShootingTypeNbr & ") fired at " & attackerShipShot.Name & " (" & intAttShotTypeNbr & ") but missed."
     Else
+        colDefender.AddHit
         If (attackerShipShot.Durability > 0) Then
             AddListItem "Defender: " & defendershipshooting.Name & " (" & intDefShootingTypeNbr & ") fired at " & attackerShipShot.Name & " (" & intAttShotTypeNbr & ") and hit it, doing " & sngOff & " damage, Remaining hull strength is " & attackerShipShot.Durability & "."
         Else

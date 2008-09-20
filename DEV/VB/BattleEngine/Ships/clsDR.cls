@@ -34,13 +34,13 @@ Private m_intPrestige As Integer
 Private m_intSizeRank As Long
 Private m_lngCost As Long
 Private m_sngFuelFactor As Single
-Private m_intSpeed as Integer
+Private m_intSpeed As Integer
 
 
 Private Sub Class_Initialize()
     m_strName = "Deep Recon Scout"
-    m_intWeapons = 1
-    m_intWeaponsLeft = 1
+    m_intWeapons = 0
+    m_intWeaponsLeft = 0
     m_sngDurability = 8
     m_sngBaseDurability = 8
     m_intOffCap = 2
@@ -49,7 +49,7 @@ Private Sub Class_Initialize()
     m_intDefCap = 2
     m_intDefFight = 2
     m_intShipType = 0 '0 = Capital 1 = Fighter 2 = structure
-    m_intSensor = 3
+    m_intSensor = 5
     m_intPrestige = 27
     m_intCrew = 25
     m_intSizeRank = 10
