@@ -20,3 +20,8 @@ Input window to directly import scout reports:Cancel
 
 ![SRAnalysisPlanetDetail](/images/ScoutingReports/ScoutingReportsInput.JPG)
 
+## Planetstats Page ([SRPlanetStats](https://github.com/nagten/StellarRealms/tree/master/DEV/PHP/ScoutingReports/Planetstats))
+
+Overview of planet statistcs of Cabal faction members. This page is automatically updated by using userscript [SR Planet Overview ADV Tools](https://github.com/nagten/StellarRealms/blob/master/DEV/GMScripts/SR/srplanetoverviewadvtools.user.js)<br>
+
+![SRAnalysisPlanetDetail](/images/Planetstats/Planetstats.jpg)
