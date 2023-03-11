@@ -18,7 +18,7 @@ Stellar Realms Battle Engine ([SRBattle](https://github.com/nagten/StellarRealms
 ## Three webpages written in PHP
 
 Stellar Realms Analysis Page ([SRAnalysis](https://github.com/nagten/StellarRealms/tree/master/DEV/PHP))<br>
-Stellar Realms Scouting Report Page ([SRScouting](https://github.com/nagten/StellarRealms/tree/master/DEV/PHP))
+Stellar Realms Scouting Report Page ([SRScouting](https://github.com/nagten/StellarRealms/tree/master/DEV/PHP))<br>
 Cabal faction planet overview Page ([SRScouting](https://github.com/nagten/StellarRealms/tree/master/DEV/PHP))
 
 ## Several GreaseMonkey scripts
