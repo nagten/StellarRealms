@@ -1,7 +1,7 @@
-# StellarRealms
+# Stellar Realms
 
 
-Stellar Realms was an online, multiplayer strategy game in a science-fiction setting. The object was to accumulate as much prestige as possible, through various means, in the period of 400 game-years.
+Stellar Realms was an online, multiplayer strategy game in a science-fiction setting. The object was to accumulate as much prestige as possible, through various means, in the period of 400 game-years. Old webarchive link: [www.stellar-realms.com](https://web.archive.org/web/20071012020509/http://www.stellar-realms.com/)
 
 This could be accomplished through construction, research, diplomacy, and occasionally, military action. One month in the Stellar Realms universe constitutes a turn, and represents 20 minutes of "real-world" time. Therefore, a full 400-year round is accomplished in 66 real-world days.
 
@@ -9,7 +9,26 @@ This repo contains several GreaseMonkey scripts and websites I wrote to support 
 
 # Overview
 
-Several tools written in Visual Basic
+## Several tools written in Visual Basic
 
-Stellar Realms Turn Counter ([SRTC](https://github.com/nagten/StellarRealms/tree/master/DEV/VB/SRTC))<br>
-Stellar Realms Speed Counter ([SRSP](https://github.com/nagten/StellarRealms/tree/master/DEV/VB/SRSP))
+Stellar Realms Turn Counter ([SRTC](https://github.com/nagten/StellarRealms/tree/master/DEV/VB/))<br>
+Stellar Realms Speed Counter ([SRSP](https://github.com/nagten/StellarRealms/tree/master/DEV/VB/))<br>
+Stellar Realms Battle Engine ([SRBattle](https://github.com/nagten/StellarRealms/tree/master/DEV/VB/))
+
+## Three webpages written in PHP
+
+Stellar Realms Analysis Page ([SRAnalysis](https://github.com/nagten/StellarRealms/tree/master/DEV/PHP))<br>
+Stellar Realms Scouting Report Page ([SRScouting](https://github.com/nagten/StellarRealms/tree/master/DEV/PHP))
+Cabal faction planet overview Page ([SRScouting](https://github.com/nagten/StellarRealms/tree/master/DEV/PHP))
+
+## Several GreaseMonkey scripts
+
+News page userscript to filter, add time details and to copy scouting reports to our Scouting Report Page ([SRNews](https://github.com/nagten/StellarRealms/tree/master/DEV/GMScripts/SR))<br>
+
+Fleet deployment userscript to scout multiple planets at once and keep tracking records ([SRFleet](https://github.com/nagten/StellarRealms/tree/master/DEV/GMScripts/SR))<br>
+
+Intelligence userscript to gather intel on multiple planets at once ([SRIntel](https://github.com/nagten/StellarRealms/tree/master/DEV/GMScripts/SR))<br>
+
+Commerce userscript to swap buttons and to calculate average price of goods ([SRCommerce](https://github.com/nagten/StellarRealms/tree/master/DEV/GMScripts/SR))<br>
+
+Planet overview userscript which automaticlly submits planet data to our secret faction overview page ([SRPlanetOverview](https://github.com/nagten/StellarRealms/tree/master/DEV/GMScripts/SR))<br>
