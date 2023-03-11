@@ -11,15 +11,15 @@ This repo contains several GreaseMonkey scripts and websites I wrote to support 
 
 ## Several tools written in Visual Basic
 
-Stellar Realms Turn Counter ([SRTC](https://github.com/nagten/StellarRealms/tree/master/DEV/VB/))<br>
-Stellar Realms Speed Counter ([SRSP](https://github.com/nagten/StellarRealms/tree/master/DEV/VB/))<br>
-Stellar Realms Battle Engine ([SRBattle](https://github.com/nagten/StellarRealms/tree/master/DEV/VB/))
+Stellar Realms Turn Counter ([SRTC](https://github.com/nagten/StellarRealms/tree/master/DEV/VB#stellar-realms-turn-counter-srtc))<br>
+Stellar Realms Speed Counter ([SRSP](https://github.com/nagten/StellarRealms/tree/master/DEV/VB#stellar-realms-speed-counter-srsp))<br>
+Stellar Realms Battle Engine ([SRBattle](https://github.com/nagten/StellarRealms/tree/master/DEV/VB#stellar-realms-battle-engine-srsbattleengine))
 
 ## Three webpages written in PHP
 
-Stellar Realms Analysis Page ([SRAnalysis](https://github.com/nagten/StellarRealms/tree/master/DEV/PHP))<br>
-Stellar Realms Scouting Report Page ([SRScouting](https://github.com/nagten/StellarRealms/tree/master/DEV/PHP))<br>
-Cabal faction planet overview Page ([SRScouting](https://github.com/nagten/StellarRealms/tree/master/DEV/PHP))
+Stellar Realms Analysis Page ([SRAnalysis](https://github.com/nagten/StellarRealms/tree/master/DEV/PHP#stellar-realms-analysis-page-sranalysis))<br>
+Stellar Realms Scouting Report Page ([SRScouting](https://github.com/nagten/StellarRealms/tree/master/DEV/PHP#scouting-report-page-srscoutingreports))<br>
+Cabal faction planet overview Page ([SRScouting](https://github.com/nagten/StellarRealms/tree/master/DEV/PHP#planetstats-page-srplanetstats))
 
 ## Several GreaseMonkey scripts
 
