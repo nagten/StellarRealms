@@ -23,12 +23,12 @@ Cabal faction planet overview Page ([SRScouting](https://github.com/nagten/Stell
 
 ## Several GreaseMonkey scripts
 
-News page userscript to filter, add time details and to copy scouting reports to our Scouting Report Page ([SRNews](https://github.com/nagten/StellarRealms/tree/master/DEV/GMScripts/SR))<br>
+News page userscript to filter, add time details and to copy scouting reports to our Scouting Report Page ([SR News](https://github.com/nagten/StellarRealms/tree/master/DEV/GMScripts/SR#sr-news-copier-advsrnewscopieruserjs))<br>
 
-Fleet deployment userscript to scout multiple planets at once and keep tracking records ([SRFleet](https://github.com/nagten/StellarRealms/tree/master/DEV/GMScripts/SR))<br>
+Planet overview userscript which automaticlly submits planet data to our secret faction overview page ([SR Planet Overview ADV Tools](https://github.com/nagten/StellarRealms/tree/master/DEV/GMScripts/SR#sr-planet-overview-adv-tools-srplanetoverviewadvtoolsuserjs))<br>
 
-Intelligence userscript to gather intel on multiple planets at once ([SRIntel](https://github.com/nagten/StellarRealms/tree/master/DEV/GMScripts/SR))<br>
+Fleet deployment userscript to scout multiple planets at once and keep tracking records ([SR Multi Scout](https://github.com/nagten/StellarRealms/tree/master/DEV/GMScripts/SR#sr-multi-scout-srmultiscoutuserjs))<br>
 
-Commerce userscript to swap buttons and to calculate average price of goods ([SRCommerce](https://github.com/nagten/StellarRealms/tree/master/DEV/GMScripts/SR))<br>
+Intelligence userscript to gather intel on multiple planets at once ([SR Multi Intell](https://github.com/nagten/StellarRealms/tree/master/DEV/GMScripts/SR#sr-multi-intell-srmultiinteluserjs))<br>
 
-Planet overview userscript which automaticlly submits planet data to our secret faction overview page ([SRPlanetOverview](https://github.com/nagten/StellarRealms/tree/master/DEV/GMScripts/SR))<br>
+Commerce userscript to swap buttons and to calculate average price of goods ([SR Commerce](https://github.com/nagten/StellarRealms/tree/master/DEV/GMScripts/SR#sr-commerce-srcommerceuserjs))<br>
